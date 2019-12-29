@@ -216,6 +216,99 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-2015_hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/09/01/2015_hello-world/">Hello World</a>
+    </h1>
+  
+
+        
+        <a href="/2015/09/01/2015_hello-world/" class="archive-article-date">
+  	<time datetime="2015-09-01T10:18:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-09-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to iHTCboy的博客，今天正式开始新的生活！</p>
+<p>之前一直使用简书写文章，今天终于搭建好自己的博客。</p>
+<hr>
+<p>2018.10.07 更新</p>
+<p>之前购买的域名（<a href="http://ihtc.cc）因为国内备案，微信里访问不了（cc权限不足）。然后还是决定更换域名：http://ihtcboy.com，这样微信里访问不限制啦！开始使用阿里云的https证书，后来" target="_blank" rel="external">http://ihtc.cc）因为国内备案，微信里访问不了（cc权限不足）。然后还是决定更换域名：http://ihtcboy.com，这样微信里访问不限制啦！开始使用阿里云的https证书，后来</a> <code>GitHub</code> 提供免费的https证书，现在就这样，非常方便，域名级别和名字更好，快乐的写文章呀！</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Hello World</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">blog</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/life//" class="article-tag-list-link color5">life</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2015/09/01/2015_hello-world/">显示全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-2015_友盟iOS微信登陆没有回调的原因" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1080,99 +1173,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-2015_iOS接收null的处理方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/19/2015_iOS接收null的处理方法/">iOS接收null的处理方法</a>
-    </h1>
-  
-
-        
-        <a href="/2015/07/19/2015_iOS接收null的处理方法/" class="archive-article-date">
-  	<time datetime="2015-07-19T15:45:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-07-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>经常服务器返回的数据，有null，还有nil，如果在模型层不处理的话，到时候数据展现时，一定会崩啊，最近决心要解决这个问题，所以查看了一些资料后，有答案了：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- (id) setNoNull:(id)aValue&#123;&#10;    if (aValue == nil) &#123;&#10;        aValue = @&#34;&#34;;//&#20026;null&#26102;&#65292;&#30452;&#25509;&#36171;&#31354;&#10;    &#125; else if ((NSNull *)aValue == [NSNull null]) &#123;&#10;        aValue = @&#34;&#34;;&#10;        if ([aValue isEqual:nil]) &#123;&#10;            aValue = @&#34;&#34;;&#10;        &#125;&#10;    &#125;&#10;    return aValue;&#10;&#125;</span><br></pre></td></tr></table></figure>
-<p>这个方法，可以把null和nil赋空值，这样字符串操作时，就不会崩了，同时，如果解析成数值，也可以改写为@0</p>
-        
-          <a class="article-more-a" href="/2015/07/19/2015_iOS接收null的处理方法/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">NSNull</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">iOS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/technology//" class="article-tag-list-link color1">technology</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2015/07/19/2015_iOS接收null的处理方法/">显示全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/10/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/">12</a><a class="page-number" href="/page/13/">13</a><span class="space">&hellip;</span><a class="page-number" href="/page/22/">22</a><a class="extend next" rel="next" href="/page/12/">Next &raquo;</a>
@@ -1347,6 +1347,14 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随航</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Sign in with Apple</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">苹果登录方式</a>
               </li>
              
               <li class="article-tag-list-item">

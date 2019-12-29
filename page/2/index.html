@@ -216,6 +216,106 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-2019-06-28_Python库pyOpenSSL读取p12证书" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/06/28/2019-06-28_Python库pyOpenSSL读取p12证书/">用Python库pyOpenSSL读取iOS的p12证书</a>
+    </h1>
+  
+
+        
+        <a href="/2019/06/28/2019-06-28_Python库pyOpenSSL读取p12证书/" class="archive-article-date">
+  	<time datetime="2019-06-28T15:19:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-28</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1、前言">1、前言</h3><p>本文主要是讲解如何用python读取<code>p12</code>的信息。</p>
+<p>如果有过iOS团队开发经验的朋友，一定对<code>p12</code>有所了解，因为苹果开发者网站制作的cer证书，只能用生成 <code>CSR</code>（Certificate Signing Request）文件 ———<code>CertificateSigningRequest.certSigningRequest</code> 的macOS系统安装，因为生成<code>CSR</code>时，私钥保存地本地电脑中，同时，普通个人开发账号最多可注册iOS Development/Distribution 证书各2个。所以，<code>p12</code> 就是解决在多个电脑之间共享证书的一种方式。本文不会详解iOS证书相关知识，想了解更多，可以查看本文末提供的参考文章。</p>
+        
+          <a class="article-more-a" href="/2019/06/28/2019-06-28_Python库pyOpenSSL读取p12证书/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">iOS</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">p12</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">pyOpenSSL</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/technology//" class="article-tag-list-link color1">technology</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/06/28/2019-06-28_Python库pyOpenSSL读取p12证书/">显示全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-2019-05-07_说说iOS非AppStore安装App的方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1114,101 +1214,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-2019-01-01_2018年终总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/01/01/2019-01-01_2018年终总结/">2019，猪你好！</a>
-    </h1>
-  
-
-        
-        <a href="/2019/01/01/2019-01-01_2018年终总结/" class="archive-article-date">
-  	<time datetime="2018-12-31T17:49:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>尼采说：人年轻时，无论是崇拜还是鄙视，缺乏分寸；善于掌握分寸才是对生命最大的奖赏。</p>
-</blockquote>
-<h4 id="序言">序言</h4><p>这一年，在生命中又是非常有意义的一年，应该说是毕业以来待过最长的公司，准备2年啦！非常高兴能看到自己的坚持，因为自己的坚持，所以，我相信还有很多事件可以做。<strong>马云说的，员工离职，不是给钱不够，就是心里委屈。</strong> 今天，我想还要加一条吧，<strong>工作不再有挑战性！（或者挑战性太大，自己放弃！）</strong> 因为还有很多挑战！很多东西等待我去战胜，并且我相信，战胜这些问题，让公司和自己都会有质的改变！这也就是所谓的成长空间吧~</p>
-<p>今年大家经历了非常多，其中讨论最多的程序员吃年轻饭、中年危机、经济寒冬等，都会跟大家讨论一下。最好的时代，最坏的时代，都在当前，一起记录，迎接2019吧！</p>
-        
-          <a class="article-more-a" href="/2019/01/01/2019-01-01_2018年终总结/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">2019</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">年终总结</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/life//" class="article-tag-list-link color5">life</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/01/01/2019-01-01_2018年终总结/">显示全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/22/">22</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
@@ -1383,6 +1388,14 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随航</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Sign in with Apple</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">苹果登录方式</a>
               </li>
              
               <li class="article-tag-list-item">
