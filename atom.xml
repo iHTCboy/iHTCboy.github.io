@@ -5332,11 +5332,11 @@ DOM 架构方案在文本编辑与图形渲染操作方面的优缺点
   </entry>
   
   <entry>
-    <title><![CDATA[Sign in with Apple 登录方式]]></title>
+    <title><![CDATA[Sign in with Apple 登录详解]]></title>
     <link href="https://iHTCboy.com/2019/09/16/2019-09-16_Sign-in-with-Apple/"/>
     <id>https://iHTCboy.com/2019/09/16/2019-09-16_Sign-in-with-Apple/</id>
     <published>2019-09-16T14:49:16.000Z</published>
-    <updated>2020-01-11T15:06:44.539Z</updated>
+    <updated>2020-01-11T15:22:24.470Z</updated>
     <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>iOS 13 最大的亮点是 <code>Dark</code> 模式，另一个就是苹果登录（Sign in with Apple）方式的增加，让苹果生态又多了一层体验，苹果的生态建设越来越好，让iOS开发者成为 Apple 全栈开发的可能性更接近，对于开发者来说，用好 API ，然后看到苹果这些年对生态的建设，还是有很多想象力！</p>
 <a id="more"></a>
 <h3 id="2、Sign_in_with_Apple">2、Sign in with Apple</h3><h4 id="是什么">是什么</h4><blockquote>
