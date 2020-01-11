@@ -216,6 +216,109 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-2018-02-07_关于16进制颜色值转换为UIColor的思考" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/02/07/2018-02-07_关于16进制颜色值转换为UIColor的思考/">关于16进制颜色值转换为UIColor的思考</a>
+    </h1>
+  
+
+        
+        <a href="/2018/02/07/2018-02-07_关于16进制颜色值转换为UIColor的思考/" class="archive-article-date">
+  	<time datetime="2018-02-07T12:26:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1、前言">1、前言</h3><p>大家都知道iOS的UIColor提供的自定义初始化是通过RGB(A) 4个10进行制的参数，那么为什么用16进制呢？因为web和安卓端以常识性用16进制读取，所以为了方便设计师出图标注，很多时候都是16进制的效果图。而今天就是要讨论一下，这个16进制的转换的方法。</p>
+<p><a href="https://zh.wikipedia.org/wiki/网页颜色#十六进制数字表示方法">网页颜色 - 维基百科</a>:</p>
+<blockquote>
+<p>在<a href="https://zh.wikipedia.org/wiki/HTML" title="HTML">HTML</a>和<a href="https://zh.wikipedia.org/wiki/CSS" title="CSS">CSS</a>中使用3<a href="https://zh.wikipedia.org/wiki/%E5%AD%97%E8%8A%82" title="字节">字节</a>共6个<a href="https://zh.wikipedia.org/wiki/%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6" title="十六进制">十六进制</a>数字表示一种颜色，每字节从00到FF，相当十进位数字从0到255，按顺序前两位是红色的值，中间两位是绿的值，最后两位是蓝色的值。</p>
+<p>由于<a href="https://zh.wikipedia.org/wiki/%E7%BD%91%E9%A1%B5" title="网页">网页</a>（WEB）是基于计算机浏览器开发的媒体，所以颜色以光学<a href="https://zh.wikipedia.org/wiki/%E9%A2%9C%E8%89%B2" title="颜色">颜色</a>RGB（红、绿、蓝）为主。 网页颜色是以16进制代码表示，一般以“#”号开头，后面分别为R、G、B的16位进制数。 FF为最大数，代表十进制255。比如白色是R、G、B三个颜色最大，在网页代码便是：#FFFFFF。黑色是三个颜色为0，在网页代码便是：#000000。当颜色代码为#XXYYZZ时，可以用#XYZ表示，如#135与#113355表示同样的颜色。在<a href="https://zh.wikipedia.org/wiki/CSS" title="CSS">CSS</a>中，也可以使用<code>rgb(127,127,127)</code>代替#7F7F7F（<a href="https://zh.wikipedia.org/wiki/%E7%BD%91%E9%A1%B5%E9%A2%9C%E8%89%B2#RGBA%E5%92%8CHSLA%E7%9A%84%E5%8D%81%E8%BF%9B%E5%88%B6%E8%A1%A8%E7%A4%BA">十进制表示</a>）。</p>
+</blockquote>
+<p>有意思的是，可以知道表示颜色数总共有： 256^3 = 16,777,216 种，这个颜色就是我们常说的<strong>真彩色</strong>。</p>
+<h3 id="2、几种16进制颜色值转换UIColor的方式">2、几种16进制颜色值转换UIColor的方式</h3><p>16进制转换为10进制后的整形转换为UIColor：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// rgb颜色转换（rgbValue为16进制转换成10进制的整形）</span></span><br><span class="line"><span class="hexcolor">#def</span>ine <span class="function"><span class="title">MACRO_COLOR_HexCOLOR</span><span class="params">(rgbValue)</span></span>         ([UIColor colorWithRed:((<span class="attribute">float</span>)((rgbValue &amp; <span class="number">0</span>xFF0000) &gt;&gt; <span class="number">16</span>))/<span class="number">255.0</span>f green:((<span class="attribute">float</span>)((rgbValue &amp; <span class="number">0</span>xFF00) &gt;&gt; <span class="number">8</span>))/<span class="number">255.0</span>f blue:((<span class="attribute">float</span>)(rgbValue &amp; <span class="number">0</span>xFF))/<span class="number">255.0</span>f alpha:<span class="number">1.0</span>])</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2018/02/07/2018-02-07_关于16进制颜色值转换为UIColor的思考/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">16进制颜色</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">NSScanner</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">UIColor</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/technology//" class="article-tag-list-link color1">technology</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/02/07/2018-02-07_关于16进制颜色值转换为UIColor的思考/">显示全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-2018-02-04_Mac查看文件内容常用的命令小结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1111,98 +1214,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-2017_11_iOS11适配UIToolbar无法点击问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/09/2017_11_iOS11适配UIToolbar无法点击问题/">iOS11适配UIToolbar无法点击问题</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/09/2017_11_iOS11适配UIToolbar无法点击问题/" class="archive-article-date">
-  	<time datetime="2017-11-09T12:54:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="前言">前言</h3><p>一个简单的浏览器，使用到UIToolbar做底部工具栏，在 iOS11 上就有点击无响应的问题。现在发现苹果一到大系统版本，很多 UIView的实现和生命周期都变化，他们系统不用兼容 iOS10，想怎么改就怎么改，没有顾虑，但是我们作为开发者只能受累。<br><img src="http://upload-images.jianshu.io/upload_images/99517-9e8c46fce3a85889.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/640" alt="C93266DA-14DD-46E0-9064-F5F5728E67EF.png"></p>
-<h3 id="iOS_11">iOS 11</h3><p>原因：Toolbar 在iOS11默认添加有<code>_UIToolbarContentView</code>，_UIToolbarContentView <code>_UIButtonBarStackView</code>覆盖在自定义的按钮上面，导致按钮无响应。</p>
-        
-          <a class="article-more-a" href="/2017/11/09/2017_11_iOS11适配UIToolbar无法点击问题/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">UIToolbar</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">iOS11</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/technology//" class="article-tag-list-link color1">technology</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/09/2017_11_iOS11适配UIToolbar无法点击问题/">显示全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/6/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="space">&hellip;</span><a class="page-number" href="/page/22/">22</a><a class="extend next" rel="next" href="/page/8/">Next &raquo;</a>
@@ -1364,6 +1375,14 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Fabric</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Mac</a>
               </li>
              
@@ -1409,10 +1428,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">证书</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Python</a>
               </li>
              
               <li class="article-tag-list-item">

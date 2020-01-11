@@ -5177,6 +5177,65 @@ DOM 架构方案在文本编辑与图形渲染操作方面的优缺点
   </entry>
   
   <entry>
+    <title><![CDATA[Python 远程部署神器 Fabric]]></title>
+    <link href="https://iHTCboy.com/2019/11/08/2019-11-08_Python-Fabric/"/>
+    <id>https://iHTCboy.com/2019/11/08/2019-11-08_Python-Fabric/</id>
+    <published>2019-11-08T14:49:16.000Z</published>
+    <updated>2020-01-11T15:20:43.465Z</updated>
+    <content type="html"><![CDATA[<h3 id="1、是什么">1、是什么</h3><p>Fabric 是一个 Python (2.5, 3.4+) 的库和命令行工具，用来提高基于 SSH 的应用部署和系统管理效率。</p>
+<p>而网上搜索了一些教程，发现很旧或者因为Fabric版本不兼容问题，导致代码分裂断层搞不明白，所以就有了本文。</p>
+<a id="more"></a>
+<h3 id="2、为什么">2、为什么</h3><p>如果不通过 <code>jenkins</code> <code>git</code> 部署，那么 <code>pyhton</code> 项目用 <code>Fabric</code> 最佳：</p>
+<ul>
+<li>一个让你通过 命令行 执行 无参数 Python 函数 的工具；</li>
+<li>一个让通过 SSH 执行 Shell 命令更加 容易 、 更符合 Python 风格 的命令库（建立于一个更低层次的库）。</li>
+</ul>
+<h3 id="3、注意什么">3、注意什么</h3><p><code>Fabric</code> 目前有3个版本，为了符合官方自然规律发展，我们建议使用 <code>Fabric2</code>：</p>
+<ol>
+<li><code>Fabric</code>：官方Fabric，只支持 Python 2，如果使用 Pyhon3 已经抛弃。</li>
+<li><code>Fabric2</code>：兼容 Python 2 &amp; Python 3，但不兼容Fabric 1.x的fabfile，而且有些模块和用法也发生了很大改变。（可使用Fabric包安装1.x 版本，使用Fabric2包安装2.x版本，来实现1.x和2.x的共存）</li>
+<li><code>Fabric3</code>：是一个基于Fabric 1.x 的fork，兼容Python2 &amp; Python3，兼容 Fabric1.x 的 fabfile。（非官方维护）</li>
+</ol>
+<h3 id="4、怎么做">4、怎么做</h3><p>安装 Fabric，默认就是安装 Fabric2：</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 <span class="keyword">install</span> fabric</span><br></pre></td></tr></table></figure>
+<p>具体怎么使用，我们直接代码，简单就懂：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># &#23548;&#20837;&#24211;&#10;from datetime import datetime&#10;from invoke import run&#10;from fabric import Connection&#10; &#10; &#10;def main():&#10; &#10;    # &#29992; run &#25191;&#34892;&#26412;&#22320;&#30340;&#29615;&#22659;&#65292;&#36319;&#32456;&#31471;&#25191;&#34892;&#19968;&#26679;&#65292; &#27604;&#22914; cd &#12289; ls &#21629;&#20196;&#10;    run(&#34;cd /tmp/dir&#34;)&#10;    # &#25191;&#34892;&#21387;&#32553;&#25991;&#20214;&#10;    run(&#34;tar czvf archive.tar.gz /tmp/dir&#34;)&#10; &#10; &#10;    # &#24314;&#31435;&#36828;&#31471;&#38142;&#25509;&#10;    # &#22914;&#26524;&#20320;&#30340;&#30005;&#33041;&#37197;&#20102;ssh&#20813;&#23494;&#30721;&#30331;&#24405;&#65292;&#23601;&#19981;&#38656;&#35201; connect_kwargs &#26469;&#25351;&#23450;&#23494;&#30721;&#20102;&#12290;&#10; &#10;    c = Connection(&#34;root@172.168.04.14:22&#34;, connect_kwargs=&#123;&#34;password&#34;: &#34;&#23494;&#30721;&#34;&#125;)&#10; &#10;    with c.cd(&#34;/data/www/&#34;):&#10;        # &#36825;&#37324;&#25191;&#34892;&#30340;&#23601;&#26159;&#36828;&#31243;&#26381;&#21153;&#22120;&#30340; shell &#65306;&#10;        c.run(&#34;echo &#39;[Current path] &#39; `pwd`;&#34;)&#10;        # &#21629;&#20196; put &#20026;&#20174;&#26412;&#22320;&#19978;&#20256;&#25991;&#20214;&#21040;&#36828;&#31471;&#10;        c.put(zip_file_path, remote_path)&#10;        # &#21387;&#32553;&#25991;&#20214;&#10;        c.run(&#34;tar -xzvf  archive.tar.gz -C /data/www/&#34;)&#10;        # &#21629;&#20196; get &#20026;&#20174;&#36828;&#31243;&#19979;&#36733;&#25991;&#20214;&#21040;&#26412;&#22320;&#10;        c.get(&#39;/data/ www/bk-2019.tar.gz&#39;, &#34;/user/htc/Python/bg.gz&#34;)</span><br></pre></td></tr></table></figure>
+<p>直接在终端执行编写好的 Python 脚本执行就可以~</p>
+<p>Fabric，so easy！ 就是这么简单~</p>
+<h3 id="参考">参考</h3><ul>
+<li><a href="https://www.fabfile.org/" target="_blank" rel="external">Welcome to Fabric! — Fabric documentation</a></li>
+<li><a href="https://fabric-chs.readthedocs.io/zh_CN/chs/index.html" target="_blank" rel="external">欢迎访问 Fabric 中文文档 — Fabric 文档</a></li>
+<li><a href="https://www.cnblogs.com/anliven/p/9186994.html" target="_blank" rel="external">Python - Fabric简介 - Anliven - 博客园</a></li>
+<li><a href="https://blog.csdn.net/zV3e189oS5c0tSknrBCL/article/details/85271219" target="_blank" rel="external">远程部署神器 Fabric，支持 Python3 - Python之禅 - CSDN博客</a></li>
+<li><a href="https://tankeryang.github.io/posts/python%E6%A8%A1%E5%9D%97fabric%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/" target="_blank" rel="external">python模块fabric踩坑记录 | 淦</a></li>
+<li><a href="https://www.cnblogs.com/shenh/p/10060149.html" target="_blank" rel="external">python三大神器之fabric（2.0新特性） - 三只松鼠 - 博客园</a></li>
+<li><a href="https://www.ibm.com/developerworks/cn/linux/simplyfy-linux-deployment-with-fabric/index.html" target="_blank" rel="external">Fabric 让 Linux 系统部署变得简单</a></li>
+</ul>
+<p><br></p>
+<ul>
+<li>如有不正确的地方，欢迎指导！</li>
+<li>如有疑问，欢迎在评论区一起讨论！</li>
+</ul>
+<p><br></p>
+<blockquote>
+<p>注：本文首发于 <a href="https://iHTCboy.com">iHTCboy’s blog</a>，如若转载，请注来源<br><br></p>
+</blockquote>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h3 id="1、是什么">1、是什么</h3><p>Fabric 是一个 Python (2.5, 3.4+) 的库和命令行工具，用来提高基于 SSH 的应用部署和系统管理效率。</p>
+<p>而网上搜索了一些教程，发现很旧或者因为Fabric版本不兼容问题，导致代码分裂断层搞不明白，所以就有了本文。</p>]]>
+    
+    </summary>
+    
+      <category term="Fabric" scheme="https://iHTCboy.com/tags/Fabric/"/>
+    
+      <category term="Python" scheme="https://iHTCboy.com/tags/Python/"/>
+    
+      <category term="technology" scheme="https://iHTCboy.com/categories/technology/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[在旧的Mac上使用随航(Sidecar)]]></title>
     <link href="https://iHTCboy.com/2019/10/12/2019-10-12_%E5%9C%A8%E6%97%A7%E7%9A%84Mac%E4%B8%8A%E4%BD%BF%E7%94%A8%E9%9A%8F%E8%88%AASidecar/"/>
     <id>https://iHTCboy.com/2019/10/12/2019-10-12_在旧的Mac上使用随航Sidecar/</id>
@@ -5277,7 +5336,7 @@ DOM 架构方案在文本编辑与图形渲染操作方面的优缺点
     <link href="https://iHTCboy.com/2019/09/16/2019-09-16_Sign-in-with-Apple/"/>
     <id>https://iHTCboy.com/2019/09/16/2019-09-16_Sign-in-with-Apple/</id>
     <published>2019-09-16T14:49:16.000Z</published>
-    <updated>2020-01-11T15:06:01.845Z</updated>
+    <updated>2020-01-11T15:06:44.539Z</updated>
     <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>iOS 13 最大的亮点是 <code>Dark</code> 模式，另一个就是苹果登录（Sign in with Apple）方式的增加，让苹果生态又多了一层体验，苹果的生态建设越来越好，让iOS开发者成为 Apple 全栈开发的可能性更接近，对于开发者来说，用好 API ，然后看到苹果这些年对生态的建设，还是有很多想象力！</p>
 <a id="more"></a>
 <h3 id="2、Sign_in_with_Apple">2、Sign in with Apple</h3><h4 id="是什么">是什么</h4><blockquote>
@@ -5484,6 +5543,10 @@ DOM 架构方案在文本编辑与图形渲染操作方面的优缺点
 <li><a href="https://juejin.im/post/5d551d11e51d4561cf15dfae" target="_blank" rel="external">iOS 13 苹果账号登陆与后台验证相关 - 掘金</a></li>
 <li><a href="https://blog.csdn.net/wpf199402076118/article/details/99677412" target="_blank" rel="external">苹果授权登陆后端验证</a></li>
 <li><a href="https://juejin.im/post/58c29e0b1b69e6006bce02f4?utm_source=tuicool&amp;utm_medium=referral" target="_blank" rel="external">使用JWT和Spring Security保护REST API - 掘金</a></li>
+<li><a href="https://developer.apple.com/documentation/signinwithapplejs" target="_blank" rel="external">Sign in with Apple JS | Apple Developer Documentation</a></li>
+<li><a href="https://developer.apple.com/documentation/signinwithapplejs/configuring_your_webpage_for_sign_in_with_apple" target="_blank" rel="external">Configuring Your Webpage for Sign In with Apple | Apple Developer Documentation</a></li>
+<li><a href="https://medium.com/techulus/how-to-setup-sign-in-with-apple-9e142ce498d4" target="_blank" rel="external">Sign In with Apple using JavaScript - Techulus - Medium</a></li>
+<li><a href="https://developer.okta.com/blog/2019/06/04/what-the-heck-is-sign-in-with-apple" target="_blank" rel="external">What the Heck is Sign In with Apple? | Okta Developer</a></li>
 </ul>
 <p><br></p>
 <ul>
@@ -7306,461 +7369,6 @@ DOM 架构方案在文本编辑与图形渲染操作方面的优缺点
 </blockquote>
 <p>从上一篇 <a href="https://ihtcboy.com/2019/02/27/2019-02-27_《商业模式新生代》读书笔记/">《商业模式新生代》读书笔记</a> ，一直在理解商业模式，然而，对于企业，对于个人，模式从来都没有固定不变，所有东西在变化，而如果能抓住其中规律，那就能面对变化而不变？上一本书给了画布的9大构造块，其实已经给了相当于固定的规律，而能不能从这里面，找到属于自己不变，或者变化的，创意的，创新的世界，就是本书的愿景！</p>
 <p>就像《摔跤吧！爸爸》里曾经的摔跤冠军辛格，女儿摔跤训练需要使用专业的护垫，去找体育局求赞助，结果被腐败官员拒绝。爸爸，因此难受，但是却被人一句话点醒，再专业的护垫依旧是垫子，为什么不能用普通的？因为一个问题想太久，可能被旁人一句话点醒，很多人都有这样的经历，关键是坚持想问题，不放弃，背后的原因是对信念的坚持。有时候，我也在想，腐败是现在，如果大家都一直，永远的，认为腐败，那么这个时代，后世界，也将如此。但只要有人保持，愿意相信，我也相信，世界也可以变得美好！</p>]]>
-    
-    </summary>
-    
-      <category term="商业模式新生代" scheme="https://iHTCboy.com/tags/%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F%E6%96%B0%E7%94%9F%E4%BB%A3/"/>
-    
-      <category term="读书笔记" scheme="https://iHTCboy.com/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="读后感" scheme="https://iHTCboy.com/tags/%E8%AF%BB%E5%90%8E%E6%84%9F/"/>
-    
-      <category term="life" scheme="https://iHTCboy.com/categories/life/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[《商业模式新生代》读书笔记]]></title>
-    <link href="https://iHTCboy.com/2019/02/27/2019-02-27_%E3%80%8A%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F%E6%96%B0%E7%94%9F%E4%BB%A3%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    <id>https://iHTCboy.com/2019/02/27/2019-02-27_《商业模式新生代》读书笔记/</id>
-    <published>2019-02-27T00:49:16.000Z</published>
-    <updated>2019-05-06T13:43:26.036Z</updated>
-    <content type="html"><![CDATA[<h3 id="前言">前言</h3><p>今年读的第一本书，时间节奏快，还是要在细细读第二次！非常优秀的实践指导书，值得每一个创业者，都读一下，不管是已经创业失败，还是准备创业，或者正在创业的小伙伴们，都赶紧来读读吧！</p>
-<h3 id="框架">框架</h3><p>读一本书，不是为了知识而知识，需要总结或吸收书中的知识框架，以便成为自己的知识体系！</p>
-<a id="more"></a>
-<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-book-《商业模式新生代》-思维导图.png" alt="20190227-book-《商业模式新生代》-思维导图.png"></p>
-<h3 id="画布_canvas">画布 canvas</h3><h4 id="9个构造块_Building_Blocks">9个构造块 Building Blocks</h4><ol>
-<li><p>CS 客户细分（Customer Segments）</p>
-<blockquote>
-<p>企业或机构所服务的一个或多个客户分类群体。</p>
-</blockquote>
-<ul>
-<li>大众市场（Mass market）</li>
-<li>利基市场（Niche market）</li>
-<li>区隔化市场（Segmented）</li>
-<li>多元化市场（Diversified）</li>
-<li>多边平台或多边市场（Multi-sided platforms/multi-sided markets）</li>
-</ul>
-</li>
-<li><p>VP 价值主张（Value Propositions）</p>
-<blockquote>
-<p>通过价值主张来解决客户难题和满足客户需求。</p>
-</blockquote>
-<ul>
-<li>新颖（Newness）</li>
-<li>定制化（Customization）</li>
-<li>设计（Design）</li>
-<li>品牌/身份地位（Brand/status）</li>
-<li>价格（Price）</li>
-<li>成本削减（Cost reduction）</li>
-<li>风险抑制（Risk reduction）</li>
-<li>可达性（Accessibility）</li>
-<li>便利性/可用性（Convenience/usability）</li>
-</ul>
-</li>
-<li><p>CH 渠道通路（Channels）</p>
-<blockquote>
-<p>通过沟通、分销和销售渠道向客户传递价值主张。</p>
-</blockquote>
-<ul>
-<li>渠道类型<ul>
-<li>自有渠道<ul>
-<li>销售团队</li>
-<li>在线销售</li>
-<li>自有店铺</li>
-</ul>
-</li>
-<li>合作伙伴渠道 （非直接渠道）<ul>
-<li>合作伙伴店铺</li>
-<li>批发商</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>渠道阶段</p>
-<ul>
-<li>认知</li>
-<li>评估</li>
-<li>购买</li>
-<li>传递</li>
-<li>售后</li>
-</ul>
-<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-01-渠道通路.jpg" alt="20190227-01-渠道通路.jpg"></p>
-</li>
-</ul>
-</li>
-<li><p>CR 客户关系（Customer Relationships）</p>
-<blockquote>
-<p>在每一个客户细分市场建立和维系客户关系。</p>
-</blockquote>
-<ul>
-<li>动机驱动<ul>
-<li>客户获取</li>
-<li>客户维系</li>
-<li>提升销售额（追加销售）</li>
-</ul>
-</li>
-<li>类型<ul>
-<li>个人助理（Personal assistance）</li>
-<li>专用个人助理（Dedicated personal assistance）</li>
-<li>自助服务（Self-service）</li>
-<li>自动化服务（Automated services）</li>
-<li>社区（Communities）</li>
-<li>共同创作（Co-creation）</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>R$ 收入来源（Revenue Streams）</p>
-<blockquote>
-<p>收入来源产生于成功提供给客户的价值主张。</p>
-</blockquote>
-<ul>
-<li>资产销售（Asset sale）</li>
-<li>使用收费（Usage fee）</li>
-<li>订阅收费（Subscription fees）</li>
-<li>租赁收费（Lending/Renting/Leasing）</li>
-<li>授权收费（Licensing）</li>
-<li>经纪收费（Brokerage fees）</li>
-<li>广告收费（Advertising）</li>
-</ul>
-<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-02-收入来源-定价机制.jpg" alt="20190227-02-收入来源-定价机制.jpg"></p>
-</li>
-</ol>
-<ol>
-<li><p>KR 核心资源（Key Resources）</p>
-<blockquote>
-<p>核心资源是提供和交付先前描述要素所必备的重要资产…</p>
-</blockquote>
-<ul>
-<li>实体资产（Physical）</li>
-<li>知识资产（Intellectual）</li>
-<li>人力资源（Human）</li>
-<li>金融资产（Financial）</li>
-</ul>
-</li>
-<li><p>KA 关键业务（Key Activities）</p>
-<blockquote>
-<p>通过执行一些关键业务活动，运转商业模式。</p>
-</blockquote>
-<ul>
-<li>制造产品（Production）</li>
-<li>问题解决（Problem solving）</li>
-<li>平台/网络 （Platform/network）</li>
-</ul>
-</li>
-<li><p>KP 重要合作（Key Partnership）</p>
-<blockquote>
-<p>有些业务要外包，而另外一些资源需要从企业外部获得。</p>
-</blockquote>
-<ul>
-<li>类型<ul>
-<li>在非竞争者之间的战略联盟关系；</li>
-<li>竞合：在竞争者之间的战略合作关系；</li>
-<li>为开发新业务而构建的合资关系；</li>
-<li>为确保可靠供应的购买方—供应商关系。</li>
-</ul>
-</li>
-<li>动机<ul>
-<li>商业模式的优化和规模经济的运用</li>
-<li>风险和不确定性的降低</li>
-<li>特定资源和业务的获取</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>C$ 成本结构（Cost Structure）</p>
-<blockquote>
-<p>商业模式上述要素所引发的成本构成。</p>
-</blockquote>
-<ul>
-<li>类型<ul>
-<li>成本驱动（Cost-driven）</li>
-<li>价值驱动（Value-driven）</li>
-</ul>
-</li>
-<li>特点<ul>
-<li>固定成本（Fixed costs）</li>
-<li>可变成本（Variable costs）</li>
-<li>规模经济（Economies of scale）</li>
-<li>范围经济（Economies of scope）</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-<p>这9个商业模式构造块组成了构建商业模式便捷工具的基础，这个工具我们称之为商业模式画布（Business Model Canvas）。</p>
-<h4 id="商业模式画布（Business_Model_Canvas）">商业模式画布（Business Model Canvas）</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-03-商业模式画布.jpg" alt="20190227-03-商业模式画布.jpg"></p>
-<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-03-商业模式画布2.jpg" alt="20190227-03-商业模式画布2.jpg"></p>
-<h3 id="式样_patterns">式样 patterns</h3><ul>
-<li>非绑定式商业模式</li>
-<li>长尾式商业模式</li>
-<li>多边平台式商业模式</li>
-<li>免费式商业模式</li>
-<li>开放式商业模式</li>
-</ul>
-<h4 id="非绑定式商业模式">非绑定式商业模式</h4><blockquote>
-<p>“非绑定”企业的概念认为，存在三种不同的基本业务类型：客户关系型业务、产品创新型业务和基础设施型业务。每种类型都包含不同的经济驱动因素、竞争驱动因素和文化驱动因素。这三种类型可能同时存在于一家公司里，但是理论上这三种业务“分离”成独立的实体，以便避免冲突或不利的权衡妥协。</p>
-</blockquote>
-<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-04-三种核心的业务类型.jpg" alt="20190227-04-三种核心的业务类型.jpg"></p>
-<ul>
-<li>私人银行商业模式<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-04-私人银行商业模式.jpg" alt="20190227-04-私人银行商业模式.jpg"></li>
-</ul>
-<h4 id="长尾式商业模式">长尾式商业模式</h4><blockquote>
-<p>长尾式商业模式的核心是多样少量：他们关注于为利基市场提供大量产品，每种产品相对而言卖得都少。利基产品销售总额可以与凭借少量畅销产品产生绝大多数销售额的传统模式相媲美。长尾模式需要低库存成本和强大的平台，并使得利基产品对于兴趣买家来说容易获得。</p>
-</blockquote>
-<ul>
-<li>乐高工厂：客户设计（玩具）套件<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-05-乐高工厂：客户设计（玩具）套件.jpg" alt="20190227-05-乐高工厂：客户设计（玩具）套件.jpg"></li>
-</ul>
-<p>乐高<br>＋<br>乐高的用户可以自己设计产品并在线订购<br>＝<br>乐高工厂<br>＋<br>乐高允许用户销售自己设计的产品<br>＝<br>乐高的用户产品目录</p>
-<h4 id="多边平台式商业模式">多边平台式商业模式</h4><blockquote>
-<p>多边平台将两个或者更多有明显区别但又相互依赖的客户群体集合在一起。<br>只有相关客户群体同时存在的时候，这样的平台才具有价值。多边平台通过促进各方客户群体之间的互动来创造价值。多边平台需要提升其价值，直到它达到可以吸引更多用户的程度，这种现象被称为网络效应。</p>
-</blockquote>
-<ul>
-<li><p>Google的商业模式<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-06-Google的商业模式.jpg" alt="20190227-06-Google的商业模式.jpg"></p>
-</li>
-<li><p>任天堂 Wii 对决PSP/Xbox<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-07-任天堂 Wii 对决PSP、Xbox-01.jpg" alt="20190227-07-任天堂 Wii 对决PSP、Xbox-01.jpg"></p>
-</li>
-</ul>
-<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-07-任天堂 Wii 对决PSP、Xbox-02.jpg" alt="20190227-07-任天堂 Wii 对决PSP、Xbox-02.jpg"></p>
-<h4 id="免费式商业模式">免费式商业模式</h4><blockquote>
-<p>免费，在免费式商业模式中，至少有一个庞大的客户细分群体可以享受持续的免费服务。免费服务可以来自多种模式。通过该商业模式的其他部分或其他客户细分群体，给非付费客户细分群体提供财务支持。</p>
-</blockquote>
-<ul>
-<li><p>Metro<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-08-免费式商业模式-Metro.jpg" alt="20190227-08-免费式商业模式-Metro.jpg"></p>
-</li>
-<li><p>Flickr<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-08-免费式商业模式-Flickr.jpg" alt="20190227-08-免费式商业模式-Flickr.jpg"></p>
-</li>
-<li><p>Red Hat<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-08-免费式商业模式-RedHat.jpg" alt="20190227-08-免费式商业模式-RedHat.jpg"></p>
-</li>
-<li><p>Skype<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-08-免费式商业模式-Skype-01.jpg" alt="20190227-08-免费式商业模式-Skype-01.jpg"><br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-08-免费式商业模式-Skype-02.jpg" alt="20190227-08-免费式商业模式-Skype-02.jpg"></p>
-</li>
-<li><p>REGA<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-08-免费式商业模式-REGA.jpg" alt="20190227-08-免费式商业模式-REGA.jpg"></p>
-</li>
-<li><p>免费移动电话的诱钓模式<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-08-免费式商业模式-免费移动电话的诱钓模式.jpg" alt="20190227-08-免费式商业模式-免费移动电话的诱钓模式.jpg"></p>
-</li>
-<li><p>剃刀与刀片：吉列<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-08-免费式商业模式-剃刀与刀片：吉列.jpg" alt="20190227-08-免费式商业模式-剃刀与刀片：吉列.jpg"></p>
-</li>
-</ul>
-<h4 id="开放式商业模式">开放式商业模式</h4><blockquote>
-<p>开放式商业模式可以用于那些通过与外部伙伴系统性合作，来创造和捕捉价值的企业。这种模式可以是“由外到内”，将外部的创意引入到公司内部，也可以是“由内到外”，将企业内部闲置的创意和资产提供给外部伙伴。</p>
-</blockquote>
-<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-09-开放式商业模式-创新的原则.jpg" alt="20190227-09-开放式商业模式-创新的原则.jpg"></p>
-<ul>
-<li>Innocentive<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-09-开放式商业模式-Innocentive.jpg" alt="20190227-09-开放式商业模式-Innocentive.jpg"></li>
-</ul>
-<h4 id="式样总览">式样总览</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-10-式样总览01.jpg" alt="20190227-10-式样总览01.jpg"><br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-10-式样总览02.jpg" alt="20190227-10-式样总览02.jpg"><br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-10-式样总览03.jpg" alt="20190227-10-式样总览03.jpg"></p>
-<h3 id="设计">设计</h3><blockquote>
-<p>商业模式设计方法</p>
-</blockquote>
-<ul>
-<li>客户洞察</li>
-<li>创意构思</li>
-<li>可视思考</li>
-<li>原型制作</li>
-<li>故事讲述</li>
-<li>情景推测</li>
-</ul>
-<h4 id="客户洞察">客户洞察</h4><ul>
-<li>移情图</li>
-</ul>
-<blockquote>
-<p>移情图（empathy map，感同身受之意）</p>
-</blockquote>
-<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-11-移情图.jpg" alt="20190227-11-移情图.jpg"></p>
-<p>1.她看到的是什么？</p>
-<blockquote>
-<p>描述客户在她的环境里看到了什么</p>
-</blockquote>
-<pre><code><span class="bullet">* </span>环境看起来像什么？
-<span class="bullet">* </span>谁在她周围？
-<span class="bullet">* </span>谁是她的朋友？
-<span class="bullet">* </span>她每天接触什么类型的产品或服务（相对于所有市场产品或服务）？
-<span class="bullet">* </span>她遭遇的问题是什么？
-</code></pre><p>2.她听到的是什么？</p>
-<blockquote>
-<p>描述客户所处环境是如何影响客户的</p>
-</blockquote>
-<pre><code><span class="bullet">* </span>她的朋友说什么？她的配偶呢？
-<span class="bullet">* </span>谁能真正影响她？如何影响？
-<span class="bullet">* </span>哪些媒体渠道能影响她？
-</code></pre><p>3.她真正的想法和感觉是什么？</p>
-<blockquote>
-<p>设法概述你的客户所想的是什么</p>
-</blockquote>
-<ul>
-<li>对她来说，什么是最重要的（她可能不公开说）？</li>
-<li>想象一下她的情感。</li>
-<li>什么能感动她？</li>
-<li>什么能让她失眠？</li>
-<li>尝试着描述她的梦想和愿望。</li>
-</ul>
-<p>4.她说些什么又做些什么？</p>
-<blockquote>
-<p>想象这位客户可能会说什么或者在公开场合可能的行为</p>
-</blockquote>
-<pre><code><span class="bullet">* </span>她的态度是什么？
-<span class="bullet">* </span>她会给别人讲什么？
-<span class="bullet">* </span>要特别留意在客户所说和她真正想法与感受之间的潜在冲突。
-</code></pre><p>5.这个客户的痛苦是什么？</p>
-<pre><code><span class="bullet">* </span>她最大的挫折是什么？
-<span class="bullet">* </span>在她和她想要事物或需要达到的目标之间有什么障碍？
-<span class="bullet">* </span>她会害怕承担哪些风险？
-</code></pre><p>6.这个客户想得到什么？</p>
-<pre><code><span class="bullet">* </span>她真正想要和希望达到的是什么？
-<span class="bullet">* </span>她如何衡量成功？
-<span class="bullet">* </span>猜想一些她可能用来实现其目标的策略。
-</code></pre><h4 id="创意构思">创意构思</h4><ul>
-<li>资源驱动</li>
-<li>产品/服务驱动</li>
-<li>客户驱动</li>
-<li>财务驱动</li>
-<li>多中心驱动</li>
-</ul>
-<h5 id="创意构思的过程">创意构思的过程</h5><ol>
-<li>团队构成</li>
-<li>全情投入</li>
-<li>扩展</li>
-<li>条件筛选</li>
-<li>“原型制作”</li>
-</ol>
-<h5 id="一个多样化的商业模式创新团队的成员应该">一个多样化的商业模式创新团队的成员应该</h5><ul>
-<li>来自不同业务部门</li>
-<li>年龄不同</li>
-<li>具备不同领域的专业技能</li>
-<li>有不同层次的资历</li>
-<li>拥有不同经验阅历</li>
-<li>来自不同文化背景</li>
-</ul>
-<h5 id="头脑风暴的规则">头脑风暴的规则</h5><ul>
-<li>保持聚焦</li>
-<li>执行规则</li>
-<li>可视思考</li>
-<li>做好准备</li>
-</ul>
-<h4 id="可视思考">可视思考</h4><ul>
-<li>通过便利贴实现视觉化</li>
-<li>通过绘图来实现视觉化</li>
-<li>理解本质</li>
-<li>促进对话</li>
-<li>探索创意</li>
-<li>促进交流</li>
-<li>针对不同需求的不同类型的视觉化</li>
-</ul>
-<h4 id="原型制作">原型制作</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-12-原型制作01.jpg" alt="20190227-12-原型制作01.jpg"><br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-12-原型制作02.jpg" alt="20190227-12-原型制作02.jpg"></p>
-<h4 id="故事讲述">故事讲述</h4><h4 id="情景推测">情景推测</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-13-情景推测01.jpg" alt="20190227-13-情景推测01.jpg"></p>
-<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-13-情景推测02.jpg" alt="20190227-13-情景推测02.jpg"><br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-13-情景推测03.jpg" alt="20190227-13-情景推测03.jpg"></p>
-<h3 id="战略">战略</h3><ul>
-<li>商业模式环境</li>
-<li>评估商业模式</li>
-<li>商业模式视角下的蓝海战略</li>
-<li>管理多个商业模式</li>
-</ul>
-<h4 id="商业模式环境">商业模式环境</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-14-商业模式环境.jpg" alt="20190227-14-商业模式环境.jpg"><br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-14-商业模式环境-市场影响因素-市场分析.jpg" alt="20190227-14-商业模式环境-市场影响因素-市场分析.jpg"></p>
-<ul>
-<li>制药行业环境分析<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-14-商业模式环境-制药行业环境分析01.jpg" alt="20190227-14-商业模式环境-制药行业环境分析01.jpg"><br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-14-商业模式环境-制药行业环境分析02.jpg" alt="20190227-14-商业模式环境-制药行业环境分析02.jpg"></li>
-</ul>
-<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-14-商业模式环境-制药行业环境分析03.jpg" alt="20190227-14-商业模式环境-制药行业环境分析03.jpg"><br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-14-商业模式环境-制药行业环境分析04.jpg" alt="20190227-14-商业模式环境-制药行业环境分析04.jpg"><br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-14-商业模式环境-制药行业环境分析05.jpg" alt="20190227-14-商业模式环境-制药行业环境分析05.jpg"></p>
-<h4 id="评估商业模式">评估商业模式</h4><ul>
-<li><p>亚马逊在2005年的主要优势和劣势<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-15-亚马逊在2005年的主要优势和劣势.jpg" alt="20190227-15-亚马逊在2005年的主要优势和劣势.jpg"></p>
-</li>
-<li><p>亚马逊在2006年探索到的机会：<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-15-亚马逊在2006年探索到的机会.jpg" alt="20190227-15-亚马逊在2006年探索到的机会.jpg"></p>
-</li>
-<li><p>详尽地SWOT评估每一个构造块<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-15-详尽地SWOT评估每一个构造块.jpg" alt="20190227-15-详尽地SWOT评估每一个构造块.jpg"></p>
-</li>
-</ul>
-<h4 id="商业模式视角下的蓝海战略">商业模式视角下的蓝海战略</h4><p>金和莫博涅提出了他们称之为“四项行动架构”的分析工具<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-16-四项行动架构.jpg" alt="20190227-16-四项行动架构.jpg"></p>
-<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-16-价值创意.jpg" alt="20190227-16-价值创意.jpg"></p>
-<ul>
-<li><p>在商业模式画布中融入蓝海战略框架<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-16-在商业模式画布中融入蓝海战略框架.jpg" alt="20190227-16-在商业模式画布中融入蓝海战略框架.jpg"></p>
-</li>
-<li><p>太阳马戏团（Cirque Du Soleil）<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-16-太阳马戏团（Cirque Du Soleil）01.jpg" alt="20190227-16-太阳马戏团（Cirque Du Soleil）01.jpg"></p>
-</li>
-</ul>
-<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-16-太阳马戏团（Cirque Du Soleil）02.jpg" alt="20190227-16-太阳马戏团（Cirque Du Soleil）02.jpg"><br>来源：改编自《蓝海战略》</p>
-<ul>
-<li><p>任天堂的wii<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-16-任天堂的wii-01.jpg" alt="20190227-16-任天堂的wii-01.jpg"><br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-16-任天堂的wii-02.jpg" alt="20190227-16-任天堂的wii-02.jpg"></p>
-</li>
-<li><p>用“四项行动构架”来质疑你的商业模式画布<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-16-用“四项行动构架”来质疑你的商业模式画布.jpg" alt="20190227-16-用“四项行动构架”来质疑你的商业模式画布.jpg"></p>
-</li>
-</ul>
-<h4 id="管理多个商业模式">管理多个商业模式</h4><ul>
-<li><p>瑞表（SMH）为斯沃琪（Swatch）选择独立模式<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-17-瑞表（SMH）为斯沃琪（Swatch）选择独立模式.jpg" alt="20190227-17-瑞表（SMH）为斯沃琪（Swatch）选择独立模式.jpg"></p>
-</li>
-<li><p>雀巢咖啡业务的商业模式组合<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-17-雀巢咖啡业务的商业模式组合.jpg" alt="20190227-17-雀巢咖啡业务的商业模式组合.jpg"></p>
-</li>
-<li><p>戴姆勒的“随租随行”（CAR2GO）商业模式<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-17-戴姆勒的“随租随行”（CAR2GO）商业模式.jpg" alt="20190227-17-戴姆勒的“随租随行”（CAR2GO）商业模式.jpg"></p>
-</li>
-</ul>
-<h3 id="流程">流程</h3><ul>
-<li>商业模式设计流程</li>
-<li>设计理念</li>
-<li>5 个阶段</li>
-</ul>
-<h4 id="商业模式设计流程">商业模式设计流程</h4><p>商业模式的创新有四大目标：</p>
-<ul>
-<li>（1）满足被忽视的市场需求；</li>
-<li>（2）把新技术、产品和服务推向市场；</li>
-<li>（3）通过一个更好的商业模式来改进、颠覆或变革现有的市场；</li>
-<li>（4）创造一个全新的市场。</li>
-</ul>
-<p>挑战</p>
-<ul>
-<li>找出合适的模式</li>
-<li>全面上市之前进行测试模式</li>
-<li>推动市场接受新的模式</li>
-<li>结合市场反馈，持续不断地调整模式</li>
-<li>管理不确定因素</li>
-</ul>
-<h4 id="设计理念">设计理念</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-18-设计理念.jpg" alt="20190227-18-设计理念.jpg"></p>
-<h4 id="5_个阶段">5 个阶段</h4><blockquote>
-<p>5个阶段：动员、理解、设计、实施、管理</p>
-</blockquote>
-<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-19-5个阶段：动员、理解、设计、实施、管理-01.jpg" alt="20190227-19-5个阶段：动员、理解、设计、实施、管理-01.jpg"></p>
-<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-19-5个阶段：动员、理解、设计、实施、管理-02.jpg" alt="20190227-19-5个阶段：动员、理解、设计、实施、管理-02.jpg"></p>
-<h3 id="展望">展望</h3><ul>
-<li>不以赢利为目的的商业模式</li>
-<li>电脑辅助商业模式设计</li>
-<li>商业模式和商业计划书<ul>
-<li>团队</li>
-<li>商业模式</li>
-<li>财务分析</li>
-<li>外部环境</li>
-<li>实施路线图</li>
-<li>风险分析</li>
-</ul>
-</li>
-<li>在企业中实施商业模式<ul>
-<li>战略</li>
-<li>结构</li>
-<li>流程</li>
-<li>激励</li>
-<li>人员</li>
-</ul>
-</li>
-<li>IT 系统配合业务</li>
-</ul>
-<h4 id="不以赢利为目的的商业模式">不以赢利为目的的商业模式</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-20-不以赢利为目的的商业模式-01.jpg" alt="20190227-20-不以赢利为目的的商业模式-01.jpg"><br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-20-不以赢利为目的的商业模式-02.jpg" alt="20190227-20-不以赢利为目的的商业模式-02.jpg"></p>
-<h4 id="电脑辅助商业模式设计">电脑辅助商业模式设计</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-21-电脑辅助商业模式设计.jpg" alt="20190227-21-电脑辅助商业模式设计.jpg"></p>
-<h4 id="商业模式和商业计划书">商业模式和商业计划书</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-22-商业模式和商业计划书.jpg" alt="20190227-22-商业模式和商业计划书.jpg"></p>
-<h4 id="在企业中实施商业模式">在企业中实施商业模式</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-23-在企业中实施商业模式.jpg" alt="20190227-23-在企业中实施商业模式.jpg"></p>
-<h4 id="IT_系统配合业务">IT 系统配合业务</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-24-IT系统配合业务.jpg" alt="20190227-24-IT系统配合业务.jpg"></p>
-<h3 id="《商业模式新生代》的商业模式画布">《商业模式新生代》的商业模式画布</h3><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/02/20190227-25-《商业模式新生代》的商业模式画布.jpg" alt="20190227-25-《商业模式新生代》的商业模式画布.jpg"></p>
-<h3 id="个人总结">个人总结</h3><p>建筑自已对商业模式的认识，有一个清晰的方法论，作者给了全面的9个商业要素，并且本书根据这个画布，组构、分析、优化，并在案例分析和结合其它想维框架，给出很多商业模式的示例，最后，需要读者自已给出自已创新的模式！</p>
-<p>平时还真的较少读商业的书，读了这本书之后，其它很多东西没有完全理解，能把商业划分如此，思考+总结+实践，画出公司的商业模式，或自己的商业模式，一定能解答自己一直对公司或自己的理解，有更新更好的认识吧！</p>
-<p><br></p>
-<ul>
-<li>如有疑问，欢迎在评论区一起讨论！</li>
-<li>如有不正确的地方，欢迎指导！</li>
-</ul>
-<p><br></p>
-<blockquote>
-<p>注：本文首发于 <a href="https://iHTCboy.com">iHTCboy’s blog</a>，如若转载，请注来源</p>
-</blockquote>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h3 id="前言">前言</h3><p>今年读的第一本书，时间节奏快，还是要在细细读第二次！非常优秀的实践指导书，值得每一个创业者，都读一下，不管是已经创业失败，还是准备创业，或者正在创业的小伙伴们，都赶紧来读读吧！</p>
-<h3 id="框架">框架</h3><p>读一本书，不是为了知识而知识，需要总结或吸收书中的知识框架，以便成为自己的知识体系！</p>]]>
     
     </summary>
     
