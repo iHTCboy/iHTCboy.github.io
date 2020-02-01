@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Learn something of everything,  Learn everything of something.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="https://iHTCboy.com/"/>
-  <updated>2020-02-01T10:21:59.408Z</updated>
+  <updated>2020-02-01T15:30:01.521Z</updated>
   <id>https://iHTCboy.com/</id>
   
   <author>
@@ -15,11 +15,103 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[iOS开发高手课 -- 学习总结系列]]></title>
+    <link href="https://iHTCboy.com/2020/02/01/2020-02-01_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/"/>
+    <id>https://iHTCboy.com/2020/02/01/2020-02-01_iOS开发高手课/</id>
+    <published>2020-02-01T07:49:16.000Z</published>
+    <updated>2020-02-01T15:30:01.521Z</updated>
+    <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p><code>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程[《iOS开发高手课 - 极客时间》](https://time.geekbang.org/column/intro/161)</code></p>
+<p>上一篇年终总结说到，计划今年与公司组里同学一起学习和分享， <a href="https://ming1016.github.io/categories/Programming/" target="_blank" rel="external">戴铭</a> 老师的<a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a>，开始的想法比较简单，每周一节知识交流，然后大家一起讨论和分享，并且考虑把一些idea用于工作和项目中，促进大家进步和更好的开发，在这过程中，我还是想把自己以前经历的或者学习过的东西，在串起来后，从一个点，到一条线，最后形成一个面，从一个面了解一个事物，这样才能更好的学习。所以，这也是后续这个系列，希望尽量做到，更好的角度，更高的视线，一起学习~</p>
+<a id="more"></a>
+<h3 id="2、正文">2、正文</h3><p><code>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程[《iOS开发高手课 - 极客时间》](https://time.geekbang.org/column/intro/161)</code></p>
+<p>以下是 <a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a> 的课程目录，也是后续这个系列的每篇文章的链接：</p>
+<ul>
+<li>开篇词 | 锚定一个点，然后在这个点上深耕</li>
+<li><a href="https://ihtcboy.com/">01 | 建立你自己的iOS开发知识体系</a></li>
+<li><a href="https://ihtcboy.com/">02 | App 启动速度怎么做优化与监控？</a></li>
+<li><a href="https://ihtcboy.com/">03 | Auto Layout 是怎么进行自动布局的，性能如何？</a></li>
+<li><a href="https://ihtcboy.com/">04 | 项目大了人员多了，架构怎么设计更合理？</a></li>
+<li><a href="https://ihtcboy.com/">05 | 链接器：符号是怎么绑定到地址上的？</a></li>
+<li><a href="https://ihtcboy.com/">06 | App 如何通过注入动态库的方式实现极速编译调试？</a></li>
+<li><a href="https://ihtcboy.com/">07 | Clang、Infer 和 OCLint ，我们应该使用谁来做静态分析？</a></li>
+<li><a href="https://ihtcboy.com/">08 | 如何利用 Clang 为 App 提质？</a></li>
+<li><a href="https://ihtcboy.com/">09 | 无侵入的埋点方案如何实现？</a></li>
+<li><a href="https://ihtcboy.com/">10 | 包大小：如何从资源和代码层面实现全方位瘦身？</a></li>
+<li><a href="https://ihtcboy.com/">12 | iOS 崩溃千奇百怪，如何全面监控？</a></li>
+<li><a href="https://ihtcboy.com/">11 | 热点问题答疑（一）：基础模块问题答疑</a></li>
+<li><a href="https://ihtcboy.com/">13 | 如何利用 RunLoop 原理去监控卡顿？</a></li>
+<li><a href="https://ihtcboy.com/">14 | 临近 OOM，如何获取详细内存分配信息，分析内存问题？</a></li>
+<li><a href="https://ihtcboy.com/">15 | 日志监控：怎样获取 App 中的全量日志？</a></li>
+<li><a href="https://ihtcboy.com/">16 | 性能监控：衡量 App 质量的那把尺</a></li>
+<li><a href="https://ihtcboy.com/">17 | 远超你想象的多线程的那些坑</a></li>
+<li><a href="https://ihtcboy.com/">18 | 怎么减少 App 电量消耗？</a></li>
+<li><a href="https://ihtcboy.com/">19 | 热点问题答疑（二）：基础模块问题答疑</a></li>
+<li><a href="https://ihtcboy.com/">20 | iOS开发的最佳学习路径是什么？</a></li>
+<li><a href="https://ihtcboy.com/">21 | 除了 Cocoa，iOS还可以用哪些 GUI 框架开发？</a></li>
+<li><a href="https://ihtcboy.com/">22 | 细说 iOS 响应式框架变迁，哪些思想可以为我所用？</a></li>
+<li><a href="https://ihtcboy.com/">23 | 如何构造酷炫的物理效果和过场动画效果？</a></li>
+<li><a href="https://ihtcboy.com/">24 | A／B 测试：验证决策效果的利器</a></li>
+<li><a href="https://ihtcboy.com/">25 | 怎样构建底层的发布和订阅事件总线？</a></li>
+<li><a href="https://ihtcboy.com/">26 | 如何提高 JSON 解析的性能？</a></li>
+<li><a href="https://ihtcboy.com/">27 | 如何用 Flexbox 思路开发？跟自动布局比，Flexbox 好在哪？</a></li>
+<li><a href="https://ihtcboy.com/">28 | 怎么应对各种富文本表现需求？</a></li>
+<li><a href="https://ihtcboy.com/">29 | 如何在 iOS 中进行面向测试驱动开发和面向行为驱动开发？</a></li>
+<li><a href="https://ihtcboy.com/">30 | 如何制定一套适合自己团队的 iOS 编码规范？</a></li>
+<li><a href="https://ihtcboy.com/">31 | iOS 开发学习资料和书单推荐</a></li>
+<li><a href="https://ihtcboy.com/">32 | 热点问题答疑（三）</a></li>
+<li><a href="https://ihtcboy.com/">33 | iOS 系统内核 XNU：App 如何加载？</a></li>
+<li><a href="https://ihtcboy.com/">34 | iOS 黑魔法 Runtime Method Swizzling 背后的原理</a></li>
+<li><a href="https://ihtcboy.com/">35 | libffi：动态调用和定义 C 函数</a></li>
+<li><a href="https://ihtcboy.com/">36 | iOS 是怎么管理内存的？</a></li>
+<li><a href="https://ihtcboy.com/">37 | 如何编写 Clang 插件？</a></li>
+<li><a href="https://ihtcboy.com/">用户故事 | 我是如何学习这个专栏的？</a></li>
+<li><a href="https://ihtcboy.com/">38 | 热点问题答疑（四）</a></li>
+<li><a href="https://ihtcboy.com/">39 | 打通前端与原生的桥梁：JavaScriptCore 能干哪些事情？</a></li>
+<li><a href="https://ihtcboy.com/">40 | React Native、Flutter 等，这些跨端方案怎么选？</a></li>
+<li><a href="https://ihtcboy.com/">41 | 原生布局转到前端布局，开发思路有哪些转变？</a></li>
+<li><a href="https://ihtcboy.com/">42 | iOS原生、大前端和Flutter分别是怎么渲染的？</a></li>
+<li><a href="https://ihtcboy.com/">43 | 剖析使 App 具有动态化和热更新能力的方案</a></li>
+<li><a href="https://ihtcboy.com/">结束语 | 慢几步，深几度</a></li>
+</ul>
+<p>注：问题答疑文章不作总结。</p>
+<h3 id="3、总结">3、总结</h3><p><code>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程[《iOS开发高手课 - 极客时间》](https://time.geekbang.org/column/intro/161)</code></p>
+<p>目前分享了几篇文章，学习原文过程中，依然有很多未知，同时也查阅了很多资料，可能还存在错误，所以，分享出来，希望大家一起学习和提升，也是自己总结知识体系，厚积薄发，一起加油吧！</p>
+<h3 id="参考">参考</h3><ul>
+<li><a href="https://ming1016.github.io/categories/Programming/" target="_blank" rel="external">戴铭 - 博客</a></li>
+<li><a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a></li>
+</ul>
+<p><br></p>
+<ul>
+<li>如有不正确的地方，欢迎指导！</li>
+<li>如有疑问，欢迎在评论区一起讨论！</li>
+</ul>
+<p><br></p>
+<blockquote>
+<p>注：本文首发于 <a href="https://iHTCboy.com">iHTCboy’s blog</a>，如若转载，请注来源<br><br></p>
+</blockquote>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h3 id="1、前言">1、前言</h3><p><code>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程[《iOS开发高手课 - 极客时间》](https://time.geekbang.org/column/intro/161)</code></p>
+<p>上一篇年终总结说到，计划今年与公司组里同学一起学习和分享， <a href="https://ming1016.github.io/categories/Programming/">戴铭</a> 老师的<a href="https://time.geekbang.org/column/intro/161">《iOS开发高手课 - 极客时间》</a>，开始的想法比较简单，每周一节知识交流，然后大家一起讨论和分享，并且考虑把一些idea用于工作和项目中，促进大家进步和更好的开发，在这过程中，我还是想把自己以前经历的或者学习过的东西，在串起来后，从一个点，到一条线，最后形成一个面，从一个面了解一个事物，这样才能更好的学习。所以，这也是后续这个系列，希望尽量做到，更好的角度，更高的视线，一起学习~</p>]]>
+    
+    </summary>
+    
+      <category term="iOS开发高手课" scheme="https://iHTCboy.com/tags/iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/"/>
+    
+      <category term="学习总结" scheme="https://iHTCboy.com/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
+    
+      <category term="极客时间" scheme="https://iHTCboy.com/tags/%E6%9E%81%E5%AE%A2%E6%97%B6%E9%97%B4/"/>
+    
+      <category term="induction" scheme="https://iHTCboy.com/categories/induction/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[2020，爱你爱你]]></title>
     <link href="https://iHTCboy.com/2020/01/01/2020-01-01_2019year/"/>
     <id>https://iHTCboy.com/2020/01/01/2020-01-01_2019year/</id>
     <published>2020-01-01T04:12:12.000Z</published>
-    <updated>2020-02-01T10:21:59.408Z</updated>
+    <updated>2020-02-01T10:26:01.770Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <p>“若遇棘手之际，请从<code>耐烦</code>二字痛下功夫。”<br>——— 曾国藩</p>
 </blockquote>
@@ -159,6 +251,7 @@
 <li><strong>《亲爱的，热爱的》</strong>：简单地说就是一部爱情虐狗剧，很甜很美好，确实是拍得不错。</li>
 <li><strong>《庆余年》</strong>(第一季)：该剧改编自猫腻的同名小说，讲述了一个有着神秘身世的少年，自海边小城初出茅庐，历经家族、江湖、庙堂的种种考验、锤炼的故事。从来不看网络小说的我，还是被这剧情所吸引，脑洞大开！最有趣的是范闲醉写诗百首，中国的文化魅力精彩!</li>
 </ul>
+<p>旅游现在变成了一个追求时尚的活动，娱乐现在也变成<code>被娱乐</code>，大多数人都会随波，这个是自然规律，比如我们看不顺眼的一件事，我们当时肯定很不理解，但我认为我们不必理解，做好自己，就是最好的理解，<code>不必要求人人如己，但求自己不必如人人</code>。</p>
 <h4 id="最后的开始">最后的开始</h4><p>最后的开始，用一段话总结和展望：</p>
 <blockquote>
 <p>三流的化妆是脸上的化妆，<br>二流的化妆是精神的化妆，<br>一流的化妆是生命的化妆。</p>
@@ -7001,153 +7094,6 @@ DOM 架构方案在文本编辑与图形渲染操作方面的优缺点
       <category term="效率" scheme="https://iHTCboy.com/tags/%E6%95%88%E7%8E%87/"/>
     
       <category term="脚本" scheme="https://iHTCboy.com/tags/%E8%84%9A%E6%9C%AC/"/>
-    
-      <category term="induction" scheme="https://iHTCboy.com/categories/induction/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[shell技巧6 - iOS最大构建版本文件大小]]></title>
-    <link href="https://iHTCboy.com/2019/03/13/2019-03-13_shell%E6%8A%80%E5%B7%A76-iOS%E6%9C%80%E5%A4%A7%E6%9E%84%E5%BB%BA%E7%89%88%E6%9C%AC%E6%96%87%E4%BB%B6%E5%A4%A7%E5%B0%8F/"/>
-    <id>https://iHTCboy.com/2019/03/13/2019-03-13_shell技巧6-iOS最大构建版本文件大小/</id>
-    <published>2019-03-13T13:20:16.000Z</published>
-    <updated>2019-03-17T14:36:10.952Z</updated>
-    <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>在上传提交ipa文件成功后，发现AppStoreConnect后台一直不显示构建版本，最后邮箱收到：</p>
-<blockquote>
-<p>App Store Connect</p>
-<p>Dear Developer,</p>
-<p>We identified one or more issues with a recent delivery for your app, “XXX”. Please correct the following issues, then upload again.<br>Invalid Executable Size - The size of your app’s executable file ‘XXX.app/XXX’ is 90374144 bytes, which exceeds the maximum allowed size of 80 MB.<br>Best regards,<br>The App Store Team</p>
-</blockquote>
-<a id="more"></a>
-<h3 id="2、原因">2、原因</h3><p><code>Executable Size</code> ？<code>executable file</code> ？这2个是什么东西？Executable 是可执行的意思，所以就是可执行的大小、可执行的文件。<br>每个 Mach-O 可执行文件（例如，app_name.app/app_name）不得超过这些正文段（<strong>TEXT）文件大小的上限。具体 Mach-O 和 </strong>TEXT 是什么，大家可以看看：<a href="https://objccn.io/issue-6-3/" target="_blank" rel="external">ObjC 中国 - Mach-O 可执行文件</a>。</p>
-<p>那从苹果文档<a href="https://help.apple.com/app-store-connect/#/dev611e0a21f" target="_blank" rel="external">最大构建版本文件大小 - App Store Connect 帮助</a>，可以得到如下：</p>
-<table>
-<thead>
-<tr>
-<th>OS 版本</th>
-<th>最大可执行文件大小</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>iOS 9.0 或更高版本<br>Apple TVOS 9.0 或更高版本</td>
-<td>500 MB</td>
-<td>针对二进制文件中所有“__TEXT”部分的总和。</td>
-</tr>
-<tr>
-<td>iOS 7.X 至 iOS 8.X</td>
-<td>60 MB</td>
-<td>针对每个 Architecture Slice（架构片段）中的“__TEXT”部分。</td>
-</tr>
-<tr>
-<td>低于 iOS 7.0</td>
-<td>80 MB</td>
-<td>针对二进制文件中所有“__TEXT”部分的总和。</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>注：<strong>Architecture Slice</strong>（架构片段）是针对特定架构的胖二进制布局文件的一部分。例如，一个胖二进制文件可能会包含针对 32 位和 64 位架构的片段。</li>
-</ul>
-<p>综上，<code>executable file &#39;XXX.app/XXX&#39; is 90374144 bytes, which exceeds the maximum allowed size of 80 MB.</code> 就是说，当前可执行文件“__TEXT”部分的总和为 <code>90374144 bytes</code>，超过了 <code>80 MB</code>。</p>
-<ul>
-<li><p>是什么？<br>当前可执行文件“__TEXT”部分的总和大小超过80MB！</p>
-</li>
-<li><p>为什么？<br>Mach-O可执行文件中包含<code>__TEXT</code>区域，<code>__TEXT</code>包含了被执行的代码，即编译所得到的机器码。所以，也就是我们的应用中代码量或引用的第三方库过大导致。</p>
-</li>
-<li><p>怎么办？<br>因为苹果限制，所以，</p>
-<ul>
-<li>第1步是减少第三方库或删除无用的代码。</li>
-<li>第2步是要找到什么计算<code>__TEXT</code>的大小？ </li>
-</ul>
-</li>
-</ul>
-<h3 id="3、__TEXT大小计算">3、<code>__TEXT</code>大小计算</h3><p>怎么计算 <code>__TEXT</code>的 <code>size</code> ？ 在终端用 <code>size XXX</code>就可以打印当前应用的二进制的<code>__TEXT</code>字段大小：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">➜  ~ size /Users/HTC/Downloads/WeChat/Payload/WeChat.app/WeChat </span><br><span class="line">__TEXT	__DATA	__OBJC	others	dec	hex</span><br><span class="line"><span class="number">53329920</span>	<span class="number">7929856</span>	<span class="number">0</span>	<span class="number">3162112</span>	<span class="number">64421888</span>	<span class="number">3</span>d70000	/Users/HTC/Downloads/WeChat/Payload/WeChat.app/WeChat (<span class="keyword">for</span> architecture armv7)</span><br><span class="line"><span class="number">57475072</span>	<span class="number">13647872</span>	<span class="number">0</span>	<span class="number">4298047488</span>	<span class="number">4369170432</span>	<span class="number">1046</span>c4000	/Users/HTC/Downloads/WeChat/Payload/WeChat.app/WeChat (<span class="keyword">for</span> architecture arm64)</span><br><span class="line">➜  ~</span><br></pre></td></tr></table></figure>
-<p>注：如果应用支持<code>armv7</code>、<code>arm64</code>多种架构，就会显示多个，不会有<code>i386</code>、<code>x86_64</code>是因为dis正式包已经移除模拟器架构。像现在新的应用，只支持<code>arm64</code>就不会显示具体架构：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">➜  ~ size /Users/HTC/Downloads/Weixin/Payload/WeChat.app/WeChat</span><br><span class="line">__TEXT	__DATA	__OBJC	others	dec	hex</span><br><span class="line"><span class="number">65355776</span>	<span class="number">15040512</span>	<span class="number">0</span>	<span class="number">4298145792</span>	<span class="number">4378542080</span>	<span class="number">104</span>fb4000</span><br></pre></td></tr></table></figure>
-<p>那么知道了计算公式，根据上面苹果给出的文档要求，需要做应用最低支持系统版本判断计算方式：</p>
-<ol>
-<li>iOS 7.X 至 iOS 8.X 每个架构最大为 60 MB</li>
-<li>iOS 9.0 或更高版本    500 MB    针对二进制文件中所有“__TEXT”部分的总和。</li>
-<li>低于 iOS 7.0         80 MB     针对二进制文件中所有“__TEXT”部分的总和。</li>
-</ol>
-<p>根据这个要求，会出现如下2种计算方式：</p>
-<ul>
-<li>计算所有“__TEXT”部分的总和</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">size app | awk <span class="string">'&#123;print $1&#125;'</span> | grep -E <span class="string">'[0-9]'</span> | awk <span class="string">'&#123;sum += $1&#125;; END &#123;print sum&#125;'</span></span><br></pre></td></tr></table></figure>
-<p>运行示例：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">➜  ~ size /Users/HTC/Downloads/WeChat/Payload/WeChat.app/WeChat | awk <span class="string">'&#123;print $1&#125;'</span> | grep -E <span class="string">'[0-9]'</span> | awk <span class="string">'&#123;sum += $1&#125;; END &#123;print sum&#125;'</span></span><br><span class="line"><span class="number">110804992</span></span><br></pre></td></tr></table></figure>
-<p><strong>脚本说明</strong>：首先是用<code>size</code> 列出全部的架构的<code>__TEXT</code>大小，然后用 <code>awk</code> （<a href="https://opengers.github.io/linux/awk-format-print/" target="_blank" rel="external">awk文本处理实战 | opengers</a>）过滤出第一列的内容输出，然后用<code>grep</code> -E（扩展的正则表达式）过滤数字的行，最后是计算各行数字相加的和输出。</p>
-<ul>
-<li>分别列出各架构的大小</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">size app | awk <span class="string">'&#123;print $1 "," $10&#125;'</span> | tail -n +<span class="number">2</span></span><br></pre></td></tr></table></figure>
-<p> 运行示例：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">➜  ~ size /Users/HTC/Downloads/WeChat/Payload/WeChat.app/WeChat | awk <span class="string">'&#123;print $1 "," $10&#125;'</span> | tail -n +<span class="number">2</span></span><br><span class="line"><span class="number">53329920</span>,armv7)</span><br><span class="line"><span class="number">57475072</span>,arm64)</span><br></pre></td></tr></table></figure>
-<p><strong>脚本说明</strong>：首先是用<code>size</code> 列出全部的架构的<code>__TEXT</code>（第1列）大小和架构名（第10列），之前用分号<code>,</code>间隔，然后输出，然后用 <code>tail</code> 输出从第2行开始的内容。</p>
-<p>以上就是本文的核心内容，具体shell的技巧就不深讲啦，大家有兴趣可以搜索，<code>awk</code>、<code>tail</code> 命令了解更多，<a href="https://opengers.github.io/linux/awk-format-print/" target="_blank" rel="external">awk文本处理实战 | opengers</a>、<a href="http://www.runoob.com/linux/linux-comm-tail.html" target="_blank" rel="external">Linux tail 命令 | 菜鸟教程</a></p>
-<h3 id="4、shell_编程实现">4、shell 编程实现</h3><p>需要注意一下，上面输出的是bytes，而macOS是用1000来转换成MB。</p>
-<p><a href="https://zh.wikipedia.org/wiki/Mebibyte" target="_blank" rel="external">Mebibyte - 维基百科，自由的百科全书</a>：</p>
-<blockquote>
-<p>所有版本的Windows系统都会将一个2^20 bytes的文件显示为“1.00MB”，而10^6 bytes的文件显示为976kB。在Mac OS X 10.6之后将文件和磁盘大小都用Megabytes来表示，即将10^6 bytes的文件显示为1MB。</p>
-</blockquote>
-<p>最终效果示例：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">================================================&#10; Enter Mach-O executable file path: /Users/HTC/Downloads/WeChat/Payload/WeChat.app/WeChat&#10;Place enter the number select minimum supported system version for the app? [ 1:gt iOS9 2:lt iOS7 3:iOS7.X~8.X] &#10;1&#10;executable file size: 110.805 MB&#10;&#11093;&#65039; [Success] 110.805 MB&#65292; &#31526;&#21512;&#33529;&#26524; iOS9 &#23567;&#20110; 500 MB &#30340;&#35201;&#27714;&#65281;&#10;&#10;================================================&#10; Enter Mach-O executable file path: /Users/HTC/Downloads/WeChat/Payload/WeChat.app/WeChat&#10;Place enter the number select minimum supported system version for the app? [ 1:gt iOS9 2:lt iOS7 3:iOS7.X~8.X] &#10;2&#10;executable file size: 110.805 MB&#10;&#10060; [Error] 110.805 MB&#65292; &#19981;&#31526;&#21512;&#33529;&#26524; iOS7 &#23567;&#20110; 80 MB &#30340;&#35201;&#27714;&#65281;&#10;&#10;================================================&#10; Enter Mach-O executable file path: /Users/HTC/Downloads/WeChat/Payload/WeChat.app/WeChat&#10;Place enter the number select minimum supported system version for the app? [ 1:gt iOS9 2:lt iOS7 3:iOS7.X~8.X] &#10;3&#10;armv7 executable file size: 53.3299 MB&#10;&#11093;&#65039; [Success] armv7 size: 53.3299 MB&#65292; &#31526;&#21512;&#33529;&#26524; iOS 7.X &#33267; iOS 8.X &#27599;&#20010;&#26550;&#26500;&#26368;&#22823;&#20026; 60 MB &#30340;&#35201;&#27714;&#65281;&#10;arm64 executable file size: 57.4751 MB&#10;&#11093;&#65039; [Success] arm64 size: 57.4751 MB&#65292; &#31526;&#21512;&#33529;&#26524; iOS 7.X &#33267; iOS 8.X &#27599;&#20010;&#26550;&#26500;&#26368;&#22823;&#20026; 60 MB &#30340;&#35201;&#27714;&#65281;</span><br></pre></td></tr></table></figure>
-<p>具体的代码，可参考我的Github代码：</p>
-<ul>
-<li><a href="https://github.com/iHTCboy/iShell" target="_blank" rel="external">iHTCboy/iShell: Shell脚本编程技巧，总结一些常用的提高效率的方法。</a></li>
-</ul>
-<p><code>calculate_Mach-0__Text-Size .sh</code>：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash&#10;&#10;# &#23450;&#20041;&#29992;&#21040;&#30340;&#21464;&#37327;&#10;ExecutableFilePath=&#34;&#34;&#10;&#10;# &#23450;&#20041;&#35835;&#21462;&#36755;&#20837;&#23383;&#31526;&#30340;&#20989;&#25968;&#10;getExecutableFilePath() &#123;&#10;&#9;# &#36755;&#20986;&#25442;&#34892;&#65292;&#26041;&#20415;&#26597;&#30475;&#10;&#9;echo &#34;================================================&#34;&#10;&#9;# &#30417;&#21548;&#36755;&#20837;&#24182;&#19988;&#36171;&#20540;&#32473;&#21464;&#37327;&#10;&#9;read -p &#34; Enter Mach-O executable file path: &#34; ExecutableFilePath&#10;&#9;# &#22914;&#26524;&#20026;&#31354;&#20540;&#65292;&#20174;&#26032;&#30417;&#21548;&#10;&#9;if test -z &#34;$ExecutableFilePath&#34;; then&#10;&#9;&#9;echo &#34;Error! Should enter file path &#34;&#10;&#9;&#9;getExecutableFilePath&#10;&#9;fi&#10;&#125;&#10;&#10;getExecutableFilePath&#10;&#10;echo &#34;Place enter the number select minimum supported system version for the app? [ 1:gt iOS9 2:lt iOS7 3:iOS7.X~8.X] &#34;&#10;&#10;read number&#10;while([[ $number != 1 ]] &#38;&#38; [[ $number != 2 ]] &#38;&#38; [[ $number != 3 ]])&#10;do&#10;echo &#34;Error! Should enter 1 or 2 or 3&#34;&#10;echo &#34;Place enter the number you want to export ? [ 1:app-store 2:ad-hoc 3:dev] &#34;&#10;read number&#10;done&#10;&#10;&#10;if [ $number != 3 ];then&#10;&#9;app_size=$(echo `size $&#123;ExecutableFilePath&#125; | awk &#39;&#123;print $1&#125;&#39; | grep -E &#39;[0-9]&#39; | awk &#39;&#123;sum += $1&#125;; END &#123;print sum/1000/1000&#125;&#39;`)&#10;&#9;echo &#39;executable file size:&#39; $&#123;app_size&#125; &#39;MB&#39;&#10;&#9;if [ $number == 1 ];then&#10;&#9;&#9;#iOS 9.0 &#25110;&#26356;&#39640;&#29256;&#26412;    500 MB    &#38024;&#23545;&#20108;&#36827;&#21046;&#25991;&#20214;&#20013;&#25152;&#26377;&#8220;__TEXT&#8221;&#37096;&#20998;&#30340;&#24635;&#21644;&#12290;&#10;&#9;&#9;#&#22240;&#20026;bc&#21644;awk&#37117;&#25903;&#25345;&#28014;&#28857;&#25968;&#65292;&#21487;&#20197;&#20351;&#29992;bc&#36827;&#34892;&#22788;&#29702;&#65306;&#10;&#9;&#9;if [ `echo &#34;$app_size &#62; 500&#34; | bc` -eq 1 ];then&#10;&#9;&#9;&#9;echo &#39;&#10060; [Error]&#39; $&#123;app_size&#125; &#39;MB&#65292;&#39; &#39;&#19981;&#31526;&#21512;&#33529;&#26524; iOS9 &#23567;&#20110; 500 MB &#30340;&#35201;&#27714;&#65281;&#39;&#10;&#9;&#9;else&#10;&#9;&#9;&#9;echo &#39;&#11093;&#65039; [Success]&#39; $&#123;app_size&#125; &#39;MB&#65292;&#39; &#39;&#31526;&#21512;&#33529;&#26524; iOS9 &#23567;&#20110; 500 MB &#30340;&#35201;&#27714;&#65281;&#39;&#10;&#9;&#9;fi&#10;&#9;else&#10;&#9;&#9;#&#20302;&#20110; iOS 7.0         80 MB     &#38024;&#23545;&#20108;&#36827;&#21046;&#25991;&#20214;&#20013;&#25152;&#26377;&#8220;__TEXT&#8221;&#37096;&#20998;&#30340;&#24635;&#21644;&#12290;&#10;&#9;&#9;if [ `echo &#34;$app_size &#62; 80&#34; | bc` -eq 1 ];then&#10;&#9;&#9;&#9;echo &#39;&#10060; [Error]&#39; $&#123;app_size&#125; &#39;MB&#65292;&#39; &#39;&#19981;&#31526;&#21512;&#33529;&#26524; iOS7 &#23567;&#20110; 80 MB &#30340;&#35201;&#27714;&#65281;&#39;&#10;&#9;&#9;else&#10;&#9;&#9;&#9;echo &#39;&#11093;&#65039; [Success]&#39; $&#123;app_size&#125; &#39;MB&#65292;&#39; &#39;&#31526;&#21512;&#33529;&#26524; iOS7 &#23567;&#20110; 80 MB &#30340;&#35201;&#27714;&#65281;&#39;&#10;&#9;&#9;fi&#10;&#9;fi&#10;else&#10;&#9;app_size=$(echo `size &#34;$ExecutableFilePath&#34; | awk &#39;&#123;print $1 &#34;,&#34; $10&#125;&#39; | tail -n +2`)&#10;&#9;# iOS 7.X &#33267; iOS 8.X &#27599;&#20010;&#26550;&#26500;&#26368;&#22823;&#20026; 60 MB&#10;&#9;# echo $app_size &#10;&#9;# 53329920,armv7) 57475072,arm64)&#10;&#9;arch_arr=(`echo $app_size | tr &#39; &#39; &#39; &#39;`) &#10;&#9;for each in $&#123;arch_arr[@]&#125;&#10;&#9;do&#10;&#9;&#9;size=`echo $each | awk -F&#39;,&#39; &#39;&#123;print $1&#125;&#39; | awk &#39;&#123;sum += $1&#125;; END &#123;print sum/1000/1000&#125;&#39;`&#10;&#9;&#9;arch=`echo $each | awk -F&#39;,&#39; &#39;&#123;print $2&#125;&#39;`&#10;&#9;&#9;# echo $&#123;arch/%)/&#125;  # &#22914;&#26524;&#23383;&#31526;&#20018;arch&#20197;)&#32467;&#23614;&#65292;&#21017;&#29992;&#31354;&#26367;&#25442;&#23427;&#10;&#9;&#9;echo $&#123;arch/%)/&#125; &#39;executable file size:&#39; $&#123;size&#125; &#39;MB&#39;&#10;&#9;&#9;if [ `echo &#34;$size &#62; 60&#34; | bc` -eq 1 ];then&#10;&#9;&#9;&#9;echo &#39;&#10060; [Error]&#39; $&#123;arch/%)/&#125; &#39;size:&#39; $&#123;size&#125; &#39;MB&#65292;&#39; &#39;&#19981;&#31526;&#21512;&#33529;&#26524; iOS 7.X &#33267; iOS 8.X &#27599;&#20010;&#26550;&#26500;&#26368;&#22823;&#20026; 60 MB &#30340;&#35201;&#27714;&#65281;&#39;&#10;&#9;&#9;else&#10;&#9;&#9;&#9;echo &#39;&#11093;&#65039; [Success]&#39; $&#123;arch/%)/&#125; &#39;size:&#39; $&#123;size&#125; &#39;MB&#65292;&#39; &#39;&#31526;&#21512;&#33529;&#26524; iOS 7.X &#33267; iOS 8.X &#27599;&#20010;&#26550;&#26500;&#26368;&#22823;&#20026; 60 MB &#30340;&#35201;&#27714;&#65281;&#39;&#10;&#9;&#9;fi&#10;&#9;done&#10;fi</span><br></pre></td></tr></table></figure>
-<h3 id="5、总结">5、总结</h3><p>本次脚本又顺利提高了效率！本文用到非常多的脚本命令，大家不必说记住，主要是知道用来做什么的，或者有需求时要搜索也可以，通过本次脚本编写，大家应该能发现shell脚本的强大而洁的语法，要学到以用，还需要多实践！</p>
-<h3 id="参考">参考</h3><ul>
-<li><a href="https://github.com/iHTCboy/iShell" target="_blank" rel="external">iHTCboy/iShell: Shell脚本编程技巧，总结一些常用的提高效率的方法。</a></li>
-<li><a href="https://help.apple.com/app-store-connect/#/dev611e0a21f" target="_blank" rel="external">最大构建版本文件大小 - App Store Connect 帮助</a></li>
-<li><a href="https://blog.csdn.net/qq_19411159/article/details/75045114" target="_blank" rel="external">ipa上传app store的大小限制 - 逸轻紫的博客 - CSDN博客</a></li>
-<li><a href="https://forums.developer.apple.com/thread/74705" target="_blank" rel="external">How can i reduce __TEXT segment size? |Apple Developer Forums</a></li>
-<li><a href="https://stackoverflow.com/questions/43036810/how-can-i-reduce-text-segment-size-in-ios-app" target="_blank" rel="external">xcode - How can i reduce __TEXT segment size in iOS App? - Stack Overflow</a></li>
-<li><a href="https://www.desgard.com/iosre-1/" target="_blank" rel="external">Mach-O 文件格式探索 · 瓜地</a></li>
-<li><a href="https://stackoverflow.com/questions/22995744/how-to-measure-the-code-i-e-data-text-size-of-a-static-library/23301371#23301371" target="_blank" rel="external">ios - How to measure the code (i.e. data + text) size of a static library? - Stack Overflow</a></li>
-<li><a href="https://opengers.github.io/linux/awk-format-print/" target="_blank" rel="external">awk文本处理实战 | opengers</a></li>
-<li><a href="http://www.runoob.com/linux/linux-comm-tail.html" target="_blank" rel="external">Linux tail 命令 | 菜鸟教程</a></li>
-<li><a href="https://zh.wikipedia.org/wiki/Mebibyte" target="_blank" rel="external">Mebibyte - 维基百科，自由的百科全书</a></li>
-<li><a href="https://blog.csdn.net/wetest_tencent/article/details/52624137" target="_blank" rel="external">iOS预审总被拒？腾讯教你提升iOS审核通过率！ - wetest_tencent的博客 - CSDN博客</a></li>
-<li><a href="https://www.cnblogs.com/breezey/p/6806385.html" target="_blank" rel="external">shell比较浮点数和整数 - breezey - 博客园</a></li>
-<li><a href="https://blog.csdn.net/Jerry_1126/article/details/83930956" target="_blank" rel="external">Shell中将分隔符的字符串转为数组的几种方法 - 杰瑞的专栏 - CSDN博客</a></li>
-<li><a href="https://blog.csdn.net/wojiuguowei/article/details/84402890" target="_blank" rel="external">shell 字符串转数组 数组转字典 - 波波诸葛伟 - CSDN博客</a></li>
-</ul>
-<p><br></p>
-<ul>
-<li>如有疑问，欢迎在评论区一起讨论！</li>
-<li>如有不正确的地方，欢迎指导！</li>
-</ul>
-<p><br></p>
-<blockquote>
-<p>注：本文首发于 <a href="https://iHTCboy.com">iHTCboy’s blog</a>，如若转载，请注来源</p>
-</blockquote>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h3 id="1、前言">1、前言</h3><p>在上传提交ipa文件成功后，发现AppStoreConnect后台一直不显示构建版本，最后邮箱收到：</p>
-<blockquote>
-<p>App Store Connect</p>
-<p>Dear Developer,</p>
-<p>We identified one or more issues with a recent delivery for your app, “XXX”. Please correct the following issues, then upload again.<br>Invalid Executable Size - The size of your app’s executable file ‘XXX.app/XXX’ is 90374144 bytes, which exceeds the maximum allowed size of 80 MB.<br>Best regards,<br>The App Store Team</p>
-</blockquote>]]>
-    
-    </summary>
-    
-      <category term="Architecture" scheme="https://iHTCboy.com/tags/Architecture/"/>
-    
-      <category term="__TEXT" scheme="https://iHTCboy.com/tags/TEXT/"/>
-    
-      <category term="bash" scheme="https://iHTCboy.com/tags/bash/"/>
-    
-      <category term="iOS" scheme="https://iHTCboy.com/tags/iOS/"/>
-    
-      <category term="shell" scheme="https://iHTCboy.com/tags/shell/"/>
     
       <category term="induction" scheme="https://iHTCboy.com/categories/induction/"/>
     
