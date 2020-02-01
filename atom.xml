@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Learn something of everything,  Learn everything of something.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="https://iHTCboy.com/"/>
-  <updated>2020-02-01T15:32:17.162Z</updated>
+  <updated>2020-02-01T15:36:12.477Z</updated>
   <id>https://iHTCboy.com/</id>
   
   <author>
@@ -15,15 +15,19 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[iOS开发高手课 -- 学习总结系列]]></title>
+    <title><![CDATA[iOS开发高手课 -- 学习总结(连载)]]></title>
     <link href="https://iHTCboy.com/2020/02/01/2020-02-01_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/"/>
     <id>https://iHTCboy.com/2020/02/01/2020-02-01_iOS开发高手课/</id>
     <published>2020-02-01T07:49:16.000Z</published>
-    <updated>2020-02-01T15:32:17.162Z</updated>
-    <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p><code>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程[《iOS开发高手课 - 极客时间》](https://time.geekbang.org/column/intro/161)</code></p>
+    <updated>2020-02-01T15:36:12.477Z</updated>
+    <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><blockquote>
+<p>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程 <a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a> </p>
+</blockquote>
 <p>上一篇年终总结说到，计划今年与公司组里同学一起学习和分享， <a href="https://ming1016.github.io/categories/Programming/" target="_blank" rel="external">戴铭</a> 老师的<a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a>，开始的想法比较简单，每周一节知识交流，然后大家一起讨论和分享，并且考虑把一些idea用于工作和项目中，促进大家进步和更好的开发，在这过程中，我还是想把自己以前经历的或者学习过的东西，在串起来后，从一个点，到一条线，最后形成一个面，从一个面了解一个事物，这样才能更好的学习。所以，这也是后续这个系列，希望尽量做到，更好的角度，更高的视线，一起学习~</p>
 <a id="more"></a>
-<h3 id="2、正文">2、正文</h3><p><code>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程[《iOS开发高手课 - 极客时间》](https://time.geekbang.org/column/intro/161)</code></p>
+<h3 id="2、正文">2、正文</h3><blockquote>
+<p>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程 <a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a> </p>
+</blockquote>
 <p>以下是 <a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a> 的课程目录，也是后续这个系列的每篇文章的链接：</p>
 <ul>
 <li><del>开篇词 | 锚定一个点，然后在这个点上深耕</del></li>
@@ -74,7 +78,9 @@
 <li><a href="https://ihtcboy.com/">结束语 | 慢几步，深几度</a></li>
 </ul>
 <p>注：问题答疑文章不作总结。</p>
-<h3 id="3、总结">3、总结</h3><p><code>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程[《iOS开发高手课 - 极客时间》](https://time.geekbang.org/column/intro/161)</code></p>
+<h3 id="3、总结">3、总结</h3><blockquote>
+<p>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程 <a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a> </p>
+</blockquote>
 <p>目前分享了几篇文章，学习原文过程中，依然有很多未知，同时也查阅了很多资料，可能还存在错误，所以，分享出来，希望大家一起学习和提升，也是自己总结知识体系，厚积薄发，一起加油吧！</p>
 <h3 id="参考">参考</h3><ul>
 <li><a href="https://ming1016.github.io/categories/Programming/" target="_blank" rel="external">戴铭 - 博客</a></li>
@@ -92,7 +98,9 @@
 </blockquote>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h3 id="1、前言">1、前言</h3><p><code>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程[《iOS开发高手课 - 极客时间》](https://time.geekbang.org/column/intro/161)</code></p>
+    <![CDATA[<h3 id="1、前言">1、前言</h3><blockquote>
+<p>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程 <a href="https://time.geekbang.org/column/intro/161">《iOS开发高手课 - 极客时间》</a> </p>
+</blockquote>
 <p>上一篇年终总结说到，计划今年与公司组里同学一起学习和分享， <a href="https://ming1016.github.io/categories/Programming/">戴铭</a> 老师的<a href="https://time.geekbang.org/column/intro/161">《iOS开发高手课 - 极客时间》</a>，开始的想法比较简单，每周一节知识交流，然后大家一起讨论和分享，并且考虑把一些idea用于工作和项目中，促进大家进步和更好的开发，在这过程中，我还是想把自己以前经历的或者学习过的东西，在串起来后，从一个点，到一条线，最后形成一个面，从一个面了解一个事物，这样才能更好的学习。所以，这也是后续这个系列，希望尽量做到，更好的角度，更高的视线，一起学习~</p>]]>
     
     </summary>
