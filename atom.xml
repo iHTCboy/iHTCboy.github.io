@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Learn something of everything,  Learn everything of something.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="https://iHTCboy.com/"/>
-  <updated>2020-02-01T15:30:01.521Z</updated>
+  <updated>2020-02-01T15:32:17.162Z</updated>
   <id>https://iHTCboy.com/</id>
   
   <author>
@@ -19,14 +19,14 @@
     <link href="https://iHTCboy.com/2020/02/01/2020-02-01_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/"/>
     <id>https://iHTCboy.com/2020/02/01/2020-02-01_iOS开发高手课/</id>
     <published>2020-02-01T07:49:16.000Z</published>
-    <updated>2020-02-01T15:30:01.521Z</updated>
+    <updated>2020-02-01T15:32:17.162Z</updated>
     <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p><code>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程[《iOS开发高手课 - 极客时间》](https://time.geekbang.org/column/intro/161)</code></p>
 <p>上一篇年终总结说到，计划今年与公司组里同学一起学习和分享， <a href="https://ming1016.github.io/categories/Programming/" target="_blank" rel="external">戴铭</a> 老师的<a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a>，开始的想法比较简单，每周一节知识交流，然后大家一起讨论和分享，并且考虑把一些idea用于工作和项目中，促进大家进步和更好的开发，在这过程中，我还是想把自己以前经历的或者学习过的东西，在串起来后，从一个点，到一条线，最后形成一个面，从一个面了解一个事物，这样才能更好的学习。所以，这也是后续这个系列，希望尽量做到，更好的角度，更高的视线，一起学习~</p>
 <a id="more"></a>
 <h3 id="2、正文">2、正文</h3><p><code>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程[《iOS开发高手课 - 极客时间》](https://time.geekbang.org/column/intro/161)</code></p>
 <p>以下是 <a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a> 的课程目录，也是后续这个系列的每篇文章的链接：</p>
 <ul>
-<li>开篇词 | 锚定一个点，然后在这个点上深耕</li>
+<li><del>开篇词 | 锚定一个点，然后在这个点上深耕</del></li>
 <li><a href="https://ihtcboy.com/">01 | 建立你自己的iOS开发知识体系</a></li>
 <li><a href="https://ihtcboy.com/">02 | App 启动速度怎么做优化与监控？</a></li>
 <li><a href="https://ihtcboy.com/">03 | Auto Layout 是怎么进行自动布局的，性能如何？</a></li>
@@ -38,14 +38,14 @@
 <li><a href="https://ihtcboy.com/">09 | 无侵入的埋点方案如何实现？</a></li>
 <li><a href="https://ihtcboy.com/">10 | 包大小：如何从资源和代码层面实现全方位瘦身？</a></li>
 <li><a href="https://ihtcboy.com/">12 | iOS 崩溃千奇百怪，如何全面监控？</a></li>
-<li><a href="https://ihtcboy.com/">11 | 热点问题答疑（一）：基础模块问题答疑</a></li>
+<li><del>11 | 热点问题答疑（一）：基础模块问题答疑</del></li>
 <li><a href="https://ihtcboy.com/">13 | 如何利用 RunLoop 原理去监控卡顿？</a></li>
 <li><a href="https://ihtcboy.com/">14 | 临近 OOM，如何获取详细内存分配信息，分析内存问题？</a></li>
 <li><a href="https://ihtcboy.com/">15 | 日志监控：怎样获取 App 中的全量日志？</a></li>
 <li><a href="https://ihtcboy.com/">16 | 性能监控：衡量 App 质量的那把尺</a></li>
 <li><a href="https://ihtcboy.com/">17 | 远超你想象的多线程的那些坑</a></li>
 <li><a href="https://ihtcboy.com/">18 | 怎么减少 App 电量消耗？</a></li>
-<li><a href="https://ihtcboy.com/">19 | 热点问题答疑（二）：基础模块问题答疑</a></li>
+<li><del>19 | 热点问题答疑（二）：基础模块问题答疑</del></li>
 <li><a href="https://ihtcboy.com/">20 | iOS开发的最佳学习路径是什么？</a></li>
 <li><a href="https://ihtcboy.com/">21 | 除了 Cocoa，iOS还可以用哪些 GUI 框架开发？</a></li>
 <li><a href="https://ihtcboy.com/">22 | 细说 iOS 响应式框架变迁，哪些思想可以为我所用？</a></li>
@@ -58,14 +58,14 @@
 <li><a href="https://ihtcboy.com/">29 | 如何在 iOS 中进行面向测试驱动开发和面向行为驱动开发？</a></li>
 <li><a href="https://ihtcboy.com/">30 | 如何制定一套适合自己团队的 iOS 编码规范？</a></li>
 <li><a href="https://ihtcboy.com/">31 | iOS 开发学习资料和书单推荐</a></li>
-<li><a href="https://ihtcboy.com/">32 | 热点问题答疑（三）</a></li>
+<li><del>32 | 热点问题答疑（三）</del></li>
 <li><a href="https://ihtcboy.com/">33 | iOS 系统内核 XNU：App 如何加载？</a></li>
 <li><a href="https://ihtcboy.com/">34 | iOS 黑魔法 Runtime Method Swizzling 背后的原理</a></li>
 <li><a href="https://ihtcboy.com/">35 | libffi：动态调用和定义 C 函数</a></li>
 <li><a href="https://ihtcboy.com/">36 | iOS 是怎么管理内存的？</a></li>
 <li><a href="https://ihtcboy.com/">37 | 如何编写 Clang 插件？</a></li>
 <li><a href="https://ihtcboy.com/">用户故事 | 我是如何学习这个专栏的？</a></li>
-<li><a href="https://ihtcboy.com/">38 | 热点问题答疑（四）</a></li>
+<li><del>38 | 热点问题答疑（四）</del></li>
 <li><a href="https://ihtcboy.com/">39 | 打通前端与原生的桥梁：JavaScriptCore 能干哪些事情？</a></li>
 <li><a href="https://ihtcboy.com/">40 | React Native、Flutter 等，这些跨端方案怎么选？</a></li>
 <li><a href="https://ihtcboy.com/">41 | 原生布局转到前端布局，开发思路有哪些转变？</a></li>
@@ -82,6 +82,7 @@
 </ul>
 <p><br></p>
 <ul>
+<li>如有侵权，联系必删！</li>
 <li>如有不正确的地方，欢迎指导！</li>
 <li>如有疑问，欢迎在评论区一起讨论！</li>
 </ul>
