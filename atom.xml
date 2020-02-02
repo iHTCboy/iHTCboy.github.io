@@ -274,8 +274,9 @@
     <link href="https://iHTCboy.com/2020/01/17/2020-01-17_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE06/"/>
     <id>https://iHTCboy.com/2020/01/17/2020-01-17_iOS开发高手课06/</id>
     <published>2020-01-17T12:20:20.000Z</published>
-    <updated>2020-02-02T10:32:19.483Z</updated>
-    <content type="html"><![CDATA[<h2 id="1、前言">1、前言</h2><p>xxxxx</p>
+    <updated>2020-02-02T10:59:26.498Z</updated>
+    <content type="html"><![CDATA[<h2 id="1、前言">1、前言</h2><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
+<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/iOS开发高手课-06-App如何通过注入动态库的方式实现极速编译调试？.png" alt="iOS开发高手课-06-App如何通过注入动态库的方式实现极速编译调试？.png"></p>
 <a id="more"></a>
 <h2 id="2、正文">2、正文</h2><blockquote>
 <p>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程 <a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a> </p>
@@ -322,7 +323,8 @@
 </blockquote>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h2 id="1、前言">1、前言</h2><p>xxxxx</p>]]>
+    <![CDATA[<h2 id="1、前言">1、前言</h2><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
+<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/iOS开发高手课-06-App如何通过注入动态库的方式实现极速编译调试？.png" alt="iOS开发高手课-06-App如何通过注入动态库的方式实现极速编译调试？.png"></p>]]>
     
     </summary>
     
@@ -339,8 +341,9 @@
     <link href="https://iHTCboy.com/2020/01/10/2020-01-10_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE05/"/>
     <id>https://iHTCboy.com/2020/01/10/2020-01-10_iOS开发高手课05/</id>
     <published>2020-01-10T12:20:20.000Z</published>
-    <updated>2020-02-02T10:32:13.145Z</updated>
-    <content type="html"><![CDATA[<h2 id="1、前言">1、前言</h2><p>xxxxx</p>
+    <updated>2020-02-02T10:58:39.354Z</updated>
+    <content type="html"><![CDATA[<h2 id="1、前言">1、前言</h2><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
+<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/iOS开发高手课-05-链接器：符号是怎么绑定到地址上的？.png" alt="iOS开发高手课-05-链接器：符号是怎么绑定到地址上的？.png"></p>
 <a id="more"></a>
 <h2 id="2、正文">2、正文</h2><blockquote>
 <p>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程 <a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a> </p>
@@ -403,7 +406,8 @@
 </blockquote>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h2 id="1、前言">1、前言</h2><p>xxxxx</p>]]>
+    <![CDATA[<h2 id="1、前言">1、前言</h2><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
+<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/iOS开发高手课-05-链接器：符号是怎么绑定到地址上的？.png" alt="iOS开发高手课-05-链接器：符号是怎么绑定到地址上的？.png"></p>]]>
     
     </summary>
     
@@ -420,8 +424,9 @@
     <link href="https://iHTCboy.com/2020/01/03/2020-01-03_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE04/"/>
     <id>https://iHTCboy.com/2020/01/03/2020-01-03_iOS开发高手课04/</id>
     <published>2020-01-03T12:20:20.000Z</published>
-    <updated>2020-02-02T10:32:28.270Z</updated>
-    <content type="html"><![CDATA[<h2 id="1、前言">1、前言</h2><p>xxxxx</p>
+    <updated>2020-02-02T10:57:35.448Z</updated>
+    <content type="html"><![CDATA[<h2 id="1、前言">1、前言</h2><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
+<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/iOS开发高手课-04-项目大了人员多了，架构怎么设计更合理？.png" alt="iOS开发高手课-04-项目大了人员多了，架构怎么设计更合理？.png"></p>
 <a id="more"></a>
 <h2 id="2、正文">2、正文</h2><blockquote>
 <p>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程 <a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a> </p>
@@ -486,7 +491,8 @@
 </blockquote>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h2 id="1、前言">1、前言</h2><p>xxxxx</p>]]>
+    <![CDATA[<h2 id="1、前言">1、前言</h2><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
+<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/iOS开发高手课-04-项目大了人员多了，架构怎么设计更合理？.png" alt="iOS开发高手课-04-项目大了人员多了，架构怎么设计更合理？.png"></p>]]>
     
     </summary>
     
@@ -706,12 +712,19 @@
     <link href="https://iHTCboy.com/2019/12/27/2019-12-27_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE03/"/>
     <id>https://iHTCboy.com/2019/12/27/2019-12-27_iOS开发高手课03/</id>
     <published>2019-12-27T12:20:20.000Z</published>
-    <updated>2020-02-02T10:32:37.213Z</updated>
-    <content type="html"><![CDATA[<h2 id="1、前言">1、前言</h2><p>xxxxx</p>
+    <updated>2020-02-02T10:47:49.890Z</updated>
+    <content type="html"><![CDATA[<h2 id="1、前言">1、前言</h2><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
+<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/12/iOS开发高手课-03-AutoLayout是怎么进行自动布局的，性能如何？.png" alt="iOS开发高手课-03-AutoLayout是怎么进行自动布局的，性能如何？.png"></p>
 <a id="more"></a>
 <h2 id="2、正文">2、正文</h2><blockquote>
 <p>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程 <a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a> </p>
 </blockquote>
+<h3 id="问题">问题</h3><ol>
+<li>Auto Layout 如何实现自动布局的？</li>
+<li>这种布局算法真的会影响性能吗？</li>
+<li>应该选择手动布局还是选择Auto Layout呢？</li>
+</ol>
+<p>### </p>
 <h2 id="3、总结">3、总结</h2><p><br></p>
 <p>注：更多关于 iOS 开发和程序开发相关的内容，可以查看系列，目前还在连载中 <a href="https://ihtcboy.com/2020/02/01/2020-02-01_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/">【学习总结】iOS开发高手课 – (连载中) | iHTCboy’s blog</a>，以上，希望对你有用！</p>
 <h2 id="参考">参考</h2><ul>
@@ -766,7 +779,8 @@
 </blockquote>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h2 id="1、前言">1、前言</h2><p>xxxxx</p>]]>
+    <![CDATA[<h2 id="1、前言">1、前言</h2><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
+<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/12/iOS开发高手课-03-AutoLayout是怎么进行自动布局的，性能如何？.png" alt="iOS开发高手课-03-AutoLayout是怎么进行自动布局的，性能如何？.png"></p>]]>
     
     </summary>
     
