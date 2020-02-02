@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Learn something of everything,  Learn everything of something.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="https://iHTCboy.com/"/>
-  <updated>2020-02-02T07:16:58.943Z</updated>
+  <updated>2020-02-02T10:07:13.381Z</updated>
   <id>https://iHTCboy.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="https://iHTCboy.com/2020/02/02/2020-02-02_%E5%BB%BA%E7%AB%8B%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/"/>
     <id>https://iHTCboy.com/2020/02/02/2020-02-02_建立你自己的开发知识体系/</id>
     <published>2020-02-02T12:20:20.000Z</published>
-    <updated>2020-02-02T07:16:58.943Z</updated>
+    <updated>2020-02-02T10:07:13.381Z</updated>
     <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/建立你自己的开发知识体系.png" alt="建立你自己的开发知识体系.png"></p>
 <a id="more"></a>
@@ -117,7 +117,7 @@
 </ol>
 <p>书籍很多，好书也很多！这里暂时不列出所有值得看的技术书，因为，<code>我害怕大家一下子又回到原点，买了一堆书，然后不知道从那里开始！</code>，所以，我是不建议买书！买书是自己要系统学习的时候买！怕伤害眼睛时买，但不能因为别人推荐或感觉不错就买！要从自身出发，从自己工作，从自己从事的行业，从自己的规划发展，从自己的兴趣，<code>任何事情的起点，都是初心，不要忘了初心！</code></p>
 <h3 id="3、总结">3、总结</h3><p><br>关于如何建立自己的开发知识体系，以上就是我认为比较重要的点(还有很多方法论，但是多并一定是好事，以后有机会在归纳吧)，贯穿到开发的每一个细节，需要大家长期长时间的学习、研究和经历，才能打造一套属于自己的知识树，<code>任何告诉你可以复制的知识，你可以复制！但永远无法粘贴到自己脑心中！</code></p>
-<p>更多关于 iOS 开发和程序开发相关的内容，可以查看系列，目前还在连载中 <a href="https://ihtcboy.com/2020/02/01/2020-02-01_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/">iOS开发高手课 – 学习总结(连载) | iHTCboy’s blog</a>，以上，希望对你有用！</p>
+<p>注：更多关于 iOS 开发和程序开发相关的内容，可以查看系列，目前还在连载中 <a href="https://ihtcboy.com/2020/02/01/2020-02-01_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/">iOS开发高手课 – 学习总结(连载) | iHTCboy’s blog</a>，以上，希望对你有用！</p>
 <h3 id="参考">参考</h3><ul>
 <li><a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a></li>
 <li><a href="https://ihtcboy.com/2020/02/01/2020-02-01_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/">iOS开发高手课 – 学习总结(连载) | iHTCboy’s blog</a></li>
@@ -332,10 +332,13 @@
     <link href="https://iHTCboy.com/2020/01/10/2020-01-10_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE05/"/>
     <id>https://iHTCboy.com/2020/01/10/2020-01-10_iOS开发高手课05/</id>
     <published>2020-01-10T12:20:20.000Z</published>
-    <updated>2020-02-02T06:16:00.494Z</updated>
+    <updated>2020-02-02T10:11:38.739Z</updated>
     <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>xxxxx</p>
 <a id="more"></a>
-<h3 id="2、正文">2、正文</h3><h3 id="3、总结">3、总结</h3><h3 id="参考">参考</h3><ul>
+<h2 id="2、正文">2、正文</h2><blockquote>
+<p>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程 <a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a> </p>
+</blockquote>
+<h3 id="3、总结">3、总结</h3><h3 id="参考">参考</h3><ul>
 <li><a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a></li>
 <li><a href="https://ming1016.github.io/2017/03/01/deeply-analyse-llvm/" target="_blank" rel="external">深入剖析 iOS 编译 Clang / LLVM | 星光社 - 戴铭的博客</a></li>
 <li><a href="https://www.jianshu.com/p/5b2cce762106" target="_blank" rel="external">浅谈iOS编译过程 - 简书</a></li>
@@ -408,10 +411,13 @@
     <link href="https://iHTCboy.com/2020/01/03/2020-01-03_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE04/"/>
     <id>https://iHTCboy.com/2020/01/03/2020-01-03_iOS开发高手课04/</id>
     <published>2020-01-03T12:20:20.000Z</published>
-    <updated>2020-02-02T06:16:09.286Z</updated>
+    <updated>2020-02-02T10:11:31.555Z</updated>
     <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>xxxxx</p>
 <a id="more"></a>
-<h3 id="2、正文">2、正文</h3><h3 id="3、总结">3、总结</h3><h3 id="参考">参考</h3><ul>
+<h2 id="2、正文">2、正文</h2><blockquote>
+<p>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程 <a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a> </p>
+</blockquote>
+<h3 id="3、总结">3、总结</h3><h3 id="参考">参考</h3><ul>
 <li><p><a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a></p>
 </li>
 <li><p><a href="https://github.com/casatwy/CTMediator" target="_blank" rel="external">casatwy/CTMediator: The mediator with no regist process to split your iOS Project into multiple project.</a></p>
@@ -689,10 +695,13 @@
     <link href="https://iHTCboy.com/2019/12/27/2019-12-27_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE03/"/>
     <id>https://iHTCboy.com/2019/12/27/2019-12-27_iOS开发高手课03/</id>
     <published>2019-12-27T12:20:20.000Z</published>
-    <updated>2020-02-02T06:16:17.012Z</updated>
+    <updated>2020-02-02T10:11:28.700Z</updated>
     <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>xxxxx</p>
 <a id="more"></a>
-<h3 id="2、正文">2、正文</h3><h3 id="3、总结">3、总结</h3><h3 id="参考">参考</h3><ul>
+<h2 id="2、正文">2、正文</h2><blockquote>
+<p>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程 <a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a> </p>
+</blockquote>
+<h3 id="3、总结">3、总结</h3><h3 id="参考">参考</h3><ul>
 <li><a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a></li>
 </ul>
 <p>WWDC:</p>
@@ -3060,11 +3069,14 @@
     <link href="https://iHTCboy.com/2019/12/20/2019-12-20_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE02/"/>
     <id>https://iHTCboy.com/2019/12/20/2019-12-20_iOS开发高手课02/</id>
     <published>2019-12-20T12:20:20.000Z</published>
-    <updated>2020-02-02T09:33:28.531Z</updated>
+    <updated>2020-02-02T10:12:34.371Z</updated>
     <content type="html"><![CDATA[<h2 id="1、前言">1、前言</h2><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/12/iOS开发高手课-02-App启动速度怎么做优化与监控？.png" alt="iOS开发高手课-02-App启动速度怎么做优化与监控？.png"></p>
 <a id="more"></a>
-<h2 id="2、正文">2、正文</h2><p>本文作为第一篇，脑图中包含了一些学习的方法论，这里就不展开了，具体可以查看 <a href="https://ihtcboy.com/2020/02/02/2020-02-02_建立你自己的开发知识体系/">如何建立你自己的开发知识体系 | iHTCboy’s blog</a></p>
+<h2 id="2、正文">2、正文</h2><blockquote>
+<p>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程 <a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a> </p>
+</blockquote>
+<p>本文作为第一篇，脑图中包含了一些学习的方法论，这里就不展开了，具体可以查看 <a href="https://ihtcboy.com/2020/02/02/2020-02-02_建立你自己的开发知识体系/">如何建立你自己的开发知识体系 | iHTCboy’s blog</a></p>
 <h3 id="学习原则">学习原则</h3><p><strong>授人以鱼不如授人以渔</strong></p>
 <p>就想学习英语一样，每一个字母都认识，但是串联起来就不认识了。学习也一样，可能整篇文章大家<code>都看懂</code>了，但是对于其中的词语或句子，可能是不懂的，比如，<code>rebase 指针</code>、<code>attribute((constructor))</code>、<code>selector 唯一性检查</code>、<code>动态库加载</code>、<code>ReactiveCocoa框架</code>、<code>抓取主线程调用栈</code>、<code>Mach-O</code>、<code>lazy 和 non-lazy 符号</code>、<code>rebind_symbol</code>、等。或者，整篇文章都<code>没有看懂</code>，但是每个字都认识。</p>
 <p>第一种情况，对于不认识的关键字，在搜索引擎就能找到很多，只能说是懒或恐惧心态，让你永远不去了解。第二种情况，一般多见于是抽象的文章，比如项目架构、编程思想等，大家都懂 <code>MVC</code>/<code>MVVM</code>，就是说不出懂什么的感觉，这种情况，还是建议多广义的学习，更多的实践，<code>很多东西，还是较难做到言传，只能意会！</code></p>
@@ -3086,27 +3098,29 @@
 <li>首屏渲染完成后</li>
 </ol>
 <p>文章中说的内容，这里就不打算详细展开，简单的看本文的思维导图就可以，另外，文章中的很多细节的内容，在后续的篇章中会慢慢的介绍，这里就不展开，否则说不完，大家感兴趣的，可以自行搜索，网络上真的都有了！需要提的是，解答一下前面说的几个有意思的问题</p>
-<ul>
-<li><p>1、 <code>+load()</code> 方法和 <code>+initialize()</code> 方法<br>需要了解这2个方式的区别和特性，这样才能更好的做性能优化。</p>
-</li>
-<li><p>2、 attribute((constructor)) 修饰的函数的调用<br>这个是函数的属性，有2种类型：<code>__attribute__((constructor))</code>和<code>__attribute__((destructor))</code></p>
-<p>  1）函数属性功能</p>
-<p>  <code>__attribute__ ((constructor))</code>：会使函数在 main()函数之前执行</p>
-<p>  <code>__attribute__ ((destructor))</code>：会使函数在 main()函数之后执行</p>
-<p>  2）功能范围</p>
-<p>  函数属性<code>__attribute__((constructor))</code>和<code>__attribute__((destructor))</code>在可执行文件或者库文件里都可以生效</p>
-</li>
-</ul>
-<pre><code><span class="number">3</span>）与全局变量比较
+<h4 id="1、_+load()_方法和_+initialize()_方法">1、 +load() 方法和 +initialize() 方法</h4><p><code>+load()</code> 方法和 <code>+initialize()</code> 方法，大家都需要了解它们的区别和特性，这样才能更好的做性能优化。这里不作详细介绍，网<code>络上能找到的，我这里不都不会说</code>，除非值得注意的内容。</p>
+<h4 id="2、_attribute((constructor))_修饰的函数的调用">2、 attribute((constructor)) 修饰的函数的调用</h4><p>这个是C语言的函数属性，有2种类型：<code>__attribute__((constructor))</code>和<code>__attribute__((destructor))</code></p>
+<pre><code><span class="number">1</span>）函数属性功能
 
-全局变量对象的构造函数和析构函数分别在`__attribute__((<span class="function"><span class="keyword">constructor</span>))`和`__<span class="title">attribute__</span><span class="params">((<span class="keyword">destructor</span>)</span>)`标志的函数之前调用。
+`__attribute__ ((<span class="function"><span class="keyword">constructor</span>))`：会使函数在 `<span class="title">main</span><span class="params">()</span>函数`之前执行
+
+`__<span class="title">attribute__</span> <span class="params">((<span class="keyword">destructor</span>)</span>)`：会使函数在 `<span class="title">main</span><span class="params">()</span>函数`之后执行
+
+2）功能范围
+
+函数属性`__<span class="title">attribute__</span><span class="params">((<span class="keyword">constructor</span>)</span>)`和`__<span class="title">attribute__</span><span class="params">((<span class="keyword">destructor</span>)</span>)`在可执行文件或者库文件里都可以生效
+
+
+3）与全局变量比较
+
+全局变量对象的构造函数和析构函数分别在`__<span class="title">attribute__</span><span class="params">((<span class="keyword">constructor</span>)</span>)`和`__<span class="title">attribute__</span><span class="params">((<span class="keyword">destructor</span>)</span>)`标志的函数之前调用。
 
 4）<span class="title">PRIORITY</span> 优先级
 
 <figure class="highlight delphi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">__attribute__((<span class="function"><span class="keyword">constructor</span><span class="params">(PRIORITY)</span>))</span><br><span class="line">__<span class="title">attribute__</span><span class="params">((<span class="keyword">destructor</span>(PRIORITY)</span>))</span></span><br></pre></td></tr></table></figure>
 
 
-`__<span class="title">attribute__</span><span class="params">((<span class="keyword">constructor</span>)</span>)` 按照优先级小到大执行， `__<span class="title">attribute__</span><span class="params">((<span class="keyword">destructor</span>(PRIORITY)</span>))` 则是从大到小执行。
+`__<span class="title">attribute__</span><span class="params">((<span class="keyword">constructor</span>)</span>)` 按照优先级小到大执行，`__<span class="title">attribute__</span><span class="params">((<span class="keyword">destructor</span>(PRIORITY)</span>))` 则是从大到小执行。
 
 注意：
 1、可执行程序或库文件都可以使用此属性修饰函数
@@ -3114,13 +3128,33 @@
 
 
 引用来源：[函数属性__<span class="title">attribute__</span><span class="params">((<span class="keyword">constructor</span>)</span>)和__<span class="title">attribute__</span><span class="params">((<span class="keyword">destructor</span>)</span>) - <span class="title">tianmo2010</span>的专栏]<span class="params">(https://blog.csdn.net/tianmohust/article/details/45310349)</span></span>
-</code></pre><h3 id="可以做什么？">可以做什么？</h3><ul>
+</code></pre><h4 id="3、objc_msgSend_方法和_hook_内容">3、objc_msgSend 方法和 hook 内容</h4><p><code>hook</code>的概率在很多的语言都有，因为安全和越狱等，针对 iOS 的 hook 网上也非常多，这里也不详细说了，后面的章节如果有相关安全的在说吧。相信大家网络上一定能找到很多资料！</p>
+<h4 id="4、怎样获取主线程调用栈？">4、怎样获取主线程调用栈？</h4><p>相信有好奇心的同学，在阅读文章时，一定对怎样获取主线程调用栈的问题产生兴趣，但可能如果之前没有接触过，一定觉得太难了！根本找不到方向或者感觉！但是，你仔细想想，是不是真的这么难？没有方向？其实并不是，只要搜索一下，网络上也是一堆一堆的。当然，你想通过一篇文章就掌握所有这些相关的知识，那可能不太现实！<code>你一定要明白，不劳而获永远是获得最少的！</code>，所以，还是要靠自己努力，另外，后续的章节还会有这方面的深入知识，到时候在解答吧。希望大家能利用自己的学习能力，习得不亦乐乎！</p>
+<h4 id="5、监控耗时和耗时统计">5、监控耗时和耗时统计</h4><p>这个问题也值得大家注意，后续章节在一起讨论。</p>
+<h4 id="6、源码阅读">6、源码阅读</h4><p>苹果公司已经开源了 Objective-C 的运行时代码。你可以在苹果公司的开源网站，找到 <a href="https://opensource.apple.com/source/objc4/objc4-723/runtime/Messengers.subproj/" target="_blank" rel="external">objc_msgSend的源码</a>。</p>
+<p>Facebook 开源了一个hook库，可以在 iOS 上运行的 Mach-O 二进制文件中动态地重新绑定符号，这个库叫 <a href="https://github.com/facebook/fishhook" target="_blank" rel="external">fishhook</a>。</p>
+<p>针对这种源码，大多数人一定说，我看不懂！我看不懂！我看不懂！</p>
+<p>这个，与下面这个问题相似，一起来回答吧</p>
+<h4 id="7、C语言、汇编语言_看不懂？！">7、C语言、汇编语言 看不懂？！</h4><p>看不懂？看不懂？看不懂？</p>
+<p>有没有发现，我们小时候也不懂中文，现在怎么就看懂了呢！学啊！学啊！学啊！</p>
+<p>怎么学？ 从<code>入门</code>到放弃啊！怎么入口？</p>
+<p>网络上有很多优秀的资源，大家如果真的感兴趣，一定要主动去了解，一味地抗拒永远不会得到结果和答案。<a href="http://www.ruanyifeng.com/blog/2018/01/assembly-language-primer.html" target="_blank" rel="external">汇编语言入门教程 - 阮一峰的网络日志</a> ，汇编语言入门学习就是这样简单，<code>没有看不懂，只有不看懂！</code></p>
+<p>人生苦短，我们努力吧~</p>
+<h4 id="8、其它问题">8、其它问题</h4><p>其实的还有很多问题，这里就不一一指出，比如 <code>Swift 有 main 函数吗</code>？希望大家<code>多疑问，多思考，多总结！</code>，这样成长更快啦~</p>
+<h2 id="3、总结">3、总结</h2><p>回到本文的主题，“App 启动速度怎么做优化与监控？”，优化，不知道大家是否还记得之前的第一篇文章说到的，不记得的可以回去看看。监控的话，这里没有详细提到，因为<code>性能监控</code>只是<code>监控系统</code>的一小部分，后面的章节在细节展开吧。</p>
+<p>这里先给出一个大纲，关于开发相关的工程优化，因为这也是我们从 <a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a> 来，我们要干什么？到那里去呢？</p>
+<ul>
+<li>可以做什么？</li>
+</ul>
+<ol>
 <li>工程优化：代码、规范、性能、AOP、日志</li>
 <li>工程监控：耗时、内存、网络、卡顿、崩溃、瘦身、耗电</li>
 <li>工程效率：响应式框架、函数式编程、APM、监控系统</li>
 <li>技术深研：RN、Flutter、小程序、动态化</li>
-</ul>
-<h2 id="3、总结">3、总结</h2><h2 id="参考">参考</h2><ul>
+</ol>
+<p>很多知识点，大家现在看到这篇文章感觉一气呵成，水到渠成的样子，但是其实是一点一点的思考和触想，可能有一个概念很久之前就有，但是怎么把这些知识串联一起，确实是需要非常深厚的功能，才能做到。所以，本次系列，我只能说尽量自己的力量，因为<code>我相信不管是后来者，还是以后的我，都一定超越现在的我！</code>，所以，如果未来可以，可以在重写此系列，也是一件令人愉快的事！</p>
+<p>注：更多关于 iOS 开发和程序开发相关的内容，可以查看此系列，目前还在连载中 <a href="https://ihtcboy.com/2020/02/01/2020-02-01_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/">iOS开发高手课 – 学习总结(连载) | iHTCboy’s blog</a>，以上，希望对你有用！</p>
+<h2 id="参考">参考</h2><ul>
 <li><a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a></li>
 <li><a href="https://ming1016.github.io/" target="_blank" rel="external">星光社 - 戴铭的博客</a></li>
 <li><a href="https://www.jianshu.com/p/e7f8459aaf38" target="_blank" rel="external">iOS 在循环中使用计算属性导致内存暴涨 - 简书</a></li>
