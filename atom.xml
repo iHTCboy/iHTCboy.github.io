@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Learn something of everything,  Learn everything of something.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="https://iHTCboy.com/"/>
-  <updated>2020-02-02T10:07:13.381Z</updated>
+  <updated>2020-02-02T10:31:13.165Z</updated>
   <id>https://iHTCboy.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="https://iHTCboy.com/2020/02/02/2020-02-02_%E5%BB%BA%E7%AB%8B%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/"/>
     <id>https://iHTCboy.com/2020/02/02/2020-02-02_建立你自己的开发知识体系/</id>
     <published>2020-02-02T12:20:20.000Z</published>
-    <updated>2020-02-02T10:07:13.381Z</updated>
+    <updated>2020-02-02T10:31:13.165Z</updated>
     <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/建立你自己的开发知识体系.png" alt="建立你自己的开发知识体系.png"></p>
 <a id="more"></a>
@@ -117,7 +117,8 @@
 </ol>
 <p>书籍很多，好书也很多！这里暂时不列出所有值得看的技术书，因为，<code>我害怕大家一下子又回到原点，买了一堆书，然后不知道从那里开始！</code>，所以，我是不建议买书！买书是自己要系统学习的时候买！怕伤害眼睛时买，但不能因为别人推荐或感觉不错就买！要从自身出发，从自己工作，从自己从事的行业，从自己的规划发展，从自己的兴趣，<code>任何事情的起点，都是初心，不要忘了初心！</code></p>
 <h3 id="3、总结">3、总结</h3><p><br>关于如何建立自己的开发知识体系，以上就是我认为比较重要的点(还有很多方法论，但是多并一定是好事，以后有机会在归纳吧)，贯穿到开发的每一个细节，需要大家长期长时间的学习、研究和经历，才能打造一套属于自己的知识树，<code>任何告诉你可以复制的知识，你可以复制！但永远无法粘贴到自己脑心中！</code></p>
-<p>注：更多关于 iOS 开发和程序开发相关的内容，可以查看系列，目前还在连载中 <a href="https://ihtcboy.com/2020/02/01/2020-02-01_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/">iOS开发高手课 – 学习总结(连载) | iHTCboy’s blog</a>，以上，希望对你有用！</p>
+<p><br></p>
+<p>注：更多关于 iOS 开发和程序开发相关的内容，可以查看系列，目前还在连载中 <a href="https://ihtcboy.com/2020/02/01/2020-02-01_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/">【学习总结】iOS开发高手课 – (连载中) | iHTCboy’s blog</a>，以上，希望对你有用！</p>
 <h3 id="参考">参考</h3><ul>
 <li><a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a></li>
 <li><a href="https://ihtcboy.com/2020/02/01/2020-02-01_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/">iOS开发高手课 – 学习总结(连载) | iHTCboy’s blog</a></li>
@@ -152,11 +153,11 @@
   </entry>
   
   <entry>
-    <title><![CDATA[iOS开发高手课 -- 学习总结(连载)]]></title>
+    <title><![CDATA[【学习总结】iOS开发高手课 -- (连载中)]]></title>
     <link href="https://iHTCboy.com/2020/02/01/2020-02-01_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/"/>
     <id>https://iHTCboy.com/2020/02/01/2020-02-01_iOS开发高手课/</id>
     <published>2020-02-01T07:49:16.000Z</published>
-    <updated>2020-02-02T10:20:44.041Z</updated>
+    <updated>2020-02-02T10:30:43.716Z</updated>
     <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><blockquote>
 <p>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程 <a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a> </p>
 </blockquote>
@@ -273,10 +274,15 @@
     <link href="https://iHTCboy.com/2020/01/17/2020-01-17_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE06/"/>
     <id>https://iHTCboy.com/2020/01/17/2020-01-17_iOS开发高手课06/</id>
     <published>2020-01-17T12:20:20.000Z</published>
-    <updated>2020-02-02T06:19:17.093Z</updated>
-    <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>xxxxx</p>
+    <updated>2020-02-02T10:32:19.483Z</updated>
+    <content type="html"><![CDATA[<h2 id="1、前言">1、前言</h2><p>xxxxx</p>
 <a id="more"></a>
-<h3 id="2、正文">2、正文</h3><h3 id="3、总结">3、总结</h3><h3 id="参考">参考</h3><ul>
+<h2 id="2、正文">2、正文</h2><blockquote>
+<p>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程 <a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a> </p>
+</blockquote>
+<h2 id="3、总结">3、总结</h2><p><br></p>
+<p>注：更多关于 iOS 开发和程序开发相关的内容，可以查看系列，目前还在连载中 <a href="https://ihtcboy.com/2020/02/01/2020-02-01_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/">【学习总结】iOS开发高手课 – (连载中) | iHTCboy’s blog</a>，以上，希望对你有用！</p>
+<h2 id="参考">参考</h2><ul>
 <li><a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a></li>
 <li><a href="https://mp.weixin.qq.com/s/hFnHdOP6pmIwzZck-zXE8g" target="_blank" rel="external">Injection：iOS热重载背后的黑魔法</a></li>
 <li><a href="https://mp.weixin.qq.com/s?__biz=MzU4MDUxOTI5NA==&amp;mid=2247483816&amp;idx=1&amp;sn=deedc011bc902511d0712de959bb8b06&amp;scene=19#wechat_redirect&amp;from=%E6%96%87%E7%AB%A0%E9%A1%B5%E5%86%85%E9%93%BE%E6%8E%A5" target="_blank" rel="external">深入理解flutter的编译原理与优化</a></li>
@@ -316,7 +322,7 @@
 </blockquote>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h3 id="1、前言">1、前言</h3><p>xxxxx</p>]]>
+    <![CDATA[<h2 id="1、前言">1、前言</h2><p>xxxxx</p>]]>
     
     </summary>
     
@@ -333,13 +339,15 @@
     <link href="https://iHTCboy.com/2020/01/10/2020-01-10_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE05/"/>
     <id>https://iHTCboy.com/2020/01/10/2020-01-10_iOS开发高手课05/</id>
     <published>2020-01-10T12:20:20.000Z</published>
-    <updated>2020-02-02T10:11:38.739Z</updated>
-    <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>xxxxx</p>
+    <updated>2020-02-02T10:32:13.145Z</updated>
+    <content type="html"><![CDATA[<h2 id="1、前言">1、前言</h2><p>xxxxx</p>
 <a id="more"></a>
 <h2 id="2、正文">2、正文</h2><blockquote>
 <p>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程 <a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a> </p>
 </blockquote>
-<h3 id="3、总结">3、总结</h3><h3 id="参考">参考</h3><ul>
+<h2 id="3、总结">3、总结</h2><p><br></p>
+<p>注：更多关于 iOS 开发和程序开发相关的内容，可以查看系列，目前还在连载中 <a href="https://ihtcboy.com/2020/02/01/2020-02-01_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/">【学习总结】iOS开发高手课 – (连载中) | iHTCboy’s blog</a>，以上，希望对你有用！</p>
+<h2 id="参考">参考</h2><ul>
 <li><a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a></li>
 <li><a href="https://ming1016.github.io/2017/03/01/deeply-analyse-llvm/" target="_blank" rel="external">深入剖析 iOS 编译 Clang / LLVM | 星光社 - 戴铭的博客</a></li>
 <li><a href="https://www.jianshu.com/p/5b2cce762106" target="_blank" rel="external">浅谈iOS编译过程 - 简书</a></li>
@@ -395,7 +403,7 @@
 </blockquote>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h3 id="1、前言">1、前言</h3><p>xxxxx</p>]]>
+    <![CDATA[<h2 id="1、前言">1、前言</h2><p>xxxxx</p>]]>
     
     </summary>
     
@@ -412,13 +420,15 @@
     <link href="https://iHTCboy.com/2020/01/03/2020-01-03_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE04/"/>
     <id>https://iHTCboy.com/2020/01/03/2020-01-03_iOS开发高手课04/</id>
     <published>2020-01-03T12:20:20.000Z</published>
-    <updated>2020-02-02T10:11:31.555Z</updated>
-    <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>xxxxx</p>
+    <updated>2020-02-02T10:32:28.270Z</updated>
+    <content type="html"><![CDATA[<h2 id="1、前言">1、前言</h2><p>xxxxx</p>
 <a id="more"></a>
 <h2 id="2、正文">2、正文</h2><blockquote>
 <p>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程 <a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a> </p>
 </blockquote>
-<h3 id="3、总结">3、总结</h3><h3 id="参考">参考</h3><ul>
+<h2 id="3、总结">3、总结</h2><p><br></p>
+<p>注：更多关于 iOS 开发和程序开发相关的内容，可以查看系列，目前还在连载中 <a href="https://ihtcboy.com/2020/02/01/2020-02-01_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/">【学习总结】iOS开发高手课 – (连载中) | iHTCboy’s blog</a>，以上，希望对你有用！</p>
+<h2 id="参考">参考</h2><ul>
 <li><p><a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a></p>
 </li>
 <li><p><a href="https://github.com/casatwy/CTMediator" target="_blank" rel="external">casatwy/CTMediator: The mediator with no regist process to split your iOS Project into multiple project.</a></p>
@@ -476,7 +486,7 @@
 </blockquote>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h3 id="1、前言">1、前言</h3><p>xxxxx</p>]]>
+    <![CDATA[<h2 id="1、前言">1、前言</h2><p>xxxxx</p>]]>
     
     </summary>
     
@@ -696,13 +706,15 @@
     <link href="https://iHTCboy.com/2019/12/27/2019-12-27_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE03/"/>
     <id>https://iHTCboy.com/2019/12/27/2019-12-27_iOS开发高手课03/</id>
     <published>2019-12-27T12:20:20.000Z</published>
-    <updated>2020-02-02T10:11:28.700Z</updated>
-    <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>xxxxx</p>
+    <updated>2020-02-02T10:32:37.213Z</updated>
+    <content type="html"><![CDATA[<h2 id="1、前言">1、前言</h2><p>xxxxx</p>
 <a id="more"></a>
 <h2 id="2、正文">2、正文</h2><blockquote>
 <p>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程 <a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a> </p>
 </blockquote>
-<h3 id="3、总结">3、总结</h3><h3 id="参考">参考</h3><ul>
+<h2 id="3、总结">3、总结</h2><p><br></p>
+<p>注：更多关于 iOS 开发和程序开发相关的内容，可以查看系列，目前还在连载中 <a href="https://ihtcboy.com/2020/02/01/2020-02-01_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/">【学习总结】iOS开发高手课 – (连载中) | iHTCboy’s blog</a>，以上，希望对你有用！</p>
+<h2 id="参考">参考</h2><ul>
 <li><a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a></li>
 </ul>
 <p>WWDC:</p>
@@ -754,7 +766,7 @@
 </blockquote>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h3 id="1、前言">1、前言</h3><p>xxxxx</p>]]>
+    <![CDATA[<h2 id="1、前言">1、前言</h2><p>xxxxx</p>]]>
     
     </summary>
     
@@ -3070,7 +3082,7 @@
     <link href="https://iHTCboy.com/2019/12/20/2019-12-20_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE02/"/>
     <id>https://iHTCboy.com/2019/12/20/2019-12-20_iOS开发高手课02/</id>
     <published>2019-12-20T12:20:20.000Z</published>
-    <updated>2020-02-02T10:21:01.543Z</updated>
+    <updated>2020-02-02T10:30:15.148Z</updated>
     <content type="html"><![CDATA[<h2 id="1、前言">1、前言</h2><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/12/iOS开发高手课-02-App启动速度怎么做优化与监控？.png" alt="iOS开发高手课-02-App启动速度怎么做优化与监控？.png"></p>
 <a id="more"></a>
@@ -3152,7 +3164,7 @@
 <li>技术深研：RN、Flutter、小程序、动态化</li>
 </ol>
 <p>很多知识点，大家现在看到这篇文章感觉一气呵成，水到渠成的样子，但是其实是一点一点的思考和触想，可能有一个概念很久之前就有，但是怎么把这些知识串联一起，确实是需要非常深厚的功能，才能做到。所以，本次系列，我只能说尽量自己的力量，因为<code>我相信不管是后来者，还是以后的我，都一定超越现在的我！</code>，所以，如果未来可以，可以在重写此系列，也是一件令人愉快的事！</p>
-<p>注：更多关于 iOS 开发和程序开发相关的内容，可以查看此系列，目前还在连载中 <a href="https://ihtcboy.com/2020/02/01/2020-02-01_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/">iOS开发高手课 – 学习总结(连载) | iHTCboy’s blog</a>，以上，希望对你有用！</p>
+<p>注：更多关于 iOS 开发和程序开发相关的内容，可以查看此系列，目前还在连载中 <a href="https://ihtcboy.com/2020/02/01/2020-02-01_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/">【学习总结】iOS开发高手课 – (连载中)| iHTCboy’s blog</a>，以上，希望对你有用！</p>
 <h2 id="参考">参考</h2><ul>
 <li><a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a></li>
 <li><a href="https://ming1016.github.io/" target="_blank" rel="external">星光社 - 戴铭的博客</a></li>
