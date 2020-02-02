@@ -156,7 +156,7 @@
     <link href="https://iHTCboy.com/2020/02/01/2020-02-01_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/"/>
     <id>https://iHTCboy.com/2020/02/01/2020-02-01_iOS开发高手课/</id>
     <published>2020-02-01T07:49:16.000Z</published>
-    <updated>2020-02-02T07:31:22.406Z</updated>
+    <updated>2020-02-02T10:20:44.041Z</updated>
     <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><blockquote>
 <p>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程 <a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a> </p>
 </blockquote>
@@ -233,6 +233,7 @@
 </ul>
 </li>
 </ul>
+<p><br></p>
 <p>目前分享了几篇文章，学习原文过程中，依然有很多未知，同时也查阅了很多资料，可能还存在错误。一周更新一篇，也要一年的时间，学习是一个漫长的过程，是一个滴水穿石的过程，坚持必定有大收获。所以，分享出来，希望大家一起学习和提升，也是自己总结知识体系，厚积薄发，一起加油吧！</p>
 <h3 id="参考">参考</h3><ul>
 <li><a href="https://ming1016.github.io/categories/Programming/" target="_blank" rel="external">戴铭 - 博客</a></li>
@@ -3069,7 +3070,7 @@
     <link href="https://iHTCboy.com/2019/12/20/2019-12-20_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE02/"/>
     <id>https://iHTCboy.com/2019/12/20/2019-12-20_iOS开发高手课02/</id>
     <published>2019-12-20T12:20:20.000Z</published>
-    <updated>2020-02-02T10:12:34.371Z</updated>
+    <updated>2020-02-02T10:21:01.543Z</updated>
     <content type="html"><![CDATA[<h2 id="1、前言">1、前言</h2><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/12/iOS开发高手课-02-App启动速度怎么做优化与监控？.png" alt="iOS开发高手课-02-App启动速度怎么做优化与监控？.png"></p>
 <a id="more"></a>
@@ -3124,11 +3125,9 @@
 
 注意：
 1、可执行程序或库文件都可以使用此属性修饰函数
-2、同一个可执行程序或库文件允许多个函数被修饰，执行顺序由代码编写顺序或编译链接顺序有关
-
-
-引用来源：[函数属性__<span class="title">attribute__</span><span class="params">((<span class="keyword">constructor</span>)</span>)和__<span class="title">attribute__</span><span class="params">((<span class="keyword">destructor</span>)</span>) - <span class="title">tianmo2010</span>的专栏]<span class="params">(https://blog.csdn.net/tianmohust/article/details/45310349)</span></span>
-</code></pre><h4 id="3、objc_msgSend_方法和_hook_内容">3、objc_msgSend 方法和 hook 内容</h4><p><code>hook</code>的概率在很多的语言都有，因为安全和越狱等，针对 iOS 的 hook 网上也非常多，这里也不详细说了，后面的章节如果有相关安全的在说吧。相信大家网络上一定能找到很多资料！</p>
+2、同一个可执行程序或库文件允许多个函数被修饰，执行顺序由代码编写顺序或编译链接顺序有关</span>
+</code></pre><p>引用来源：<a href="https://blog.csdn.net/tianmohust/article/details/45310349" target="_blank" rel="external">函数属性<strong>attribute</strong>((constructor))和<strong>attribute</strong>((destructor)) - tianmo2010的专栏</a></p>
+<h4 id="3、objc_msgSend_方法和_hook_内容">3、objc_msgSend 方法和 hook 内容</h4><p><code>hook</code>的概率在很多的语言都有，因为安全和越狱等，针对 iOS 的 hook 网上也非常多，这里也不详细说了，后面的章节如果有相关安全的在说吧。相信大家网络上一定能找到很多资料！</p>
 <h4 id="4、怎样获取主线程调用栈？">4、怎样获取主线程调用栈？</h4><p>相信有好奇心的同学，在阅读文章时，一定对怎样获取主线程调用栈的问题产生兴趣，但可能如果之前没有接触过，一定觉得太难了！根本找不到方向或者感觉！但是，你仔细想想，是不是真的这么难？没有方向？其实并不是，只要搜索一下，网络上也是一堆一堆的。当然，你想通过一篇文章就掌握所有这些相关的知识，那可能不太现实！<code>你一定要明白，不劳而获永远是获得最少的！</code>，所以，还是要靠自己努力，另外，后续的章节还会有这方面的深入知识，到时候在解答吧。希望大家能利用自己的学习能力，习得不亦乐乎！</p>
 <h4 id="5、监控耗时和耗时统计">5、监控耗时和耗时统计</h4><p>这个问题也值得大家注意，后续章节在一起讨论。</p>
 <h4 id="6、源码阅读">6、源码阅读</h4><p>苹果公司已经开源了 Objective-C 的运行时代码。你可以在苹果公司的开源网站，找到 <a href="https://opensource.apple.com/source/objc4/objc4-723/runtime/Messengers.subproj/" target="_blank" rel="external">objc_msgSend的源码</a>。</p>
