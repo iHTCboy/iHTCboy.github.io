@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Learn something of everything,  Learn everything of something.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="https://iHTCboy.com/"/>
-  <updated>2020-02-02T02:33:56.055Z</updated>
+  <updated>2020-02-02T06:15:27.701Z</updated>
   <id>https://iHTCboy.com/</id>
   
   <author>
@@ -15,11 +15,148 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[建立你自己的开发知识体系]]></title>
+    <link href="https://iHTCboy.com/2020/02/02/2020-02-02_%E5%BB%BA%E7%AB%8B%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/"/>
+    <id>https://iHTCboy.com/2020/02/02/2020-02-02_建立你自己的开发知识体系/</id>
+    <published>2020-02-02T12:20:20.000Z</published>
+    <updated>2020-02-02T06:15:27.701Z</updated>
+    <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
+<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/建立你自己的开发知识体系.png" alt="建立你自己的开发知识体系.png"></p>
+<a id="more"></a>
+<h3 id="2、正文">2、正文</h3><p>学习任何文章之前，一定要有可行的<code>方法论</code>，否则很难有所突破。上面脑图中，我列出了一些个人认为非常好的方法论，所以，在学习课程前，先了解一下，对后续自学或其它的学习都会有益处。</p>
+<h4 id="一个知识点">一个知识点</h4><ol>
+<li>为什么需要 <code>XXX</code></li>
+<li>什么是 <code>XXX</code></li>
+<li>怎么使用 <code>XXX</code></li>
+<li>使用 <code>XXX</code> 时注意的问题</li>
+<li><code>XXX</code> 的应用领域</li>
+<li><code>XXX</code> 的优缺点</li>
+<li><code>XXX</code> 触类旁通</li>
+</ol>
+<p>这个理论是在<code>郝斌</code>老师所录制的计算机(编程)教学视频里提到的，很适合初学者，有兴趣的大家可以自行搜索。</p>
+<p>为什么这个很受用？因为简单的套用一下，你就知道自己是否掌握了一个知识点！</p>
+<p>举例：</p>
+<ol>
+<li>为什么需要 <code>单例模式</code></li>
+<li>什么是 <code>单例模式</code></li>
+<li>怎么使用 <code>单例模式</code></li>
+<li>使用 <code>单例模式</code> 时注意的问题</li>
+<li><code>单例模式</code> 的应用领域</li>
+<li><code>单例模式</code> 的优缺点</li>
+<li><code>单例模式</code> 触类旁通</li>
+</ol>
+<h4 id="当我们在谈论性能优化时，我们在说什么？">当我们在谈论性能优化时，我们在说什么？</h4><ol>
+<li>CPU</li>
+<li>内存</li>
+<li>网络</li>
+<li>I/O</li>
+</ol>
+<p>大家有没有发现，以上4点对应计算机的基本组成原理，<code>在谈论性能优化时，其实就是在说计算机的瓶颈！</code>，所以，当在谈论性能优化时，我们可以做的，就是把计算机的瓶颈<code>提高或转化</code>。 </p>
+<p>单一 CPU 处理不过来，我们新加 GPU；一个 CPU 处理不来，我们8核、16核心！多核 CPU 处理不过来，我们可以<code>集群</code>！分布式！云化！</p>
+<p>当内存不足时，我们加内存！内存<code>压缩</code>！内存<code>置换</code>！</p>
+<p>当网络带宽不够时，我们加带宽！我们加服务器！我们加异地多端！</p>
+<p>当I/O过高时，我们<code>取舍</code>I或O！我们把I和O<code>拆分</code>！</p>
+<p>在深入到程序、代码中，所有的优化，是不是也一样，你要减少计算和循环次数，你要<code>节省内存开销</code>！你要<code>网络数据缓存</code>！你要<code>定量定时入库</code>！</p>
+<p>所有的性能优化，不过如此！大家明白了吗？</p>
+<h4 id="换空间">换空间</h4><ol>
+<li>压缩</li>
+<li>分片</li>
+<li>索引</li>
+</ol>
+<p>上面说到的性能优化，从大方向时如此，然后细化到具体，会有非常多的算法或技巧，其中<code>换空间</code>就是一个经典的问题。</p>
+<p>大家一定听说过类似：</p>
+<ul>
+<li>“20张100MB的图片，怎么显示在1G内存的设备上”</li>
+<li>“在2.5亿个整数中找出不重复的整数，注，内存不足以容纳这2.5亿个整数。”</li>
+<li>“给定a、b两个文件，各存放50亿个url，每个url各占64字节，内存限制是4G，让你找出a、b文件共同的url？”</li>
+</ul>
+<p>这些问题，其实解法，基本上可以用上面3个方法！</p>
+<p>大家明白了吗？建立你自己的<code>开发知识体系</code>！其实并不难，<code>学习是没有捷径，但有方法！</code>，所以，了解和掌握更多的<code>方法论</code>，构建自己的知识体系树，这样，才是不用被动的每天在各种各样的文章中，人浮于事！</p>
+<h4 id="学什么">学什么</h4><ol>
+<li>不要被难倒 —— 分治思想</li>
+<li>不要想太简单</li>
+<li>学习曲线陡峭度，跳过原则</li>
+<li>多疑问，多思考，多总结</li>
+<li>学习不仅仅是知识，还有过程</li>
+<li>授人以鱼不如授人以渔</li>
+</ol>
+<p>我个人推崇 <strong>授人以鱼不如授人以渔</strong>，学习不是给你知识，而是学会如果获取知识，如何知识点串联起来，如何快速有效的掌握知识！</p>
+<h4 id="学习技巧">学习技巧</h4><ol>
+<li>先实践再学理论更有感觉</li>
+<li>按工作需要来，工作毕竟是实践，最容易有成就感的</li>
+<li>实践&amp;思考</li>
+<li>经验&amp;总结</li>
+<li>方向很重要，坚持方向更重要</li>
+<li>不断深入，理解和认知都在更新</li>
+<li>把逻辑和流程整理出来，更清晰</li>
+<li>尝试作为一个提供 api 的人</li>
+<li>并不是样样精通，而是有擅长的领域。</li>
+<li>融会贯通</li>
+</ol>
+<p>很多人可能迷恋/迷信学习的快捷方式，每次学习一个知识点时，总时想找到捷径在学习，往往不得其道！有需要，大家可以看看我之前的年终总结 <a href="https://ihtcboy.com/2020/01/01/2020-01-01_2019year/">2020，爱你爱你 | iHTCboy’s blog</a>，这里我就不多说了。关于学习，先深挖某一领域，经过大量的学习和实践后理解了编程的本质，从而可以灵活调配和运用自己已经积累的知识。切记！切记！切记！<code>学习是没有捷径！但有方法！</code></p>
+<h4 id="知识点">知识点</h4><ol>
+<li>组件化是将上层业务隔离开，下层提供通用能力的一种架构模式</li>
+<li>组件化、热修复、动态化、大前端、Flutter、小程序</li>
+<li>提高编译速度，内存优化，性能优化，电量优化，测试驱动开发，架构设计模式和iOS中算法数据结构的使用</li>
+</ol>
+<p>虽然大家都是程序员，工程师，但是，所在行业不同，现实是<code>千差万别</code>的！了解和熟悉的知识也是不尽不同！如何把计算机的万千技术用到自己所在的行业？<code>每个人的精力有限，但是无极限</code>，当别人告诉你不可能时，那一定是他度量的尺子与你不同！我们度量一件事，要尽量<code>放长线，放大眼光，放高视角！</code>，对于知识点，有太多的东西，选择自己感兴趣和工作需要的，不用太关心别人的评论，绝大多数事件，不是做不来，而是需要<code>长期做</code>！</p>
+<h4 id="面试">面试</h4><ol>
+<li>被别人问底层原理答不出所以然</li>
+<li>1.业务代码谁都会写，你还会什么？</li>
+<li>2.我觉得iOS开发不值这个价，我们公司这个价的也不是没有都是后台，前端不需要。</li>
+<li>公司不考虑员工的成长，多待无益</li>
+<li>成体系地提升自己的内功，完善自己，然后反哺到工作上，让工作效率和质量达到质的提升，进而从容应对技术的更新迭代</li>
+<li>面试应聘者的时候，通常都会问他所负责项目的整体架构是怎样的。</li>
+<li>只对自己负责的那摊子事儿说的溜，而回答所在项目整体情况时却支支吾吾，面试不会成功。</li>
+</ol>
+<p>如果不是自由工作者，我想大多数的国内同学都没有机会选择，所以，面试是一个总是要面对的问题，每次辞职、被辞职，大家就重新拿起试题集来刷，<code>刷题目！刷算法！刷刷刷！</code></p>
+<p><code>所有的问题不能简单的一刀切！</code>，经过这么多年，我的理解里，问题没有对与错，好与坏。刷题目也是一样。我想说的是内力是不能一天俩天就长成，所以为面试，建立自己的开发知识体系，<code>面试题就是西天取经，第一道题目就是一个怪兽，你不可能一天打败所有怪兽，所以，不要忽视七七四十九日的轮回。</code></p>
+<h4 id="书籍">书籍</h4><ol>
+<li>《代码整洁之道》</li>
+<li>《人月神话》</li>
+</ol>
+<p>书籍很多，好书也很多！这里暂时不列出所有值得看的技术书，因为，<code>我害怕大家一下子又回到原点，买了一堆书，然后不知道从那里开始！</code>，所以，我是不建议买书！买书是自己要系统学习的时候买！怕伤害眼睛时买，但不能因为别人推荐或感觉不错就买！要从自身出发，从自己工作，从自己从事的行业，从自己的规划发展，从自己的兴趣，<code>任何事件的起点，都是初心，不要忘了初心！</code></p>
+<h3 id="3、总结">3、总结</h3><p><br>关于如何建立自己的开发知识体系，以上就是我认为比较重要的点，贯穿到开发的每一个细节，需要大家长期长时间的学习、研究和经历，才能打造一套属于自己的知识树，<code>任何告诉你可以复制的知识，你可以复制！但永远无法粘贴到自己脑心中！</code></p>
+<p>更多关于 iOS 开发和程序开发相关的内容，可以查看系列，目前还在连载中 <a href="https://ihtcboy.com/2020/02/01/2020-02-01_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/">iOS开发高手课 – 学习总结(连载) | iHTCboy’s blog</a>，以上，希望对你有用！</p>
+<h3 id="参考">参考</h3><ul>
+<li><a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a></li>
+<li><a href="https://ihtcboy.com/2020/02/01/2020-02-01_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/">iOS开发高手课 – 学习总结(连载) | iHTCboy’s blog</a></li>
+<li><a href="https://ihtcboy.com/2020/01/01/2020-01-01_2019year/">2020，爱你爱你 （年终总结）| iHTCboy’s blog</a></li>
+<li><a href="https://www.cnblogs.com/jackchen-Net/p/8111817.html" target="_blank" rel="external">（面试）Hash表算法十道海量数据处理面试题 - CJZhaoSimons - 博客园</a></li>
+</ul>
+<p><br></p>
+<ul>
+<li>如有侵权，联系必删！</li>
+<li>如有不正确的地方，欢迎指导！</li>
+<li>如有疑问，欢迎在评论区一起讨论！</li>
+</ul>
+<p><br></p>
+<blockquote>
+<p>注：本文首发于 <a href="https://iHTCboy.com">iHTCboy’s blog</a>，如若转载，请注来源<br><br></p>
+</blockquote>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h3 id="1、前言">1、前言</h3><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
+<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/建立你自己的开发知识体系.png" alt="建立你自己的开发知识体系.png"></p>]]>
+    
+    </summary>
+    
+      <category term="iOS开发高手课" scheme="https://iHTCboy.com/tags/iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/"/>
+    
+      <category term="学习总结" scheme="https://iHTCboy.com/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
+    
+      <category term="知识体系" scheme="https://iHTCboy.com/tags/%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/"/>
+    
+      <category term="technology" scheme="https://iHTCboy.com/categories/technology/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[iOS开发高手课 -- 学习总结(连载)]]></title>
     <link href="https://iHTCboy.com/2020/02/01/2020-02-01_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/"/>
     <id>https://iHTCboy.com/2020/02/01/2020-02-01_iOS开发高手课/</id>
     <published>2020-02-01T07:49:16.000Z</published>
-    <updated>2020-02-02T02:33:56.055Z</updated>
+    <updated>2020-02-02T02:57:46.848Z</updated>
     <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><blockquote>
 <p>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程 <a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a> </p>
 </blockquote>
@@ -31,7 +168,7 @@
 <p>以下是 <a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a> 的课程目录，也是后续这个系列的每篇文章的链接：</p>
 <ul>
 <li><del>开篇词 | 锚定一个点，然后在这个点上深耕</del></li>
-<li><a href="https://ihtcboy.com/">01 | 建立你自己的iOS开发知识体系</a></li>
+<li><del>01 | 建立你自己的iOS开发知识体系</del></li>
 <li><a href="https://ihtcboy.com/">02 | App 启动速度怎么做优化与监控？</a></li>
 <li><a href="https://ihtcboy.com/">03 | Auto Layout 是怎么进行自动布局的，性能如何？</a></li>
 <li><a href="https://ihtcboy.com/">04 | 项目大了人员多了，架构怎么设计更合理？</a></li>
@@ -83,6 +220,19 @@
 <h3 id="4、总结">4、总结</h3><blockquote>
 <p>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程 <a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a> </p>
 </blockquote>
+<ul>
+<li><p>计划<br>每周一篇文章（一个知识点），大家了解学习和研究扩展，最后总结输出，看看对我们现有的工作和业务能不能提出新的优化或方向？</p>
+</li>
+<li><p>目的</p>
+<ul>
+<li>大家一起学习&amp;分享和成长</li>
+<li>更全面的了解 iOS 开发技术</li>
+<li>从学习到工作再学习，更好的学习更好的工作</li>
+<li>提高大家的学习总结和表达能力</li>
+<li>能对现有的工作和业务提出新的优化或方向？</li>
+</ul>
+</li>
+</ul>
 <p>目前分享了几篇文章，学习原文过程中，依然有很多未知，同时也查阅了很多资料，可能还存在错误。一周更新一篇，也要一年的时间，学习是一个漫长的过程，是一个滴水穿石的过程，坚持必定有大收获。所以，分享出来，希望大家一起学习和提升，也是自己总结知识体系，厚积薄发，一起加油吧！</p>
 <h3 id="参考">参考</h3><ul>
 <li><a href="https://ming1016.github.io/categories/Programming/" target="_blank" rel="external">戴铭 - 博客</a></li>
@@ -114,6 +264,220 @@
       <category term="极客时间" scheme="https://iHTCboy.com/tags/%E6%9E%81%E5%AE%A2%E6%97%B6%E9%97%B4/"/>
     
       <category term="induction" scheme="https://iHTCboy.com/categories/induction/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[【学习总结】06 | App 如何通过注入动态库的方式实现极速编译调试？]]></title>
+    <link href="https://iHTCboy.com/2020/01/17/2020-01-17_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE06/"/>
+    <id>https://iHTCboy.com/2020/01/17/2020-01-17_iOS开发高手课06/</id>
+    <published>2020-01-17T12:20:20.000Z</published>
+    <updated>2020-02-02T06:15:51.411Z</updated>
+    <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>xxxxx</p>
+<a id="more"></a>
+<h3 id="2、正文">2、正文</h3><h3 id="3、总结">3、总结</h3><h3 id="参考">参考</h3><ul>
+<li><a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a></li>
+<li><a href="https://mp.weixin.qq.com/s/hFnHdOP6pmIwzZck-zXE8g" target="_blank" rel="external">Injection：iOS热重载背后的黑魔法</a></li>
+<li><a href="https://mp.weixin.qq.com/s?__biz=MzU4MDUxOTI5NA==&amp;mid=2247483816&amp;idx=1&amp;sn=deedc011bc902511d0712de959bb8b06&amp;scene=19#wechat_redirect&amp;from=%E6%96%87%E7%AB%A0%E9%A1%B5%E5%86%85%E9%93%BE%E6%8E%A5" target="_blank" rel="external">深入理解flutter的编译原理与优化</a></li>
+<li><a href="https://www.jianshu.com/p/93952a4b8415?utm_campaign=hugo&amp;utm_medium=reader_share&amp;utm_content=note" target="_blank" rel="external">Flutter之Hot Reload 的工作原理 - 简书</a></li>
+<li><a href="https://www.jianshu.com/p/4da5c149a123?utm_campaign=hugo&amp;utm_medium=reader_share&amp;utm_content=note" target="_blank" rel="external">Flutter 带你快速入门 - 简书</a></li>
+<li><a href="https://www.jianshu.com/p/1fa6e9c0799f" target="_blank" rel="external">React Native 热加载（Hot Reload）原理简介 - 简书</a></li>
+<li><a href="https://www.zhihu.com/question/21093419" target="_blank" rel="external">如何通俗易懂地介绍「即时编译」（JIT），它的优点和缺点是什么？ - 知乎</a></li>
+<li><a href="https://developer.apple.com/videos/play/wwdc2016/408/" target="_blank" rel="external">Introducing Swift Playgrounds - WWDC 2016 - Videos - Apple Developer</a></li>
+<li><a href="https://blog.csdn.net/Hello_Hwc/article/details/53966889" target="_blank" rel="external">Swift Playground精讲_Leo的专栏-CSDN博客</a></li>
+<li><a href="https://www.apple.com/education/teaching-code/" target="_blank" rel="external">Education - Teaching Code - Apple</a></li>
+<li><a href="https://www.apple.com.cn/cn/newsroom/2016/06/13Swift-Playgrounds-App-Makes-Learning-to-Code-Easy-Fun/" target="_blank" rel="external">Swift Playgrounds App 让编码学习变得轻松有趣 - Apple (中国)</a></li>
+<li><a href="https://www.apple.com.cn/cn/everyone-can-code/#developer-video" target="_blank" rel="external">人人能编程 - Apple (中国)</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E8%AF%BB%E5%8F%96%EF%B9%A3%E6%B1%82%E5%80%BC%EF%B9%A3%E8%BE%93%E5%87%BA%E5%BE%AA%E7%8E%AF" target="_blank" rel="external">读取﹣求值﹣输出循环 - 维基百科，自由的百科全书</a></li>
+<li><a href="https://www.infoq.cn/article/u01Zu6ywe9xON648fq9G" target="_blank" rel="external">可视化编程是否真的没有未来？程序员：它有“七宗罪”-InfoQ</a></li>
+<li><a href="https://github.com/ninja-build/ninja" target="_blank" rel="external">ninja-build/ninja: a small build system with a focus on speed</a></li>
+<li><a href="https://www.cnblogs.com/fuland/p/3641317.html" target="_blank" rel="external">Ninja介绍 - 腐烂的翅膀 - 博客园</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/Ninja_(%E6%9E%84%E5%BB%BA%E7%B3%BB%E7%BB%9F" target="_blank" rel="external">Ninja (构建系统) - 维基百科，自由的百科全书</a>)</li>
+<li><a href="https://note.qidong.name/2017/08/android-ninja/" target="_blank" rel="external">Android中的Ninja简介 · 零壹軒·笔记</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/66947922" target="_blank" rel="external">简化构建系统 - 知乎</a></li>
+<li><a href="https://www.jianshu.com/p/31bf731fec22" target="_blank" rel="external">C++构建系统的选择 - 简书</a></li>
+<li><a href="https://apps.apple.com/cn/app/injectioniii/id1380446739?mt=12" target="_blank" rel="external">‎Mac App Store 上的“InjectionIII”</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E5%8D%B3%E6%99%82%E7%B7%A8%E8%AD%AF" target="_blank" rel="external">即时编译 - 维基百科，自由的百科全书</a></li>
+<li><a href="https://blog.csdn.net/h1130189083/article/details/78302502" target="_blank" rel="external">AOT,JIT区别，各自优劣，混合编译_Keisu的博客-CSDN博客</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/53723652" target="_blank" rel="external">说一说Android的Dalvik，ART与JIT，AOT - 知乎</a></li>
+<li><a href="https://www.zhihu.com/question/23874627" target="_blank" rel="external">对比JIT和AOT，各自有什么优点与缺点? - 知乎</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/95626955" target="_blank" rel="external">深入理解Android虚拟机及编译系统 - 知乎</a></li>
+</ul>
+<p><br></p>
+<ul>
+<li>如有侵权，联系必删！</li>
+<li>如有不正确的地方，欢迎指导！</li>
+<li>如有疑问，欢迎在评论区一起讨论！</li>
+</ul>
+<p><br></p>
+<blockquote>
+<p>注：本文首发于 <a href="https://iHTCboy.com">iHTCboy’s blog</a>，如若转载，请注来源<br><br></p>
+</blockquote>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h3 id="1、前言">1、前言</h3><p>xxxxx</p>]]>
+    
+    </summary>
+    
+      <category term="iOS开发高手课" scheme="https://iHTCboy.com/tags/iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/"/>
+    
+      <category term="学习总结" scheme="https://iHTCboy.com/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
+    
+      <category term="technology" scheme="https://iHTCboy.com/categories/technology/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[【学习总结】05 | 链接器：符号是怎么绑定到地址上的？]]></title>
+    <link href="https://iHTCboy.com/2020/01/10/2020-01-10_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE05/"/>
+    <id>https://iHTCboy.com/2020/01/10/2020-01-10_iOS开发高手课05/</id>
+    <published>2020-01-10T12:20:20.000Z</published>
+    <updated>2020-02-02T06:16:00.494Z</updated>
+    <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>xxxxx</p>
+<a id="more"></a>
+<h3 id="2、正文">2、正文</h3><h3 id="3、总结">3、总结</h3><h3 id="参考">参考</h3><ul>
+<li><a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a></li>
+<li><a href="https://ming1016.github.io/2017/03/01/deeply-analyse-llvm/" target="_blank" rel="external">深入剖析 iOS 编译 Clang / LLVM | 星光社 - 戴铭的博客</a></li>
+<li><a href="https://www.jianshu.com/p/5b2cce762106" target="_blank" rel="external">浅谈iOS编译过程 - 简书</a></li>
+<li><a href="https://juejin.im/post/5a352bb0f265da433562d5e3" target="_blank" rel="external">iOS学习之深入理解程序编译过程 - 掘金</a></li>
+<li><a href="https://blog.cocosdever.com/2016/04/09/talking-about-iOS-Reverse-Engineering/" target="_blank" rel="external">浅谈iOS安全与入侵(逆向工程)</a></li>
+<li><a href="https://www.jianshu.com/p/be413358cd45" target="_blank" rel="external">dyld简介及加载过程分析 - 简书</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/Clang" target="_blank" rel="external">Clang - 维基百科，自由的百科全书</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/LLVM" target="_blank" rel="external">LLVM - 维基百科，自由的百科全书</a></li>
+<li><a href="https://www.infoq.cn/article/what-is-llvm-the-power-behind-swift-rust-clang-and-more" target="_blank" rel="external">LLVM：Swift、Rust、Clang等语言的强大后盾-InfoQ</a></li>
+<li><a href="http://llvm.org/docs/" target="_blank" rel="external">About — LLVM 10 documentation</a></li>
+<li><a href="http://llvmweekly.org/" target="_blank" rel="external">LLVM Weekly - a weekly newsletter covering developments in LLVM, Clang and more</a></li>
+<li><a href="https://www.mikeash.com/pyblog/friday-qa-2012-11-09-dyld-dynamic-linking-on-os-x.html" target="_blank" rel="external">mikeash.com: Friday Q&amp;A 2012-11-09: dyld: Dynamic Linking On OS X</a></li>
+<li><a href="https://juejin.im/post/5a3232896fb9a0452b494189" target="_blank" rel="external">从Swift桥接文件到Clang-LLVM - 掘金</a></li>
+<li><a href="https://juejin.im/post/5c8e278d51882545b32e657f" target="_blank" rel="external">App启动之Dyld在做什么 - 掘金</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/Mach-O" target="_blank" rel="external">Mach-O - 维基百科，自由的百科全书</a></li>
+<li><a href="https://www.jianshu.com/p/5b2cce762106" target="_blank" rel="external">浅谈iOS编译过程 - 简书</a></li>
+<li><a href="https://onevcat.com/2011/11/objc-block/" target="_blank" rel="external">Objective-C中的Block</a></li>
+<li><a href="https://github.com/ming1016/SMCheckProject" target="_blank" rel="external">GitHub - ming1016/SMCheckProject: 使用Swift3开发了个MacOS的程序可以检测出objc项目中无用方法，然后一键全部清理</a></li>
+<li><a href="https://www.zhihu.com/question/21515496" target="_blank" rel="external">如何学习编译原理？ - 知乎</a></li>
+<li><a href="https://www.zhihu.com/question/26443913" target="_blank" rel="external">学习《编译原理》完全没有头绪怎么办？ - 知乎</a></li>
+<li><a href="https://www.zhihu.com/question/23460933" target="_blank" rel="external">谁看完过龙书虎书鲸书？全部看完是不是就有能力写一个C语言的编译器了？ - 知乎</a></li>
+<li><a href="https://blog.csdn.net/xiaolanmyself/article/details/16944135" target="_blank" rel="external">编译原理三大圣书——龙书、虎书、鲸…_Working…-CSDN博客</a></li>
+<li><a href="https://github.com/RetVal/objc-runtime" target="_blank" rel="external">GitHub - RetVal/objc-runtime: objc runtime 750</a></li>
+<li><a href="https://github.com/opensource-apple/dyld" target="_blank" rel="external">GitHub - opensource-apple/dyld</a></li>
+<li><a href="https://juejin.im/post/5c08eb8bf265da616c65680b" target="_blank" rel="external">iOS 了解Xcode Bitcode - 掘金</a></li>
+<li><a href="https://xelz.info/blog/2018/11/24/all-you-need-to-know-about-bitcode/" target="_blank" rel="external">关于bitcode, 知道这些就够了 - xelz’s blog</a></li>
+<li><a href="https://github.com/joy0304/Joy-Collection/blob/master/Blog/%E8%B6%A3%E6%8E%A2%20Mach-O%EF%BC%9A%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F.md" target="_blank" rel="external">Joy-Collection/趣探 Mach-O：文件格式.md at master · joy0304/Joy-Collection</a></li>
+<li><a href="https://github.com/joy0304/Joy-Collection/blob/master/Blog/%E7%82%B9%E5%87%BB%20Run%20%E4%B9%8B%E5%90%8E%E5%8F%91%E7%94%9F%E4%BA%86%E4%BB%80%E4%B9%88%EF%BC%9F.md" target="_blank" rel="external">Joy-Collection/点击 Run 之后发生了什么？.md at master · joy0304/Joy-Collection</a></li>
+<li><a href="https://github.com/joy0304/Joy-Collection/blob/master/Blog/%E6%9D%A5%E8%B0%88%E8%B0%88%20Mac%20OS%20X%20%E5%86%85%E6%A0%B8.md" target="_blank" rel="external">Joy-Collection/来谈谈 Mac OS X 内核.md at master · joy0304/Joy-Collection</a></li>
+<li><a href="https://lowlevelbits.org/parsing-mach-o-files/" target="_blank" rel="external">Parsing Mach-O files - Low Level Bits</a></li>
+<li><a href="https://www.jianshu.com/p/54d842db3f69" target="_blank" rel="external">趣探 Mach-O：文件格式分析 - 简书</a></li>
+<li><a href="https://www.jianshu.com/p/8498cec10a41" target="_blank" rel="external">趣探 Mach-O：加载过程 - 简书</a></li>
+<li><a href="https://www.jianshu.com/p/bcc7ba20f900" target="_blank" rel="external">Mach-O可执行文件 - 简书</a></li>
+<li><a href="https://github.com/rogertan30/GeekTime/blob/master/iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/%E7%AC%A6%E5%8F%B7%E6%98%AF%E6%80%8E%E4%B9%88%E7%BB%91%E5%AE%9A%E5%88%B0%E5%9C%B0%E5%9D%80%E4%B8%8A%E7%9A%84/LLVM.pdf" target="_blank" rel="external">GeekTime/LLVM.pdf at master · rogertan30/GeekTime</a></li>
+<li><a href="http://www.yinwang.org/blog-cn/2012/08/01/interpreter" target="_blank" rel="external">怎样写一个解释器</a></li>
+<li><a href="http://www.aosabook.org/en/llvm.html" target="_blank" rel="external">The Architecture of Open Source Applications: LLVM</a></li>
+<li><a href="http://clang.llvm.org/docs/" target="_blank" rel="external">Welcome to Clang’s documentation! — Clang 11 documentation</a></li>
+<li><a href="http://llvm.org/docs/WritingAnLLVMPass.html" target="_blank" rel="external">Writing an LLVM Pass — LLVM 10 documentation</a></li>
+<li><a href="https://www.youtube.com/watch?time_continue=280&amp;v=VqCkCDFLSsc" target="_blank" rel="external">The Clang AST - a Tutorial - YouTube</a></li>
+<li><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15745-s14/public/lectures/" target="_blank" rel="external">Index of /afs/cs.cmu.edu/academic/class/15745-s14/public/lectures</a></li>
+<li><a href="https://code.woboq.org/llvm/clang/" target="_blank" rel="external">llvm/clang/ Source Tree - Woboq Code Browser</a></li>
+<li><a href="https://bugly.qq.com/docs/user-guide/symbol-configuration-ios/?v=20180709165613" target="_blank" rel="external">iOS 符号表 - Bugly 文档</a></li>
+</ul>
+<p><br></p>
+<ul>
+<li>如有侵权，联系必删！</li>
+<li>如有不正确的地方，欢迎指导！</li>
+<li>如有疑问，欢迎在评论区一起讨论！</li>
+</ul>
+<p><br></p>
+<blockquote>
+<p>注：本文首发于 <a href="https://iHTCboy.com">iHTCboy’s blog</a>，如若转载，请注来源<br><br></p>
+</blockquote>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h3 id="1、前言">1、前言</h3><p>xxxxx</p>]]>
+    
+    </summary>
+    
+      <category term="iOS开发高手课" scheme="https://iHTCboy.com/tags/iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/"/>
+    
+      <category term="学习总结" scheme="https://iHTCboy.com/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
+    
+      <category term="technology" scheme="https://iHTCboy.com/categories/technology/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[【学习总结】04 | 项目大了人员多了，架构怎么设计更合理？]]></title>
+    <link href="https://iHTCboy.com/2020/01/03/2020-01-03_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE04/"/>
+    <id>https://iHTCboy.com/2020/01/03/2020-01-03_iOS开发高手课04/</id>
+    <published>2020-01-03T12:20:20.000Z</published>
+    <updated>2020-02-02T06:16:09.286Z</updated>
+    <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>xxxxx</p>
+<a id="more"></a>
+<h3 id="2、正文">2、正文</h3><h3 id="3、总结">3、总结</h3><h3 id="参考">参考</h3><ul>
+<li><p><a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a></p>
+</li>
+<li><p><a href="https://github.com/casatwy/CTMediator" target="_blank" rel="external">casatwy/CTMediator: The mediator with no regist process to split your iOS Project into multiple project.</a></p>
+</li>
+<li><a href="https://github.com/alibaba/BeeHive/blob/master/README-CN.md" target="_blank" rel="external">BeeHive/README-CN.md at master · alibaba/BeeHive</a></li>
+<li><a href="https://casatwy.com/iOS-Modulization.html" target="_blank" rel="external">iOS应用架构谈 组件化方案 - Casa Taloyum</a></li>
+<li><a href="https://limboy.me/tech/2016/03/10/mgj-components.html" target="_blank" rel="external">蘑菇街 App 的组件化之路 - Limboy’s HQ</a></li>
+<li><a href="https://limboy.me/tech/2016/03/14/mgj-components-continued.html" target="_blank" rel="external">蘑菇街 App 的组件化之路·续 - Limboy’s HQ</a></li>
+<li><a href="https://casatwy.com/modulization_in_action.html" target="_blank" rel="external">在现有工程中实施基于CTMediator的组件化方案 - Casa Taloyum</a></li>
+<li><a href="https://limboy.me/tech/2015/09/27/ios-mvvm-without-reactivecocoa.html" target="_blank" rel="external">MVVM without ReactiveCocoa - Limboy’s HQ</a></li>
+<li><a href="https://casatwy.com/zen-yao-mian-shi-jia-gou-shi.html" target="_blank" rel="external">怎么面试架构师 - Casa Taloyum</a></li>
+<li><a href="https://onevcat.com/2016/11/pop-cocoa-1/" target="_blank" rel="external">面向协议编程与 Cocoa 的邂逅 (上)</a></li>
+<li><a href="https://onevcat.com/2016/12/pop-cocoa-2/" target="_blank" rel="external">面向协议编程与 Cocoa 的邂逅 (下)</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/SOLID_(%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1" target="_blank" rel="external">SOLID (面向对象设计) - 维基百科，自由的百科全书</a>)</li>
+<li><a href="https://www.cnblogs.com/wuyuegb2312/p/7011708.html" target="_blank" rel="external">面向对象的SOLID原则白话篇 - 五岳 - 博客园</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E6%95%8F%E6%8D%B7%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91" target="_blank" rel="external">敏捷软件开发 - 维基百科，自由的百科全书</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E5%A5%A5%E5%8D%A1%E5%A7%86%E5%89%83%E5%88%80" target="_blank" rel="external">奥卡姆剃刀 - 维基百科，自由的百科全书</a></li>
+<li><a href="https://blog.csdn.net/rcom10002/article/details/8822368" target="_blank" rel="external">面向对象设计原则：不要STUPID，坚持GRASP和SOLID_KNIGHTRCOM(rcom10002的专栏)-CSDN博客</a></li>
+<li><a href="http://nikic.github.io/2011/12/27/Dont-be-STUPID-GRASP-SOLID.html" target="_blank" rel="external">Don’t be STUPID: GRASP SOLID!</a></li>
+<li><a href="https://blog.csdn.net/mzl87/article/details/85342255" target="_blank" rel="external">SOLID，GRASP和面向对象设计的其他基本原理_寒冰屋的专栏-CSDN博客</a></li>
+<li><a href="http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod" target="_blank" rel="external">ArticleS.UncleBob.PrinciplesOfOod</a></li>
+<li><a href="https://juejin.im/post/5d655c93e51d453bc6480219" target="_blank" rel="external">GRASP设计原则 - 掘金</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%9A%E5%8F%AF%E5%A4%8D%E7%94%A8%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%9F%BA%E7%A1%80" target="_blank" rel="external">设计模式：可复用面向对象软件的基础 - 维基百科，自由的百科全书</a></li>
+<li><a href="https://www.infoq.cn/article/design-patterns-proposed-by-gof-20-years-ago" target="_blank" rel="external">20年前GoF提出的设计模式，对这个时代是否还有指导意义？-InfoQ</a></li>
+<li><a href="http://blogs.tedneward.com/post/reclaiming-design-patterns/" target="_blank" rel="external">Reclaiming Design Patterns (20 Years Later) · Ted Neward’s Blog</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/KISS%E5%8E%9F%E5%88%99" target="_blank" rel="external">KISS原则 - 维基百科，自由的百科全书</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E4%B8%80%E6%AC%A1%E4%B8%94%E4%BB%85%E4%B8%80%E6%AC%A1" target="_blank" rel="external">一次且仅一次 - 维基百科，自由的百科全书</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1" target="_blank" rel="external">面向对象程序设计 - 维基百科，自由的百科全书</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/86264749" target="_blank" rel="external">AOP与OOP有什么区别，谈谈AOP的原理是什么 - 知乎</a></li>
+<li><a href="https://www.cnblogs.com/minigrasshopper/p/10271758.html" target="_blank" rel="external">理解面向过程（OPP）、面向对象（OOP）、面向切面（AOP） - 狂奔的小马扎 - 博客园</a></li>
+<li><a href="https://tech.olx.com/clean-architecture-and-mvvm-on-ios-c9d167d9f5b3" target="_blank" rel="external">Clean Architecture and MVVM on iOS - OLX Group Engineering</a></li>
+<li><a href="https://www.ruanyifeng.com/blog/2015/02/mvcmvp_mvvm.html" target="_blank" rel="external">MVC，MVP 和 MVVM 的图示 - 阮一峰的网络日志</a></li>
+<li><a href="https://www.jianshu.com/p/8e3d4ab80714" target="_blank" rel="external">MVC、MVP、MVVM架构分析与比较 - 简书</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/MVC" target="_blank" rel="external">MVC - 维基百科，自由的百科全书</a></li>
+<li><a href="http://zxfcumtcs.github.io/2016/11/05/iOSDataBinding/" target="_blank" rel="external">简化 iOS Data Binding | 雪峰的blog</a></li>
+<li><a href="https://martinfowler.com/eaaDev/uiArchs.html#navmenu-bottom" target="_blank" rel="external">GUI Architectures</a></li>
+<li><a href="https://zxfcumtcs.github.io/2016/07/20/MobileArchitecture/" target="_blank" rel="external">GUI 架构简述 | 雪峰的blog</a></li>
+<li><a href="https://zxfcumtcs.github.io/2018/12/22/Efficient-Development-Solutions/" target="_blank" rel="external">iOS 高效开发解决方案 | 雪峰的blog</a></li>
+<li><a href="https://zxfcumtcs.github.io/2018/10/04/solid/" target="_blank" rel="external">面向对象设计原则『SOLID』在开发中的应用 | 雪峰的blog</a></li>
+<li><a href="https://draveness.me/mvx" target="_blank" rel="external">浅谈 MVC、MVP 和 MVVM 架构模式</a></li>
+<li><a href="https://blog.csdn.net/zhengzhb/article/details/7281833" target="_blank" rel="external">设计模式六大原则：里氏替换原则_三级小野怪的专栏-CSDN博客</a></li>
+<li><a href="https://github.com/huang303513/Design-Pattern-For-iOS" target="_blank" rel="external">iOS设计模式探索(大话设计模式)</a></li>
+<li><a href="https://github.com/skyming/Trip-to-iOS-Design-Patterns" target="_blank" rel="external">skyming/Trip-to-iOS-Design-Patterns: iOS 设计模式相关资料整理</a></li>
+<li><a href="https://blog.cocosdever.com/2019/07/19/modular-design-in-ios/" target="_blank" rel="external">业界流行的三种iOS组件化设计方案</a></li>
+</ul>
+<p><br></p>
+<ul>
+<li>如有侵权，联系必删！</li>
+<li>如有不正确的地方，欢迎指导！</li>
+<li>如有疑问，欢迎在评论区一起讨论！</li>
+</ul>
+<p><br></p>
+<blockquote>
+<p>注：本文首发于 <a href="https://iHTCboy.com">iHTCboy’s blog</a>，如若转载，请注来源<br><br></p>
+</blockquote>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h3 id="1、前言">1、前言</h3><p>xxxxx</p>]]>
+    
+    </summary>
+    
+      <category term="iOS开发高手课" scheme="https://iHTCboy.com/tags/iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/"/>
+    
+      <category term="学习总结" scheme="https://iHTCboy.com/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
+    
+      <category term="technology" scheme="https://iHTCboy.com/categories/technology/"/>
     
   </entry>
   
@@ -317,6 +681,78 @@
       <category term="年终总结" scheme="https://iHTCboy.com/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/"/>
     
       <category term="life" scheme="https://iHTCboy.com/categories/life/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[【学习总结】03 | Auto Layout 是怎么进行自动布局的，性能如何？]]></title>
+    <link href="https://iHTCboy.com/2019/12/27/2019-12-27_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE03/"/>
+    <id>https://iHTCboy.com/2019/12/27/2019-12-27_iOS开发高手课03/</id>
+    <published>2019-12-27T12:20:20.000Z</published>
+    <updated>2020-02-02T06:16:17.012Z</updated>
+    <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>xxxxx</p>
+<a id="more"></a>
+<h3 id="2、正文">2、正文</h3><h3 id="3、总结">3、总结</h3><h3 id="参考">参考</h3><ul>
+<li><a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a></li>
+</ul>
+<p>WWDC:</p>
+<ul>
+<li><a href="https://developer.apple.com/videos/play/wwdc2018/220" target="_blank" rel="external">High Performance Auto Layout - WWDC 2018 - Videos - Apple Developer</a></li>
+<li><a href="https://developer.apple.com/videos/play/wwdc2015/218" target="_blank" rel="external">Mysteries of Auto Layout, Part 1 - WWDC 2015 - Videos - Apple Developer</a></li>
+<li><a href="https://developer.apple.com/videos/play/wwdc2015/219" target="_blank" rel="external">Mysteries of Auto Layout, Part 2 - WWDC 2015 - Videos - Apple Developer</a></li>
+<li><a href="https://developer.apple.com/videos/play/wwdc2016/236" target="_blank" rel="external">What’s New in Auto Layout - WWDC 2016 - Videos - Apple Developer</a></li>
+<li><a href="https://developer.apple.com/videos/play/wwdc2017/412/" target="_blank" rel="external">Auto Layout Techniques in Interface Builder - WWDC 2017 - Videos - Apple Developer</a></li>
+<li><a href="https://developer.apple.com/videos/play/wwdc2015/407/" target="_blank" rel="external">Implementing UI Designs in Interface Builder - WWDC 2015 - Videos - Apple Developer</a></li>
+<li><a href="https://developer.apple.com/videos/play/wwdc2015/215/" target="_blank" rel="external">What’s New in Storyboards - WWDC 2015 - Videos - Apple Developer</a></li>
+<li><a href="https://developer.apple.com/videos/play/wwdc2012/228/" target="_blank" rel="external">Best Practices for Mastering Auto Layout - WWDC 2012 - Videos - Apple Developer</a></li>
+</ul>
+<p>Article:</p>
+<ul>
+<li><a href="https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/index.html" target="_blank" rel="external">Auto Layout Guide: Understanding Auto Layout</a></li>
+<li><a href="https://constraints.cs.washington.edu/solvers/uist97.pdf" target="_blank" rel="external">Solving Linear Arithmetic Constraints for User Interface Applications - PDF</a></li>
+<li><a href="https://constraints.cs.washington.edu/solvers/uist97.html" target="_blank" rel="external">Solving Linear Arithmetic Constraints for User Interface Applications</a></li>
+<li><a href="https://constraints.cs.washington.edu/cassowary/" target="_blank" rel="external">UW Cassowary Constraint Solving Toolkit</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Simplex_algorithm" target="_blank" rel="external">Simplex algorithm - Wikipedia</a></li>
+<li><a href="https://zh.learnlayout.com/flexbox.html" target="_blank" rel="external">CSS - flexbox</a></li>
+<li><a href="https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html" target="_blank" rel="external">Flex 布局教程：语法篇 - 阮一峰的网络日志</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/25303493" target="_blank" rel="external">30 分钟学会 Flex 布局 - 知乎</a></li>
+<li><a href="https://juejin.im/post/5c2ee162e51d4550fc42ac57" target="_blank" rel="external">UIStackView 入坑指南 - 掘金</a></li>
+<li><a href="https://www.jianshu.com/p/213702004d0d" target="_blank" rel="external">UIStackView学习分享， 纯代码实现 - 简书</a></li>
+<li><a href="https://github.com/johnlui/AutoLayout" target="_blank" rel="external">johnlui/AutoLayout: Auto Layout 秘境</a></li>
+<li><a href="https://stackoverflow.com/questions/3726400/what-is-the-difference-between-nib-and-xib-interface-builder-file-formats" target="_blank" rel="external">cocoa - What is the difference between NIB and XIB Interface Builder file formats? - Stack Overflow</a></li>
+<li><a href="https://blog.csdn.net/mylizh/article/details/38660675" target="_blank" rel="external">xib与nib的区别_雅香小筑-CSDN博客</a></li>
+<li><a href="https://www.justisit.com/15703760378326.html" target="_blank" rel="external">NIB、XIB、StoryBoard与UIViewController、UIView - TIME TO GO</a></li>
+<li><a href="https://www.jianshu.com/p/0c8a692a0c7f" target="_blank" rel="external">响应式和函数式，两个容易混淆的概念 - 简书</a></li>
+<li><a href="https://draveness.me/layout-performance" target="_blank" rel="external">从 Auto Layout 的布局算法谈性能</a></li>
+<li><a href="https://juejin.im/post/5bd5a546f265da0af033cee6#aboutCassowary" target="_blank" rel="external">深入理解 Autolayout 与列表性能 – 背锅的 Cassowary 和偷懒的 CPU - 掘金</a></li>
+<li><a href="https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/VisualFormatLanguage.html" target="_blank" rel="external">Auto Layout Guide: Visual Format Language</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Simplex_algorithm" target="_blank" rel="external">Simplex algorithm - Wikipedia</a></li>
+<li><a href="https://github.com/ming1016/study/wiki/Masonry" target="_blank" rel="external">Masonry · ming1016/study Wiki</a></li>
+<li><a href="https://github.com/forkingdog/FDStackView" target="_blank" rel="external">forkingdog/FDStackView: Use UIStackView directly in iOS6+</a></li>
+<li><a href="https://github.com/ming1016/STMAssembleView" target="_blank" rel="external">ming1016/STMAssembleView: 制作一个类似苹果VFL(Visual Format Language)的格式化语言来描述类似UIStackView那种布局思路，并解析生成页面</a></li>
+<li><a href="https://ming1016.github.io/2015/11/03/deeply-analyse-autolayout/" target="_blank" rel="external">深入剖析Auto Layout，分析iOS各版本新增特性 | 星光社 - 戴铭的博客</a></li>
+</ul>
+<p><br></p>
+<ul>
+<li>如有侵权，联系必删！</li>
+<li>如有不正确的地方，欢迎指导！</li>
+<li>如有疑问，欢迎在评论区一起讨论！</li>
+</ul>
+<p><br></p>
+<blockquote>
+<p>注：本文首发于 <a href="https://iHTCboy.com">iHTCboy’s blog</a>，如若转载，请注来源<br><br></p>
+</blockquote>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h3 id="1、前言">1、前言</h3><p>xxxxx</p>]]>
+    
+    </summary>
+    
+      <category term="iOS开发高手课" scheme="https://iHTCboy.com/tags/iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/"/>
+    
+      <category term="学习总结" scheme="https://iHTCboy.com/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
+    
+      <category term="technology" scheme="https://iHTCboy.com/categories/technology/"/>
     
   </entry>
   
@@ -2616,6 +3052,88 @@
       <category term="移动开发" scheme="https://iHTCboy.com/tags/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/"/>
     
       <category term="induction" scheme="https://iHTCboy.com/categories/induction/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[【学习总结】02 | App 启动速度怎么做优化与监控？]]></title>
+    <link href="https://iHTCboy.com/2019/12/20/2019-12-20_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE02/"/>
+    <id>https://iHTCboy.com/2019/12/20/2019-12-20_iOS开发高手课02/</id>
+    <published>2019-12-20T12:20:20.000Z</published>
+    <updated>2020-02-02T06:16:22.894Z</updated>
+    <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
+<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/12/iOS开发高手课-02-App启动速度怎么做优化与监控？.png" alt="iOS开发高手课-02-App启动速度怎么做优化与监控？.png"></p>
+<a id="more"></a>
+<h3 id="2、正文">2、正文</h3><h3 id="学习&amp;分享">学习&amp;分享</h3><p><strong>授人以鱼不如授人以渔</strong></p>
+<h3 id="可以做什么？">可以做什么？</h3><ol>
+<li><ul>
+<li>工程优化：代码、规范、性能、AOP、日志</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>工程监控：耗时、内存、网络、卡顿、崩溃、瘦身、耗电</li>
+<li>工程效率：响应式框架、函数式编程、APM、监控系统</li>
+<li>技术深研：RN、Flutter、小程序、动态化</li>
+</ul>
+<h3 id="3、总结">3、总结</h3><h3 id="参考">参考</h3><ul>
+<li><a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a></li>
+<li><a href="https://ming1016.github.io/" target="_blank" rel="external">星光社 - 戴铭的博客</a></li>
+<li><a href="https://www.jianshu.com/p/e7f8459aaf38" target="_blank" rel="external">iOS 在循环中使用计算属性导致内存暴涨 - 简书</a></li>
+<li><a href="https://www.jianshu.com/p/0ad9957e3716" target="_blank" rel="external">可能碰到的iOS笔试面试题（6）–内存管理 - 简书</a></li>
+<li><a href="https://juejin.im/post/5aca2b0a6fb9a028d700e1f8" target="_blank" rel="external">iOS RunLoop详解 - 掘金</a></li>
+<li><a href="https://www.jianshu.com/p/be413358cd45" target="_blank" rel="external">dyld简介及加载过程分析 - 简书</a></li>
+<li><a href="https://juejin.im/post/5c8e278d51882545b32e657f" target="_blank" rel="external">App启动之Dyld在做什么 - 掘金</a></li>
+<li><a href="https://github.com/facebook/fishhook" target="_blank" rel="external">facebook/fishhook: A library that enables dynamically rebinding symbols in Mach-O binaries running on iOS.</a></li>
+<li><a href="https://github.com/vsouza/awesome-ios" target="_blank" rel="external">vsouza/awesome-ios: A curated list of awesome iOS ecosystem, including Objective-C and Swift Projects</a></li>
+<li><a href="https://github.com/ming1016/GCDFetchFeed" target="_blank" rel="external">ming1016/GCDFetchFeed: “已阅”新版，RSS阅读器，使用FMDB做存储，ReactiveCocoa处理数据流向</a></li>
+<li><a href="https://github.com/ming1016/SMCheckProject" target="_blank" rel="external">ming1016/SMCheckProject: 使用Swift3开发了个MacOS的程序可以检测出objc项目中无用方法，然后一键全部清理</a></li>
+<li><a href="http://www.ruanyifeng.com/blog/2018/01/assembly-language-primer.html" target="_blank" rel="external">汇编语言入门教程 - 阮一峰的网络日志</a></li>
+<li><a href="https://www.jianshu.com/p/7a340cd87d04" target="_blank" rel="external">UIApplicationMain函数 - 简书</a></li>
+<li><a href="http://www.zoomfeng.com/blog/launch-time.html" target="_blank" rel="external">iOS启动时间优化 - 第七章</a></li>
+<li><a href="https://blog.automatic.com/how-we-cut-our-ios-apps-launch-time-in-half-with-this-one-cool-trick-7aca2011e2ea" target="_blank" rel="external">How we cut our iOS app’s launch time in half (with this one cool trick)</a></li>
+<li><a href="https://blog.csdn.net/Hello_Hwc/article/details/78317863" target="_blank" rel="external">深入理解iOS App的启动过程</a></li>
+<li><a href="https://developer.apple.com/videos/play/wwdc2016/406" target="_blank" rel="external">WWDC2016-406-Optimizing App Startup Time</a></li>
+<li><a href="https://developer.apple.com/videos/play/wwdc2017/413" target="_blank" rel="external">WWDC2017-413-App Startup Time:Past,Present,and Future</a></li>
+<li><a href="https://www.jianshu.com/p/c14987eee107" target="_blank" rel="external">如何精准度量iOSAPP启动时间</a></li>
+<li><a href="http://yulingtianxia.com/blog/2016/10/30/Optimizing-App-Startup-Time/" target="_blank" rel="external">优化 App 的启动时间-杨萧玉</a></li>
+<li><a href="https://techblog.toutiao.com/2017/01/17/iosspeed/#more" target="_blank" rel="external">iOS客户端启动速度优化-今日头条</a></li>
+<li><a href="https://mp.weixin.qq.com/s/Kf3EbDIUuf0aWVT-UCEmbA" target="_blank" rel="external">iOS App 启动性能优化-WiFi管家</a></li>
+<li><a href="http://www.cocoachina.com/ios/20160104/14870.html" target="_blank" rel="external">iOS App如何优化启动时间-Facebook</a></li>
+<li><a href="https://juejin.im/post/5a31190751882559e225a775" target="_blank" rel="external">一次立竿见影的启动时间优化</a></li>
+<li><a href="https://objccn.io/issue-6-3/" target="_blank" rel="external">obj中国-Mach-O 可执行文件</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/38183046?from=1086193010&amp;wm=3333_2001&amp;weiboauthoruid=1690182120" target="_blank" rel="external">iOS app启动速度研究实践</a></li>
+<li><a href="https://mp.weixin.qq.com/s/jN3jaNrvXczZoYIRCWZs7w" target="_blank" rel="external">iOS App冷启动治理：来自美团外卖的实践</a></li>
+<li><a href="https://juejin.im/post/5b1f1d3a6fb9a01e6e2baded" target="_blank" rel="external">iOS动态库的使用</a></li>
+<li><a href="https://juejin.im/post/5c8e278d51882545b32e657f" target="_blank" rel="external">App启动之Dyld在做什么</a></li>
+<li><a href="https://blog.csdn.net/abc649395594/article/details/52350426" target="_blank" rel="external">获取任意线程调用栈的那些事 - KT的iOS开发小站</a></li>
+<li><a href="https://juejin.im/post/5c3c56eff265da614f708595" target="_blank" rel="external">谈谈iOS获取调用链 - 掘金</a></li>
+<li><a href="https://wetest.qq.com/lab/view/434.html" target="_blank" rel="external">真香！iOS云真机全新上线！ - 腾讯WeTest</a></li>
+<li><a href="https://testerhome.com/topics/20866" target="_blank" rel="external">iOS 云真机实现原理 · TesterHome</a></li>
+<li><a href="https://www.jianshu.com/p/c14987eee107" target="_blank" rel="external">如何精确度量 iOS App 的启动时间 - 简书</a></li>
+</ul>
+<p><br></p>
+<ul>
+<li>如有侵权，联系必删！</li>
+<li>如有不正确的地方，欢迎指导！</li>
+<li>如有疑问，欢迎在评论区一起讨论！</li>
+</ul>
+<p><br></p>
+<blockquote>
+<p>注：本文首发于 <a href="https://iHTCboy.com">iHTCboy’s blog</a>，如若转载，请注来源<br><br></p>
+</blockquote>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h3 id="1、前言">1、前言</h3><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
+<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/12/iOS开发高手课-02-App启动速度怎么做优化与监控？.png" alt="iOS开发高手课-02-App启动速度怎么做优化与监控？.png"></p>]]>
+    
+    </summary>
+    
+      <category term="iOS开发高手课" scheme="https://iHTCboy.com/tags/iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/"/>
+    
+      <category term="学习总结" scheme="https://iHTCboy.com/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
+    
+      <category term="technology" scheme="https://iHTCboy.com/categories/technology/"/>
     
   </entry>
   
@@ -6418,695 +6936,6 @@ DOM 架构方案在文本编辑与图形渲染操作方面的优缺点
       <category term="pyOpenSSL" scheme="https://iHTCboy.com/tags/pyOpenSSL/"/>
     
       <category term="technology" scheme="https://iHTCboy.com/categories/technology/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[说说 iOS 非 AppStore 安装App的方法]]></title>
-    <link href="https://iHTCboy.com/2019/05/07/2019-05-07_%E8%AF%B4%E8%AF%B4iOS%E9%9D%9EAppStore%E5%AE%89%E8%A3%85App%E7%9A%84%E6%96%B9%E6%B3%95/"/>
-    <id>https://iHTCboy.com/2019/05/07/2019-05-07_说说iOS非AppStore安装App的方法/</id>
-    <published>2019-05-07T14:49:16.000Z</published>
-    <updated>2020-01-11T15:29:59.082Z</updated>
-    <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>关于 iOS 安装 App 的方法，相信熟悉 iOS 的朋友都知道，如果是越狱设备，随便搞。但是，现实中，大部分用户都是小白，不会自己去越狱，安全是一方面。所以，普通情况下，AppStore 一家独大，企业账号可以玩一玩的情况，这也是苹果优秀的地方！ 今天就是想说说，关于新出的玩法~</p>
-<a id="more"></a>
-<h3 id="2、账号证书类型">2、账号证书类型</h3><table>
-<thead>
-<tr>
-<th>账号类型</th>
-<th>价格</th>
-<th>发布到AppStore？</th>
-<th>支持安装设置数量</th>
-<th>申请条件</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>个人账号</td>
-<td>$99</td>
-<td>可以</td>
-<td>100</td>
-<td>无限制</td>
-</tr>
-<tr>
-<td>公司账号</td>
-<td>$99</td>
-<td>可以</td>
-<td>100</td>
-<td>DUNS编码</td>
-</tr>
-<tr>
-<td>企业账号</td>
-<td>$299</td>
-<td>不可以</td>
-<td>无限制</td>
-<td>DUNS编码</td>
-</tr>
-<tr>
-<td>教育账号</td>
-<td>$0</td>
-<td>可以</td>
-<td>100</td>
-<td>教育机构</td>
-</tr>
-</tbody>
-</table>
-<p>通过这个表，就知道普通情况下，如果让用户安装App，只能是企业账号可行，而企业账号苹果当初只是想让那些只流通在企业内部使用的App使用，现在发展成了，非AppStore渠道的安装方式！ 灰产和各大第三方渠道xx装机xx助手。当然，这个不是今天的主题，以后有机会在慢慢说~</p>
-<h3 id="3、新安装方式">3、新安装方式</h3><p>通过上面的表格，除了企业账号，其它类型的账号，也是可以安装App到设备上，缺点有2个：</p>
-<ul>
-<li>要先添加 UDID 到证书</li>
-<li>一年只能添加一百台设备且删除不恢复</li>
-</ul>
-<p>基于这2点，正常情况下，没有人会想到用这样的方法提供安装App，但现在的情况不一样，苹果今天的审核已经很严格，基本过不了审核，另一方面企业账号，被苹果封杀和难申请，已经15万元都买不到！</p>
-<p>现在，这终于成为新的安装方式！那就要解决上面说到的 2 个缺点， UDID 获取，如果让普通用户自己获取，然后提交在，在添加证书，在，，，， 这个流程太长！！ 所以，还是有解决方案！ 而，100台设备限制无解，只能多准备n个开发者账号啊！！</p>
-<p>原理：</p>
-<blockquote>
-<p>通过网页，用户接受授权就拿到iOS设备的<code>UDID</code> ,然后把你的<code>UDID</code>添加到他们的证书里面，用这个新证书重新签名原来的IPA包，此时，你的<code>UDID</code>在IPA包的证书里面，这样，你的iOS设备就能下载这个IPA包啊</p>
-</blockquote>
-<h3 id="4、UDID_获取">4、UDID 获取</h3><p><code>UDID</code> (Unique Device Identifier)，唯一标示符,是iOS设备的一个唯一识别码，每台iOS设备都有一个独一无二的编码，UDID其实也是在设备量产的时候,生成随机的UUID写入到iOS设备硬件或者某一块存储器中,所以变成了固定的完全不会改变的一个标识，用来区别每一个唯一的iOS设备，包括 iPhones, iPads, 以及 iPod touches。</p>
-<h4 id="MDM">MDM</h4><p>iOS支持企业级的MDM（Mobile Device Managment），也就是所谓的移动设备管理，目的就是让企业能够方便的管理 iPhone、iPad等移动设备。具体的做法是通过在系统中安装配置文件（Profiles）的方式实现各种功能，设备管理，设备安全，获取设备信息，设备配置，备份和恢复等几类功能，可以根据不同应用场景实现很多具体小功能。</p>
-<h4 id="通过_Safari_浏览器获取iOS设备UDID步骤">通过 Safari 浏览器获取iOS设备UDID步骤</h4><p>苹果公司允许开发者通过iOS设备和Web服务器之间的某个操作（其实就是MDM的获取设备信息功能），来获得IOS设备的UDID(包括其他的一些参数)。以下为简要概述：<br>1、在你的Web服务器上创建一个.mobileconfig的XML格式的描述文件；<br>2、用户在所有操作之前必须通过某个点击操作完成.mobileconfig描述文件的安装；<br>3、服务器需要的数据，比如：UDID，需要在.mobileconfig描述文件中配置好，以及服务器接收数据的URL地址；<br>4、当用户设备完成数据的手机后，返回提示给客户端用户；</p>
-<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/05/20190507-Device-registration-process-ota_developer_flow_chart.jpg" alt="20190507-Device-registration-process-ota_developer_flow_chart.jpg"></p>
-<p>具体流程可参考文章：</p>
-<p><a href="http://www.skyfox.org/safari-ios-device-udid.html" target="_blank" rel="external">通过Safari浏览器获取iOS设备UDID(设备唯一标识符)-天狐博客</a></p>
-<p>具体后台开发代码可参考：</p>
-<p><a href="https://github.com/shaojiankui/iOS-UDID-Safari" target="_blank" rel="external">shaojiankui/iOS-UDID-Safari: iOS-UDID-Safari,（不能上架Appstore！！！）通过Safari获取iOS设备真实UDID，use safari and mobileconfig get ios device real udid</a></p>
-<h4 id="添加_UDID_到证书">添加 UDID 到证书</h4><ul>
-<li><a href="https://github.com/fastlane/fastlane/tree/master/spaceship" target="_blank" rel="external">fastlane/spaceship at master · fastlane/fastlane</a></li>
-</ul>
-<p>TODO</p>
-<h4 id="IPA_包重签名">IPA 包重签名</h4><ul>
-<li><a href="https://github.com/fastlane/fastlane/tree/master/sigh" target="_blank" rel="external">fastlane/sigh at master · fastlane/fastlane</a></li>
-</ul>
-<p>TODO</p>
-<h4 id="从_Safari_安装_IPA_包">从 Safari 安装 IPA 包</h4><ul>
-<li><a href="https://github.com/atelierdumobile/appdeploy" target="_blank" rel="external">atelierdumobile/appdeploy: 🚀 AppDeploy is the fastest way to get info on your mobile app &amp; deploy it OTA without specific server configuration</a></li>
-</ul>
-<p>TODO</p>
-<h3 id="总结">总结</h3><p>其实，这个作为一个<code>创新</code>的安装 App 的方式，不掉包！ 已经是企业证书无法比的，而且，不需要用户到设置里点击<code>验证</code>证书！ 完全在 Safari 里完成整个安装流程，确实是举足轻重的一步，未来将怎么样发展？期待吧！</p>
-<ul>
-<li>2019.05.26 更新<br>因为之前比较忙部分文章内容没有给出方案，博主想打算继续写完时，发现已经有同志完成了，<a href="https://juejin.im/post/5cdeb72151882525cc707729?utm_source=gold_browser_extension" target="_blank" rel="external">超级签名-原理/机制/技术细节-完全解析 - 掘金</a>，所以，本文就不在重复给出方案啦（当然，可以自己根据实现需要定制自己的签名流，以后有机会做这一块在给大家分享吧），大家有什么不明白的，讨论区一起交流~</li>
-</ul>
-<h3 id="参考">参考</h3><ul>
-<li><a href="https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/iPhoneOTAConfiguration/ConfigurationProfileExamples/ConfigurationProfileExamples.html" target="_blank" rel="external">Configuration Profile Examples</a></li>
-<li><a href="https://github.com/shaojiankui/iOS-UDID-Safari" target="_blank" rel="external">shaojiankui/iOS-UDID-Safari: iOS-UDID-Safari,（不能上架Appstore！！！）通过Safari获取iOS设备真实UDID，use safari and mobileconfig get ios device real udid</a></li>
-<li><a href="https://blog.csdn.net/FengHongSeXiaoXiang/article/details/82825046" target="_blank" rel="external">通过Safari浏览器获取iOS设备UDID(设备唯一标识符) - FengHongSeXiaoXiang的博客 - CSDN博客</a></li>
-<li><a href="http://www.skyfox.org/safari-ios-device-udid.html" target="_blank" rel="external">通过Safari浏览器获取iOS设备UDID(设备唯一标识符)-天狐博客</a></li>
-<li><a href="https://juejin.im/post/5cdeb72151882525cc707729?utm_source=gold_browser_extension" target="_blank" rel="external">超级签名-原理/机制/技术细节-完全解析 - 掘金</a></li>
-<li><a href="https://github.com/fastlane/fastlane/tree/master/spaceship" target="_blank" rel="external">fastlane/spaceship at master · fastlane/fastlane</a></li>
-<li><a href="https://github.com/fastlane/fastlane/tree/master/sigh" target="_blank" rel="external">fastlane/sigh at master · fastlane/fastlane</a></li>
-<li><a href="https://github.com/atelierdumobile/appdeploy" target="_blank" rel="external">atelierdumobile/appdeploy: 🚀 AppDeploy is the fastest way to get info on your mobile app &amp; deploy it OTA without specific server configuration</a></li>
-<li><a href="https://www.pgyer.com/udid" target="_blank" rel="external">蒲公英 | 一步快速获取 iOS 设备的UDID</a></li>
-<li><a href="https://www.pgyer.com/app/superSignature" target="_blank" rel="external">蒲公英 - 超级签名</a></li>
-</ul>
-<p><br></p>
-<ul>
-<li>如有疑问，欢迎在评论区一起讨论！</li>
-<li>如有不正确的地方，欢迎指导！</li>
-</ul>
-<p><br></p>
-<blockquote>
-<p>注：本文首发于 <a href="https://iHTCboy.com">iHTCboy’s blog</a>，如若转载，请注来源<br><br></p>
-</blockquote>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h3 id="1、前言">1、前言</h3><p>关于 iOS 安装 App 的方法，相信熟悉 iOS 的朋友都知道，如果是越狱设备，随便搞。但是，现实中，大部分用户都是小白，不会自己去越狱，安全是一方面。所以，普通情况下，AppStore 一家独大，企业账号可以玩一玩的情况，这也是苹果优秀的地方！ 今天就是想说说，关于新出的玩法~</p>]]>
-    
-    </summary>
-    
-      <category term="AppStore" scheme="https://iHTCboy.com/tags/AppStore/"/>
-    
-      <category term="IPA" scheme="https://iHTCboy.com/tags/IPA/"/>
-    
-      <category term="iOS" scheme="https://iHTCboy.com/tags/iOS/"/>
-    
-      <category term="technology" scheme="https://iHTCboy.com/categories/technology/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[macOS 使用 Sparkle 检查软件自更新]]></title>
-    <link href="https://iHTCboy.com/2019/05/04/2019-05-04_macOS%E4%BD%BF%E7%94%A8Sparkle%E8%BF%9B%E8%A1%8C%E8%BD%AF%E4%BB%B6%E8%87%AA%E6%9B%B4%E6%96%B0/"/>
-    <id>https://iHTCboy.com/2019/05/04/2019-05-04_macOS使用Sparkle进行软件自更新/</id>
-    <published>2019-05-04T06:49:16.000Z</published>
-    <updated>2019-05-29T13:38:41.949Z</updated>
-    <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>其实，本篇文章应该是上一年就打算写的，结果呢，最近才有时间整理。开发 macOS 软件也有一段时间，对于软件更新，之前是自己手动编写增加 API 接口来提示是否有新版本，但一直觉得不智能，界面也不友好，而且下载的是压缩包，需要解压后自动手动替换 App，甚是痛苦。所以，看了很多开源项目，看到了一个 macOS 专用的更新库 <code>Sparkle</code>, 然而现有网上的教程，已经非常陈旧，花了点时间才悟，所以，写一个总结吧。另外，也有其它的更新库，大家需要可以自行了解，以主流库为主，维护更好，这也是项目选型考虑的条件之一，也许是强者更强，好像<code>劣币驱逐良币现象</code>在开源界没有发生过吧~</p>
-<a id="more"></a>
-<h3 id="2、Sparkle">2、Sparkle</h3><blockquote>
-<p>Sparkle的原理是根据提前配置好的xml文件地址，每次启动后解析xml，看看有没有比当前版本新的数据，有的话提示更新。<br>xml文件可以存在任何可以访问xml元数据的服务器，包括 GitHub 仓库。</p>
-</blockquote>
-<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/04/20190414-Sparkle.png" alt="20190414-Sparkle.png"></p>
-<p>2.1 使用 Cocopods 在项目中集成：</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">pod</span> <span class="string">'Sparkle'</span></span><br></pre></td></tr></table></figure>
-<p>也可以通过下载源代码进行集成（<a href="https://github.com/sparkle-project/Sparkle）。" target="_blank" rel="external">https://github.com/sparkle-project/Sparkle）。</a></p>
-<p>2.2 配置 storyboard 更新 action</p>
-<ol>
-<li>打开 Main.storyboard（如果是很旧的项目则为 MainMenu.xib）</li>
-<li>选择 View -&gt; Libraries -&gt; Show Library （快捷键为 <code>shift + command + L</code>）</li>
-<li>在搜索栏中搜索 Object 并将 Object 拖入左侧跟 <code>App Delegate</code> 同级层</li>
-<li>选中刚添加的 Object 对象</li>
-<li>选择 View -&gt; Inspectors -&gt; Show Identity Inspector（快捷键为 <code>option + command + 3</code>）</li>
-<li>修改 Custom Class 为 <code>SUUpdater</code></li>
-<li>如果需要，可以添加一个检查更新的菜单项，设置它的 target 为刚才的 <code>SUUpdater</code> 实例，action 为 <code>checkForUpdates:</code></li>
-</ol>
-<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/04/20190414-AddObjectToMenu.png" alt="20190414-AddObjectToMenu.png"></p>
-<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/04/20190414-SUUpdaterObject.png" alt="20190414-SUUpdaterObject.png"></p>
-<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/04/20190414-AddActionToUpdaterObject.png" alt="20190414-AddActionToUpdaterObject.png"></p>
-<p>2.3 数字签名</p>
-<p><code>Sparkle</code> 能够下载软件并进行替换，所以为了保证安全，确保全程是软件作者行为，给出了3点建议：</p>
-<blockquote>
-<p>由于 Sparkle 正在将可执行代码下载到用户的系统, 因此您必须非常小心安全性。为了让 Sparkle 知道下载的更新没有损坏（修改）, 并且来自您 (而不是恶意攻击者), 我们建议:</p>
-<p>1、通过 HTTPS 提供更新。<br>   除非你遵守 Apple 的应用传输安全要求, 否则你的应用不会在 macos 10.11 或更高版本上 HTTP 请求将被系统拒绝。<br>2、通过 Apple 的开发人员 ID 程序对应用程序进行签名。<br>3、使用 Sparkle 的 EdDSA (ed25519) 签名对已发布的更新存档进行签名。</p>
-</blockquote>
-<p>所以，建议使用 <code>Sparkle</code> 的签名认证机制，保证更新的合法性。 需要注意的是，<code>Sparkle</code>v1.21 之后使用全新的 EdDSA (ed25519) 签名，而之前的旧版本使用 使用DAS SHA-1 数字签名，则是另一种配置方式。</p>
-<h4 id="Sparklev1-21_以上配置："><code>Sparkle</code>v1.21 以上配置：</h4><p>首先，双击运行 <code>Sparkle/bin/generate_keys</code> 命令工具，会自动打开终端应用，显示：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">➜  ~ /Users/HTC/Downloads/Sparkle-<span class="number">1.21</span>.<span class="number">3</span>/bin/generate_keys ; <span class="built_in">exit</span>;</span><br><span class="line">This tool uses macOS Keychain to store the Sparkle private key.</span><br><span class="line">If the Keychain prompts you <span class="keyword">for</span> permission, please allow it.</span><br><span class="line">OK! Read the existing key saved <span class="keyword">in</span> the Keychain.</span><br><span class="line"></span><br><span class="line">In your app<span class="string">'s Info.plist set SUPublicEDKey to:</span><br><span class="line">c6KSLEMfs7YqD5M0FZ8McEUi1x9gGdbXSem2T+lCgjA=</span></span><br></pre></td></tr></table></figure>
-<p><strong>配置 SUPublicEDKey</strong></p>
-<p>注意，这个步骤只要运行一次，然后记录下运行的结果，在 <code>Info.plist</code> 增加一个key-value 键值对，<code>SUPublicEDKey</code> 对应的公钥(base64 编码的字符串)。</p>
-<p>注：这个步骤做了两件事:<br>1、生成一个私钥, 并将其保存在登录钥匙串中。您不需要对其执行任何操作, 但不要失去对 Mac 钥匙串的访问权限。如果您丢失了它, 您可能无法发出任何新的更新!<br>2、打印您的公钥到终端应用程序上显示。</p>
-<p><strong>配置 SUFeedURL</strong></p>
-<p>在 <code>Info.plist</code> 添加 <code>SUFeedURL</code> 属性字段，其值设置为将应用更新的 URL, 例如<a href="https://xxx.com/appcast.xml" target="_blank" rel="external">https://xxx.com/appcast.xml</a></p>
-<p>appcast.xml 内容：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="pi">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">rss</span> <span class="attribute">version</span>=<span class="value">"2.0"</span> <span class="attribute">xmlns:sparkle</span>=<span class="value">"http://www.andymatuschak.org/xml-namespaces/sparkle"</span> <span class="attribute">xmlns:dc</span>=<span class="value">"http://purl.org/dc/elements/1.1/"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">channel</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">title</span>&gt;</span>应用名称<span class="tag">&lt;/<span class="title">title</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">description</span>&gt;</span>Most recent changes with links to updates.<span class="tag">&lt;/<span class="title">description</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">language</span>&gt;</span>en<span class="tag">&lt;/<span class="title">language</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">item</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">title</span>&gt;</span>Version 1.4.14<span class="tag">&lt;/<span class="title">title</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">sparkle:releaseNotesLink</span>&gt;</span></span><br><span class="line">                http://xxx.com/release-note.html</span><br><span class="line">            <span class="tag">&lt;/<span class="title">sparkle:releaseNotesLink</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">pubDate</span>&gt;</span>Wed, 10 Apr 2019 19:58:11 +0000<span class="tag">&lt;/<span class="title">pubDate</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">enclosure</span></span><br><span class="line">                <span class="attribute">url</span>=<span class="value">"https://xxx.com/app.zip"</span></span><br><span class="line">                <span class="attribute">sparkle:shortVersionString</span>=<span class="value">"1.4.14"</span></span><br><span class="line">                <span class="attribute">sparkle:version</span>=<span class="value">"2019.05.04"</span></span><br><span class="line">                <span class="attribute">length</span>=<span class="value">"6605799"</span></span><br><span class="line">                <span class="attribute">type</span>=<span class="value">"application/octet-stream"</span></span><br><span class="line">                <span class="attribute">sparkle:edSignature</span>=<span class="value">"MEYCIQCQaUqxcrhhEABlWxk+1At5QSwty+Li8d6Sr3q6jJF1JgIhAOWGpIkYLwXC</span><br><span class="line">                RFfaA8uz34Dy7CXCczpmSyCOQ5+rfOFL"</span></span><br><span class="line">            /&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">sparkle:minimumSystemVersion</span>&gt;</span>10.11<span class="tag">&lt;/<span class="title">sparkle:minimumSystemVersion</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="title">item</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">channel</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">rss</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p><code>releaseNotesLink</code>: 更新日志的说明网页，最好是html<br><code>url</code>: zip压缩包下载地扯<br><code>length</code>: zip压缩文件大小（字节）<br><code>edSignature</code>: ed签名</p>
-<p><strong>生成签名</strong><br>可以使用<code>generate_appcast</code>工具进行应用强制转换时, 将自动生成签名。也可以手动生成签名。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Sparkle/bin/sign_update path_to_your_update.zip</span><br></pre></td></tr></table></figure>
-<p>示例：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">➜  ~ /Users/HTC/Downloads/Sparkle-<span class="number">1.21</span>.<span class="number">3</span>/bin/sign_update /Users/HTC/Downloads/Sparkle-<span class="number">1.21</span>.<span class="number">3</span>.zip</span><br><span class="line">sparkle:edSignature=<span class="string">"j4Mq6yLPlTb1/lGxGiW6BRsYoWBvPkIKc+ACstG87FJJBtjm5StuC07eT2EU4mRVAB0c9Y7ib36lQI8Zft3rCQ=="</span> length=<span class="string">"17748993"</span></span><br></pre></td></tr></table></figure>
-<p>生成的 <code>edSignature</code> 和 <code>length</code> 填写到上面的 <code>appcast.xml</code></p>
-<p>这样就可以啦，其中 <code>appcast.xml</code> 是需要能通过网络访问，不然无法更新。当然，如果是企业内部使用，部署到内网的服务器就可以。</p>
-<p>还有很多配置，只下载不更新、多语言本地化、增量更新等，这里就不说了，大家如果有特殊需要，可以自己看文档配置啊 <a href="https://sparkle-project.org/documentation/publishing/#publishing-an-update" target="_blank" rel="external">Publishing an update - Sparkle: open source software update framework for macOS</a></p>
-<h4 id="Sparklev1-21_之前旧版本的配置："><code>Sparkle</code>v1.21 之前旧版本的配置：</h4><p>如果是 1.21 之前的  <code>DSA</code> 签名的SDK，现在更新的SDK，已经放到了bin目录的的下目录 <code>old_dsa_scripts</code></p>
-<p><strong>生成数字签名</strong><br>使用 <code>generate_dsa_keys_macos_10.12_only</code> 命令生成 dsa_priv.pem（私钥）和dsa_pub.pem（公钥）两个文件。其中私钥千万不能丢，否则将无法签署升级包。</p>
-<p>然后，把dsa_pub.pam添加到项目中。</p>
-<p><strong>配置公钥</strong><br>在 <code>Info.plist</code> 添加 <code>SUPublicDSAKeyFile</code> 属性字段，其值设置为 <code>dsa_pub.pem</code>  公钥的文件名。</p>
-<p><strong>配置更新信息</strong><br>在 <code>Info.plist</code> 添加 <code>SUFeedURL</code> 属性字段，其值设置为将应用更新的 URL, 例如<code>https://xxx.com/appcast.xml</code>，下文有xml文件内容说明，与上面 EdDSA 有一些区别。</p>
-<p><strong>更新版本签名</strong><br>把新版本生成的程序打包成zip。因为这个是升级包，因此我们要对升级包进行数字签名。方法很简单：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Sparkle/bin/old_dsa_scripts/sign_update path_to_your_update.zip ~/.ssh/dsa_priv.pem</span><br></pre></td></tr></table></figure>
-<p>记录下返回的字符串，这就是升级包的签名。使用填下到 <code>appcast.xml</code> 中。</p>
-<p>appcast.xml 内容：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="pi">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">rss</span> <span class="attribute">version</span>=<span class="value">"2.0"</span> <span class="attribute">xmlns:sparkle</span>=<span class="value">"http://www.andymatuschak.org/xml-namespaces/sparkle"</span> <span class="attribute">xmlns:dc</span>=<span class="value">"http://purl.org/dc/elements/1.1/"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">channel</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">title</span>&gt;</span>应用名称<span class="tag">&lt;/<span class="title">title</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">description</span>&gt;</span>Most recent changes with links to updates.<span class="tag">&lt;/<span class="title">description</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">language</span>&gt;</span>en<span class="tag">&lt;/<span class="title">language</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">item</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">title</span>&gt;</span>Version 1.4.14<span class="tag">&lt;/<span class="title">title</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">sparkle:releaseNotesLink</span>&gt;</span></span><br><span class="line">                http://xxx.com/release-note.html</span><br><span class="line">            <span class="tag">&lt;/<span class="title">sparkle:releaseNotesLink</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">pubDate</span>&gt;</span>Wed, 10 Apr 2019 19:58:11 +0000<span class="tag">&lt;/<span class="title">pubDate</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">enclosure</span></span><br><span class="line">                <span class="attribute">url</span>=<span class="value">"https://xxx.com/app.zip"</span></span><br><span class="line">                <span class="attribute">sparkle:shortVersionString</span>=<span class="value">"1.4.14"</span></span><br><span class="line">                <span class="attribute">sparkle:version</span>=<span class="value">"2019.05.04"</span></span><br><span class="line">                <span class="attribute">length</span>=<span class="value">"6605799"</span></span><br><span class="line">                <span class="attribute">type</span>=<span class="value">"application/octet-stream"</span></span><br><span class="line">                <span class="attribute">sparkle:dsaSignature</span>=<span class="value">"MEYCIQCQaUqxcrhhEABlWxk+1At5QSwty+Li8d6Sr3q6jJF1JgIhAOWGpIkYLwXC</span><br><span class="line">                RFfaA8uz34Dy7CXCczpmSyCOQ5+rfOFL"</span></span><br><span class="line">            /&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">sparkle:minimumSystemVersion</span>&gt;</span>10.11<span class="tag">&lt;/<span class="title">sparkle:minimumSystemVersion</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="title">item</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">channel</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">rss</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p><code>releaseNotesLink</code>: 更新日志的说明网页，最好是html<br><code>url</code>: zip压缩包下载地扯<br><code>length</code>: zip压缩文件大小（字节）<br><code>dsaSignature</code>: 升级包的数据签名</p>
-<h3 id="一些问题&amp;坑点">一些问题&amp;坑点</h3><h4 id="web服务器">web服务器</h4><p>上面说明的 <code>http://xxx.comappcast.xml</code> 更新信息文件，还是 <code>http://xxx.com/release-note.html</code> 更新说明页面，还是应用的zip文件下载链接，都是需要通过服务器进行访问。</p>
-<p>这里比较简单的方法，就是上传到 <code>GitHub</code> 上，就以访问到文件或链接。</p>
-<p>如果是本地调试，也可以利用 macOS 自带的 <code>python</code> 创建一个本地的文件服务器：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">python -m SimpleHTTPServer</span><br><span class="line">或者 </span><br><span class="line">python -m http.server</span><br></pre></td></tr></table></figure>
-<p>示例：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">➜  ~ python -m SimpleHTTPServer</span><br><span class="line">Serving HTTP on <span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span> port <span class="number">8000</span> ...</span><br></pre></td></tr></table></figure>
-<p>然后就可以通过 <code>http://0.0.0.0:8000</code> 就能访问电脑的所有文档和文件目录。</p>
-<h4 id="HTTPS">HTTPS</h4><p>macOS 10.11 起苹果默认开启 App Transport Security ，也就是应用只能访问 HTTPS 的链接，HTTP 的默认不能访问。</p>
-<p>建议当然是使用https，如果没有能力部署，也可以在应用的 <code>Info.plist</code> 配置允许访问http:</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">key</span>&gt;</span>NSAppTransportSecurity<span class="tag">&lt;/<span class="title">key</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">dict</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">key</span>&gt;</span>NSAllowsArbitraryLoads<span class="tag">&lt;/<span class="title">key</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">true</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">dict</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h4 id="版本号">版本号</h4><p>注意，版本号是 <code>shortVersionString</code>；不是 <code>version</code> 字段。但是这2个字段都配置了的话，2个都需要大于旧应用的对应版本号，否则，<code>Sparkle</code> 认为没有新版本。</p>
-<h4 id="AppStore版本">AppStore版本</h4><p>如果是上架 AppStore，则不能使用 <code>Sparkle</code> ，因为苹果审核禁止检查更新和自动更新，需要更新，要求用户使用 AppStore。</p>
-<h4 id="编译报错">编译报错</h4><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">/Users/</span>HTC<span class="regexp">/Desktop/</span>SparkleDemo-macOS<span class="regexp">/Pods/</span>Target Support Files<span class="regexp">/Pods-macOSDemo/</span>Pods-macOSDemo-frameworks.<span class="string">sh:</span> line <span class="number">104</span>: <span class="string">EXPANDED_CODE_SIGN_IDENTITY:</span> unbound variable</span><br><span class="line">Command PhaseScriptExecution failed with a nonzero exit code</span><br></pre></td></tr></table></figure>
-<p>在Xcode菜单栏选择 <code>File</code> -&gt; <code>Workspace Setting</code> 就会弹出一个界面，看出 Xcode10 是默认选中的最新的 <code>New Build System(Default)</code>，在这个编译系统的环境下，编译脚本一直会报错。把 build system 切换到 <code>Legacy Build System</code>，使用旧的编译系统就正常运行。怀疑是新的编译系统，流程有变动，这个问题，后续在深研吧。</p>
-<h3 id="总结">总结</h3><p>其实，官方文档已经给出了很好的教程。这里为什么还写教程的原因:</p>
-<p>其一是，官方的文档比较旧，针对 Xcode10，一些操作已经发生了比较大的变化，对于新入门的苹果开发者，可以比较懵。</p>
-<p>其二，对于英文或者想快速的入门使用的同学，提供一个最简洁的教程，节省大家的时间，对大家都好的事件，应该做！</p>
-<p>其三，对于刚刚入门 macOS 软件开发的同学，可能还不知道有这样优秀的第三方更新软件库，所以，心若所诚，力行心从！</p>
-<h3 id="参考">参考</h3><ul>
-<li><a href="https://github.com/sparkle-project/Sparkle" target="_blank" rel="external">sparkle-project/Sparkle: A software update framework for macOS</a></li>
-<li><a href="https://github.com/macmade/GitHubUpdates" target="_blank" rel="external">macmade/GitHubUpdates: Cocoa framework to install application updates from GitHub releases.</a></li>
-<li><a href="http://www.cocoachina.com/mac/20100920/2111.html" target="_blank" rel="external">为你的Cocoa应用程序加入更新支持：Sparkle 简介 - CocoaChina</a></li>
-<li><a href="http://cocoa.venj.me/blog/auto-update-apps-with-sparkle/" target="_blank" rel="external">用Sparkle为Cocoa程序增加自动升级 - Cocoa学习</a></li>
-<li><a href="https://sparkle-project.org/documentation/" target="_blank" rel="external">Documentation - Sparkle: open source software update framework for macOS</a></li>
-<li><a href="https://sparkle-project.org/documentation/publishing/#publishing-an-update" target="_blank" rel="external">Publishing an update - Sparkle: open source software update framework for macOS</a></li>
-<li><a href="https://sparkle-project.org/documentation/upgrading/" target="_blank" rel="external">Upgrading from previous versions of Sparkle - Sparkle: open source software update framework for macOS</a></li>
-<li><a href="https://blog.csdn.net/CSDNxck/article/details/80006835" target="_blank" rel="external">两款Mac软件自动升级开源开发框架 - CSDNxck的博客 - CSDN博客</a></li>
-<li><a href="https://meniny.cn/posts/sparkle_1_setup/" target="_blank" rel="external">Sparkle 1: Setup | Elias’s Cave</a></li>
-<li><a href="http://blog.martianz.cn/article/2012-05-26-use-sparkle-to-set-up-check-update-system" target="_blank" rel="external">MartianZ! - 使用Sparkle为OS X App添加自动更新功能</a></li>
-<li><a href="https://blog.csdn.net/weixin_34174322/article/details/88485224" target="_blank" rel="external">使用 最新版本Sparkle 进行自更新 - weixin_34174322的博客 - CSDN博客</a></li>
-<li><a href="https://lapcatsoftware.com/articles/app-translocation.html" target="_blank" rel="external">App Translocation</a></li>
-<li><a href="https://github.com/potionfactory/LetsMove/" target="_blank" rel="external">potionfactory/LetsMove: A sample that shows how to move a running Mac application to the /Applications directory</a></li>
-</ul>
-<p><br></p>
-<ul>
-<li>如有疑问，欢迎在评论区一起讨论！</li>
-<li>如有不正确的地方，欢迎指导！</li>
-</ul>
-<p><br></p>
-<blockquote>
-<p>注：本文首发于 <a href="https://iHTCboy.com">iHTCboy’s blog</a>，如若转载，请注来源</p>
-</blockquote>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h3 id="1、前言">1、前言</h3><p>其实，本篇文章应该是上一年就打算写的，结果呢，最近才有时间整理。开发 macOS 软件也有一段时间，对于软件更新，之前是自己手动编写增加 API 接口来提示是否有新版本，但一直觉得不智能，界面也不友好，而且下载的是压缩包，需要解压后自动手动替换 App，甚是痛苦。所以，看了很多开源项目，看到了一个 macOS 专用的更新库 <code>Sparkle</code>, 然而现有网上的教程，已经非常陈旧，花了点时间才悟，所以，写一个总结吧。另外，也有其它的更新库，大家需要可以自行了解，以主流库为主，维护更好，这也是项目选型考虑的条件之一，也许是强者更强，好像<code>劣币驱逐良币现象</code>在开源界没有发生过吧~</p>]]>
-    
-    </summary>
-    
-      <category term="GitHubUpdates" scheme="https://iHTCboy.com/tags/GitHubUpdates/"/>
-    
-      <category term="Sparkle" scheme="https://iHTCboy.com/tags/Sparkle/"/>
-    
-      <category term="macOS" scheme="https://iHTCboy.com/tags/macOS/"/>
-    
-      <category term="软件检查更新" scheme="https://iHTCboy.com/tags/%E8%BD%AF%E4%BB%B6%E6%A3%80%E6%9F%A5%E6%9B%B4%E6%96%B0/"/>
-    
-      <category term="technology" scheme="https://iHTCboy.com/categories/technology/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[django 定时任务 django-crontab 的使用]]></title>
-    <link href="https://iHTCboy.com/2019/04/14/2019-04-14_django%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1django-crontab%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
-    <id>https://iHTCboy.com/2019/04/14/2019-04-14_django定时任务django-crontab的使用/</id>
-    <published>2019-04-14T11:19:16.000Z</published>
-    <updated>2019-05-06T14:15:54.228Z</updated>
-    <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>在做 django 开发需求时，多多少少都会遇到需要定时任务的功能，比如定时执行任务，检查订单之类的。可能是一段时间，比如每隔 10分钟执行一次，也可能是定点时间，比如 14:00 执行，也可能是长时间，比如每周几，每个月的哪一天等。查看了一下相关资料， django 定时任务 <code>django-crontab</code> 库比较多教程和资料，虽然 star 数才五百，但是 API 接口比较简单，接入也很方便，功能也很全面，当然，也存在一此无法解决的问题，使用时需要注意的。</p>
-<a id="more"></a>
-<h3 id="2、使用教程">2、使用教程</h3><p>1.安装:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install django-crontab</span><br></pre></td></tr></table></figure>
-<p>2.添加配置到 settings.py <code>INSTALLED_APPS</code> 中</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">INSTALLED_APPS = (</span><br><span class="line">    <span class="string">'django_crontab'</span>,</span><br><span class="line">    ...</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-<p>3.编写定时函数:</p>
-<blockquote>
-<p>定时任务可以分成两种，一种是执行自定义的 <code>mange.py</code> 的命令，另一种是执行自定义函数。</p>
-</blockquote>
-<p>在django的app中新建一个myapp/cron.py文件，把需要定时执行的代码放进去</p>
-<p>示例：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">my_scheduled_job</span><span class="params">()</span>:</span></span><br><span class="line">  <span class="keyword">pass</span></span><br></pre></td></tr></table></figure></p>
-<p>4.在 settings.py 中增加<code>CRONJOBS</code>配置</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">CRONJOBS = [</span><br><span class="line">    (<span class="string">'*/5 * * * *'</span>, <span class="string">'myapp.cron.my_scheduled_job'</span>)</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
-<p>也可以定义一些关键字参数，有2种格式：</p>
-<p>格式1：</p>
-<ul>
-<li>要求：cron计时通常格式（有关更多示例，请参阅 <a href="http://en.wikipedia.org/wiki/Cron#Format" target="_blank" rel="external">Wikipedia</a> 和 <a href="https://crontab.guru/examples.html" target="_blank" rel="external">crontab.guru</a>）</li>
-<li>要求：python模块路径下待执行定时任务</li>
-<li>可选：特定于定时任务的后缀（例如，将 <code>out/err</code> 重定向到文件，默认值为’’）</li>
-</ul>
-<p>示例：<br><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">CRONJOBS = [</span><br><span class="line">    ('<span class="keyword">*</span>/1 <span class="keyword">*</span> <span class="keyword">*</span> <span class="keyword">*</span> <span class="keyword">*</span>', 'appname.test_crontab.test','&gt;&gt;/home/python/test_crontab.log')</span><br><span class="line"></span><br><span class="line">]</span><br></pre></td></tr></table></figure></p>
-<p>注意： <code>&gt;&gt;</code> 表示追加写入，<code>&gt;</code> 表示覆盖写入。</p>
-<p>格式2：</p>
-<ul>
-<li>要求：cron计时通常格式</li>
-<li>要求：python模块路径下待执行定时任务</li>
-<li>可选：方法的位置参数列表（默认值：[]）</li>
-<li>可选：方法的关键字参数的dict（默认值：{}）</li>
-<li>可选：特定于定时任务的后缀（例如，将 <code>out/err</code> 重定向到文件，默认值为’’）</li>
-</ul>
-<p>示例：<br><figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="name">CRONJOBS</span> = [</span><br><span class="line">    (<span class="string">'*/5 * * * *'</span>, <span class="string">'myapp.cron.other_scheduled_job'</span>, [<span class="string">'arg1'</span>, <span class="string">'arg2'</span>], &#123;<span class="string">'verbose'</span>: <span class="number">0</span>&#125;),</span><br><span class="line">    (<span class="string">'0   4 * * *'</span>, <span class="string">'django.core.management.call_command'</span>, [<span class="string">'clearsessions'</span>]),</span><br><span class="line">    </span><br><span class="line">]</span><br></pre></td></tr></table></figure></p>
-<p>对于熟悉 Linux 中定时任务<code>crontab</code> 的同学可能对上面第一个参数的语法很亲切。上面表示每隔1分钟执行一次代码。</p>
-<p>Linux 中的定时任务<code>crontab</code>的语法如下:</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*  *  *  *  * command&#10;&#20998;&#38047;(0-59) &#23567;&#26102;(0-23) &#27599;&#20010;&#26376;&#30340;&#21738;&#19968;&#22825;(1-31) &#26376;&#20221;(1-12) &#21608;&#20960;(0-6) shell&#33050;&#26412;&#25110;&#32773;&#21629;&#20196;</span><br></pre></td></tr></table></figure>
-<p>有几个特殊的符号：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">* 代表所有的取值范围的数字</span><br><span class="line">/ 代表每的意思，*/<span class="number">5</span>就是每<span class="number">5</span>个单位</span><br><span class="line">- 代表从某个数字到某个数字</span><br><span class="line">, 分开几个离散的数字</span><br></pre></td></tr></table></figure>
-<p>示例:</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#27599;&#20004;&#20010;&#23567;&#26102;    0 */2 * * *&#10;&#26202;&#19978;11&#28857;&#21040;&#26089;&#19978;8&#28857;&#20043;&#38388;&#27599;&#20004;&#20010;&#23567;&#26102;&#65292;&#26089;&#19978;8&#28857;    0 23-7,8 * * *&#10;&#27599;&#20010;&#26376;&#30340;4&#21495;&#21644;&#27599;&#20010;&#31036;&#25308;&#30340;&#31036;&#25308;&#19968;&#21040;&#31036;&#25308;&#19977;&#30340;&#26089;&#19978;11&#28857;    0 11 4 * 1-3&#10;1&#26376;1&#26085;&#26089;&#19978;4&#28857;    0 4 1 1 *</span><br></pre></td></tr></table></figure>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0 6 * * * commands &#62;&#62; /tmp/test.log # &#27599;&#22825;&#26089;&#19978;6&#28857;&#25191;&#34892;, &#24182;&#23558;&#20449;&#24687;&#36861;&#21152;&#21040;test.log&#20013;&#10;0 */2 * * * commands # &#27599;&#38548;2&#23567;&#26102;&#25191;&#34892;&#19968;&#27425;</span><br></pre></td></tr></table></figure>
-<p>有兴趣的小伙伴可以深入研究下 Linux 的<code>crontab</code>定时任务。如果不了解和不熟悉可以想看： <a href="https://www.jianshu.com/p/c6a729c81a24" target="_blank" rel="external">cron语法格式学习</a></p>
-<p>5.添加并启动定时任务</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#添加并启动定时任务</span></span><br><span class="line">python manage.py crontab add</span><br></pre></td></tr></table></figure>
-<p>其它命令：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#显示当前的定时任务</span></span><br><span class="line">python manage.py crontab show</span><br><span class="line"></span><br><span class="line"><span class="comment">#删除所有定时任务</span></span><br><span class="line">python manage.py crontab remove</span><br></pre></td></tr></table></figure>
-<h3 id="一些问题">一些问题</h3><p>如果配置成这样：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))&#10;&#10;CRONJOBS = [&#10;(&#39;0 7 * * 1-5&#39;, &#39;api.cron.email_to_late_docs&#39;, &#39;&#62;&#62; &#123;&#125;&#39;.format(BASE_DIR + &#39;/logs/log_&#123;:%d_%m_%Y&#125;.log&#39;.format(time.now()))),&#10;(&#39;0 7 * * 1-5&#39;, &#39;api.cron.email_ten_days_before&#39;, &#39;&#62;&#62; &#123;&#125;&#39;.format(BASE_DIR + &#39;logs/log_&#123;:%d_%m_%Y&#125;.log&#39;.format(time.now())))&#10;]</span><br></pre></td></tr></table></figure>
-<p>上述代码的目的是，希望对任务的输出和错误日志，进行 <code>log_ddmmYY</code> 格式进行文件每天分开保存。</p>
-<p><strong>但是这个任务，在第二天时，就不会在执行啦！！</strong></p>
-<p>因为，<code>CRONJOBS</code> 生成任务时，会生成对应的哈希值（hashes），标识每个任务。所以，当文件名变更时，<code>CRONJOBS</code> 中的值每天都在变化，导致不同的定时任务哈希值（hashes）。</p>
-<p>针对这种情况，解决方法是，日志文件名称固定，然后创建一个任务，用来每天把日志文件重命名（move）成想要的格式名称，这样就可以啦！</p>
-<h3 id="总结">总结</h3><p>通过这个需求，可以看到很多知识点其实是串联起来的，从<code>python</code>到<code>django</code>到<code>Linux</code>的<code>crontab</code>，所以，学习无止境，知识学习只会越来越多，如果你提前掌握了某些知识，那么学习新（旧）知识的成本就会降低很多，或者理解成本，比如你学习了 <code>Linux</code>， 了解过 <code>cron</code> ，那么对于学习这个 <code>django</code> 的定时任务会轻松很多！永远不要认为有些知识你永远用不上，所以现在就不学，可能现在的永远距离已经很短啦！加油~</p>
-<h3 id="参考">参考</h3><ul>
-<li><a href="https://github.com/kraiz/django-crontab" target="_blank" rel="external">kraiz/django-crontab: dead simple crontab powered job scheduling for django.</a></li>
-<li><a href="https://segmentfault.com/a/1190000016515891" target="_blank" rel="external">django开发-定时任务的使用 - wyzane - SegmentFault 思否</a></li>
-<li><a href="http://www.voidcn.com/article/p-tgyycvyp-bqm.html" target="_blank" rel="external">django-crontab 定时执行任务方法 - 程序园</a></li>
-<li><a href="https://www.leipengkai.com/article/8/" target="_blank" rel="external">django-crontab实现Django定时任务</a></li>
-<li><a href="https://www.jianshu.com/p/27f003149090" target="_blank" rel="external">django使用django-crontab实现定时任务 - 简书</a></li>
-<li><a href="https://cloud.tencent.com/developer/article/1121891" target="_blank" rel="external">使用django-crontab实现定时任务 - 腾讯云</a></li>
-<li><a href="https://www.jianshu.com/p/c6a729c81a24" target="_blank" rel="external">cron语法格式学习 - 简书</a></li>
-<li><a href="https://github.com/kraiz/django-crontab/issues/76" target="_blank" rel="external">django-crontab is missing job hash after one day · Issue #76 · kraiz/django-crontab</a></li>
-<li><a href="http://en.wikipedia.org/wiki/Cron#Format" target="_blank" rel="external">Cron Format - Wikipedia</a></li>
-<li><a href="https://crontab.guru/examples.html" target="_blank" rel="external">crontab.guru</a></li>
-</ul>
-<p><br></p>
-<ul>
-<li>如有疑问，欢迎在评论区一起讨论！</li>
-<li>如有不正确的地方，欢迎指导！</li>
-</ul>
-<p><br></p>
-<blockquote>
-<p>注：本文首发于 <a href="https://iHTCboy.com">iHTCboy’s blog</a>，如若转载，请注来源</p>
-</blockquote>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h3 id="1、前言">1、前言</h3><p>在做 django 开发需求时，多多少少都会遇到需要定时任务的功能，比如定时执行任务，检查订单之类的。可能是一段时间，比如每隔 10分钟执行一次，也可能是定点时间，比如 14:00 执行，也可能是长时间，比如每周几，每个月的哪一天等。查看了一下相关资料， django 定时任务 <code>django-crontab</code> 库比较多教程和资料，虽然 star 数才五百，但是 API 接口比较简单，接入也很方便，功能也很全面，当然，也存在一此无法解决的问题，使用时需要注意的。</p>]]>
-    
-    </summary>
-    
-      <category term="django" scheme="https://iHTCboy.com/tags/django/"/>
-    
-      <category term="django-crontab" scheme="https://iHTCboy.com/tags/django-crontab/"/>
-    
-      <category term="python" scheme="https://iHTCboy.com/tags/python/"/>
-    
-      <category term="technology" scheme="https://iHTCboy.com/categories/technology/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[谈一谈 IPA 上传到 App Store Connect 的几种方法]]></title>
-    <link href="https://iHTCboy.com/2019/04/07/2019-04-07_%E4%B8%8A%E4%BC%A0IPA%E5%88%B0AppStoreConnet%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/"/>
-    <id>https://iHTCboy.com/2019/04/07/2019-04-07_上传IPA到AppStoreConnet的几种方法/</id>
-    <published>2019-04-07T07:49:16.000Z</published>
-    <updated>2019-05-05T14:33:54.877Z</updated>
-    <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>关于上传 ipa 包到 App Store Connect 的方法，相信有 iOS 开发经验的同学，一定知道完成 App 开发后，一般都是用 Xcode 的 Archive 打包后上传到苹果后台。所以，这个就是今天要写的水文？显示不是吧！答案肯定不是啊，本文将给大家一个相对全面介绍。苹果开发的知识点非常多，官方文档也很多，能够学好学完，不一定人人能够做到。在我的理解，iOS进阶，不是说你必须掌握很高深的技术，而是了解全面的知识，能够做出不一样的产品、体验，这个才是优秀的开发者！</p>
-<a id="more"></a>
-<h3 id="2、Xcode">2、Xcode</h3><p>利用 Xcode 的 Archive 生成 app 包后，选择 Distribute App ，将 App 通过 Xcode 上传到  App Store Connect 后台，这个就不多说的，iOS 开发都需要经历一下。</p>
-<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/04/20190407-Xcode-Distribute-App.png" alt="20190407-Xcode-Distribute-App.png"></p>
-<h3 id="3、Application_Loader">3、Application Loader</h3><p>当然，Xcode 这种方式，是需要有源代码情况下，才能上传。所以，就会有没有源代码的情况，怎么上传的情况啦！</p>
-<p>Application Loader 就是这样一种方式：</p>
-<blockquote>
-<p>Application Loader 是一款 Apple 工具能够帮助您将 App 的二进制文件上传至 App Store。</p>
-<p>Application Loader 上传速度快、连接稳定并且具备早期验证警告功能。</p>
-</blockquote>
-<p>登陆界面：</p>
-<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/04/20190407-Application-Loader-Login.png" alt="20190407-Application-Loader-Login.png"></p>
-<p>主界面：</p>
-<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/04/20190407-Application-Loader-Upload.png" alt="20190407-Application-Loader-Upload.png"></p>
-<p>其实，如果了解 Xcode 历史的同学，会知道现在的 Application Loader App 的功能已经被苹果弱化了，以前还能够批量创建提交内购品项等，现在新版本已经去掉了。另外，以前在苹果开发者官网，有单独的页面，可以下载独立版本的 Application Loader 软件，现在也已经去掉了。</p>
-<p>可能的原因，在我看来有几点。第1点是，单独维护这样一个软件，需要人力，因为，如果不依赖于 Xcode，在一台电脑只安装了 Application Loader，那个肯定需要安装 <code>Command Line Tools</code> 这个命令行工具，如果是安装 Xcode 默认也带上，如果更新了 Xcode 版，也会跟随升级，所以，维护 Application Loader 软件，不只是单独的一个应用入口，当然，也是因为这个 Application Loader 做了一些早期验证警告：</p>
-<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/04/20190407-Application-Loader-Error.png" alt="20190407-Xcode-Distribute-App.png"></p>
-<p>上传 ipa 包时，工具会检查一些要求和内容格式等，如果不符合，就会报错，所以，这些初步的检查报错，也是 Application Loader 需要维护的。</p>
-<p>第2点，Application Loader 需要的人并不多，站在开发者环境，大多数开发者负责上传 ipa 包，另外，批量上传内购品项，一定很多人不知道，所以，苹果也去掉了。开发者后台也去掉了，所以，Application Loader 现在是集成在 Xcode 中，说不定，那天就直接去掉。</p>
-<p>第3点，越来越多的声音，希望苹果能通过 App Store Connect 后台能直接上传 ipa 包、批量创建内购品项等功能。但根据我观察这几年的 WWDC，苹果对 App Store Connect 后台进行了比较大的改变，2018年就是对 App Store Connect 和 Apple Developer 后台，2个账号体系合并，主线上，还是整个系统性上，对于功能和UI界面上，不知道有没有相关计划。我的猜测，还是有希望的。因为近年来，跨平台开发， React Native/ Weex / Flutter，其实，可以不需要依赖 Xcode、macOS 进行开发，打包上传 ipa 却需要一台 macOS 和 Xcode，有一点不可理解？（当然，也不排除苹果希望大家因此，能多卖出几台 Mac 电脑，也许我的猜测是错的吧，但愿~）</p>
-<p>具体关于 Application Loader 使用方法，大家可以看看官方使用文档，已经非常详细，而且这几年，苹果很多文档都已经有翻译中文版本啦！Application Loader 介绍（中文）：<a href="https://help.apple.com/itc/apploader/" target="_blank" rel="external">https://help.apple.com/itc/apploader/</a></p>
-<h3 id="4、altool">4、altool</h3><blockquote>
-<p>您可以使用 Application Loader 的命令行工具 altool，验证 App 二进制文件并将其上传至 App Store。</p>
-</blockquote>
-<p>所以，Application Loader 应用界面下，也是基于 altool 命令来处理 ipa 文件。明白了这点，对于命令行就没有什么问题啦。</p>
-<blockquote>
-<p>若要在上传之前验证构建版本或将有效构建版本自动上传至 App Store，您可在您的持续集成系统中包含 altool。altool 位于以下文件夹中：<br><code>Application Loader.app/Contents/Frameworks/ITunesSoftwareService.framework/Versions/A/Support/</code></p>
-</blockquote>
-<p>对于这点，如果有做过自动化打包、上传发布或 shell 脚本命令的同学，应该就知道，我们很多时候，希望自动上传，而不是人工操作UI，一步一傻瓜的操作，这不是程序员的工作方式！所以，用命令行的目的就在这里。需要说明一下，刚才也提到 Application Loader 是有早期验证警告功能，也就是说，可以检查这个 ipa 包的内容或格式，是不是符合苹果的规定和要求。</p>
-<p>所以，若要运行 altool，请在命令行指定以下一项操作，可以是检查（<code>--validate-app</code>），或者上传（<code>--upload-app</code>）操作：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ altool --validate-app -f file -u username [-p password] [--output-format xml]&#10;$ altool --upload-app -f file -u username [-p password] [--output-format xml]</span><br></pre></td></tr></table></figure>
-<p>命令参数说明：</p>
-<table>
-<thead>
-<tr>
-<th>参数命令</th>
-<th>详细说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>–validate-app</td>
-<td>您要验证指定的 App。</td>
-</tr>
-<tr>
-<td>–upload-app</td>
-<td>您要上传指定的 App。</td>
-</tr>
-<tr>
-<td>-f file</td>
-<td>正在验证或上传的 App 的路径和文件名。</td>
-</tr>
-<tr>
-<td>-u username</td>
-<td>您的用户名。</td>
-</tr>
-<tr>
-<td>-p password</td>
-<td>您的用户密码。</td>
-</tr>
-<tr>
-<td>–output-format [xml / normal]</td>
-<td>您想让 Application Loader 以结构化的 XML 格式还是非结构化的文本格式返回输出信息。默认情况下，Application Loader 以文本格式返回输出信息。</td>
-</tr>
-</tbody>
-</table>
-<h3 id="5、Transporter">5、Transporter</h3><p>也许，对于一般的开发者来说，<code>altool</code> 已经能满足基本的上传 ipa 文件的需求。但是，正好前面说的，如果你需要进行批量创建内购品项，还有其它操作，可能大多数开发者不知道，苹果除了 iOS，还有非常多的服务， iTunes Connect 帐户（图书发行商或音乐提供商）、 iTunes Store、Apple Books，尽管我们中国地区有些服务或者非常少用。</p>
-<p>所以，苹果提供 <code>Transporter</code> 来处理大量和差异化数据的操作的工具（可以在 macOS、Windows 和 Linux 操作系统上安装和运行 Transporter。）：</p>
-<blockquote>
-<p>Transporter 是 Apple 基于 Java 的命令行工具，用于进行大量目录交付。您可以使用 Transporter 将预生成的内容以 Store 数据包的形式交付至 iTunes Store、Apple Books 和 App Store。</p>
-<p>不论您使用 iTunes Connect 帐户（图书发行商或音乐提供商）、App Store Connect 帐户（App 开发者）或是编码工作室帐户来交付图书、视频、音乐或 App 内容，您都可以使用 Transporter 以确保您的元数据和素材（例如音频、视频、图书和 App 文件）适当地交付至 iTunes Store、Apple Books 或 App Store，并根据 Apple 的规范验证 Store 数据包。</p>
-</blockquote>
-<p>这里，只会介绍用 <code>Transporter</code> 命令来上传 ipa 文件，更多的功能和说明，大家可以查看官方文档（中文）：<a href="https://help.apple.com/itc/transporteruserguide/" target="_blank" rel="external">https://help.apple.com/itc/transporteruserguide/</a></p>
-<p><strong>注意：</strong> 下面命令中的 <code>iTMSTransporter</code> 是一个变量名，<a href="https://help.apple.com/itc/transporteruserguide/#/apdAbeb95d60" target="_blank" rel="external">【重要事项】</a> 作为一名 App 开发者，您可以在已安装 Xcode 或 Application Loader 的情况下使用 Transporter，或者您也可以手动下载 Transporter。有关如何为 App 开发者安装 Transporter 的信息，<a href="https://help.apple.com/itc/transporteruserguide/#/apdAbeb95d60" target="_blank" rel="external">请参见 App 开发者的安装说明</a>。</p>
-<p>因为我们默认都安装了 Xcode，所以 <code>Transporter</code> 命令，我们引用 Xcode 中的 Application Loader 里的 <code>iTMSTransporter</code>, 在 .bash_profile 添加了一个别名，这样可以在任何目录路径调用 <code>iTMSTransporter</code> 命令:</p>
-<figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alias</span> iTMSTransporter='`xcode-<span class="keyword">select</span> <span class="comment">--print-path`/../Applications/Application\ Loader.app/Contents/MacOS/itms/bin/iTMSTransporter'</span></span><br></pre></td></tr></table></figure>
-<p>注： </p>
-<ul>
-<li>1、其中 <code>xcode-select --print-path</code>： print the path of the active developer directory（打印当前使用的Xcode版本软件的开发人员目录的路径），然后在当前使用的 Xcode 版本对应的 Application Loader 下的 <code>iTMSTransporter</code>。</li>
-<li>2、当然，也可能通过设置全局环境变量来直接使用命令，添加 TRANSPORTER_HOME 环境变量。要添加 TRANSPORTER_HOME 环境变量，请在您的 .bash_profile 中添加以下行：export TRANSPORTER_HOME=<file path="" to="" transporter="">。例如，如果您安装了 Xcode，则该行应如下所示：</file></li>
-</ul>
-<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export TRANSPORTER_HOME=`xcode-select --<span class="keyword">print</span>-path`<span class="regexp">/../</span>Applications<span class="regexp">/Application\ Loader.app/</span>Contents<span class="regexp">/MacOS/i</span>tms<span class="regexp">/bin</span></span><br></pre></td></tr></table></figure>
-<p>其中，我们除了刚才说的检查和上传模式外，可能会用于这个命令的几种模式，</p>
-<ul>
-<li>Lookup Metadata 模式</li>
-</ul>
-<blockquote>
-<p>检索您之前上传的某个 App 当前的元数据。如果您之前上传的是 .itmsp 数据包且 Apple 在您初次上传后修改了元数据，您需要先检索修改后的元数据，再重新发送元数据更新的数据包。</p>
-</blockquote>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iTMSTransporter -m lookupMetadata -u [user] -p [password] -apple_id(-apple_ids) -destination [output_path]</span><br></pre></td></tr></table></figure>
-<ul>
-<li>Provider 模式</li>
-</ul>
-<blockquote>
-<p>确定您有权限为哪些帐户交付内容。</p>
-</blockquote>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">iTMSTransporter</span> <span class="tag">-m</span> <span class="tag">provider</span> <span class="tag">-u</span> <span class="attr_selector">[user]</span> <span class="tag">-p</span> <span class="attr_selector">[password]</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>Verify 模式</li>
-</ul>
-<blockquote>
-<p>验证您的 .itmsp 数据包，并在交付前确保元数据和素材符合技术要求，以保证上传数据包前解决任何潜在的问题。</p>
-</blockquote>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">iTMSTransporter</span> <span class="tag">-m</span> <span class="tag">verify</span> <span class="tag">-u</span> <span class="attr_selector">[user]</span> <span class="tag">-p</span> <span class="attr_selector">[password]</span> <span class="tag">-f</span> <span class="attr_selector">[itmsp_path]</span> <span class="attr_selector">[-vp &lt;text | json&gt;]</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>Upload 模式</li>
-</ul>
-<blockquote>
-<p>检查您的素材和 .itmsp 数据包，验证它们是否准备就绪以供交付，然后向 App Store 上传内容和元数据。</p>
-</blockquote>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">iTMSTransporter</span> <span class="tag">-m</span> <span class="tag">upload</span> <span class="tag">-u</span> <span class="attr_selector">[user]</span> <span class="tag">-p</span> <span class="attr_selector">[password]</span> <span class="tag">-f</span> <span class="attr_selector">[itmsp_path]</span></span><br></pre></td></tr></table></figure>
-<p>关于这些模式的参数，苹果文档有非常详细的说明，虽然需要花一点的脑子去理解（文档真的很~），好了。下面简单说明一下，上传命令怎么使用吧</p>
-<ul>
-<li>上传 ipa 示例：</li>
-</ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iTMSTransporter -m upload -u xxx@xxx.com -p xxx -f /Users/HTC/Desktop/Upload.itmsp</span><br></pre></td></tr></table></figure>
-<p><code>xxx@xxx.com</code> ：App Store Connect 账号<br><code>xxx</code> ：App Store Connect 账号的密码<br><code>/Users/HTC/Desktop/Upload.itmsp</code> ：这个一个目录，<code>Upload.itmsp</code> 是一个文件夹名字，不是文件，里面包含2个文件，一个就是要上传的 ipa 文件，另一个是一个 xml ，描述这个 ipa 文件的信息。</p>
-<p>ipa_metadata.xml：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="pi">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">package</span> <span class="attribute">version</span>=<span class="value">"software5.10"</span> <span class="attribute">xmlns</span>=<span class="value">"http://apple.com/itunes/importer"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">software_assets</span> <span class="attribute">apple_id</span>=<span class="value">"&#123;apple_id&#125;"</span> <span class="attribute">app_platform</span>=<span class="value">"&#123;app_platform&#125;"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">asset</span> <span class="attribute">type</span>=<span class="value">"&#123;archive_type&#125;"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="title">data_file</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">size</span>&gt;</span>&#123;file_size&#125;<span class="tag">&lt;/<span class="title">size</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">file_name</span>&gt;</span>&#123;file_name&#125;<span class="tag">&lt;/<span class="title">file_name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">checksum</span> <span class="attribute">type</span>=<span class="value">"md5"</span>&gt;</span>&#123;file_md5&#125;<span class="tag">&lt;/<span class="title">checksum</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="title">data_file</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">asset</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">software_assets</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">package</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>需要修改 xml 中的一些参数：</p>
-<p><code>{apple_id}</code> ：这个 ipa 文件对应的app的 apple id<br><code>{app_platform}</code> ： app的平台，填写<code>ios</code><br><code>{archive_type}</code> ：归档类型，填写<code>bundle</code><br><code>{file_size}</code> ：ipa 文件的大小<br><code>{file_name}</code> ：ipa 文件的名字<br><code>{file_md5}</code>： ipa 文件的md5值</p>
-<ul>
-<li>一些重要参数说明：</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>-itc_provider <shortname></shortname></td>
-<td>检查和上传时建议加子账号的团队id，但测试发现不用 也行，先不带，因为获取很麻烦</td>
-</tr>
-<tr>
-<td>-errorLogs <path></path></td>
-<td>存储错误日志的目录</td>
-</tr>
-<tr>
-<td>-loghistory <path></path></td>
-<td>记录成功上传的数据包</td>
-</tr>
-<tr>
-<td>-outputFormat xml</td>
-<td>以 XML 格式返回输出信息</td>
-</tr>
-<tr>
-<td>-throughput</td>
-<td>显示成功上传数据包的总传输时间以及数据包大小和每秒字节数</td>
-</tr>
-<tr>
-<td>[-o <output>]</output></td>
-<td>记录输出信息</td>
-</tr>
-<tr>
-<td>[-v <verbosity>]</verbosity></td>
-<td>日志级别，默认eXtreme，详细</td>
-</tr>
-<tr>
-<td>-vp <text json=""></text></td>
-<td>在验证或上传数据包文件时显示进度信息</td>
-</tr>
-<tr>
-<td>[-Xmx4096m]</td>
-<td>指定 4 GB  Java 虚拟机 (JVM) 堆栈内存</td>
-</tr>
-</tbody>
-</table>
-<h3 id="总结">总结</h3><p>最后，这就是几种上传ipa包的方法，当然，如果经验丰富的开发者，可能使用过 <code>fastlane</code> 、<code>shenzhen</code> 这样的自动化工具命令，也是可以上传 ipa 文件，如果你研究过它们的源代码，你就会发现，他们使用的命令就是 <code>iTMSTransporter</code>，这也正是，我想写这篇文章的原因。现在大家在开发过程中，一直想提升自己，想进阶，想成为高手，然而找不到途径？我希望，大家不要忽视开发过程的每一个重要的环节，这就是进阶的途径！愿大家都能感悟达到~</p>
-<p>最后的最后，想说一下最近不怎么更新博客的原因？除了比较忙外（什么时候闲！），写好一篇文章，需要去考查相关的资料和知识，对每一行文字，都要精斟细酌，因为当我看到博客的访问量越来越多人时，为了不误导大家，所以需要承担的责任感觉也大了。这也是写文章的好处吧，除了整理思维，体系构建，表达自己，还有分享，责任，担当中国IT技术传承的一份子，安乐~</p>
-<p>finally，五一快乐！致敬劳动者！</p>
-<h3 id="参考">参考</h3><ul>
-<li><a href="https://help.apple.com/xcode/mac/current/" target="_blank" rel="external">Xcode Help</a></li>
-<li><a href="https://help.apple.com/itc/apploader/#/" target="_blank" rel="external">使用 Application Loader</a></li>
-<li><a href="https://help.apple.com/itc/apploader/#/apdATD1E53-D1E1A1303-D1E53A1126" target="_blank" rel="external">通过 altool 上传 App 的二进制文件 - 使用 Application Loader</a></li>
-<li><a href="https://help.apple.com/itc/transporteruserguide/#/itc0d5b535bf" target="_blank" rel="external">Transporter 是什么？ - Transporter 用户指南 1.13</a></li>
-<li><a href="https://help.apple.com/itc/podcasts_connect/#/itcc0e1eaa94" target="_blank" rel="external">Podcasts Connect 概览 - Podcasts Connect 帮助</a></li>
-<li><a href="https://help.apple.com/itc/apploader/#/apdATD1E887-D1E1A1303-D1E887A1126" target="_blank" rel="external">支持的格式 - 使用 Application Loader</a></li>
-<li><a href="https://stackoverflow.com/questions/16582119/how-use-itmstransporter" target="_blank" rel="external">How use iTMSTransporter?</a></li>
-<li><a href="https://github.com/fastlane/fastlane" target="_blank" rel="external">GitHub - fastlane</a></li>
-<li><a href="https://docs.fastlane.tools/actions/deliver/" target="_blank" rel="external">fastlane deliver 上传app到App Store</a></li>
-<li><a href="https://github.com/nomad/shenzhen/blob/master/lib/shenzhen/plugins/itunesconnect.rb" target="_blank" rel="external">GitHub - shenzhen</a></li>
-</ul>
-<p><br></p>
-<ul>
-<li>如有疑问，欢迎在评论区一起讨论！</li>
-<li>如有不正确的地方，欢迎指导！</li>
-</ul>
-<p><br></p>
-<blockquote>
-<p>注：本文首发于 <a href="https://iHTCboy.com">iHTCboy’s blog</a>，如若转载，请注来源</p>
-</blockquote>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h3 id="1、前言">1、前言</h3><p>关于上传 ipa 包到 App Store Connect 的方法，相信有 iOS 开发经验的同学，一定知道完成 App 开发后，一般都是用 Xcode 的 Archive 打包后上传到苹果后台。所以，这个就是今天要写的水文？显示不是吧！答案肯定不是啊，本文将给大家一个相对全面介绍。苹果开发的知识点非常多，官方文档也很多，能够学好学完，不一定人人能够做到。在我的理解，iOS进阶，不是说你必须掌握很高深的技术，而是了解全面的知识，能够做出不一样的产品、体验，这个才是优秀的开发者！</p>]]>
-    
-    </summary>
-    
-      <category term="ApplicationLoader" scheme="https://iHTCboy.com/tags/ApplicationLoader/"/>
-    
-      <category term="IPA" scheme="https://iHTCboy.com/tags/IPA/"/>
-    
-      <category term="Transporter" scheme="https://iHTCboy.com/tags/Transporter/"/>
-    
-      <category term="Xcode" scheme="https://iHTCboy.com/tags/Xcode/"/>
-    
-      <category term="altool" scheme="https://iHTCboy.com/tags/altool/"/>
-    
-      <category term="technology" scheme="https://iHTCboy.com/categories/technology/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Xcode10再坑之framework not found CoreServices for architecture armv7]]></title>
-    <link href="https://iHTCboy.com/2019/03/15/2019-03-15_iOS-framework-not-found-xxx-for-architecture-armv7/"/>
-    <id>https://iHTCboy.com/2019/03/15/2019-03-15_iOS-framework-not-found-xxx-for-architecture-armv7/</id>
-    <published>2019-03-15T13:19:16.000Z</published>
-    <updated>2019-03-30T15:43:48.767Z</updated>
-    <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>前段时间，升级了 Xcode10 后，提供给第三方用户的SDK，客户反馈说报错：</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ld: framework not found CoreServices <span class="keyword">for</span> architecture armv7</span><br></pre></td></tr></table></figure>
-<p><strong>为什么 iOS SDK 拖入项目中就报错”ld: framework not found IOSurface for architecture arm64”？</strong></p>
-<p>其实，翻开之前写的文章已经说过解决方案： <a href="https://ihtcboy.com/2017/10/27/2017_10_Xcode8%E6%8A%A5%E9%94%99%EF%BC%9AFramework_not_found_IOSurface_for_architecture_arm64%E6%88%96%E8%80%85Framework_not_found_FileProvider_for_architecture_x86_64:arm64/">Xcode8报错：”Framework not found IOSurface for architecture arm64”或者 “Framework not found FileProvider for architecture x86_64/arm64”. | iHTCboy’s blog</a></p>
-<p>当时，反复确认后，网上有些第三方的SDK提供商说升级 Xcode10 吧！！！慌张~ 你们就只能让别人升级啦！解决不了，重启，升级！但，NO，最后发现是新项目是使用 <code>CocoaPods</code> 导致的坑，一个地方进2次，还真不简单！</p>
-<a id="more"></a>
-<p>其中，看到有赞云这样说：</p>
-<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/03/20190315-youzanyun-sdk.png" alt="20190315-youzanyun-sdk.png"></p>
-<p>我只能说，坑的一个算一个，第三方用户就是这样，希望技术真的改变生活！包括技术的生活！</p>
-<h3 id="2、问题原因">2、问题原因</h3><p>因为我们新的项目使用 <code>CocoaPods</code> 组件化，所以最后打SDK的项目是CocoaPods集成的，问题就出在这里！上一个文章说到解决方法很简单：（<a href="https://ihtcboy.com/2017/10/27/2017_10_Xcode8%E6%8A%A5%E9%94%99%EF%BC%9AFramework_not_found_IOSurface_for_architecture_arm64%E6%88%96%E8%80%85Framework_not_found_FileProvider_for_architecture_x86_64:arm64/">Xcode8报错：”Framework not found IOSurface for architecture arm64”或者 “Framework not found FileProvider for architecture x86_64/arm64”. | iHTCboy’s blog</a>）</p>
-<blockquote>
-<p>Build Settings 中 Link Frameworks Automatically 把默认Yes 改成 No </p>
-</blockquote>
-<p>但是，如果用 <code>CocoaPods</code> 集成，默认是 <code>Yes</code>！！！ 尼玛！！！</p>
-<p>知道原因，解决就好办啦！但是，突然想到，以后 <code>pod install</code> 或 <code>pod update</code> 时，难道要人工的设置一次？？？ 不可能！不可能！不可能！</p>
-<p>最后，还是在 <code>CocoaPods</code> 官方文档找到答案 <a href="https://guides.cocoapods.org/syntax/podfile.html#post_install" target="_blank" rel="external">CocoaPods Guides - post_install</a>：</p>
-<p>在 <code>Podfile</code> 文件最后，添加下面代码：</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">post_install <span class="keyword">do</span> |installer|</span><br><span class="line">    installer.pods_project.targets.each <span class="keyword">do</span> |target|</span><br><span class="line">        target.build_configurations.each <span class="keyword">do</span> |config|</span><br><span class="line">            config.build_settings[<span class="string">'CLANG_MODULES_AUTOLINK'</span>] = <span class="string">'NO'</span></span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-<p>这个是一个勾子<code>hook</code>，在pod安装完成前，允许更改配置或做些别的事件！</p>
-<h3 id="3、总结">3、总结</h3><p>这个问题，2次进坑，解决的问题本质就是一个，只是自己开始不相信！所以，遇到问题，还是要学会找到原因，只是通往答案的道路各不相同，只要不放弃，不抛弃，一定能为大家提供优质的服务！相信科技的力量！不然，只能让别人升级环境来适配你，这可不好哦！</p>
-<h3 id="参考">参考</h3><ul>
-<li><a href="https://ihtcboy.com/2017/10/27/2017_10_Xcode8%E6%8A%A5%E9%94%99%EF%BC%9AFramework_not_found_IOSurface_for_architecture_arm64%E6%88%96%E8%80%85Framework_not_found_FileProvider_for_architecture_x86_64:arm64/">Xcode8报错：”Framework not found IOSurface for architecture arm64”或者 “Framework not found FileProvider for architecture x86_64/arm64”. | iHTCboy’s blog</a></li>
-<li><a href="https://www.youzanyun.com/support/faq/3476?qa_id=9026" target="_blank" rel="external">SDK引入_常见问题 - 有赞云</a></li>
-<li><a href="https://developer.apple.com/documentation/coreservices" target="_blank" rel="external">Core Services | Apple Developer Documentation</a></li>
-<li><a href="https://stackoverflow.com/questions/22736056/error-when-trying-to-link-fat-binary-with-64-bit-simulator-target/53280331#53280331" target="_blank" rel="external">ios - Error when trying to link fat binary with 64-bit simulator target - Stack Overflow</a></li>
-<li><a href="https://github.com/facebook/react-native/issues/21768" target="_blank" rel="external">ld: framework not found CoreServices for architecture x86_64 · Issue #21768 · facebook/react-native</a></li>
-<li><a href="https://blog.appsee.com/xcodes-new-link-frameworks-automatically-how-to-fix-framework-not-found-metal-for-architecture-armv7/" target="_blank" rel="external">XCode’s New “Link Frameworks Automatically” &amp; How to Fix “framework not found Metal for architecture armv7”</a></li>
-<li><a href="https://github.com/CocoaPods/cocoapods-packager/issues/48" target="_blank" rel="external">Add option to set “LINK FRAMEWORKS AUTOMATICALLY” to NO · Issue #48 · CocoaPods/cocoapods-packager</a></li>
-<li><a href="https://guides.cocoapods.org/syntax/podfile.html#post_install" target="_blank" rel="external">CocoaPods Guides - Podfile Syntax Reference <span>v1.7.0.beta.2</span></a></li>
-</ul>
-<p><br></p>
-<ul>
-<li>如有疑问，欢迎在评论区一起讨论！</li>
-<li>如有不正确的地方，欢迎指导！</li>
-</ul>
-<p><br></p>
-<blockquote>
-<p>注：本文首发于 <a href="https://iHTCboy.com">iHTCboy’s blog</a>，如若转载，请注来源</p>
-</blockquote>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h3 id="1、前言">1、前言</h3><p>前段时间，升级了 Xcode10 后，提供给第三方用户的SDK，客户反馈说报错：</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ld: framework not found CoreServices <span class="keyword">for</span> architecture armv7</span><br></pre></td></tr></table></figure>
-<p><strong>为什么 iOS SDK 拖入项目中就报错”ld: framework not found IOSurface for architecture arm64”？</strong></p>
-<p>其实，翻开之前写的文章已经说过解决方案： <a href="https://ihtcboy.com/2017/10/27/2017_10_Xcode8%E6%8A%A5%E9%94%99%EF%BC%9AFramework_not_found_IOSurface_for_architecture_arm64%E6%88%96%E8%80%85Framework_not_found_FileProvider_for_architecture_x86_64:arm64/">Xcode8报错：”Framework not found IOSurface for architecture arm64”或者 “Framework not found FileProvider for architecture x86_64/arm64”. | iHTCboy’s blog</a></p>
-<p>当时，反复确认后，网上有些第三方的SDK提供商说升级 Xcode10 吧！！！慌张~ 你们就只能让别人升级啦！解决不了，重启，升级！但，NO，最后发现是新项目是使用 <code>CocoaPods</code> 导致的坑，一个地方进2次，还真不简单！</p>]]>
-    
-    </summary>
-    
-      <category term="CoreServices" scheme="https://iHTCboy.com/tags/CoreServices/"/>
-    
-      <category term="Framework not found" scheme="https://iHTCboy.com/tags/Framework-not-found/"/>
-    
-      <category term="IOSurface" scheme="https://iHTCboy.com/tags/IOSurface/"/>
-    
-      <category term="Xcode10" scheme="https://iHTCboy.com/tags/Xcode10/"/>
-    
-      <category term="technology" scheme="https://iHTCboy.com/categories/technology/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[shell技巧7 - git提高效率的一些用法]]></title>
-    <link href="https://iHTCboy.com/2019/03/14/2019-03-14_shell%E6%8A%80%E5%B7%A77-git%E6%9B%B4%E6%96%B0%E7%AD%89%E6%95%88%E7%8E%87%E8%84%9A%E6%9C%AC/"/>
-    <id>https://iHTCboy.com/2019/03/14/2019-03-14_shell技巧7-git更新等效率脚本/</id>
-    <published>2019-03-14T14:20:16.000Z</published>
-    <updated>2019-06-30T02:33:47.514Z</updated>
-    <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>经过前面那么多节的脚本使用技巧，相信大家一定已经掌握了基本的shell脚本编写，但是可能还是没有想明白，或者想到说平时工作生活中，有什么作用？今天，写写我自己在工作中，一些提高效率的脚本一起来看看吧~</p>
-<a id="more"></a>
-<h3 id="2、git_pull_更新">2、git pull 更新</h3><p>工作中，我们都知道，更新工作代码库：<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">git</span> pull</span><br></pre></td></tr></table></figure></p>
-<p>但是，有没有想过，如果你有10个库呢？是不是要命令行切换目录输出10次？或者你有Sourcetree，在界面也要切换10次吧？</p>
-<p>所以，有没有想过，如果用脚本，能不能一次的把全部的库，都<code>git pull</code>下来？想到这样，相信大家已经知道，肯定可以啊！</p>
-<p>直接上代码（具体的代码，可参考我的Github代码：</p>
-<ul>
-<li><a href="https://github.com/iHTCboy/iShell" target="_blank" rel="external">iHTCboy/iShell: Shell脚本编程技巧，总结一些常用的提高效率的方法。</a>）：</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/bash</span><br><span class="line"></span></span><br><span class="line"><span class="comment"># 定义用到的变量</span></span><br><span class="line">directory_path=<span class="string">""</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义读取输入字符的函数</span></span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">getDirectoryPath</span></span>() &#123;</span><br><span class="line">	<span class="comment"># 输出换行，方便查看</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">"================================================"</span></span><br><span class="line">	<span class="comment"># 监听输入并且赋值给变量</span></span><br><span class="line">	<span class="built_in">read</span> -p <span class="string">" Enter directory path: "</span> directory_path</span><br><span class="line">	<span class="comment"># 如果为空值，从新监听</span></span><br><span class="line">	<span class="keyword">if</span> <span class="built_in">test</span> -z <span class="string">"directory_path"</span>; <span class="keyword">then</span></span><br><span class="line">		getDirectoryPath</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		<span class="built_in">read</span>_dir <span class="variable">$&#123;directory_path&#125;</span></span><br><span class="line">	<span class="keyword">fi</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">read_dir</span></span>()&#123;</span><br><span class="line">	<span class="keyword">for</span> file <span class="keyword">in</span> `ls <span class="variable">$1</span>`       <span class="comment">#注意此处这是两个反引号，表示运行系统命令</span></span><br><span class="line">	<span class="keyword">do</span></span><br><span class="line">		<span class="keyword">if</span> [ <span class="operator">-d</span> <span class="variable">$1</span><span class="string">"/"</span><span class="variable">$file</span> ]  <span class="comment">#注意此处之间一定要加上空格，否则会报错</span></span><br><span class="line">		<span class="keyword">then</span></span><br><span class="line">			<span class="comment">#在此处处理目录即可</span></span><br><span class="line">			<span class="built_in">echo</span> <span class="string">"-----------------------------\n"</span></span><br><span class="line">			<span class="built_in">echo</span> <span class="string">"check directory:《"</span> <span class="variable">$file</span> <span class="string">"》"</span></span><br><span class="line">			<span class="built_in">echo</span> <span class="string">"message:"</span></span><br><span class="line">			<span class="built_in">cd</span> <span class="variable">$1</span><span class="string">"/"</span><span class="variable">$file</span></span><br><span class="line">			git pull</span><br><span class="line">			<span class="built_in">echo</span> <span class="string">"\n"</span></span><br><span class="line">		<span class="keyword">fi</span></span><br><span class="line">	<span class="keyword">done</span></span><br><span class="line">&#125;   </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#读取第一个参数</span></span><br><span class="line">getDirectoryPath</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"\n------- finish processing -------"</span></span><br></pre></td></tr></table></figure>
-<p>使用方法非常简单，执行脚本，输入在你所有库的根目录，然后脚本会循环所有目录<code>git pull</code>。当然，如果是公司电脑，那你可以用别名<code>alias</code>定义一个通用命令来执行，明天早上上班，执行一下，效率满满的！！！</p>
-<h3 id="3、git_clone_下载">3、git clone 下载</h3><p>有时候，你换了新电脑，或者像我不小心，电脑挂了，重装系统，新的电脑，需要一个一个库的拉取下来，这时候，你也可以写一个脚本来统一执行：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/bash</span><br><span class="line"></span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/iHTCboy/OneMindMap.git;</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/iHTCboy/NotesEveryDay.git;</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/iHTCboy/macOSConfig.git;</span><br></pre></td></tr></table></figure>
-<p> 编写自己的库或公司库脚本，放到git仓库，是不是又学到一招！</p>
-<h3 id="4、git_commit">4、git commit</h3><p>这个大家应该想到了吧？可以放到 <code>.bash_profile</code> 或 <code>.zshrc</code> 当成一个别名使用：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">glazy</span></span>() &#123;</span><br><span class="line">    git add .</span><br><span class="line">    git commit <span class="operator">-a</span> -m <span class="string">"<span class="variable">$1</span>"</span></span><br><span class="line">    git push</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>使用方法很简单：<br><code>glazy &#39;XXXX&#39;</code> 就可以一步到位：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">➜  iShell git:(master) ✗ glazy <span class="string">'shell技巧6 - iOS最大构建版本文件大小'</span></span><br><span class="line">[master <span class="number">15</span>a0b97] shell技巧<span class="number">6</span> - iOS最大构建版本文件大小</span><br><span class="line"> <span class="number">1</span> file changed, <span class="number">72</span> insertions(+)</span><br><span class="line"> create mode <span class="number">100644</span> Shell/calculate_Mach-<span class="number">0</span>__Text-Size .sh</span><br><span class="line">Counting objects: <span class="number">4</span>, done.</span><br><span class="line">Delta compression using up to <span class="number">4</span> threads.</span><br><span class="line">Compressing objects: <span class="number">100</span>% (<span class="number">4</span>/<span class="number">4</span>), done.</span><br><span class="line">Writing objects: <span class="number">100</span>% (<span class="number">4</span>/<span class="number">4</span>), <span class="number">1.52</span> KiB | <span class="number">1.52</span> MiB/s, done.</span><br><span class="line">Total <span class="number">4</span> (delta <span class="number">2</span>), reused <span class="number">0</span> (delta <span class="number">0</span>)</span><br><span class="line">remote: Resolving deltas: <span class="number">100</span>% (<span class="number">2</span>/<span class="number">2</span>), completed with <span class="number">2</span> <span class="built_in">local</span> objects.</span><br><span class="line">To https://github.com/iHTCboy/iShell.git</span><br><span class="line">   <span class="number">6</span>f39dfe..<span class="number">15</span>a0b97  master -&gt; master</span><br></pre></td></tr></table></figure>
-<h3 id="5、备份文件">5、备份文件</h3><p>为了避免数据掉失，我会经常定时备份博客的文档，如果需要人工手动，重复，反复，一个一个，切换目录，其实，写一个脚本就搞定：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/bash</span><br><span class="line"></span></span><br><span class="line">blog_dir=<span class="string">"/Users/HTC/Documents/Personal/P-Project/iHTCBlog/source/"</span></span><br><span class="line">backup_dir=<span class="string">"/Users/HTC/Documents/Personal/P-Project/macOSConfig/iHTCboy_Blog/"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># copy files</span></span><br><span class="line">cp -r <span class="string">"<span class="variable">$&#123;blog_dir&#125;</span>"</span> <span class="string">"<span class="variable">$&#123;backup_dir&#125;</span>"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># delete drafts file</span></span><br><span class="line">rm -rf <span class="string">"<span class="variable">$&#123;backup_dir&#125;</span>/_drafts"</span></span><br></pre></td></tr></table></figure>
-<p>当然，为了方便，不可能每次都打开终端才执行，如果Mac或Linux，可以用 Unix 可执行文件，直接点击，会自动打开终端执行。</p>
-<p>比如脚本叫 <code>backup_sh.sh</code> 改为 <code>backup_sh</code> 名字，然后在终端为文件添加可执行权限：<br><code>chmod +x /Users/HTC/Desktop/backup_sh</code> </p>
-<p>以后，直接双击<code>backup_sh</code>这个文件，就会自动在终端执行，备份完成！</p>
-<p>注：其它方法可参考 <a href="https://ihtcboy.com/2018/08/31/2018-08-31_shell技巧1_生成ipa文件/">shell技巧1 - 生成ipa文件 | iHTCboy’s blog</a> 第5小节。</p>
-<h3 id="6、总结">6、总结</h3><p>关于shell脚本就讲到这里，更多技巧和提交效率的方式，希望大家能举一反三，这都是授鱼不如授渔！ 关键，还是大家要熟悉学习和掌握<code>shell</code>编码，就能在工作生活中提高效率。</p>
-<h3 id="参考">参考</h3><ul>
-<li><a href="https://github.com/iHTCboy/iShell" target="_blank" rel="external">iHTCboy/iShell: Shell脚本编程技巧，总结一些常用的提高效率的方法。</a></li>
-<li><a href="https://ihtcboy.com/2018/08/31/2018-08-31_shell技巧1_生成ipa文件/">shell技巧1 - 生成ipa文件 | iHTCboy’s blog</a></li>
-</ul>
-<p><br></p>
-<ul>
-<li>如有疑问，欢迎在评论区一起讨论！</li>
-<li>如有不正确的地方，欢迎指导！</li>
-</ul>
-<p><br></p>
-<blockquote>
-<p>注：本文首发于 <a href="https://iHTCboy.com">iHTCboy’s blog</a>，如若转载，请注来源</p>
-</blockquote>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h3 id="1、前言">1、前言</h3><p>经过前面那么多节的脚本使用技巧，相信大家一定已经掌握了基本的shell脚本编写，但是可能还是没有想明白，或者想到说平时工作生活中，有什么作用？今天，写写我自己在工作中，一些提高效率的脚本一起来看看吧~</p>]]>
-    
-    </summary>
-    
-      <category term="bash" scheme="https://iHTCboy.com/tags/bash/"/>
-    
-      <category term="shell" scheme="https://iHTCboy.com/tags/shell/"/>
-    
-      <category term="效率" scheme="https://iHTCboy.com/tags/%E6%95%88%E7%8E%87/"/>
-    
-      <category term="脚本" scheme="https://iHTCboy.com/tags/%E8%84%9A%E6%9C%AC/"/>
-    
-      <category term="induction" scheme="https://iHTCboy.com/categories/induction/"/>
     
   </entry>
   

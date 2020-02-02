@@ -216,6 +216,583 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-2015_友盟iOS微信登陆没有回调的原因" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/07/2015_友盟iOS微信登陆没有回调的原因/">友盟iOS微信登陆没有回调的原因</a>
+    </h1>
+  
+
+        
+        <a href="/2015/08/07/2015_友盟iOS微信登陆没有回调的原因/" class="archive-article-date">
+  	<time datetime="2015-08-06T16:22:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-08-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1、在友盟文档中这样说：">1、在友盟文档中这样说：</h3><p><a href="http://dev.umeng.com/social/ios/detail-share#7_4" target="_blank" rel="external">链接</a></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">7.4  &#24494;&#20449;&#30331;&#24405;&#10;&#28155;&#21152;&#37197;&#32622;&#25991;&#20214;&#21442;&#32771;&#25991;&#26723;&#65306;&#28155;&#21152;&#24494;&#20449;&#21450;&#26379;&#21451;&#22280;&#65292;&#28155;&#21152;&#30456;&#20851;&#24211;&#25991;&#20214;&#65292;&#37197;&#32622;URL schemes&#21450;&#28155;&#21152;&#31995;&#32479;&#22238;&#35843;&#10;&#10;&#27880;&#24847;&#24494;&#20449;&#30331;&#24405;&#24517;&#39035;&#20808;&#22312;&#24494;&#20449;&#24320;&#25918;&#24179;&#21488;&#30003;&#35831;&#24494;&#20449;&#30331;&#24405;&#26435;&#38480;&#10;&#22312;&#20320;&#30340;&#31243;&#24207;APPdelegate&#20837;&#21475;&#26041;&#27861;&#28155;&#21152;&#19979;&#38754;&#30340;&#20195;&#30721;&#10;&#10;  #import &#34;UMSocialWechatHandler.h&#34;&#10;    //&#35774;&#32622;&#24494;&#20449;AppId&#12289;appSecret&#65292;&#20998;&#20139;url&#10;    [UMSocialWechatHandler setWXAppId:@&#34;wxd930ea5d5a258f4f&#34; appSecret:@&#34;db426a9829e4b49a0dcac7b4162da6b6&#34; url:@&#34;http://www.umeng.com/social&#34;];&#10;&#10;&#22312;&#24494;&#20449;&#30331;&#24405;&#25353;&#38062;&#20013;&#23454;&#29616;&#19979;&#38754;&#30340;&#26041;&#27861;&#10;&#10;  UMSocialSnsPlatform *snsPlatform = [UMSocialSnsPlatformManager getSocialPlatformWithName:UMShareToWechatSession];&#10;&#10;        snsPlatform.loginClickHandler(self,[UMSocialControllerService defaultControllerService],YES,^(UMSocialResponseEntity *response)&#123;&#10;&#10;            if (response.responseCode == UMSResponseCodeSuccess) &#123;&#10;&#10;                UMSocialAccountEntity *snsAccount = [[UMSocialAccountManager socialAccountDictionary]valueForKey:UMShareToWechatSession];&#10;&#10;                NSLog(@&#34;username is %@, uid is %@, token is %@ url is %@&#34;,snsAccount.userName,snsAccount.usid,snsAccount.accessToken,snsAccount.iconURL);&#10;&#10;            &#125;&#10;&#10; &#125;);&#10;&#10;&#22312;&#25480;&#26435;&#23436;&#25104;&#21518;&#35843;&#29992;&#33719;&#21462;&#29992;&#25143;&#20449;&#24687;&#30340;&#26041;&#27861;&#10;&#10;//&#24471;&#21040;&#30340;&#25968;&#25454;&#22312;&#22238;&#35843;Block&#23545;&#35937;&#24418;&#21442;respone&#30340;data&#23646;&#24615;&#10;[[UMSocialDataService defaultDataService] requestSnsInformation:UMShareToWechatsession  completion:^(UMSocialResponseEntity *response)&#123;&#10;        NSLog(@&#34;SnsInformation is %@&#34;,response.data);&#10;    &#125;];</span><br></pre></td></tr></table></figure>
+<h3 id="2、实践使用时：">2、实践使用时：</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#pragma mark - &#24494;&#20449;&#30331;&#24405;&#10;- (void)loginViewClickedWeiXiButton&#123;&#10;    &#10;    [UMSocialData setAppKey:@&#34;55bb141a67e58e9f80001801&#34;];&#10;    [UMSocialWechatHandler setWXAppId:@&#34;wx2802d4e49f68996f&#34; appSecret:@&#34;f1bf8a16c5f87570ab07782d3e0ab223&#34; url:@&#34;http://www.umeng.com/social&#34;];&#10;    UMSocialSnsPlatform *snsPlatform = [UMSocialSnsPlatformManager getSocialPlatformWithName:UMShareToWechatSession];&#10;    snsPlatform.loginClickHandler(self,[UMSocialControllerService defaultControllerService],YES,^(UMSocialResponseEntity *response)&#123;&#10;        //  &#33719;&#21462;&#24494;&#21338;&#29992;&#25143;&#21517;&#12289;uid&#12289;token&#31561;&#10;        if (response.responseCode == UMSResponseCodeSuccess) &#123;&#10;             UMSocialAccountEntity *snsAccount = [[UMSocialAccountManager socialAccountDictionary]valueForKey:UMShareToWechatSession];&#10;            NSLog(@&#34;username is %@, uid is %@, token is %@ iconUrl is %@&#34;,snsAccount.userName,snsAccount.usid,snsAccount.accessToken,snsAccount.iconURL);&#10;        &#125;&#10;    &#125;);&#10;    &#10;&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="3、【坑在这里】没有回调时因为要在应用代理方法中增加：">3、【坑在这里】没有回调时因为要在应用代理方法中增加：</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">//sdk&#10;#import &#34;UMSocialSnsService.h&#34;&#10;&#10;- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation&#10;&#123;&#10;    return  [UMSocialSnsService handleOpenURL:url wxApiDelegate:nil];&#10;&#125;&#10;&#10;- (void)applicationDidBecomeActive:(UIApplication *)application&#10;&#123;&#10;    [UMSocialSnsService  applicationDidBecomeActive];&#10;&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="最后说明">最后说明</h3><ul>
+<li>微信的<code>openid</code>对应友盟里叫<code>usid</code></li>
+</ul>
+<p>下面是授权成功的回调数据：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- UMSocial:  makeRequestWithPath is /share/token/53290df956240b6b4a0084b3/, parameters is &#123;&#10;    &#34;access_token&#34; = &#34;OezXcEiiBSKSxW0eoylIeJDUKD6z6dmr42JANLPjNN56WRFnd-vVJO37ma0gCpKY1v5q8EVEMwdQqzvXoFFpe1jQXUzjqukub9-228J8sjvugvVVQYvzkhyvAgItvkYmMIGD_cE2hAWUm44_qCB-oQ&#34;;&#10;    ak = 53290df956240b6b4a0084b3;&#10;    de = &#34;iPhone7,1&#34;;&#10;    dt = 1438857527939;&#10;    ek = 4b37315fd0421b0b3a682a4a5e4487e9;&#10;    en = WiFi;&#10;    &#34;expires_in&#34; = 7199;&#10;    mac = &#34;02:00:00:00:00:00&#34;;&#10;    openid = oyAaTjrJMAb3qfCbyDRp3h0NKyew;&#10;    openudid = 147ad485c3b80ffd54bfc8689c2d7db1ed88994b;&#10;    os = iOS;&#10;    pcv = &#34;2.0&#34;;&#10;    &#34;refresh_token&#34; = &#34;OezXcEiiBSKSxW0eoylIeJDUKD6z6dmr42JANLPjNN56WRFnd-vVJO37ma0gCpKYHXgyDeQ4Xqm60G-omrGp2u-KbIy7zTP5gV5dnw3RVN-GzkjY8gCWIMC3_cCHcflH6IPexy2c-k46gGG0M07p6g&#34;;&#10;    sdkv = &#34;4.2.3&#34;;&#10;    to = wxsession;&#10;    tp = 0;&#10;    uid = 462ae0edb57d53dfd2affb5e4ae36ad;&#10;    usid = oyAaTjrJMAb3qfCbyDRp3h0NKyew;&#10;&#125; &#10;[18:38:48.197( 2055)] - UMSocial:  actionType is 15 , received json Dic is &#123;&#10;    data =     &#123;&#10;    &#125;;&#10;    msg = &#34;no error&#34;;&#10;    st = 200;&#10;&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="-">-</h3><ul>
+<li>如果有什么疑问，可以在评论区一起讨论；</li>
+<li>如果有什么不正确的地方，欢迎指导！</li>
+</ul>
+<p><br></p>
+<blockquote>
+<p>注：本文首发于 <a href="http://iHTCboy.com">iHTCboy’s blog</a>，如若转载，请注来源</p>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">iOS</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">友盟</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">第三方登陆</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/technology//" class="article-tag-list-link color1">technology</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2015/08/07/2015_友盟iOS微信登陆没有回调的原因/">显示全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-2015_同时响应多个UIGestureRecognizer" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/29/2015_同时响应多个UIGestureRecognizer/">同时响应多个UIGestureRecognizer</a>
+    </h1>
+  
+
+        
+        <a href="/2015/07/29/2015_同时响应多个UIGestureRecognizer/" class="archive-article-date">
+  	<time datetime="2015-07-29T15:52:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-07-29</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近在做产品试戴，效果如下：<br><img src="http://upload-images.jianshu.io/upload_images/99517-4a52cfabb55b00b6.JPG?imageMogr2/auto-orient/strip|imageView2/2/w/1240" alt="效果图"></p>
+        
+          <a class="article-more-a" href="/2015/07/29/2015_同时响应多个UIGestureRecognizer/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">UIGestureRecognizer</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">iOS</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/technology//" class="article-tag-list-link color1">technology</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2015/07/29/2015_同时响应多个UIGestureRecognizer/">显示全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-2015_分析iOS手机淘宝首页的设计" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/26/2015_分析iOS手机淘宝首页的设计/">分析iOS手机淘宝首页的设计</a>
+    </h1>
+  
+
+        
+        <a href="/2015/07/26/2015_分析iOS手机淘宝首页的设计/" class="archive-article-date">
+  	<time datetime="2015-07-26T14:39:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-07-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="http://upload-images.jianshu.io/upload_images/99517-ec1bc0d03b6480da.PNG?imageMogr2/auto-orient/strip|imageView2/2/w/1240" alt="手机淘宝5.3.1(哆啦a梦版)"></p>
+        
+          <a class="article-more-a" href="/2015/07/26/2015_分析iOS手机淘宝首页的设计/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">iOS</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">手机淘宝</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">设计</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/technology//" class="article-tag-list-link color1">technology</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2015/07/26/2015_分析iOS手机淘宝首页的设计/">显示全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-2015_一个工具类的单例模式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/26/2015_一个工具类的单例模式/">一个工具类的单例模式</a>
+    </h1>
+  
+
+        
+        <a href="/2015/07/26/2015_一个工具类的单例模式/" class="archive-article-date">
+  	<time datetime="2015-07-26T04:07:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-07-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近写了个工具类，用来集成<strong>短信、邮件、电话、打开Safari/AppStore、打开相机或相册</strong>，但是写 delegate 的时候，发现有警告：</p>
+<blockquote>
+<p>Incompatible pointer types assigning to ‘id<MFMessageComposeViewControllerDelegate>‘ from ‘Class’</p>
+</blockquote>
+<p>最后，发现，用单例模式才可以。原因：<code>类方法的self不能充当delegate</code></p>
+        
+          <a class="article-more-a" href="/2015/07/26/2015_一个工具类的单例模式/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">iOS</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">单例模式</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/technology//" class="article-tag-list-link color1">technology</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2015/07/26/2015_一个工具类的单例模式/">显示全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-2015_用autolyout实现子视图对齐等宽排列" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/26/2015_用autolyout实现子视图对齐等宽排列/">用autolyout实现子视图对齐等宽排列</a>
+    </h1>
+  
+
+        
+        <a href="/2015/07/26/2015_用autolyout实现子视图对齐等宽排列/" class="archive-article-date">
+  	<time datetime="2015-07-26T03:39:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-07-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="最终效果">最终效果</h3><p><img src="http://upload-images.jianshu.io/upload_images/99517-66081191ebae4e87.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240" alt="实现效果"></p>
+        
+          <a class="article-more-a" href="/2015/07/26/2015_用autolyout实现子视图对齐等宽排列/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">autolyout</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">iOS</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/technology//" class="article-tag-list-link color1">technology</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2015/07/26/2015_用autolyout实现子视图对齐等宽排列/">显示全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-2015_你若安好，我将不再告诉你我的幸福" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/26/2015_你若安好，我将不再告诉你我的幸福/">你若安好，我将不再告诉你我的幸福</a>
+    </h1>
+  
+
+        
+        <a href="/2015/07/26/2015_你若安好，我将不再告诉你我的幸福/" class="archive-article-date">
+  	<time datetime="2015-07-25T16:49:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-07-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>你若不爱<br>我则会离开<br>离开熟悉的灯光街道<br>离开不在属于我们的约会</p>
+<p>我若无缘<br>我则会成长<br>带走那份天真的梦游乐场<br>对自己下狠心不在回头看你二次</p>
+<p>心痛的事<br>渐渐的远离和怀疑<br>纯洁的年轮我们只因疯狂而恐惧<br>只因孤独而寂寞</p>
+<p>每次给你一个机会<br>就是为了给自己一个机会<br>一个弥补一切的机会<br>事实面前，任何借口显得无力</p>
+<p>不在给自己机会<br>不在原谅自己<br>今天对自己狠下心<br>只希望大家各奔幸福</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">爱情</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">诗歌</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/poetry//" class="article-tag-list-link color2">poetry</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2015/07/26/2015_你若安好，我将不再告诉你我的幸福/">显示全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-2015-07-26_建立信任机制" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -596,591 +1173,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-2015-07-19_《当幸福来敲门》观后感" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/19/2015-07-19_《当幸福来敲门》观后感/">《当幸福来敲门》观后感</a>
-    </h1>
-  
-
-        
-        <a href="/2015/07/19/2015-07-19_《当幸福来敲门》观后感/" class="archive-article-date">
-  	<time datetime="2015-07-19T08:14:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-07-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="电影">电影</h3><blockquote>
-<p>百度百科：<br>《当幸福来敲门》是由加布里尔·穆奇诺执导，威尔·史密斯等主演的美国电影。影片取材真实故事，主角是美国黑人投资专家Chris Gardner。影片讲述了一位濒临破产、老婆离家的落魄业务员，如何刻苦耐劳的善尽单亲责任，奋发向上成为股市交易员，最后成为知名的金融投资家的励志故事。影片获得2007年奥斯卡金像奖最佳男主角的提名。</p>
-</blockquote>
-        
-          <a class="article-more-a" href="/2015/07/19/2015-07-19_《当幸福来敲门》观后感/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">《当幸福来敲门》</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">观后感</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/life//" class="article-tag-list-link color5">life</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2015/07/19/2015-07-19_《当幸福来敲门》观后感/">显示全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2015-07-19_《恋恋笔记本》观后感" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/19/2015-07-19_《恋恋笔记本》观后感/">《恋恋笔记本》观后感</a>
-    </h1>
-  
-
-        
-        <a href="/2015/07/19/2015-07-19_《恋恋笔记本》观后感/" class="archive-article-date">
-  	<time datetime="2015-07-19T08:04:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-07-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="电影">电影</h3><blockquote>
-<p>百度介绍：<br>《恋恋笔记本》是导演尼克·卡萨维茨2004年的一部爱情类影片。改编于美国小说家尼古拉斯·斯帕克斯的同名小说，由莱恩·高斯利、瑞秋·麦克亚当斯等联袂出演。影片于2004年6月25日在美国上映。讲述一对青梅竹马在二次世界大战后历劫重逢，这段刻骨铭心的故事由一名天天来探望住在疗养院病人的老先生笔记本中娓娓道出，随着故事水落石出，显然这名躺在病床上的老太太就是故事中的女主角，而说故事者正是求婚的人。</p>
-</blockquote>
-        
-          <a class="article-more-a" href="/2015/07/19/2015-07-19_《恋恋笔记本》观后感/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">《恋恋笔记本》</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">观后感</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/life//" class="article-tag-list-link color5">life</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2015/07/19/2015-07-19_《恋恋笔记本》观后感/">显示全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2015_AppStore-打包上传后提示“二进制文件无效”" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/06/2015_AppStore-打包上传后提示“二进制文件无效”/">Xcode打包上传后, AppStore提示“二进制文件无效”</a>
-    </h1>
-  
-
-        
-        <a href="/2015/07/06/2015_AppStore-打包上传后提示“二进制文件无效”/" class="archive-article-date">
-  	<time datetime="2015-07-06T08:20:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-07-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>搜索了2个小时，上传了5个版本后，终于解决了。网上是这样说的：</p>
-<blockquote>
-<p><a href="http://stackoverflow.com/questions/26163856/invalid-swift-support-invalid-implementation-of-swift">http://stackoverflow.com/questions/26163856/invalid-swift-support-invalid-implementation-of-swift</a><br>1、重启Xcode，clean build<br>2、重启Mac OSX<br>3、换个新版本Xcode </p>
-</blockquote>
-        
-          <a class="article-more-a" href="/2015/07/06/2015_AppStore-打包上传后提示“二进制文件无效”/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">iOS</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">二进制文件无效</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/technology//" class="article-tag-list-link color1">technology</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2015/07/06/2015_AppStore-打包上传后提示“二进制文件无效”/">显示全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2015_App-Store被拒绝后的解决方案中心" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/02/2015_App-Store被拒绝后的解决方案中心/">App Store被拒绝后的解决方案中心(酒精、烟草、或药物的应用评级不能是4+)</a>
-    </h1>
-  
-
-        
-        <a href="/2015/07/02/2015_App-Store被拒绝后的解决方案中心/" class="archive-article-date">
-  	<time datetime="2015-07-02T00:30:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-07-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>3.8 Details</p>
-<p>The rating you’ve selected, 4+, is inconsistent with the content of your app. Since your app includes content or features that pertain to alcohol, your ratings must reflect a “Frequent/Intense” setting for “Alcohol, Tobacco, or Drug Use or Reference” in iTunes Connect.</p>
-</blockquote>
-<ul>
-<li>酒精、烟草、或药物的应用评级不能是4+</li>
-</ul>
-        
-          <a class="article-more-a" href="/2015/07/02/2015_App-Store被拒绝后的解决方案中心/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">AppStore被拒</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">iOS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/technology//" class="article-tag-list-link color1">technology</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2015/07/02/2015_App-Store被拒绝后的解决方案中心/">显示全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2015-06-28_《两小无猜》观后感" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/06/28/2015-06-28_《两小无猜》观后感/">《两小无猜》观后感</a>
-    </h1>
-  
-
-        
-        <a href="/2015/06/28/2015-06-28_《两小无猜》观后感/" class="archive-article-date">
-  	<time datetime="2015-06-28T07:49:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-06-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="观后感">观后感</h3><p>这部电影，很大胆，用一个叫敢不敢的游戏，串起了几十年。</p>
-<ul>
-<li><p>1、性格一定是从小养成，并是受环境的人和事所影响，自己接受越多，越大越不能改变。</p>
-</li>
-<li><p>2、疯狂的事情，在自己看来，刚好合适。</p>
-</li>
-<li><p>3、真正爱谁，有时候会受影响而判断错误。</p>
-</li>
-<li><p>4、找一个有趣的人过下半辈子，还是默守规的生活。</p>
-</li>
-</ul>
-        
-          <a class="article-more-a" href="/2015/06/28/2015-06-28_《两小无猜》观后感/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">《两小无猜》</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">观后感</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/life//" class="article-tag-list-link color5">life</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2015/06/28/2015-06-28_《两小无猜》观后感/">显示全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2015-06-28_《千与千寻》观后感" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/06/28/2015-06-28_《千与千寻》观后感/">《千与千寻》观后感</a>
-    </h1>
-  
-
-        
-        <a href="/2015/06/28/2015-06-28_《千与千寻》观后感/" class="archive-article-date">
-  	<time datetime="2015-06-27T17:24:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-06-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="观后感">观后感</h3><p>看完了，其实我还是不理解原意，上豆瓣电影看评论后，第一次知道电影还有这个深度！宫崎骏！</p>
-<ul>
-<li><p>1、千、千寻，二个名字，开始我以后没区别，原来，忘记自己名字，是一件好可怕的事情。</p>
-</li>
-<li><p>2、如果想当父母了，需要把电影看一遍，如果不知道怎么养小孩，请别生！</p>
-</li>
-<li><p>3、坚持童心的人就是幸运的人</p>
-</li>
-<li><p>4、朋友的重要性</p>
-</li>
-<li><p>5、等级，要不分级</p>
-</li>
-<li><p>6、务实，勤劳，在那个时代都有用</p>
-</li>
-<li><p>7、工作是我们最基本能力</p>
-</li>
-</ul>
-        
-          <a class="article-more-a" href="/2015/06/28/2015-06-28_《千与千寻》观后感/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">《千与千寻》</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">观后感</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/life//" class="article-tag-list-link color5">life</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2015/06/28/2015-06-28_《千与千寻》观后感/">显示全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/11/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><span class="page-number current">12</span><a class="page-number" href="/page/13/">13</a><a class="page-number" href="/page/14/">14</a><span class="space">&hellip;</span><a class="page-number" href="/page/23/">23</a><a class="extend next" rel="next" href="/page/13/">Next &raquo;</a>
@@ -1306,15 +1298,19 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">知识体系</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">iOS开发高手课</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">极客时间</a>
+                <a href="javascript:void(0)" class="js-tag color5">学习总结</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">学习总结</a>
+                <a href="javascript:void(0)" class="js-tag color5">极客时间</a>
               </li>
              
               <li class="article-tag-list-item">

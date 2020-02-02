@@ -216,6 +216,609 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-2018-04-03_PyCharm_2018_for_mac数据库实战_链接SQLite_建表_添加_查询数据" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/03/2018-04-03_PyCharm_2018_for_mac数据库实战_链接SQLite_建表_添加_查询数据/">PyCharm 2018 for mac 数据库实战：链接SQLite、建表、添加、查询数据</a>
+    </h1>
+  
+
+        
+        <a href="/2018/04/03/2018-04-03_PyCharm_2018_for_mac数据库实战_链接SQLite_建表_添加_查询数据/" class="archive-article-date">
+  	<time datetime="2018-04-03T13:46:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="一、前言">一、前言</h3><p>最近开始入门python，当然是要使用PyCharm，然后在项目中遇到.db数据库文件，双击打不开？网上找到了windows版本的教程，版本也比较旧，所以有空就来一发，当备忘也好~</p>
+        
+          <a class="article-more-a" href="/2018/04/03/2018-04-03_PyCharm_2018_for_mac数据库实战_链接SQLite_建表_添加_查询数据/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">PyCharm</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">SQLite</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/technology//" class="article-tag-list-link color1">technology</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/04/03/2018-04-03_PyCharm_2018_for_mac数据库实战_链接SQLite_建表_添加_查询数据/">显示全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-2018-03-17_判断NSString为空的问题浅析" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/17/2018-03-17_判断NSString为空的问题浅析/">判断NSString为空的问题浅析</a>
+    </h1>
+  
+
+        
+        <a href="/2018/03/17/2018-03-17_判断NSString为空的问题浅析/" class="archive-article-date">
+  	<time datetime="2018-03-17T15:02:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1、前言">1、前言</h3><p>判断字符串是否为空的情况，一般判断的逻辑如下：</p>
+<ul>
+<li>是否为nil </li>
+<li>是否是NSNull</li>
+<li>是否去掉空格之后长度为0</li>
+</ul>
+<p>在某书看到如下代码：</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">NSString</span> (<span class="title">Util</span>)</span></span><br><span class="line">- (<span class="built_in">BOOL</span>)isBlankString:(<span class="built_in">NSString</span> *)str;</span><br><span class="line"><span class="keyword">@end</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">NSString</span> (<span class="title">Util</span>)</span></span><br><span class="line">- (<span class="built_in">BOOL</span>)isBlankString:(<span class="built_in">NSString</span> *)str &#123;</span><br><span class="line">    <span class="built_in">NSString</span> *string = str;</span><br><span class="line">    <span class="keyword">if</span> (string == <span class="literal">nil</span> || string == <span class="literal">NULL</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">YES</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> ([string isKindOfClass:[<span class="built_in">NSNull</span> class]]) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">YES</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> ([[string stringByTrimmingCharactersInSet:[<span class="built_in">NSCharacterSet</span> whitespaceCharacterSet]] length]==<span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">YES</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="literal">NO</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">链接：https:<span class="comment">//www.jianshu.com/p/fd32b759bace</span></span><br><span class="line">來源：简书</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2018/03/17/2018-03-17_判断NSString为空的问题浅析/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">NSNull</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">NSString</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">iOS</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">nil</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/technology//" class="article-tag-list-link color1">technology</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/03/17/2018-03-17_判断NSString为空的问题浅析/">显示全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-2018-03-14_AppStore无法内购相关问题解决的解决方案" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/14/2018-03-14_AppStore无法内购相关问题解决的解决方案/">AppStore无法内购相关问题解决的解决方案</a>
+    </h1>
+  
+
+        
+        <a href="/2018/03/14/2018-03-14_AppStore无法内购相关问题解决的解决方案/" class="archive-article-date">
+  	<time datetime="2018-03-14T14:12:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-如果游戏无法进行内购，或者购买显示为不可用，需要玩家配合检查确认以下情况：">1.如果游戏无法进行内购，或者购买显示为不可用，需要玩家配合检查确认以下情况：</h3><ol>
+<li>请确认应用是从 App Store 上面下载的。</li>
+<li>请确认不是越狱安装破解插件导致无法购买。</li>
+<li>请确认网络是否通畅</li>
+<li>请确认在 系统设置 &gt; 通用 &gt; 访问限制 中的 “App 内购买项目” 是否为打开状态。</li>
+<li>注销你的 Apple ID 重新进入游戏，重新尝试购买；</li>
+<li><p>如果你已经购买成功但是却没有收到金币，那么你可以切换网络成移动数据网络，然后重新打开游戏确认。</p>
+        
+          <a class="article-more-a" href="/2018/03/14/2018-03-14_AppStore无法内购相关问题解决的解决方案/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">AppStore</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">无法内购</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">苹果客服电话</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/technology//" class="article-tag-list-link color1">technology</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/03/14/2018-03-14_AppStore无法内购相关问题解决的解决方案/">显示全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-2018-03-11_NSString的boolValue方法甚解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/11/2018-03-11_NSString的boolValue方法甚解/">NSString的boolValue方法甚解</a>
+    </h1>
+  
+
+        
+        <a href="/2018/03/11/2018-03-11_NSString的boolValue方法甚解/" class="archive-article-date">
+  	<time datetime="2018-03-11T13:22:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1、前言">1、前言</h3><p>NSString的<code>boolValue</code>之前有使用，但是一直没有真正了解什么时候返回YES（true）或NO(false)。其实，苹果在官方文档中已经写的很清楚，按<code>command</code> + <code>control</code> 点击<code>boolValue</code>进入文档就可以看到：</p>
+<p>&gt;</p>
+<blockquote>
+<p><strong>boolValue</strong><br>The Boolean value of the string.</p>
+<p><strong>Declaration</strong><br>@property(readonly) BOOL boolValue;</p>
+<p><strong>Discussion</strong><br>This property is YES on encountering one of “Y”, “y”, “T”, “t”, or a digit 1-9—the method ignores any trailing characters. This property is NO if the receiver doesn’t begin with a valid decimal text representation of a number.<br>The property assumes a decimal representation and skips whitespace at the beginning of the string. It also skips initial whitespace characters, or optional -/+ sign followed by zeroes.</p>
+</blockquote>
+        
+          <a class="article-more-a" href="/2018/03/11/2018-03-11_NSString的boolValue方法甚解/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">NSString</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">boolValue</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">iOS</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/technology//" class="article-tag-list-link color1">technology</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/03/11/2018-03-11_NSString的boolValue方法甚解/">显示全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-2018-03-05_两个NSInvocation崩溃引起的反思" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/05/2018-03-05_两个NSInvocation崩溃引起的反思/">两个NSInvocation崩溃引起的反思</a>
+    </h1>
+  
+
+        
+        <a href="/2018/03/05/2018-03-05_两个NSInvocation崩溃引起的反思/" class="archive-article-date">
+  	<time datetime="2018-03-05T15:42:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1、前言">1、前言</h3><p>最近在使用NSInvocation进行多参数方法调用，结果就崩溃了！signature为nil 和 一直提示找不到方法！！！</p>
+<p><code>method signature argument cannot be nil</code> 崩溃信息：<br><figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">*** <span class="type">Terminating</span> app due to uncaught exception '<span class="type">NSInvalidArgumentException</span>', reason: '+[<span class="type">NSInvocation</span> _invocationWithMethodSignature:frame:]: <span class="keyword">method</span> signature argument cannot be <span class="keyword">nil</span>'</span><br><span class="line">*** <span class="type">First</span> throw call stack:</span><br><span class="line">(<span class="number">0x1831a6d8c</span>  .........)</span><br><span class="line">libc++abi.dylib: terminating <span class="keyword">with</span> uncaught exception <span class="keyword">of</span> <span class="keyword">type</span> <span class="type">NSException</span></span><br></pre></td></tr></table></figure></p>
+<p><code>unrecognized selector sent to instance</code>崩溃信息：<br><figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">*** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: '-<span class="keyword">[</span>ViewController openView]: unrecognized selector sent to<span class="instruction"> instance </span>0x10510b1b0'</span><br><span class="line">*** First<span class="instruction"> throw </span>call stack:</span><br><span class="line">(0x1831a6d8c ......<span class="function">)</span></span><br><span class="line">libc++abi.dylib: terminating with uncaught exception of type NSException</span><br></pre></td></tr></table></figure></p>
+        
+          <a class="article-more-a" href="/2018/03/05/2018-03-05_两个NSInvocation崩溃引起的反思/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">NSInvocation</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">NSMethodSignature</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">iOS</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/technology//" class="article-tag-list-link color1">technology</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/03/05/2018-03-05_两个NSInvocation崩溃引起的反思/">显示全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-2018-02-25_Gitment评论功能接入踩坑教程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/02/25/2018-02-25_Gitment评论功能接入踩坑教程/">Gitment评论功能接入踩坑教程</a>
+    </h1>
+  
+
+        
+        <a href="/2018/02/25/2018-02-25_Gitment评论功能接入踩坑教程/" class="archive-article-date">
+  	<time datetime="2018-02-25T04:45:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-25</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1、前言">1、前言</h3><p>之前接入的评论功能，都因为各种原因被放弃了，今天从新计划接入评论功能，所以就有了今天这篇文章。</p>
+<h3 id="2、评论模块简介">2、评论模块简介</h3><ul>
+<li><strong>多说</strong> - 最多用户使用的评论，但遗憾2017年6月将暂定服务；不建议新用户使用，但为旧用户保留，也感谢多说一路的陪伴；</li>
+<li><strong>网易云跟帖</strong> - 网易提供的评论组件，功能比较简单，性能优秀；管理后台在查询上还不算特别智能，但足够普通用户使用；</li>
+<li><strong>畅言</strong> - 搜狐提供的评论组件，功能丰富，体验优异；但必须进行域名备案。只要域名备过案就可以通过审核，简单问题复杂化。</li>
+<li><strong>Disqus</strong> - 国外使用较多的评论组件。万里长城永不倒，一枝红杏出墙来，你懂的。</li>
+</ul>
+<p>以上评论模块应该大家都知道，多说和网易云跟帖没有了，畅言要备案，对于只是挂靠在GitHub的博客非常的不友好，放弃！Disqus，我们都希望自己的博客可以不分国界！所以Disqus也只能放弃！</p>
+<p>综上所述，将是我们要重点介绍的Gitment ！！！</p>
+        
+          <a class="article-more-a" href="/2018/02/25/2018-02-25_Gitment评论功能接入踩坑教程/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Gitment</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">博客评论功能</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">评论配置</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/technology//" class="article-tag-list-link color1">technology</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/02/25/2018-02-25_Gitment评论功能接入踩坑教程/">显示全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-2018-02-23_免费将音频转成文字的快速方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -635,591 +1238,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-2018-02-03_让你的iTerm更Geek!" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/02/03/2018-02-03_让你的iTerm更Geek!/">让你的iTerm更Geek!</a>
-    </h1>
-  
-
-        
-        <a href="/2018/02/03/2018-02-03_让你的iTerm更Geek!/" class="archive-article-date">
-  	<time datetime="2018-02-03T15:42:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1、前言">1、前言</h3><p>iTerm2 作为一个免费&amp;开源的应用，Mac程序员应用必备的软件！<br>作为一个专业的终端，功能真的很强大，<code>iTerm</code> + <code>oh-my-zsh</code>  应作为最佳配置使用！</p>
-<h3 id="2、一键调出_iTerm2">2、一键调出 iTerm2</h3><blockquote>
-<p>我们有时会遇上这样一种情况，就是我们只想用命令行执行某一个特定的操作，然后就不需要它了。其实在这种情况下我们没有必要打开命令行应用的。比如我们就是想看一眼某个文件夹里面都有什么文件，类似这种操作我们其实没有必要单独开启一个命令行窗<br>口的。</p>
-</blockquote>
-        
-          <a class="article-more-a" href="/2018/02/03/2018-02-03_让你的iTerm更Geek!/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Terminal</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">iTerm进阶</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">命令行快捷键</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/technology//" class="article-tag-list-link color1">technology</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/02/03/2018-02-03_让你的iTerm更Geek!/">显示全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2018-01-29_装逼神句———有道词典命令行查询工具" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/29/2018-01-29_装逼神句———有道词典命令行查询工具/">装逼神句———有道词典命令行查询工具</a>
-    </h1>
-  
-
-        
-        <a href="/2018/01/29/2018-01-29_装逼神句———有道词典命令行查询工具/" class="archive-article-date">
-  	<time datetime="2018-01-29T00:49:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1、装逼说明">1、装逼说明</h3><p>不喜欢安装有道词典的应用程序，因为太耗资源还一堆广告，但是用浏览器打开<code>dict.youdao.com</code>也挺麻烦的，不是吗？快来试试有道词典命令行工具吧！</p>
-<h3 id="2、看图装逼">2、看图装逼</h3><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2018/01/2018-01-29-yddict-example.gif" alt="example"></p>
-        
-          <a class="article-more-a" href="/2018/01/29/2018-01-29_装逼神句———有道词典命令行查询工具/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">命令行查单词</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">有道词典</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/technology//" class="article-tag-list-link color1">technology</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/01/29/2018-01-29_装逼神句———有道词典命令行查询工具/">显示全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2018-01-20_iOS应用内评分功能简介" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/20/2018-01-20_iOS应用内评分功能简介/">iOS 应用内评分功能简介</a>
-    </h1>
-  
-
-        
-        <a href="/2018/01/20/2018-01-20_iOS应用内评分功能简介/" class="archive-article-date">
-  	<time datetime="2018-01-20T11:49:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1、前言">1、前言</h3><p>iOS 终于开发应用内评星和评论功能啦！不用每次跑到AppStore，这样用户体验越来越好！这也是苹果开放和进步地方，希望大家不要总以为创新就是新事件！也许新东西不是好东西~</p>
-        
-          <a class="article-more-a" href="/2018/01/20/2018-01-20_iOS应用内评分功能简介/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">StoreKit</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">iOS</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">requestReview</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/technology//" class="article-tag-list-link color1">technology</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/01/20/2018-01-20_iOS应用内评分功能简介/">显示全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2018-01-01_你好，2018！" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/01/2018-01-01_你好，2018！/">你好，2018！</a>
-    </h1>
-  
-
-        
-        <a href="/2018/01/01/2018-01-01_你好，2018！/" class="archive-article-date">
-  	<time datetime="2018-01-01T13:49:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>德鲁克在《管理的实践》中写道：“管理者很多时候在做决策的时候，都是在分析未来有可能有什么市场环境的变化，这些变化会有什么机会。”</p>
-<h4 id="序言">序言</h4><p>这一年，在生命中非常有意义的一年，从创业者离场，回到一个中型企业，改变非常大。从职场熟人到职场老油条？毕业不知觉已经3年多了，有时还会回忆美好的学生时代，有时在想大学时在努力一点，也许现在生活更加美好一点啦。一路走过的2017，经历了非常之多，是时候在尘封前记录下来吧！</p>
-        
-          <a class="article-more-a" href="/2018/01/01/2018-01-01_你好，2018！/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">2018</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">年终总结</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/life//" class="article-tag-list-link color5">life</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/01/01/2018-01-01_你好，2018！/">显示全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2017_12_开源协议简介" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/02/2017_12_开源协议简介/">开源协议简介</a>
-    </h1>
-  
-
-        
-        <a href="/2017/12/02/2017_12_开源协议简介/" class="archive-article-date">
-  	<time datetime="2017-12-02T14:19:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1、前言">1、前言</h3><p>之前百度要求内部全面停止使用 React / React Native，原因是facebook在自己的很多开源库的开源许可协议中的附加专利条款(Additional patent grant)引起了激烈争论：</p>
-<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="label">React</span> is <span class="keyword">BSD </span>licensed. We also provide an <span class="keyword">additional </span>patent grant.</span><br><span class="line"></span><br><span class="line">即：<span class="keyword">BSD </span>许可证 + 专利许可证。</span><br></pre></td></tr></table></figure>
-<p>所以，自己也了解了一下相关的开源协议，虽然看了又看，懂了又不懂，所以就记录一下吧！</p>
-        
-          <a class="article-more-a" href="/2017/12/02/2017_12_开源协议简介/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Apache</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">BSD</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">GPL</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">LGPL</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">MIT</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Mozilla</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">开源协议</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/induction//" class="article-tag-list-link color5">induction</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/02/2017_12_开源协议简介/">显示全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2017_11_你真的懂使用Runtime进行swizzle的最佳写法？" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/18/2017_11_你真的懂使用Runtime进行swizzle的最佳写法？/">你真的懂使用Runtime进行swizzle的最佳写法？</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/18/2017_11_你真的懂使用Runtime进行swizzle的最佳写法？/" class="archive-article-date">
-  	<time datetime="2017-11-18T13:15:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="前言">前言</h3><p>runtime 的黑魔法很多人都一定听过，或者已经在使用了。但是，怎么swizzle方法才是最好呢？</p>
-<h3 id="一般写法">一般写法</h3><figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">Method</span> <span class="title">originalMethod</span> = <span class="title">class_getInstanceMethod</span><span class="params">(aClass, originalSel)</span>;</span></span><br><span class="line">    <span class="function"><span class="keyword">Method</span> <span class="title">swizzleMethod</span> = <span class="title">class_getInstanceMethod</span><span class="params">(aClass, swizzleSel)</span>;</span></span><br><span class="line">    method_exchangeImplementations(originalMethod, swizzleMethod);</span><br></pre></td></tr></table></figure>
-<p>或者是下面这种方式，swizzle第二种写法:</p>
-<figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">Method</span> <span class="title">originalMethod</span> = <span class="title">class_getInstanceMethod</span><span class="params">(aClass, originalSel)</span>;</span></span><br><span class="line"> <span class="function"><span class="keyword">Method</span> <span class="title">swizzleMethod</span> = <span class="title">class_getInstanceMethod</span><span class="params">(aClass, swizzleSel)</span>;</span></span><br><span class="line"> BOOL didAddMethod = class_addMethod(aClass, originalSel, method_getImplementation(swizzleMethod), method_getTypeEncoding(swizzleMethod));</span><br><span class="line"> <span class="keyword">if</span> (didAddMethod) <span class="comment">&#123;</span><br><span class="line">     class_replaceMethod(aClass, swizzleSel, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));</span><br><span class="line"> &#125;</span><span class="keyword">else</span><span class="comment">&#123;</span><br><span class="line">     method_exchangeImplementations(originalMethod, swizzleMethod);</span><br><span class="line"> &#125;</span></span><br></pre></td></tr></table></figure>
-<h3 id="更好写法">更好写法</h3><p>其它，这样写，一般不会有问题，但是在一些情况下，比如这个hook的类没有实现你要swizzle的方法，这时是没有swizzle成功的，然后你自己写的 swizzle 里又自己调用自己，就无限循环。</p>
-        
-          <a class="article-more-a" href="/2017/11/18/2017_11_你真的懂使用Runtime进行swizzle的最佳写法？/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Runtime</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">swizzle</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/technology//" class="article-tag-list-link color1">technology</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/18/2017_11_你真的懂使用Runtime进行swizzle的最佳写法？/">显示全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/6/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="space">&hellip;</span><a class="page-number" href="/page/23/">23</a><a class="extend next" rel="next" href="/page/8/">Next &raquo;</a>
@@ -1345,15 +1363,19 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">知识体系</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">iOS开发高手课</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">极客时间</a>
+                <a href="javascript:void(0)" class="js-tag color5">学习总结</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">学习总结</a>
+                <a href="javascript:void(0)" class="js-tag color5">极客时间</a>
               </li>
              
               <li class="article-tag-list-item">
