@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Learn something of everything,  Learn everything of something.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="https://iHTCboy.com/"/>
-  <updated>2020-02-02T06:58:24.667Z</updated>
+  <updated>2020-02-02T07:16:58.943Z</updated>
   <id>https://iHTCboy.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="https://iHTCboy.com/2020/02/02/2020-02-02_%E5%BB%BA%E7%AB%8B%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/"/>
     <id>https://iHTCboy.com/2020/02/02/2020-02-02_建立你自己的开发知识体系/</id>
     <published>2020-02-02T12:20:20.000Z</published>
-    <updated>2020-02-02T06:58:24.667Z</updated>
+    <updated>2020-02-02T07:16:58.943Z</updated>
     <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/建立你自己的开发知识体系.png" alt="建立你自己的开发知识体系.png"></p>
 <a id="more"></a>
@@ -110,7 +110,7 @@
 <li>只对自己负责的那摊子事儿说的溜，而回答所在项目整体情况时却支支吾吾，面试不会成功。</li>
 </ol>
 <p>如果不是自由工作者，我想大多数的国内同学都没有机会选择，所以，面试是一个总是要面对的问题，每次辞职、被辞职，大家就重新拿起试题集来刷，<code>刷题目！刷算法！刷刷刷！</code></p>
-<p><code>所有的问题不能简单的一刀切！</code>，经过这么多年，我的理解里，问题没有对与错，好与坏。刷题目也是一样。我想说的是内力是不能一天俩天就长成，所以为面试，建立自己的开发知识体系，<code>面试题就是西天取经，每一道题目就是一个怪兽，你不可能一天打败所有怪兽，所以，不要忽视七七四十九日的轮回。</code></p>
+<p><code>所有的问题不能简单的一刀切！</code>，经过这么多年，我的理解里，问题没有对与错，好与坏。刷题目也是一样。我想说的是内力是不能一天俩天就长成，所以为面试，建立自己的开发知识体系，<code>面试题就是西天取经，每一道题目就是一个怪兽，你不可能一天就打败所有怪兽，所以，不要忽视七七四十九日的轮回。</code></p>
 <h4 id="书籍">书籍</h4><ol>
 <li>《代码整洁之道》</li>
 <li>《人月神话》</li>
@@ -156,7 +156,7 @@
     <link href="https://iHTCboy.com/2020/02/01/2020-02-01_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/"/>
     <id>https://iHTCboy.com/2020/02/01/2020-02-01_iOS开发高手课/</id>
     <published>2020-02-01T07:49:16.000Z</published>
-    <updated>2020-02-02T02:57:46.848Z</updated>
+    <updated>2020-02-02T07:31:22.406Z</updated>
     <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><blockquote>
 <p>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程 <a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a> </p>
 </blockquote>
@@ -168,12 +168,12 @@
 <p>以下是 <a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a> 的课程目录，也是后续这个系列的每篇文章的链接：</p>
 <ul>
 <li><del>开篇词 | 锚定一个点，然后在这个点上深耕</del></li>
-<li><del>01 | 建立你自己的iOS开发知识体系</del></li>
-<li><a href="https://ihtcboy.com/">02 | App 启动速度怎么做优化与监控？</a></li>
-<li><a href="https://ihtcboy.com/">03 | Auto Layout 是怎么进行自动布局的，性能如何？</a></li>
-<li><a href="https://ihtcboy.com/">04 | 项目大了人员多了，架构怎么设计更合理？</a></li>
-<li><a href="https://ihtcboy.com/">05 | 链接器：符号是怎么绑定到地址上的？</a></li>
-<li><a href="https://ihtcboy.com/">06 | App 如何通过注入动态库的方式实现极速编译调试？</a></li>
+<li><a href="https://ihtcboy.com/2020/02/02/2020-02-02_建立你自己的开发知识体系/">01 | 建立你自己的iOS开发知识体系</a></li>
+<li><a href="https://ihtcboy.com/2019/12/20/2019-12-20_iOS开发高手课02/">02 | App 启动速度怎么做优化与监控？</a></li>
+<li><a href="https://ihtcboy.com/2019/12/27/2019-12-27_iOS开发高手课03/">03 | Auto Layout 是怎么进行自动布局的，性能如何？</a></li>
+<li><a href="https://ihtcboy.com/2020/01/03/2020-01-03_iOS开发高手课04/">04 | 项目大了人员多了，架构怎么设计更合理？</a></li>
+<li><a href="https://ihtcboy.com/2020/01/10/2020-01-10_iOS开发高手课05/">05 | 链接器：符号是怎么绑定到地址上的？</a></li>
+<li><a href="https://ihtcboy.com/2020/01/10/2020-01-10_iOS开发高手课06/">06 | App 如何通过注入动态库的方式实现极速编译调试？</a></li>
 <li>[07 | Clang、Infer 和 OCLint ，我们应该使用谁来做静态分析？]</li>
 <li>[08 | 如何利用 Clang 为 App 提质？]</li>
 <li>[09 | 无侵入的埋点方案如何实现？]</li>
@@ -3060,23 +3060,67 @@
     <link href="https://iHTCboy.com/2019/12/20/2019-12-20_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE02/"/>
     <id>https://iHTCboy.com/2019/12/20/2019-12-20_iOS开发高手课02/</id>
     <published>2019-12-20T12:20:20.000Z</published>
-    <updated>2020-02-02T06:16:22.894Z</updated>
-    <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
+    <updated>2020-02-02T09:33:28.531Z</updated>
+    <content type="html"><![CDATA[<h2 id="1、前言">1、前言</h2><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/12/iOS开发高手课-02-App启动速度怎么做优化与监控？.png" alt="iOS开发高手课-02-App启动速度怎么做优化与监控？.png"></p>
 <a id="more"></a>
-<h3 id="2、正文">2、正文</h3><h3 id="学习&amp;分享">学习&amp;分享</h3><p><strong>授人以鱼不如授人以渔</strong></p>
-<h3 id="可以做什么？">可以做什么？</h3><ol>
-<li><ul>
-<li>工程优化：代码、规范、性能、AOP、日志</li>
-</ul>
+<h2 id="2、正文">2、正文</h2><p>本文作为第一篇，脑图中包含了一些学习的方法论，这里就不展开了，具体可以查看 <a href="https://ihtcboy.com/2020/02/02/2020-02-02_建立你自己的开发知识体系/">如何建立你自己的开发知识体系 | iHTCboy’s blog</a></p>
+<h3 id="学习原则">学习原则</h3><p><strong>授人以鱼不如授人以渔</strong></p>
+<p>就想学习英语一样，每一个字母都认识，但是串联起来就不认识了。学习也一样，可能整篇文章大家<code>都看懂</code>了，但是对于其中的词语或句子，可能是不懂的，比如，<code>rebase 指针</code>、<code>attribute((constructor))</code>、<code>selector 唯一性检查</code>、<code>动态库加载</code>、<code>ReactiveCocoa框架</code>、<code>抓取主线程调用栈</code>、<code>Mach-O</code>、<code>lazy 和 non-lazy 符号</code>、<code>rebind_symbol</code>、等。或者，整篇文章都<code>没有看懂</code>，但是每个字都认识。</p>
+<p>第一种情况，对于不认识的关键字，在搜索引擎就能找到很多，只能说是懒或恐惧心态，让你永远不去了解。第二种情况，一般多见于是抽象的文章，比如项目架构、编程思想等，大家都懂 <code>MVC</code>/<code>MVVM</code>，就是说不出懂什么的感觉，这种情况，还是建议多广义的学习，更多的实践，<code>很多东西，还是较难做到言传，只能意会！</code></p>
+<p>还有一种情况，我认为就是文章大家都看懂了，也没有什么疑问，但是忽略了一个面的概念，<code>把问题想太简单</code>，不会把知识点串联起来，不会触类旁通、融会贯通。举个例子，做过开发的都应该知道<code>单例模式</code>，如果不知道，搜索引擎都能搜索出一堆教程，并且介绍了来由，用途等，大家就知了知了。操作系统任务管理器、回收站、文件系统是不是一个单例？数据库连接池呢？生活中的例子，比如主席、CTO，对一个国家或一个公司，都是唯一的。</p>
+<p>所以，第三种情况，目前来看大多数人看文章学习都达不到的层次，需要借助大量的阅读或别人的传授或指点，才能悟出来。所以，这就是我要说的，<code>授人以鱼不如授人以渔</code>，尽自己最大的已知学习和分享，这是一件快乐的事~</p>
+<h3 id="启动">启动</h3><ul>
+<li><p>冷启动<br>App 点击启动前，它的进程不在系统里，需要系统新创建一个进程分配给它启动的情况。这是一次完整的启动过程。</p>
 </li>
+<li><p>热启动<br>App 在冷启动后用户将 App 退后台，在 App 的进程还在系统里的情况下，用户重新启动进入 App 的过程，这个过程做的事情非常少。</p>
+</li>
+</ul>
+<p>文章中简单的提到了<code>冷启动</code>、<code>热启动</code>。可能大家也是一看而过。这个启动其实是很重要的概念，不知道大家有没有留意，<code>汽车发动机的冷启动和热启动</code>、<code>电脑的冷启动和热启动</code>？那么，手机是不是也有冷启动和热启动？iOS有冷启动和热启动，那么Android是不是也有冷启动和热启动？那么App有冷启动和热启动，那么微信的小程序是不是也有冷启动和热启动？</p>
+<p>答案是肯定的！它们都有！为什么呢？？？似乎所有的系统都有冷启动和热启动！那么，冷启动和热启动，那么对汽车的伤害更大吗？冷启动和热启动那么对性能损耗(消耗)更大呢？答案也是肯定的，是<code>冷启动</code>！</p>
+<p>我是希望通过这个例子，让大家更加明白，一个简单的概念，可能很普通，但是一定不能放过！那么，到这里，针对<code>App 启动速度怎么做优化</code>，冷启动和热启动的重要性是不是自然面然就出来了，我们应该关注 <code>App的冷启动和热启动，减少冷启动，尽量让App在后台时能通过热启动打开。</code>，怎么理解呢？对于 iOS，系统严管管控手机的内存，当发现内存不足时，系统会全局发通知，让大家把不要的内存释放出来，如果大家都不释放，后台的应用就会被干掉，当然前台的应用如果占用内存超过阈值的话也会被干掉（kill）。所以，解决 <code>App 启动速度怎么做优化</code>，我们在写代码时，能注意到 App 内存使用情况，节省内存空间，减少不必要的内存创建，及时的释放内存等，都是对优化起到举足轻重的作用。</p>
+<p>以上，就是<code>冷启动和热启动</code>，希望感受到我一直说的<code>触类旁通</code>、<code>融会贯通</code>的理念。</p>
+<h3 id="App的启动主要包括三个阶段">App的启动主要包括三个阶段</h3><ol>
+<li>main() 函数执行前</li>
+<li>main() 函数执行后</li>
+<li>首屏渲染完成后</li>
 </ol>
+<p>文章中说的内容，这里就不打算详细展开，简单的看本文的思维导图就可以，另外，文章中的很多细节的内容，在后续的篇章中会慢慢的介绍，这里就不展开，否则说不完，大家感兴趣的，可以自行搜索，网络上真的都有了！需要提的是，解答一下前面说的几个有意思的问题</p>
 <ul>
+<li><p>1、 <code>+load()</code> 方法和 <code>+initialize()</code> 方法<br>需要了解这2个方式的区别和特性，这样才能更好的做性能优化。</p>
+</li>
+<li><p>2、 attribute((constructor)) 修饰的函数的调用<br>这个是函数的属性，有2种类型：<code>__attribute__((constructor))</code>和<code>__attribute__((destructor))</code></p>
+<p>  1）函数属性功能</p>
+<p>  <code>__attribute__ ((constructor))</code>：会使函数在 main()函数之前执行</p>
+<p>  <code>__attribute__ ((destructor))</code>：会使函数在 main()函数之后执行</p>
+<p>  2）功能范围</p>
+<p>  函数属性<code>__attribute__((constructor))</code>和<code>__attribute__((destructor))</code>在可执行文件或者库文件里都可以生效</p>
+</li>
+</ul>
+<pre><code><span class="number">3</span>）与全局变量比较
+
+全局变量对象的构造函数和析构函数分别在`__attribute__((<span class="function"><span class="keyword">constructor</span>))`和`__<span class="title">attribute__</span><span class="params">((<span class="keyword">destructor</span>)</span>)`标志的函数之前调用。
+
+4）<span class="title">PRIORITY</span> 优先级
+
+<figure class="highlight delphi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">__attribute__((<span class="function"><span class="keyword">constructor</span><span class="params">(PRIORITY)</span>))</span><br><span class="line">__<span class="title">attribute__</span><span class="params">((<span class="keyword">destructor</span>(PRIORITY)</span>))</span></span><br></pre></td></tr></table></figure>
+
+
+`__<span class="title">attribute__</span><span class="params">((<span class="keyword">constructor</span>)</span>)` 按照优先级小到大执行， `__<span class="title">attribute__</span><span class="params">((<span class="keyword">destructor</span>(PRIORITY)</span>))` 则是从大到小执行。
+
+注意：
+1、可执行程序或库文件都可以使用此属性修饰函数
+2、同一个可执行程序或库文件允许多个函数被修饰，执行顺序由代码编写顺序或编译链接顺序有关
+
+
+引用来源：[函数属性__<span class="title">attribute__</span><span class="params">((<span class="keyword">constructor</span>)</span>)和__<span class="title">attribute__</span><span class="params">((<span class="keyword">destructor</span>)</span>) - <span class="title">tianmo2010</span>的专栏]<span class="params">(https://blog.csdn.net/tianmohust/article/details/45310349)</span></span>
+</code></pre><h3 id="可以做什么？">可以做什么？</h3><ul>
+<li>工程优化：代码、规范、性能、AOP、日志</li>
 <li>工程监控：耗时、内存、网络、卡顿、崩溃、瘦身、耗电</li>
 <li>工程效率：响应式框架、函数式编程、APM、监控系统</li>
 <li>技术深研：RN、Flutter、小程序、动态化</li>
 </ul>
-<h3 id="3、总结">3、总结</h3><h3 id="参考">参考</h3><ul>
+<h2 id="3、总结">3、总结</h2><h2 id="参考">参考</h2><ul>
 <li><a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a></li>
 <li><a href="https://ming1016.github.io/" target="_blank" rel="external">星光社 - 戴铭的博客</a></li>
 <li><a href="https://www.jianshu.com/p/e7f8459aaf38" target="_blank" rel="external">iOS 在循环中使用计算属性导致内存暴涨 - 简书</a></li>
@@ -3108,6 +3152,7 @@
 <li><a href="https://juejin.im/post/5c8e278d51882545b32e657f" target="_blank" rel="external">App启动之Dyld在做什么</a></li>
 <li><a href="https://blog.csdn.net/abc649395594/article/details/52350426" target="_blank" rel="external">获取任意线程调用栈的那些事 - KT的iOS开发小站</a></li>
 <li><a href="https://juejin.im/post/5c3c56eff265da614f708595" target="_blank" rel="external">谈谈iOS获取调用链 - 掘金</a></li>
+<li><a href="https://blog.csdn.net/tianmohust/article/details/45310349" target="_blank" rel="external">函数属性<strong>attribute</strong>((constructor))和<strong>attribute</strong>((destructor)) - tianmo2010的专栏</a></li>
 <li><a href="https://wetest.qq.com/lab/view/434.html" target="_blank" rel="external">真香！iOS云真机全新上线！ - 腾讯WeTest</a></li>
 <li><a href="https://testerhome.com/topics/20866" target="_blank" rel="external">iOS 云真机实现原理 · TesterHome</a></li>
 <li><a href="https://www.jianshu.com/p/c14987eee107" target="_blank" rel="external">如何精确度量 iOS App 的启动时间 - 简书</a></li>
@@ -3124,7 +3169,7 @@
 </blockquote>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h3 id="1、前言">1、前言</h3><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
+    <![CDATA[<h2 id="1、前言">1、前言</h2><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/12/iOS开发高手课-02-App启动速度怎么做优化与监控？.png" alt="iOS开发高手课-02-App启动速度怎么做优化与监控？.png"></p>]]>
     
     </summary>
