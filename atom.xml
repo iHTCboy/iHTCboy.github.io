@@ -424,16 +424,22 @@
     <link href="https://iHTCboy.com/2020/01/03/2020-01-03_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE04/"/>
     <id>https://iHTCboy.com/2020/01/03/2020-01-03_iOS开发高手课04/</id>
     <published>2020-01-03T12:20:20.000Z</published>
-    <updated>2020-02-03T00:59:26.018Z</updated>
+    <updated>2020-02-03T10:23:05.230Z</updated>
     <content type="html"><![CDATA[<h2 id="1、前言">1、前言</h2><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/iOS开发高手课-04-项目大了人员多了，架构怎么设计更合理？.png" alt="iOS开发高手课-04-项目大了人员多了，架构怎么设计更合理？.png"></p>
 <a id="more"></a>
 <h2 id="2、正文">2、正文</h2><blockquote>
 <p>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程 <a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a> </p>
 </blockquote>
-<p><code>TODO</code></p>
-<h2 id="3、总结">3、总结</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TODO</span><br></pre></td></tr></table></figure>
-<p><br></p>
+<h3 id="带问题找答案">带问题找答案</h3><ol>
+<li>模块粒度应该如何划分？</li>
+<li>为什么要分层？</li>
+<li>如何分层？</li>
+<li>多团队如何协作？</li>
+</ol>
+<p>文中提了4个问题，那么这4个问题怎么解答呢？所以，解答前，我觉得还是要先说说为什么有架构这东西？</p>
+<h3 id="项目架构">项目架构</h3><p>模块粒度的划分是架构设计中非常关键的一步。同时，这也是一个细活，我们最好可以在不同阶段采用不同的粒度划分模块。</p>
+<h2 id="3、总结">3、总结</h2><p><br></p>
 <p>注：更多关于 iOS 开发和程序开发相关的内容，可以查看系列，目前还在连载中 <a href="https://ihtcboy.com/2020/02/01/2020-02-01_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/">【学习总结】iOS开发高手课 – (连载中) | iHTCboy’s blog</a>，以上，希望对你有用！</p>
 <h2 id="参考">参考</h2><ul>
 <li><p><a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a></p>
@@ -714,7 +720,7 @@
     <link href="https://iHTCboy.com/2019/12/27/2019-12-27_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE03/"/>
     <id>https://iHTCboy.com/2019/12/27/2019-12-27_iOS开发高手课03/</id>
     <published>2019-12-27T12:20:20.000Z</published>
-    <updated>2020-02-03T10:09:36.220Z</updated>
+    <updated>2020-02-03T10:30:29.378Z</updated>
     <content type="html"><![CDATA[<h2 id="1、前言">1、前言</h2><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/12/iOS开发高手课-03-AutoLayout是怎么进行自动布局的，性能如何？.png" alt="iOS开发高手课-03-AutoLayout是怎么进行自动布局的，性能如何？.png"></p>
 <a id="more"></a>
@@ -823,7 +829,7 @@
 <li><code>命令式编程</code>（Imperative Programming）：命令“机器”如何去做事情(how)，这样不管你想要的是什么(what)，它都会按照你的命令实现。</li>
 <li><code>声明式编程</code>（Declarative Programming）：告诉“机器”你想要的是什么(what)，让机器想出如何去做(how)。</li>
 </ul>
-<p><code>SwiftUI</code> 是<code>声明式编程</code>，还有<code>函数式编程</code>、<code>响应式编程</code> 等编程思想，这里就不说了。这里提的原因是，SwiftUI 采用不同的布局方式，但是依然使用 <code>Auto Layout</code>，并且 <code>VStack</code> 也是天合之作吧！</p>
+<p><code>SwiftUI</code> 是<code>声明式编程</code>，还有<code>函数式编程</code>、<code>响应式编程</code> 等编程思想，这里暂时就不多说，有兴趣的可以自行搜索。这里提的原因是，SwiftUI 采用不同的布局方式，与<code>React Native</code>/ <code>Flutter</code>等热门框架一样采用<code>声明式UI</code>，并且依然使用 <code>Auto Layout</code>，并且 <code>VStack</code> 也是天合之作吧！</p>
 <h2 id="3、总结">3、总结</h2><p>首先，关于 iOS 、 Xcode 和对应年份的关系，可以梳理一下，2012年 Xcode4 对应 iOS 6 ，2013年 Xcode5 和 iOS 7。它们相差2，所以，2020年将发布 Xcode12 和 iOS 14。这个就是一个数字游戏，可记可不记，就是想说明，记忆可以找规律的。</p>
 <p>回到最前面提到的3个疑问题，你是不是已经有了自己的答案了呢？</p>
 <ol>
