@@ -714,7 +714,7 @@
     <link href="https://iHTCboy.com/2019/12/27/2019-12-27_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE03/"/>
     <id>https://iHTCboy.com/2019/12/27/2019-12-27_iOS开发高手课03/</id>
     <published>2019-12-27T12:20:20.000Z</published>
-    <updated>2020-02-03T06:04:20.114Z</updated>
+    <updated>2020-02-03T09:51:19.709Z</updated>
     <content type="html"><![CDATA[<h2 id="1、前言">1、前言</h2><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/12/iOS开发高手课-03-AutoLayout是怎么进行自动布局的，性能如何？.png" alt="iOS开发高手课-03-AutoLayout是怎么进行自动布局的，性能如何？.png"></p>
 <a id="more"></a>
@@ -746,11 +746,14 @@
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">+ (<span class="built_in">NSArray</span> *)constraintsWithVisualFormat:(<span class="built_in">NSString</span> *)format options:(<span class="built_in">NSLayoutFormatOptions</span>)opts metrics:(<span class="built_in">NSDictionary</span> *)metrics views:(<span class="built_in">NSDictionary</span> *)views;</span><br></pre></td></tr></table></figure>
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">+(<span class="keyword">id</span>)constraintWithItem:(<span class="keyword">id</span>)view1 attribute:(<span class="built_in">NSLayoutAttribute</span>)attr1 relatedBy:(<span class="built_in">NSLayoutRelation</span>)relation toItem:(<span class="keyword">id</span>)view2 attribute:(<span class="built_in">NSLayoutAttribute</span>)attr2 multiplier:(<span class="built_in">CGFloat</span>)multiplier constant:(<span class="built_in">CGFloat</span>)c;</span><br></pre></td></tr></table></figure>
 <p>关于具体使用和 VFL 相关使用可以查看官方文档：<a href="https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/VisualFormatLanguage.html" target="_blank" rel="external">Auto Layout Guide: Visual Format Language</a>，所有学习资料官方文档是第一手！</p>
-<h4 id="4-_使用_Auto_Layout_时注意的问题">4. 使用 Auto Layout 时注意的问题</h4><ol>
+<h4 id="4-_使用_Auto_Layout_时注意的问题">4. 使用 Auto Layout 时注意的问题</h4><h5 id="Constraint_Churn（约束流失）">Constraint Churn（约束流失）</h5><ol>
 <li>Avoid removing all constraints （避免删除所有约束）</li>
-<li>Add static constraints once （仅一次添加静态约束）</li>
+<li>Add static constraints once （仅一次添加静态约束，且不要再改变它们）</li>
 <li>Only change the constraints that need changing（只更改需要更改的约束）</li>
 <li>Hide views instead of removing them（隐藏视图而不是删除它们）</li>
+</ol>
+<p>注：来自：<a href="https://developer.apple.com/videos/play/wwdc2018/220" target="_blank" rel="external">High Performance Auto Layout - WWDC 2018 - Videos - Apple Developer</a></p>
+<h5 id="Summary">Summary</h5><ol>
 <li>Stack Views help build easily maintainable layouts (堆栈视图有助于构建易于维护的布局)</li>
 <li>Use activate and deactivate for constraints (使用激活和停用来约束)</li>
 <li>Determine size through constraints (通过约束确定尺寸)</li>
@@ -759,7 +762,7 @@
 <li>Alignment goes beyond top, bottom, and center (对齐超出顶部，底部和中心)</li>
 <li>Keep localization in mind （记住本地化）</li>
 </ol>
-<p>以上注意事项来自 <code>WWDC</code>，具体视频可参考文章末尾的引用来源。</p>
+<p>以上注意事项来自 <code>WWDC</code>，具体视频可参考文章末尾的引用来源。这里不打算详细解说，因为视频真的说的很好，推荐大家去看看啊。</p>
 <h4 id="5-_Auto_Layout_的应用领域">5. Auto Layout 的应用领域</h4><p>Auto Layout 其实，除了可以用代码来创建，苹果的可视化布局，也有使用，<code>nib</code>，<code>xib</code>，<code>storyboard</code>，那么大家对这3个东西了解熟悉吗？</p>
 <h5 id="Interface_Builder_工具">Interface Builder 工具</h5><p><code>Interface Builder</code> 在 Xcode 4 之前，是一个独立的软件，Xcode 4 开始集成到Xcode 中的。这个大家现在比较熟悉，就是可以用鼠标以图形化的方式，拖拉元素来创建UI界面。</p>
 <h5 id="NIB、XIB_区别">NIB、XIB 区别</h5><p>Xcode 3 前，Interface Builder 创建的文件是 <code>NIB</code>（二进制格式，NeXT Interface Builder），不利于版本控制。</p>
@@ -771,18 +774,64 @@
 <h4 id="6-_Auto_Layout_的优缺点">6. Auto Layout 的优缺点</h4><p><code>Auto Layout</code>的优点不用多说，解决手动计算每个屏幕尺寸的布局，提高工程效率！缺点的话，大概就是适当的导致性能降低？</p>
 <p><code>Auto Layout 导致性能降低</code>？是吗？为什么是？为什么不是？前面的“什么是 Auto Layout”只是简单的简介，Auto Layout 是一个 <code>布局系统</code>，没有深入的介绍，不知道大家有没有读到那里时，产生疑问或兴趣呢？</p>
 <p>所以，要知道 Auto Layout 的优缺点，还需要深入了解它的原理，才能理解优缺点！否则，死记硬背过后还是不明不白。Auto Layout 是一套 <code>布局引擎系统</code>，叫作 <code>Layout Engine</code> ，是 Auto Layout 的核心。了解 Layout Engine 的布局原理，是理解它的性能（优缺点）的基础。</p>
-<p>这里，主要参考苹果官方的 WWDC 视频来解说，官方至少是正确和明确的：</p>
-<p>每个视图在得到自己的布局之前，Layout Engine 会将视图、约束、优先级、固定大小通过计算转换成最终的大小和位置。</p>
-<h4 id="7-_Auto_Layout_触类旁通">7. Auto Layout 触类旁通</h4><h5 id="UIStackView，flexbox">UIStackView，flexbox</h5><p>使用 Auto Layout 一定要注意多使用 Compression Resistance Priority 和 Hugging Priority，利用优先级的设置，让布局更加灵活，代码更少，更易于维护</p>
-<h5 id="SwiftUI">SwiftUI</h5><h2 id="3、总结">3、总结</h2><p>首先，关于 iOS 、 Xcode 和对应年份的关系，可以梳理一下，2012年 Xcode4 对应 iOS 6 ，2013年 Xcode5 和 iOS 7。它们相差2，所以，2020年将发布 Xcode12 和 iOS 14。这个就是一个数字游戏，可记可不记，就是想说明，记忆可以找规律的。</p>
+<p>所以在这里补充一下，主要参考苹果官方的 WWDC 视频来解说 <code>Layout Engine</code>，引用主讲者 Jason Yao 说的：<code>我们并不只想说这样不好，我们相信大家真正的理解它，理解这个过程！剥开表面！了解真正发生了什么？</code>：</p>
+<h5 id="The_Render_Loop_（渲染循环）">The Render Loop （渲染循环）</h5><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/12/01-The-Render-Loop.jpg" alt="01-The-Render-Loop.jpg"></p>
+<p>布局引擎是工作流程如上图所示，<code>Update Constraints</code>（更新约束）流，从父视图的约束开始更新，传递到子视图，再到子子视图，这里有2点要说明，一是这个更新约束只是从有约束变化的视图开始，并不是所有视图都更新；二是这个传递过程为什么是从父级开始，因为当一个约束变化时，这个约束是自己与父级的关系或自己与子级的关系，所以会通知给子级视图来响应！<code>Layout</code>（布局）流，是从子视图开始布局，为什么是反向呢？一个视图的布局，它一定是由自己和所有的子视图组成，那自己的布局一定是受子视图的布局和约束影响，所以先确认所有子视图的约束，那自己的视图就确实了，这个可能有点绕，大家可以看看原视频来理解。<code>Display</code> （渲染显示）流，因为子视图布局确定了，那显示的大小和位置就能确定，所以也是从子视图开始显示。</p>
+<h5 id="What_is_updateConstraints?（什么是_updateConstraints_？）">What is updateConstraints?（什么是 updateConstraints ？）</h5><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/12/02-The-Render-Loop.jpg" alt="02-The-Render-Loop.jpg"></p>
+<p><code>updateConstraints()</code> 是视图的约束更新时会调用的方法，可以重写这个方法来自行设置约束条件。图中列出了 <code>Update Constraints</code>（更新约束）、<code>Layout</code>（布局）、<code>Display</code> （渲染显示） 的对应关系的方法。这里与第一个图并不是对应的关系！而是这3个状态的生命周期分别有对应的方法来响应，要怎么理解？</p>
+<p>要理解这个图，最简单是从了解 <code>layoutSubviews()</code>、<code>setNeedsLayout()</code>、<code>layoutIfNeeded()</code> 三者的关联和作用，明白这3个方法的作用，那么就知道这个生命周期是什么意思。</p>
+<p><code>setNeedsLayout()</code>：当一个UIView对象此方法时，实际上等同于做了一个标记，告诉系统需要重新布局，但不会立刻执行，直到 drawing cycle 循环到达该节点时，才会调用<code>layoutSubviews()</code> 方法重新布局。</p>
+<p><code>layoutIfNeeded()</code>：允许在 drawing cycle 循环到达该节点之前，就立刻执行布局刷新调用 <code>layoutSubviews()</code> 方法。</p>
+<p> <code>layoutSubviews()</code>：在上面2个方法调用后，都会被调用。另外，当 <code>addSubview</code>、<code>size</code> 改变或滑动UIScrollView、旋转Screen等都会触发。</p>
+<p>回到 <code>updateConstraints()</code>、<code>setNeedsUpdateConstraints()</code>、<code>updateConstraintsIfNeeded()</code>，那它们的作用也是对应的关系。现在剩下的问题就是，为什么需要这些方法？？？我们在开发中，是不是会改变视图后，更马上刷新这个页面就会用到这些方法。那么同时，我们改变（更新）约束后，是不是也希望刷新约束？所以，这些方法的作用就是这样，那么为什么要这样做，有什么好处呢？因为约束更新，需要重新计算一次，那我们可以自己来控制要不要更新，能减少<code>Constraint Churn</code>（约束流失），减少性能损耗。为什么？举例为说，你给一个Lable设置了新的字体，此时要不要马上更新约束？如果你下一句代码是设置新的字体大小呢？所以，你可以控制一组约束，什么时候才更新，现在明白了这些方法和它们对应的关系了吧。剩下的 <code>draw(_:)</code> 和 <code>setNeedsDisplay()</code> 也是同理，只是层级更底，渲染的调用刷新。</p>
+<h5 id="Activating_a_Constraint（激活一个约束）">Activating a Constraint（激活一个约束）</h5><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/12/03-Activating-a-Constraint.jpg" alt="03-Activating-a-Constraint.jpg"></p>
+<p>说了这么多，好像还没有说到 <code>Layout Engine</code> 布局引擎的工作流程。这个图就是这个流程，每个 <code>Window</code>  下有一个 <code>Engine</code>（引擎），那么 <code>View</code>（视图） 包含 <code>Variable</code>（变量）和 <code>Constraint</code>（约束），那么 Engine 与 View 之间通过 <code>Equation</code>（等式） 联系。</p>
+<p>那么要理解布局引擎的工作，其实很简单，就是<code>Constraint</code>约束描述了<code>View</code>视图的位置和大小（size），那么就通过 <code>Variable</code>（变量）来向引擎获取，需要获取什么？<br><code>minY</code> <code>minX</code> <code>height</code> <code>width</code>，那现在引擎需要做的就是把约束解析出这4个值，所以就是通过 <code>Equation</code>（等式）求解。<code>Equation</code>等式其实也很容易理解，就是像下面这些：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">text1<span class="class">.minX</span> = <span class="number">8</span></span><br><span class="line">text1<span class="class">.width</span> = <span class="number">100</span></span><br><span class="line">text2<span class="class">.minX</span> = text1<span class="class">.minX</span> + text1<span class="class">.width</span> +<span class="number">20</span></span><br></pre></td></tr></table></figure>
+<p>最后解出等式，等到结果：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">text1<span class="class">.minX</span> = <span class="number">8</span></span><br><span class="line">text1<span class="class">.width</span> = <span class="number">100</span></span><br><span class="line">text2<span class="class">.minX</span> = <span class="number">128</span></span><br></pre></td></tr></table></figure>
+<p>所以，布局引擎的核心就是这个等式的计算，我们初中就算了一元二次方程式，后来学习了多次方程式求解，是不是觉得很简单？那么这些数学问题，我们读书时就知道<code>数字题目答案只有一个，但是解法有很多！</code>，所以原文章提到 <a href="https://constraints.cs.washington.edu/cassowary/" target="_blank" rel="external">Cassowary 算法</a>、<a href="https://en.wikipedia.org/wiki/Simplex_algorithm" target="_blank" rel="external">Simplex 算法</a> 就是解决这个方程式求解的问题。我们人可以做一些骚操作，但是要程序操作，一定是通用的解法，这也是<code>算法为什么难！数学为什难！因为找到规律的人，往往是牛逼的人！</code></p>
+<p><code>Equation</code>（等式）求解的结果，通过 <code>setNeedsLayout()</code> 通知所有的视图，视图通过 <code>UIView.layoutSubviews()</code> 方法从引擎中复制数据到子视图（Copying data from engine to subview）。</p>
+<p>所以，这个就是整个引擎工作的过程！不知道我说的明白不明白！理解了这个过程，就能回复前面的 <code>Auto Layout 会导致性能降低</code>？从原理上说，引擎的工作方式和我们开发者手动计算的过程是一样的！导致性能降低的原因，是因为一些<code>约束流失</code>（Constraint Churn）、<code>不可满足约束</code>（Unsatisfiable Constraints）等导致消耗大量计算。可能你会有疑问：为什么引擎不会做傻事呢？比如我自己计算的布局，我都缓存了，引擎做了吗？答案是肯定的，<code>Engine is a layout cache and tracker</code>（引擎是一个布局缓存和约束跟踪器），也就是你设置的布局，如果不必更新是不会更新约束的；同时，约束更新时引擎会知道那些约束需要重新计算，那么不需要再计算！所以，引擎系统导致性能降低本质来说可以忽视，剩下的就是，<code>如何避免我们设置约束时不合理导致性能降低呢</code>？可以参考前面一节：“4. 使用 Auto Layout 时注意的问题”，详细的所有原则这里就不展开了，下面会重点提几个。到此，引擎的原理问题算是解决啦！</p>
+<h5 id="Building_a_More_Performant_Layout（构建一个更好的性能布局）">Building a More Performant Layout（构建一个更好的性能布局）</h5><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/12/04-Building-a-More-Performant-Layout.jpg" alt="04-Building-a-More-Performant-Layout.jpg"></p>
+<p>这些列举了我们常见的 TableView 滚动卡顿的问题，其实我们知道原因，就是滚动过程中 Cell 要重绘，需要我们知道 Cell 可以重用，但是每个 Cell 的布局和长度可能千变万化，所以卡顿的问题，有一个就是 Cell 变化过程中，重新布局的问题。首先，避免删除所有约束，因为所有约束重新计算可能不是必要的，比如上图的用户头像的位置和大小，固定约束后就不要去改变它啦！那么，可能有一些 Cell 有图片，有一些 Cell 没有时，可以通过 <code>setHidden:</code> 方法 和 <code>noImageConstraints</code> 图片的单独约束来控制，这样，尽最大可以减少约束的计算，导致性能的降低，从而尽可能的避免卡顿！另外，使用 <code>Auto Layout</code> 可以多使用 <code>Compression Resistance Priority</code> 和 <code>Hugging Priority</code>，利用优先级的设置，让布局更加灵活，代码更少，更易于维护。</p>
+<p>以上内容来源: <a href="https://developer.apple.com/videos/play/wwdc2018/220" target="_blank" rel="external">High Performance Auto Layout - WWDC 2018 - Videos - Apple Developer</a></p>
+<h5 id="Independent_Sibling_Views（独立的兄弟视图）">Independent Sibling Views（独立的兄弟视图）</h5><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/12/05-Independent-Sibling-Views.jpg" alt="05-Independent-Sibling-Views.jpg"></p>
+<p>前面说到 <code>如何避免我们设置约束时不合理导致性能降低呢</code>？我们已经知道引擎需要计算方程式求解，对于每个元素视图单独约束，相互不依赖时，其实就是解决一元一次方程式，所以就是一条直线。对于我们开发来说，避免约束的相互依赖就能减少性能消耗，所以我们设置约束时，能不依赖的约束的视图，让他们保持独立！就是最优解！</p>
+<h5 id="Dependent_Sibling_Views（互相依赖的兄弟视图）">Dependent Sibling Views（互相依赖的兄弟视图）</h5><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/12/06-Dependent-Sibling-Views.jpg" alt="06-Dependent-Sibling-Views.jpg"></p>
+<p>对于相互依赖的约束，它们就构形了多元方程式，依赖关系越多，曲线就越陡峭。所以，我们能做的还是一样，尽量减少多个视图之前的约束依赖！</p>
+<h4 id="Nested_Views（嵌套的视图）">Nested Views（嵌套的视图）</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/12/07-Nested-Views.jpg" alt="07-Nested-Views.jpg"></p>
+<p>对于嵌套的视图，同理，减少视图的嵌套，减少嵌套的层级，都是解决性能的重要手段！</p>
+<p>以上内容来源：<a href="https://developer.apple.com/videos/play/wwdc2018/202/" target="_blank" rel="external">What’s New in Cocoa Touch - WWDC 2018 - Videos - Apple Developer</a> 。更多的技巧，可以参考前面一节：“4. 使用 Auto Layout 时注意的问题”。</p>
+<h5 id="Building_the_Layout（构建布局）">Building the Layout（构建布局）</h5><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/12/08-Building-the-Layout.jpg" alt="08-Building-the-Layout.jpg"></p>
+<p>前面只是简单的说明了引擎就是计算出视图的位置和大小，那么具体是怎么计算的呢？这个图片显示了布局引擎的工作流。每个视图在得到自己的布局之前，<code>Layout Engine</code> 会将视图、约束、优先级、固定大小等通过计算转换成最终的位置和大小。</p>
+<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/12/09-Building-the-Layout.jpg" alt="09-Building-the-Layout.jpg"></p>
+<p>所以，最终的 <code>Layout Engine</code> 计算到布局就是这样的过程，细节点还有很多。还是那句话，授人以鱼不如授人以渔<code>！大家有“渔”后，自然要自己捉鱼！</code>，这里就不详细解进了，可观看 WWDC 视频：<a href="https://developer.apple.com/videos/play/wwdc2015/218/" target="_blank" rel="external">Mysteries of Auto Layout, Part 1 - WWDC 2015 - Videos - Apple Developer</a>。</p>
+<p>最后，关于 <code>Auto Layout</code> 还有很多知识，比如怎么调试 Auto Layout 的 Debug？可以查看 <a href="https://developer.apple.com/videos/play/wwdc2016/236" target="_blank" rel="external">What’s New in Auto Layout - WWDC 2016 - Videos - Apple Developer</a> 视频。Auto Layout 的流程（The Layout Cycle），可以查看 <a href="https://developer.apple.com/videos/play/wwdc2015/219/" target="_blank" rel="external">Mysteries of Auto Layout, Part 2 - WWDC 2015 - Videos - Apple Developer</a>。</p>
+<h4 id="7-_Auto_Layout_触类旁通">7. Auto Layout 触类旁通</h4><h5 id="UIStackView_与_Flexbox">UIStackView 与 Flexbox</h5><p><code>UIStackView</code> 是2015年 iOS9 苹果推出的一套 API，它可以很好地减轻手动写或拖 constraint 带来的重复繁琐的工作，也可以自动化的处理排列和元素个数的变化。（当年因为需要iOS9+，导致很少有开发者使用，放在2020年的今年，这个控件可以熟悉一下啊！）与 Web 前端的 <code>Flexbox</code> 响应式布局是一个原理。特点有下面4个：</p>
+<ol>
+<li>Easy to build（容易构建）</li>
+<li>Easy to maintain （容易维护）</li>
+<li>Composable Stack Views （可组合的堆栈视图）</li>
+<li>Lightweight （轻量级）</li>
+</ol>
+<p>这里并不打算讲解 <code>UIStackView</code> 有多利害！确实它很利害。具体可以查看 WWDC 演示的Demo <a href="https://developer.apple.com/videos/play/wwdc2015/218" target="_blank" rel="external">Mysteries of Auto Layout, Part 1 - WWDC 2015 - Videos - Apple Developer</a>。</p>
+<p>关于 <code>Flexbox</code> 的思想可以看看文章 <a href="https://zhuanlan.zhihu.com/p/25303493" target="_blank" rel="external">30 分钟学会 Flex 布局 - 知乎</a> 和 <a href="https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html" target="_blank" rel="external">Flex 布局教程：语法篇 - 阮一峰的网络日志</a>，个人觉得文章写得很好。另外关于 <code>UIStackView</code> 的强大就借 <a href="https://juejin.im/post/5c2ee162e51d4550fc42ac57" target="_blank" rel="external">UIStackView 入坑指南 - 掘金</a> 文章的一张图来总结吧：</p>
+<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/12/10-UIStackView-Layout.png" alt="10-UIStackView-Layout.png"></p>
+<h5 id="SwiftUI">SwiftUI</h5><ul>
+<li><code>命令式编程</code>（Imperative Programming）：命令“机器”如何去做事情(how)，这样不管你想要的是什么(what)，它都会按照你的命令实现。</li>
+<li><code>声明式编程</code>（Declarative Programming）：告诉“机器”你想要的是什么(what)，让机器想出如何去做(how)。</li>
+</ul>
+<p><code>SwiftUI</code> 是<code>声明式编程</code>，还有<code>函数式编程</code>、<code>响应式编程</code> 等编程思想，这里就不说了。这里提的原因是，SwiftUI 采用不同的布局方式，但是依然使用 <code>Auto Layout</code>，并且 <code>VStack</code> 也是天合之作吧！</p>
+<h2 id="3、总结">3、总结</h2><p>首先，关于 iOS 、 Xcode 和对应年份的关系，可以梳理一下，2012年 Xcode4 对应 iOS 6 ，2013年 Xcode5 和 iOS 7。它们相差2，所以，2020年将发布 Xcode12 和 iOS 14。这个就是一个数字游戏，可记可不记，就是想说明，记忆可以找规律的。</p>
 <p>回到最前面提到的3个疑问题，你是不是已经有了自己的答案了呢？</p>
 <ol>
 <li>Auto Layout 如何实现自动布局的？</li>
 <li>这种布局算法真的会影响性能吗？</li>
 <li>应该选择手动布局还是选择Auto Layout呢？</li>
 </ol>
-<p>本章内容够不够深不深入？这个大家的了解水平不一样，如果觉得不够深入，还是可以参考本文末的参考扩展了解更多。因为原文还提到了 <a href="https://constraints.cs.washington.edu/cassowary/" target="_blank" rel="external">Cassowary 算法</a>、<a href="https://en.wikipedia.org/wiki/Simplex_algorithm" target="_blank" rel="external">Simplex 算法</a>，本文并没有把它作为主角色来解读，为什么呢？因为，它并不是我们了解和理解 <code>Auto Layout</code> 最核心的必备知识，并且它对技术有要求，不可能每个人都能看懂，否则文章一上来就会让读者害怕，适得其反。所以，在本文的基础上，如果大家还想深入了解，那这将是一道窗口，而不是一道门口！</p>
-<p>以后关于 Auto Layout 的知识，你是不是能更好的跟别人讲解呢？这些就是本文想要做的事情，当然还有更深入的知识可以研究，切记这只是开始！修行在个人~</p>
+<p>本章内容够不够深不深入？这个大家的了解水平不一样，如果觉得不够深入，还是可以参考本文末的参考扩展了解更多，因为 WWDC 视频中提到了很多细节的东西，有一些很棒，有一些很有趣，这里就不一一列出。因为原文还提到了 <a href="https://constraints.cs.washington.edu/cassowary/" target="_blank" rel="external">Cassowary 算法</a>、<a href="https://en.wikipedia.org/wiki/Simplex_algorithm" target="_blank" rel="external">Simplex 算法</a>，本文并没有把它作为主角色来解读，为什么呢？因为，它并不是我们了解和理解 <code>Auto Layout</code> 最核心的必备知识，并且它对技术有要求，不可能每个人都能看懂，否则文章一上来就会让读者害怕，适得其反。所以，在本文的基础上，如果大家还想深入了解，那这将是一道窗口，而不是一道门口！</p>
+<p>以后关于 <code>Auto Layout</code> 的知识，你是不是能更好的跟别人讲解呢？这些就是本文想要做的事情，当然还有更深入的知识可以研究，切记这只是开始！修行在个人~</p>
 <p><br></p>
 <p>注：更多关于 iOS 开发和程序开发相关的内容，可以查看系列，目前还在连载中 <a href="https://ihtcboy.com/2020/02/01/2020-02-01_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/">【学习总结】iOS开发高手课 – (连载中) | iHTCboy’s blog</a>，以上，希望对你有用！</p>
 <h2 id="参考">参考</h2><ul>
@@ -794,6 +843,7 @@
 <li><a href="https://developer.apple.com/videos/play/wwdc2015/218" target="_blank" rel="external">Mysteries of Auto Layout, Part 1 - WWDC 2015 - Videos - Apple Developer</a></li>
 <li><a href="https://developer.apple.com/videos/play/wwdc2015/219" target="_blank" rel="external">Mysteries of Auto Layout, Part 2 - WWDC 2015 - Videos - Apple Developer</a></li>
 <li><a href="https://developer.apple.com/videos/play/wwdc2016/236" target="_blank" rel="external">What’s New in Auto Layout - WWDC 2016 - Videos - Apple Developer</a></li>
+<li><a href="https://developer.apple.com/videos/play/wwdc2018/202/" target="_blank" rel="external">What’s New in Cocoa Touch - WWDC 2018 - Videos - Apple Developer</a> </li>
 <li><a href="https://developer.apple.com/videos/play/wwdc2017/412/" target="_blank" rel="external">Auto Layout Techniques in Interface Builder - WWDC 2017 - Videos - Apple Developer</a></li>
 <li><a href="https://developer.apple.com/videos/play/wwdc2015/407/" target="_blank" rel="external">Implementing UI Designs in Interface Builder - WWDC 2015 - Videos - Apple Developer</a></li>
 <li><a href="https://developer.apple.com/videos/play/wwdc2015/215/" target="_blank" rel="external">What’s New in Storyboards - WWDC 2015 - Videos - Apple Developer</a></li>
@@ -827,6 +877,7 @@
 <li><a href="https://github.com/ming1016/STMAssembleView" target="_blank" rel="external">ming1016/STMAssembleView: 制作一个类似苹果VFL(Visual Format Language)的格式化语言来描述类似UIStackView那种布局思路，并解析生成页面</a></li>
 <li><a href="https://ming1016.github.io/2015/11/03/deeply-analyse-autolayout/" target="_blank" rel="external">深入剖析Auto Layout，分析iOS各版本新增特性 | 星光社 - 戴铭的博客</a></li>
 <li><a href="https://www.jianshu.com/p/c18c9e5db4d4" target="_blank" rel="external">iOS关于setNeedsLayout、layoutIfNeeded、 layoutSubviews、drawRect的爱恨情仇 - 简书</a></li>
+<li><a href="https://kb.cnblogs.com/page/181030/" target="_blank" rel="external">声明式编程和命令式编程的比较<em>知识库</em>博客园</a></li>
 </ul>
 <p><br></p>
 <ul>
