@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="iHTCboy's blog">
 <meta property="og:description" content="1、前言首先，我认为学习总结，要有所总，所结，就是有归纳后，能用自己的话告诉别人！有所结，就是有所收获输出，一般我认为是思维导图，所以，每篇文章前，我都会先给出文章的脑图：">
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/12/iOS开发高手课-02-App启动速度怎么做优化与监控？.png">
-<meta property="og:updated_time" content="2020-02-02T10:30:15.148Z">
+<meta property="og:updated_time" content="2020-02-03T01:06:45.959Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【学习总结】02 | App 启动速度怎么做优化与监控？">
 <meta name="twitter:description" content="1、前言首先，我认为学习总结，要有所总，所结，就是有归纳后，能用自己的话告诉别人！有所结，就是有所收获输出，一般我认为是思维导图，所以，每篇文章前，我都会先给出文章的脑图：">
@@ -255,16 +255,16 @@ var _hmt = _hmt || [];
 </li>
 </ul>
 <p>文章中简单的提到了<code>冷启动</code>、<code>热启动</code>。可能大家也是一看而过。这个启动其实是很重要的概念，不知道大家有没有留意，<code>汽车发动机的冷启动和热启动</code>、<code>电脑的冷启动和热启动</code>？那么，手机是不是也有冷启动和热启动？iOS有冷启动和热启动，那么Android是不是也有冷启动和热启动？那么App有冷启动和热启动，那么微信的小程序是不是也有冷启动和热启动？</p>
-<p>答案是肯定的！它们都有！为什么呢？？？似乎所有的系统都有冷启动和热启动！那么，冷启动和热启动，那么对汽车的伤害更大吗？冷启动和热启动那么对性能损耗(消耗)更大呢？答案也是肯定的，是<code>冷启动</code>！</p>
-<p>我是希望通过这个例子，让大家更加明白，一个简单的概念，可能很普通，但是一定不能放过！那么，到这里，针对<code>App 启动速度怎么做优化</code>，冷启动和热启动的重要性是不是自然面然就出来了，我们应该关注 <code>App的冷启动和热启动，减少冷启动，尽量让App在后台时能通过热启动打开。</code>，怎么理解呢？对于 iOS，系统严管管控手机的内存，当发现内存不足时，系统会全局发通知，让大家把不要的内存释放出来，如果大家都不释放，后台的应用就会被干掉，当然前台的应用如果占用内存超过阈值的话也会被干掉（kill）。所以，解决 <code>App 启动速度怎么做优化</code>，我们在写代码时，能注意到 App 内存使用情况，节省内存空间，减少不必要的内存创建，及时的释放内存等，都是对优化起到举足轻重的作用。</p>
-<p>以上，就是<code>冷启动和热启动</code>，希望感受到我一直说的<code>触类旁通</code>、<code>融会贯通</code>的理念。</p>
+<p>答案是肯定的！它们都有！为什么呢？？？似乎所有的系统都有冷启动和热启动！那么，冷启动和热启动，那么对汽车的伤害更大吗？冷启动和热启动那个对性能损耗(消耗)更大呢？答案也是肯定的，是<code>冷启动</code>！</p>
+<p>我是希望通过这个例子，让大家更加明白，一个简单的概念，可能很普通，但是一定不要放过！那么，到这里，针对<code>App 启动速度怎么做优化</code>，冷启动和热启动的重要性是不是自然而然就出来了，我们应该关注 <code>App的冷启动和热启动，减少冷启动，尽量让App在后台时能通过热启动打开。</code>，怎么理解呢？对于 iOS，系统严管管控手机的内存，当发现内存不足时，系统会全局发通知，让大家把不要的内存释放出来，如果大家都不释放，后台的应用就会被干掉，当然前台的应用如果占用内存超过阈值的话也会被干掉（kill）。所以，解决 <code>App 启动速度怎么做优化</code>，我们在写代码时，能注意到 App 内存使用情况，节省内存空间，减少不必要的内存创建，及时的释放内存等，都是对优化起到举足轻重的作用。</p>
+<p>以上，就是<code>冷启动和热启动</code>，希望大家能感受到我一直说的<code>触类旁通</code>、<code>融会贯通</code>的理念。</p>
 <h3 id="App的启动主要包括三个阶段">App的启动主要包括三个阶段</h3><ol>
 <li>main() 函数执行前</li>
 <li>main() 函数执行后</li>
 <li>首屏渲染完成后</li>
 </ol>
-<p>文章中说的内容，这里就不打算详细展开，简单的看本文的思维导图就可以，另外，文章中的很多细节的内容，在后续的篇章中会慢慢的介绍，这里就不展开，否则说不完，大家感兴趣的，可以自行搜索，网络上真的都有了！需要提的是，解答一下前面说的几个有意思的问题</p>
-<h4 id="1、_+load()_方法和_+initialize()_方法">1、 +load() 方法和 +initialize() 方法</h4><p><code>+load()</code> 方法和 <code>+initialize()</code> 方法，大家都需要了解它们的区别和特性，这样才能更好的做性能优化。这里不作详细介绍，网<code>络上能找到的，我这里不都不会说</code>，除非值得注意的内容。</p>
+<p>文章中说的内容，这里就不打算详细展开，简单的看本文的思维导图就可以，另外，文章中的很多细节的内容，在后续的篇章中会慢慢的介绍，这里就不展开，否则说不完事，大家感兴趣的，可以提前自行搜索，网络上真的都有了！本文需要提的是，解答一下前面说的几个有意思的问题</p>
+<h4 id="1、_+load()_方法和_+initialize()_方法">1、 +load() 方法和 +initialize() 方法</h4><p><code>+load()</code> 方法和 <code>+initialize()</code> 方法，大家都需要了解它们的区别和特性，这样才能更好的做性能优化。这里不作详细介绍，<code>网络上能找到的，我这里不都不会说</code>，除非值得注意的内容。</p>
 <h4 id="2、_attribute((constructor))_修饰的函数的调用">2、 attribute((constructor)) 修饰的函数的调用</h4><p>这个是C语言的函数属性，有2种类型：<code>__attribute__((constructor))</code>和<code>__attribute__((destructor))</code></p>
 <pre><code><span class="number">1</span>）函数属性功能
 
@@ -301,10 +301,10 @@ var _hmt = _hmt || [];
 <p>这个，与下面这个问题相似，一起来回答吧</p>
 <h4 id="7、C语言、汇编语言_看不懂？！">7、C语言、汇编语言 看不懂？！</h4><p>看不懂？看不懂？看不懂？</p>
 <p>有没有发现，我们小时候也不懂中文，现在怎么就看懂了呢！学啊！学啊！学啊！</p>
-<p>怎么学？ 从<code>入门</code>到放弃啊！怎么入口？</p>
+<p>怎么学？ 从<code>入门</code>到放弃啊！怎么入门？</p>
 <p>网络上有很多优秀的资源，大家如果真的感兴趣，一定要主动去了解，一味地抗拒永远不会得到结果和答案。<a href="http://www.ruanyifeng.com/blog/2018/01/assembly-language-primer.html" target="_blank" rel="external">汇编语言入门教程 - 阮一峰的网络日志</a> ，汇编语言入门学习就是这样简单，<code>没有看不懂，只有不看懂！</code></p>
 <p>人生苦短，我们努力吧~</p>
-<h4 id="8、其它问题">8、其它问题</h4><p>其实的还有很多问题，这里就不一一指出，比如 <code>Swift 有 main 函数吗</code>？希望大家<code>多疑问，多思考，多总结！</code>，这样成长更快啦~</p>
+<h4 id="8、其它问题">8、其它问题</h4><p>其它的还有很多问题，这里就不一一指出，比如 <code>Swift 有 main 函数吗</code>？希望大家 <code>多疑问，多思考，多总结！</code>，这样成长更快啦~</p>
 <h2 id="3、总结">3、总结</h2><p>回到本文的主题，“App 启动速度怎么做优化与监控？”，优化，不知道大家是否还记得之前的第一篇文章说到的，不记得的可以回去看看。监控的话，这里没有详细提到，因为<code>性能监控</code>只是<code>监控系统</code>的一小部分，后面的章节在细节展开吧。</p>
 <p>这里先给出一个大纲，关于开发相关的工程优化，因为这也是我们从 <a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a> 来，我们要干什么？到那里去呢？</p>
 <ul>
@@ -321,6 +321,14 @@ var _hmt = _hmt || [];
 <h2 id="参考">参考</h2><ul>
 <li><a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a></li>
 <li><a href="https://ming1016.github.io/" target="_blank" rel="external">星光社 - 戴铭的博客</a></li>
+</ul>
+<p>WWDC:</p>
+<ul>
+<li><a href="https://developer.apple.com/videos/play/wwdc2016/406" target="_blank" rel="external">WWDC2016-406-Optimizing App Startup Time</a></li>
+<li><a href="https://developer.apple.com/videos/play/wwdc2017/413" target="_blank" rel="external">WWDC2017-413-App Startup Time:Past,Present,and Future</a></li>
+</ul>
+<p>Article:</p>
+<ul>
 <li><a href="https://www.jianshu.com/p/e7f8459aaf38" target="_blank" rel="external">iOS 在循环中使用计算属性导致内存暴涨 - 简书</a></li>
 <li><a href="https://www.jianshu.com/p/0ad9957e3716" target="_blank" rel="external">可能碰到的iOS笔试面试题（6）–内存管理 - 简书</a></li>
 <li><a href="https://juejin.im/post/5aca2b0a6fb9a028d700e1f8" target="_blank" rel="external">iOS RunLoop详解 - 掘金</a></li>
@@ -335,8 +343,6 @@ var _hmt = _hmt || [];
 <li><a href="http://www.zoomfeng.com/blog/launch-time.html" target="_blank" rel="external">iOS启动时间优化 - 第七章</a></li>
 <li><a href="https://blog.automatic.com/how-we-cut-our-ios-apps-launch-time-in-half-with-this-one-cool-trick-7aca2011e2ea" target="_blank" rel="external">How we cut our iOS app’s launch time in half (with this one cool trick)</a></li>
 <li><a href="https://blog.csdn.net/Hello_Hwc/article/details/78317863" target="_blank" rel="external">深入理解iOS App的启动过程</a></li>
-<li><a href="https://developer.apple.com/videos/play/wwdc2016/406" target="_blank" rel="external">WWDC2016-406-Optimizing App Startup Time</a></li>
-<li><a href="https://developer.apple.com/videos/play/wwdc2017/413" target="_blank" rel="external">WWDC2017-413-App Startup Time:Past,Present,and Future</a></li>
 <li><a href="https://www.jianshu.com/p/c14987eee107" target="_blank" rel="external">如何精准度量iOSAPP启动时间</a></li>
 <li><a href="http://yulingtianxia.com/blog/2016/10/30/Optimizing-App-Startup-Time/" target="_blank" rel="external">优化 App 的启动时间-杨萧玉</a></li>
 <li><a href="https://techblog.toutiao.com/2017/01/17/iosspeed/#more" target="_blank" rel="external">iOS客户端启动速度优化-今日头条</a></li>

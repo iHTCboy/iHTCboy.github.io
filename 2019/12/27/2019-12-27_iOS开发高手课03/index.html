@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="iHTCboy's blog">
 <meta property="og:description" content="1、前言首先，我认为学习总结，要有所总，所结，就是有归纳后，能用自己的话告诉别人！有所结，就是有所收获输出，一般我认为是思维导图，所以，每篇文章前，我都会先给出文章的脑图：">
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/12/iOS开发高手课-03-AutoLayout是怎么进行自动布局的，性能如何？.png">
-<meta property="og:updated_time" content="2020-02-02T16:07:11.298Z">
+<meta property="og:updated_time" content="2020-02-03T06:04:20.114Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【学习总结】03 | Auto Layout 是怎么进行自动布局的，性能如何？">
 <meta name="twitter:description" content="1、前言首先，我认为学习总结，要有所总，所结，就是有归纳后，能用自己的话告诉别人！有所结，就是有所收获输出，一般我认为是思维导图，所以，每篇文章前，我都会先给出文章的脑图：">
@@ -257,12 +257,13 @@ var _hmt = _hmt || [];
 <li>Auto Layout 的优缺点</li>
 <li>Auto Layout 触类旁通</li>
 </ol>
-<h4 id="1-_为什么需要_Auto_Layout">1. 为什么需要 Auto Layout</h4><p>为什么需要？那反推，就是没有 Auto Layout 之前是怎么样的？没有 Auto Layout 时，我们是通过设置元素的 <code>Frame</code> 来指定界面布局的大小和位置。刚开始，大家的App并不复杂，页面布局也很简单，并且一个历史原因，<code>iPhone4/s</code>（960x640像素）时代，iPhone 的宽度都是 640 像素, 开发时用 320 个点计算， 直到 2012年9月发布 <code>iPhone5</code> （1136x640像素），屏幕高度增长了！4寸，当时三星都开始5寸大屏了，大家当年吐槽iPhone长的图片大家可以搜索看看！此时此刻，适配 iPhone5 依然并没有太大难度，苹果默认针对没有适配 iPhone5 的App，在 iPhone5 打开App时，上下2端黑屏，这样来过度。</p>
-<p>其实就在当年，2012年的 WWDC2012 苹果发布了 <code>Auto Layout</code> 技术，从 <code>iOS6</code> 以后开始支持（<code>Xcode4</code>）。2013年9月发布 <code>iPhone5s</code>，但是大多数的开发者还是习惯使用传统的UI布局方式，大家的开发App布局并不会觉得麻烦，直到2014年才发生变化！</p>
-<p>2014年9月，苹果发布了 <code>iPhoe 6</code>（1334x750像素）、<code>iPhone 6 plus</code>（1920x1080像素），屏幕适配工作变得非常必要！如果用计算数值的方法工作量增加了几倍。因为4个尺寸的屏幕不一样！iPhone4/s（960x640像素）、iPhone 5/s （1136x640像素）、iPhoe 6（1334x750像素）、iPhone 6 plus（1920x1080像素），虽然大家还是可以按比例计算做缩放，但是这样并不能解决所有问题，因为如果想像素级还原设计、效果图调整尺寸等，可能都需要重新手动计算一次。所以，这样算过程，应该是2014年后才是 <code>Auto Layout</code>技术被大家广泛应用，我在 GitHub 查看了了iOS最经典的 <a href="https://github.com/SnapKit/Masonry" target="_blank" rel="external">Masonry</a> 库是 <a href="https://github.com/SnapKit/Masonry/commit/866db519124daa0607b000ce2ce8045c0a3a4fe3" target="_blank" rel="external">2013年7月22号</a> 创建的，也是符合这个历史进程~</p>
+<h4 id="1-_为什么需要_Auto_Layout">1. 为什么需要 Auto Layout</h4><p>为什么需要？<code>一般遇到解答不了的问题，可以试试逆向！</code>，那就反推，就是<strong>没有 Auto Layout 之前是怎么样的</strong>？没有 Auto Layout 时，我们是通过设置元素的 <code>Frame</code> 来手动指定界面布局的大小和位置。</p>
+<p>刚开始，大家的App并不复杂，页面布局也很简单，并且有一个历史原因，就是 <code>iPhone4/s</code>（960x640像素）时代<em>（更早的 iPhone 3G/S，3G网络，S是速度 Speed，因为08、09年那会，一般国内开发者估计都没有见过，所以这里就简单提一下。）</em>，iPhone 的宽度都是 640 像素, 开发时用 320 个点计算， 直到 2012年9月发布 <code>iPhone5</code> （1136x640像素），屏幕高度增长了！4寸，当时三星都开始5寸大屏了，大家当年吐槽iPhone长的图片大家可以搜索看看！此时此刻，适配 iPhone5 依然并没有太大难度，苹果默认针对没有适配 iPhone5 的App，在 iPhone5 打开App时，上下2端黑屏，这样来过度。</p>
+<p>就在当年，2012年的 WWDC2012 苹果发布了 <code>Auto Layout</code> 技术，从 <code>iOS6</code> 以后开始支持（<code>Xcode4</code>）。2013年9月发布 <code>iPhone5s</code>，但是大多数的开发者还是习惯使用传统的UI布局方式，大家的开发App布局并不会觉得麻烦，直到2014年才发生变化！</p>
+<p>2014年9月，苹果发布了 <code>iPhoe 6</code>（1334x750像素）、<code>iPhone 6 plus</code>（1920x1080像素），屏幕适配工作变得非常必要！如果用计算数值的方法工作量增加了几倍。因为4个尺寸的屏幕不一样！iPhone4/s（960x640像素）、iPhone 5/s （1136x640像素）、iPhoe 6（1334x750像素）、iPhone 6 plus（1920x1080像素），虽然大家还是可以按比例计算做缩放，但是这样并不能解决所有问题，因为如果想像素级还原设计、效果图调整尺寸等，可能都需要重新手动计算一次。所以，这样算过程，应该是2014年后才是 <code>Auto Layout</code>技术被大家广泛应用。我在 GitHub 查看了 iOS 最经典的 <a href="https://github.com/SnapKit/Masonry" target="_blank" rel="external">Masonry</a> 库是 <a href="https://github.com/SnapKit/Masonry/commit/866db519124daa0607b000ce2ce8045c0a3a4fe3" target="_blank" rel="external">2013年7月22号</a> 创建的，也是符合这个技术历史的进程啊~  <em>(ps: Masonry 源码值得研究学习，有很多可学习的知识，详细搜索引擎一下，已经有很多好的文章啦~)</em></p>
 <p>那么到此，大家明白了，为什么需要 Auto Layout 了吗？</p>
 <h4 id="2-_什么是_Auto_Layout">2. 什么是 Auto Layout</h4><p><code>Auto Layout</code> 是一种基于<code>约束</code>的、<code>描述</code>性的<code>布局系统</code>。也就是使用约束条件来描述布局，View 的 Frame 会根据这些描述来进行计算。</p>
-<h4 id="3-_怎么使用_Auto_Layout">3. 怎么使用 Auto Layout</h4><p>Xcode4，iOS6 引入了 <code>NSLayoutConstraint</code> 类，并且 <code>VFL</code> (Visual Format Language，可视化格式语言) 的方式创建约束。通过下面2个方式来生成布局约束组：</p>
+<h4 id="3-_怎么使用_Auto_Layout">3. 怎么使用 Auto Layout</h4><p>2012年，Xcode4，iOS6 引入了 <code>NSLayoutConstraint</code> 类，并且 <code>VFL</code> (Visual Format Language，视觉格式语言) 的方式创建约束。通过下面2个方式来生成布局约束组：</p>
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">+ (<span class="built_in">NSArray</span> *)constraintsWithVisualFormat:(<span class="built_in">NSString</span> *)format options:(<span class="built_in">NSLayoutFormatOptions</span>)opts metrics:(<span class="built_in">NSDictionary</span> *)metrics views:(<span class="built_in">NSDictionary</span> *)views;</span><br></pre></td></tr></table></figure>
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">+(<span class="keyword">id</span>)constraintWithItem:(<span class="keyword">id</span>)view1 attribute:(<span class="built_in">NSLayoutAttribute</span>)attr1 relatedBy:(<span class="built_in">NSLayoutRelation</span>)relation toItem:(<span class="keyword">id</span>)view2 attribute:(<span class="built_in">NSLayoutAttribute</span>)attr2 multiplier:(<span class="built_in">CGFloat</span>)multiplier constant:(<span class="built_in">CGFloat</span>)c;</span><br></pre></td></tr></table></figure>
 <p>关于具体使用和 VFL 相关使用可以查看官方文档：<a href="https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/VisualFormatLanguage.html" target="_blank" rel="external">Auto Layout Guide: Visual Format Language</a>，所有学习资料官方文档是第一手！</p>
@@ -281,24 +282,29 @@ var _hmt = _hmt || [];
 </ol>
 <p>以上注意事项来自 <code>WWDC</code>，具体视频可参考文章末尾的引用来源。</p>
 <h4 id="5-_Auto_Layout_的应用领域">5. Auto Layout 的应用领域</h4><p>Auto Layout 其实，除了可以用代码来创建，苹果的可视化布局，也有使用，<code>nib</code>，<code>xib</code>，<code>storyboard</code>，那么大家对这3个东西了解熟悉吗？</p>
-<ul>
-<li>Interface Builder 工具<br><code>Interface Builder</code> 在 Xcode 4 之前，是一个独立的软件，Xcode 4 开始集成到Xcode 中的。这个大家现在比较熟悉，就是可以用鼠标以图形化的方式，拖拉元素来创建UI界面。</li>
-</ul>
-<ul>
-<li>NIB、XIB 区别<br>Xcode 3 前，Interface Builder 创建的文件是 <code>NIB</code>（二进制格式，NeXT Interface Builder），不利于版本控制。</li>
-</ul>
+<h5 id="Interface_Builder_工具">Interface Builder 工具</h5><p><code>Interface Builder</code> 在 Xcode 4 之前，是一个独立的软件，Xcode 4 开始集成到Xcode 中的。这个大家现在比较熟悉，就是可以用鼠标以图形化的方式，拖拉元素来创建UI界面。</p>
+<h5 id="NIB、XIB_区别">NIB、XIB 区别</h5><p>Xcode 3 前，Interface Builder 创建的文件是 <code>NIB</code>（二进制格式，NeXT Interface Builder），不利于版本控制。</p>
 <p>Xcode 3 开始，Interface Builder 使用了一种新的文件格式 <code>XIB</code>（XML文本格式，OS X Interface Builder或XML Interface Builder），XIB在工程编译时被转换成NIB；</p>
-<ul>
-<li><p>XIB 文件<br><code>XIB</code> 是一个描述文件，包含了用户界面及相关元素；一个 XIB 文件对应一个ViewController，也可以通过使用XIB来自定义View。</p>
-</li>
-<li><p>StoryBoard 故事板</p>
-</li>
-</ul>
-<p>iOS 5 （Xcode3）开始，Apple提供了一种全新的布局界面方式 <code>StoryBoard</code> 来拖拉创建界面；StoryBoard 是一组 ViewController 对应的 XIB，以及它们之间的转换方式的集合；在StoryBoard 中，不仅可以看到每个 ViewController 的布局样式，也可以知道各个ViewController 之间的转换关系。</p>
+<h5 id="XIB_文件">XIB 文件</h5><p><code>XIB</code> 是一个描述文件，包含了用户界面及相关元素；一个 XIB 文件对应一个ViewController，也可以通过使用XIB来自定义View。</p>
+<h5 id="StoryBoard_故事板">StoryBoard 故事板</h5><p>iOS 5 （Xcode3）开始，Apple提供了一种全新的布局界面方式 <code>StoryBoard</code> 来拖拉创建界面；StoryBoard 是一组 ViewController 对应的 XIB，以及它们之间的转换方式的集合；在StoryBoard 中，不仅可以看到每个 ViewController 的布局样式，也可以知道各个ViewController 之间的转换关系。</p>
 <p>对于2013~2015年，当然非常的缺乏 iOS 开发者，所以一般的公司只有一个 iOS 开发，那么这时候，<code>StoryBoard</code> 就是最快速的创建界面的工具！此时，面对多种设备时，<code>Auto Layout</code> 就是锦上添花，可以大幅提高 UI 开发效率，一次性做出适合所有屏幕尺寸的 UI。</p>
 <p>现在，对使用 <code>StoryBoard</code> + <code>Auto Layout</code> 还是使用 代码 + <code>Masonry</code>/<code>SnapKit</code>，依然没有最终的答案，因为各有优缺点。</p>
-<h4 id="6-_Auto_Layout_的优缺点">6. Auto Layout 的优缺点</h4><p><code>Auto Layout</code>的优点不用多说，工程效率提高！缺点就是适当的导致性能降低？</p>
-<h4 id="7-_Auto_Layout_触类旁通">7. Auto Layout 触类旁通</h4><h5 id="UIStackView，flexbox">UIStackView，flexbox</h5><h5 id="SwiftUI">SwiftUI</h5><h2 id="3、总结">3、总结</h2><p><br></p>
+<h4 id="6-_Auto_Layout_的优缺点">6. Auto Layout 的优缺点</h4><p><code>Auto Layout</code>的优点不用多说，解决手动计算每个屏幕尺寸的布局，提高工程效率！缺点的话，大概就是适当的导致性能降低？</p>
+<p><code>Auto Layout 导致性能降低</code>？是吗？为什么是？为什么不是？前面的“什么是 Auto Layout”只是简单的简介，Auto Layout 是一个 <code>布局系统</code>，没有深入的介绍，不知道大家有没有读到那里时，产生疑问或兴趣呢？</p>
+<p>所以，要知道 Auto Layout 的优缺点，还需要深入了解它的原理，才能理解优缺点！否则，死记硬背过后还是不明不白。Auto Layout 是一套 <code>布局引擎系统</code>，叫作 <code>Layout Engine</code> ，是 Auto Layout 的核心。了解 Layout Engine 的布局原理，是理解它的性能（优缺点）的基础。</p>
+<p>这里，主要参考苹果官方的 WWDC 视频来解说，官方至少是正确和明确的：</p>
+<p>每个视图在得到自己的布局之前，Layout Engine 会将视图、约束、优先级、固定大小通过计算转换成最终的大小和位置。</p>
+<h4 id="7-_Auto_Layout_触类旁通">7. Auto Layout 触类旁通</h4><h5 id="UIStackView，flexbox">UIStackView，flexbox</h5><p>使用 Auto Layout 一定要注意多使用 Compression Resistance Priority 和 Hugging Priority，利用优先级的设置，让布局更加灵活，代码更少，更易于维护</p>
+<h5 id="SwiftUI">SwiftUI</h5><h2 id="3、总结">3、总结</h2><p>首先，关于 iOS 、 Xcode 和对应年份的关系，可以梳理一下，2012年 Xcode4 对应 iOS 6 ，2013年 Xcode5 和 iOS 7。它们相差2，所以，2020年将发布 Xcode12 和 iOS 14。这个就是一个数字游戏，可记可不记，就是想说明，记忆可以找规律的。</p>
+<p>回到最前面提到的3个疑问题，你是不是已经有了自己的答案了呢？</p>
+<ol>
+<li>Auto Layout 如何实现自动布局的？</li>
+<li>这种布局算法真的会影响性能吗？</li>
+<li>应该选择手动布局还是选择Auto Layout呢？</li>
+</ol>
+<p>本章内容够不够深不深入？这个大家的了解水平不一样，如果觉得不够深入，还是可以参考本文末的参考扩展了解更多。因为原文还提到了 <a href="https://constraints.cs.washington.edu/cassowary/" target="_blank" rel="external">Cassowary 算法</a>、<a href="https://en.wikipedia.org/wiki/Simplex_algorithm" target="_blank" rel="external">Simplex 算法</a>，本文并没有把它作为主角色来解读，为什么呢？因为，它并不是我们了解和理解 <code>Auto Layout</code> 最核心的必备知识，并且它对技术有要求，不可能每个人都能看懂，否则文章一上来就会让读者害怕，适得其反。所以，在本文的基础上，如果大家还想深入了解，那这将是一道窗口，而不是一道门口！</p>
+<p>以后关于 Auto Layout 的知识，你是不是能更好的跟别人讲解呢？这些就是本文想要做的事情，当然还有更深入的知识可以研究，切记这只是开始！修行在个人~</p>
+<p><br></p>
 <p>注：更多关于 iOS 开发和程序开发相关的内容，可以查看系列，目前还在连载中 <a href="https://ihtcboy.com/2020/02/01/2020-02-01_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/">【学习总结】iOS开发高手课 – (连载中) | iHTCboy’s blog</a>，以上，希望对你有用！</p>
 <h2 id="参考">参考</h2><ul>
 <li><a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a></li>
@@ -341,6 +347,7 @@ var _hmt = _hmt || [];
 <li><a href="https://github.com/forkingdog/FDStackView" target="_blank" rel="external">forkingdog/FDStackView: Use UIStackView directly in iOS6+</a></li>
 <li><a href="https://github.com/ming1016/STMAssembleView" target="_blank" rel="external">ming1016/STMAssembleView: 制作一个类似苹果VFL(Visual Format Language)的格式化语言来描述类似UIStackView那种布局思路，并解析生成页面</a></li>
 <li><a href="https://ming1016.github.io/2015/11/03/deeply-analyse-autolayout/" target="_blank" rel="external">深入剖析Auto Layout，分析iOS各版本新增特性 | 星光社 - 戴铭的博客</a></li>
+<li><a href="https://www.jianshu.com/p/c18c9e5db4d4" target="_blank" rel="external">iOS关于setNeedsLayout、layoutIfNeeded、 layoutSubviews、drawRect的爱恨情仇 - 简书</a></li>
 </ul>
 <p><br></p>
 <ul>
@@ -519,7 +526,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1、前言"><span class="toc-number">1.</span> <span class="toc-text">1、前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2、正文"><span class="toc-number">2.</span> <span class="toc-text">2、正文</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#带问题找答案"><span class="toc-number">2.1.</span> <span class="toc-text">带问题找答案</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Auto_Layout"><span class="toc-number">2.2.</span> <span class="toc-text">Auto Layout</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-_为什么需要_Auto_Layout"><span class="toc-number">2.2.1.</span> <span class="toc-text">1. 为什么需要 Auto Layout</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-_什么是_Auto_Layout"><span class="toc-number">2.2.2.</span> <span class="toc-text">2. 什么是 Auto Layout</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-_怎么使用_Auto_Layout"><span class="toc-number">2.2.3.</span> <span class="toc-text">3. 怎么使用 Auto Layout</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-_使用_Auto_Layout_时注意的问题"><span class="toc-number">2.2.4.</span> <span class="toc-text">4. 使用 Auto Layout 时注意的问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-_Auto_Layout_的应用领域"><span class="toc-number">2.2.5.</span> <span class="toc-text">5. Auto Layout 的应用领域</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-_Auto_Layout_的优缺点"><span class="toc-number">2.2.6.</span> <span class="toc-text">6. Auto Layout 的优缺点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-_Auto_Layout_触类旁通"><span class="toc-number">2.2.7.</span> <span class="toc-text">7. Auto Layout 触类旁通</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#UIStackView，flexbox"><span class="toc-number">2.2.7.1.</span> <span class="toc-text">UIStackView，flexbox</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#SwiftUI"><span class="toc-number">2.2.7.2.</span> <span class="toc-text">SwiftUI</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3、总结"><span class="toc-number">3.</span> <span class="toc-text">3、总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考"><span class="toc-number">4.</span> <span class="toc-text">参考</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1、前言"><span class="toc-number">1.</span> <span class="toc-text">1、前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2、正文"><span class="toc-number">2.</span> <span class="toc-text">2、正文</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#带问题找答案"><span class="toc-number">2.1.</span> <span class="toc-text">带问题找答案</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Auto_Layout"><span class="toc-number">2.2.</span> <span class="toc-text">Auto Layout</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-_为什么需要_Auto_Layout"><span class="toc-number">2.2.1.</span> <span class="toc-text">1. 为什么需要 Auto Layout</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-_什么是_Auto_Layout"><span class="toc-number">2.2.2.</span> <span class="toc-text">2. 什么是 Auto Layout</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-_怎么使用_Auto_Layout"><span class="toc-number">2.2.3.</span> <span class="toc-text">3. 怎么使用 Auto Layout</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-_使用_Auto_Layout_时注意的问题"><span class="toc-number">2.2.4.</span> <span class="toc-text">4. 使用 Auto Layout 时注意的问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-_Auto_Layout_的应用领域"><span class="toc-number">2.2.5.</span> <span class="toc-text">5. Auto Layout 的应用领域</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Interface_Builder_工具"><span class="toc-number">2.2.5.1.</span> <span class="toc-text">Interface Builder 工具</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#NIB、XIB_区别"><span class="toc-number">2.2.5.2.</span> <span class="toc-text">NIB、XIB 区别</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#XIB_文件"><span class="toc-number">2.2.5.3.</span> <span class="toc-text">XIB 文件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#StoryBoard_故事板"><span class="toc-number">2.2.5.4.</span> <span class="toc-text">StoryBoard 故事板</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-_Auto_Layout_的优缺点"><span class="toc-number">2.2.6.</span> <span class="toc-text">6. Auto Layout 的优缺点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-_Auto_Layout_触类旁通"><span class="toc-number">2.2.7.</span> <span class="toc-text">7. Auto Layout 触类旁通</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#UIStackView，flexbox"><span class="toc-number">2.2.7.1.</span> <span class="toc-text">UIStackView，flexbox</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#SwiftUI"><span class="toc-number">2.2.7.2.</span> <span class="toc-text">SwiftUI</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3、总结"><span class="toc-number">3.</span> <span class="toc-text">3、总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考"><span class="toc-number">4.</span> <span class="toc-text">参考</span></a></li></ol>
                     </div>
                 </span>
             </div>
