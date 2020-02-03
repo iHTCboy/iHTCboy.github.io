@@ -714,7 +714,7 @@
     <link href="https://iHTCboy.com/2019/12/27/2019-12-27_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE03/"/>
     <id>https://iHTCboy.com/2019/12/27/2019-12-27_iOS开发高手课03/</id>
     <published>2019-12-27T12:20:20.000Z</published>
-    <updated>2020-02-03T09:51:19.709Z</updated>
+    <updated>2020-02-03T10:09:36.220Z</updated>
     <content type="html"><![CDATA[<h2 id="1、前言">1、前言</h2><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/12/iOS开发高手课-03-AutoLayout是怎么进行自动布局的，性能如何？.png" alt="iOS开发高手课-03-AutoLayout是怎么进行自动布局的，性能如何？.png"></p>
 <a id="more"></a>
@@ -736,10 +736,10 @@
 <li>Auto Layout 的优缺点</li>
 <li>Auto Layout 触类旁通</li>
 </ol>
-<h4 id="1-_为什么需要_Auto_Layout">1. 为什么需要 Auto Layout</h4><p>为什么需要？<code>一般遇到解答不了的问题，可以试试逆向！</code>，那就反推，就是<strong>没有 Auto Layout 之前是怎么样的</strong>？没有 Auto Layout 时，我们是通过设置元素的 <code>Frame</code> 来手动指定界面布局的大小和位置。</p>
-<p>刚开始，大家的App并不复杂，页面布局也很简单，并且有一个历史原因，就是 <code>iPhone4/s</code>（960x640像素）时代<em>（更早的 iPhone 3G/S，3G网络，S是速度 Speed，因为08、09年那会，一般国内开发者估计都没有见过，所以这里就简单提一下。）</em>，iPhone 的宽度都是 640 像素, 开发时用 320 个点计算， 直到 2012年9月发布 <code>iPhone5</code> （1136x640像素），屏幕高度增长了！4寸，当时三星都开始5寸大屏了，大家当年吐槽iPhone长的图片大家可以搜索看看！此时此刻，适配 iPhone5 依然并没有太大难度，苹果默认针对没有适配 iPhone5 的App，在 iPhone5 打开App时，上下2端黑屏，这样来过度。</p>
+<h4 id="1-_为什么需要_Auto_Layout">1. 为什么需要 Auto Layout</h4><p>为什么需要？<code>一般遇到解答不了的问题，可以试试逆向！</code>，那就反推，就是 <strong>没有 Auto Layout 之前是怎么样的</strong> ？没有 Auto Layout 时，我们是通过设置元素的 <code>Frame</code> 来手动指定界面布局的大小和位置。</p>
+<p>刚开始，大家的App并不复杂，页面布局也很简单，并且有一个历史原因，就是 <code>iPhone4/s</code>（960x640像素）时代 <em>（更早的 iPhone 3G/S，3G网络，S是速度 Speed，因为08、09年那会，一般国内开发者估计都没有见过，所以这里就简单提一下。）</em> ，iPhone 的宽度都是 640 像素, 开发时用 320 个点计算， 直到 2012年9月发布 <code>iPhone5</code> （1136x640像素），屏幕高度增长了！4寸，当时三星都开始5寸大屏了，大家当年吐槽iPhone长的图片大家可以搜索看看！此时此刻，适配 iPhone5 依然并没有太大难度，苹果默认针对没有适配 iPhone5 的App，在 iPhone5 打开App时，上下2端黑屏，这样来过度。</p>
 <p>就在当年，2012年的 WWDC2012 苹果发布了 <code>Auto Layout</code> 技术，从 <code>iOS6</code> 以后开始支持（<code>Xcode4</code>）。2013年9月发布 <code>iPhone5s</code>，但是大多数的开发者还是习惯使用传统的UI布局方式，大家的开发App布局并不会觉得麻烦，直到2014年才发生变化！</p>
-<p>2014年9月，苹果发布了 <code>iPhoe 6</code>（1334x750像素）、<code>iPhone 6 plus</code>（1920x1080像素），屏幕适配工作变得非常必要！如果用计算数值的方法工作量增加了几倍。因为4个尺寸的屏幕不一样！iPhone4/s（960x640像素）、iPhone 5/s （1136x640像素）、iPhoe 6（1334x750像素）、iPhone 6 plus（1920x1080像素），虽然大家还是可以按比例计算做缩放，但是这样并不能解决所有问题，因为如果想像素级还原设计、效果图调整尺寸等，可能都需要重新手动计算一次。所以，这样算过程，应该是2014年后才是 <code>Auto Layout</code>技术被大家广泛应用。我在 GitHub 查看了 iOS 最经典的 <a href="https://github.com/SnapKit/Masonry" target="_blank" rel="external">Masonry</a> 库是 <a href="https://github.com/SnapKit/Masonry/commit/866db519124daa0607b000ce2ce8045c0a3a4fe3" target="_blank" rel="external">2013年7月22号</a> 创建的，也是符合这个技术历史的进程啊~  <em>(ps: Masonry 源码值得研究学习，有很多可学习的知识，详细搜索引擎一下，已经有很多好的文章啦~)</em></p>
+<p>2014年9月，苹果发布了 <code>iPhoe 6</code>（1334x750像素）、<code>iPhone 6 plus</code>（1920x1080像素），屏幕适配工作变得非常必要！如果用计算数值的方法工作量增加了几倍。因为4个尺寸的屏幕不一样！iPhone4/s（960x640像素）、iPhone 5/s （1136x640像素）、iPhoe 6（1334x750像素）、iPhone 6 plus（1920x1080像素），虽然大家还是可以按比例计算做缩放，但是这样并不能解决所有问题，因为如果想像素级还原设计、效果图调整尺寸等，可能都需要重新手动计算一次。所以，这样算过程，应该是2014年后才是 <code>Auto Layout</code>技术被大家广泛应用。我在 GitHub 查看了 iOS 最经典的 <a href="https://github.com/SnapKit/Masonry" target="_blank" rel="external">Masonry</a> 库是 <a href="https://github.com/SnapKit/Masonry/commit/866db519124daa0607b000ce2ce8045c0a3a4fe3" target="_blank" rel="external">2013年7月22号</a> 创建的，也是符合这个技术历史的进程啊~   <em>(ps: Masonry 源码值得研究学习，有很多可学习的知识，详细搜索引擎一下，已经有很多好的文章啦~)</em></p>
 <p>那么到此，大家明白了，为什么需要 Auto Layout 了吗？</p>
 <h4 id="2-_什么是_Auto_Layout">2. 什么是 Auto Layout</h4><p><code>Auto Layout</code> 是一种基于<code>约束</code>的、<code>描述</code>性的<code>布局系统</code>。也就是使用约束条件来描述布局，View 的 Frame 会根据这些描述来进行计算。</p>
 <h4 id="3-_怎么使用_Auto_Layout">3. 怎么使用 Auto Layout</h4><p>2012年，Xcode4，iOS6 引入了 <code>NSLayoutConstraint</code> 类，并且 <code>VFL</code> (Visual Format Language，视觉格式语言) 的方式创建约束。通过下面2个方式来生成布局约束组：</p>
@@ -762,6 +762,7 @@
 <li>Alignment goes beyond top, bottom, and center (对齐超出顶部，底部和中心)</li>
 <li>Keep localization in mind （记住本地化）</li>
 </ol>
+<p>注：来自：<a href="https://developer.apple.com/videos/play/wwdc2015/218" target="_blank" rel="external">Mysteries of Auto Layout, Part 1 - WWDC 2015 - Videos - Apple Developer</a></p>
 <p>以上注意事项来自 <code>WWDC</code>，具体视频可参考文章末尾的引用来源。这里不打算详细解说，因为视频真的说的很好，推荐大家去看看啊。</p>
 <h4 id="5-_Auto_Layout_的应用领域">5. Auto Layout 的应用领域</h4><p>Auto Layout 其实，除了可以用代码来创建，苹果的可视化布局，也有使用，<code>nib</code>，<code>xib</code>，<code>storyboard</code>，那么大家对这3个东西了解熟悉吗？</p>
 <h5 id="Interface_Builder_工具">Interface Builder 工具</h5><p><code>Interface Builder</code> 在 Xcode 4 之前，是一个独立的软件，Xcode 4 开始集成到Xcode 中的。这个大家现在比较熟悉，就是可以用鼠标以图形化的方式，拖拉元素来创建UI界面。</p>
@@ -808,7 +809,7 @@
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/12/09-Building-the-Layout.jpg" alt="09-Building-the-Layout.jpg"></p>
 <p>所以，最终的 <code>Layout Engine</code> 计算到布局就是这样的过程，细节点还有很多。还是那句话，授人以鱼不如授人以渔<code>！大家有“渔”后，自然要自己捉鱼！</code>，这里就不详细解进了，可观看 WWDC 视频：<a href="https://developer.apple.com/videos/play/wwdc2015/218/" target="_blank" rel="external">Mysteries of Auto Layout, Part 1 - WWDC 2015 - Videos - Apple Developer</a>。</p>
 <p>最后，关于 <code>Auto Layout</code> 还有很多知识，比如怎么调试 Auto Layout 的 Debug？可以查看 <a href="https://developer.apple.com/videos/play/wwdc2016/236" target="_blank" rel="external">What’s New in Auto Layout - WWDC 2016 - Videos - Apple Developer</a> 视频。Auto Layout 的流程（The Layout Cycle），可以查看 <a href="https://developer.apple.com/videos/play/wwdc2015/219/" target="_blank" rel="external">Mysteries of Auto Layout, Part 2 - WWDC 2015 - Videos - Apple Developer</a>。</p>
-<h4 id="7-_Auto_Layout_触类旁通">7. Auto Layout 触类旁通</h4><h5 id="UIStackView_与_Flexbox">UIStackView 与 Flexbox</h5><p><code>UIStackView</code> 是2015年 iOS9 苹果推出的一套 API，它可以很好地减轻手动写或拖 constraint 带来的重复繁琐的工作，也可以自动化的处理排列和元素个数的变化。（当年因为需要iOS9+，导致很少有开发者使用，放在2020年的今年，这个控件可以熟悉一下啊！）与 Web 前端的 <code>Flexbox</code> 响应式布局是一个原理。特点有下面4个：</p>
+<h4 id="7-_Auto_Layout_触类旁通">7. Auto Layout 触类旁通</h4><h5 id="UIStackView_与_Flexbox">UIStackView 与 Flexbox</h5><p><code>UIStackView</code> 是2015年 iOS9 苹果推出的一套 API，它可以很好地减轻手动写或拖 constraint 带来的重复繁琐的工作，也可以自动化的处理排列和元素个数的变化。（当年因为需要iOS9+，导致很少有开发者使用，放在2020年的今年，这个控件可以熟悉一下啊！）与 Web 前端的 <code>Flexbox</code> 响应式布局是一个原理。UIStackView 特点有下面4个：</p>
 <ol>
 <li>Easy to build（容易构建）</li>
 <li>Easy to maintain （容易维护）</li>
