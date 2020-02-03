@@ -424,7 +424,7 @@
     <link href="https://iHTCboy.com/2020/01/03/2020-01-03_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE04/"/>
     <id>https://iHTCboy.com/2020/01/03/2020-01-03_iOS开发高手课04/</id>
     <published>2020-01-03T12:20:20.000Z</published>
-    <updated>2020-02-03T10:23:05.230Z</updated>
+    <updated>2020-02-03T14:47:05.260Z</updated>
     <content type="html"><![CDATA[<h2 id="1、前言">1、前言</h2><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/iOS开发高手课-04-项目大了人员多了，架构怎么设计更合理？.png" alt="iOS开发高手课-04-项目大了人员多了，架构怎么设计更合理？.png"></p>
 <a id="more"></a>
@@ -438,8 +438,17 @@
 <li>多团队如何协作？</li>
 </ol>
 <p>文中提了4个问题，那么这4个问题怎么解答呢？所以，解答前，我觉得还是要先说说为什么有架构这东西？</p>
-<h3 id="项目架构">项目架构</h3><p>模块粒度的划分是架构设计中非常关键的一步。同时，这也是一个细活，我们最好可以在不同阶段采用不同的粒度划分模块。</p>
-<h2 id="3、总结">3、总结</h2><p><br></p>
+<h3 id="项目架构">项目架构</h3><h4 id="为什么？">为什么？</h4><p>为什么有架构这东西？有过几年开发经验的同学一定听过或看过 <code>23种设计模式</code> 、<code>SOLID 原则</code>、<code>GRASP 原则</code>、<code>奥卡姆剃刀定律</code>、<code>敏捷开发</code>等，那么为什么设计模式是23种呢？ SOLID 分别代表什么呢？如果只是学习设计模式，SOLID 分别代表什么，那样的话，其实并不能理解为什么？只是解答了，是什么！所以，首先，要给大家介绍一下这些历史和背景，大家才能更好的明白这些原则和模式。</p>
+<p><strong>1994 年 10 月 21 日</strong>，Erich Gamma（埃里希·伽玛）、Richard Helm（理查德·赫尔姆）、Ralph Johnson（拉尔夫·约翰逊）和John Vlissides（约翰·弗利西德斯）合著<code>《设计模式：可复用面向对象软件的基础》</code>（Design Patterns: Elements of Reusable Object-Oriented Software）出版！后以“四人帮”著称，<code>GoF</code>，又称 Gang of Four。该书是软件工程领域有关软件设计的巨著，提出和总结了对于一些常见软件设计问题的标准解决方案，称为软件设计模式，书中提出的 <code>23 种设计模式</code>，书中的设计模式也被成为“四人帮设计模式”。</p>
+<p>所以，大家明白了现在很多xx语言的设计模式，从那里来？为什么是23种？这本书很牛逼，并且这四位作者也很利害，大家自行搜索。关于设计模式就先说到这里，下面在看看其它。</p>
+<p><strong>1997 年 10 月 30 日</strong>，Craig Larman（克雷格·拉曼）出版<code>《UML和模式应用》</code>(Applying UML and Patterns)，书中提出 <code>GRASP</code> (General Responsibility Assignment Software Principles，通用职责分配软件原则)，与其将 GRASP 称之为设计模式（Pattern），不如称之为设计原则（Principles），因为它是站在<code>面向对象设计</code>（OOD：Object-Oriented Design）的角度，告诉我们怎样设计问题空间中的类与分配它们的行为职责，以及明确类之间的相互关系等，GRASP 核心思想是职责分配，用职责设计对象。而不像 GoF设计模式那样是针对特定问题而提出的解决方案。因此 GRASP 站在一个更高的角度来看待面向对象软件的设计，它是 GoF设计模式 的基础（更宏观）。</p>
+<p><strong>2001 年 10 月 12 日</strong>，Robert C. Martin（罗伯特·C·马丁）出版了<code>《敏捷软件开发:原则、模式与实践》</code>（Agile Software Development: Principles, Patterns, and Practices）一书，描述了<code>面向对象编程</code>（OOP：Object-oriented Programming）和<code>面向对象设计</code>（OOD：Object-Oriented Design）的五个原则，他称之为 <code>SOLID 原则</code>(单一功能、开闭原则、里氏替换、接口隔离以及依赖反转，每个原则的首字母组合在一起)。需要注意的时，这些原则有些在此书前就提出或相似的概念，其中依赖倒转原则就是1996年提出来的。关于世界顶级软件开发大师<code>罗伯特·C·马丁</code>（Robert C. Martin），大家可能更熟悉 <code>Bob大叔</code>、<code>鲍勃叔叔</code> 等称呼，因为他已经有<code>50多年</code>的软件开发经验（1969年至今），如今 67 岁啦！其中《架构整洁之道》是创造“Clean神话”的Bob大叔在架构领域的登峰之作，还有《代码整洁之道》（Clean Code: A Handbook of Agile Software Craftsmanship）不知道大家熟悉吗？</p>
+<p>以上就是经典的面向对象的设计原则或模式的由来，大家是不是有一点印象啦！总体来说，<code>GRASP</code> 处于最上层，<code>SOLID</code> 基于它再进一步细化阐述，<code>GOF</code> 再根据这些原则进一步的归纳出更具体的模式。</p>
+<p>模块粒度的划分是架构设计中非常关键的一步。同时，这也是一个细活，我们最好可以在不同阶段采用不同的粒度划分模块。</p>
+<p>（个人觉得从完整性出发，还应该加上合成复用原则Composite Reuse Principle和迪米特法则Law of Demeter）</p>
+<h2 id="3、总结">3、总结</h2><p>其实早在 GOF 书中描述：<code>实际使用哪种模式并不重要，模式并不是优秀设计的全部或者必要标准。</code>，所以，架构和模式并不是必要的！</p>
+<p>想一想，在1994年就能提出23种设计模式的概念，并且在书本给出，模式并不是必要标准！真的是大神！我想现在大多数人都不没有领悟其中或达到这样的思想深度，不由得心中自发地佩服！</p>
+<p><br></p>
 <p>注：更多关于 iOS 开发和程序开发相关的内容，可以查看系列，目前还在连载中 <a href="https://ihtcboy.com/2020/02/01/2020-02-01_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/">【学习总结】iOS开发高手课 – (连载中) | iHTCboy’s blog</a>，以上，希望对你有用！</p>
 <h2 id="参考">参考</h2><ul>
 <li><p><a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a></p>
@@ -486,6 +495,11 @@
 <li><a href="https://github.com/huang303513/Design-Pattern-For-iOS" target="_blank" rel="external">iOS设计模式探索(大话设计模式)</a></li>
 <li><a href="https://github.com/skyming/Trip-to-iOS-Design-Patterns" target="_blank" rel="external">skyming/Trip-to-iOS-Design-Patterns: iOS 设计模式相关资料整理</a></li>
 <li><a href="https://blog.cocosdever.com/2019/07/19/modular-design-in-ios/" target="_blank" rel="external">业界流行的三种iOS组件化设计方案</a></li>
+<li><a href="https://blog.csdn.net/cxzhq2002/article/details/78159906" target="_blank" rel="external">GRASP模式_cxzhq2002的杂记-CSDN博客</a></li>
+<li><a href="https://www.cnblogs.com/mengfanrong/p/5209907.html" target="_blank" rel="external">《UML和模式应用》重点之思想篇 - mengfanrong - 博客园</a></li>
+<li><a href="https://juejin.im/post/5e2e5ac06fb9a02fd127d5fc" target="_blank" rel="external">如何成为更好的iOS开发工程师之S.O.L.I.D原则 - 掘金</a></li>
+<li><a href="https://www.cnblogs.com/huangenai/p/6219475.html" target="_blank" rel="external">SOLID 设计原则 - huangenai - 博客园</a></li>
+<li><a href="https://blog.csdn.net/LoveLion/article/details/8517215" target="_blank" rel="external">Robert C. Martin列举的专业软件开发人员必须精通的技能<em>编程,设计模式</em>刘伟技术博客-CSDN博客</a></li>
 </ul>
 <p><br></p>
 <ul>
