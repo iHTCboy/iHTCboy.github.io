@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Learn something of everything,  Learn everything of something.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="https://iHTCboy.com/"/>
-  <updated>2020-02-02T10:31:13.165Z</updated>
+  <updated>2020-02-03T23:35:24.435Z</updated>
   <id>https://iHTCboy.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="https://iHTCboy.com/2020/02/02/2020-02-02_%E5%BB%BA%E7%AB%8B%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/"/>
     <id>https://iHTCboy.com/2020/02/02/2020-02-02_建立你自己的开发知识体系/</id>
     <published>2020-02-02T12:20:20.000Z</published>
-    <updated>2020-02-02T10:31:13.165Z</updated>
+    <updated>2020-02-03T23:35:24.435Z</updated>
     <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/建立你自己的开发知识体系.png" alt="建立你自己的开发知识体系.png"></p>
 <a id="more"></a>
@@ -58,6 +58,7 @@
 <p>当I/O过高时，我们<code>取舍</code>I或O！我们把I和O<code>拆分</code>！</p>
 <p>在深入到程序、代码中，所有的优化，是不是也一样，你要减少计算和循环次数，你要<code>节省内存开销</code>！你要<code>网络数据缓存</code>！你要<code>定量定时入库</code>！</p>
 <p>所有的性能优化，不过如此！大家明白了吗？</p>
+<p>移动设备时代，性能问题还有一个就是在小的空间里没有大的电池，其实就是<code>电池的瓶颈</code>！但是一般开发者并不关心，因为他们感觉自己只是开发App，使用App的是用户和他们的手机设备！电池的瓶颈有<code>消耗</code>和<code>损耗</code>2个问题，<code>消耗</code>是我们写的程序在实现功能的同时能不能减少计算量，<code>损耗</code>是我们写了一些我们并不需要的代码导致了不必要的计算量。如果平时有注意的，2015年时三星手机针对那么功耗过大的App 直接强制退出，这可能也是大家说的对中国本地化做不好的原因导致失败吧？因为优化是不是真的为了解决卡顿或性能，就一定要为所欲为呢？这也是开发者需要思考的问题。电池技术当下没有突破的时候，电量依然是非常值得关注的事情。现在iOS 和 Android 都开始统计App的电量使用情况，所以不从现在开始节能，你的App可能就被用户删除。当然，针对这些问题，iOS/macOS 系统苹果做了很多系统层级的优化，这也许也是很少开发者关心的原因，感兴趣的可以看看历年 <a href="https://developer.apple.com/videos/all-videos/?q=battery" target="_blank" rel="external">WWDC - Apple Developer</a>，苹果很多关于电量节能有很多策略可以借鉴。</p>
 <h4 id="换空间">换空间</h4><ol>
 <li>压缩</li>
 <li>分片</li>
@@ -274,14 +275,16 @@
     <link href="https://iHTCboy.com/2020/01/17/2020-01-17_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE06/"/>
     <id>https://iHTCboy.com/2020/01/17/2020-01-17_iOS开发高手课06/</id>
     <published>2020-01-17T12:20:20.000Z</published>
-    <updated>2020-02-02T10:59:47.821Z</updated>
+    <updated>2020-02-03T23:36:32.899Z</updated>
     <content type="html"><![CDATA[<h2 id="1、前言">1、前言</h2><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/iOS开发高手课-06-App如何通过注入动态库的方式实现极速编译调试？.png" alt="iOS开发高手课-06-App如何通过注入动态库的方式实现极速编译调试？.png"></p>
 <a id="more"></a>
 <h2 id="2、正文">2、正文</h2><blockquote>
 <p>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程 <a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a> </p>
 </blockquote>
-<h2 id="3、总结">3、总结</h2><p><br></p>
+<p><code>TODO</code></p>
+<h2 id="3、总结">3、总结</h2><p><code>TODO</code></p>
+<p><br></p>
 <p>注：更多关于 iOS 开发和程序开发相关的内容，可以查看系列，目前还在连载中 <a href="https://ihtcboy.com/2020/02/01/2020-02-01_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/">【学习总结】iOS开发高手课 – (连载中) | iHTCboy’s blog</a>，以上，希望对你有用！</p>
 <h2 id="参考">参考</h2><ul>
 <li><a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a></li>
@@ -341,7 +344,7 @@
     <link href="https://iHTCboy.com/2020/01/10/2020-01-10_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE05/"/>
     <id>https://iHTCboy.com/2020/01/10/2020-01-10_iOS开发高手课05/</id>
     <published>2020-01-10T12:20:20.000Z</published>
-    <updated>2020-02-02T10:58:39.354Z</updated>
+    <updated>2020-02-03T14:51:50.084Z</updated>
     <content type="html"><![CDATA[<h2 id="1、前言">1、前言</h2><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/iOS开发高手课-05-链接器：符号是怎么绑定到地址上的？.png" alt="iOS开发高手课-05-链接器：符号是怎么绑定到地址上的？.png"></p>
 <a id="more"></a>
@@ -424,7 +427,7 @@
     <link href="https://iHTCboy.com/2020/01/03/2020-01-03_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE04/"/>
     <id>https://iHTCboy.com/2020/01/03/2020-01-03_iOS开发高手课04/</id>
     <published>2020-01-03T12:20:20.000Z</published>
-    <updated>2020-02-03T14:47:05.260Z</updated>
+    <updated>2020-02-04T03:43:12.629Z</updated>
     <content type="html"><![CDATA[<h2 id="1、前言">1、前言</h2><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/iOS开发高手课-04-项目大了人员多了，架构怎么设计更合理？.png" alt="iOS开发高手课-04-项目大了人员多了，架构怎么设计更合理？.png"></p>
 <a id="more"></a>
@@ -441,13 +444,178 @@
 <h3 id="项目架构">项目架构</h3><h4 id="为什么？">为什么？</h4><p>为什么有架构这东西？有过几年开发经验的同学一定听过或看过 <code>23种设计模式</code> 、<code>SOLID 原则</code>、<code>GRASP 原则</code>、<code>奥卡姆剃刀定律</code>、<code>敏捷开发</code>等，那么为什么设计模式是23种呢？ SOLID 分别代表什么呢？如果只是学习设计模式，SOLID 分别代表什么，那样的话，其实并不能理解为什么？只是解答了，是什么！所以，首先，要给大家介绍一下这些历史和背景，大家才能更好的明白这些原则和模式。</p>
 <p><strong>1994 年 10 月 21 日</strong>，Erich Gamma（埃里希·伽玛）、Richard Helm（理查德·赫尔姆）、Ralph Johnson（拉尔夫·约翰逊）和John Vlissides（约翰·弗利西德斯）合著<code>《设计模式：可复用面向对象软件的基础》</code>（Design Patterns: Elements of Reusable Object-Oriented Software）出版！后以“四人帮”著称，<code>GoF</code>，又称 Gang of Four。该书是软件工程领域有关软件设计的巨著，提出和总结了对于一些常见软件设计问题的标准解决方案，称为软件设计模式，书中提出的 <code>23 种设计模式</code>，书中的设计模式也被成为“四人帮设计模式”。</p>
 <p>所以，大家明白了现在很多xx语言的设计模式，从那里来？为什么是23种？这本书很牛逼，并且这四位作者也很利害，大家自行搜索。关于设计模式就先说到这里，下面在看看其它。</p>
-<p><strong>1997 年 10 月 30 日</strong>，Craig Larman（克雷格·拉曼）出版<code>《UML和模式应用》</code>(Applying UML and Patterns)，书中提出 <code>GRASP</code> (General Responsibility Assignment Software Principles，通用职责分配软件原则)，与其将 GRASP 称之为设计模式（Pattern），不如称之为设计原则（Principles），因为它是站在<code>面向对象设计</code>（OOD：Object-Oriented Design）的角度，告诉我们怎样设计问题空间中的类与分配它们的行为职责，以及明确类之间的相互关系等，GRASP 核心思想是职责分配，用职责设计对象。而不像 GoF设计模式那样是针对特定问题而提出的解决方案。因此 GRASP 站在一个更高的角度来看待面向对象软件的设计，它是 GoF设计模式 的基础（更宏观）。</p>
+<p><strong>1997 年 10 月 30 日</strong>，Craig Larman（克雷格·拉曼）出版<code>《UML和模式应用》</code>(Applying UML and Patterns)，书中提出 <code>GRASP</code> (General Responsibility Assignment Software Principles，通用职责分配软件原则)，与其将 GRASP 称之为设计模式（Pattern），不如称之为设计原则（Principles），因为它是站在<code>面向对象设计</code>（OOD：Object-Oriented Design）的角度，告诉我们怎样设计问题空间中的类与分配它们的行为职责，以及明确类之间的相互关系等，GRASP 核心思想是职责分配，用职责设计对象。而不像 GoF设计模式那样是针对特定问题而提出的解决方案。因此 GRASP 站在一个更高的角度来看待面向对象软件的设计，它是 GoF设计模式 的基础（可以理解为更宏观的角度）。</p>
 <p><strong>2001 年 10 月 12 日</strong>，Robert C. Martin（罗伯特·C·马丁）出版了<code>《敏捷软件开发:原则、模式与实践》</code>（Agile Software Development: Principles, Patterns, and Practices）一书，描述了<code>面向对象编程</code>（OOP：Object-oriented Programming）和<code>面向对象设计</code>（OOD：Object-Oriented Design）的五个原则，他称之为 <code>SOLID 原则</code>(单一功能、开闭原则、里氏替换、接口隔离以及依赖反转，每个原则的首字母组合在一起)。需要注意的时，这些原则有些在此书前就提出或相似的概念，其中依赖倒转原则就是1996年提出来的。关于世界顶级软件开发大师<code>罗伯特·C·马丁</code>（Robert C. Martin），大家可能更熟悉 <code>Bob大叔</code>、<code>鲍勃叔叔</code> 等称呼，因为他已经有<code>50多年</code>的软件开发经验（1969年至今），如今 67 岁啦！其中《架构整洁之道》是创造“Clean神话”的Bob大叔在架构领域的登峰之作，还有《代码整洁之道》（Clean Code: A Handbook of Agile Software Craftsmanship）不知道大家熟悉吗？</p>
 <p>以上就是经典的面向对象的设计原则或模式的由来，大家是不是有一点印象啦！总体来说，<code>GRASP</code> 处于最上层，<code>SOLID</code> 基于它再进一步细化阐述，<code>GOF</code> 再根据这些原则进一步的归纳出更具体的模式。</p>
-<p>模块粒度的划分是架构设计中非常关键的一步。同时，这也是一个细活，我们最好可以在不同阶段采用不同的粒度划分模块。</p>
-<p>（个人觉得从完整性出发，还应该加上合成复用原则Composite Reuse Principle和迪米特法则Law of Demeter）</p>
-<h2 id="3、总结">3、总结</h2><p>其实早在 GOF 书中描述：<code>实际使用哪种模式并不重要，模式并不是优秀设计的全部或者必要标准。</code>，所以，架构和模式并不是必要的！</p>
+<h4 id="是什么？">是什么？</h4><p>不知道大家有没有发现上面提到的 <code>OOD</code> 和  <code>OOP</code>，OOD 是：<code>面向对象设计</code>（Object-Oriented Design），OOP 是：<code>面向对象编程</code>（Object-oriented Programming）。</p>
+<p>是什么？<code>当我们在谈论项目架构时，我们在说什么？</code>，其实就是<code>面向对象</code>编程！那么<code>面向对象</code>前，又是怎么样的呢？所以，<strong>我们不得不回到历史，看看究竟发生了什么，为什么现在如今的面向对象那么流行？</strong></p>
+<ol>
+<li>1940年以前：<code>面向机器</code></li>
+<li>脱离机器第一步：<code>面向过程</code></li>
+<li>第一次软件危机：<code>结构化程序设计</code></li>
+<li>第二次软件危机：<code>面向对象程序设计</code></li>
+</ol>
+<p><code>面向机器</code> 使用二进制码来表示机器能够识别和执行的指令和数据。简单来说，就是直接编写 0 和 1 的序列来代表程序语言。由于机器语言实在是太难编写了，于是就发展出了汇编语言。</p>
+<p><code>面向过程</code> 相比面向机器的语言来说，已经不再关注机器本身的操作指令、存储等方面，而是关注如何一步一步的解决具体的问题，即:解决问题的过程。</p>
+<p><code>结构化程序设计</code>（Structured Programming）是一种编程范型，它采取“自顶向下、逐步细化、模块化”的指导思想，使用子程序（函数就是一种子程序）、代码区块、for循环以及while循环等结构，来替换传统的goto，希望借此来改善计算机程序的明晰性、质量以及开发时间，并且避免写出面条式代码。结构化程序设计本质上还是一种面向过程的设计思想。</p>
+<p><code>面向对象程序设计</code> 早在 1967 年的 Simula 语言中就开始提出来了，但第二次软件危机促进了面向对象的发展。 面向对象真正开始流行是在 1980s 年代，主要得益于 C++ 的功劳，后来的 Java、C# 把面向对象推向了新的高峰。到现在为止，面向对象已经成为了主流的开发思想。</p>
+<p><strong>分支故事1</strong>：第一次软件危机最典型的例子莫过于 IBM 的 System/360 的操作系统开发。<code>佛瑞德·布鲁克斯</code>（Frederick P. Brooks, Jr.）作为项目主管，率领 2000 多个程序员夜以继日的工作，共计花费了 5000 人一年的工作量，写出将近 100 万行的源码，总共投入 5 亿美元，是美国的“曼哈顿”原子弹计划投入的 1/4。尽管投入如此巨大，但项目进度却一再延迟，软件质量也得不到保障。布鲁克斯后来基于这个项目经验而总结的<code>《人月神话》</code>（The Mythical Man-Month）一书，成了史上最畅销的软件工程书籍。这本书也值得大家看看，<code>银弹</code> 就是书中提到的经典概念。（引用来源：<a href="https://www.cnblogs.com/nickchen121/p/10981462.html#%E7%A1%AE%E7%AB%8B%E4%BA%86%E5%9F%BA%E7%A1%80%E8%8C%83%E5%BC%8F" target="_blank" rel="external">程序设计思想发展 - 二十一岁的有德</a>）</p>
+<p><strong>分支故事2</strong>：实际上面向对象就是个形容词，那么这个词最早出现在哪里呢？最早大概1970年左右，已经提出了“面向对象系统”这个概念，面向对象系统有两层含义，第一，系统是由对象组成的；第二，对象之间可以互相发消息。从这个角度来讲这两点才是“面向对象”的第一义，后来的封装、继承、多态则是非第一义，或者称为最佳实践。（引用来源：<a href="https://www.infoq.cn/article/zKbhME-UHABRqdTodLwF" target="_blank" rel="external">面向对象编程的兴衰-InfoQ</a>）</p>
+<p>说到这里，大家是不是有什么新想法啦！这个就是为什么大家现在编程和软件开发行业中，只剩下这些原则和模式，因为<code>都是面向对象</code>！详细的历史和资料可以参考查看：<a href="https://zh.wikipedia.org/zh-cn/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80%E6%AD%B7%E5%8F%B2" target="_blank" rel="external">编程语言历史 - 维基百科</a>，无法翻墙的可以看：<a href="https://www.cnblogs.com/nickchen121/p/10981462.html#%E7%A1%AE%E7%AB%8B%E4%BA%86%E5%9F%BA%E7%A1%80%E8%8C%83%E5%BC%8F" target="_blank" rel="external">程序设计思想发展 - 二十一岁的有德</a>。这里就不深入描述了，大学时应该学习过，如果忘记了再重温一次吧！</p>
+<h4 id="软件开发基本概念">软件开发基本概念</h4><ul>
+<li>面向过程编程（OPP：Procedure-Oriented Programming）</li>
+<li>结构化程序设计（Structured Programming）</li>
+<li>面向对象分析（OOA：Object-Oriented Analysis）</li>
+<li>面向对象设计（OOD：Object-Oriented Design）</li>
+<li>面向对象编程（OOP：Object-oriented Programming）</li>
+<li>面向切面编程（AOP：Aspect Oriented Programming）</li>
+</ul>
+<p>以上就是软件开发概念一些概念，从历史上了解这些东西，对我们理解项目架构起了必要的作用。现在我们知道了为什么，是什么，<code>软件开发直到现在，都是为了更好的编程！更好的开发！</code>，所以我们理解了编程的历史，知道面对对象编程的重要性后，自然就需要知道有这些原则和模式，优秀的实践，来解决软件危机的银弹！</p>
+<h4 id="STUPID_原则">STUPID 原则</h4><blockquote>
+<p>抱歉，你的代码就是那么的<code>STUPID</code>！烂代码有什么特点呢？没有人喜欢听到别人评价他的代码很愚蠢，而且这样做也很容易冒犯别人，所以不要说出来？平心而论：全世界中大部分代码都是不可维护的，因为它们都是乱糟糟一团的！</p>
+</blockquote>
+<ul>
+<li>Singleton - 单态</li>
+<li>Tightcoupling - 紧密耦合</li>
+<li>Untestability - 不可测试</li>
+<li>Premature Optimization - 过早优化</li>
+<li>Indescriptive Naming - 胡乱命名</li>
+<li>Duplication - 重复代码</li>
+</ul>
+<p>本节内容来源：<a href="http://nikic.github.io/2011/12/27/Dont-be-STUPID-GRASP-SOLID.html" target="_blank" rel="external">Don’t be STUPID: GRASP SOLID!</a>，中文译文：<a href="https://blog.csdn.net/rcom10002/article/details/8822368" target="_blank" rel="external">面向对象设计原则：不要STUPID - rcom10002的专栏</a>。</p>
+<h4 id="SOLID_原则">SOLID 原则</h4><ol>
+<li><code>单一功能</code>原则（The <code>Single</code> Responsibility Principle）：对象功能要单一，不要在一个对象里添加很多功能。</li>
+<li><code>开放封闭</code>原则（The <code>Open</code> Closed Principle）：扩展是开放的，修改是封闭的。</li>
+<li><code>里氏替换</code>原则（<code>Liskov</code> Substitution Principle）：子类对象是可以替代基类对象的。（子类可以扩展父类的功能，但不能改变父类原有的功能。）</li>
+<li><code>接口隔离</code>原则（The <code>Interface</code> Segregation Principle）：接口的用途要单一，不要在一个接口上根据不同入参实现多个功能。</li>
+<li><code>依赖反转</code>原则（The <code>Dependency</code> Inversion Principle）：方法应该依赖抽象，不要依赖实例。iOS 开发就是高层业务方法依赖于协议。</li>
+</ol>
+<p>SOLID 原则在前面已经讲解了由来，称为<code>五大设计原则</code>，但后来，又出现六大设计原则、<code>七大设计原则</code>，另外2个原则：</p>
+<ul>
+<li><ol>
+<li><code>迪米特</code>法则（Law of Demeter）：一个对象对其他对象有尽可能少的了解，不和陌生人说话。</li>
+</ol>
+</li>
+<li><ol>
+<li><code>合成复用</code>原则（CARP，Composition/Aggregate Reuse Principle，合成复用原则(组合/聚合复用原则))：将已有的对象纳入新对象中，使之成为新对象的一部分，作为新对象的成员对象来实现的，新对象可以调用已有对象的功能，从而达到复用。</li>
+</ol>
+</li>
+</ul>
+<p>所以，大家在网上如果看到 <code>x条设计原则</code>、<code>面向对象设计原则xxx</code>时，大家是不是能更加理解这些编程思想，而不是看到一条一条的规则，学习怎么使用它们，但是并<code>不清楚为什么要学习，这是学习最可怕的地方</code>，这是我认为最可怕的。另外，这里强调<code>设计原则</code>（Principle），而非<code>设计模式</code>（Patterns），也是需要注意的点。</p>
+<h4 id="GRASP_原则">GRASP 原则</h4><ol>
+<li>创造者模式 (Creator Pattern)</li>
+<li>信息专家模式 (Information Expert Pattern)</li>
+<li>低耦合模式 (Low Coupling Pattern)</li>
+<li>高内聚模式 (High Cohesion Pattern)</li>
+<li>控制器模式 (Controller Pattern)</li>
+<li>多态模式 (Polymorphism Pattern)</li>
+<li>纯虚构模式 (Pure Fabrication Pattern)</li>
+<li>中介模式 (Indirection Pattern)</li>
+<li>受保护变化模式 (Protected Variations Pattern)</li>
+</ol>
+<p><code>GRASP</code> (General Responsibility Assignment Software Principles，通用职责分配软件原则) 共有9种模式，这里也不细说了，大家自行搜索学习，如果需要可以购买书本 <code>《UML和模式应用》</code>(Applying UML and Patterns) 。</p>
+<h4 id="Design_Patterns_（设计模式）">Design Patterns （设计模式）</h4><ul>
+<li>创建范例</li>
+</ul>
+<ol>
+<li>抽象工厂 (Abstract Factory)</li>
+<li>构造器 (Builder pattern)</li>
+<li>工厂方法 (Factory Method pattern)</li>
+<li>原型 (Prototype pattern)</li>
+<li>单例模式 (Singleton pattern)</li>
+</ol>
+<ul>
+<li>结构范例</li>
+</ul>
+<ol>
+<li>适配器(Adapter pattern)</li>
+<li>桥接(Bridge pattern)</li>
+<li>组合(Composite pattern)</li>
+<li>装饰(Decorator pattern)</li>
+<li>外观(Façade pattern)</li>
+<li>享元(Flyweight pattern)</li>
+<li>代理(Proxy pattern)</li>
+</ol>
+<ul>
+<li>行为范例</li>
+</ul>
+<ol>
+<li>职责链(Chain-of-responsibility pattern)</li>
+<li>命令(Command pattern)</li>
+<li>翻译器(Interpreter pattern)</li>
+<li>迭代器(Iterator pattern)</li>
+<li>中介者(Mediator pattern)</li>
+<li>回忆(Memento pattern)</li>
+<li>观察者(Observer pattern)</li>
+<li>状态机(State pattern)</li>
+<li>策略(Strategy pattern)</li>
+<li>模板方法(Template method pattern)</li>
+<li>参观者(Visitor pattern)</li>
+</ol>
+<p>设计模式中书 <code>《设计模式：可复用面向对象软件的基础》</code>（Design Patterns: Elements of Reusable Object-Oriented Software）把设计模式分为创建型模式、结构型模式、行为型模式，共有23种，可能后面大家又添加了一些，这里就不补充了，因为还是经典的23条已经很足啦！具体的模式意义大家自行搜索吧。</p>
+<h4 id="软件分层">软件分层</h4><ul>
+<li>应用层</li>
+<li>中间层</li>
+<li>底层</li>
+</ul>
+<p>一个<code>项目</code>、<code>系统</code>、<code>模型</code>，基础上都是至少3层，如果不够就多加一层呗！具体大家可以看看 GitHub 上的库和项目等，说到分层都是这样，这是为什么呢？举例来说，<code>HTTP</code> 与 <code>HTTPS</code>，HTTPS 是再 HTTP 基础上加了一层 <code>SSL/TLS</code>，这样对原有的兼容性是最好的，也是最容易实现的，所以这就是分层的意义！我们的项目为什么分层，怎么分层，大家可以思考一下，多问一个为什么？</p>
+<h4 id="软件架构">软件架构</h4><ul>
+<li>MVC（Model-View-Controller）</li>
+<li>MVP（Model-View-Presenter）</li>
+<li>MVVM（Model-View-ViewModel）</li>
+</ul>
+<p>从 MVC、MVP 到 MVVM，实际上是模型和视图的分离过程。MVC 中模型和视图没有完全分离，造成 Activity 代码臃肿，MVP 中通过 Presenter 来进行中转，模型和视图彻底分离，但由于 V 和 P 互相引用，代码不够优雅。ViewModel 通过 Data Binding 实现了视图和数据的绑定，解决了这种MVP的缺陷。</p>
+<p>本节内容来源：<a href="https://www.jianshu.com/p/8e3d4ab80714" target="_blank" rel="external">MVC、MVP、MVVM架构分析与比较 - 简书</a></p>
+<h4 id="调度">调度</h4><ul>
+<li>URL/Protocol 注册调度</li>
+<li>Runtime 调度</li>
+</ul>
+<p>本文唯一与原文相关的可以就是这一节啦，原文中提到 <a href="https://github.com/casatwy/CTMediator" target="_blank" rel="external">CTMediator</a> 库来架构 iOS 项目，具体的分析和细节这里就不讨论了，本文后面在做统一的回应吧。所以本节注意说 iOS<code>调度</code>的问题，原文中提到 CTMediator 的2个缺点：</p>
+<ol>
+<li>直接硬编码的调用方式，参数是以string的方法保存在内存里，虽然和将参数保存在Text字段里占用的内存差不多，同时还可以避免.h文件的耦合，但是其对代码编写效率的降低也比较明显。</li>
+<li>由于是在运行时才确定的调用方法，调用方式由 <code>[obj method]</code> 变成 <code>[obj performSelector:@&quot;&quot;]</code>。这样的话，在调用时就缺少类型检查，是个很大的缺憾。因为，如果方法和参数比较多的时候，代码编写效率就会比较低。</li>
+</ol>
+<p><code>避免.h文件的耦合</code> 这个大家理解吗？在这个项目后，阿里开源了 <a href="https://github.com/alibaba/BeeHive/blob/master/README-CN.md" target="_blank" rel="external">BeeHive</a>，基于 <code>Protocol</code> 注册调度，那么它的缺点是什么？就是这个 .h文件的声明 经常找不到，需要很多全局的变量。当然，<code>任何架构都无法百分百完美！</code>，更多问题欢迎留意交流。</p>
+<h4 id="代码质量">代码质量</h4><ul>
+<li>可读性</li>
+<li>可维护性</li>
+<li>可拓展性</li>
+<li>必要注释？</li>
+<li>commit规范</li>
+<li>CodeReview</li>
+</ul>
+<p><code>代码质量不是由开发人员里技术最强的人决定的</code>，前面提到，如果代码很烂，那么很难维护，所以对于项目架构来说，代码质量也是必要关注的！</p>
+<h4 id="其它概念">其它概念</h4><ul>
+<li><code>DRY</code>（Don’t Repeat Yourself! 不要重复你自己）</li>
+<li><code>KISS</code>(Keep It Simple, Stupid! 让事情简单化，傻瓜化) ：翻译成中⽂就是“保持简单、愚蠢”。</li>
+<li><code>Make it run, then make it right, then make it fast.</code>（先求运行，再求正确，最后求快。）</li>
+<li>敏捷开发（Agile Development）</li>
+<li>奥卡姆剃刀（Occam’s Razo）</li>
+</ul>
+<p>例如“奥卡姆剃刀”，爱因斯坦的“一切尽可能简单”、达芬奇的“简单是最终的复杂性” 、安德鲁·圣艾修伯里的“完美不是当它不能再添加时，它似乎是在它不能被进一步刮除时实现的”。“如无必要，勿增实体”，即“简单有效原理”。大量的例子，都是希望在软件开发中，<code>乔布斯的“简洁之道”</code>，希望大家都可以平时多注意~</p>
+<h2 id="3、项目架构">3、项目架构</h2><p>大家是不是觉得说了那么多，感觉还是没有说明白<code>项目架构</code>？是的，基本架构就在里面，只是大家没有把它们串联起来，没有从整体上来理解。</p>
+<p>上面说到的原则和模式，他们到底是在干嘛呢？不就是在<code>架构</code>嘛！对，这些原则和模型都是希望给项目提供更好的架构，<code>最终目的还是提高开发效率!</code>，敏捷开发就在其中！所以，当我们谈论架构时，就是在说<code>项目的瓶颈</code>在那里？怎么避免进度被拖拉，保持软件开发的顺利上线！</p>
+<h3 id="更高视角思考架构师">更高视角思考架构师</h3><p>所以，明白了架构的目的，那么架构是不是必要的呢？如果是一个人的项目，架构是不是必要的呢？如果是5个人的团队项目，架构是不是必要的呢？如果是20个人的团队项目，架构是不是必要的呢？</p>
+<p>如果是100个人的团队项目呢？<br>如果是500个人的团队项目呢？<br>如果是5000个人的团队项目呢？<br>如果是50000个人的团队项目呢？</p>
+<p>在我看来，不管是多少人的项目，架构都是必要考虑的。当然，针对不同人数的项目，需要的架构必然也不一样！所以，<code>当我们谈论架构时，请先确认项目的大小！</code>，当然，项目的人员数量不可以固定不变，比如创业项目，不同阶段人员变化可能很大，这个时候，你问是不是一开始就需要做一个牛逼的基础架构？其实并不是！因为人员就是减少或增加，减少多少或增加多少，永远是无法评估的，所以最后的答案：万事开头难，只需要评估2~5倍人数，比如开始项目是5个人，那你项目架构就考虑最多10~25个人员的水平就差不多啦！最后，<code>在需要的时候，需要一个牛逼的架构师！</code>，没有解决不了的问题，所以也没有解决不了的架构。</p>
+<p>最后，我们平时怎么思考架构？可以从下面3点开始关注：</p>
+<ol>
+<li>现在架构是怎样的</li>
+<li>哪些地方可以改进的</li>
+<li>业界有哪些好的架构思想可以运用</li>
+</ol>
+<h2 id="4、总结">4、总结</h2><ol>
+<li>模块粒度应该如何划分？</li>
+<li>为什么要分层？</li>
+<li>如何分层？</li>
+<li>多团队如何协作？</li>
+</ol>
+<p>最后，回到本文一开始说的4个问题？现在你能自己想一下答案了吗？明白了吗？</p>
+<h3 id="彩蛋">彩蛋</h3><p>随着时间的流逝，人们开始意识到，严格的面向对象方法会带来很多问题。这些问题往往会使代码更复杂、更难以理解且更难以测试。事实证明，OOP 更适合某些特定的问题领域。例如，OOP 仍然是构建用户界面（窗口和按钮）最自然的方式 。但是，试图将面向对象技术应用于关系数据库一直是一场灾难。</p>
+<p>其实早在 GOF 书中描述：<code>实际使用哪种模式并不重要，模式并不是优秀设计的全部或者必要标准。</code>，所以，架构和模式并不是必要的！</p>
 <p>想一想，在1994年就能提出23种设计模式的概念，并且在书本给出，模式并不是必要标准！真的是大神！我想现在大多数人都不没有领悟其中或达到这样的思想深度，不由得心中自发地佩服！</p>
+<p>虽然面向对象并不是解决软件危机的银弹，但和面向过程相比，面向对象的思想更加贴近人类思维的特点，更加脱离机器思维，是一次软件设计思想上的飞跃。</p>
+<p>所以，我们要架构好自己的编程~</p>
 <p><br></p>
 <p>注：更多关于 iOS 开发和程序开发相关的内容，可以查看系列，目前还在连载中 <a href="https://ihtcboy.com/2020/02/01/2020-02-01_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/">【学习总结】iOS开发高手课 – (连载中) | iHTCboy’s blog</a>，以上，希望对你有用！</p>
 <h2 id="参考">参考</h2><ul>
@@ -500,6 +668,9 @@
 <li><a href="https://juejin.im/post/5e2e5ac06fb9a02fd127d5fc" target="_blank" rel="external">如何成为更好的iOS开发工程师之S.O.L.I.D原则 - 掘金</a></li>
 <li><a href="https://www.cnblogs.com/huangenai/p/6219475.html" target="_blank" rel="external">SOLID 设计原则 - huangenai - 博客园</a></li>
 <li><a href="https://blog.csdn.net/LoveLion/article/details/8517215" target="_blank" rel="external">Robert C. Martin列举的专业软件开发人员必须精通的技能<em>编程,设计模式</em>刘伟技术博客-CSDN博客</a></li>
+<li><a href="https://www.infoq.cn/article/zKbhME-UHABRqdTodLwF" target="_blank" rel="external">面向对象编程的兴衰-InfoQ</a></li>
+<li><a href="https://www.cnblogs.com/nickchen121/p/10981462.html" target="_blank" rel="external">面向对象程序设计的由来(了解) - 二十一岁的有德 - 博客园</a></li>
+<li><a href="https://zh.wikipedia.org/zh-cn/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80%E6%AD%B7%E5%8F%B2" target="_blank" rel="external">编程语言历史 - 维基百科，自由的百科全书</a></li>
 </ul>
 <p><br></p>
 <ul>
@@ -734,7 +905,7 @@
     <link href="https://iHTCboy.com/2019/12/27/2019-12-27_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE03/"/>
     <id>https://iHTCboy.com/2019/12/27/2019-12-27_iOS开发高手课03/</id>
     <published>2019-12-27T12:20:20.000Z</published>
-    <updated>2020-02-03T10:30:29.378Z</updated>
+    <updated>2020-02-04T00:15:15.543Z</updated>
     <content type="html"><![CDATA[<h2 id="1、前言">1、前言</h2><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/12/iOS开发高手课-03-AutoLayout是怎么进行自动布局的，性能如何？.png" alt="iOS开发高手课-03-AutoLayout是怎么进行自动布局的，性能如何？.png"></p>
 <a id="more"></a>
@@ -756,16 +927,16 @@
 <li>Auto Layout 的优缺点</li>
 <li>Auto Layout 触类旁通</li>
 </ol>
-<h4 id="1-_为什么需要_Auto_Layout">1. 为什么需要 Auto Layout</h4><p>为什么需要？<code>一般遇到解答不了的问题，可以试试逆向！</code>，那就反推，就是 <strong>没有 Auto Layout 之前是怎么样的</strong> ？没有 Auto Layout 时，我们是通过设置元素的 <code>Frame</code> 来手动指定界面布局的大小和位置。</p>
-<p>刚开始，大家的App并不复杂，页面布局也很简单，并且有一个历史原因，就是 <code>iPhone4/s</code>（960x640像素）时代 <em>（更早的 iPhone 3G/S，3G网络，S是速度 Speed，因为08、09年那会，一般国内开发者估计都没有见过，所以这里就简单提一下。）</em> ，iPhone 的宽度都是 640 像素, 开发时用 320 个点计算， 直到 2012年9月发布 <code>iPhone5</code> （1136x640像素），屏幕高度增长了！4寸，当时三星都开始5寸大屏了，大家当年吐槽iPhone长的图片大家可以搜索看看！此时此刻，适配 iPhone5 依然并没有太大难度，苹果默认针对没有适配 iPhone5 的App，在 iPhone5 打开App时，上下2端黑屏，这样来过度。</p>
-<p>就在当年，2012年的 WWDC2012 苹果发布了 <code>Auto Layout</code> 技术，从 <code>iOS6</code> 以后开始支持（<code>Xcode4</code>）。2013年9月发布 <code>iPhone5s</code>，但是大多数的开发者还是习惯使用传统的UI布局方式，大家的开发App布局并不会觉得麻烦，直到2014年才发生变化！</p>
-<p>2014年9月，苹果发布了 <code>iPhoe 6</code>（1334x750像素）、<code>iPhone 6 plus</code>（1920x1080像素），屏幕适配工作变得非常必要！如果用计算数值的方法工作量增加了几倍。因为4个尺寸的屏幕不一样！iPhone4/s（960x640像素）、iPhone 5/s （1136x640像素）、iPhoe 6（1334x750像素）、iPhone 6 plus（1920x1080像素），虽然大家还是可以按比例计算做缩放，但是这样并不能解决所有问题，因为如果想像素级还原设计、效果图调整尺寸等，可能都需要重新手动计算一次。所以，这样算过程，应该是2014年后才是 <code>Auto Layout</code>技术被大家广泛应用。我在 GitHub 查看了 iOS 最经典的 <a href="https://github.com/SnapKit/Masonry" target="_blank" rel="external">Masonry</a> 库是 <a href="https://github.com/SnapKit/Masonry/commit/866db519124daa0607b000ce2ce8045c0a3a4fe3" target="_blank" rel="external">2013年7月22号</a> 创建的，也是符合这个技术历史的进程啊~   <em>(ps: Masonry 源码值得研究学习，有很多可学习的知识，详细搜索引擎一下，已经有很多好的文章啦~)</em></p>
+<h4 id="1-_为什么需要_Auto_Layout">1. 为什么需要 Auto Layout</h4><p>为什么需要？<code>一般遇到解答不了的问题，可以试试逆向！</code>，那就是反推，就是 <strong>没有 Auto Layout 之前是怎么样的</strong> ？没有 Auto Layout 时，我们是通过设置元素的 <code>Frame</code> 来手动指定界面布局的大小和位置。</p>
+<p>刚开始（2010-2014），大家的App并不复杂，页面布局也很简单，并且技术和历史原因，就是 <code>iPhone4/s</code>（960x640像素）时代 <em>（更早的 iPhone 3G/S，3G网络，S是速度 Speed，因为08、09年那会，一般国内开发者估计都没有见过这些设备，所以这里就简单提一下。）</em> ，iPhone 的宽度都是 640 像素, 开发时用 320 个点计算， 直到 2012年9月发布 <code>iPhone5</code> （1136x640像素），屏幕高度增长了！4寸，当时三星都开始5寸大屏了，所以当年大家吐槽iPhone长的图片可以搜索看看！当年此时此刻，适配 iPhone5 依然并没有太大难度，苹果默认针对没有适配 iPhone5 的App，在 iPhone5 打开App时，上下2端黑屏，这样来过度，让开发者慢慢适配。</p>
+<p>就在当年早期，2012年的 WWDC2012 苹果发布了 <code>Auto Layout</code> 技术，从 <code>iOS6</code> 以后开始支持（<code>Xcode4</code>）。2013年9月发布 <code>iPhone5s</code>，但是大多数的开发者还是习惯使用传统的UI布局方式，大家的开发App布局并不会觉得麻烦，直到2014年变化的事情才有改变！</p>
+<p>2014年9月，苹果发布了 <code>iPhoe 6</code>（1334x750像素）、<code>iPhone 6 plus</code>（1920x1080像素），屏幕适配工作变得非常必要！如果用计算数值的方法工作量增加了几倍。因为4个尺寸的屏幕不一样！iPhone4/s（960x640像素）、iPhone 5/s （1136x640像素）、iPhoe 6（1334x750像素）、iPhone 6 plus（1920x1080像素），虽然大家还是可以按比例计算做缩放，但是这样并不能解决所有问题，因为如果想像素级还原设计、效果图调整尺寸、元素布局比例关系依赖等，可能都需要全部重新手动计算一次，编写这样的代码其实是很操心的。所以这样来年，应该是2014年后才是 <code>Auto Layout</code>技术被大家广泛应用。我在 GitHub 查看了 iOS 最经典的 <a href="https://github.com/SnapKit/Masonry" target="_blank" rel="external">Masonry</a> 库是 <a href="https://github.com/SnapKit/Masonry/commit/866db519124daa0607b000ce2ce8045c0a3a4fe3" target="_blank" rel="external">2013年7月22号</a> 创建的，也是符合这个技术历史的进程啊~   <em>(ps: Masonry 源码值得研究学习，有很多可学习的知识，详细搜索引擎一下，已经有很多好的文章啦~)</em></p>
 <p>那么到此，大家明白了，为什么需要 Auto Layout 了吗？</p>
 <h4 id="2-_什么是_Auto_Layout">2. 什么是 Auto Layout</h4><p><code>Auto Layout</code> 是一种基于<code>约束</code>的、<code>描述</code>性的<code>布局系统</code>。也就是使用约束条件来描述布局，View 的 Frame 会根据这些描述来进行计算。</p>
 <h4 id="3-_怎么使用_Auto_Layout">3. 怎么使用 Auto Layout</h4><p>2012年，Xcode4，iOS6 引入了 <code>NSLayoutConstraint</code> 类，并且 <code>VFL</code> (Visual Format Language，视觉格式语言) 的方式创建约束。通过下面2个方式来生成布局约束组：</p>
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">+ (<span class="built_in">NSArray</span> *)constraintsWithVisualFormat:(<span class="built_in">NSString</span> *)format options:(<span class="built_in">NSLayoutFormatOptions</span>)opts metrics:(<span class="built_in">NSDictionary</span> *)metrics views:(<span class="built_in">NSDictionary</span> *)views;</span><br></pre></td></tr></table></figure>
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">+(<span class="keyword">id</span>)constraintWithItem:(<span class="keyword">id</span>)view1 attribute:(<span class="built_in">NSLayoutAttribute</span>)attr1 relatedBy:(<span class="built_in">NSLayoutRelation</span>)relation toItem:(<span class="keyword">id</span>)view2 attribute:(<span class="built_in">NSLayoutAttribute</span>)attr2 multiplier:(<span class="built_in">CGFloat</span>)multiplier constant:(<span class="built_in">CGFloat</span>)c;</span><br></pre></td></tr></table></figure>
-<p>关于具体使用和 VFL 相关使用可以查看官方文档：<a href="https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/VisualFormatLanguage.html" target="_blank" rel="external">Auto Layout Guide: Visual Format Language</a>，所有学习资料官方文档是第一手！</p>
+<p>关于 NSLayoutConstraint 详细用法和 VFL 相关使用可以查看官方文档：<a href="https://developer.apple.com/documentation/uikit/nslayoutconstraint" target="_blank" rel="external">NSLayoutConstraint - UIKit</a> 和 <a href="https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/VisualFormatLanguage.html" target="_blank" rel="external">Auto Layout Guide: Visual Format Language</a>，所有学习资料官方文档是第一手！</p>
 <h4 id="4-_使用_Auto_Layout_时注意的问题">4. 使用 Auto Layout 时注意的问题</h4><h5 id="Constraint_Churn（约束流失）">Constraint Churn（约束流失）</h5><ol>
 <li>Avoid removing all constraints （避免删除所有约束）</li>
 <li>Add static constraints once （仅一次添加静态约束，且不要再改变它们）</li>
@@ -779,25 +950,25 @@
 <li>Determine size through constraints (通过约束确定尺寸)</li>
 <li>Override intrinsicContentSize judiciously (明智地覆盖内在内容大小)</li>
 <li>Use priorities to properly solve your layout (使用优先级来正确解决您的布局)</li>
-<li>Alignment goes beyond top, bottom, and center (对齐超出顶部，底部和中心)</li>
+<li>Alignment goes beyond top, bottom, and center (对齐不超出顶部，底部和中心)</li>
 <li>Keep localization in mind （记住本地化）</li>
 </ol>
 <p>注：来自：<a href="https://developer.apple.com/videos/play/wwdc2015/218" target="_blank" rel="external">Mysteries of Auto Layout, Part 1 - WWDC 2015 - Videos - Apple Developer</a></p>
-<p>以上注意事项来自 <code>WWDC</code>，具体视频可参考文章末尾的引用来源。这里不打算详细解说，因为视频真的说的很好，推荐大家去看看啊。</p>
-<h4 id="5-_Auto_Layout_的应用领域">5. Auto Layout 的应用领域</h4><p>Auto Layout 其实，除了可以用代码来创建，苹果的可视化布局，也有使用，<code>nib</code>，<code>xib</code>，<code>storyboard</code>，那么大家对这3个东西了解熟悉吗？</p>
+<p>以上注意事项来自 <code>WWDC</code>，具体视频可参考文章末尾的引用来源。这里不打算详细解说，因为视频真的说的很好，所以如果照视频文字摘抄下来，第一是没有视频形象生动，第二是内容真太多！推荐大家去看看视频啊！（ps：现在有中文字幕和中文语言了，不要再找借口了~）</p>
+<h4 id="5-_Auto_Layout_的应用领域">5. Auto Layout 的应用领域</h4><p>Auto Layout 其实除了可以用代码来创建，苹果的可视化布局，也有使用，<code>nib</code>，<code>xib</code>，<code>storyboard</code>，那么大家对这3个东西了解熟悉吗？</p>
 <h5 id="Interface_Builder_工具">Interface Builder 工具</h5><p><code>Interface Builder</code> 在 Xcode 4 之前，是一个独立的软件，Xcode 4 开始集成到Xcode 中的。这个大家现在比较熟悉，就是可以用鼠标以图形化的方式，拖拉元素来创建UI界面。</p>
 <h5 id="NIB、XIB_区别">NIB、XIB 区别</h5><p>Xcode 3 前，Interface Builder 创建的文件是 <code>NIB</code>（二进制格式，NeXT Interface Builder），不利于版本控制。</p>
 <p>Xcode 3 开始，Interface Builder 使用了一种新的文件格式 <code>XIB</code>（XML文本格式，OS X Interface Builder或XML Interface Builder），XIB在工程编译时被转换成NIB；</p>
 <h5 id="XIB_文件">XIB 文件</h5><p><code>XIB</code> 是一个描述文件，包含了用户界面及相关元素；一个 XIB 文件对应一个ViewController，也可以通过使用XIB来自定义View。</p>
 <h5 id="StoryBoard_故事板">StoryBoard 故事板</h5><p>iOS 5 （Xcode3）开始，Apple提供了一种全新的布局界面方式 <code>StoryBoard</code> 来拖拉创建界面；StoryBoard 是一组 ViewController 对应的 XIB，以及它们之间的转换方式的集合；在StoryBoard 中，不仅可以看到每个 ViewController 的布局样式，也可以知道各个ViewController 之间的转换关系。</p>
-<p>对于2013~2015年，当然非常的缺乏 iOS 开发者，所以一般的公司只有一个 iOS 开发，那么这时候，<code>StoryBoard</code> 就是最快速的创建界面的工具！此时，面对多种设备时，<code>Auto Layout</code> 就是锦上添花，可以大幅提高 UI 开发效率，一次性做出适合所有屏幕尺寸的 UI。</p>
+<p>对于2013~2015年，当时非常的缺乏 iOS 开发者，所以一般的公司只有一个 iOS 开发，那么这时候，<code>StoryBoard</code> 就是最快速的创建界面的工具！此时，面对多种设备时，<code>Auto Layout</code> 就是锦上添花，可以大幅提高 UI 开发效率，一次性做出适合所有屏幕尺寸的 UI。</p>
 <p>现在，对使用 <code>StoryBoard</code> + <code>Auto Layout</code> 还是使用 代码 + <code>Masonry</code>/<code>SnapKit</code>，依然没有最终的答案，因为各有优缺点。</p>
 <h4 id="6-_Auto_Layout_的优缺点">6. Auto Layout 的优缺点</h4><p><code>Auto Layout</code>的优点不用多说，解决手动计算每个屏幕尺寸的布局，提高工程效率！缺点的话，大概就是适当的导致性能降低？</p>
 <p><code>Auto Layout 导致性能降低</code>？是吗？为什么是？为什么不是？前面的“什么是 Auto Layout”只是简单的简介，Auto Layout 是一个 <code>布局系统</code>，没有深入的介绍，不知道大家有没有读到那里时，产生疑问或兴趣呢？</p>
 <p>所以，要知道 Auto Layout 的优缺点，还需要深入了解它的原理，才能理解优缺点！否则，死记硬背过后还是不明不白。Auto Layout 是一套 <code>布局引擎系统</code>，叫作 <code>Layout Engine</code> ，是 Auto Layout 的核心。了解 Layout Engine 的布局原理，是理解它的性能（优缺点）的基础。</p>
 <p>所以在这里补充一下，主要参考苹果官方的 WWDC 视频来解说 <code>Layout Engine</code>，引用主讲者 Jason Yao 说的：<code>我们并不只想说这样不好，我们相信大家真正的理解它，理解这个过程！剥开表面！了解真正发生了什么？</code>：</p>
 <h5 id="The_Render_Loop_（渲染循环）">The Render Loop （渲染循环）</h5><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/12/01-The-Render-Loop.jpg" alt="01-The-Render-Loop.jpg"></p>
-<p>布局引擎是工作流程如上图所示，<code>Update Constraints</code>（更新约束）流，从父视图的约束开始更新，传递到子视图，再到子子视图，这里有2点要说明，一是这个更新约束只是从有约束变化的视图开始，并不是所有视图都更新；二是这个传递过程为什么是从父级开始，因为当一个约束变化时，这个约束是自己与父级的关系或自己与子级的关系，所以会通知给子级视图来响应！<code>Layout</code>（布局）流，是从子视图开始布局，为什么是反向呢？一个视图的布局，它一定是由自己和所有的子视图组成，那自己的布局一定是受子视图的布局和约束影响，所以先确认所有子视图的约束，那自己的视图就确实了，这个可能有点绕，大家可以看看原视频来理解。<code>Display</code> （渲染显示）流，因为子视图布局确定了，那显示的大小和位置就能确定，所以也是从子视图开始显示。</p>
+<p>布局引擎是工作流程如上图所示，<code>Update Constraints</code>（更新约束）流，从父视图的约束开始更新，传递到子视图，再到子子视图，这里有2点要说明，一是这个更新约束只是从有约束变化的视图开始，并不是所有视图都更新；二是这个传递过程为什么是从父级开始，因为当一个约束变化时，这个约束是自己与父级的关系或自己与子级的关系，所以会通知给子级视图来响应！<code>Layout</code>（布局）流，是从子视图开始布局，为什么是反向呢？一个视图的布局，它一定是由自己和所有的子视图组成，那自己的布局一定是受子视图的布局和约束影响，所以先确认所有子视图的约束，那自己的视图就确定了，简单来说，就是所有子视图确定大小和位置后，那父视频的大小至少能确定了！这个可能有点绕，大家可以看看原视频来理解。<code>Display</code> （渲染显示）流，因为子视图布局确定了，那显示的大小和位置就能确定，所以也是从子视图开始显示。</p>
 <h5 id="What_is_updateConstraints?（什么是_updateConstraints_？）">What is updateConstraints?（什么是 updateConstraints ？）</h5><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/12/02-The-Render-Loop.jpg" alt="02-The-Render-Loop.jpg"></p>
 <p><code>updateConstraints()</code> 是视图的约束更新时会调用的方法，可以重写这个方法来自行设置约束条件。图中列出了 <code>Update Constraints</code>（更新约束）、<code>Layout</code>（布局）、<code>Display</code> （渲染显示） 的对应关系的方法。这里与第一个图并不是对应的关系！而是这3个状态的生命周期分别有对应的方法来响应，要怎么理解？</p>
 <p>要理解这个图，最简单是从了解 <code>layoutSubviews()</code>、<code>setNeedsLayout()</code>、<code>layoutIfNeeded()</code> 三者的关联和作用，明白这3个方法的作用，那么就知道这个生命周期是什么意思。</p>
@@ -811,25 +982,26 @@
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">text1<span class="class">.minX</span> = <span class="number">8</span></span><br><span class="line">text1<span class="class">.width</span> = <span class="number">100</span></span><br><span class="line">text2<span class="class">.minX</span> = text1<span class="class">.minX</span> + text1<span class="class">.width</span> +<span class="number">20</span></span><br></pre></td></tr></table></figure>
 <p>最后解出等式，等到结果：</p>
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">text1<span class="class">.minX</span> = <span class="number">8</span></span><br><span class="line">text1<span class="class">.width</span> = <span class="number">100</span></span><br><span class="line">text2<span class="class">.minX</span> = <span class="number">128</span></span><br></pre></td></tr></table></figure>
-<p>所以，布局引擎的核心就是这个等式的计算，我们初中就算了一元二次方程式，后来学习了多次方程式求解，是不是觉得很简单？那么这些数学问题，我们读书时就知道<code>数字题目答案只有一个，但是解法有很多！</code>，所以原文章提到 <a href="https://constraints.cs.washington.edu/cassowary/" target="_blank" rel="external">Cassowary 算法</a>、<a href="https://en.wikipedia.org/wiki/Simplex_algorithm" target="_blank" rel="external">Simplex 算法</a> 就是解决这个方程式求解的问题。我们人可以做一些骚操作，但是要程序操作，一定是通用的解法，这也是<code>算法为什么难！数学为什难！因为找到规律的人，往往是牛逼的人！</code></p>
+<p>所以，布局引擎的核心就是这个等式的计算，我们初中就算了一元二次方程式，后来学习了多次方程式求解，是不是觉得很简单？那么这些数学问题，我们读书时就知道<code>数字题目答案只有一个，但是解法有很多！</code>，所以原文章提到 <a href="https://constraints.cs.washington.edu/cassowary/" target="_blank" rel="external">Cassowary 算法</a>、<a href="https://en.wikipedia.org/wiki/Simplex_algorithm" target="_blank" rel="external">Simplex 算法</a> 就是解决这个方程式求解的问题。至于这些算法这里不打算细说（我承认是因为水平达不到！-。-），为什么算法难？我们人可以做一些骚操作或肉眼看到捷径，但是要机器或程序来操作和寻找，一定要有<code>通用的解法</code>，这也是<code>算法为什么难！数学为什难！因为找到规律的人，往往是牛逼的人！</code></p>
 <p><code>Equation</code>（等式）求解的结果，通过 <code>setNeedsLayout()</code> 通知所有的视图，视图通过 <code>UIView.layoutSubviews()</code> 方法从引擎中复制数据到子视图（Copying data from engine to subview）。</p>
-<p>所以，这个就是整个引擎工作的过程！不知道我说的明白不明白！理解了这个过程，就能回复前面的 <code>Auto Layout 会导致性能降低</code>？从原理上说，引擎的工作方式和我们开发者手动计算的过程是一样的！导致性能降低的原因，是因为一些<code>约束流失</code>（Constraint Churn）、<code>不可满足约束</code>（Unsatisfiable Constraints）等导致消耗大量计算。可能你会有疑问：为什么引擎不会做傻事呢？比如我自己计算的布局，我都缓存了，引擎做了吗？答案是肯定的，<code>Engine is a layout cache and tracker</code>（引擎是一个布局缓存和约束跟踪器），也就是你设置的布局，如果不必更新是不会更新约束的；同时，约束更新时引擎会知道那些约束需要重新计算，那么不需要再计算！所以，引擎系统导致性能降低本质来说可以忽视，剩下的就是，<code>如何避免我们设置约束时不合理导致性能降低呢</code>？可以参考前面一节：“4. 使用 Auto Layout 时注意的问题”，详细的所有原则这里就不展开了，下面会重点提几个。到此，引擎的原理问题算是解决啦！</p>
+<p>所以，这个就是整个引擎工作的过程！不知道我说的明白不明白！理解了这个过程，就能回答前面的 <code>Auto Layout 会导致性能降低</code>？从原理上说，引擎的工作方式和我们开发者手动计算的过程是一样的！导致性能降低的原因是什么？其实大多数是<code>人为原因</code>，比如因为 <code>约束流失</code>（Constraint Churn）、<code>不可满足约束</code>（Unsatisfiable Constraints）等导致消耗大量计算。可能你会有疑问：为什么引擎不会做傻事呢？比如我自己计算的布局，我都缓存了，引擎做了吗？答案是肯定的，<code>Engine is a layout cache and tracker</code>（引擎是一个布局缓存和约束跟踪器），也就是你设置的布局，如果不必更新是不会更新约束的；同时，约束更新时引擎会知道那些约束需要重新计算，那么不需要再计算！其实你能想到的，苹果也基本能想到！所以，引擎系统导致性能降低本质来说可以忽视，剩下的就是，<code>如何避免我们设置约束时不合理导致性能降低呢</code>？可以参考前面一节：“4. 使用 Auto Layout 时注意的问题”，详细的所有原则这里就不展开了，下面会重点提几个优化点。至此，引擎的原理问题算是解决啦！大家明白了吗！</p>
 <h5 id="Building_a_More_Performant_Layout（构建一个更好的性能布局）">Building a More Performant Layout（构建一个更好的性能布局）</h5><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/12/04-Building-a-More-Performant-Layout.jpg" alt="04-Building-a-More-Performant-Layout.jpg"></p>
 <p>这些列举了我们常见的 TableView 滚动卡顿的问题，其实我们知道原因，就是滚动过程中 Cell 要重绘，需要我们知道 Cell 可以重用，但是每个 Cell 的布局和长度可能千变万化，所以卡顿的问题，有一个就是 Cell 变化过程中，重新布局的问题。首先，避免删除所有约束，因为所有约束重新计算可能不是必要的，比如上图的用户头像的位置和大小，固定约束后就不要去改变它啦！那么，可能有一些 Cell 有图片，有一些 Cell 没有时，可以通过 <code>setHidden:</code> 方法 和 <code>noImageConstraints</code> 图片的单独约束来控制，这样，尽最大可以减少约束的计算，导致性能的降低，从而尽可能的避免卡顿！另外，使用 <code>Auto Layout</code> 可以多使用 <code>Compression Resistance Priority</code> 和 <code>Hugging Priority</code>，利用优先级的设置，让布局更加灵活，代码更少，更易于维护。</p>
-<p>以上内容来源: <a href="https://developer.apple.com/videos/play/wwdc2018/220" target="_blank" rel="external">High Performance Auto Layout - WWDC 2018 - Videos - Apple Developer</a></p>
+<p>当然，针对 <code>Constraint Churn</code>（约束流失）问题，可以通过 Xcode 的 <code>Instruments</code> App 来 debug 调试，它会打印页面布局中所有的 <code>Constraint Churn</code>（约束流失）的元素和对应的约束，具体查看 WWDC 视频 <a href="https://developer.apple.com/videos/play/wwdc2018/220" target="_blank" rel="external">High Performance Auto Layout - WWDC 2018 - Videos - Apple Developer</a>。</p>
+<p>注：以上内容来源: <a href="https://developer.apple.com/videos/play/wwdc2018/220" target="_blank" rel="external">High Performance Auto Layout - WWDC 2018 - Videos - Apple Developer</a></p>
 <h5 id="Independent_Sibling_Views（独立的兄弟视图）">Independent Sibling Views（独立的兄弟视图）</h5><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/12/05-Independent-Sibling-Views.jpg" alt="05-Independent-Sibling-Views.jpg"></p>
-<p>前面说到 <code>如何避免我们设置约束时不合理导致性能降低呢</code>？我们已经知道引擎需要计算方程式求解，对于每个元素视图单独约束，相互不依赖时，其实就是解决一元一次方程式，所以就是一条直线。对于我们开发来说，避免约束的相互依赖就能减少性能消耗，所以我们设置约束时，能不依赖的约束的视图，让他们保持独立！就是最优解！</p>
+<p>这个图片里的线条有 iOS11 和 iOS12 ，明显的 iOS12 优化更好，性能消耗更低，这些都是苹果做的优化，对我们开发者来说，我们能做什么呢？前面说到 <code>如何避免我们设置约束时不合理导致性能降低呢</code>？我们已经知道引擎需要计算方程式求解，对于每个元素视图单独约束，相互不依赖时，其实就是解决一元一次方程式，所以就是一条直线。对于我们开发来说，避免约束的相互依赖就能减少性能消耗，所以我们设置约束时，能不依赖的约束的视图，让他们保持独立！就是最优解！</p>
 <h5 id="Dependent_Sibling_Views（互相依赖的兄弟视图）">Dependent Sibling Views（互相依赖的兄弟视图）</h5><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/12/06-Dependent-Sibling-Views.jpg" alt="06-Dependent-Sibling-Views.jpg"></p>
 <p>对于相互依赖的约束，它们就构形了多元方程式，依赖关系越多，曲线就越陡峭。所以，我们能做的还是一样，尽量减少多个视图之前的约束依赖！</p>
 <h4 id="Nested_Views（嵌套的视图）">Nested Views（嵌套的视图）</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/12/07-Nested-Views.jpg" alt="07-Nested-Views.jpg"></p>
 <p>对于嵌套的视图，同理，减少视图的嵌套，减少嵌套的层级，都是解决性能的重要手段！</p>
 <p>以上内容来源：<a href="https://developer.apple.com/videos/play/wwdc2018/202/" target="_blank" rel="external">What’s New in Cocoa Touch - WWDC 2018 - Videos - Apple Developer</a> 。更多的技巧，可以参考前面一节：“4. 使用 Auto Layout 时注意的问题”。</p>
 <h5 id="Building_the_Layout（构建布局）">Building the Layout（构建布局）</h5><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/12/08-Building-the-Layout.jpg" alt="08-Building-the-Layout.jpg"></p>
-<p>前面只是简单的说明了引擎就是计算出视图的位置和大小，那么具体是怎么计算的呢？这个图片显示了布局引擎的工作流。每个视图在得到自己的布局之前，<code>Layout Engine</code> 会将视图、约束、优先级、固定大小等通过计算转换成最终的位置和大小。</p>
+<p>前面只是简单的说明了引擎就是计算出视图的位置和大小，那么具体是怎么计算的呢？这个图片显示了布局引擎的工作流需要那些量。每个视图在得到自己的布局之前，<code>Layout Engine</code> 会将视图、约束、优先级、固定大小等通过计算转换成最终的位置和大小。</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/12/09-Building-the-Layout.jpg" alt="09-Building-the-Layout.jpg"></p>
 <p>所以，最终的 <code>Layout Engine</code> 计算到布局就是这样的过程，细节点还有很多。还是那句话，授人以鱼不如授人以渔<code>！大家有“渔”后，自然要自己捉鱼！</code>，这里就不详细解进了，可观看 WWDC 视频：<a href="https://developer.apple.com/videos/play/wwdc2015/218/" target="_blank" rel="external">Mysteries of Auto Layout, Part 1 - WWDC 2015 - Videos - Apple Developer</a>。</p>
 <p>最后，关于 <code>Auto Layout</code> 还有很多知识，比如怎么调试 Auto Layout 的 Debug？可以查看 <a href="https://developer.apple.com/videos/play/wwdc2016/236" target="_blank" rel="external">What’s New in Auto Layout - WWDC 2016 - Videos - Apple Developer</a> 视频。Auto Layout 的流程（The Layout Cycle），可以查看 <a href="https://developer.apple.com/videos/play/wwdc2015/219/" target="_blank" rel="external">Mysteries of Auto Layout, Part 2 - WWDC 2015 - Videos - Apple Developer</a>。</p>
-<h4 id="7-_Auto_Layout_触类旁通">7. Auto Layout 触类旁通</h4><h5 id="UIStackView_与_Flexbox">UIStackView 与 Flexbox</h5><p><code>UIStackView</code> 是2015年 iOS9 苹果推出的一套 API，它可以很好地减轻手动写或拖 constraint 带来的重复繁琐的工作，也可以自动化的处理排列和元素个数的变化。（当年因为需要iOS9+，导致很少有开发者使用，放在2020年的今年，这个控件可以熟悉一下啊！）与 Web 前端的 <code>Flexbox</code> 响应式布局是一个原理。UIStackView 特点有下面4个：</p>
+<h4 id="7-_Auto_Layout_触类旁通">7. Auto Layout 触类旁通</h4><h5 id="UIStackView_与_Flexbox">UIStackView 与 Flexbox</h5><p><code>UIStackView</code> 是2015年 iOS9 苹果推出的一套 API，它可以很好地减轻手动写或拖 constraint 带来的重复繁琐的工作，也可以自动化的处理排列和元素个数的变化。当年因为需要iOS9+，导致很少有开发者使用，放在2020年的今年，这个控件可以熟悉一下啊！UIStackView 与 Web 前端的 <code>Flexbox</code> 响应式布局是一个思想原理。UIStackView 特点有下面4个：</p>
 <ol>
 <li>Easy to build（容易构建）</li>
 <li>Easy to maintain （容易维护）</li>
@@ -839,6 +1011,7 @@
 <p>这里并不打算讲解 <code>UIStackView</code> 有多利害！确实它很利害。具体可以查看 WWDC 演示的Demo <a href="https://developer.apple.com/videos/play/wwdc2015/218" target="_blank" rel="external">Mysteries of Auto Layout, Part 1 - WWDC 2015 - Videos - Apple Developer</a>。</p>
 <p>关于 <code>Flexbox</code> 的思想可以看看文章 <a href="https://zhuanlan.zhihu.com/p/25303493" target="_blank" rel="external">30 分钟学会 Flex 布局 - 知乎</a> 和 <a href="https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html" target="_blank" rel="external">Flex 布局教程：语法篇 - 阮一峰的网络日志</a>，个人觉得文章写得很好。另外关于 <code>UIStackView</code> 的强大就借 <a href="https://juejin.im/post/5c2ee162e51d4550fc42ac57" target="_blank" rel="external">UIStackView 入坑指南 - 掘金</a> 文章的一张图来总结吧：</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/12/10-UIStackView-Layout.png" alt="10-UIStackView-Layout.png"></p>
+<p>这个图片是 AppStore 的 App 详细页面的布局，使用 <code>UIStackView</code> 布局让界面清晰和简单，这也是模块化组件化的思想，关于这个界面为什么用 UIStackView 更好？可以观看 <a href="https://developer.apple.com/videos/play/wwdc2015/218" target="_blank" rel="external">Mysteries of Auto Layout, Part 1 - WWDC 2015</a> ，答案在里面，文字不好回答啊！</p>
 <h5 id="SwiftUI">SwiftUI</h5><ul>
 <li><code>命令式编程</code>（Imperative Programming）：命令“机器”如何去做事情(how)，这样不管你想要的是什么(what)，它都会按照你的命令实现。</li>
 <li><code>声明式编程</code>（Declarative Programming）：告诉“机器”你想要的是什么(what)，让机器想出如何去做(how)。</li>
