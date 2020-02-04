@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="iHTCboy's blog">
 <meta property="og:description" content="1、前言首先，我认为学习总结，要有所总，所结，就是有归纳后，能用自己的话告诉别人！有所结，就是有所收获输出，一般我认为是思维导图，所以，每篇文章前，我都会先给出文章的脑图：">
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/iOS开发高手课-05-链接器：符号是怎么绑定到地址上的？.png">
-<meta property="og:updated_time" content="2020-02-03T14:51:50.084Z">
+<meta property="og:updated_time" content="2020-02-04T04:08:16.444Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【学习总结】05 | 链接器：符号是怎么绑定到地址上的？">
 <meta name="twitter:description" content="1、前言首先，我认为学习总结，要有所总，所结，就是有归纳后，能用自己的话告诉别人！有所结，就是有所收获输出，一般我认为是思维导图，所以，每篇文章前，我都会先给出文章的脑图：">
@@ -242,7 +242,8 @@ var _hmt = _hmt || [];
 <h2 id="2、正文">2、正文</h2><blockquote>
 <p>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程 <a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a> </p>
 </blockquote>
-<h2 id="3、总结">3、总结</h2><p><br></p>
+<p><code>链接器</code> 对于刚刚接触程序开发的同学可能基本不懂，虽然大学学习<code>编译原理</code>、<code>计算机原理</code>等。这些知识比较抽象，为了让大家明白，我们需要站在巨人的肩膀上！所以，本文需要一个巨人 — <code>编译器</code> 来帮助大家理解 <code>链接器</code> 是什么？为什么？等。好的，那么我们就开始吧！</p>
+<h3 id="《程序是怎样跑起来的》">《程序是怎样跑起来的》</h3><h2 id="3、总结">3、总结</h2><p><br></p>
 <p>注：更多关于 iOS 开发和程序开发相关的内容，可以查看系列，目前还在连载中 <a href="https://ihtcboy.com/2020/02/01/2020-02-01_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/">【学习总结】iOS开发高手课 – (连载中) | iHTCboy’s blog</a>，以上，希望对你有用！</p>
 <h2 id="参考">参考</h2><ul>
 <li><a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a></li>
@@ -465,7 +466,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1、前言"><span class="toc-number">1.</span> <span class="toc-text">1、前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2、正文"><span class="toc-number">2.</span> <span class="toc-text">2、正文</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3、总结"><span class="toc-number">3.</span> <span class="toc-text">3、总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考"><span class="toc-number">4.</span> <span class="toc-text">参考</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1、前言"><span class="toc-number">1.</span> <span class="toc-text">1、前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2、正文"><span class="toc-number">2.</span> <span class="toc-text">2、正文</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#《程序是怎样跑起来的》"><span class="toc-number">2.1.</span> <span class="toc-text">《程序是怎样跑起来的》</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3、总结"><span class="toc-number">3.</span> <span class="toc-text">3、总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考"><span class="toc-number">4.</span> <span class="toc-text">参考</span></a></li></ol>
                     </div>
                 </span>
             </div>
