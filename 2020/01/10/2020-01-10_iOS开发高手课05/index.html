@@ -20,9 +20,9 @@
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/图1-2-CPU的四个构成部分.jpg">
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/图7-2-CPU负责解析并运行从源代码编译而来的本地代码.jpg">
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/图8-2-转换成本地代码后就变成了同样的语言.jpg">
-<meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/图8-5 同样的源代码可以转换成适用于不同处理器的本地代码">
-<meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/图8-8-Windows中的编译和链接机制.jpg">
-<meta property="og:updated_time" content="2020-02-04T10:36:25.903Z">
+<meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/图8-5-同样的源代码可以转换成适用于不同处理器的本地代码.jpg">
+<meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/图8-8-Windows中的编译和链接机制.jpg">
+<meta property="og:updated_time" content="2020-02-04T13:16:22.040Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【学习总结】05 | 链接器：符号是怎么绑定到地址上的？">
 <meta name="twitter:description" content="1、前言首先，我认为学习总结，要有所总，所结，就是有归纳后，能用自己的话告诉别人！有所结，就是有所收获输出，一般我认为是思维导图，所以，每篇文章前，我都会先给出文章的脑图：">
@@ -278,8 +278,8 @@ var _hmt = _hmt || [];
 <p>最后一个问题，x86、x86_64主要的区别是什么？就是32位和64位的问题，x86 中只有8个32位通用寄存器，分别是 eax,ebx,ecx，edx, ebp, esp, esi, edi。x86_64 把这8个通用寄存器扩展成了64位的，并且比x86增加了若干个寄存器（好像增加了8个，变成了总共16个通用寄存器）。譬如四个通用寄存器（RAX, RBX, RCX, RDX）是由32位的（EAX, EBX, ECX, EDX）64位扩展而来，相应的还有指针寄存器（RIP, RBP, RSP, RSI, RDI），以及增加八个通用寄存器（R8～R15）等等。 这些资源只可在x64处理器的64位模式下使用，在用来支持x86软件的遗留模式和兼容模式中是不可见的。</p>
 <p>以上内容和关于 CPU 更多历史和资料，可查看来源： <a href="https://zh.wikipedia.org/wiki/X86#64%E4%BD%8D%E5%85%83" target="_blank" rel="external">x86 - 维基百科</a> 、 <a href="https://zh.wikipedia.org/wiki/X86-64" target="_blank" rel="external">x86-64 - 维基百科，自由的百科全书</a> 和 <a href="https://www.iteye.com/blog/chenzehe-1703429" target="_blank" rel="external">X86、X64和X86_64区别</a> 。</p>
 <h4 id="转换成本地代码后就变成了同样的语言">转换成本地代码后就变成了同样的语言</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/图8-2-转换成本地代码后就变成了同样的语言.jpg" alt="图8-2-转换成本地代码后就变成了同样的语言.jpg"></p>
-<h4 id="同样的源代码可以转换成适用于不同处理器的本地代码">同样的源代码可以转换成适用于不同处理器的本地代码</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/图8-5 同样的源代码可以转换成适用于不同处理器的本地代码" alt="图8-5 同样的源代码可以转换成适用于不同处理器的本地代码"></p>
-<h4 id="Windows中的编译和链接机制">Windows中的编译和链接机制</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/图8-8-Windows中的编译和链接机制.jpg" alt="图8-8-Windows中的编译和链接机制.jpg"></p>
+<h4 id="同样的源代码可以转换成适用于不同处理器的本地代码">同样的源代码可以转换成适用于不同处理器的本地代码</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/图8-5-同样的源代码可以转换成适用于不同处理器的本地代码.jpg" alt="图8-5-同样的源代码可以转换成适用于不同处理器的本地代码.jpg"></p>
+<h4 id="Windows中的编译和链接机制">Windows中的编译和链接机制</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/图8-8-Windows中的编译和链接机制.jpg" alt="图8-8-Windows中的编译和链接机制.jpg"></p>
 <h2 id="3、总结">3、总结</h2><p><br></p>
 <p>注：更多关于 iOS 开发和程序开发相关的内容，可以查看系列，目前还在连载中 <a href="https://ihtcboy.com/2020/02/01/2020-02-01_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/">【学习总结】iOS开发高手课 – (连载中) | iHTCboy’s blog</a>，以上，希望对你有用！</p>
 <h2 id="参考">参考</h2><ul>
