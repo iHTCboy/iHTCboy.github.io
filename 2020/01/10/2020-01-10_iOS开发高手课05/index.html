@@ -16,7 +16,13 @@
 <meta property="og:site_name" content="iHTCboy's blog">
 <meta property="og:description" content="1、前言首先，我认为学习总结，要有所总，所结，就是有归纳后，能用自己的话告诉别人！有所结，就是有所收获输出，一般我认为是思维导图，所以，每篇文章前，我都会先给出文章的脑图：">
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/iOS开发高手课-05-链接器：符号是怎么绑定到地址上的？.png">
-<meta property="og:updated_time" content="2020-02-04T04:08:16.444Z">
+<meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/图1-1-程序运行流程示例.jpg">
+<meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/图1-2-CPU的四个构成部分.jpg">
+<meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/图7-2-CPU负责解析并运行从源代码编译而来的本地代码.jpg">
+<meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/图8-2-转换成本地代码后就变成了同样的语言.jpg">
+<meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/图8-5 同样的源代码可以转换成适用于不同处理器的本地代码">
+<meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/图8-8-Windows中的编译和链接机制.jpg">
+<meta property="og:updated_time" content="2020-02-04T10:36:25.903Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【学习总结】05 | 链接器：符号是怎么绑定到地址上的？">
 <meta name="twitter:description" content="1、前言首先，我认为学习总结，要有所总，所结，就是有归纳后，能用自己的话告诉别人！有所结，就是有所收获输出，一般我认为是思维导图，所以，每篇文章前，我都会先给出文章的脑图：">
@@ -242,8 +248,39 @@ var _hmt = _hmt || [];
 <h2 id="2、正文">2、正文</h2><blockquote>
 <p>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程 <a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a> </p>
 </blockquote>
-<p><code>链接器</code> 对于刚刚接触程序开发的同学可能基本不懂，虽然大学学习<code>编译原理</code>、<code>计算机原理</code>等。这些知识比较抽象，为了让大家明白，我们需要站在巨人的肩膀上！所以，本文需要一个巨人 — <code>编译器</code> 来帮助大家理解 <code>链接器</code> 是什么？为什么？等。好的，那么我们就开始吧！</p>
-<h3 id="《程序是怎样跑起来的》">《程序是怎样跑起来的》</h3><h2 id="3、总结">3、总结</h2><p><br></p>
+<p><code>链接器</code> 对于刚刚接触程序开发的同学可能基本不懂，虽然大学学习<code>编译原理</code>、<code>计算机原理</code>等。这些知识比较抽象，为了让大家明白，我们需要站在巨人的肩膀上！所以，本文需要一个巨人 —– <code>编译器</code> 来帮助大家理解 <code>链接器</code> 是什么？为什么？大家有没有想过，你写的代码，最终是怎么样在计算机或手机上运行的？？？那现在就让我们来了解一下吧！</p>
+<h3 id="《程序是怎样跑起来的》">《程序是怎样跑起来的》</h3><blockquote>
+<p>“计算机组成原理”图解趣味版，蹲马桶就能看懂的编程基础知识！普及计算机知识。如何向小学生讲解CPU和二进制？如何向中学生讲解内存和磁盘？如何向女高中生讲解操作系统的原理？如何向老奶奶说明显示器和电视的不同？</p>
+</blockquote>
+<p><code>《程序是怎样跑起来的》</code>作者是日本<code>矢泽久雄</code>，我们需要解析 <code>编译器</code>，所以需要简单入门级的<code>计算机组成原理</code>，这本书就是这样一本优秀的书！大家可能通过微信读书读到电子版： <a href="https://weread.qq.com/wrpage/book/share/907761" target="_blank" rel="external">程序是怎样跑起来的 - 微信读书</a>，目前2020年微信还有很多无限卡会员的免费阅读，当然如果必要花 19.99 元我认为也值得。好了我们就不多说了，下面我主要摘取书中几个示意图来解析 <code>编译器</code>：</p>
+<h4 id="程序运行流程示例">程序运行流程示例</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/图1-1-程序运行流程示例.jpg" alt="图1-1-程序运行流程示例.jpg"></p>
+<p>上图展示程序运行流程示例，从我们编写的高级语言的代码，到 <code>CPU</code>（Central Processing Unit，中央处理器）所负责的就是解释和运行最终转换成机器语言的程序内容，其实是 <code>编译器</code> 工作的流程。</p>
+<h4 id="CPU的四个构成部分">CPU的四个构成部分</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/图1-2-CPU的四个构成部分.jpg" alt="图1-2-CPU的四个构成部分.jpg"></p>
+<p>CPU 的内部由<code>寄存器</code>、<code>控制器</code>、<code>运算器</code>和<code>时钟</code>四个部分构成，各部分之间由电流信号相互连通。本文我们不关注 CPU 的工作原理，本图主要是后面要解析代码运行在不同 CPU 上，需要 <code>编译器</code> 对不同的 CPU 做兼容和优化。为什么会有不同的 CPU，上图就说明了，简单来说寄存器、控制器、运算器和时钟的设计和数量不同，那就是不同的 CPU，所以代码在不同的 CPU 运行就可能有不一样的要求，这是硬件方面。这里就不深入解析了，大家可以看看本书，或自行搜索了解更多。</p>
+<h4 id="CPU负责解析并运行从源代码编译而来的本地代码">CPU负责解析并运行从源代码编译而来的本地代码</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/图7-2-CPU负责解析并运行从源代码编译而来的本地代码.jpg" alt="图7-2-CPU负责解析并运行从源代码编译而来的本地代码.jpg"></p>
+<p>CPU 只能解释其自身固有的<code>机器语言</code>，机器语言的程序称为<code>本地代码</code>（native code）。不同的CPU能解释的机器语言的种类也是不同的。例如，CPU有 <code>x86</code>、<code>MIPS</code>、<code>SPARC</code>、<code>PowerPC</code>、<code>ARM</code>等几种类型，它们各自的机器语言是完全不同的。</p>
+<p>程序员用C语言等编写的程序，在编写阶段仅仅是<code>文本文件</code>，文本文件（排除文字编码的问题）在任何环境下都能显示和编辑，我们称之为<code>源代码</code>。通过对源代码进行编译，就可以得到<code>本地代码</code>。到目前，我们了解了代码编译的流程啦，那具体的流程又是怎么样的呢？在讲解之前，我们先看看 CPU 的历史，这样对我们了解编译器也起到重要作用啊~</p>
+<p>这里解析一下各种 CPU :</p>
+<ul>
+<li><code>x86</code>：美国 Intel (英特尔)的微处理器，是按照8086、80286、80386、80486、Pentium(奔腾)……这样的顺序不断升级的。因为这些型号的后面都带有86，所以总称为x86。32位处理器 Intel官方文档里面称为“IA-32”，64位处理器称“x86_64”、“x86-64”，又称x64，即英文词 64-bit e<strong>x</strong>tended，64位拓展的简写。这个<code>64位有点故事</code>，下面讲。现在的PC机都是64位 CPU 啦。</li>
+<li><code>MIPS</code>：美国 MIPS 科技公司开发的CPU，曾出现过面向 MIPS工作站的 Windows，不过现在市面上已经不再出售了。</li>
+<li><code>SPARC</code>：美国 SUN系统开发的CPU，很多工作站都采用了该CPU。</li>
+<li><code>PowerPC</code>：是美国苹果、IBM、摩托罗拉共同开发的CPU，苹果的Power Mac及IBM的工作站都采用了该CPU，不过现在的Mac采用的是Intel的x86系列CPU。</li>
+<li><code>ARM</code> ARM，安谋控股公司（英语：ARM Holdings plc.），又称ARM公司。ARM的前身为艾康电脑，1978年于英国剑桥创立。2016年7月18日，日本软银集团斥资3.3万亿日元（约合311亿美元）收购了ARM公司。ARM架构版本从 ARMv3 到 ARMv7 支持32位，2011年发布的ARMv8-A 架构添加了对64位支持。</li>
+</ul>
+<h5 id="x86-64_的故事">x86-64 的故事</h5><p><code>x84_64</code> 是 <code>x86</code> 32位 CPU 开始迈向64位的时候，有2种选择：</p>
+<ol>
+<li>向下兼容x86。</li>
+<li>完全重新设计指令集，不兼容x86。</li>
+</ol>
+<p>结果在 1999 年 <code>AMD</code> 抢跑了！比 <code>Intel</code> 率先制造出了商用的兼容 x86 的CPU，AMD称之为 <code>AMD64</code>，抢了64位PC的第一桶金，得到了用户的认同。所以 Intel 为了面子就选择了设计一种不兼容x86的全新64为指令集，称之为<code>IA-64</code>（Itanium，安腾），但是比 AMD 晚了一步，因为 AMD64 能有效地把x86架构移至64位的环境，并且能兼容原有的x86应用程序。并且 IA-64 也挺惨淡的，因为是全新设计的CPU，没有编译器，也不支持 Windows（微软把intel给忽悠了，承诺了会出对应的 Windows server 版，但是迟迟拿不出东西），处理器本身和软件移植的成本难以控制，导致 IA-64 最终流产。后来不得不在时机落后的情况下也开始支持AMD64的指令集，但是换了个名字，叫<code>x86_64</code>，表示是 x86 指令集的64扩展，大概是不愿意承认这玩意是AMD设计出来的？现时英特尔称之为“<code>Intel 64</code>”，在之前曾使用过“Clackamas Technology” (CT)、“IA-32e”及“<code>EM64T</code>”等名字。换汤不换药，核心与 AMD64 几乎相同，犹如一对孪生兄弟，其实都是 x86-64 架构。当年有媒体为 EM64T 起了“<code>iAMD64</code>”别名，讽刺 Intel 在迎击 AMD 的民用64位技术上，使用了 AMD 的技术，直接把 AMD64 吸纳过来，并以新名重新包装使用，所以最后，Intel 索性将此技术正式命名为 <code>Intel 64</code>。</p>
+<p>所以，CPU 的 32 位还是 64位，一般是用 <code>x86-64</code> 表示64位，而32位现在已经没有了。另外，不同公司对 x86-64 架构，名字上还是有一些区别，苹果公司和RPM包管理员以“x86-64”或“x86_64”称呼此64位架构。甲骨文公司及Microsoft称之为“x64”，BSD家族及其他Linux发行版则使用“x64-64”，32位版本则称为“i386”（或 i486/586/686），Arch Linux用x86_64称呼此64位架构。</p>
+<p>最后一个问题，x86、x86_64主要的区别是什么？就是32位和64位的问题，x86 中只有8个32位通用寄存器，分别是 eax,ebx,ecx，edx, ebp, esp, esi, edi。x86_64 把这8个通用寄存器扩展成了64位的，并且比x86增加了若干个寄存器（好像增加了8个，变成了总共16个通用寄存器）。譬如四个通用寄存器（RAX, RBX, RCX, RDX）是由32位的（EAX, EBX, ECX, EDX）64位扩展而来，相应的还有指针寄存器（RIP, RBP, RSP, RSI, RDI），以及增加八个通用寄存器（R8～R15）等等。 这些资源只可在x64处理器的64位模式下使用，在用来支持x86软件的遗留模式和兼容模式中是不可见的。</p>
+<p>以上内容和关于 CPU 更多历史和资料，可查看来源： <a href="https://zh.wikipedia.org/wiki/X86#64%E4%BD%8D%E5%85%83" target="_blank" rel="external">x86 - 维基百科</a> 、 <a href="https://zh.wikipedia.org/wiki/X86-64" target="_blank" rel="external">x86-64 - 维基百科，自由的百科全书</a> 和 <a href="https://www.iteye.com/blog/chenzehe-1703429" target="_blank" rel="external">X86、X64和X86_64区别</a> 。</p>
+<h4 id="转换成本地代码后就变成了同样的语言">转换成本地代码后就变成了同样的语言</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/图8-2-转换成本地代码后就变成了同样的语言.jpg" alt="图8-2-转换成本地代码后就变成了同样的语言.jpg"></p>
+<h4 id="同样的源代码可以转换成适用于不同处理器的本地代码">同样的源代码可以转换成适用于不同处理器的本地代码</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/图8-5 同样的源代码可以转换成适用于不同处理器的本地代码" alt="图8-5 同样的源代码可以转换成适用于不同处理器的本地代码"></p>
+<h4 id="Windows中的编译和链接机制">Windows中的编译和链接机制</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/图8-8-Windows中的编译和链接机制.jpg" alt="图8-8-Windows中的编译和链接机制.jpg"></p>
+<h2 id="3、总结">3、总结</h2><p><br></p>
 <p>注：更多关于 iOS 开发和程序开发相关的内容，可以查看系列，目前还在连载中 <a href="https://ihtcboy.com/2020/02/01/2020-02-01_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/">【学习总结】iOS开发高手课 – (连载中) | iHTCboy’s blog</a>，以上，希望对你有用！</p>
 <h2 id="参考">参考</h2><ul>
 <li><a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a></li>
@@ -288,6 +325,11 @@ var _hmt = _hmt || [];
 <li><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15745-s14/public/lectures/" target="_blank" rel="external">Index of /afs/cs.cmu.edu/academic/class/15745-s14/public/lectures</a></li>
 <li><a href="https://code.woboq.org/llvm/clang/" target="_blank" rel="external">llvm/clang/ Source Tree - Woboq Code Browser</a></li>
 <li><a href="https://bugly.qq.com/docs/user-guide/symbol-configuration-ios/?v=20180709165613" target="_blank" rel="external">iOS 符号表 - Bugly 文档</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/X86" target="_blank" rel="external">x86 - 维基百科，自由的百科全书</a></li>
+<li><a href="https://www.iteye.com/blog/chenzehe-1703429" target="_blank" rel="external">X86、X64和X86_64区别 - - ITeye博客</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/X86-64" target="_blank" rel="external">x86-64 - 维基百科，自由的百科全书</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E5%AE%89%E8%AC%80%E6%8E%A7%E8%82%A1" target="_blank" rel="external">安谋控股 - 维基百科，自由的百科全书</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/ARM%E6%9E%B6%E6%A7%8B" target="_blank" rel="external">ARM架构 - 维基百科，自由的百科全书</a></li>
 </ul>
 <p><br></p>
 <ul>
@@ -466,7 +508,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1、前言"><span class="toc-number">1.</span> <span class="toc-text">1、前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2、正文"><span class="toc-number">2.</span> <span class="toc-text">2、正文</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#《程序是怎样跑起来的》"><span class="toc-number">2.1.</span> <span class="toc-text">《程序是怎样跑起来的》</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3、总结"><span class="toc-number">3.</span> <span class="toc-text">3、总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考"><span class="toc-number">4.</span> <span class="toc-text">参考</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1、前言"><span class="toc-number">1.</span> <span class="toc-text">1、前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2、正文"><span class="toc-number">2.</span> <span class="toc-text">2、正文</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#《程序是怎样跑起来的》"><span class="toc-number">2.1.</span> <span class="toc-text">《程序是怎样跑起来的》</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#程序运行流程示例"><span class="toc-number">2.1.1.</span> <span class="toc-text">程序运行流程示例</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CPU的四个构成部分"><span class="toc-number">2.1.2.</span> <span class="toc-text">CPU的四个构成部分</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CPU负责解析并运行从源代码编译而来的本地代码"><span class="toc-number">2.1.3.</span> <span class="toc-text">CPU负责解析并运行从源代码编译而来的本地代码</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#x86-64_的故事"><span class="toc-number">2.1.3.1.</span> <span class="toc-text">x86-64 的故事</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#转换成本地代码后就变成了同样的语言"><span class="toc-number">2.1.4.</span> <span class="toc-text">转换成本地代码后就变成了同样的语言</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#同样的源代码可以转换成适用于不同处理器的本地代码"><span class="toc-number">2.1.5.</span> <span class="toc-text">同样的源代码可以转换成适用于不同处理器的本地代码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Windows中的编译和链接机制"><span class="toc-number">2.1.6.</span> <span class="toc-text">Windows中的编译和链接机制</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3、总结"><span class="toc-number">3.</span> <span class="toc-text">3、总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考"><span class="toc-number">4.</span> <span class="toc-text">参考</span></a></li></ol>
                     </div>
                 </span>
             </div>
