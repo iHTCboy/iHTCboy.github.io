@@ -22,11 +22,11 @@
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/图8-2-转换成本地代码后就变成了同样的语言.jpg">
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/图8-5-同样的源代码可以转换成适用于不同处理器的本地代码.jpg">
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/图8-8-Windows中的编译和链接机制.jpg">
-<meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/Clang/Swift-LLVM编译器架构.png">
+<meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/Clang-Swift-LLVM编译器架构.png">
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/Clang-LLVM编译过程.png">
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/方舟编译器架构示意图.png">
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/方舟编译器开源范围示意图.png">
-<meta property="og:updated_time" content="2020-02-05T01:59:05.376Z">
+<meta property="og:updated_time" content="2020-02-05T02:30:29.884Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【学习总结】05 | 链接器：符号是怎么绑定到地址上的？">
 <meta name="twitter:description" content="1、前言首先，我认为学习总结，要有所总，所结，就是有归纳后，能用自己的话告诉别人！有所结，就是有所收获输出，一般我认为是思维导图，所以，每篇文章前，我都会先给出文章的脑图：">
@@ -346,7 +346,7 @@ var _hmt = _hmt || [];
 </ul>
 <p>回到本文开始的问题，大家对这2个问题心中有答案了吗？</p>
 <p> 面向过程，可以写一个文件中；面向对象，就有类与对象关系</p>
-<h3 id="触类旁通">触类旁通</h3><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/Clang/Swift-LLVM编译器架构.png" alt="Clang/Swift-LLVM编译器架构.png"></p>
+<h3 id="触类旁通">触类旁通</h3><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/Clang-Swift-LLVM编译器架构.png" alt="Clang/Swift-LLVM编译器架构.png"></p>
 <p>让我们再次回顾一下编译器的工作流程，以 LLVM 为例，从 iOS 开发视角来看这个问题。这张图片来源：<a href="https://juejin.im/post/5a3232896fb9a0452b494189#heading-3" target="_blank" rel="external">从Swift桥接文件到Clang-LLVM - 掘金</a>。详细的编译器过程大家可以参考文章，这里就不过多重复。</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/Clang-LLVM编译过程.png" alt="Clang-LLVM编译过程.png"></p>
 <p>另外，原文还提到很多的概念，这里也不一一提出了，具体可以看看本文最前面的思维导图。比如：</p>
@@ -394,16 +394,23 @@ var _hmt = _hmt || [];
 <li>设计清晰简单，容易理解，易于扩展增强</li>
 </ul>
 <h4 id="方舟编译器">方舟编译器</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/方舟编译器架构示意图.png" alt="方舟编译器架构示意图.png"></p>
+<blockquote>
+<p>当前方舟编译器支持Java/Kotlin程序字节码的前端输入，其它编程语言的支持（如 C/C++/JS 等）还在规划中，方舟编译器的中间表示（IR）转换器将前端输入转换成方舟IR，并输送给后端的优化器，最终生成二进制文件，二进制文件与编译器运行时库文件链接生成可执行文件，在方舟的运行环境中就可执行该文件。</p>
+<p>方舟编译器IR是支持程序编译和运行的中间程序表示。程序源代码中的任何信息对于程序分析和优化都是有帮助的，所以方舟IR的目标是尽可能完整详细地提供源程序的信息。</p>
+</blockquote>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/方舟编译器开源范围示意图.png" alt="方舟编译器开源范围示意图.png"></p>
+<blockquote>
+<p>首次开源范围是编译器 IR（ Intermediate Representation）、RC（Reference Counting）和多语言设计思想等，用于与业界、学术界沟通交流。后续将陆续开源编译器前端、后端，支持其它语言（如 JavaScript）的编译等，当前部分Java语言特性和JVM虚拟机特性的支持未包括在本次开源代码中，包括：annotation、lambda表达式、泛型等。目前仍有很多地方不完善，会在社区陆续迭代，遇到问题请在社区提交 issue，欢迎在社区继续讨论设计和代码共建。</p>
+</blockquote>
 <p>怎么样！现在你至少看的懂这个方舟编译器架构的大体流程了吧，是不是发现其实并没有那么难理解！那就对了，万事开头难，慢慢的一切都会简单起来~ 至少去知x上看看这些评论都看懂了啊，<a href="https://www.zhihu.com/question/343431810" target="_blank" rel="external">如何看待方舟编译器于 2019 年 8 月 31 日开源？ - 知乎</a>，是不是很开心~</p>
-<p>详细可见官方网页：<a href="https://www.openarkcompiler.cn/document/FAQ" target="_blank" rel="external">OpenArkCompiler - FAQ</a></p>
+<p>详细可见官方网页：<a href="https://www.openarkcompiler.cn/document/FAQ" target="_blank" rel="external">方舟编译器 OpenArkCompiler - FAQ</a></p>
 <h4 id="龙书、虎书、鲸书_—_编译原理三大圣书">龙书、虎书、鲸书 — 编译原理三大圣书</h4><ol>
 <li><code>龙书</code>：《编译原理》（编译原理 技术与工具）（Compilers: Principles,Techniques, and Tools）</li>
 <li><code>虎书</code>：《现代编译原理 — C语言描 》（Modern Compiler Implement in C）</li>
 <li><code>鲸书</code>：《高级编译器设计与实现》（Advanced Compiler Design and Implementation）</li>
 </ol>
 <p>龙书：《编译原理》是编译领域无可替代的经典著作，被广大计算机专业人士誉为“龙书”。<br>虎书：增加了数据流分析、循环优化、内存管理等内容。<br>鲸书：包含了一些更比较高级的编译器的设计和实现。</p>
-<p>大家是不是瞬间感觉自己就要买这几本书呢！！！我到底能不能看的懂呢？可以先自测一下：</p>
+<p>大家是不是瞬间感觉自己就要买这几本书呢！！！我到底能不能看的懂呢？可以先自测一下自己是不是适配现在就学习编译原理：</p>
 <h5 id="学习编译原理前自测">学习编译原理前自测</h5><ul>
 <li>a. 编译型语言和解释型语言的区别是什么?</li>
 <li>b. 编译经历了哪几个基本过程? 每个过程主要干了什么事情?</li>
@@ -419,7 +426,7 @@ var _hmt = _hmt || [];
 <li>l. 你最熟悉的语言有垃圾回收机制吗? 若有描述它进行垃圾回收的原理, 若没有则描述你在编写程序时是如何管理内存的?</li>
 </ul>
 <p>本节内容来自：<a href="https://www.zhihu.com/question/21515496/answer/118609119" target="_blank" rel="external">如何学习编译原理？ - 欧长坤的回答 - 知乎</a></p>
-<h2 id="3、总结">3、总结</h2><p>终于到总结部分啦！这个文章，之前给我们组内同学分享时，在回顾都忘记了一大部分，另外在写成文字时，发现有很多东西需要考证，而 <code>维基百科</code> 就是一个很棒的网站，关于大多数知识和历史都能查到，真的很有趣！</p>
+<h2 id="3、总结">3、总结</h2><p>终于到总结部分啦！这个文章，之前给我们组内同学分享时，在回顾都忘记了一大部分，另外在写成文字时，发现有很多东西需要考证，每篇文章花了很多心思，正好2020年新型肺炎冠状病毒都在家里，正好有这时间。而 <code>维基百科</code> 就是一个很棒的网站，关于大多数知识和历史都能查到，真的很有趣！</p>
 <p>关于<code>编译器</code>的知识有太多了，深入的还可以自己写一个编译器！这里就达不到这样的层次，所以就提一下，有需要的同学可以自行搜索。关于<code>LLVM</code>的知识也还有很多没有讲到，比如<code>抽象语法树</code>（AST），前端 <code>Clang</code> 是重中之器，Clang 插件开发等，还有中间端的 <code>Pass</code>，后端的<code>Mach-O</code> 和 CPU 执行 Mach-O 的过程等。</p>
 <p>最后，本文还是有很多细节无法用文字记录下来，大家可以阅读下面的参考链接，这样收获会更大。关于<code>编译器</code>和<code>链接器</code>就到这里先，对于大家理解这个概念应该是没有问题啦！具体的实现细节，需要大家多学习，如果有能力，可以看看龙书！虎书！鲸书！ 想想也是一件快乐的事件！</p>
 <p><br></p>
@@ -476,6 +483,7 @@ var _hmt = _hmt || [];
 <li><a href="https://www.openarkcompiler.cn/news/detail/news5" target="_blank" rel="external">OpenArkCompiler - 方舟编译器</a></li>
 <li><a href="https://hmxt.org/%E5%8D%8E%E4%B8%BA%E6%96%B9%E8%88%9F%E7%BC%96%E8%AF%91%E5%99%A8" target="_blank" rel="external">华为方舟编译器 | 鸿蒙学堂</a></li>
 <li><a href="https://www.zhihu.com/question/343431810" target="_blank" rel="external">如何看待方舟编译器于 2019 年 8 月 31 日开源？ - 知乎</a></li>
+<li><a href="https://www.infoq.cn/article/KrZAbAcJrxCU27vKj*JE" target="_blank" rel="external">中国首个官方推出的开源协议：木兰宽松许可证上线-InfoQ</a></li>
 </ul>
 <p><br></p>
 <ul>
