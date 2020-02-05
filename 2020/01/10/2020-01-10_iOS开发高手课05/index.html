@@ -27,7 +27,7 @@
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/Clang-LLVM编译过程.png">
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/方舟编译器架构示意图.png">
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/方舟编译器开源范围示意图.png">
-<meta property="og:updated_time" content="2020-02-05T07:59:12.098Z">
+<meta property="og:updated_time" content="2020-02-05T12:44:20.541Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【学习总结】05 | 链接器：符号是怎么绑定到地址上的？">
 <meta name="twitter:description" content="1、前言首先，我认为学习总结，要有所总，所结，就是有归纳后，能用自己的话告诉别人！有所结，就是有所收获输出，一般我认为是思维导图，所以，每篇文章前，我都会先给出文章的脑图：">
@@ -418,7 +418,7 @@ var _hmt = _hmt || [];
 <blockquote>
 <p>首次开源范围是编译器 IR（ Intermediate Representation）、RC（Reference Counting）和多语言设计思想等，用于与业界、学术界沟通交流。后续将陆续开源编译器前端、后端，支持其它语言（如 JavaScript）的编译等，当前部分Java语言特性和JVM虚拟机特性的支持未包括在本次开源代码中，包括：annotation、lambda表达式、泛型等。目前仍有很多地方不完善，会在社区陆续迭代，遇到问题请在社区提交 issue，欢迎在社区继续讨论设计和代码共建。</p>
 </blockquote>
-<p>怎么样！现在你至少看的懂这个方舟编译器架构的大体流程了吧，是不是发现其实并没有那么难理解！那就对了，万事开头难，慢慢的一切都会简单起来~ 至少去知x上看看这些评论都看懂了啊，<a href="https://www.zhihu.com/question/343431810" target="_blank" rel="external">如何看待方舟编译器于 2019 年 8 月 31 日开源？ - 知乎</a>，是不是很开心~</p>
+<p>怎么样！现在你至少看的懂这个方舟编译器架构的大体流程了吧，是不是发现其实并没有那么难理解！那就对了，万事开头难，慢慢的一切都会简单起来~ 至少去知x上看看这些评论都看懂了啊，<a href="https://www.zhihu.com/question/343431810" target="_blank" rel="external">如何看待方舟编译器于 2019 年 8 月 31 日开源？ - 知乎</a>，是不是很开心~ </p>
 <p>详细可见官方网页：<a href="https://www.openarkcompiler.cn/document/FAQ" target="_blank" rel="external">方舟编译器 OpenArkCompiler - FAQ</a></p>
 <h4 id="龙书、虎书、鲸书_—_编译原理三大圣书">龙书、虎书、鲸书 — 编译原理三大圣书</h4><ol>
 <li><code>龙书</code>：《编译原理》（编译原理 技术与工具）（Compilers: Principles,Techniques, and Tools）</li>
@@ -445,6 +445,7 @@ var _hmt = _hmt || [];
 <h2 id="3、总结">3、总结</h2><p>终于到总结部分啦！这个文章，之前给我们组内同学分享时，在回顾都忘记了一大部分，另外在写成文字时，发现有很多东西需要考证，每篇文章花了很多心思，正好2020年新型肺炎冠状病毒都在家里，正好有这时间。而 <code>维基百科</code> 就是一个很棒的网站，关于大多数知识和历史都能查到，真的很有趣！</p>
 <p>关于<code>编译器</code>的知识有太多了，深入的还可以自己写一个编译器！这里就达不到这样的层次，所以就提一下，有需要的同学可以自行搜索。关于<code>LLVM</code>的知识也还有很多没有讲到，比如<code>抽象语法树</code>（AST），前端 <code>Clang</code> 是重中之器，Clang 插件开发等，还有中间端的 <code>Pass</code>，后端的<code>Mach-O</code> 和 CPU 执行 Mach-O 的过程等。</p>
 <p>最后，本文还是有很多细节无法用文字记录下来，大家可以阅读下面的参考链接，这样收获会更大。关于<code>编译器</code>和<code>链接器</code>就到这里先，对于大家理解这个概念应该是没有问题啦！具体的实现细节，需要大家多学习，如果有能力，可以看看龙书！虎书！鲸书！ 想想也是一件快乐的事件！</p>
+<p>2020年，手机只是小小一部分，智慧家居大屏、穿戴、车机、音响、手表、PC等等各种各样设备，作为开发者，我们不要只关注自己开发的App，应该去理解这个<code>世界发生什么变化，为什么变化，怎么变化，抓住变化！</code>当然我承认世界是掌握于小数人，但能先抓住自己！这就是好的开始~</p>
 <p><br></p>
 <p>注：更多关于 iOS 开发和程序开发相关的内容，可以查看系列，目前还在连载中 <a href="https://ihtcboy.com/2020/02/01/2020-02-01_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/">【学习总结】iOS开发高手课 – (连载中) | iHTCboy’s blog</a>，以上，希望对你有用！</p>
 <h2 id="参考">参考</h2><ul>
@@ -528,8 +529,9 @@ var _hmt = _hmt || [];
 </ul>
 <p><br></p>
 <blockquote>
-<p>注：本文首发于 <a href="https://iHTCboy.com">iHTCboy’s blog</a>，如若转载，请注来源<br><br></p>
+<p>注：本文首发于 <a href="https://iHTCboy.com">iHTCboy’s blog</a>，如若转载，请注来源</p>
 </blockquote>
+<p><br></p>
 
       
 

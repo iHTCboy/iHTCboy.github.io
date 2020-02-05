@@ -16,7 +16,13 @@
 <meta property="og:site_name" content="iHTCboy's blog">
 <meta property="og:description" content="1、前言首先，我认为学习总结，要有所总，所结，就是有归纳后，能用自己的话告诉别人！有所结，就是有所收获输出，一般我认为是思维导图，所以，每篇文章前，我都会先给出文章的脑图：">
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/iOS开发高手课-06-App如何通过注入动态库的方式实现极速编译调试？.png">
-<meta property="og:updated_time" content="2020-02-04T08:12:25.104Z">
+<meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Flutter-Hot-Reload.gif">
+<meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/Flutter-高性能方案原理.png">
+<meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/Flutter-Release模式编译-iOS.png">
+<meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/Flutter-Release模式编译-Android.png">
+<meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/Flutter-Hot-Reload-执行流程.jpg">
+<meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/React-Native-Hot-Reload-hmr-architecture.png">
+<meta property="og:updated_time" content="2020-02-05T15:36:26.373Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【学习总结】06 | App 如何通过注入动态库的方式实现极速编译调试？">
 <meta name="twitter:description" content="1、前言首先，我认为学习总结，要有所总，所结，就是有归纳后，能用自己的话告诉别人！有所结，就是有所收获输出，一般我认为是思维导图，所以，每篇文章前，我都会先给出文章的脑图：">
@@ -242,18 +248,88 @@ var _hmt = _hmt || [];
 <h2 id="2、正文">2、正文</h2><blockquote>
 <p>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程 <a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a> </p>
 </blockquote>
-<p>本章是上一节的扩展延伸内容 —– <code>动态链接器</code>，所以，如果没有看过上一次的同学，可以先回顾一下：<a href="https://ihtcboy.com/2020/01/10/2020-01-10_iOS开发高手课05/">【学习总结】05 | 链接器：符号是怎么绑定到地址上的？ | iHTCboy’s blog</a>。</p>
-<p>本章也是沿用之前的风格套路，在讲解 iOS 的<code>动态链接器</code> 之前，我们先看看软件开发中都有那么经典的例子？实现极速编译调试，当然还是2019年以来最火的 <code>Flutter</code> ！所以，我们首来说说 Flutter 是如何 <code>Hot Reload</code>（热加载）的。</p>
-<h3 id="Flutter">Flutter</h3><h2 id="3、总结">3、总结</h2><p><code>TODO</code></p>
+<p>本章是上一节<code>编译器</code>、<code>链接器</code> 内容的扩展延伸内容 —– <code>动态链接器</code>，所以，如果没有看过上一篇文章的同学，建议先看看：<a href="https://ihtcboy.com/2020/01/10/2020-01-10_iOS开发高手课05/">【学习总结】05 | 链接器：符号是怎么绑定到地址上的？ | iHTCboy’s blog</a>。</p>
+<p>本章也是沿用之前的风格套路，在讲解 iOS 的<code>动态链接器</code> 的作用之前，我们先看看软件开发中都有那么经典的例子？如何实现极速编译调试，当然要看看2019年最火的 <code>Flutter</code> ！所以，我们先来说说 Flutter 是如何 <code>Hot Reload</code>（热重载）吧！</p>
+<h3 id="Flutter">Flutter</h3><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Flutter-Hot-Reload.gif" alt="Flutter-Hot-Reload.gif"></p>
+<p>如图所示，Flutter 的 <code>热重载</code>(<code>Hot reload</code>)功能可以帮助您在无需重新启动应用的情况下快速、轻松地进行测试、构建用户界面、添加功能以及修复错误。 </p>
+<p>我们本节主要是讲解 Flutter 热重载(Hot reload)，不会讲解 Flutter 其它知识和原理，了解更多可以参考末文扩展学习或自行搜索。</p>
+<h4 id="JIT_&amp;_AOT">JIT &amp; AOT</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/Flutter-高性能方案原理.png" alt="Flutter-高性能方案原理.png"></p>
+<p>Flutter 有两套编译器，JIT，AOT：</p>
+<ul>
+<li>JIT（Just In Time，即时编译）</li>
+<li>AOT（Ahead Of Time，运行前编译）</li>
+</ul>
+<p>Flutter <code>Dart</code> 有 <code>AOT</code> 和 <code>JIT</code> 两种模式，线上使用时以 AOT 的方式编译成机器代码，保证了线上运行时的效率；而在开发期，Dart 代码可以以 JIT 的方式运行，支持代码的即时生效 <code>热重载</code>（Hot Reload)，提高开发效率。</p>
+<p>至此，我们明白了，Flutter 是通过 <code>JIT</code> 方式实现 <code>Hot Reload</code>（热重载）的！那么，我们接下来，我们就是知道 Flutter 是如何编译代码的，这样才能更加理解 <code>JIT</code>.</p>
+<h4 id="Flutter_构建模式">Flutter 构建模式</h4><p>Flutter 支持三种模式编译 app，分别为 <code>debug</code>、<code>release</code>、<code>profile</code>，也支持使用 headless 模式来测试。</p>
+<ul>
+<li><code>Debug模式</code>：对应了Dart的JIT模式，又称检查模式或者慢速模式。支持设备，模拟器(iOS/Android)，此模式下打开了断言，包括所有的调试信息，服务扩展和Observatory等调试辅助。此模式为快速开发和运行做了优化，但并未对执行速度，包大小和部署做优化。Debug模式下，编译使用JIT技术，支持广受欢迎的亚秒级有状态的hot reload。</li>
+<li><code>Release模式</code>：对应了Dart的AOT模式，此模式目标即为部署到终端用户。只支持真机，不包括模拟器。关闭了所有断言，尽可能多地去掉了调试信息，关闭了所有调试工具。为快速启动，快速执行，包大小做了优化。禁止了所有调试辅助手段，服务扩展。</li>
+<li><code>Profile模式</code>：类似Release模式，只是多了对于Profile模式的服务扩展的支持，支持跟踪，以及最小化使用跟踪信息需要的依赖，例如，observatory可以连接上进程。Profile并不支持模拟器的原因在于，模拟器上的诊断并不代表真实的性能。</li>
+</ul>
+<p>如果上面很长，那可以快速简要了解三种构建模式（A quick summary for when to use which mode is as follows）：</p>
+<ul>
+<li>开发过程中，需要使用 <code>热重载</code> 功能，请选择 <code>debug</code> 构建模式；</li>
+<li>当你需要<code>分析性能</code>的时候，选择使用 <code>profile</code> 构建模式；</li>
+<li>当你需要<code>发布应用</code>的时候，选择使用 <code>release</code> 构建模式。</li>
+</ul>
+<p>鉴于 <code>Profile</code> 同 <code>Release</code> 在编译原理等上无差异，所以，我们的问题 Flutter 如何实现 <code>Hot Reload</code>（热重载）的？就是需要看看 <code>Debug</code>模式 和 <code>Release</code> 模式，当然，前面说到，我们的重点是 <code>JIT</code>，所以重点是看 <code>Debug模式</code> !</p>
+<h4 id="Release_模式下的编译">Release 模式下的编译</h4><ul>
+<li><strong>iOS</strong><br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/Flutter-Release模式编译-iOS.png" alt="Flutter-Release模式编译-iOS.png"></li>
+</ul>
+<blockquote>
+<p>其中 <code>gen_snapshot</code> 是dart编译器，采用了 <code>tree shaking</code>(类似依赖树逻辑，可生成最小包，也因而在 Flutter 中禁止了dart支持的反射特性)等技术，负责生成汇编形式机器代码。再通过 <code>xcrun</code> 等工具链生成最终的 <code>App.framework</code>。所有的dart代码，包括业务代码，三方package代码，它们所依赖的flutter框架代码，最终将会编译成<code>App.framework</code>。</p>
+</blockquote>
+<ul>
+<li><strong>Android</strong><br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/Flutter-Release模式编译-Android.png" alt="Flutter-Release模式编译-Android.png"></li>
+</ul>
+<blockquote>
+<p>其中 <code>vm/isolatesnapshotdata/instr</code> 内容均为arm指令，其中vm中涉及runtime等服务(如gc)，用于初始化DartVM，调用入口见 <code>DartInitialize</code>(dartapi.h)。isolate则对应了我们的应用dart代码，用于创建一个新的isolate，调用入口见<code>DartCreateIsolate</code>(dart_api.h)。<code>flutter.jar</code> 类似iOS的<code>Flutter.framework</code>，包括了Engine部分(<code>Flutter.jar</code>中的<code>libflutter.so</code>)，和Embedder部分(FlutterMain、FlutterView、FlutterNativeView等)。实际中<code>flutter.jar</code>位于flutter仓库的<code>/bin/cache/artifacts/engine/android*</code>下，默认从google仓库拉取。需要自定义修改的时候，可通过下载engine源码，利用<code>Ninja</code>构建系统来生成<code>flutter.jar</code>。</p>
+</blockquote>
+<p>本节内容来自：<a href="https://yq.aliyun.com/articles/604052?spm=a2c4e.11153940.0.0.730737b1xWHbpU" target="_blank" rel="external">深入理解flutter的编译原理与优化-云栖社区-阿里云</a></p>
+<h4 id="Debug_模式下的编译">Debug 模式下的编译</h4><p><code>Debug模式</code> 下 flutter的编译，结构类似 Release模式，差异主要表现为两点:</p>
+<ol>
+<li><strong>Flutter.framework</strong>：因为是Debug，此模式下Framework中是有<code>JIT</code>支持的，而在Release模式下并没有JIT部分。（<strong>Android</strong><code>flutter.jar</code>同<strong>iOS</strong>一样没有<code>JIT</code>。）</li>
+<li><strong>App.framework</strong>：不同于<code>AOT</code>模式下的 App.framework 是Dart代码对应的机器代码，<code>JIT</code>模式下，App.framework只有几个简单的API，其Dart代码存在于<code>snapshot_blob.bin</code>文件里（<strong>Android</strong>的位于<code>flutterassets</code>下的<code>snapshotblob.bin</code>，其它同<strong>iOS</strong><code>）。这部分的snapshot是脚本快照，里面是简单的标记化的源代码。所有的注释，空白字符都被移除，常量也被规范化，没有机器码、</code>tree shaking`或混淆。</li>
+</ol>
+<h4 id="Hot_Reload（热重载）">Hot Reload（热重载）</h4><p>好的，有了上面的基础和概念知识，现在我们开始说说 Flutter 的 <code>Hot Reload</code>（热重载）吧！</p>
+<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/Flutter-Hot-Reload-执行流程.jpg" alt="Flutter-Hot-Reload-执行流程.jpg"></p>
+<p>Flutter的热重载是基于<code>State</code>的，也就是我们在代码中经常出现的<code>setState</code>方法，通过这个来修改后，会执行相应的<code>build</code>方法，这就是热重载的基本过程。</p>
+<p>Flutter的<code>Hot Reload</code>的实现源码在下面路径中，在此路径中包含<code>run_cold.dart</code>和<code>run_hot.dart</code>两个文件，前者负责<code>冷启动</code>，后者负责<code>热重载</code>。</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~/flutter/packages/flutter_tools/lib/src/run_hot.dart</span><br></pre></td></tr></table></figure>
+<p><strong>上图的流程</strong>：当按下R后，Flutter 会扫描修改的文件，并将文件修改前后进行对比，随后会将被改动的代码生成一个<code>kernel files</code>文件。随后会通过<code>HTTP Server</code>将生成的<code>kernel files</code>文件发送给<code>Dart VM</code>虚拟机，虚拟机拿到 kernel文件后会调用<code>_reloadSources</code>函数进行资源重载，将 kernel文件注入正在运行的<code>Dart VM</code>中。当资源重载完成后，会调用<code>RPC</code>接口触发<code>Widgets tree</code>的重建、重绘。</p>
+<p>本节以上内容来自：<a href="https://www.jianshu.com/p/1a90adc09e99" target="_blank" rel="external">移动端开发新趋势Flutter - 简书</a></p>
+<p>调用热重载时，主机会查看自上次编译以来编辑的代码。重新编译以下文件：</p>
+<ul>
+<li>任何有代码更改的文件；</li>
+<li>应用程序的主入口文件。</li>
+<li>受主入口文件影响的文件。</li>
+</ul>
+<p>在 <code>Dart 2</code> 中，这些文件的 Dart 源代码被转换为 内核文件 并发送到移动设备的 <code>Dart VM</code>。Dart VM 重新加载新内核文件中的所有文件。到目前为止，没有重新执行代码。然后，热重载机制使 Flutter 框架触发所有现有的 widgets 和渲染对象的重建/重新布局/重绘。</p>
+<p>以上来自官方文档：<a href="https://flutter.cn/docs/development/tools/hot-reload" target="_blank" rel="external">热重载 (Hot reload) - Flutter 中文文档</a></p>
+<p>到此，我们不再深入具体的源代码讲解了，大家可以自行查看。这里主要是讲解整个流程是怎么一回事，了解 Flutter 的 <code>Hot Reload</code>（热重载）是怎么回事后，我们最后在来说说它的优缺点吧！</p>
+<h4 id="不能使用_Hot_Reload_的场景">不能使用 Hot Reload 的场景</h4><ol>
+<li>代码出现编译错误的不能使用 Hot Reload</li>
+<li>代码更改会影响 APP 状态的不能使用 Hot Reload</li>
+<li>全局变量（ global variables）和静态字段（static fields）的更改不能使用 Hot Reload</li>
+<li>main() 方法里的更改不能使用 Hot Reload</li>
+<li>枚举类型更改为常规的类或者常规的类变为枚举类型也不能使用 HotReload</li>
+<li>修改通用类型声明也不能使用 HotReload</li>
+</ol>
+<p>详细可以查看官方文档：<a href="https://flutter.cn/docs/development/tools/hot-reload" target="_blank" rel="external">热重载 (Hot reload) - Flutter 中文文档</a></p>
+<h3 id="React_Native">React Native</h3><p>同样的，<code>React Native</code> 也有热加载（Hot Reload）！</p>
+<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/React-Native-Hot-Reload-hmr-architecture.png" alt="React-Native-Hot-Reload-hmr-architecture.png"></p>
+<h3 id="JIT_&amp;_AOT-1">JIT &amp; AOT</h3><h3 id="Injection_for_Xcode">Injection for Xcode</h3><h3 id="Swift">Swift</h3><h4 id="Swift_Playgrounds">Swift Playgrounds</h4><h4 id="Swift_Playgrounds_App">Swift Playgrounds App</h4><h4 id="SwiftUI">SwiftUI</h4><h3 id="触类旁通">触类旁通</h3><h2 id="3、总结">3、总结</h2><p>我们要看到技术的相通，也要看到技术的不同，这里面不同的是什么？大家不用担心，学习新技术成本非常高，把技术掌握透了，学习新技术会发现成本很低，很好去理解。</p>
 <p><br></p>
 <p>注：更多关于 iOS 开发和程序开发相关的内容，可以查看系列，目前还在连载中 <a href="https://ihtcboy.com/2020/02/01/2020-02-01_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/">【学习总结】iOS开发高手课 – (连载中) | iHTCboy’s blog</a>，以上，希望对你有用！</p>
 <h2 id="参考">参考</h2><ul>
 <li><a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a></li>
 <li><a href="https://mp.weixin.qq.com/s/hFnHdOP6pmIwzZck-zXE8g" target="_blank" rel="external">Injection：iOS热重载背后的黑魔法</a></li>
-<li><a href="https://mp.weixin.qq.com/s?__biz=MzU4MDUxOTI5NA==&amp;mid=2247483816&amp;idx=1&amp;sn=deedc011bc902511d0712de959bb8b06&amp;scene=19#wechat_redirect&amp;from=%E6%96%87%E7%AB%A0%E9%A1%B5%E5%86%85%E9%93%BE%E6%8E%A5" target="_blank" rel="external">深入理解flutter的编译原理与优化</a></li>
 <li><a href="https://www.jianshu.com/p/93952a4b8415?utm_campaign=hugo&amp;utm_medium=reader_share&amp;utm_content=note" target="_blank" rel="external">Flutter之Hot Reload 的工作原理 - 简书</a></li>
 <li><a href="https://www.jianshu.com/p/4da5c149a123?utm_campaign=hugo&amp;utm_medium=reader_share&amp;utm_content=note" target="_blank" rel="external">Flutter 带你快速入门 - 简书</a></li>
+<li><a href="https://facebook.github.io/react-native/blog/2016/03/24/introducing-hot-reloading.html" target="_blank" rel="external">Introducing Hot Reloading · React Native</a></li>
 <li><a href="https://www.jianshu.com/p/1fa6e9c0799f" target="_blank" rel="external">React Native 热加载（Hot Reload）原理简介 - 简书</a></li>
+<li><a href="https://www.jianshu.com/p/1a90adc09e99" target="_blank" rel="external">移动端开发新趋势Flutter - 简书</a></li>
 <li><a href="https://www.zhihu.com/question/21093419" target="_blank" rel="external">如何通俗易懂地介绍「即时编译」（JIT），它的优点和缺点是什么？ - 知乎</a></li>
 <li><a href="https://developer.apple.com/videos/play/wwdc2016/408/" target="_blank" rel="external">Introducing Swift Playgrounds - WWDC 2016 - Videos - Apple Developer</a></li>
 <li><a href="https://blog.csdn.net/Hello_Hwc/article/details/53966889" target="_blank" rel="external">Swift Playground精讲_Leo的专栏-CSDN博客</a></li>
@@ -274,6 +350,30 @@ var _hmt = _hmt || [];
 <li><a href="https://zhuanlan.zhihu.com/p/53723652" target="_blank" rel="external">说一说Android的Dalvik，ART与JIT，AOT - 知乎</a></li>
 <li><a href="https://www.zhihu.com/question/23874627" target="_blank" rel="external">对比JIT和AOT，各自有什么优点与缺点? - 知乎</a></li>
 <li><a href="https://zhuanlan.zhihu.com/p/95626955" target="_blank" rel="external">深入理解Android虚拟机及编译系统 - 知乎</a></li>
+<li><a href="https://android.jlelse.eu/android-internals-art-vs-dvm-deep-dive-def34cf664d7" target="_blank" rel="external">Android Internals: ART vs DVM deep dive - AndroidPub</a></li>
+</ul>
+<p><strong>Flutter</strong></p>
+<ul>
+<li><a href="https://flutter.dev/docs" target="_blank" rel="external">Flutter Documentation - Flutter</a></li>
+<li><a href="https://flutter.cn/" target="_blank" rel="external">Flutter 社区中文资源</a></li>
+<li><a href="https://www.infoq.cn/article/qSLsru9bEvuHgKpPlWMP" target="_blank" rel="external">京东技术中台的Flutter实践之路-InfoQ</a></li>
+<li><a href="https://mp.weixin.qq.com/s?__biz=MjM5MDE0Mjc4MA==&amp;mid=2651020054&amp;idx=3&amp;sn=0351de121e429678a9cfbfd18eaf4d50&amp;chksm=bdbea3458ac92a53e04bf09b42a481d3cae020a8287f3b998303b6d210b6ee1eaabbc95a07ba&amp;scene=27#wechat_redirect" target="_blank" rel="external">蚂蚁财富Flutter工程化实践</a></li>
+<li><a href="https://mp.weixin.qq.com/s/IZ6rUfg3_-zvopc7jZZobg" target="_blank" rel="external">Flutter 沙龙回顾 | 跨平台技术趋势及字节跳动 Flutter 架构实践</a></li>
+<li><a href="https://www.infoq.cn/article/qgC1aOf7S6IokBJvFW9t" target="_blank" rel="external">Flutter 原理与闲鱼深度实践-InfoQ</a></li>
+<li><a href="https://www.infoq.cn/article/xianyu-cross-platform-based-on-flutter" target="_blank" rel="external">闲鱼基于Flutter的移动端跨平台应用实践-InfoQ</a></li>
+<li><a href="https://yq.aliyun.com/articles/604052?spm=a2c4e.11153940.0.0.730737b1xWHbpU" target="_blank" rel="external">深入理解flutter的编译原理与优化-云栖社区-阿里云</a></li>
+<li><a href="https://www.infoq.cn/article/Nizkk*FGGYuzeyM8p59p" target="_blank" rel="external">有赞Flutter混编方案-InfoQ</a></li>
+<li><a href="https://www.infoq.cn/article/TxesjGKPlPh_sMYbTPmg" target="_blank" rel="external">有赞Flutter插件开发与发布-InfoQ</a></li>
+<li><a href="https://www.infoq.cn/article/ZLauMj3u8bLrIlYvud9F" target="_blank" rel="external">京东：将Flutter扩展到微信小程序端的探索-InfoQ</a></li>
+<li><a href="https://mp.weixin.qq.com/s?__biz=MzUxMzcxMzE5Ng==&amp;mid=2247491517&amp;idx=2&amp;sn=cb7c2e023cf0384dc9fbf6ef55154c05&amp;chksm=f951aafece2623e83a46716507b774d7dae6cdcff9bd4b76829159c3d8a88091bc9d71601f8b&amp;scene=27#wechat_redirect" target="_blank" rel="external">美团：基于跨平台框架Flutter的动态化平台建设</a></li>
+<li><a href="https://www.infoq.cn/article/VBqfCIuwdjtU_CmcKaEu" target="_blank" rel="external">闲鱼开源FlutterBoost：实现Flutter混合开发-InfoQ</a></li>
+<li><a href="https://www.infoq.cn/article/iYGyKQowuiUN_Gi2hHDo" target="_blank" rel="external">Flutter 在贝壳的接入实践-InfoQ</a></li>
+<li><a href="https://www.infoq.cn/article/4LCAhRL2TEvUdE8zpHaa" target="_blank" rel="external">写给前端工程师的 Flutter 教程（上）-InfoQ</a></li>
+<li><a href="https://juejin.im/post/5dac428af265da5ba838f476" target="_blank" rel="external">Flutter 跨平台框架应用实战-2019极光开发者大会 - 掘金</a></li>
+<li><a href="https://www.infoq.cn/article/JyqaA9g0Fct9wwKor75B" target="_blank" rel="external">SwiftUI对Flutter到底意味着什么？-InfoQ</a></li>
+<li><a href="https://stephenwzl.github.io/2018/05/14/flutter-principle/" target="_blank" rel="external">Flutter原理简解 · stephenwzl</a></li>
+<li><a href="https://tech.meituan.com/2018/08/09/waimai-flutter-practice.html" target="_blank" rel="external">Flutter原理与实践 - 美团技术团队</a></li>
+<li><a href="https://www.altexsoft.com/blog/engineering/flutter-vs-xamarin-cross-platform-mobile-development-compared/" target="_blank" rel="external">Flutter vs Xamarin: Cross-Platform Mobile Development Compared | AltexSoft</a></li>
 </ul>
 <p><br></p>
 <ul>
@@ -452,7 +552,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1、前言"><span class="toc-number">1.</span> <span class="toc-text">1、前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2、正文"><span class="toc-number">2.</span> <span class="toc-text">2、正文</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Flutter"><span class="toc-number">2.1.</span> <span class="toc-text">Flutter</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3、总结"><span class="toc-number">3.</span> <span class="toc-text">3、总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考"><span class="toc-number">4.</span> <span class="toc-text">参考</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1、前言"><span class="toc-number">1.</span> <span class="toc-text">1、前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2、正文"><span class="toc-number">2.</span> <span class="toc-text">2、正文</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Flutter"><span class="toc-number">2.1.</span> <span class="toc-text">Flutter</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#JIT_&_AOT"><span class="toc-number">2.1.1.</span> <span class="toc-text">JIT & AOT</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Flutter_构建模式"><span class="toc-number">2.1.2.</span> <span class="toc-text">Flutter 构建模式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Release_模式下的编译"><span class="toc-number">2.1.3.</span> <span class="toc-text">Release 模式下的编译</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Debug_模式下的编译"><span class="toc-number">2.1.4.</span> <span class="toc-text">Debug 模式下的编译</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Hot_Reload（热重载）"><span class="toc-number">2.1.5.</span> <span class="toc-text">Hot Reload（热重载）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#不能使用_Hot_Reload_的场景"><span class="toc-number">2.1.6.</span> <span class="toc-text">不能使用 Hot Reload 的场景</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#React_Native"><span class="toc-number">2.2.</span> <span class="toc-text">React Native</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JIT_&_AOT-1"><span class="toc-number">2.3.</span> <span class="toc-text">JIT & AOT</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Injection_for_Xcode"><span class="toc-number">2.4.</span> <span class="toc-text">Injection for Xcode</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Swift"><span class="toc-number">2.5.</span> <span class="toc-text">Swift</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Swift_Playgrounds"><span class="toc-number">2.5.1.</span> <span class="toc-text">Swift Playgrounds</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Swift_Playgrounds_App"><span class="toc-number">2.5.2.</span> <span class="toc-text">Swift Playgrounds App</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#SwiftUI"><span class="toc-number">2.5.3.</span> <span class="toc-text">SwiftUI</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#触类旁通"><span class="toc-number">2.6.</span> <span class="toc-text">触类旁通</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3、总结"><span class="toc-number">3.</span> <span class="toc-text">3、总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考"><span class="toc-number">4.</span> <span class="toc-text">参考</span></a></li></ol>
                     </div>
                 </span>
             </div>

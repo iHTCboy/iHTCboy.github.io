@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="iHTCboy's blog">
 <meta property="og:description" content="1、前言首先，我认为学习总结，要有所总，所结，就是有归纳后，能用自己的话告诉别人！有所结，就是有所收获输出，一般我认为是思维导图，所以，每篇文章前，我都会先给出文章的脑图：">
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/iOS开发高手课-04-项目大了人员多了，架构怎么设计更合理？.png">
-<meta property="og:updated_time" content="2020-02-04T08:04:08.384Z">
+<meta property="og:updated_time" content="2020-02-05T12:44:14.639Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【学习总结】04 | 项目大了人员多了，架构怎么设计更合理？">
 <meta name="twitter:description" content="1、前言首先，我认为学习总结，要有所总，所结，就是有归纳后，能用自己的话告诉别人！有所结，就是有所收获输出，一般我认为是思维导图，所以，每篇文章前，我都会先给出文章的脑图：">
@@ -250,7 +250,7 @@ var _hmt = _hmt || [];
 </ol>
 <p>文中提了4个问题，那么这4个问题怎么解答呢？解答前，我觉得还是要先说说为什么有架构这东西？<code>只有理解为什么出现一个新事物，才能理解出现的原因和解决的问题，并且才能知道未来可能会出现什么新事物！</code></p>
 <h3 id="项目架构">项目架构</h3><h4 id="为什么？">为什么？</h4><p>为什么有架构这东西？有过几年开发经验的同学一定听过或看过 <code>23种设计模式</code> 、<code>SOLID 原则</code>、<code>GRASP 原则</code>、<code>奥卡姆剃刀定律</code>、<code>敏捷开发</code>等，那么为什么设计模式是23种呢？ SOLID 分别代表什么呢？如果只是学习设计模式，SOLID 分别代表什么，那样的话，其实并不能理解为什么？只是解答了，是什么！所以，首先，要给大家介绍一下这些历史和背景，大家才能更好的明白这些原则和模式。</p>
-<p><strong>1994 年 10 月 21 日</strong>，Erich Gamma（埃里希·伽玛）、Richard Helm（理查德·赫尔姆）、Ralph Johnson（拉尔夫·约翰逊）和John Vlissides（约翰·弗利西德斯）合著<code>《设计模式：可复用面向对象软件的基础》</code>（Design Patterns: Elements of Reusable Object-Oriented Software）出版！后以“四人帮”著称，<code>GoF</code>，又称 Gang of Four。该书是软件工程领域有关软件设计的巨著，提出和总结了对于一些常见软件设计问题的标准解决方案，称为软件设计模式，书中提出的 <code>23 种设计模式</code>，书中的设计模式也被成为“四人帮设计模式”。</p>
+<p><strong>1994 年 10 月 21 日</strong>，Erich Gamma（埃里希·伽玛）、Richard Helm（理查德·赫尔姆）、Ralph Johnson（拉尔夫·约翰逊）和John Vlissides（约翰·弗利西德斯）合著<code>《设计模式：可复用面向对象软件的基础》</code>（Design Patterns: Elements of Reusable Object-Oriented Software）出版！后以“四人帮”著称，<code>GoF</code>，又称 <code>Gang of Four</code>，所以本书也被称为 <code>GoF book</code>。此书是软件工程领域有关软件设计的巨著，提出和总结了对于一些常见软件设计问题的标准解决方案，称为软件设计模式，书中提出的 <code>23 种设计模式</code>，书中的设计模式也被成为“四人帮设计模式”，这些模式当初他们是打算写成论文发表，写着后来发现太长了，最后不得以改为出版书。</p>
 <p>所以，大家明白了现在很多xx语言的设计模式，从那里来？为什么是23种？这本书很牛逼，并且这四位作者也很利害，大家自行搜索。关于设计模式就先说到这里，下面在看看其它。</p>
 <p><strong>1997 年 10 月 30 日</strong>，Craig Larman（克雷格·拉曼）出版<code>《UML和模式应用》</code>(Applying UML and Patterns)，书中提出 <code>GRASP</code> (General Responsibility Assignment Software Principles，通用职责分配软件原则)，与其将 GRASP 称之为设计模式（Pattern），不如称之为设计原则（Principles），因为它是站在<code>面向对象设计</code>（OOD：Object-Oriented Design）的角度，告诉我们怎样设计问题空间中的类与分配它们的行为职责，以及明确类之间的相互关系等，GRASP 核心思想是职责分配，用职责设计对象。而不像 GoF设计模式那样是针对特定问题而提出的解决方案。因此 GRASP 站在一个更高的角度来看待面向对象软件的设计，它是 GoF设计模式 的基础（可以理解为更宏观的角度）。</p>
 <p><strong>2001 年 10 月 12 日</strong>，Robert C. Martin（罗伯特·C·马丁）出版了<code>《敏捷软件开发:原则、模式与实践》</code>（Agile Software Development: Principles, Patterns, and Practices）一书，描述了<code>面向对象编程</code>（OOP：Object-oriented Programming）和<code>面向对象设计</code>（OOD：Object-Oriented Design）的五个原则，他称之为 <code>SOLID 原则</code>(单一功能、开闭原则、里氏替换、接口隔离以及依赖反转，每个原则的首字母组合在一起)。需要注意的时，这些原则有些在此书前就提出或相似的概念，其中依赖倒转原则就是1996年提出来的。关于世界顶级软件开发大师<code>罗伯特·C·马丁</code>（Robert C. Martin），大家可能更熟悉 <code>Bob大叔</code>、<code>鲍勃叔叔</code> 等称呼，因为他已经有<code>50多年</code>的软件开发经验（1969年至今），如今 67 岁啦！其中《架构整洁之道》是创造“Clean神话”的Bob大叔在架构领域的登峰之作，还有《代码整洁之道》（Clean Code: A Handbook of Agile Software Craftsmanship）不知道大家熟悉吗？</p>
@@ -424,9 +424,8 @@ var _hmt = _hmt || [];
 <p>虽然面向对象并不是解决软件危机的银弹，但和面向过程相比，面向对象的思想更加贴近人类思维的特点，更加脱离机器思维，是一次软件设计思想上的飞跃。</p>
 </blockquote>
 <p>引用自：<a href="https://www.infoq.cn/article/zKbhME-UHABRqdTodLwF" target="_blank" rel="external">面向对象编程的兴衰-InfoQ</a></p>
-<p>其实早在 GOF 书中描述：<code>实际使用哪种模式并不重要，模式并不是优秀设计的全部或者必要标准。</code>，所以，架构和模式并不是必要的！意思是我们开发过程中不要认为一定要用xx模式，xx原则一用到底！<code>不是不用，是不能一味地用！</code>，认为用了就很利害等错觉。</p>
-<p>想一想，在1994年就能提出23种设计模式的概念，并且在书本提出<code>模式并不是必要标准</code>！真的是大神！我想现在大多数人都不没有领悟其中或达到这样的思想深度，不由得心中自发地佩服！</p>
-<p>所以，作为中国区，我们的软件工程行业确实与美国有一定的差距，从这些书籍和伟人就看出来，30年前美国作为计算机首发站，有先天的优势条件。而现在，我认为我们与美国的<code>技术的底蕴</code>还有较大差距，但是<code>技术的高度</code>，技术创新和新技术，我们是可以弯道超车。同时，作为一名普通的程序员，我认为大家积累足够的软件开发经验，也可以总结出更多的新的理论或模式，这也是我希望中国区未来能做的到，而不是 996 的业务到底，<code>开发的效率不是通过加班提高，而应该通过技术的创新解决！</code></p>
+<p><code>很多人都喜欢跟团队中的其他成员争论某些代码到底属于哪种模式。</code>，架构和模式是不是必要的呢？我认为我们开发过程中不要认为一定要用xx原则/xx模式一用到底！<code>设计模式不是不用，是不能一味地用！</code>。想一想，在1994年就能提出23种设计模式的概念！真的是大神！我想现在大多数人都不没有领悟其中或达到这样的思想深度，不由得心中自发地佩服！而现在很多流行的库都利用模式来架构，比如<code>Spring</code>，用的就是抽象工厂和工厂模式，回调函数用的是观察者模式，<code>servlet</code>中的filter使用的是chain of responsibility模式。最后，我想引用 GoF 书中最后一章的一句话：<code>一般而言，了解 “做什么” 要比 “为什么” 来的容易；而一个模式的 “为什么” 就是它要解决的问题。</code>。</p>
+<p>作为中国区，我们的软件工程行业确实与美国有一定的差距，从这些书籍和伟人就看出来，30年前美国作为计算机首发站，有先天的优势条件。而现在，我认为我们与美国的<code>技术的底蕴</code>还有较大差距，但是<code>技术的高度</code>，技术创新和新技术，我们是可以弯道超车。同时，作为一名普通的程序员，我认为大家积累足够的软件开发经验，也可以总结出更多的新的理论或模式，这也是我希望中国区未来能做的到，而不是 996 的业务到底，<code>开发的效率不是通过加班提高，而应该通过技术的创新解决！</code></p>
 <p>所以，我们要架构好自己的编程~</p>
 <p><br></p>
 <p>注：更多关于 iOS 开发和程序开发相关的内容，可以查看系列，目前还在连载中 <a href="https://ihtcboy.com/2020/02/01/2020-02-01_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/">【学习总结】iOS开发高手课 – (连载中) | iHTCboy’s blog</a>，以上，希望对你有用！</p>
@@ -492,8 +491,9 @@ var _hmt = _hmt || [];
 </ul>
 <p><br></p>
 <blockquote>
-<p>注：本文首发于 <a href="https://iHTCboy.com">iHTCboy’s blog</a>，如若转载，请注来源<br><br></p>
+<p>注：本文首发于 <a href="https://iHTCboy.com">iHTCboy’s blog</a>，如若转载，请注来源</p>
 </blockquote>
+<p><br></p>
 
       
 
