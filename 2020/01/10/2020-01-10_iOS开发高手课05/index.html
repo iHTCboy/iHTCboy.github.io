@@ -22,11 +22,12 @@
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/图8-2-转换成本地代码后就变成了同样的语言.jpg">
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/图8-5-同样的源代码可以转换成适用于不同处理器的本地代码.jpg">
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/图8-8-Windows中的编译和链接机制.jpg">
+<meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/LLVM工具链集合.png">
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/Clang-Swift-LLVM编译器架构.png">
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/Clang-LLVM编译过程.png">
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/方舟编译器架构示意图.png">
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/方舟编译器开源范围示意图.png">
-<meta property="og:updated_time" content="2020-02-05T02:30:29.884Z">
+<meta property="og:updated_time" content="2020-02-05T07:59:12.098Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【学习总结】05 | 链接器：符号是怎么绑定到地址上的？">
 <meta name="twitter:description" content="1、前言首先，我认为学习总结，要有所总，所结，就是有归纳后，能用自己的话告诉别人！有所结，就是有所收获输出，一般我认为是思维导图，所以，每篇文章前，我都会先给出文章的脑图：">
@@ -320,9 +321,8 @@ var _hmt = _hmt || [];
 </ul>
 <p>编译器后端会进行机器无关的代码优化，生成机器语言，并且进行机器相关的代码优化。对于 iOS 的编译过程，后端的处理：LLVM优化器会进行BitCode的生成，链接期优化等，LLVM机器码生成器会针对不同的架构，比如arm64等生成不同的机器码。</p>
 <p>这里的后端，最终就是生成对应的 CPU 能执行的机器语言，前面已经介绍过 CPU 相关的。</p>
-<p>以上部分内容是针对 iOS 和 LLVM 的，所以，我们接下来就来介绍一下 LLVM 编译器吧！</p>
-<p>上面说了编译器的组成架构和简要的工作流程，详细的工作流程这里就不多说了，因为已经有很多优秀的内容了，并且本文的主要目的是要说明编译器是什么！你知道它是什么后，再了解它是怎么用，有什么优缺点，自然不是难事！</p>
-<p>要讲解 <code>LLVM</code> （Low Level Virtual Machine，底层虚拟机）前，有必要的说说 <code>GCC</code>（GNU Compiler Collection，GNU编译器套件） ，因为苹果开始也是使用 GCC。</p>
+<p>上面说了编译器的组成架构和简要的工作流程，详细的工作流程这里就不多说了，因为已经有很多优秀的内容了，并且本文的主要目的是要说明编译器是什么！你知道它是什么后，再了解它是怎么用，有什么优缺点，自然不是难事！以上的部分内容是针对 iOS 和 LLVM 的，所以，我们接下来就来介绍一下 LLVM 编译器吧！</p>
+<p>要讲解 <code>LLVM</code> 前，有必要的说说 <code>GCC</code>（GNU Compiler Collection，GNU编译器套件） ，因为苹果最初也是使用 GCC，后来慢慢的替换为 LLVM 的。</p>
 <h3 id="GCC（GNU_Compiler_Collection，GNU编译器套件）">GCC（GNU Compiler Collection，GNU编译器套件）</h3><p>原名：GNU C语言编译器（GNU C Compiler），通常是跨平台软件的编译器首选。（在所有平台上都使用同一个前端处理程序，产生一样的中间码）。</p>
 <p>但是由于以下问题，导致苹果转为 LLVM:</p>
 <ul>
@@ -330,8 +330,13 @@ var _hmt = _hmt || [];
 <li>GCC 插件、工具、IDE的支持薄弱</li>
 </ul>
 <p>GCC的前端不是苹果提供维护的，想要添加一些语法提示等功能还得去求GCC的前端去做。 很多编译器特性没有，自动补全、代码提示、warning、静态分析等这些流程不是很给力，都是需要IDE调用底层命令完成的，结果需要以插件的形式暴露出来，这一块GCC做的不是很好。</p>
-<h3 id="LLVM（Low_Level_Virtual_Machine，底层虚拟机）">LLVM（Low Level Virtual Machine，底层虚拟机）</h3><p>早年Apple一直使用 <code>GCC</code> 作为官方的编译器，但Apple对 GCC 的性能不满意，再者 <code>Objective-C</code> 在 GCC 中优先级低，GCC 对 Objective-C 语言新特性的支持程度也不高。因此Apple一直在寻找compiler（编译器）的开源替代品，于是他们将目光转移到<code>LLVM</code>身上。</p>
-<p>2000年，伊利诺伊大学厄巴纳－香槟分校（University of Illinois at Urbana-Champaign 简称UIUC）这所享有世界声望的一流公立研究型大学的 <code>Chris Lattner</code>（克里斯·拉特纳，twitter <a href="https://twitter.com/clattner_llvm" target="_blank" rel="external">@clattner_llvm</a> ） 开发了一个叫作 Low Level Virtual Machine 的编译器开发工具套件，后来涉及范围越来越大，可以用于常规编译器，JIT编译器，汇编器，调试器，静态分析工具等一系列跟编程语言相关的工作，于是就把简称 LLVM 这个简称作为了正式的名字。Chris Lattner 后来又开发了 Clang，使得 LLVM 直接挑战 GCC 的地位。</p>
+<h3 id="LLVM">LLVM</h3><p>早年Apple一直使用 <code>GCC</code> 作为官方的编译器，但Apple对 GCC 的性能不满意，再者 <code>Objective-C</code> 在 GCC 中优先级低，GCC 对 Objective-C 语言新特性的支持程度也不高。因此Apple一直在寻找compiler（编译器）的开源替代品，于是他们将目光转移到<code>LLVM</code>身上。</p>
+<p>来自维基百科：<del>关于<code>LLVM</code>这个名字的来源，LLVM的命名最早<a href="https://web.archive.org/web/20120117140118/http://lists.cs.uiuc.edu/pipermail/llvmdev/2011-December/046443.html" target="_blank" rel="external">源自</a>于底层虚拟机（Low Level Virtual Machine）的首字母缩写，由于这个项目的范围并不局限于创建一个虚拟机，这个缩写导致了广泛的疑惑。</del></p>
+<p><code>LLVM 就是 LLVM</code>, 并不是 Low Level Virtual Machine（底层虚拟机）的简写！现今LLVM 已单纯成为一个品牌！根据官网说明：</p>
+<blockquote>
+<p>The LLVM Project is a collection of modular and reusable compiler and toolchain technologies. Despite its name, LLVM has little to do with traditional virtual machines. The name “LLVM” itself is not an acronym; it is the full name of the project.<br>LLVM项目是模块化和可重用的编译器及工具链技术的集合。尽管名称如此，LLVM与传统虚拟机关系不大。名称“ LLVM”本身不是缩写。它是项目的全名。</p>
+</blockquote>
+<p>2000年，伊利诺伊大学厄巴纳－香槟分校（University of Illinois at Urbana-Champaign 简称UIUC）这所享有世界声望的一流公立研究型大学的 <code>Chris Lattner</code>（克里斯·拉特纳，twitter <a href="https://twitter.com/clattner_llvm" target="_blank" rel="external">@clattner_llvm</a> ） 和 <code>Vikram Adve</code>（维克拉姆·艾夫）想要为所有静态及动态语言创造出动态的编译技术，而开发的编译器开发工具套件。2005年，苹果电脑雇用了 Chris Lattner 克里斯·拉特纳及他的团队为苹果电脑开发应用程序系统,LLVM 涉及范围越来越大，可以用于常规编译器，JIT编译器，汇编器，调试器，静态分析工具等一系列跟编程语言相关的工作。Chris Lattner 后来又开发了 Clang，使得 LLVM 直接挑战 GCC 的地位。</p>
 <h4 id="Chris_Lattner_大神简介">Chris Lattner 大神简介</h4><p><code>Chris Lattner</code> 生于 1978 年，2005年加入苹果，将苹果使用的 GCC 全面转为 LLVM。2010年开始主导开发 Swift 语言。2017年1月，克里斯·拉特纳 辞去在苹果的工作，入职特斯拉汽车，负责自动驾驶软件的开发。2017年8月14日，克里斯·拉特纳 发表Twitter表示将于一周后加入聚焦于深度学习与人工智能研发的Google Brain团队。</p>
 <h4 id="Xcode_历史">Xcode 历史</h4><p>Clang 编译效率是 GCC 的3倍，编译器性能好，编译出的文件小。LLVM 3.0 发布已完整支持所有 ISO C++ 标准，代表着 LLVM 正式走向成熟。所以，也标志着 Xcode 的变化。</p>
 <ul>
@@ -340,12 +345,22 @@ var _hmt = _hmt || [];
 <li><strong>Xcode5</strong>： GCC 被废弃，新的编译器是 LLVM 5.0</li>
 </ul>
 <p>从 GCC前端 到 LLVM后端的编译器，到 Clang-LLVM 的编译器，一步步收回对编译工具链的控制，也为 Swift 的出现奠定基础。所以，Chris Lattner 真的是大神！</p>
+<h4 id="LLVM_工具链">LLVM 工具链</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/LLVM工具链集合.png" alt="LLVM工具链集合.png"></p>
+<p>最后用<a href="https://wjerry.com/2019/05/19/LLVM架构与Clang/" target="_blank" rel="external">这张图</a>来表示完整的LLVM工具链集合的六大执行单元。</p>
+<ol>
+<li><code>词法分析</code>： 将源代码中的所有字符切分成记号(Token)的序列。包括了词法分析器、记号序列化生成器和扫描器，不过扫描器常常作为词法分析器的第一阶段。</li>
+<li><code>语法分析</code>： 分析符合一定语法规则的一串符号，它通常会生成一个抽象语法树（AST - Abstract Syntax tree），用于表示记号之间的语法关系。</li>
+<li><code>语义分析</code>： 通过语法分析的解析后，这个过程将从源代码中收集必要的语义信息，通常包括类型检查、在使用之前确保声明了变量等等。</li>
+<li><code>中间代码(IR)生成</code>：代码在这个阶段会转换为中间表示式(IR)，这是一种中立的语言，与源语言(前端)和机器(后端)无关。</li>
+<li><code>优化中间表达式</code>：中间代码常常会有冗余和死代码的情况出现，而优化器可以处理这些问题以获得更优异的性能。</li>
+<li><code>生成目标代码</code>： 最后后端会生成在目标机器上运行的机器码，我们也将其称之为目标代码。</li>
+</ol>
 <h3 id="链接器">链接器</h3><ul>
 <li>为什么要让链接器做符号和地址绑定？不绑定的话，又会有什么问题？</li>
-<li>链接器为什么还要把项目中的多个 Mach-O文件合并成一个。</li>
+<li>链接器为什么还要把项目中的多个 Mach-O 文件合并成一个。</li>
 </ul>
 <p>回到本文开始的问题，大家对这2个问题心中有答案了吗？</p>
-<p> 面向过程，可以写一个文件中；面向对象，就有类与对象关系</p>
+<p><code>链接器</code>的作用是将符号绑定到地址上，<code>符号表</code>是内存地址与函数名、文件名、行号的映射表。所以，变量、函数与地址绑定，CPU 才能理解解析<code>代码</code>。而为什么要多个 Mach-O 文件合并一个最终的 <code>Mach-O</code>？过去面向过程编程时，可以写一个文件中，而现在主流是面向对象，就有类与对象关系，所以一般是分类、分模块、分空间来编写源代码，所以，需要把这些类与对象和他们之前调用关系绑定一起，合并成一个<code>Mach-O</code>。为了更好理解这个 <code>Mach-O</code>，需要了解 CPU 是怎么执行他们的，这里就不展开了，感兴趣的同学可以先自行搜索了解更多。</p>
 <h3 id="触类旁通">触类旁通</h3><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/Clang-Swift-LLVM编译器架构.png" alt="Clang/Swift-LLVM编译器架构.png"></p>
 <p>让我们再次回顾一下编译器的工作流程，以 LLVM 为例，从 iOS 开发视角来看这个问题。这张图片来源：<a href="https://juejin.im/post/5a3232896fb9a0452b494189#heading-3" target="_blank" rel="external">从Swift桥接文件到Clang-LLVM - 掘金</a>。详细的编译器过程大家可以参考文章，这里就不过多重复。</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/Clang-LLVM编译过程.png" alt="Clang-LLVM编译过程.png"></p>
@@ -359,23 +374,18 @@ var _hmt = _hmt || [];
 <li><code>ASLR</code> (Address space layout randomization，地址空间配置随机加载)</li>
 <li><code>解释器</code>：不需要经过编译的过程，而是在执行的时候通过一个中间的解释器将代码解释为CPU可以执行的代码。JavaScript、Python、PHP等都是直译式语言。</li>
 <li><code>Bitcode</code>：字节码</li>
-<li><code>SIL</code>（Swift Intermediate Language）</li>
+<li><code>SIL</code>（Swift Intermediate Language）：AST 和LLVM IR之间的另一种中间代码表示形式。主要是用来弥补一些 Clang编译器的缺陷，如无法执行一些高级分析，可靠的诊断和优化等。</li>
 </ul>
-<h4 id="Swift_如何桥接_Objtive-C_文件到_Clang-LLVM_？">Swift 如何桥接 Objtive-C 文件到 Clang-LLVM ？</h4><p>在 Swift 的项目中，Objtive-C  代码可以生成 IR（Intermediate Representation，中间端表达式），从而与 Swift 生成的 IR 联通。这个也是分段（层）的好处，编译器中间端（Middle end，或叫优化器，Optimizer），作为中间者通过前端获取 IR ，从而不用关心前端的编程语言是什么，这些设计特点，带来了非常大的好处。</p>
-<blockquote>
-<p>假如有N种语言（C、OC、C++、Swift…）的前端，同时也有M个架构（模拟器、arm64、x86…）的Target，是否就需要 N × M 个编译器？<br>三相架构的价值就体现出来了，通过共享优化器的中转，很好的解决了这个问题。<br>假如你需要增加一种语言，只需要增加一种前端；假如你需要增加一种处理器架构，也只需要增加一种后端，而其他的地方都不需要改动。这复用思想很牛逼吧。  </p>
-<p>来自：<a href="https://www.jianshu.com/p/5b2cce762106" target="_blank" rel="external">浅谈iOS编译过程 - 简书</a></p>
-</blockquote>
 <h4 id="中间代码_LLVM_IR">中间代码 LLVM IR</h4><p>中间端表达式 IR（Intermediate Representation），有3种表示形式，但本质是等价的，就好比水可以有气体，液体，固体3种形式。</p>
 <ol>
 <li><code>text</code>：便于阅读的文本格式，类似于汇编语言，拓展名<code>.II</code>。生成命令：<code>$ clang -S -emit-llvm main.m</code></li>
-<li><code>memory</code>：内存格式</li>
+<li><code>memory</code>：内存格式，开发时操作 LLVM IR。</li>
 <li><code>bitcode</code>：二进制格式，拓展名<code>.bc</code>。生成命令：<code>$ clang -c -emit-llvm main.m</code></li>
 </ol>
 <h4 id="广义与狭义_LLVM_与_Clang_的关系">广义与狭义 LLVM 与 Clang 的关系</h4><p><code>广义 LLVM</code>：整个 LLVM 架构。</p>
 <p><code>狭义 LLVM</code>：LLVM 后端（代码优化，目标文件生成等。）</p>
 <p><code>Clang</code>（C Lange Family Frontend for LLVM），发音为<code>/ˈklæŋ/</code>，是C、C++、Objective-C、Objective-C++ 编程语言的编译器前端。</p>
-<p>所以，一般我们说 LLVM 与 Clang 时，应该是指广义 LLVM，非特指，LLVM 就是广义 LLVM吧！另外，本文主要讲解了 LLVM 在 Apple 平台上的使用，LLVM 现在被作为实现各种静态和运行时编译语言的通用基础结构，更多资料大家可以搜索引擎。</p>
+<p>所以，非特指，LLVM 就是广义 LLVM，指整个LLVM项目，包括Clang前端。另外，本文主要讲解了 LLVM 在 Apple 平台上的使用，LLVM 现在被作为实现各种静态和运行时编译语言的通用基础结构，可以使用 LLVM 来编译Ruby，Python，Haskell，Java，D，PHP，Pure，Lua和许多其他语言。LLVM 的主要优势在于其多功能性，灵活性和可重用性，这就是它被用于各种不同任务的原因：从轻量级JIT编译嵌入式语言（如Lua）到编译Fortran代码（用于大型超级）电脑。</p>
 <h4 id="相比较GCC，Clang具有哪些优点">相比较GCC，Clang具有哪些优点</h4><ul>
 <li>Clang是:</li>
 </ul>
@@ -393,6 +403,12 @@ var _hmt = _hmt || [];
 <li>诊断信息可读性强：在编译过程中，Clang创建并保存了大量详细的元数据，有利于调试 </li>
 <li>设计清晰简单，容易理解，易于扩展增强</li>
 </ul>
+<h4 id="Swift_如何桥接_Objtive-C_文件到_Clang-LLVM_？">Swift 如何桥接 Objtive-C 文件到 Clang-LLVM ？</h4><p>在 Swift 的项目中，Objtive-C  代码可以生成 IR（Intermediate Representation，中间端表达式），从而与 Swift 生成的 IR 联通。这个也是分段（层）的好处，编译器中间端（Middle end，或叫优化器，Optimizer），作为中间者通过前端获取 IR ，从而不用关心前端的编程语言是什么，这些设计特点，带来了非常大的好处。</p>
+<blockquote>
+<p>假如有N种语言（C、OC、C++、Swift…）的前端，同时也有M个架构（模拟器、arm64、x86…）的Target，是否就需要 N × M 个编译器？<br>三相架构的价值就体现出来了，通过共享优化器的中转，很好的解决了这个问题。<br>假如你需要增加一种语言，只需要增加一种前端；假如你需要增加一种处理器架构，也只需要增加一种后端，而其他的地方都不需要改动。这复用思想很牛逼吧。  </p>
+<p>来自：<a href="https://www.jianshu.com/p/5b2cce762106" target="_blank" rel="external">浅谈iOS编译过程 - 简书</a></p>
+</blockquote>
+<p>需要注意的是 <strong>Clang</strong> 是基于LLVM架构的 <strong>C、C++、Objective-C、Objective-C++</strong>  编译器前端，不包括 <code>Swift</code>！苹果针对 Swift 做了单独的前端，与 Clang 是非常相似的，特点就是增加了 <code>SIL</code>（<a href="https://llvm.org/devmtg/2015-10/slides/GroffLattner-SILHighLevelIR.pdf" target="_blank" rel="external">Swift Intermediate Language</a>）。详细具体可以查看 WWDC 视频：<a href="https://developer.apple.com/videos/play/wwdc2016/405/" target="_blank" rel="external">What’s New in LLVM - WWDC 2016 - Videos - Apple Developer</a> 、<a href="https://developer.apple.com/videos/play/wwdc2018/415/" target="_blank" rel="external">Behind the Scenes of the Xcode Build Process - WWDC 2018 - Videos - Apple Developer</a>。</p>
 <h4 id="方舟编译器">方舟编译器</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/方舟编译器架构示意图.png" alt="方舟编译器架构示意图.png"></p>
 <blockquote>
 <p>当前方舟编译器支持Java/Kotlin程序字节码的前端输入，其它编程语言的支持（如 C/C++/JS 等）还在规划中，方舟编译器的中间表示（IR）转换器将前端输入转换成方舟IR，并输送给后端的优化器，最终生成二进制文件，二进制文件与编译器运行时库文件链接生成可执行文件，在方舟的运行环境中就可执行该文件。</p>
@@ -433,6 +449,21 @@ var _hmt = _hmt || [];
 <p>注：更多关于 iOS 开发和程序开发相关的内容，可以查看系列，目前还在连载中 <a href="https://ihtcboy.com/2020/02/01/2020-02-01_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/">【学习总结】iOS开发高手课 – (连载中) | iHTCboy’s blog</a>，以上，希望对你有用！</p>
 <h2 id="参考">参考</h2><ul>
 <li><a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a></li>
+</ul>
+<p><strong>WWDC</strong></p>
+<ul>
+<li><a href="https://developer.apple.com/videos/play/wwdc2019/409/" target="_blank" rel="external">What’s New in Clang and LLVM - WWDC 2019 - Videos - Apple Developer</a></li>
+<li><a href="https://developer.apple.com/videos/play/wwdc2018/409/" target="_blank" rel="external">What’s New in LLVM - WWDC 2018 - Videos - Apple Developer</a></li>
+<li><a href="https://developer.apple.com/videos/play/wwdc2017/411/" target="_blank" rel="external">What’s New in LLVM - WWDC 2017 - Videos - Apple Developer</a></li>
+<li><a href="https://developer.apple.com/videos/play/wwdc2016/405/" target="_blank" rel="external">What’s New in LLVM - WWDC 2016 - Videos - Apple Developer</a></li>
+<li><a href="https://developer.apple.com/videos/play/wwdc2018/415/" target="_blank" rel="external">Behind the Scenes of the Xcode Build Process - WWDC 2018 - Videos - Apple Developer</a></li>
+<li><a href="https://developer.apple.com/videos/play/wwdc2016/402/" target="_blank" rel="external">What’s New in Swift - WWDC 2016 - Videos - Apple Developer</a></li>
+<li><a href="https://developer.apple.com/videos/play/wwdc2017/402/" target="_blank" rel="external">What’s New in Swift - WWDC 2017 - Videos - Apple Developer</a></li>
+<li><a href="https://developer.apple.com/videos/play/wwdc2018/401/" target="_blank" rel="external">What’s New in Swift - WWDC 2018 - Videos - Apple Developer</a></li>
+<li><a href="https://developer.apple.com/videos/play/wwdc2019/402/" target="_blank" rel="external">What’s New in Swift - WWDC 2019 - Videos - Apple Developer</a></li>
+</ul>
+<p><strong>Article</strong></p>
+<ul>
 <li><a href="https://ming1016.github.io/2017/03/01/deeply-analyse-llvm/" target="_blank" rel="external">深入剖析 iOS 编译 Clang / LLVM | 星光社 - 戴铭的博客</a></li>
 <li><a href="https://www.jianshu.com/p/5b2cce762106" target="_blank" rel="external">浅谈iOS编译过程 - 简书</a></li>
 <li><a href="https://juejin.im/post/5a352bb0f265da433562d5e3" target="_blank" rel="external">iOS学习之深入理解程序编译过程 - 掘金</a></li>
@@ -472,6 +503,10 @@ var _hmt = _hmt || [];
 <li><a href="https://www.youtube.com/watch?time_continue=280&amp;v=VqCkCDFLSsc" target="_blank" rel="external">The Clang AST - a Tutorial - YouTube</a></li>
 <li><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15745-s14/public/lectures/" target="_blank" rel="external">Index of /afs/cs.cmu.edu/academic/class/15745-s14/public/lectures</a></li>
 <li><a href="https://code.woboq.org/llvm/clang/" target="_blank" rel="external">llvm/clang/ Source Tree - Woboq Code Browser</a></li>
+<li><a href="https://github.com/apple/swift/blob/master/docs/SIL.rst" target="_blank" rel="external">swift/SIL.rst at master · apple/swift</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/101898915" target="_blank" rel="external">Swift Intermediate Language 初探 - 知乎</a></li>
+<li><a href="https://wjerry.com/2019/05/19/LLVM%E6%9E%B6%E6%9E%84%E4%B8%8EClang/" target="_blank" rel="external">LLVM架构与Clang - Jerry的博客 | Jerry’s Blog</a></li>
+<li><a href="https://juejin.im/post/5cdaab1cf265da03761ead47" target="_blank" rel="external">iOS 编译详解 LLVM Clang - 掘金</a></li>
 <li><a href="https://bugly.qq.com/docs/user-guide/symbol-configuration-ios/?v=20180709165613" target="_blank" rel="external">iOS 符号表 - Bugly 文档</a></li>
 <li><a href="https://zh.wikipedia.org/wiki/X86" target="_blank" rel="external">x86 - 维基百科，自由的百科全书</a></li>
 <li><a href="https://www.iteye.com/blog/chenzehe-1703429" target="_blank" rel="external">X86、X64和X86_64区别 - - ITeye博客</a></li>
@@ -662,7 +697,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1、前言"><span class="toc-number">1.</span> <span class="toc-text">1、前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2、正文"><span class="toc-number">2.</span> <span class="toc-text">2、正文</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#《程序是怎样跑起来的》"><span class="toc-number">2.1.</span> <span class="toc-text">《程序是怎样跑起来的》</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#程序运行流程示例"><span class="toc-number">2.1.1.</span> <span class="toc-text">程序运行流程示例</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CPU的四个构成部分"><span class="toc-number">2.1.2.</span> <span class="toc-text">CPU的四个构成部分</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CPU负责解析并运行从源代码编译而来的本地代码"><span class="toc-number">2.1.3.</span> <span class="toc-text">CPU负责解析并运行从源代码编译而来的本地代码</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#x86-64_的故事"><span class="toc-number">2.1.3.1.</span> <span class="toc-text">x86-64 的故事</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#转换成本地代码后就变成了同样的语言"><span class="toc-number">2.1.4.</span> <span class="toc-text">转换成本地代码后就变成了同样的语言</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#同样的源代码可以转换成适用于不同处理器的本地代码"><span class="toc-number">2.1.5.</span> <span class="toc-text">同样的源代码可以转换成适用于不同处理器的本地代码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Windows中的编译和链接机制"><span class="toc-number">2.1.6.</span> <span class="toc-text">Windows中的编译和链接机制</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#编译器"><span class="toc-number">2.2.</span> <span class="toc-text">编译器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#编译器前端（Front_end）"><span class="toc-number">2.2.1.</span> <span class="toc-text">编译器前端（Front end）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#中间端（Middle_end，或叫优化器，Optimizer）"><span class="toc-number">2.2.2.</span> <span class="toc-text">中间端（Middle end，或叫优化器，Optimizer）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#后端（Backend）"><span class="toc-number">2.2.3.</span> <span class="toc-text">后端（Backend）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#GCC（GNU_Compiler_Collection，GNU编译器套件）"><span class="toc-number">2.3.</span> <span class="toc-text">GCC（GNU Compiler Collection，GNU编译器套件）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#LLVM（Low_Level_Virtual_Machine，底层虚拟机）"><span class="toc-number">2.4.</span> <span class="toc-text">LLVM（Low Level Virtual Machine，底层虚拟机）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Chris_Lattner_大神简介"><span class="toc-number">2.4.1.</span> <span class="toc-text">Chris Lattner 大神简介</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Xcode_历史"><span class="toc-number">2.4.2.</span> <span class="toc-text">Xcode 历史</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#链接器"><span class="toc-number">2.5.</span> <span class="toc-text">链接器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#触类旁通"><span class="toc-number">2.6.</span> <span class="toc-text">触类旁通</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Swift_如何桥接_Objtive-C_文件到_Clang-LLVM_？"><span class="toc-number">2.6.1.</span> <span class="toc-text">Swift 如何桥接 Objtive-C 文件到 Clang-LLVM ？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#中间代码_LLVM_IR"><span class="toc-number">2.6.2.</span> <span class="toc-text">中间代码 LLVM IR</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#广义与狭义_LLVM_与_Clang_的关系"><span class="toc-number">2.6.3.</span> <span class="toc-text">广义与狭义 LLVM 与 Clang 的关系</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#相比较GCC，Clang具有哪些优点"><span class="toc-number">2.6.4.</span> <span class="toc-text">相比较GCC，Clang具有哪些优点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#方舟编译器"><span class="toc-number">2.6.5.</span> <span class="toc-text">方舟编译器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#龙书、虎书、鲸书_—_编译原理三大圣书"><span class="toc-number">2.6.6.</span> <span class="toc-text">龙书、虎书、鲸书 — 编译原理三大圣书</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#学习编译原理前自测"><span class="toc-number">2.6.6.1.</span> <span class="toc-text">学习编译原理前自测</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3、总结"><span class="toc-number">3.</span> <span class="toc-text">3、总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考"><span class="toc-number">4.</span> <span class="toc-text">参考</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1、前言"><span class="toc-number">1.</span> <span class="toc-text">1、前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2、正文"><span class="toc-number">2.</span> <span class="toc-text">2、正文</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#《程序是怎样跑起来的》"><span class="toc-number">2.1.</span> <span class="toc-text">《程序是怎样跑起来的》</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#程序运行流程示例"><span class="toc-number">2.1.1.</span> <span class="toc-text">程序运行流程示例</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CPU的四个构成部分"><span class="toc-number">2.1.2.</span> <span class="toc-text">CPU的四个构成部分</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CPU负责解析并运行从源代码编译而来的本地代码"><span class="toc-number">2.1.3.</span> <span class="toc-text">CPU负责解析并运行从源代码编译而来的本地代码</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#x86-64_的故事"><span class="toc-number">2.1.3.1.</span> <span class="toc-text">x86-64 的故事</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#转换成本地代码后就变成了同样的语言"><span class="toc-number">2.1.4.</span> <span class="toc-text">转换成本地代码后就变成了同样的语言</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#同样的源代码可以转换成适用于不同处理器的本地代码"><span class="toc-number">2.1.5.</span> <span class="toc-text">同样的源代码可以转换成适用于不同处理器的本地代码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Windows中的编译和链接机制"><span class="toc-number">2.1.6.</span> <span class="toc-text">Windows中的编译和链接机制</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#编译器"><span class="toc-number">2.2.</span> <span class="toc-text">编译器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#编译器前端（Front_end）"><span class="toc-number">2.2.1.</span> <span class="toc-text">编译器前端（Front end）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#中间端（Middle_end，或叫优化器，Optimizer）"><span class="toc-number">2.2.2.</span> <span class="toc-text">中间端（Middle end，或叫优化器，Optimizer）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#后端（Backend）"><span class="toc-number">2.2.3.</span> <span class="toc-text">后端（Backend）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#GCC（GNU_Compiler_Collection，GNU编译器套件）"><span class="toc-number">2.3.</span> <span class="toc-text">GCC（GNU Compiler Collection，GNU编译器套件）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#LLVM"><span class="toc-number">2.4.</span> <span class="toc-text">LLVM</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Chris_Lattner_大神简介"><span class="toc-number">2.4.1.</span> <span class="toc-text">Chris Lattner 大神简介</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Xcode_历史"><span class="toc-number">2.4.2.</span> <span class="toc-text">Xcode 历史</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#LLVM_工具链"><span class="toc-number">2.4.3.</span> <span class="toc-text">LLVM 工具链</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#链接器"><span class="toc-number">2.5.</span> <span class="toc-text">链接器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#触类旁通"><span class="toc-number">2.6.</span> <span class="toc-text">触类旁通</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#中间代码_LLVM_IR"><span class="toc-number">2.6.1.</span> <span class="toc-text">中间代码 LLVM IR</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#广义与狭义_LLVM_与_Clang_的关系"><span class="toc-number">2.6.2.</span> <span class="toc-text">广义与狭义 LLVM 与 Clang 的关系</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#相比较GCC，Clang具有哪些优点"><span class="toc-number">2.6.3.</span> <span class="toc-text">相比较GCC，Clang具有哪些优点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Swift_如何桥接_Objtive-C_文件到_Clang-LLVM_？"><span class="toc-number">2.6.4.</span> <span class="toc-text">Swift 如何桥接 Objtive-C 文件到 Clang-LLVM ？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#方舟编译器"><span class="toc-number">2.6.5.</span> <span class="toc-text">方舟编译器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#龙书、虎书、鲸书_—_编译原理三大圣书"><span class="toc-number">2.6.6.</span> <span class="toc-text">龙书、虎书、鲸书 — 编译原理三大圣书</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#学习编译原理前自测"><span class="toc-number">2.6.6.1.</span> <span class="toc-text">学习编译原理前自测</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3、总结"><span class="toc-number">3.</span> <span class="toc-text">3、总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考"><span class="toc-number">4.</span> <span class="toc-text">参考</span></a></li></ol>
                     </div>
                 </span>
             </div>
