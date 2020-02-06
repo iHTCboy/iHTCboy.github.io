@@ -276,7 +276,7 @@
     <link href="https://iHTCboy.com/2020/01/17/2020-01-17_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE06/"/>
     <id>https://iHTCboy.com/2020/01/17/2020-01-17_iOS开发高手课06/</id>
     <published>2020-01-17T12:20:20.000Z</published>
-    <updated>2020-02-06T15:23:26.301Z</updated>
+    <updated>2020-02-06T15:37:25.636Z</updated>
     <content type="html"><![CDATA[<h2 id="1、前言">1、前言</h2><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/iOS开发高手课-06-App如何通过注入动态库的方式实现极速编译调试？.png" alt="iOS开发高手课-06-App如何通过注入动态库的方式实现极速编译调试？.png"></p>
 <a id="more"></a>
@@ -474,7 +474,7 @@
 <h3 id="触类旁通">触类旁通</h3><p>使用类 <code>REPL</code> 模式（Read-Eval-Print-Loop）可以快速运行 Playground 代码，实时看到编码的页面效果。<code>Swift</code> 已经是苹果的未来，也是 iOS 开发者的未来，虽然每年 Swift 从 1.0 到 5.0，有人吐槽学了5种编程语言，但是2020年，Swift 已经稳定，并且开发方向也很多了，Web、服务器、AI、IoT等方向，值得看看。</p>
 <p>另外，教育方向的 <code>可视化编程</code>、<code>少儿编程</code>，行业中图形，<code>建筑建模</code>、<code>图形化</code>等，我认为也是很大的方向，各家编程语言准备迎战吧！</p>
 <h2 id="3、总结">3、总结</h2><p>我们一开始为了避免了长时间的代码编译过程，从 <code>热加载</code> 到 <code>JIT</code> 再到 <code>VM</code>，从 <code>Flutter</code> 到 <code>React Native</code>到 <code>Java</code> 到 <code>Android</code> 到 <code>Objective-C</code> 最后到 <code>Swift</code>。大家有没有发现？我们要看到技术的相通，也要看到技术的不同，这里面不同的是什么？学习新技术成本非常高，把技术掌握透了，学习新技术会发现成本很低，很好去理解。</p>
-<p>这种文章跨度比较大，我在团队的分享时，讲很可以比较乱，信息量大，当时大家也是没有能很好的理解，所以，现在总结成文章，希望大家明白，当然，也可能有错漏的，希望大家回复，觉得不错，也给个赞，谢谢！</p>
+<p>本次文章跨度比较大，我在团队的分享时，讲很可以比较乱，信息量大，当时大家也是没有能很好的理解，所以，现在总结成文章，希望大家明白，当然，也可能有错漏的，希望大家回复，觉得不错，也给个赞，谢谢！</p>
 <p><br></p>
 <p>注：更多关于 iOS 开发和程序开发相关的内容，可以查看系列，目前还在连载中 <a href="https://ihtcboy.com/2020/02/01/2020-02-01_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/">【学习总结】iOS开发高手课 – (连载中) | iHTCboy’s blog</a>，以上，希望对你有用！</p>
 <h2 id="参考">参考</h2><ul>
@@ -565,8 +565,9 @@
 </ul>
 <p><br></p>
 <blockquote>
-<p>注：本文首发于 <a href="https://iHTCboy.com">iHTCboy’s blog</a>，如若转载，请注来源<br><br></p>
+<p>注：本文首发于 <a href="https://iHTCboy.com">iHTCboy’s blog</a>，如若转载，请注来源</p>
 </blockquote>
+<p><br></p>
 ]]></content>
     <summary type="html">
     <![CDATA[<h2 id="1、前言">1、前言</h2><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
