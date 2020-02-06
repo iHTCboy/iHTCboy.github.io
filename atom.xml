@@ -276,7 +276,7 @@
     <link href="https://iHTCboy.com/2020/01/17/2020-01-17_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE06/"/>
     <id>https://iHTCboy.com/2020/01/17/2020-01-17_iOS开发高手课06/</id>
     <published>2020-01-17T12:20:20.000Z</published>
-    <updated>2020-02-06T06:17:16.822Z</updated>
+    <updated>2020-02-06T11:06:01.047Z</updated>
     <content type="html"><![CDATA[<h2 id="1、前言">1、前言</h2><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/iOS开发高手课-06-App如何通过注入动态库的方式实现极速编译调试？.png" alt="iOS开发高手课-06-App如何通过注入动态库的方式实现极速编译调试？.png"></p>
 <a id="more"></a>
@@ -342,7 +342,7 @@
 </ul>
 <p>在 <code>Dart 2</code> 中，这些文件的 Dart 源代码被转换为 <code>内核文件</code> 并发送到移动设备的 <code>Dart VM</code>。Dart VM 重新加载新内核文件中的所有文件。到目前为止，没有重新执行代码。然后，热重载机制使 <code>Flutter</code> 框架触发所有现有的 <code>widgets</code> 和渲染对象的重建/重新布局/重绘。</p>
 <p>以上来自官方文档：<a href="https://flutter.cn/docs/development/tools/hot-reload" target="_blank" rel="external">热重载 (Hot reload) - Flutter 中文文档</a></p>
-<p>到此，我们不再深入具体的源代码讲解了，大家可以自行查看。这里主要是讲解整个流程是怎么一回事，了解 Flutter 的 <code>Hot Reload</code>（热重载）是怎么回事后，我们最后在来说说它的优缺点吧！</p>
+<p>到此，我们不再深入具体的源代码讲解了，大家可以自行查看。这里主要是讲解整个流程是怎么一回事，了解 Flutter 的 <code>Hot Reload</code>（热重载）是怎么回事后，其实 Flutter 是不是能实现<code>热更新</code>呢？答案是肯定，所以官方还在努力中。最后，我们在来说说热重载的优缺点吧！</p>
 <h4 id="不能使用_Hot_Reload_的场景">不能使用 Hot Reload 的场景</h4><ol>
 <li>代码出现编译错误的不能使用 Hot Reload</li>
 <li>代码更改会影响 APP 状态的不能使用 Hot Reload</li>
@@ -373,21 +373,82 @@
 <li><p>Java 编译流程<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/Java-Compiler.png" alt="Java-Compiler.png"></p>
 </li>
 </ul>
-<p>Java 编译的 <code>.class</code> 文件中保存的并不是<code>机器码</code>而只是<code>二进制代码</code>，需要先进行解释，<code>JIT</code> 在运行时会把翻译过的机器码保存起来，以备下次使用。 另外，新版本（Java8）的 <code>JVM</code> 默认都是采用混合执行模式，半编译（JIT，部门热区代码，经常调用循环的代码）半解释执行。 </p>
+<p>Java 编译的 <code>.class</code> 文件中保存的并不是<code>机器码</code>而只是<code>二进制代码</code>，需要先进行解释，<code>JIT</code> 在运行时会把翻译过的机器码保存起来，以备下次使用。 另外，新版本（Java8）的 <code>JVM</code> 默认都是采用混合执行模式，半编译（JIT，热点代码，经常调用循环的代码）半解释执行。 </p>
 <p>不知道大家有没有注意到2个词，<code>JRE</code>(<code>Java Runtime Environment</code>，Java 运行/执行环境)、<code>JVM</code>（<code>Java Virtual Machine</code>，Java 虚拟机），<code>JIT Compiler</code> 依赖于 <code>JVM</code> （<code>Runtime</code>）中，要实现 <code>Hot Reload</code>，所以是需要一个<code>虚拟机环境</code>。</p>
 <p>这种虚拟机和一般其他语言的运行库有一个很大不同，就是它好像一个有独立体系结构的计算机，源代码必须要编译成虚拟机独有的中间语言。 虚拟机传统的解释器，就是要在中间语言和真正的平台体系结构之间的指令做映射，比如把Java的load指令换成 native code 的load指令。具体详细的这样就不多说了，<strong>主要是想说明，要实现 <code>Hot Reload</code> 用到 <code>JIT</code> 编译器，然后需要依赖于<code>VM</code>虚拟机环境中。</strong></p>
 <h3 id="Android_VM">Android VM</h3><p>既然我们说到了虚拟机环境，那么我们顺便说一下 <code>Android</code>，因为安卓最初也是用 <code>Java</code> 来开发的，当然 Android 应用程序不是使用标准的Java字节码标准的Java虚拟机执行的，所以，这里希望通过对比学习，更加深刻的理解。</p>
 <h4 id="Android_Build_System（安卓构建系统）">Android Build System（安卓构建系统）</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/Android-Build-System.png" alt="Android-Build-System.png"></p>
-<p>整个构建过程，源代码、资源（resources）、资产（assets）、依赖关系（dependencies）编译（处理）后，封装在成一个 Android 应用程序包（APK）。这里就不深入安卓的构建 <code>JACK</code>（Java Android Compiler Kit，Java Android编译器套件） 和 <code>JILL</code>（JACK Intermediate Library Linker，JACK中间库链接器），大家自行搜索了解更多。</p>
-<h4 id="Android_Runtimes">Android Runtimes</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/Android-Runtimes-Software-Stack.png" alt="Android-Runtimes-Software-Stack.png"></p>
-<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/Android-Dalvik-and-ART-Architectures.png" alt="Android-Dalvik-and-ART-Architectures.png"></p>
-<p>ART在Android Kikat版本被引入，默认没有启用。可以通过设置-&gt;开发者选项-&gt;选择运行时-&gt;使用ART<br>缺点：安装时间长，占存储空间大</p>
-<h3 id="JIT_优缺点">JIT 优缺点</h3><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/JIT-AOT.jpeg" alt="JIT-AOT.jpeg"></p>
+<ul>
+<li>图片来源：<a href="https://theiconic.tech/android-java-fdbd55aadc51" target="_blank" rel="external">The Relationship Between Android and Java</a></li>
+</ul>
+<p>整个构建过程，源代码、资源（resources）、资产（assets）、依赖关系（dependencies）编译（处理）后，封装在成一个 Android 应用程序包（APK）。</p>
+<p>深入来说，<code>JVM</code> 是 JAVA 虚拟机，用来运行 JAVA 字节码程序。<code>Dalvik</code> 是 Google 设计的用于 Android 平台的运行时环境，适合移动环境下内存和处理器速度有限的系统。<code>ART</code> 即 <code>Android Runtime</code>（安卓运行时），是 Google 为了替换 Dalvik 设计的新 Android 运行时环境，在 Android 4.4 推出，ART 比 Dalvik 的性能更好，在 Android 5.0 及后续Android版本中， ART 作为正式的运行时库取代了以往的 Dalvik 虚拟机。Android 程序一般使用 Java 语言开发，但是 <code>Dalvik 虚拟机并不支持直接执行 JAVA 字节码</code>，所以会对编译生成的 <code>.class</code> 文件进行翻译、重构、解释、压缩等处理，这个处理过程是由 <code>dx</code> 进行处理，处理完成后生成的产物会以 <code>.dex</code> 结尾，称为 <code>Dex 文件</code>（Dalvik EXecutable），Dex 文件格式是专为 Dalvik 设计的一种压缩格式，为了保证向下兼容，ART 也使用了相同的 Dex 文件。</p>
+<p>这里说了那么多，就是为了引出 <code>Dalvik VM</code> （Dalvik 虚拟机）和 <code>ART</code>（Android Runtime，安卓运行时），所以我们就不深入安卓的构建 <code>JACK</code>（Java Android Compiler Kit，Java Android编译器套件） 和 <code>JILL</code>（JACK Intermediate Library Linker，JACK中间库链接器），大家自行搜索了解更多。</p>
+<h4 id="Android_Runtimes">Android Runtimes</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/Android-Dalvik-and-ART-Architectures.png" alt="Android-Dalvik-and-ART-Architectures.png"></p>
+<ul>
+<li>图片来源：<a href="https://medium.com/mindorks/android-runtime-improvements-e69bf7c1d10c" target="_blank" rel="external">Android Runtime Improvements</a></li>
+</ul>
+<ul>
+<li><code>Dalvik VM</code>（Dalvik 虚拟机）：采用 <code>JIT</code>技术</li>
+<li><code>ART</code>（Android Runtime，安卓运行时）：采用 <code>AOT</code> 技术，同时也改善了性能、垃圾回收（Garbage Collection）、应用程序出错以及性能分析等。</li>
+</ul>
+<p>无论是 Dalvik VM 还是 Android Runtime，它们在处理 Dex 文件（Dalvik bytecode）上的差异就是性能和存储上，其它并没有什么不同。</p>
+<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/Android-Runtimes-Software-Stack.png" alt="Android-Runtimes-Software-Stack.png"></p>
+<ul>
+<li>图片来源：<a href="https://theiconic.tech/android-java-fdbd55aadc51" target="_blank" rel="external">The Relationship Between Android and Java</a></li>
+</ul>
+<p>这里说说<code>Android Runtime</code>有趣的故事，前面说了采取 <code>Dex</code> 字节代码的应用程序部署到设备时，<code>Android Runtime</code> 将其转换为实际的硬件上运行的机器代码，<strong>并且提供了标准的Java库的实现和一些机制</strong>。2016 年初，<code>Android N</code>（7.0)把该标准库的实现从 <code>Apache Harmony</code> 改为了<code>OpenJDK</code>。为什么呢？</p>
+<p>最初 Java 是 <code>SUN Microsystems</code>公司（太阳计算机系统，简称<code>SUN</code>，太阳公司，名字来源于<code>Stanford University Network</code>（斯坦福大学网络）的缩写。）拥有，并保持开放，<code>OpenJDK</code> 是 SUN 公司为Java平台构建的Java开发环境（JDK）的开源版本，完全自由，开放源码。2010年1月27日，<code>Oracle</code>（甲骨文公司）收购 Sun 之后，Java 易主！由于 <code>Google</code> 没有得到 Sun 公司的授权，所以，这就相当于侵犯了 Oracle 的版权。甲骨文在2010年控告 Google 所开发的 Android 侵犯Java版权，并打算向Google求偿数十亿美元，在这场官司中，地方法院曾一度判决 Google 为合理使用，但上诉法院则认为 Google 的确侵犯Java版权。最终，2016年8月22日，Google 在<code>Android 7.0 Nougat</code>中，将专利的JDK替换成开源方案的<code>OpenJDK</code>，以彻底解决Java的专利问题。</p>
+<p>虽然避免未来的侵权纠纷，但是 <code>OpenJDK</code> 是源自于 Java JDK，但它的发展通常比较慢，并不具备所有最新的 Java功能，所以我们的 Android 开发被剥夺了新的语言功能，如<code>streams API</code>（流API）、<code>Lambda</code>, <code>method references</code>（方法引用）等。当然，外界相信在Google 的加持下，OpenJDK 的能力可望突飞猛进。但是，最后 Google 选择了 <code>Kotlin</code>，2017 年的 <code>Google I/O</code> 大会，Google 宣布 Kotlin 成为 Android 开发的一级语言（首选语言），可以说对 Kotlin 寄予了厚望。<code>Kotlin</code> 是一门与 Swift 类似的静态类型 JVM 语言，由 JetBrains 设计开发并开源。与 Java 相比，Kotlin 的语法更简洁、更具表达性，而且提供了更多的特性，比如，高阶函数、操作符重载、字符串模板。它与 Java 高度可互操作，可以同时用在一个项目中。了解更多可以查看这篇文章：<a href="https://www.infoq.cn/article/qt51vqATE7jf_bpw5ggJ" target="_blank" rel="external">Java失宠，谷歌宣布Kotlin现在是Android开发的首选语言-InfoQ</a>。</p>
+<p><code>Oracle</code> 对 <code>Google</code> 主要的指控：</p>
+<ol>
+<li>Google 在 Android 系统上无偿使用了 37 个 Java APIs，这侵犯了他们的专利，而在 Android 中还有 9 行代码抄袭了 Java，这侵犯了他们的版权。</li>
+<li>Android 割裂了 Java生态系统，因为Java的标准字节码文件 <code>.class</code> 文件是不能直接在Android虚拟机上运行的。 </li>
+<li>Android 通过不当使用 Java API 挤占了 <code>Java ME</code>（Java Platform Micro Edition，Java平台微版） 可能的市场。</li>
+</ol>
+<p>那 9 行代码造成抄袭的缘由，据说是因为当时谷歌的一位工程师在为 Android 项目工作的同时，又为 Sun 公司的 OpenJDK 效力，后来，该工程师直接从 OpenJDK 中复制了 9 行代码到 Android 中。所以，大家都要意识到：<code>技术无国界，公司有竞争</code>。技术的风险也是我们技术开发时需要关注的事件。</p>
+<h5 id="Dalvik_VM（Dalvik_虚拟机）">Dalvik VM（Dalvik 虚拟机）</h5><p><code>JIT</code> 最早在 Android 2.2 系统中引进到 <code>Dalvik VM</code> 虚拟机中，Dalvik 虚拟机类似于标准的Java虚拟机，但是它有一些结构上的差异。在应用程序启动时，JIT 通过进行连续的性能分析来优化程序代码的执行，在程序运行的过程中，Dalvik VM 虚拟机在不断的进行将字节码编译成机器码的工作。</p>
+<h5 id="ART（Android_Runtime，安卓运行时）">ART（Android Runtime，安卓运行时）</h5><p><code>ART</code>（Android Runtime，安卓运行时）引入了 <code>AOT</code> 这种预编译技术，在应用程序安装的过程中，ART 就已经将所有的字节码重新编译成了机器码。应用程序运行过程中无需进行实时的编译工作，只需要进行直接调用。因此，ART 极大的提高了应用程序的运行效率，同时也减少了手机的电量消耗，提高了移动设备的续航能力，在垃圾回收等机制上也有了较大的提升。</p>
+<p>与 <code>Dalvik VM</code> 区别是，代替目前在 <code>Runtime</code> 时的 <code>Interpreter</code>（解释执行编译器，一边把字节码翻译成当前硬件平台的机器码一边执行）与 <code>JIT</code>（即时编译器）。具体来说，ART 不是等到App运行的时候才去运行dex文件，而是在App安装的时候就通过 <code>AOT编译器</code> 将<code>.dex</code>文件编译为对应的<code>.oat</code>二进制文件，当用户点击App的启动图标时，ART直接加载<code>.oat</code>文件去执行。其中那个<code>.oat</code>文件就是一个<code>ELF</code>文件，是当前机器的可执行的文件。</p>
+<h5 id="ART_安装及启动App流程">ART 安装及启动App流程</h5><p>前面说过，ART 是在App安装的时候将<code>.apk</code>文件减压，并将<code>.dex</code>文件预编译为<code>.oat</code>可执行文件，当App启动的时候就不需要在 Runtime 解释执行了，但是这种方式也有它自己的缺点：</p>
+<ol>
+<li>增加了App的安装时间，这个很容易理解，因为多了一个预编译过程。</li>
+<li>增加了App所需要的安装空间，与Dalvik相比，手机上多了一份.oat文件。特别是无论一个App的某一功能是否被使用到以及被使用的频率，例如一个App的某个功能，用户几乎不会去打开，ART都将其编译为.oat文件就显得有点低效了。</li>
+</ol>
+<p>Google 的那些天才工程师既然发现了问题，那肯定就会去想办法优化的。技术的每一次进步，都是站在前面技术的肩膀上的，这一次也不例外，Google的工程师将 <code>Interpreter</code>（解释执行编译器，一边把字节码翻译成当前硬件平台的机器码一边执行），<code>JIT</code>与 <code>AOT</code> 三种技术相结合来优化这个过程。</p>
+<ol>
+<li>当你首次安装并一个App的时候，AOT不将<code>.dex</code>文件通过<code>dex2oat</code>编译为<code>.oat</code>文件，这一步减少了安装时间。系统通过<code>Interpreter</code>的方式来启动App，也就是一边把字节码翻译成当前硬件平台的机器码一边执行。</li>
+<li>当一些代码被频繁执行到时，虚拟机就将其编译成机器码，这些被频繁执行的代码有个专有名词，就是<code>hot code</code>（热点代码）。所以，当在App运行过程中探测到了<code>hot code</code>，就使用<code>JIT</code>编译。</li>
+<li>这些通过JIT编译的平台代码及编译配置文件都会被存储在缓存中，加快下次访问的速度。</li>
+<li>当设备处于空闲时间时，<code>AOT</code> 编译器就会启动，结合编译配置文件将热点代码通过<code>dex2oat</code>编译为<code>.oat</code>可执行文件。</li>
+<li>当再次运行App时，<code>ART</code>就可以直接运行<code>.oat</code>文件就可以了。</li>
+</ol>
+<p>一款App经过8轮这样的处理基本上就优化好了。Google的工程师没有止步于此，他们仍然在思考，为什么不把编译配置文件共享呢？于是按照这一思路 Google 通过 <code>Google Play</code> 对这一过程做了更高级的优化，当某一款安装了此App的设备处于空闲及WIFI联网情况下时，将其产生的编译配置文件上传到 <code>Google Play</code>上，那么其他用户的此款设备安装此App的时候，<code>Google Play</code> 就知道如何预编译这款App了，这样用户在首次安装的时候，AOT就会完成精准的预编译，那么App的启动及运行就会很流畅。但是很遗憾，原因众所周知，这个优化距离我们很遥远。（对于普通人来说是这样的，同时国内应用不做海外市场的也基本不发布到 <code>Google Play</code>。）</p>
+<p>本节内容来源：<a href="https://zhuanlan.zhihu.com/p/95626955" target="_blank" rel="external">深入理解Android虚拟机及编译系统</a></p>
+<h3 id="AOT_与_JIT_的优缺点">AOT 与 JIT 的优缺点</h3><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/JIT-AOT.jpeg" alt="JIT-AOT.jpeg"></p>
 <p>图片来源：<a href="https://twitter.com/thomaswue/status/1145603781108928513" target="_blank" rel="external">Thomas Wuerthinger - Twitter</a></p>
-<p>AOT是Ahead-of-Time的缩写，是指运行前编译，可以在安装时对二进制码进行编译，提高在运行时的执行速度<br>优势：可以提高速度（特别是启动时间）、减少内存足迹（不是JIT）和改进内存回收。</p>
-<p>从理论上来说，采用该JIT技术可以接近以前纯编译技术。</p>
-<p>JIT 的优点就不说了，自然是性能好。说说缺点，缺点其实就是，由于 JIT 本质上是一个编译器，所以它必然不是跨平台的，对于每个平台必然需要单独编写代码。当然这个因素一定程度上也导致了 JIT 开发成本高。</p>
-<h3 id="Injection_for_Xcode">Injection for Xcode</h3><h3 id="Swift">Swift</h3><h4 id="Swift_Playgrounds">Swift Playgrounds</h4><h4 id="Swift_Playgrounds_App">Swift Playgrounds App</h4><h4 id="SwiftUI">SwiftUI</h4><h3 id="触类旁通">触类旁通</h3><h2 id="3、总结">3、总结</h2><p>我们要看到技术的相通，也要看到技术的不同，这里面不同的是什么？大家不用担心，学习新技术成本非常高，把技术掌握透了，学习新技术会发现成本很低，很好去理解。</p>
+<p><code>JIT</code> 的优点就不说了，自然是性能好。缺点就是由于 JIT 本质上是一个编译器，所以它必然不是跨平台的，对于每个平台必然需要单独编写代码，当然这个因素一定程度上也导致了 JIT 开发成本高。</p>
+<p><code>AOT</code> 优点是可以提高速度（特别是启动时间）、减少内存足迹（不是JIT）和改进内存回收。缺点是在程序运行前编译会使程序安装的时间增加，将提前编译的内容保存会占用更多的空间等。</p>
+<p>最后，AOT 与 JIT 的优缺点，其实没有绝对的，比如 Java 用在服务器可能<code>JIT</code> 更好，因为它并不需要启动很快，而用在客户端<code>移动设备</code>，正好上面说的，<code>JIT</code> + <code>AOT</code> + <code>Interpreter</code>，不同情况，不同条件，答案也不相同，所以<code>没有最好的，只有最适合的技术方案！</code>！</p>
+<h3 id="Injection_for_Xcode">Injection for Xcode</h3><p>说了那么久，iOS 的同学估计久等啦！说了那么多平台，针对 Apple 平台，我们如何实现 <code>极速编译调试</code> 呢？所以，说说 <a href="https://github.com/johnno1962/InjectionIII" target="_blank" rel="external">Injection</a> 这个项目是如果实现在 <code>iOS模拟器</code> 中，不必重建或重新启动应用程序，以增量方式更新类的方法的实现<code>热重载</code>，从而为开发人员节省了大量时间。</p>
+<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/Xcode-Injection-Hot-Reload.png" alt="Xcode-Injection-Hot-Reload.png"></p>
+<p>前面我们已经说了，实现热重载的三个步骤，1. <code>文件变化</code>，2. <code>整合变化</code>，3. <code>更新变化</code>。这里其实也是一样的，<code>File Watcher</code>监听观察文件改动，然后将改动的文件编译，打包成<code>.dylib</code>动态库文件，然后就是更新这个动态库，这里充当虚拟机的是<code>Runtime</code>机制！</p>
+<p>大概的流程大家是不是懂了，具体的一些疑问：</p>
+<ul>
+<li><p><code>.dylib</code>动态库为什么可以链接到应用的？<br>大家可以在回看上一章的链接器内容 <a href="https://ihtcboy.com/2020/01/10/2020-01-10_iOS开发高手课05/">链接器：符号是怎么绑定到地址上的？</a>，动态库是可以在应用运行中，动态加载的，那用什么方法动态加载呢？运行时可以使用<code>dlopen</code>或者<code>Bundle(path: &quot;**.bundle&quot;).load()</code>加载动态库。</p>
+</li>
+<li><p>链接后的新代码，是怎么被执行的？<br>把修改后的代码注入了我们的App后，然后通过 OC <code>Runtime</code> 的 <code>class_replaceMethod</code> 把整个类的实现方法都替换，然后再调<code>SwiftInjected.injected</code> 我们的类收到消息，开始重绘UI。这里需要注意了，你修改的代码可以没有更新，因为刚才说的我们的类收到消息，但是可能替换的方法，但是界面的生命周期需要重新刷新，更新才会变化。所以，<code>Swift</code> 可以用 <code>@objc func injected()</code>，<code>Objetive-C</code> 用 <code>- (void)injected</code> 方法，在需要刷新页面或元素时用这方法来主动调用更新 UI。具体示例：</p>
+</li>
+</ul>
+<p>Swift:<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">extension</span> <span class="title">UIViewController</span> </span>&#123;</span><br><span class="line">    <span class="preprocessor">@objc</span> <span class="func"><span class="keyword">func</span> <span class="title">injected</span><span class="params">()</span></span> &#123;</span><br><span class="line">        viewDidLoad()</span><br><span class="line">        viewWillAppear(<span class="literal">true</span>)</span><br><span class="line">        viewDidAppear(<span class="literal">true</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Objetive-C:<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- (void)injected &#123;&#10;    [self viewDidLoad];&#10;    [self viewWillAppear:YES];&#10;    [self viewWillDisappear:YES];&#10;&#125;</span><br></pre></td></tr></table></figure></p>
+<p>具体详细的原理，大家可以查看这篇文章：<a href="https://mp.weixin.qq.com/s/hFnHdOP6pmIwzZck-zXE8g" target="_blank" rel="external">Injection：iOS热重载背后的黑魔法</a>。</p>
+<h3 id="Swift">Swift</h3><h4 id="Swift_Playgrounds">Swift Playgrounds</h4><ul>
+<li>Everyone Can Code</li>
+</ul>
+<p>课堂指导文档PDF下载：<a href="https://www.apple.com/education/docs/everyone-can-code-curriculum-guide.pdf" target="_blank" rel="external">https://www.apple.com/education/docs/everyone-can-code-curriculum-guide.pdf</a></p>
+<p>在线编程：<a href="http://online.swiftplayground.run/" target="_blank" rel="external">Online Swift Playground</a></p>
+<h4 id="Swift_Playgrounds_App">Swift Playgrounds App</h4><h4 id="SwiftUI">SwiftUI</h4><h3 id="触类旁通">触类旁通</h3><h2 id="3、总结">3、总结</h2><p>我们要看到技术的相通，也要看到技术的不同，这里面不同的是什么？大家不用担心，学习新技术成本非常高，把技术掌握透了，学习新技术会发现成本很低，很好去理解。</p>
 <p>避免了长时间的代码编译过程</p>
 <p><br></p>
 <p>注：更多关于 iOS 开发和程序开发相关的内容，可以查看系列，目前还在连载中 <a href="https://ihtcboy.com/2020/02/01/2020-02-01_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/">【学习总结】iOS开发高手课 – (连载中) | iHTCboy’s blog</a>，以上，希望对你有用！</p>
@@ -403,13 +464,14 @@
 <li><a href="https://blog.csdn.net/Hello_Hwc/article/details/53966889" target="_blank" rel="external">Swift Playground精讲_Leo的专栏-CSDN博客</a></li>
 <li><a href="https://www.apple.com/education/teaching-code/" target="_blank" rel="external">Education - Teaching Code - Apple</a></li>
 <li><a href="https://www.apple.com.cn/cn/newsroom/2016/06/13Swift-Playgrounds-App-Makes-Learning-to-Code-Easy-Fun/" target="_blank" rel="external">Swift Playgrounds App 让编码学习变得轻松有趣 - Apple (中国)</a></li>
+<li><a href="https://github.com/uraimo/Awesome-Swift-Playgrounds" target="_blank" rel="external">uraimo/Awesome-Swift-Playgrounds: A List of Awesome Swift Playgrounds</a></li>
 <li><a href="https://www.apple.com.cn/cn/everyone-can-code/#developer-video" target="_blank" rel="external">人人能编程 - Apple (中国)</a></li>
-<li><a href="https://zh.wikipedia.org/wiki/%E8%AF%BB%E5%8F%96%EF%B9%A3%E6%B1%82%E5%80%BC%EF%B9%A3%E8%BE%93%E5%87%BA%E5%BE%AA%E7%8E%AF" target="_blank" rel="external">读取﹣求值﹣输出循环 - 维基百科，自由的百科全书</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E8%AF%BB%E5%8F%96%EF%B9%A3%E6%B1%82%E5%80%BC%EF%B9%A3%E8%BE%93%E5%87%BA%E5%BE%AA%E7%8E%AF" target="_blank" rel="external">读取﹣求值﹣输出循环 - 维基百科</a></li>
 <li><a href="https://www.infoq.cn/article/u01Zu6ywe9xON648fq9G" target="_blank" rel="external">可视化编程是否真的没有未来？程序员：它有“七宗罪”-InfoQ</a></li>
 <li><a href="https://www.zhihu.com/question/25536695" target="_blank" rel="external">谁能用通俗的语言解释一下什么是 RPC 框架？ - 知乎</a></li>
 <li><a href="https://github.com/ninja-build/ninja" target="_blank" rel="external">ninja-build/ninja: a small build system with a focus on speed</a></li>
 <li><a href="https://www.cnblogs.com/fuland/p/3641317.html" target="_blank" rel="external">Ninja介绍 - 腐烂的翅膀 - 博客园</a></li>
-<li><a href="https://zh.wikipedia.org/wiki/Ninja_(%E6%9E%84%E5%BB%BA%E7%B3%BB%E7%BB%9F" target="_blank" rel="external">Ninja (构建系统) - 维基百科，自由的百科全书</a>)</li>
+<li><a href="https://zh.wikipedia.org/wiki/Ninja_(%E6%9E%84%E5%BB%BA%E7%B3%BB%E7%BB%9F" target="_blank" rel="external">Ninja (构建系统) - 维基百科</a>)</li>
 <li><a href="https://note.qidong.name/2017/08/android-ninja/" target="_blank" rel="external">Android中的Ninja简介 · 零壹軒·笔记</a></li>
 <li><a href="https://zhuanlan.zhihu.com/p/66947922" target="_blank" rel="external">简化构建系统 - 知乎</a></li>
 <li><a href="https://www.jianshu.com/p/31bf731fec22" target="_blank" rel="external">C++构建系统的选择 - 简书</a></li>
@@ -417,7 +479,7 @@
 <li><a href="https://stackoverflow.com/questions/95635/what-does-a-just-in-time-jit-compiler-do" target="_blank" rel="external">compilation - What does a just-in-time (JIT) compiler do? - Stack Overflow</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Just-in-time_compilation" target="_blank" rel="external">Just-in-time compilation - Wikipedia</a></li>
 <li><a href="https://www.zhihu.com/question/21093419" target="_blank" rel="external">如何通俗易懂地介绍「即时编译」（JIT），它的优点和缺点是什么？ - 知乎</a></li>
-<li><a href="https://zh.wikipedia.org/wiki/%E5%8D%B3%E6%99%82%E7%B7%A8%E8%AD%AF" target="_blank" rel="external">即时编译 - 维基百科，自由的百科全书</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E5%8D%B3%E6%99%82%E7%B7%A8%E8%AD%AF" target="_blank" rel="external">即时编译 - 维基百科</a></li>
 <li><a href="https://blog.csdn.net/h1130189083/article/details/78302502" target="_blank" rel="external">AOT,JIT区别，各自优劣，混合编译_Keisu的博客-CSDN博客</a></li>
 <li><a href="https://zhuanlan.zhihu.com/p/53723652" target="_blank" rel="external">说一说Android的Dalvik，ART与JIT，AOT - 知乎</a></li>
 <li><a href="https://www.zhihu.com/question/23874627" target="_blank" rel="external">对比JIT和AOT，各自有什么优点与缺点? - 知乎</a></li>
@@ -429,6 +491,11 @@
 <li><a href="https://theiconic.tech/android-java-fdbd55aadc51" target="_blank" rel="external">The Relationship Between Android and Java - THE ICONIC Tech</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Android_Runtime" target="_blank" rel="external">Android Runtime - Wikipedia</a></li>
 <li><a href="https://medium.com/mindorks/android-runtime-improvements-e69bf7c1d10c" target="_blank" rel="external">Android Runtime Improvements - MindOrks - Medium</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/Android_Runtime" target="_blank" rel="external">Android Runtime - 维基百科</a></li>
+<li><a href="https://juejin.im/post/5bf22bb5e51d454cdc56cbd5" target="_blank" rel="external">浅谈 Android Dex 文件 - 掘金</a></li>
+<li><a href="https://www.infoq.cn/article/qt51vqATE7jf_bpw5ggJ" target="_blank" rel="external">Java失宠，谷歌宣布Kotlin现在是Android开发的首选语言-InfoQ</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/Java" target="_blank" rel="external">Java - 维基百科</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/OpenJDK#cite_note-12" target="_blank" rel="external">OpenJDK - 维基百科</a></li>
 </ul>
 <p><strong>Flutter</strong></p>
 <ul>
@@ -805,7 +872,7 @@
     <link href="https://iHTCboy.com/2020/01/03/2020-01-03_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE04/"/>
     <id>https://iHTCboy.com/2020/01/03/2020-01-03_iOS开发高手课04/</id>
     <published>2020-01-03T12:20:20.000Z</published>
-    <updated>2020-02-05T12:44:14.639Z</updated>
+    <updated>2020-02-06T09:56:21.647Z</updated>
     <content type="html"><![CDATA[<h2 id="1、前言">1、前言</h2><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/iOS开发高手课-04-项目大了人员多了，架构怎么设计更合理？.png" alt="iOS开发高手课-04-项目大了人员多了，架构怎么设计更合理？.png"></p>
 <a id="more"></a>
@@ -1052,6 +1119,7 @@
 <li><a href="https://www.infoq.cn/article/zKbhME-UHABRqdTodLwF" target="_blank" rel="external">面向对象编程的兴衰-InfoQ</a></li>
 <li><a href="https://www.cnblogs.com/nickchen121/p/10981462.html" target="_blank" rel="external">面向对象程序设计的由来(了解) - 二十一岁的有德 - 博客园</a></li>
 <li><a href="https://zh.wikipedia.org/zh-cn/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80%E6%AD%B7%E5%8F%B2" target="_blank" rel="external">编程语言历史 - 维基百科，自由的百科全书</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/58092071" target="_blank" rel="external">面向对象设计之魂的六大原则 - 知乎</a></li>
 </ul>
 <p><br></p>
 <ul>
