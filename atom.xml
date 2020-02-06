@@ -276,7 +276,7 @@
     <link href="https://iHTCboy.com/2020/01/17/2020-01-17_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE06/"/>
     <id>https://iHTCboy.com/2020/01/17/2020-01-17_iOS开发高手课06/</id>
     <published>2020-01-17T12:20:20.000Z</published>
-    <updated>2020-02-06T01:47:45.834Z</updated>
+    <updated>2020-02-06T06:17:16.822Z</updated>
     <content type="html"><![CDATA[<h2 id="1、前言">1、前言</h2><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/iOS开发高手课-06-App如何通过注入动态库的方式实现极速编译调试？.png" alt="iOS开发高手课-06-App如何通过注入动态库的方式实现极速编译调试？.png"></p>
 <a id="more"></a>
@@ -284,15 +284,15 @@
 <p>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程 <a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a> </p>
 </blockquote>
 <p>本章是上一节<code>编译器</code>、<code>链接器</code> 内容的扩展延伸内容 —– <code>动态链接器</code>，所以，如果没有看过上一篇文章的同学，建议先看看：<a href="https://ihtcboy.com/2020/01/10/2020-01-10_iOS开发高手课05/">【学习总结】05 | 链接器：符号是怎么绑定到地址上的？ | iHTCboy’s blog</a>。</p>
-<p>本章也是沿用之前的风格套路，在讲解 iOS 的<code>动态链接器</code> 的作用之前，我们先看看软件开发中都有那么经典的例子？如何实现极速编译调试，当然要看看2019年最火的 <code>Flutter</code> ！所以，我们先来说说 Flutter 是如何 <code>Hot Reload</code>（热重载）吧！</p>
-<h3 id="Flutter">Flutter</h3><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Flutter-Hot-Reload.gif" alt="Flutter-Hot-Reload.gif"></p>
+<p>本章也是沿用之前的风格套路，在讲解 iOS 的<code>动态链接器</code> 如何实现<code>极速编译调试</code> 作用之前，我们先看看软件开发中都有那么经典的例子？如何实现极速编译调试，当然首先要看看 2019年最火的 <code>Flutter</code> 啊！所以，我们先来说说 Flutter 是如何 <code>Hot Reload</code>（热重载）吧！</p>
+<h3 id="Flutter">Flutter</h3><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/Flutter-Hot-Reload.gif" alt="Flutter-Hot-Reload.gif"></p>
 <p>如图所示，Flutter 的 <code>热重载</code>(<code>Hot reload</code>)功能可以帮助您在无需重新启动应用的情况下快速、轻松地进行测试、构建用户界面、添加功能以及修复错误。 </p>
 <p>我们本节主要是讲解 Flutter 热重载(Hot reload)，不会讲解 Flutter 其它知识和原理，了解更多可以参考末文扩展学习或自行搜索。</p>
 <h4 id="JIT_&amp;_AOT">JIT &amp; AOT</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/Flutter-高性能方案原理.png" alt="Flutter-高性能方案原理.png"></p>
 <p>Flutter 有两套编译器，JIT，AOT：</p>
 <ul>
-<li>JIT（Just In Time，即时编译）</li>
-<li>AOT（Ahead Of Time，运行前编译）</li>
+<li><code>JIT</code>（Just In Time，即时编译）：动态(即时)编译，程序边运行边编译。</li>
+<li><code>AOT</code>（Ahead Of Time，运行前编译）：指在程序运行前编译。</li>
 </ul>
 <p>Flutter <code>Dart</code> 有 <code>AOT</code> 和 <code>JIT</code> 两种模式，线上使用时以 AOT 的方式编译成机器代码，保证了线上运行时的效率；而在开发期，Dart 代码可以以 JIT 的方式运行，支持代码的即时生效 <code>热重载</code>（Hot Reload)，提高开发效率。</p>
 <p>至此，我们明白了，Flutter 是通过 <code>JIT</code> 方式实现 <code>Hot Reload</code>（热重载）的！那么，我们接下来，我们就是知道 Flutter 是如何编译代码的，这样才能更加理解 <code>JIT</code>.</p>
@@ -328,19 +328,19 @@
 <li><strong>App.framework</strong>：不同于<code>AOT</code>模式下的 App.framework 是Dart代码对应的机器代码，<code>JIT</code>模式下，App.framework只有几个简单的API，其Dart代码存在于<code>snapshot_blob.bin</code>文件里（<strong>Android</strong>的位于<code>flutterassets</code>下的<code>snapshotblob.bin</code>，其它同<strong>iOS</strong><code>）。这部分的snapshot是脚本快照，里面是简单的标记化的源代码。所有的注释，空白字符都被移除，常量也被规范化，没有机器码、</code>tree shaking`或混淆。</li>
 </ol>
 <h4 id="Hot_Reload（热重载）">Hot Reload（热重载）</h4><p>好的，有了上面的基础和概念知识，现在我们开始说说 Flutter 的 <code>Hot Reload</code>（热重载）吧！</p>
-<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/Flutter-Hot-Reload-执行流程.jpg" alt="Flutter-Hot-Reload-执行流程.jpg"></p>
+<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/Flutter-Hot-Reload-执行流程.jpeg" alt="Flutter-Hot-Reload-执行流程.jpeg"></p>
 <p>Flutter的热重载是基于<code>State</code>的，也就是我们在代码中经常出现的<code>setState</code>方法，通过这个来修改后，会执行相应的<code>build</code>方法，这就是热重载的基本过程。</p>
 <p>Flutter的<code>Hot Reload</code>的实现源码在下面路径中，在此路径中包含<code>run_cold.dart</code>和<code>run_hot.dart</code>两个文件，前者负责<code>冷启动</code>，后者负责<code>热重载</code>。</p>
 <figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~/flutter/packages/flutter_tools/lib/src/run_hot.dart</span><br></pre></td></tr></table></figure>
 <p><strong>上图的流程</strong>：当按下R后，Flutter 会扫描修改的文件，并将文件修改前后进行对比，随后会将被改动的代码生成一个<code>kernel files</code>文件。随后会通过<code>HTTP Server</code>将生成的<code>kernel files</code>文件发送给<code>Dart VM</code>虚拟机，虚拟机拿到 kernel文件后会调用<code>_reloadSources</code>函数进行资源重载，将 kernel文件注入正在运行的<code>Dart VM</code>中。当资源重载完成后，会调用<code>RPC</code>接口触发<code>Widgets tree</code>的重建、重绘。</p>
-<p>本节以上内容来自：<a href="https://www.jianshu.com/p/1a90adc09e99" target="_blank" rel="external">移动端开发新趋势Flutter - 简书</a></p>
+<p>本节以上内容主要来自：<a href="https://www.jianshu.com/p/1a90adc09e99" target="_blank" rel="external">移动端开发新趋势Flutter - 简书</a></p>
 <p>调用热重载时，主机会查看自上次编译以来编辑的代码。重新编译以下文件：</p>
 <ul>
 <li>任何有代码更改的文件；</li>
 <li>应用程序的主入口文件。</li>
 <li>受主入口文件影响的文件。</li>
 </ul>
-<p>在 <code>Dart 2</code> 中，这些文件的 Dart 源代码被转换为 内核文件 并发送到移动设备的 <code>Dart VM</code>。Dart VM 重新加载新内核文件中的所有文件。到目前为止，没有重新执行代码。然后，热重载机制使 Flutter 框架触发所有现有的 widgets 和渲染对象的重建/重新布局/重绘。</p>
+<p>在 <code>Dart 2</code> 中，这些文件的 Dart 源代码被转换为 <code>内核文件</code> 并发送到移动设备的 <code>Dart VM</code>。Dart VM 重新加载新内核文件中的所有文件。到目前为止，没有重新执行代码。然后，热重载机制使 <code>Flutter</code> 框架触发所有现有的 <code>widgets</code> 和渲染对象的重建/重新布局/重绘。</p>
 <p>以上来自官方文档：<a href="https://flutter.cn/docs/development/tools/hot-reload" target="_blank" rel="external">热重载 (Hot reload) - Flutter 中文文档</a></p>
 <p>到此，我们不再深入具体的源代码讲解了，大家可以自行查看。这里主要是讲解整个流程是怎么一回事，了解 Flutter 的 <code>Hot Reload</code>（热重载）是怎么回事后，我们最后在来说说它的优缺点吧！</p>
 <h4 id="不能使用_Hot_Reload_的场景">不能使用 Hot Reload 的场景</h4><ol>
@@ -351,10 +351,44 @@
 <li>枚举类型更改为常规的类或者常规的类变为枚举类型也不能使用 HotReload</li>
 <li>修改通用类型声明也不能使用 HotReload</li>
 </ol>
-<p>详细可以查看官方文档：<a href="https://flutter.cn/docs/development/tools/hot-reload" target="_blank" rel="external">热重载 (Hot reload) - Flutter 中文文档</a></p>
+<p>详细可查看官方文档：<a href="https://flutter.cn/docs/development/tools/hot-reload" target="_blank" rel="external">热重载 (Hot reload) - Flutter 中文文档</a></p>
 <h3 id="React_Native">React Native</h3><p>同样的，<code>React Native</code> 也有热加载（Hot Reload）！</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/React-Native-Hot-Reload-hmr-architecture.png" alt="React-Native-Hot-Reload-hmr-architecture.png"></p>
-<h3 id="JIT_&amp;_AOT-1">JIT &amp; AOT</h3><h3 id="Injection_for_Xcode">Injection for Xcode</h3><h3 id="Swift">Swift</h3><h4 id="Swift_Playgrounds">Swift Playgrounds</h4><h4 id="Swift_Playgrounds_App">Swift Playgrounds App</h4><h4 id="SwiftUI">SwiftUI</h4><h3 id="触类旁通">触类旁通</h3><h2 id="3、总结">3、总结</h2><p>我们要看到技术的相通，也要看到技术的不同，这里面不同的是什么？大家不用担心，学习新技术成本非常高，把技术掌握透了，学习新技术会发现成本很低，很好去理解。</p>
+<blockquote>
+<p>热加载的基础是模块热替换（HMR，Hot Module Replacement[3]），HMR 最开始是由 Webpack 引入的，我们在 React Native Packager 中也实现了这个功能。HMR 使得 Packager 可以监控文件的改动并发送 HMR 更新消息（HMR update）给包含在 APP 中的一层很薄的 HMR 运行时（HMR runtime）。</p>
+<p>简而言之，HMR 更新消息包含 JS 模块中发生变化的代码，当 HMR 运行时接收到这个消息，就使用新的代码替换旧的代码.</p>
+</blockquote>
+<p>以上内容来源：<a href="https://facebook.github.io/react-native/blog/2016/03/24/introducing-hot-reloading.html" target="_blank" rel="external">Introducing Hot Reloading · React Native</a>，中文译文：<a href="https://www.jianshu.com/p/1fa6e9c0799f" target="_blank" rel="external">React Native 热加载（Hot Reload）原理简介 - 简书</a>。</p>
+<p>从这里流程图，大家是不是发现与 Flutter 的流程是一致的，就是具体的技术的实现因平台不同而针对的格式和内容处理。实现<code>热重载</code>（Hot Reload）主流程：</p>
+<ol>
+<li><code>文件变化</code>：主流程就是<code>监听文件变化</code>，主要是源代码的内容修改。（至于怎么监听，监听那些，怎么做，大家自行研究啦，这里不细说。）</li>
+<li><code>整合变化</code>：然后把变更的内容打包成<code>框架文件</code>，当然语言和环境不同，文件形式就有差异，这里不详细分析。</li>
+<li><code>更新变化</code>：最后通过 <code>VM</code>（可以统一理解为虚拟机或Runtime（运行时））进行解析和更新。</li>
+</ol>
+<p>通过 <code>Flutter</code> 和 <code>React Native</code>的 <code>Hot Reload</code> 流程对比学习后，大家是否已经理解这样的<code>热重载</code>流程了呢？如果此时，在来一个平台的热重载功能，你是不是也能猜到大致的流程原理呢？</p>
+<h3 id="JVM（Java_Virtual_Machine，Java虚拟机）">JVM（Java Virtual Machine，Java虚拟机）</h3><p>回过头来，我们在说说 <code>JIT</code>，因为，我们本文最终的目的是探究 <code>iOS能否极速编译？</code>的问题，前面所有说到的都是其它平台是如何实现的，所以，JIT 技术其实是 <code>JIT Compiler</code>（即时编译器），是一个<code>编译器</code>。我们需要在深入一点，以 <code>Java</code> 为例，因为它使用 JIT 编译器进行动态编译已经十几年了!</p>
+<ul>
+<li><p>Java 平台<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/Jave-Platform.jpg" alt="Jave-Platform.jpg"></p>
+</li>
+<li><p>Java 编译流程<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/Java-Compiler.png" alt="Java-Compiler.png"></p>
+</li>
+</ul>
+<p>Java 编译的 <code>.class</code> 文件中保存的并不是<code>机器码</code>而只是<code>二进制代码</code>，需要先进行解释，<code>JIT</code> 在运行时会把翻译过的机器码保存起来，以备下次使用。 另外，新版本（Java8）的 <code>JVM</code> 默认都是采用混合执行模式，半编译（JIT，部门热区代码，经常调用循环的代码）半解释执行。 </p>
+<p>不知道大家有没有注意到2个词，<code>JRE</code>(<code>Java Runtime Environment</code>，Java 运行/执行环境)、<code>JVM</code>（<code>Java Virtual Machine</code>，Java 虚拟机），<code>JIT Compiler</code> 依赖于 <code>JVM</code> （<code>Runtime</code>）中，要实现 <code>Hot Reload</code>，所以是需要一个<code>虚拟机环境</code>。</p>
+<p>这种虚拟机和一般其他语言的运行库有一个很大不同，就是它好像一个有独立体系结构的计算机，源代码必须要编译成虚拟机独有的中间语言。 虚拟机传统的解释器，就是要在中间语言和真正的平台体系结构之间的指令做映射，比如把Java的load指令换成 native code 的load指令。具体详细的这样就不多说了，<strong>主要是想说明，要实现 <code>Hot Reload</code> 用到 <code>JIT</code> 编译器，然后需要依赖于<code>VM</code>虚拟机环境中。</strong></p>
+<h3 id="Android_VM">Android VM</h3><p>既然我们说到了虚拟机环境，那么我们顺便说一下 <code>Android</code>，因为安卓最初也是用 <code>Java</code> 来开发的，当然 Android 应用程序不是使用标准的Java字节码标准的Java虚拟机执行的，所以，这里希望通过对比学习，更加深刻的理解。</p>
+<h4 id="Android_Build_System（安卓构建系统）">Android Build System（安卓构建系统）</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/Android-Build-System.png" alt="Android-Build-System.png"></p>
+<p>整个构建过程，源代码、资源（resources）、资产（assets）、依赖关系（dependencies）编译（处理）后，封装在成一个 Android 应用程序包（APK）。这里就不深入安卓的构建 <code>JACK</code>（Java Android Compiler Kit，Java Android编译器套件） 和 <code>JILL</code>（JACK Intermediate Library Linker，JACK中间库链接器），大家自行搜索了解更多。</p>
+<h4 id="Android_Runtimes">Android Runtimes</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/Android-Runtimes-Software-Stack.png" alt="Android-Runtimes-Software-Stack.png"></p>
+<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/Android-Dalvik-and-ART-Architectures.png" alt="Android-Dalvik-and-ART-Architectures.png"></p>
+<p>ART在Android Kikat版本被引入，默认没有启用。可以通过设置-&gt;开发者选项-&gt;选择运行时-&gt;使用ART<br>缺点：安装时间长，占存储空间大</p>
+<h3 id="JIT_优缺点">JIT 优缺点</h3><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/JIT-AOT.jpeg" alt="JIT-AOT.jpeg"></p>
+<p>图片来源：<a href="https://twitter.com/thomaswue/status/1145603781108928513" target="_blank" rel="external">Thomas Wuerthinger - Twitter</a></p>
+<p>AOT是Ahead-of-Time的缩写，是指运行前编译，可以在安装时对二进制码进行编译，提高在运行时的执行速度<br>优势：可以提高速度（特别是启动时间）、减少内存足迹（不是JIT）和改进内存回收。</p>
+<p>从理论上来说，采用该JIT技术可以接近以前纯编译技术。</p>
+<p>JIT 的优点就不说了，自然是性能好。说说缺点，缺点其实就是，由于 JIT 本质上是一个编译器，所以它必然不是跨平台的，对于每个平台必然需要单独编写代码。当然这个因素一定程度上也导致了 JIT 开发成本高。</p>
+<h3 id="Injection_for_Xcode">Injection for Xcode</h3><h3 id="Swift">Swift</h3><h4 id="Swift_Playgrounds">Swift Playgrounds</h4><h4 id="Swift_Playgrounds_App">Swift Playgrounds App</h4><h4 id="SwiftUI">SwiftUI</h4><h3 id="触类旁通">触类旁通</h3><h2 id="3、总结">3、总结</h2><p>我们要看到技术的相通，也要看到技术的不同，这里面不同的是什么？大家不用担心，学习新技术成本非常高，把技术掌握透了，学习新技术会发现成本很低，很好去理解。</p>
+<p>避免了长时间的代码编译过程</p>
 <p><br></p>
 <p>注：更多关于 iOS 开发和程序开发相关的内容，可以查看系列，目前还在连载中 <a href="https://ihtcboy.com/2020/02/01/2020-02-01_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/">【学习总结】iOS开发高手课 – (连载中) | iHTCboy’s blog</a>，以上，希望对你有用！</p>
 <h2 id="参考">参考</h2><ul>
@@ -365,7 +399,6 @@
 <li><a href="https://facebook.github.io/react-native/blog/2016/03/24/introducing-hot-reloading.html" target="_blank" rel="external">Introducing Hot Reloading · React Native</a></li>
 <li><a href="https://www.jianshu.com/p/1fa6e9c0799f" target="_blank" rel="external">React Native 热加载（Hot Reload）原理简介 - 简书</a></li>
 <li><a href="https://www.jianshu.com/p/1a90adc09e99" target="_blank" rel="external">移动端开发新趋势Flutter - 简书</a></li>
-<li><a href="https://www.zhihu.com/question/21093419" target="_blank" rel="external">如何通俗易懂地介绍「即时编译」（JIT），它的优点和缺点是什么？ - 知乎</a></li>
 <li><a href="https://developer.apple.com/videos/play/wwdc2016/408/" target="_blank" rel="external">Introducing Swift Playgrounds - WWDC 2016 - Videos - Apple Developer</a></li>
 <li><a href="https://blog.csdn.net/Hello_Hwc/article/details/53966889" target="_blank" rel="external">Swift Playground精讲_Leo的专栏-CSDN博客</a></li>
 <li><a href="https://www.apple.com/education/teaching-code/" target="_blank" rel="external">Education - Teaching Code - Apple</a></li>
@@ -373,6 +406,7 @@
 <li><a href="https://www.apple.com.cn/cn/everyone-can-code/#developer-video" target="_blank" rel="external">人人能编程 - Apple (中国)</a></li>
 <li><a href="https://zh.wikipedia.org/wiki/%E8%AF%BB%E5%8F%96%EF%B9%A3%E6%B1%82%E5%80%BC%EF%B9%A3%E8%BE%93%E5%87%BA%E5%BE%AA%E7%8E%AF" target="_blank" rel="external">读取﹣求值﹣输出循环 - 维基百科，自由的百科全书</a></li>
 <li><a href="https://www.infoq.cn/article/u01Zu6ywe9xON648fq9G" target="_blank" rel="external">可视化编程是否真的没有未来？程序员：它有“七宗罪”-InfoQ</a></li>
+<li><a href="https://www.zhihu.com/question/25536695" target="_blank" rel="external">谁能用通俗的语言解释一下什么是 RPC 框架？ - 知乎</a></li>
 <li><a href="https://github.com/ninja-build/ninja" target="_blank" rel="external">ninja-build/ninja: a small build system with a focus on speed</a></li>
 <li><a href="https://www.cnblogs.com/fuland/p/3641317.html" target="_blank" rel="external">Ninja介绍 - 腐烂的翅膀 - 博客园</a></li>
 <li><a href="https://zh.wikipedia.org/wiki/Ninja_(%E6%9E%84%E5%BB%BA%E7%B3%BB%E7%BB%9F" target="_blank" rel="external">Ninja (构建系统) - 维基百科，自由的百科全书</a>)</li>
@@ -380,12 +414,21 @@
 <li><a href="https://zhuanlan.zhihu.com/p/66947922" target="_blank" rel="external">简化构建系统 - 知乎</a></li>
 <li><a href="https://www.jianshu.com/p/31bf731fec22" target="_blank" rel="external">C++构建系统的选择 - 简书</a></li>
 <li><a href="https://apps.apple.com/cn/app/injectioniii/id1380446739?mt=12" target="_blank" rel="external">‎Mac App Store 上的“InjectionIII”</a></li>
+<li><a href="https://stackoverflow.com/questions/95635/what-does-a-just-in-time-jit-compiler-do" target="_blank" rel="external">compilation - What does a just-in-time (JIT) compiler do? - Stack Overflow</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Just-in-time_compilation" target="_blank" rel="external">Just-in-time compilation - Wikipedia</a></li>
+<li><a href="https://www.zhihu.com/question/21093419" target="_blank" rel="external">如何通俗易懂地介绍「即时编译」（JIT），它的优点和缺点是什么？ - 知乎</a></li>
 <li><a href="https://zh.wikipedia.org/wiki/%E5%8D%B3%E6%99%82%E7%B7%A8%E8%AD%AF" target="_blank" rel="external">即时编译 - 维基百科，自由的百科全书</a></li>
 <li><a href="https://blog.csdn.net/h1130189083/article/details/78302502" target="_blank" rel="external">AOT,JIT区别，各自优劣，混合编译_Keisu的博客-CSDN博客</a></li>
 <li><a href="https://zhuanlan.zhihu.com/p/53723652" target="_blank" rel="external">说一说Android的Dalvik，ART与JIT，AOT - 知乎</a></li>
 <li><a href="https://www.zhihu.com/question/23874627" target="_blank" rel="external">对比JIT和AOT，各自有什么优点与缺点? - 知乎</a></li>
 <li><a href="https://zhuanlan.zhihu.com/p/95626955" target="_blank" rel="external">深入理解Android虚拟机及编译系统 - 知乎</a></li>
 <li><a href="https://android.jlelse.eu/android-internals-art-vs-dvm-deep-dive-def34cf664d7" target="_blank" rel="external">Android Internals: ART vs DVM deep dive - AndroidPub</a></li>
+<li><a href="https://blog.csdn.net/wanglikun7342/article/details/78819387" target="_blank" rel="external">JIT和AOT编译技术_糕冷羊的博客-CSDN博客</a></li>
+<li><a href="https://blog.csdn.net/qq_36791569/article/details/80269482" target="_blank" rel="external">传统JIT和java9新特性AOT理解_五彩世界的博客-CSDN博客</a></li>
+<li><a href="https://titanwolf.org/Network/Article/Java%20Basics%20tutorial%20%20-%20169%3A%20Just%20in%20Time%20%28JIT%29%20compiler" target="_blank" rel="external">Java Basics tutorial - 169: Just in Time (JIT) compiler(Java Developer-Community)</a></li>
+<li><a href="https://theiconic.tech/android-java-fdbd55aadc51" target="_blank" rel="external">The Relationship Between Android and Java - THE ICONIC Tech</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Android_Runtime" target="_blank" rel="external">Android Runtime - Wikipedia</a></li>
+<li><a href="https://medium.com/mindorks/android-runtime-improvements-e69bf7c1d10c" target="_blank" rel="external">Android Runtime Improvements - MindOrks - Medium</a></li>
 </ul>
 <p><strong>Flutter</strong></p>
 <ul>
@@ -439,7 +482,13 @@
     
       <category term="iOS开发高手课" scheme="https://iHTCboy.com/tags/iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/"/>
     
+      <category term="动态链接器" scheme="https://iHTCboy.com/tags/%E5%8A%A8%E6%80%81%E9%93%BE%E6%8E%A5%E5%99%A8/"/>
+    
       <category term="学习总结" scheme="https://iHTCboy.com/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
+    
+      <category term="热加载" scheme="https://iHTCboy.com/tags/%E7%83%AD%E5%8A%A0%E8%BD%BD/"/>
+    
+      <category term="热重载" scheme="https://iHTCboy.com/tags/%E7%83%AD%E9%87%8D%E8%BD%BD/"/>
     
       <category term="technology" scheme="https://iHTCboy.com/categories/technology/"/>
     
