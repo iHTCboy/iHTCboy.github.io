@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Learn something of everything,  Learn everything of something.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="https://iHTCboy.com/"/>
-  <updated>2020-02-03T23:35:24.435Z</updated>
+  <updated>2020-02-07T02:56:23.497Z</updated>
   <id>https://iHTCboy.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="https://iHTCboy.com/2020/02/02/2020-02-02_%E5%BB%BA%E7%AB%8B%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/"/>
     <id>https://iHTCboy.com/2020/02/02/2020-02-02_建立你自己的开发知识体系/</id>
     <published>2020-02-02T12:20:20.000Z</published>
-    <updated>2020-02-03T23:35:24.435Z</updated>
+    <updated>2020-02-07T02:56:23.497Z</updated>
     <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/建立你自己的开发知识体系.png" alt="建立你自己的开发知识体系.png"></p>
 <a id="more"></a>
@@ -147,7 +147,13 @@
     
       <category term="学习总结" scheme="https://iHTCboy.com/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
     
+      <category term="学习模型" scheme="https://iHTCboy.com/tags/%E5%AD%A6%E4%B9%A0%E6%A8%A1%E5%9E%8B/"/>
+    
+      <category term="开发技巧" scheme="https://iHTCboy.com/tags/%E5%BC%80%E5%8F%91%E6%8A%80%E5%B7%A7/"/>
+    
       <category term="知识体系" scheme="https://iHTCboy.com/tags/%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/"/>
+    
+      <category term="程序员" scheme="https://iHTCboy.com/tags/%E7%A8%8B%E5%BA%8F%E5%91%98/"/>
     
       <category term="technology" scheme="https://iHTCboy.com/categories/technology/"/>
     
@@ -158,7 +164,7 @@
     <link href="https://iHTCboy.com/2020/02/01/2020-02-01_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/"/>
     <id>https://iHTCboy.com/2020/02/01/2020-02-01_iOS开发高手课/</id>
     <published>2020-02-01T07:49:16.000Z</published>
-    <updated>2020-02-05T08:33:09.402Z</updated>
+    <updated>2020-02-07T03:01:11.659Z</updated>
     <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><blockquote>
 <p>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程 <a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a> </p>
 </blockquote>
@@ -263,9 +269,23 @@
     
       <category term="iOS开发高手课" scheme="https://iHTCboy.com/tags/iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/"/>
     
+      <category term="优化" scheme="https://iHTCboy.com/tags/%E4%BC%98%E5%8C%96/"/>
+    
+      <category term="动态库" scheme="https://iHTCboy.com/tags/%E5%8A%A8%E6%80%81%E5%BA%93/"/>
+    
       <category term="学习总结" scheme="https://iHTCboy.com/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
     
       <category term="极客时间" scheme="https://iHTCboy.com/tags/%E6%9E%81%E5%AE%A2%E6%97%B6%E9%97%B4/"/>
+    
+      <category term="架构" scheme="https://iHTCboy.com/tags/%E6%9E%B6%E6%9E%84/"/>
+    
+      <category term="知识体系" scheme="https://iHTCboy.com/tags/%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/"/>
+    
+      <category term="程序员" scheme="https://iHTCboy.com/tags/%E7%A8%8B%E5%BA%8F%E5%91%98/"/>
+    
+      <category term="编译器" scheme="https://iHTCboy.com/tags/%E7%BC%96%E8%AF%91%E5%99%A8/"/>
+    
+      <category term="链接器" scheme="https://iHTCboy.com/tags/%E9%93%BE%E6%8E%A5%E5%99%A8/"/>
     
       <category term="induction" scheme="https://iHTCboy.com/categories/induction/"/>
     
@@ -276,7 +296,7 @@
     <link href="https://iHTCboy.com/2020/01/17/2020-01-17_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE06/"/>
     <id>https://iHTCboy.com/2020/01/17/2020-01-17_iOS开发高手课06/</id>
     <published>2020-01-17T12:20:20.000Z</published>
-    <updated>2020-02-06T15:37:25.636Z</updated>
+    <updated>2020-02-07T02:50:24.823Z</updated>
     <content type="html"><![CDATA[<h2 id="1、前言">1、前言</h2><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/iOS开发高手课-06-App如何通过注入动态库的方式实现极速编译调试？.png" alt="iOS开发高手课-06-App如何通过注入动态库的方式实现极速编译调试？.png"></p>
 <a id="more"></a>
@@ -284,10 +304,10 @@
 <p>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程 <a href="https://time.geekbang.org/column/intro/161" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a> </p>
 </blockquote>
 <p>本章是上一节<code>编译器</code>、<code>链接器</code> 内容的扩展延伸内容 —– <code>动态链接器</code>，所以，如果没有看过上一篇文章的同学，建议先看看：<a href="https://ihtcboy.com/2020/01/10/2020-01-10_iOS开发高手课05/">【学习总结】05 | 链接器：符号是怎么绑定到地址上的？ | iHTCboy’s blog</a>。</p>
-<p>本章也是沿用之前的风格套路，在讲解 iOS 的<code>动态链接器</code> 如何实现<code>极速编译调试</code> 作用之前，我们先看看软件开发中都有那么经典的例子？如何实现极速编译调试，当然首先要看看 2019年最火的 <code>Flutter</code> 啊！所以，我们先来说说 Flutter 是如何 <code>Hot Reload</code>（热重载）吧！</p>
+<p>本章也是沿用之前的风格套路，在讲解 iOS 的<code>动态链接器</code> 如何实现<code>极速编译调试</code> 作用之前，我们先看看程序开发中都有那么经典的例子？如何实现极速编译调试的。首先要看看 2019年最火的 <code>Flutter</code> 吧！所以，我们就先来看看 Flutter 是如何 <code>Hot Reload</code>（热重载）的吧！</p>
 <h3 id="Flutter">Flutter</h3><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/Flutter-Hot-Reload.gif" alt="Flutter-Hot-Reload.gif"></p>
-<p>如图所示，Flutter 的 <code>热重载</code>(<code>Hot reload</code>)功能可以帮助您在无需重新启动应用的情况下快速、轻松地进行测试、构建用户界面、添加功能以及修复错误。 </p>
-<p>我们本节主要是讲解 Flutter 热重载(Hot reload)，不会讲解 Flutter 其它知识和原理，了解更多可以参考末文扩展学习或自行搜索。</p>
+<p>如图所示，Flutter 的 <code>热重载</code>(<code>Hot reload</code>)功能可以在无需重新启动应用的情况下快速、轻松地进行测试、构建用户界面、添加功能以及修复错误。 </p>
+<p>需要注意的是，我们主要是讲解 Flutter 热重载(Hot reload) 相关知识，不会深入讲解 Flutter 其它知识和原理，了解更多可以参考末文扩展学习或自行搜索。</p>
 <h4 id="JIT_&amp;_AOT">JIT &amp; AOT</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/Flutter-高性能方案原理.png" alt="Flutter-高性能方案原理.png"></p>
 <p>Flutter 有两套编译器，JIT，AOT：</p>
 <ul>
@@ -295,8 +315,8 @@
 <li><code>AOT</code>（Ahead Of Time，运行前编译）：指在程序运行前编译。</li>
 </ul>
 <p>Flutter <code>Dart</code> 有 <code>AOT</code> 和 <code>JIT</code> 两种模式，线上使用时以 AOT 的方式编译成机器代码，保证了线上运行时的效率；而在开发期，Dart 代码可以以 JIT 的方式运行，支持代码的即时生效 <code>热重载</code>（Hot Reload)，提高开发效率。</p>
-<p>至此，我们明白了，Flutter 是通过 <code>JIT</code> 方式实现 <code>Hot Reload</code>（热重载）的！那么，我们接下来，我们就是知道 Flutter 是如何编译代码的，这样才能更加理解 <code>JIT</code>.</p>
-<h4 id="Flutter_构建模式">Flutter 构建模式</h4><p>Flutter 支持三种模式编译 app，分别为 <code>debug</code>、<code>release</code>、<code>profile</code>，也支持使用 headless 模式来测试。</p>
+<p>至此，我们应该明白了，Flutter 是通过 <code>JIT</code> 方式实现 <code>Hot Reload</code>（热重载）的！那么，我们接下来，我们就是知道 Flutter 是如何编译代码的，这样才能更加理解 <code>JIT</code>.</p>
+<h4 id="Flutter_构建模式">Flutter 构建模式</h4><p>Flutter 支持三种模式编译 app，分别为 <code>debug</code>、<code>release</code>、<code>profile</code>。</p>
 <ul>
 <li><code>Debug模式</code>：对应了Dart的JIT模式，又称检查模式或者慢速模式。支持设备，模拟器(iOS/Android)，此模式下打开了断言，包括所有的调试信息，服务扩展和Observatory等调试辅助。此模式为快速开发和运行做了优化，但并未对执行速度，包大小和部署做优化。Debug模式下，编译使用JIT技术，支持广受欢迎的亚秒级有状态的hot reload。</li>
 <li><code>Release模式</code>：对应了Dart的AOT模式，此模式目标即为部署到终端用户。只支持真机，不包括模拟器。关闭了所有断言，尽可能多地去掉了调试信息，关闭了所有调试工具。为快速启动，快速执行，包大小做了优化。禁止了所有调试辅助手段，服务扩展。</li>
@@ -308,12 +328,12 @@
 <li>当你需要<code>分析性能</code>的时候，选择使用 <code>profile</code> 构建模式；</li>
 <li>当你需要<code>发布应用</code>的时候，选择使用 <code>release</code> 构建模式。</li>
 </ul>
-<p>鉴于 <code>Profile</code> 同 <code>Release</code> 在编译原理等上无差异，所以，我们的问题 Flutter 如何实现 <code>Hot Reload</code>（热重载）的？就是需要看看 <code>Debug</code>模式 和 <code>Release</code> 模式，当然，前面说到，我们的重点是 <code>JIT</code>，所以重点是看 <code>Debug模式</code> !</p>
+<p>鉴于 <code>Profile</code> 同 <code>Release</code> 在编译原理等上无差异，所以，我们的问题“ Flutter 如何实现 <code>Hot Reload</code>（热重载）的”？就是需要看看 <code>Debug</code>模式 和 <code>Release</code> 模式，当然，前面说到，我们的重点是 <code>JIT</code>，所以重点是要看看 <code>Debug模式</code> !</p>
 <h4 id="Release_模式下的编译">Release 模式下的编译</h4><ul>
 <li><strong>iOS</strong><br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/Flutter-Release模式编译-iOS.png" alt="Flutter-Release模式编译-iOS.png"></li>
 </ul>
 <blockquote>
-<p>其中 <code>gen_snapshot</code> 是dart编译器，采用了 <code>tree shaking</code>(类似依赖树逻辑，可生成最小包，也因而在 Flutter 中禁止了dart支持的反射特性)等技术，负责生成汇编形式机器代码。再通过 <code>xcrun</code> 等工具链生成最终的 <code>App.framework</code>。所有的dart代码，包括业务代码，三方package代码，它们所依赖的flutter框架代码，最终将会编译成<code>App.framework</code>。</p>
+<p>其中 <code>gen_snapshot</code> 是dart编译器，采用了 <code>tree shaking</code>(类似依赖树逻辑，可生成最小包，也因而在 Flutter 中禁止了dart支持的反射特性)等技术，负责生成汇编形式机器代码。再通过 <code>xcrun</code> 等工具链生成最终的 <code>App.framework</code>。所有的dart代码，包括业务代码，三方package代码，它们所依赖的flutter框架代码，最终将会编译成<code>App.framework</code>。<br><code>Flutter.framework</code> 对应了Flutter架构中的engine部分，以及Embedder。实际中Flutter.framework位于flutter仓库的<code>/bin/cache/artifacts/engine/ios*</code>下，默认从google仓库拉取。当需要自定义修改的时候，可通过下载engine源码，利用<code>Ninja</code>构建系统来生成。<br>Flutter相关代码的最终产物是：<code>App.framework</code>(dart代码生成)和 <code>Flutter.framework</code>(引擎)。</p>
 </blockquote>
 <ul>
 <li><strong>Android</strong><br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/Flutter-Release模式编译-Android.png" alt="Flutter-Release模式编译-Android.png"></li>
@@ -325,16 +345,16 @@
 <h4 id="Debug_模式下的编译">Debug 模式下的编译</h4><p><code>Debug模式</code> 下 flutter的编译，结构类似 Release模式，差异主要表现为两点:</p>
 <ol>
 <li><strong>Flutter.framework</strong>：因为是Debug，此模式下Framework中是有<code>JIT</code>支持的，而在Release模式下并没有JIT部分。（<strong>Android</strong><code>flutter.jar</code>同<strong>iOS</strong>一样没有<code>JIT</code>。）</li>
-<li><strong>App.framework</strong>：不同于<code>AOT</code>模式下的 App.framework 是Dart代码对应的机器代码，<code>JIT</code>模式下，App.framework只有几个简单的API，其Dart代码存在于<code>snapshot_blob.bin</code>文件里（<strong>Android</strong>的位于<code>flutterassets</code>下的<code>snapshotblob.bin</code>，其它同<strong>iOS</strong><code>）。这部分的snapshot是脚本快照，里面是简单的标记化的源代码。所有的注释，空白字符都被移除，常量也被规范化，没有机器码、</code>tree shaking`或混淆。</li>
+<li><strong>App.framework</strong>：不同于<code>AOT</code>模式下的 App.framework 是Dart代码对应的机器代码，<code>JIT</code>模式下，App.framework只有几个简单的API，其Dart代码存在于<code>snapshot_blob.bin</code>文件里（<strong>Android</strong>的位于<code>flutterassets</code>下的<code>snapshotblob.bin</code>，其它同<strong>iOS</strong>）。这部分的snapshot是脚本快照，里面是简单的标记化的源代码。所有的注释，空白字符都被移除，常量也被规范化，没有机器码、<code>tree shaking</code>或混淆。</li>
 </ol>
-<h4 id="Hot_Reload（热重载）">Hot Reload（热重载）</h4><p>好的，有了上面的基础和概念知识，现在我们开始说说 Flutter 的 <code>Hot Reload</code>（热重载）吧！</p>
+<h4 id="Hot_Reload（热重载）">Hot Reload（热重载）</h4><p>好的，有了上面的基础和概念知识，现在我们开始看看 Flutter 的 <code>Hot Reload</code>（热重载）的执行流程吧！</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/Flutter-Hot-Reload-执行流程.jpeg" alt="Flutter-Hot-Reload-执行流程.jpeg"></p>
 <p>Flutter的热重载是基于<code>State</code>的，也就是我们在代码中经常出现的<code>setState</code>方法，通过这个来修改后，会执行相应的<code>build</code>方法，这就是热重载的基本过程。</p>
 <p>Flutter的<code>Hot Reload</code>的实现源码在下面路径中，在此路径中包含<code>run_cold.dart</code>和<code>run_hot.dart</code>两个文件，前者负责<code>冷启动</code>，后者负责<code>热重载</code>。</p>
 <figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~/flutter/packages/flutter_tools/lib/src/run_hot.dart</span><br></pre></td></tr></table></figure>
 <p><strong>上图的流程</strong>：当按下R后，Flutter 会扫描修改的文件，并将文件修改前后进行对比，随后会将被改动的代码生成一个<code>kernel files</code>文件。随后会通过<code>HTTP Server</code>将生成的<code>kernel files</code>文件发送给<code>Dart VM</code>虚拟机，虚拟机拿到 kernel文件后会调用<code>_reloadSources</code>函数进行资源重载，将 kernel文件注入正在运行的<code>Dart VM</code>中。当资源重载完成后，会调用<code>RPC</code>接口触发<code>Widgets tree</code>的重建、重绘。</p>
 <p>本节以上内容主要来自：<a href="https://www.jianshu.com/p/1a90adc09e99" target="_blank" rel="external">移动端开发新趋势Flutter - 简书</a></p>
-<p>调用热重载时，主机会查看自上次编译以来编辑的代码。重新编译以下文件：</p>
+<p>调用热重载时，会查看自上次编译以来编辑的代码。重新编译以下文件：</p>
 <ul>
 <li>任何有代码更改的文件；</li>
 <li>应用程序的主入口文件。</li>
@@ -342,7 +362,7 @@
 </ul>
 <p>在 <code>Dart 2</code> 中，这些文件的 Dart 源代码被转换为 <code>内核文件</code> 并发送到移动设备的 <code>Dart VM</code>。Dart VM 重新加载新内核文件中的所有文件。到目前为止，没有重新执行代码。然后，热重载机制使 <code>Flutter</code> 框架触发所有现有的 <code>widgets</code> 和渲染对象的重建/重新布局/重绘。</p>
 <p>以上来自官方文档：<a href="https://flutter.cn/docs/development/tools/hot-reload" target="_blank" rel="external">热重载 (Hot reload) - Flutter 中文文档</a></p>
-<p>到此，我们不再深入具体的源代码讲解了，大家可以自行查看。这里主要是讲解整个流程是怎么一回事，了解 Flutter 的 <code>Hot Reload</code>（热重载）是怎么回事后，其实 Flutter 是不是能实现<code>热更新</code>呢？答案是肯定，所以官方还在努力中。最后，我们在来说说热重载的优缺点吧！</p>
+<p>到此，我们就不深入具体的源代码讲解了，大家可以自行查看。这里主要是想讲解整个流程是怎么一回事，了解 Flutter 的 <code>Hot Reload</code>（热重载）是怎么执行流程后，那么 Flutter 能不以实现 <code>热更新</code>代码呢？大家从多角色思考一下，答案是肯定，目前Flutter还在努力中。接下来，我们再来说说热重载的优缺点吧！</p>
 <h4 id="不能使用_Hot_Reload_的场景">不能使用 Hot Reload 的场景</h4><ol>
 <li>代码出现编译错误的不能使用 Hot Reload</li>
 <li>代码更改会影响 APP 状态的不能使用 Hot Reload</li>
@@ -365,18 +385,18 @@
 <li><code>整合变化</code>：然后把变更的内容打包成<code>框架文件</code>，当然语言和环境不同，文件形式就有差异，这里不详细分析。</li>
 <li><code>更新变化</code>：最后通过 <code>VM</code>（可以统一理解为虚拟机或Runtime（运行时））进行解析和更新。</li>
 </ol>
-<p>通过 <code>Flutter</code> 和 <code>React Native</code>的 <code>Hot Reload</code> 流程对比学习后，大家是否已经理解这样的<code>热重载</code>流程了呢？如果此时，在来一个平台的热重载功能，你是不是也能猜到大致的流程原理呢？</p>
-<h3 id="JVM（Java_Virtual_Machine，Java虚拟机）">JVM（Java Virtual Machine，Java虚拟机）</h3><p>回过头来，我们在说说 <code>JIT</code>，因为，我们本文最终的目的是探究 <code>iOS能否极速编译？</code>的问题，前面所有说到的都是其它平台是如何实现的，所以，JIT 技术其实是 <code>JIT Compiler</code>（即时编译器），是一个<code>编译器</code>。我们需要在深入一点，以 <code>Java</code> 为例，因为它使用 JIT 编译器进行动态编译已经十几年了!</p>
+<p>通过 <code>Flutter</code> 和 <code>React Native</code>的 <code>Hot Reload</code> 流程对比学习后，大家是不是已经理解了<code>热重载</code>的原理流程呢？如果此时，我们再来一个新的平台的热重载功能，你是不是也能猜到大致的流程原理呢？</p>
+<h3 id="JVM（Java_Virtual_Machine，Java虚拟机）">JVM（Java Virtual Machine，Java虚拟机）</h3><p>回过头来，我们在看看 <code>JIT</code>。因为，我们本文最终的目的是探究 <code>iOS能否极速编译？</code>的问题，前面所有说到的都是其它平台是如何实现的热重载，所以，<code>JIT</code> 应该是这样叫 <code>JIT Compiler</code>（即时编译器），它是一个<code>编译器</code>。我们需要在深入一点，<code>Java</code> 使用 JIT 编译器进行动态编译已经十几年了！所以，我们以 Java 来例了解一下：</p>
 <ul>
 <li><p>Java 平台<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/Jave-Platform.jpg" alt="Jave-Platform.jpg"></p>
 </li>
 <li><p>Java 编译流程<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/Java-Compiler.png" alt="Java-Compiler.png"></p>
 </li>
 </ul>
-<p>Java 编译的 <code>.class</code> 文件中保存的并不是<code>机器码</code>而只是<code>二进制代码</code>，需要先进行解释，<code>JIT</code> 在运行时会把翻译过的机器码保存起来，以备下次使用。 另外，新版本（Java8）的 <code>JVM</code> 默认都是采用混合执行模式，半编译（JIT，热点代码，经常调用循环的代码）半解释执行。 </p>
-<p>不知道大家有没有注意到2个词，<code>JRE</code>(<code>Java Runtime Environment</code>，Java 运行/执行环境)、<code>JVM</code>（<code>Java Virtual Machine</code>，Java 虚拟机），<code>JIT Compiler</code> 依赖于 <code>JVM</code> （<code>Runtime</code>）中，要实现 <code>Hot Reload</code>，所以是需要一个<code>虚拟机环境</code>。</p>
-<p>这种虚拟机和一般其他语言的运行库有一个很大不同，就是它好像一个有独立体系结构的计算机，源代码必须要编译成虚拟机独有的中间语言。 虚拟机传统的解释器，就是要在中间语言和真正的平台体系结构之间的指令做映射，比如把Java的load指令换成 native code 的load指令。具体详细的这样就不多说了，<strong>主要是想说明，要实现 <code>Hot Reload</code> 用到 <code>JIT</code> 编译器，然后需要依赖于<code>VM</code>虚拟机环境中。</strong></p>
-<h3 id="Android_VM">Android VM</h3><p>既然我们说到了虚拟机环境，那么我们顺便说一下 <code>Android</code>，因为安卓最初也是用 <code>Java</code> 来开发的，当然 Android 应用程序不是使用标准的Java字节码标准的Java虚拟机执行的，所以，这里希望通过对比学习，更加深刻的理解。</p>
+<p>Java 编译的 <code>.class</code> 文件中保存的并不是<code>机器码</code>而只是<code>二进制代码</code>，需要先进行解释，<code>JIT</code> 在运行时会把翻译过的机器码保存起来，以备下次使用。另外，新版本（Java8）的 <code>JVM</code> 默认都是采用混合执行模式，<code>半编译</code>（JIT，热点代码，经常调用循环的代码）、<code>半解释</code>（<code>Interpreter</code>，解释执行编译器，一边把字节码翻译成当前硬件平台的机器码一边执行）执行。 </p>
+<p>不知道大家有没有注意到2个词，<code>JRE</code>(<code>Java Runtime Environment</code>，Java 运行/执行环境)、<code>JVM</code>（<code>Java Virtual Machine</code>，Java 虚拟机），<code>JIT Compiler</code> 依赖于 <code>JVM</code> （<code>Runtime</code>）中，要实现 <code>Hot Reload</code>，所以是需要一个<code>虚拟机</code>环境。</p>
+<p>这种虚拟机和一般其他语言的运行库有一个很大不同，就是它好像一个有独立体系结构的计算机，源代码必须要编译成虚拟机独有的中间语言。虚拟机传统的解释器，就是要在中间语言和真正的平台体系结构之间的指令做映射，比如把Java的load指令换成 native code 的load指令。具体详细的这样就不多说了，<strong>主要是想说明，要实现 <code>Hot Reload</code> 用到 <code>JIT</code> 编译器，然后需要依赖于<code>VM</code>虚拟机环境中。</strong></p>
+<h3 id="Android_VM">Android VM</h3><p>既然我们说到了虚拟机环境，那么我们顺便说一下 <code>Android</code>，因为安卓最初也是用 <code>Java</code> 来开发的，当然 Android 应用程序不是使用标准的Java字节码标准的Java虚拟机执行的，所以，这里希望通过对比学习，让大家更加深刻的理解。</p>
 <h4 id="Android_Build_System（安卓构建系统）">Android Build System（安卓构建系统）</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/Android-Build-System.png" alt="Android-Build-System.png"></p>
 <ul>
 <li>图片来源：<a href="https://theiconic.tech/android-java-fdbd55aadc51" target="_blank" rel="external">The Relationship Between Android and Java</a></li>
@@ -429,8 +449,8 @@
 <p>图片来源：<a href="https://twitter.com/thomaswue/status/1145603781108928513" target="_blank" rel="external">Thomas Wuerthinger - Twitter</a></p>
 <p><code>JIT</code> 的优点就不说了，自然是性能好。缺点就是由于 JIT 本质上是一个编译器，所以它必然不是跨平台的，对于每个平台必然需要单独编写代码，当然这个因素一定程度上也导致了 JIT 开发成本高。</p>
 <p><code>AOT</code> 优点是可以提高速度（特别是启动时间）、减少内存足迹（不是JIT）和改进内存回收。缺点是在程序运行前编译会使程序安装的时间增加，将提前编译的内容保存会占用更多的空间等。</p>
-<p>最后，AOT 与 JIT 的优缺点，其实没有绝对的，比如 Java 用在服务器可能<code>JIT</code> 更好，因为它并不需要启动很快，而用在客户端<code>移动设备</code>，正好上面说的，<code>JIT</code> + <code>AOT</code> + <code>Interpreter</code>，不同情况，不同条件，答案也不相同，所以<code>没有最好的，只有最适合的技术方案！</code>！</p>
-<h3 id="Injection_for_Xcode">Injection for Xcode</h3><p>说了那么久，iOS 的同学估计久等啦！说了那么多平台，针对 Apple 平台，我们如何实现 <code>极速编译调试</code> 呢？所以，说说 <a href="https://github.com/johnno1962/InjectionIII" target="_blank" rel="external">Injection</a> 这个项目是如果实现在 <code>iOS模拟器</code> 中，不必重建或重新启动应用程序，以增量方式更新类的方法的实现<code>热重载</code>，从而为开发人员节省了大量时间。</p>
+<p>最后，AOT 与 JIT 的优缺点，其实没有绝对的，比如 Java 用在服务器可能<code>JIT</code> 更好，因为它并不需要启动很快，而用在客户端<code>移动设备</code>，正如上面说的Android运行时使用：<code>JIT</code> + <code>AOT</code> + <code>Interpreter</code>，不同情况，不同条件，答案也不相同，所以<code>没有最好的，只有最适合的技术方案！</code>！</p>
+<h3 id="Injection_for_Xcode">Injection for Xcode</h3><p>说了那么久，iOS 的同学估计久等啦吧！说了那么多平台，针对 Apple 平台，我们如何实现 <code>极速编译调试</code> 呢？所以，说说 <a href="https://github.com/johnno1962/InjectionIII" target="_blank" rel="external">Injection</a> 这个项目是如果实现在 <code>iOS模拟器</code> 中，不必重建或重新启动应用程序，以增量方式更新类的方法的实现<code>热重载</code>，从而为开发人员节省了大量时间。</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/Xcode-Injection-Hot-Reload.png" alt="Xcode-Injection-Hot-Reload.png"></p>
 <p>前面我们已经说了，实现热重载的三个步骤，1. <code>文件变化</code>，2. <code>整合变化</code>，3. <code>更新变化</code>。这里其实也是一样的，<code>File Watcher</code>监听观察文件改动，然后将改动的文件编译，打包成<code>.dylib</code>动态库文件，然后就是更新这个动态库，这里充当虚拟机的是 Objective-C 的<code>Runtime</code>机制！</p>
 <p>大概的流程大家是不是懂了，具体的一些疑问：</p>
@@ -443,7 +463,7 @@
 <p>Swift:<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">extension</span> <span class="title">UIViewController</span> </span>&#123;</span><br><span class="line">    <span class="preprocessor">@objc</span> <span class="func"><span class="keyword">func</span> <span class="title">injected</span><span class="params">()</span></span> &#123;</span><br><span class="line">        viewDidLoad()</span><br><span class="line">        viewWillAppear(<span class="literal">true</span>)</span><br><span class="line">        viewDidAppear(<span class="literal">true</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>Objective-C:<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- (void)injected &#123;&#10;    [self viewDidLoad];&#10;    [self viewWillAppear:YES];&#10;    [self viewWillDisappear:YES];&#10;&#125;</span><br></pre></td></tr></table></figure></p>
 <p>具体详细的原理，大家可以查看这篇文章：<a href="https://mp.weixin.qq.com/s/hFnHdOP6pmIwzZck-zXE8g" target="_blank" rel="external">Injection：iOS热重载背后的黑魔法</a>。</p>
-<h4 id="Runtime_system">Runtime system</h4><blockquote>
+<h4 id="Runtime_System（运行时系统）">Runtime System（运行时系统）</h4><blockquote>
 <p>The Objective-C language defers as many decisions as it can from compile time and link time to runtime. Whenever possible, it does things dynamically. This means that the language requires not just a compiler, but also a runtime system to execute the compiled code. The runtime system acts as a kind of operating system for the Objective-C language; it’s what makes the language work.</p>
 </blockquote>
 <p>翻译：<code>Objective-C</code> 这门语言会尽可能地将许多决定从编译期推迟到运行时。它会在任何可能的时候动态地处理事情。这意味着这门语言需要的不仅仅是编译器，同时还需要运行时系统来执行编译后的代码。<code>runtime system</code>（运行时系统）好像就是 <code>Objective-C</code> 的操作系统一样，让这门语言能够运作。</p>
@@ -464,17 +484,17 @@
 </ul>
 <p>更多官方资料：<a href="https://www.apple.com.cn/cn/education/teaching-code/" target="_blank" rel="external">教育 - 编程教学 - Apple (中国)</a></p>
 <p>课堂指导文档PDF下载：<a href="https://www.apple.com/education/docs/everyone-can-code-curriculum-guide.pdf" target="_blank" rel="external">https://www.apple.com/education/docs/everyone-can-code-curriculum-guide.pdf</a></p>
-<p>另外，有人开发了一个在线的<code>Swift Playground</code>：<a href="http://online.swiftplayground.run/" target="_blank" rel="external">Online Swift Playground</a>，没有 <code>macOS</code> 的朋友可以看看。</p>
+<p>另外，有人开发了一个在线的<code>Swift Playground</code>：<a href="http://online.swiftplayground.run/" target="_blank" rel="external">Online Swift Playground</a>，没有 <code>macOS</code> 系统的朋友可以试试。</p>
 <h4 id="Swift_Playgrounds_App">Swift Playgrounds App</h4><p>Swift Playgrounds 是适用于 iPad 的一款创新 app，让你能以互动有趣的方式来学习 Swift。它不要求用户具备编程知识，非常适合初学者。许多专业开发者，都是使用 Swift 这一 Apple 创建的编程语言，开发出各款当下热门 app。你可以先从闯关解谜开始，掌握 Swift 的基础知识，再接受一系列的挑战，走向 Apple 和其他顶尖开发者设计的更高级 Playground。</p>
 <p>更多官方资料：<a href="https://www.apple.com.cn/cn/swift/playgrounds/" target="_blank" rel="external">Swift Playgrounds - Apple (中国大陆)</a></p>
-<p>因为你编写的是真实的代码，所以能直接在 <code>Swift Playgrounds</code> App 与 Xcode 之间导入或导出。因此，你可以在专业人士用以开发各款 iOS 和 Mac app 的工具上，来试试自己的创意!</p>
+<p>因为你编写的是真实的代码，所以Swift代码能直接在 <code>Swift Playgrounds</code> App 与 Xcode 之间导入或导出。因此，你可以在专业人士用以开发各款 iOS 和 Mac app 的工具上，来试试自己的创意!</p>
 <p>这里 <code>Xcode Swift Playground</code> 和 <code>Swift Playgrounds App</code> 其实是相通了，可以感觉到，苹果的野心不只是为了开发者能实现调试，还有<code>Everyone Can Code</code>（人人能编程），教育行业，应该也是未来的方向，另外，也带动苹果的 <code>iPad</code> 销量，同时也带动了 <code>Swift</code> 语言的流行，我认为，这是多赢的一场漂亮的行动，希望你们也能看到！</p>
 <h4 id="SwiftUI">SwiftUI</h4><p>2019年，WWDC2019 上，Apple 推出了一个全新的 <code>SwiftUI</code> 框架，这是一个现代化的 UI 界面编码结构，它是从头开始构建的，以利用 <code>Swift</code>，让开发者感到惊讶。新框架使用声明性范例，让开发者用更少的代码编写相同的 UI。另外，SwiftUI 在 Xcode 中启用实时 UI 编程环境，实时看到编码的页面效果。最令人开发者尖叫的是，实现一次编码，可适应五端 <code>Apple</code> 产品平台。</p>
 <p>用苹果的话：<code>编写更少的代码，打造更出色的 app。</code>，具体可以查看苹果官方关于<code>SwiftUI</code>的介绍：<a href="https://developer.apple.com/cn/xcode/swiftui/" target="_blank" rel="external">Xcode - SwiftUI - Apple Developer</a>。</p>
-<h3 id="触类旁通">触类旁通</h3><p>使用类 <code>REPL</code> 模式（Read-Eval-Print-Loop）可以快速运行 Playground 代码，实时看到编码的页面效果。<code>Swift</code> 已经是苹果的未来，也是 iOS 开发者的未来，虽然每年 Swift 从 1.0 到 5.0，有人吐槽学了5种编程语言，但是2020年，Swift 已经稳定，并且开发方向也很多了，Web、服务器、AI、IoT等方向，值得看看。</p>
+<h3 id="触类旁通">触类旁通</h3><p>使用类 <code>REPL</code> 模式（Read-Eval-Print-Loop）可以快速运行 Playground 代码，实时看到编码的页面效果。<code>Swift</code> 已经是苹果的未来，也是 iOS 开发者的未来，虽然每年 Swift 从 1.0 到 5.0，有人吐槽学了5种编程语言，但是2020年，Swift 已经稳定，并且开发方向也很多了，Web、服务器、AI、IoT等等，值得大家看看！</p>
 <p>另外，教育方向的 <code>可视化编程</code>、<code>少儿编程</code>，行业中图形，<code>建筑建模</code>、<code>图形化</code>等，我认为也是很大的方向，各家编程语言准备迎战吧！</p>
-<h2 id="3、总结">3、总结</h2><p>我们一开始为了避免了长时间的代码编译过程，从 <code>热加载</code> 到 <code>JIT</code> 再到 <code>VM</code>，从 <code>Flutter</code> 到 <code>React Native</code>到 <code>Java</code> 到 <code>Android</code> 到 <code>Objective-C</code> 最后到 <code>Swift</code>。大家有没有发现？我们要看到技术的相通，也要看到技术的不同，这里面不同的是什么？学习新技术成本非常高，把技术掌握透了，学习新技术会发现成本很低，很好去理解。</p>
-<p>本次文章跨度比较大，我在团队的分享时，讲很可以比较乱，信息量大，当时大家也是没有能很好的理解，所以，现在总结成文章，希望大家明白，当然，也可能有错漏的，希望大家回复，觉得不错，也给个赞，谢谢！</p>
+<h2 id="3、总结">3、总结</h2><p>我们文章一开始为了探讨“避免长时间的代码编译过程”的问题，从 <code>热加载</code> 到 <code>JIT</code> 再到 <code>VM</code>，从 <code>Flutter</code> 到 <code>React Native</code>到 <code>Java</code> 到 <code>Android</code> 到 <code>Objective-C</code> 最后到 <code>Swift</code>。大家有没有发现？我们要看到技术的相通，也要看到技术的不同，这里面不同的是什么？学习新技术成本非常高，把技术掌握透了，学习新技术会发现成本很低，很好去理解。</p>
+<p>本篇文章跨度比较大，我在团队的分享时，讲很可以比较乱，信息量大，所以，当时与团队分享大家也是没有能很好的理解，所以，现在总结成文章，没有想到文章竟然达到了<code>1万+字数</code>！写文章是真的不容易，这篇文章，春节在家前后几天的时间在研究结构，查资料，希望能让大家都能看明白，因为我们团队每个人的知识和了解水平不同，所以<code>如何写出一篇大家都能懂的技术文章？</code>，而且深浅自如（入门的可以看得懂，深入的可以进一步深入），大家都明白，这就是我的分享态度。当然，文章也可能有错漏的，希望大家回复和讨论交流，<code>分享后，要交流！</code>，看懂了，觉得不错，给个赞吧！谢谢！</p>
 <p><br></p>
 <p>注：更多关于 iOS 开发和程序开发相关的内容，可以查看系列，目前还在连载中 <a href="https://ihtcboy.com/2020/02/01/2020-02-01_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/">【学习总结】iOS开发高手课 – (连载中) | iHTCboy’s blog</a>，以上，希望对你有用！</p>
 <h2 id="参考">参考</h2><ul>
@@ -604,7 +624,7 @@
     <link href="https://iHTCboy.com/2020/01/10/2020-01-10_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE05/"/>
     <id>https://iHTCboy.com/2020/01/10/2020-01-10_iOS开发高手课05/</id>
     <published>2020-01-10T12:20:20.000Z</published>
-    <updated>2020-02-05T12:44:20.541Z</updated>
+    <updated>2020-02-07T02:52:35.461Z</updated>
     <content type="html"><![CDATA[<h2 id="1、前言">1、前言</h2><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/iOS开发高手课-05-链接器：符号是怎么绑定到地址上的？.png" alt="iOS开发高手课-05-链接器：符号是怎么绑定到地址上的？.png"></p>
 <a id="more"></a>
@@ -897,9 +917,21 @@
     
     </summary>
     
+      <category term="CPU" scheme="https://iHTCboy.com/tags/CPU/"/>
+    
+      <category term="GCC" scheme="https://iHTCboy.com/tags/GCC/"/>
+    
+      <category term="LLVM" scheme="https://iHTCboy.com/tags/LLVM/"/>
+    
       <category term="iOS开发高手课" scheme="https://iHTCboy.com/tags/iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/"/>
     
       <category term="学习总结" scheme="https://iHTCboy.com/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
+    
+      <category term="编译原理" scheme="https://iHTCboy.com/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/"/>
+    
+      <category term="编译器" scheme="https://iHTCboy.com/tags/%E7%BC%96%E8%AF%91%E5%99%A8/"/>
+    
+      <category term="链接器" scheme="https://iHTCboy.com/tags/%E9%93%BE%E6%8E%A5%E5%99%A8/"/>
     
       <category term="technology" scheme="https://iHTCboy.com/categories/technology/"/>
     
@@ -910,7 +942,7 @@
     <link href="https://iHTCboy.com/2020/01/03/2020-01-03_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE04/"/>
     <id>https://iHTCboy.com/2020/01/03/2020-01-03_iOS开发高手课04/</id>
     <published>2020-01-03T12:20:20.000Z</published>
-    <updated>2020-02-06T09:56:21.647Z</updated>
+    <updated>2020-02-07T02:55:21.723Z</updated>
     <content type="html"><![CDATA[<h2 id="1、前言">1、前言</h2><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/iOS开发高手课-04-项目大了人员多了，架构怎么设计更合理？.png" alt="iOS开发高手课-04-项目大了人员多了，架构怎么设计更合理？.png"></p>
 <a id="more"></a>
@@ -1177,9 +1209,31 @@
     
     </summary>
     
+      <category term="Design Patterns" scheme="https://iHTCboy.com/tags/Design-Patterns/"/>
+    
+      <category term="GRASP" scheme="https://iHTCboy.com/tags/GRASP/"/>
+    
+      <category term="MVC" scheme="https://iHTCboy.com/tags/MVC/"/>
+    
+      <category term="MVP" scheme="https://iHTCboy.com/tags/MVP/"/>
+    
+      <category term="MVVM" scheme="https://iHTCboy.com/tags/MVVM/"/>
+    
+      <category term="SOLID" scheme="https://iHTCboy.com/tags/SOLID/"/>
+    
       <category term="iOS开发高手课" scheme="https://iHTCboy.com/tags/iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/"/>
     
       <category term="学习总结" scheme="https://iHTCboy.com/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
+    
+      <category term="架构" scheme="https://iHTCboy.com/tags/%E6%9E%B6%E6%9E%84/"/>
+    
+      <category term="架构师" scheme="https://iHTCboy.com/tags/%E6%9E%B6%E6%9E%84%E5%B8%88/"/>
+    
+      <category term="设计原则" scheme="https://iHTCboy.com/tags/%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/"/>
+    
+      <category term="设计模式" scheme="https://iHTCboy.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+      <category term="面向对象" scheme="https://iHTCboy.com/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
     
       <category term="technology" scheme="https://iHTCboy.com/categories/technology/"/>
     
@@ -1393,7 +1447,7 @@
     <link href="https://iHTCboy.com/2019/12/27/2019-12-27_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE03/"/>
     <id>https://iHTCboy.com/2019/12/27/2019-12-27_iOS开发高手课03/</id>
     <published>2019-12-27T12:20:20.000Z</published>
-    <updated>2020-02-05T08:05:39.265Z</updated>
+    <updated>2020-02-07T02:57:42.670Z</updated>
     <content type="html"><![CDATA[<h2 id="1、前言">1、前言</h2><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/12/iOS开发高手课-03-AutoLayout是怎么进行自动布局的，性能如何？.png" alt="iOS开发高手课-03-AutoLayout是怎么进行自动布局的，性能如何？.png"></p>
 <a id="more"></a>
@@ -1578,6 +1632,18 @@
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/12/iOS开发高手课-03-AutoLayout是怎么进行自动布局的，性能如何？.png" alt="iOS开发高手课-03-AutoLayout是怎么进行自动布局的，性能如何？.png"></p>]]>
     
     </summary>
+    
+      <category term="Auto Layout" scheme="https://iHTCboy.com/tags/Auto-Layout/"/>
+    
+      <category term="StoryBoard" scheme="https://iHTCboy.com/tags/StoryBoard/"/>
+    
+      <category term="SwiftUI" scheme="https://iHTCboy.com/tags/SwiftUI/"/>
+    
+      <category term="UIStackView" scheme="https://iHTCboy.com/tags/UIStackView/"/>
+    
+      <category term="XIB" scheme="https://iHTCboy.com/tags/XIB/"/>
+    
+      <category term="flexbox" scheme="https://iHTCboy.com/tags/flexbox/"/>
     
       <category term="iOS开发高手课" scheme="https://iHTCboy.com/tags/iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/"/>
     
@@ -3891,7 +3957,7 @@
     <link href="https://iHTCboy.com/2019/12/20/2019-12-20_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE02/"/>
     <id>https://iHTCboy.com/2019/12/20/2019-12-20_iOS开发高手课02/</id>
     <published>2019-12-20T12:20:20.000Z</published>
-    <updated>2020-02-03T01:06:45.959Z</updated>
+    <updated>2020-02-07T02:59:47.875Z</updated>
     <content type="html"><![CDATA[<h2 id="1、前言">1、前言</h2><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/12/iOS开发高手课-02-App启动速度怎么做优化与监控？.png" alt="iOS开发高手课-02-App启动速度怎么做优化与监控？.png"></p>
 <a id="more"></a>
@@ -4034,9 +4100,21 @@
     
     </summary>
     
+      <category term="Optimize" scheme="https://iHTCboy.com/tags/Optimize/"/>
+    
       <category term="iOS开发高手课" scheme="https://iHTCboy.com/tags/iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/"/>
     
+      <category term="冷启动" scheme="https://iHTCboy.com/tags/%E5%86%B7%E5%90%AF%E5%8A%A8/"/>
+    
+      <category term="启动优化" scheme="https://iHTCboy.com/tags/%E5%90%AF%E5%8A%A8%E4%BC%98%E5%8C%96/"/>
+    
       <category term="学习总结" scheme="https://iHTCboy.com/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
+    
+      <category term="性能优化" scheme="https://iHTCboy.com/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
+    
+      <category term="热启动" scheme="https://iHTCboy.com/tags/%E7%83%AD%E5%90%AF%E5%8A%A8/"/>
+    
+      <category term="程序优化" scheme="https://iHTCboy.com/tags/%E7%A8%8B%E5%BA%8F%E4%BC%98%E5%8C%96/"/>
     
       <category term="technology" scheme="https://iHTCboy.com/categories/technology/"/>
     
