@@ -30,7 +30,7 @@
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/JIT-AOT.jpeg">
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/Xcode-Injection-Hot-Reload.png">
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/iOS-Cocoa-Touch-Architecture.png">
-<meta property="og:updated_time" content="2020-02-07T03:32:20.363Z">
+<meta property="og:updated_time" content="2020-02-07T03:39:13.786Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【学习总结】06 | App 如何通过注入动态库的方式实现极速编译调试？">
 <meta name="twitter:description" content="1、前言首先，我认为学习总结，要有所总，所结，就是有归纳后，能用自己的话告诉别人！有所结，就是有所收获输出，一般我认为是思维导图，所以，每篇文章前，我都会先给出文章的脑图：">
@@ -254,7 +254,7 @@ var _hmt = _hmt || [];
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/iOS开发高手课-06-App如何通过注入动态库的方式实现极速编译调试？.png" alt="iOS开发高手课-06-App如何通过注入动态库的方式实现极速编译调试？.png"></p>
 <a id="more"></a>
 <h2 id="2、正文">2、正文</h2><blockquote>
-<p>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程 <a href="https://gk.link/a/10fRy" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a> </p>
+<p>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程 <a href="http://gk.link/a/10fRy" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a> </p>
 </blockquote>
 <p>本章是上一节<code>编译器</code>、<code>链接器</code> 内容的扩展延伸内容 —– <code>动态链接器</code>，所以，如果没有看过上一篇文章的同学，建议先看看：<a href="https://ihtcboy.com/2020/01/10/2020-01-10_iOS开发高手课05/">【学习总结】05 | 链接器：符号是怎么绑定到地址上的？ | iHTCboy’s blog</a>。</p>
 <p>本章也是沿用之前的风格套路，在讲解 iOS 的<code>动态链接器</code> 如何实现<code>极速编译调试</code> 作用之前，我们先看看程序开发中都有那么经典的例子？如何实现极速编译调试的。首先要看看 2019年最火的 <code>Flutter</code> 吧！所以，我们就先来看看 Flutter 是如何 <code>Hot Reload</code>（热重载）的吧！</p>
@@ -451,7 +451,7 @@ var _hmt = _hmt || [];
 <p><br></p>
 <p>注：更多关于 iOS 开发和程序开发相关的内容，可以查看系列，目前还在连载中 <a href="https://ihtcboy.com/2020/02/01/2020-02-01_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/">【学习总结】iOS开发高手课 – (连载中) | iHTCboy’s blog</a>，以上，希望对你有用！</p>
 <h2 id="参考">参考</h2><ul>
-<li><a href="https://gk.link/a/10fRy" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a></li>
+<li><a href="http://gk.link/a/10fRy" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a></li>
 <li><a href="https://mp.weixin.qq.com/s/hFnHdOP6pmIwzZck-zXE8g" target="_blank" rel="external">Injection：iOS热重载背后的黑魔法</a></li>
 <li><a href="https://www.jianshu.com/p/93952a4b8415?utm_campaign=hugo&amp;utm_medium=reader_share&amp;utm_content=note" target="_blank" rel="external">Flutter之Hot Reload 的工作原理 - 简书</a></li>
 <li><a href="https://www.jianshu.com/p/4da5c149a123?utm_campaign=hugo&amp;utm_medium=reader_share&amp;utm_content=note" target="_blank" rel="external">Flutter 带你快速入门 - 简书</a></li>

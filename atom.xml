@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Learn something of everything,  Learn everything of something.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="https://iHTCboy.com/"/>
-  <updated>2020-02-07T03:32:20.822Z</updated>
+  <updated>2020-02-07T03:39:14.137Z</updated>
   <id>https://iHTCboy.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="https://iHTCboy.com/2020/02/02/2020-02-02_%E5%BB%BA%E7%AB%8B%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/"/>
     <id>https://iHTCboy.com/2020/02/02/2020-02-02_建立你自己的开发知识体系/</id>
     <published>2020-02-02T12:20:20.000Z</published>
-    <updated>2020-02-07T03:32:20.822Z</updated>
+    <updated>2020-02-07T03:39:14.137Z</updated>
     <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/建立你自己的开发知识体系.png" alt="建立你自己的开发知识体系.png"></p>
 <a id="more"></a>
@@ -121,7 +121,7 @@
 <p><br></p>
 <p>注：更多关于 iOS 开发和程序开发相关的内容，可以查看系列，目前还在连载中 <a href="https://ihtcboy.com/2020/02/01/2020-02-01_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/">【学习总结】iOS开发高手课 – (连载中) | iHTCboy’s blog</a>，以上，希望对你有用！</p>
 <h3 id="参考">参考</h3><ul>
-<li><a href="https://gk.link/a/10fRy" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a></li>
+<li><a href="http://gk.link/a/10fRy" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a></li>
 <li><a href="https://ihtcboy.com/2020/02/01/2020-02-01_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/">iOS开发高手课 – 学习总结(连载) | iHTCboy’s blog</a></li>
 <li><a href="https://ihtcboy.com/2020/01/01/2020-01-01_2019year/">2020，爱你爱你 （年终总结）| iHTCboy’s blog</a></li>
 <li><a href="https://www.cnblogs.com/jackchen-Net/p/8111817.html" target="_blank" rel="external">（面试）Hash表算法十道海量数据处理面试题 - CJZhaoSimons - 博客园</a></li>
@@ -164,14 +164,14 @@
     <link href="https://iHTCboy.com/2020/02/01/2020-02-01_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/"/>
     <id>https://iHTCboy.com/2020/02/01/2020-02-01_iOS开发高手课/</id>
     <published>2020-02-01T07:49:16.000Z</published>
-    <updated>2020-02-07T03:32:21.563Z</updated>
+    <updated>2020-02-07T03:39:47.529Z</updated>
     <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><blockquote>
-<p>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程 <a href="https://gk.link/a/10fRy" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a> </p>
+<p>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程 <a href="http://gk.link/a/10fRy" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a> </p>
 </blockquote>
-<p>上一篇年终总结说到，计划今年与公司组里同学一起学习和分享， <a href="https://ming1016.github.io/categories/Programming/" target="_blank" rel="external">戴铭</a> 老师的<a href="https://gk.link/a/10fRy" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a>，开始的想法比较简单，每周一节知识交流，然后大家一起讨论和分享，并且考虑把一些idea用于工作和项目中，促进大家进步和更好的开发，在这过程中，我还是想把自己以前经历的或者学习过的东西，在串起来后，从一个点，到一条线，最后形成一个面，从一个面了解一个事物，这样才能更好的学习。所以，这也是后续这个系列，希望尽量做到，更好的角度，更高的视线，一起学习~</p>
+<p>上一篇年终总结说到，计划今年与公司组里同学一起学习和分享， <a href="https://ming1016.github.io/categories/Programming/" target="_blank" rel="external">戴铭</a> 老师的<a href="http://gk.link/a/10fRy" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a>，开始的想法比较简单，每周一节知识交流，然后大家一起讨论和分享，并且考虑把一些idea用于工作和项目中，促进大家进步和更好的开发，在这过程中，我还是想把自己以前经历的或者学习过的东西，在串起来后，从一个点，到一条线，最后形成一个面，从一个面了解一个事物，这样才能更好的学习。所以，这也是后续这个系列，希望尽量做到，更好的角度，更高的视线，一起学习~</p>
 <a id="more"></a>
 <h3 id="2、正文">2、正文</h3><blockquote>
-<p>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程 <a href="https://gk.link/a/10fRy" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a> </p>
+<p>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程 <a href="http://gk.link/a/10fRy" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a> </p>
 </blockquote>
 <p>以下是《iOS开发高手课 - 极客时间》的课程目录，也是学习总结系列的目录，点击下面的每篇文章就是学习总结的文章链接：</p>
 <ul>
@@ -226,7 +226,7 @@
 <h3 id="3、知识体系">3、知识体系</h3><p>希望通过 iOS 知识体系，管中窥豹，更加全面的了解计算机科学知识，我觉得这个过程很有趣~</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/iOS知识体系.png" alt="iOS知识体系.png"></p>
 <h3 id="4、总结">4、总结</h3><blockquote>
-<p>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程 <a href="https://gk.link/a/10fRy" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a> </p>
+<p>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程 <a href="http://gk.link/a/10fRy" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a> </p>
 </blockquote>
 <ul>
 <li><p>计划<br>每周一篇文章（一个知识点），大家了解学习和研究扩展，最后总结输出，看看对我们现有的工作和业务能不能提出新的优化或方向？</p>
@@ -245,7 +245,7 @@
 <p>目前已经分享了几篇文章，学习原文过程中，依然有很多未知，同时也查阅了很多资料，可能还存在错误。计划后续是一周更新一篇，也要一年的时间，学习是一个漫长的过程，是一个滴水穿石的过程，坚持必定有大收获。所以，分享出来，希望大家一起学习和提升，也是自己总结知识体系，厚积薄发，一起加油吧！</p>
 <h3 id="参考">参考</h3><ul>
 <li><a href="https://ming1016.github.io/categories/Programming/" target="_blank" rel="external">戴铭 - 博客</a></li>
-<li><a href="https://gk.link/a/10fRy" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a></li>
+<li><a href="http://gk.link/a/10fRy" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a></li>
 </ul>
 <p><br></p>
 <ul>
@@ -261,9 +261,9 @@
 ]]></content>
     <summary type="html">
     <![CDATA[<h3 id="1、前言">1、前言</h3><blockquote>
-<p>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程 <a href="https://gk.link/a/10fRy">《iOS开发高手课 - 极客时间》</a> </p>
+<p>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程 <a href="http://gk.link/a/10fRy">《iOS开发高手课 - 极客时间》</a> </p>
 </blockquote>
-<p>上一篇年终总结说到，计划今年与公司组里同学一起学习和分享， <a href="https://ming1016.github.io/categories/Programming/">戴铭</a> 老师的<a href="https://gk.link/a/10fRy">《iOS开发高手课 - 极客时间》</a>，开始的想法比较简单，每周一节知识交流，然后大家一起讨论和分享，并且考虑把一些idea用于工作和项目中，促进大家进步和更好的开发，在这过程中，我还是想把自己以前经历的或者学习过的东西，在串起来后，从一个点，到一条线，最后形成一个面，从一个面了解一个事物，这样才能更好的学习。所以，这也是后续这个系列，希望尽量做到，更好的角度，更高的视线，一起学习~</p>]]>
+<p>上一篇年终总结说到，计划今年与公司组里同学一起学习和分享， <a href="https://ming1016.github.io/categories/Programming/">戴铭</a> 老师的<a href="http://gk.link/a/10fRy">《iOS开发高手课 - 极客时间》</a>，开始的想法比较简单，每周一节知识交流，然后大家一起讨论和分享，并且考虑把一些idea用于工作和项目中，促进大家进步和更好的开发，在这过程中，我还是想把自己以前经历的或者学习过的东西，在串起来后，从一个点，到一条线，最后形成一个面，从一个面了解一个事物，这样才能更好的学习。所以，这也是后续这个系列，希望尽量做到，更好的角度，更高的视线，一起学习~</p>]]>
     
     </summary>
     
@@ -296,12 +296,12 @@
     <link href="https://iHTCboy.com/2020/01/17/2020-01-17_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE06/"/>
     <id>https://iHTCboy.com/2020/01/17/2020-01-17_iOS开发高手课06/</id>
     <published>2020-01-17T12:20:20.000Z</published>
-    <updated>2020-02-07T03:32:20.363Z</updated>
+    <updated>2020-02-07T03:39:13.786Z</updated>
     <content type="html"><![CDATA[<h2 id="1、前言">1、前言</h2><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/iOS开发高手课-06-App如何通过注入动态库的方式实现极速编译调试？.png" alt="iOS开发高手课-06-App如何通过注入动态库的方式实现极速编译调试？.png"></p>
 <a id="more"></a>
 <h2 id="2、正文">2、正文</h2><blockquote>
-<p>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程 <a href="https://gk.link/a/10fRy" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a> </p>
+<p>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程 <a href="http://gk.link/a/10fRy" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a> </p>
 </blockquote>
 <p>本章是上一节<code>编译器</code>、<code>链接器</code> 内容的扩展延伸内容 —– <code>动态链接器</code>，所以，如果没有看过上一篇文章的同学，建议先看看：<a href="https://ihtcboy.com/2020/01/10/2020-01-10_iOS开发高手课05/">【学习总结】05 | 链接器：符号是怎么绑定到地址上的？ | iHTCboy’s blog</a>。</p>
 <p>本章也是沿用之前的风格套路，在讲解 iOS 的<code>动态链接器</code> 如何实现<code>极速编译调试</code> 作用之前，我们先看看程序开发中都有那么经典的例子？如何实现极速编译调试的。首先要看看 2019年最火的 <code>Flutter</code> 吧！所以，我们就先来看看 Flutter 是如何 <code>Hot Reload</code>（热重载）的吧！</p>
@@ -498,7 +498,7 @@
 <p><br></p>
 <p>注：更多关于 iOS 开发和程序开发相关的内容，可以查看系列，目前还在连载中 <a href="https://ihtcboy.com/2020/02/01/2020-02-01_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/">【学习总结】iOS开发高手课 – (连载中) | iHTCboy’s blog</a>，以上，希望对你有用！</p>
 <h2 id="参考">参考</h2><ul>
-<li><a href="https://gk.link/a/10fRy" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a></li>
+<li><a href="http://gk.link/a/10fRy" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a></li>
 <li><a href="https://mp.weixin.qq.com/s/hFnHdOP6pmIwzZck-zXE8g" target="_blank" rel="external">Injection：iOS热重载背后的黑魔法</a></li>
 <li><a href="https://www.jianshu.com/p/93952a4b8415?utm_campaign=hugo&amp;utm_medium=reader_share&amp;utm_content=note" target="_blank" rel="external">Flutter之Hot Reload 的工作原理 - 简书</a></li>
 <li><a href="https://www.jianshu.com/p/4da5c149a123?utm_campaign=hugo&amp;utm_medium=reader_share&amp;utm_content=note" target="_blank" rel="external">Flutter 带你快速入门 - 简书</a></li>
@@ -624,12 +624,12 @@
     <link href="https://iHTCboy.com/2020/01/10/2020-01-10_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE05/"/>
     <id>https://iHTCboy.com/2020/01/10/2020-01-10_iOS开发高手课05/</id>
     <published>2020-01-10T12:20:20.000Z</published>
-    <updated>2020-02-07T03:32:21.434Z</updated>
+    <updated>2020-02-07T03:39:14.635Z</updated>
     <content type="html"><![CDATA[<h2 id="1、前言">1、前言</h2><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/iOS开发高手课-05-链接器：符号是怎么绑定到地址上的？.png" alt="iOS开发高手课-05-链接器：符号是怎么绑定到地址上的？.png"></p>
 <a id="more"></a>
 <h2 id="2、正文">2、正文</h2><blockquote>
-<p>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程 <a href="https://gk.link/a/10fRy" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a> </p>
+<p>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程 <a href="http://gk.link/a/10fRy" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a> </p>
 </blockquote>
 <p><code>链接器</code> 对于刚刚接触程序开发的同学可能基本不懂，虽然大学学习<code>编译原理</code>、<code>计算机原理</code>等。这些知识比较抽象，为了让大家明白，我们需要站在巨人的肩膀上！所以，本文需要一个巨人 —– <code>编译器</code> 来帮助大家理解 <code>链接器</code> 是什么？为什么？大家有没有想过，你写的代码，最终是怎么样在计算机或手机上运行的？？？那现在就让我们来了解一下吧！</p>
 <h3 id="《程序是怎样跑起来的》">《程序是怎样跑起来的》</h3><blockquote>
@@ -827,7 +827,7 @@
 <p><br></p>
 <p>注：更多关于 iOS 开发和程序开发相关的内容，可以查看系列，目前还在连载中 <a href="https://ihtcboy.com/2020/02/01/2020-02-01_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/">【学习总结】iOS开发高手课 – (连载中) | iHTCboy’s blog</a>，以上，希望对你有用！</p>
 <h2 id="参考">参考</h2><ul>
-<li><a href="https://gk.link/a/10fRy" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a></li>
+<li><a href="http://gk.link/a/10fRy" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a></li>
 </ul>
 <p><strong>WWDC</strong></p>
 <ul>
@@ -942,12 +942,12 @@
     <link href="https://iHTCboy.com/2020/01/03/2020-01-03_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE04/"/>
     <id>https://iHTCboy.com/2020/01/03/2020-01-03_iOS开发高手课04/</id>
     <published>2020-01-03T12:20:20.000Z</published>
-    <updated>2020-02-07T03:32:21.543Z</updated>
+    <updated>2020-02-07T03:39:14.756Z</updated>
     <content type="html"><![CDATA[<h2 id="1、前言">1、前言</h2><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/iOS开发高手课-04-项目大了人员多了，架构怎么设计更合理？.png" alt="iOS开发高手课-04-项目大了人员多了，架构怎么设计更合理？.png"></p>
 <a id="more"></a>
 <h2 id="2、正文">2、正文</h2><blockquote>
-<p>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程 <a href="https://gk.link/a/10fRy" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a> </p>
+<p>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程 <a href="http://gk.link/a/10fRy" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a> </p>
 </blockquote>
 <h3 id="带问题找答案">带问题找答案</h3><ol>
 <li>模块粒度应该如何划分？</li>
@@ -1137,7 +1137,7 @@
 <p><br></p>
 <p>注：更多关于 iOS 开发和程序开发相关的内容，可以查看系列，目前还在连载中 <a href="https://ihtcboy.com/2020/02/01/2020-02-01_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/">【学习总结】iOS开发高手课 – (连载中) | iHTCboy’s blog</a>，以上，希望对你有用！</p>
 <h2 id="参考">参考</h2><ul>
-<li><p><a href="https://gk.link/a/10fRy" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a></p>
+<li><p><a href="http://gk.link/a/10fRy" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a></p>
 </li>
 <li><p><a href="https://github.com/casatwy/CTMediator" target="_blank" rel="external">casatwy/CTMediator: The mediator with no regist process to split your iOS Project into multiple project.</a></p>
 </li>
@@ -1244,7 +1244,7 @@
     <link href="https://iHTCboy.com/2020/01/01/2020-01-01_2019year/"/>
     <id>https://iHTCboy.com/2020/01/01/2020-01-01_2019year/</id>
     <published>2020-01-01T04:12:12.000Z</published>
-    <updated>2020-02-07T03:32:21.119Z</updated>
+    <updated>2020-02-07T03:39:14.412Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <p>“若遇棘手之际，请从<code>耐烦</code>二字痛下功夫。”<br>——— 曾国藩</p>
 </blockquote>
@@ -1273,7 +1273,7 @@
 <p>从 <code>KPI</code> 到 <code>OKR</code> ，对程序员的管理，我理解首先是要对<code>程序</code>管理，管理好程序，人自然也跟着好管理。怎么理解呢？如果代码大家各写各的风格，工程代码只迭代不维护，随意提交代码发布代码，那么，你认为怎么管理？</p>
 <p>管理的本质是什么呢？让一切都能顺畅的运行~</p>
 <h4 id="第六章_程序员的分享">第六章 <strong>程序员的分享</strong></h4><p>关于分享，之前我的理解一直认为是求知，大家都渴望进步，希望大神能分享高深的技术！然后自己能学到学会！之前我是觉得这是很天真的想法，但是慢慢的接触多了，理解也不太一样了。确实大神的分享，对大家学习知识，可以说是帮助非常非常少，甚至说短期内根本学不到大神分享的知识。而我意识到的东西，就是除了知识，还有什么东西！不能忽视的东西，比如学习思考的方式？解决问题的方案？演讲的技巧？PPT的图文制作？</p>
-<p>总之，<code>分享</code> 这个概念应该可以更好大，所以，今年我也做了一些调整，与我们团队一起分享和交流，通过学习 <a href="https://ming1016.github.io/categories/Programming/" target="_blank" rel="external">戴铭</a> 老师的<a href="https://gk.link/a/10fRy" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a>，然后大家一起总结&amp;分享，这个过程，希望不仅仅是知识，还有力量！</p>
+<p>总之，<code>分享</code> 这个概念应该可以更好大，所以，今年我也做了一些调整，与我们团队一起分享和交流，通过学习 <a href="https://ming1016.github.io/categories/Programming/" target="_blank" rel="external">戴铭</a> 老师的<a href="http://gk.link/a/10fRy" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a>，然后大家一起总结&amp;分享，这个过程，希望不仅仅是知识，还有力量！</p>
 <p>关于分享，19年还有很多思考没有写成文章，希望有时间补回来。最后，希望2020年，持续分享更多有意识有想法的知识，同时，也会把戴铭老师的《iOS开发高手课 - 极客时间》的学习笔记与大家一起分享。</p>
 <p>最后，其实，19年我还在尝试的一件有意思的分享，就是 <a href="https://mp.weixin.qq.com/s/XPG9j6Rb8kdhe9TbtM5zpQ" target="_blank" rel="external">iHTCboy公众号</a>，灵感来源是以前经过看的文章，看到一个有意思的图形，有意思的观点，有新意的艺术，有创新的图案，有干货的脑图…等，之前一直保存在手机相册中，但是手机空间少了或者换手机后，那么棒的图片又不见了，所以希望找一个地方保存起来，之前其实没有想过要分享，因为可能有版权的问题，现在的解决方案是有版权的图片，我会添加到引用来源的文档中，所以才有想法把它分享给大家。目前已经有一百多人关注，我的心理也发生了变化，之前会比较随意发，觉得好的就发，当关注的人越来越多时，我害怕分享的东西有遗漏或错误，误导大家，影响的用户也越多。同时，这样也是给我更多压力和动力，挖掘更多的正确的有意思的与大家分享，希望继续修行~</p>
 <h4 id="第七章_程序员的课堂">第七章 <strong>程序员的课堂</strong></h4><p><code>课堂</code>？关于程序员的学习，前面已经说了，建立自己的知识体系结构树。关于课堂这一节，是后面突发若想增加的。课堂之于课程，<code>活到老 学到老</code> 这个相信大家已经知道多年，但是怎么学？线上课堂、线下培训、脱产课堂、技术分享会、技术大会等，还有某x网盘上的xx课程，多达 10 TB 网络空间！</p>
@@ -1447,12 +1447,12 @@
     <link href="https://iHTCboy.com/2019/12/27/2019-12-27_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE03/"/>
     <id>https://iHTCboy.com/2019/12/27/2019-12-27_iOS开发高手课03/</id>
     <published>2019-12-27T12:20:20.000Z</published>
-    <updated>2020-02-07T03:32:20.693Z</updated>
+    <updated>2020-02-07T03:39:14.024Z</updated>
     <content type="html"><![CDATA[<h2 id="1、前言">1、前言</h2><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/12/iOS开发高手课-03-AutoLayout是怎么进行自动布局的，性能如何？.png" alt="iOS开发高手课-03-AutoLayout是怎么进行自动布局的，性能如何？.png"></p>
 <a id="more"></a>
 <h2 id="2、正文">2、正文</h2><blockquote>
-<p>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程 <a href="https://gk.link/a/10fRy" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a> </p>
+<p>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程 <a href="http://gk.link/a/10fRy" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a> </p>
 </blockquote>
 <h3 id="带问题找答案">带问题找答案</h3><ol>
 <li>Auto Layout 如何实现自动布局的？</li>
@@ -1571,7 +1571,7 @@
 <p><br></p>
 <p>注：更多关于 iOS 开发和程序开发相关的内容，可以查看系列，目前还在连载中 <a href="https://ihtcboy.com/2020/02/01/2020-02-01_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/">【学习总结】iOS开发高手课 – (连载中) | iHTCboy’s blog</a>，以上，希望对你有用！</p>
 <h2 id="参考">参考</h2><ul>
-<li><a href="https://gk.link/a/10fRy" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a></li>
+<li><a href="http://gk.link/a/10fRy" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a></li>
 </ul>
 <p>WWDC:</p>
 <ul>
@@ -1658,7 +1658,7 @@
     <link href="https://iHTCboy.com/2019/12/25/2019-12-25_GMTC2019shenzhen/"/>
     <id>https://iHTCboy.com/2019/12/25/2019-12-25_GMTC2019shenzhen/</id>
     <published>2019-12-25T03:11:11.000Z</published>
-    <updated>2020-02-07T03:32:20.673Z</updated>
+    <updated>2020-02-07T03:39:14.005Z</updated>
     <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>工作5年来，一直投身于 iOS 开发，而这5年来移动开发一直再追赶web前端和后端开发的技术栈和思想，近2年大家直接说：“大前端”，移动开发真正变成了“UI”前端的开发，而web前端借助 Node 开始转了后端开发？正是借着这些变化，我一直在思考，一直在疑问，直到看了一些 GMTC 课程，就像命悬一线的人一下子打通了任督二脉，练习武功不再于形式，需要提升认知的境界！这是一个神奇的世界，一个最好的时代！最“坏”的时代！</p>
 <a id="more"></a>
 <p>GMTC是什么？</p>
@@ -3957,12 +3957,12 @@
     <link href="https://iHTCboy.com/2019/12/20/2019-12-20_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE02/"/>
     <id>https://iHTCboy.com/2019/12/20/2019-12-20_iOS开发高手课02/</id>
     <published>2019-12-20T12:20:20.000Z</published>
-    <updated>2020-02-07T03:32:20.648Z</updated>
+    <updated>2020-02-07T03:39:13.982Z</updated>
     <content type="html"><![CDATA[<h2 id="1、前言">1、前言</h2><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/12/iOS开发高手课-02-App启动速度怎么做优化与监控？.png" alt="iOS开发高手课-02-App启动速度怎么做优化与监控？.png"></p>
 <a id="more"></a>
 <h2 id="2、正文">2、正文</h2><blockquote>
-<p>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程 <a href="https://gk.link/a/10fRy" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a> </p>
+<p>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程 <a href="http://gk.link/a/10fRy" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a> </p>
 </blockquote>
 <p>本文作为第一篇，脑图中包含了一些学习的方法论，这里就不展开了，具体可以查看 <a href="https://ihtcboy.com/2020/02/02/2020-02-02_建立你自己的开发知识体系/">如何建立你自己的开发知识体系 | iHTCboy’s blog</a></p>
 <h3 id="学习原则">学习原则</h3><p><strong>授人以鱼不如授人以渔</strong></p>
@@ -4028,7 +4028,7 @@
 <p>人生苦短，我们努力吧~</p>
 <h4 id="8、其它问题">8、其它问题</h4><p>其它的还有很多问题，这里就不一一指出，比如 <code>Swift 有 main 函数吗</code>？希望大家 <code>多疑问，多思考，多总结！</code>，这样成长更快啦~</p>
 <h2 id="3、总结">3、总结</h2><p>回到本文的主题，“App 启动速度怎么做优化与监控？”，优化，不知道大家是否还记得之前的第一篇文章说到的，不记得的可以回去看看。监控的话，这里没有详细提到，因为<code>性能监控</code>只是<code>监控系统</code>的一小部分，后面的章节在细节展开吧。</p>
-<p>这里先给出一个大纲，关于开发相关的工程优化，因为这也是我们从 <a href="https://gk.link/a/10fRy" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a> 来，我们要干什么？到那里去呢？</p>
+<p>这里先给出一个大纲，关于开发相关的工程优化，因为这也是我们从 <a href="http://gk.link/a/10fRy" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a> 来，我们要干什么？到那里去呢？</p>
 <ul>
 <li>可以做什么？</li>
 </ul>
@@ -4041,7 +4041,7 @@
 <p>很多知识点，大家现在看到这篇文章感觉一气呵成，水到渠成的样子，但是其实是一点一点的思考和触想，可能有一个概念很久之前就有，但是怎么把这些知识串联一起，确实是需要非常深厚的功能，才能做到。所以，本次系列，我只能说尽量自己的力量，因为<code>我相信不管是后来者，还是以后的我，都一定超越现在的我！</code>，所以，如果未来可以，可以在重写此系列，也是一件令人愉快的事！</p>
 <p>注：更多关于 iOS 开发和程序开发相关的内容，可以查看此系列，目前还在连载中 <a href="https://ihtcboy.com/2020/02/01/2020-02-01_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/">【学习总结】iOS开发高手课 – (连载中)| iHTCboy’s blog</a>，以上，希望对你有用！</p>
 <h2 id="参考">参考</h2><ul>
-<li><a href="https://gk.link/a/10fRy" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a></li>
+<li><a href="http://gk.link/a/10fRy" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a></li>
 <li><a href="https://ming1016.github.io/" target="_blank" rel="external">星光社 - 戴铭的博客</a></li>
 </ul>
 <p>WWDC:</p>
@@ -4125,7 +4125,7 @@
     <link href="https://iHTCboy.com/2019/12/04/2019-12-04_GMTC2019_%E5%9C%A8%E5%88%86%E6%AD%A7%E4%B8%AD%E5%8F%91%E5%B1%95-%E6%88%91%E4%BB%AC%E8%83%BD%E7%94%A8Swift%E5%81%9A%E4%BB%80%E4%B9%88/"/>
     <id>https://iHTCboy.com/2019/12/04/2019-12-04_GMTC2019_在分歧中发展-我们能用Swift做什么/</id>
     <published>2019-12-04T00:49:16.000Z</published>
-    <updated>2020-02-07T03:32:20.988Z</updated>
+    <updated>2020-02-07T03:39:14.288Z</updated>
     <content type="html"><![CDATA[<h3 id="1、简介">1、简介</h3><p>《在分歧中发展——2019，我们能用 Swift 做什么》<br> 王巍（喵神） / LINE 高级软件工程师</p>
 <ul>
 <li><p>演讲简介：</p>
@@ -4208,7 +4208,7 @@
     <link href="https://iHTCboy.com/2019/12/03/2019-12-03_GMTC2019_%E7%A7%BB%E5%8A%A8Web%E4%B8%8A%E7%8E%A9%E8%BD%AC%E5%8E%9F%E7%94%9F%E6%B8%B8%E6%88%8F/"/>
     <id>https://iHTCboy.com/2019/12/03/2019-12-03_GMTC2019_移动Web上玩转原生游戏/</id>
     <published>2019-12-03T04:49:16.000Z</published>
-    <updated>2020-02-07T03:32:20.633Z</updated>
+    <updated>2020-02-07T03:39:13.966Z</updated>
     <content type="html"><![CDATA[<h3 id="1、简介">1、简介</h3><p>《移动 Web 上玩转原生游戏 》<br> 杨轶 / 上海木鸡网络科技有限公司 联合创始人</p>
 <ul>
 <li><p>演讲简介：</p>
@@ -4327,7 +4327,7 @@
     <link href="https://iHTCboy.com/2019/12/02/2019-12-02_GMTC2019_%E5%9F%BA%E4%BA%8E%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8A%80%E6%9C%AF%E6%A0%88%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%B7%A8%E5%B9%B3%E5%8F%B0%E5%AE%9E%E8%B7%B5/"/>
     <id>https://iHTCboy.com/2019/12/02/2019-12-02_GMTC2019_基于小程序技术栈的微信客户端跨平台实践/</id>
     <published>2019-12-02T04:49:16.000Z</published>
-    <updated>2020-02-07T03:32:21.466Z</updated>
+    <updated>2020-02-07T03:39:14.672Z</updated>
     <content type="html"><![CDATA[<h3 id="1、简介">1、简介</h3><p>《基于小程序技术栈的微信客户端跨平台实践》<br> 张志坚 / 微信 高级工程师</p>
 <ul>
 <li><p>演讲简介：</p>
@@ -4435,7 +4435,7 @@
     <link href="https://iHTCboy.com/2019/12/01/2019-12-01_GMTC2019beijing/"/>
     <id>https://iHTCboy.com/2019/12/01/2019-12-01_GMTC2019beijing/</id>
     <published>2019-12-01T03:11:11.000Z</published>
-    <updated>2020-02-07T03:32:21.528Z</updated>
+    <updated>2020-02-07T03:39:14.741Z</updated>
     <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>工作5年来，一直投身于 iOS 开发，而这5年来移动开发一直再追赶web前端和后端开发的技术栈和思想，近2年大家直接说：“大前端”，移动开发真正变成了“UI”前端的开发，而web前端借助 Node 开始转了后端开发？正是借着这些变化，我一直在思考，一直在疑问，直到看了一些 GMTC 课程，就像命悬一线的人一下子打通了任督二脉，练习武功不再于形式，需要提升认知的境界！这是一个神奇的世界，一个最好的时代！最“坏”的时代！</p>
 <a id="more"></a>
 <p>GMTC是什么？</p>
@@ -6920,7 +6920,7 @@ DOM 架构方案在文本编辑与图形渲染操作方面的优缺点
     <link href="https://iHTCboy.com/2019/11/17/2019-11-17_%E4%B8%80%E4%B8%AAAlfred%E7%9A%84Workflow%E8%81%8A%E5%A4%A9%E5%86%85%E5%AE%B9%E5%BC%95%E7%94%A8%E6%B6%88%E6%81%AF/"/>
     <id>https://iHTCboy.com/2019/11/17/2019-11-17_一个Alfred的Workflow聊天内容引用消息/</id>
     <published>2019-11-17T12:22:01.000Z</published>
-    <updated>2020-02-07T03:32:20.542Z</updated>
+    <updated>2020-02-07T03:39:13.914Z</updated>
     <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>在微信 Mac/PC 端消息有个「引用消息」的功能，用于针对某个特定消息回复，而其它 App 没有该功能，或者有，比如 QQ / Telegram 都有实现回复（reply）功能，但是都是针对一条消息回复，如果需要对多条消息统一做回复，自带的功能也许真不够自定义的好。当然，最主要是我司现在用的 <code>企业QQ for macOS</code> 版本不支持这个功能，于是就想到自己做一个 workflow 可以读取当前复制的内容，然后生成一个带引用格式的文本，并完成后粘贴到 App，从而实现引用回复~</p>
 <p>传送门下载：<a href="https://github.com/iHTCboy/macOSConfig/blob/master/Alfred/Reply%20Message%20v1.0.alfredworkflow" target="_blank" rel="external">Reply Message v1.0.alfredworkflow</a></p>
 <a id="more"></a>
@@ -6988,7 +6988,7 @@ DOM 架构方案在文本编辑与图形渲染操作方面的优缺点
     <link href="https://iHTCboy.com/2019/11/08/2019-11-08_Python-Fabric/"/>
     <id>https://iHTCboy.com/2019/11/08/2019-11-08_Python-Fabric/</id>
     <published>2019-11-08T14:49:16.000Z</published>
-    <updated>2020-02-07T03:32:21.073Z</updated>
+    <updated>2020-02-07T03:39:14.365Z</updated>
     <content type="html"><![CDATA[<h3 id="1、是什么">1、是什么</h3><p>Fabric 是一个 Python (2.5, 3.4+) 的库和命令行工具，用来提高基于 SSH 的应用部署和系统管理效率。</p>
 <p>而网上搜索了一些教程，发现很旧或者因为Fabric版本不兼容问题，导致代码分裂断层搞不明白，所以就有了本文。</p>
 <a id="more"></a>
@@ -7047,7 +7047,7 @@ DOM 架构方案在文本编辑与图形渲染操作方面的优缺点
     <link href="https://iHTCboy.com/2019/10/12/2019-10-12_%E5%9C%A8%E6%97%A7%E7%9A%84Mac%E4%B8%8A%E4%BD%BF%E7%94%A8%E9%9A%8F%E8%88%AASidecar/"/>
     <id>https://iHTCboy.com/2019/10/12/2019-10-12_在旧的Mac上使用随航Sidecar/</id>
     <published>2019-10-12T15:01:16.000Z</published>
-    <updated>2020-02-07T03:32:20.908Z</updated>
+    <updated>2020-02-07T03:39:14.207Z</updated>
     <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>6月 <code>WWDC2019</code> 上苹果发布新的 <code>macOS 10.15</code>，同时发布 <code>Sidecar</code>（随航）功能，可以把 <code>macOS</code> 界面转发到 <code>iPad</code> 上，但是对于旧的 Mac 电脑，不支持随航功能！我的 <code>MacBook Pro (Retina, 13-inch, Mid 2014)</code> 哭晕在厕所~</p>
 <a id="more"></a>
 <h3 id="2、Sidecar（随航）">2、Sidecar（随航）</h3><p>按苹果的介绍：</p>
@@ -7143,7 +7143,7 @@ DOM 架构方案在文本编辑与图形渲染操作方面的优缺点
     <link href="https://iHTCboy.com/2019/09/16/2019-09-16_Sign-in-with-Apple/"/>
     <id>https://iHTCboy.com/2019/09/16/2019-09-16_Sign-in-with-Apple/</id>
     <published>2019-09-16T14:49:16.000Z</published>
-    <updated>2020-02-07T03:32:20.409Z</updated>
+    <updated>2020-02-07T03:39:13.829Z</updated>
     <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>iOS 13 最大的亮点是 <code>Dark</code> 模式，另一个就是苹果登录（Sign in with Apple）方式的增加，让苹果生态又多了一层体验，苹果的生态建设越来越好，让iOS开发者成为 Apple 全栈开发的可能性更接近，对于开发者来说，用好 API ，然后看到苹果这些年对生态的建设，还是有很多想象力！</p>
 <a id="more"></a>
 <h3 id="2、Sign_in_with_Apple">2、Sign in with Apple</h3><h4 id="是什么">是什么</h4><blockquote>
@@ -7383,7 +7383,7 @@ DOM 架构方案在文本编辑与图形渲染操作方面的优缺点
     <link href="https://iHTCboy.com/2019/08/26/2019-08-26_iOS13%E9%80%82%E9%85%8D/"/>
     <id>https://iHTCboy.com/2019/08/26/2019-08-26_iOS13适配/</id>
     <published>2019-08-26T14:49:16.000Z</published>
-    <updated>2020-02-07T03:32:21.290Z</updated>
+    <updated>2020-02-07T03:39:14.498Z</updated>
     <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>针对 iOS 13，苹果做了非常大的调整，其中 Dark 模式是最新的 UI 层面可见的改变，而针对iPad推出了 <code>iPadOS</code>，导致了与 iOS 的分化，同时为了 iPad 而不得不对 iOS 同样做出的改变，比如一个应用支持多 window 显示。所以，每年 WWDC 后，因为每个应用的情况不一样，使用的API各不相同，导致适配的工作无法一致，大家遇到的坑不相同，所以，把大家遇到的问题都汇总起来，那就是一定有作用，这就是本文的初心。</p>
 <a id="more"></a>
 <h3 id="2、iOS_13_适配问题">2、iOS 13 适配问题</h3><h4 id="1-_如何关闭程序中的暗黑模式？">1. 如何关闭程序中的暗黑模式？</h4><p>iOS13最大的特点是带来了暗黑模式，但是如果不适配的话，可能会出现该是黑色的地方用了白色了，该是白色的地方是黑色了，看不到了，怎么关掉呢？</p>
@@ -7567,7 +7567,7 @@ DOM 架构方案在文本编辑与图形渲染操作方面的优缺点
     <link href="https://iHTCboy.com/2019/07/30/2019-07-30_iOS%E5%8C%85%E9%87%8D%E7%AD%BE%E5%90%8D%E6%8A%80%E6%9C%AF%E7%9F%A5%E8%AF%86/"/>
     <id>https://iHTCboy.com/2019/07/30/2019-07-30_iOS包重签名技术知识/</id>
     <published>2019-07-30T13:22:16.000Z</published>
-    <updated>2020-02-07T03:32:20.760Z</updated>
+    <updated>2020-02-07T03:39:14.082Z</updated>
     <content type="html"><![CDATA[<h3 id="1、简介">1、简介</h3><p>利用Xcode的命令 <code>security</code> 和 <code>codesign</code> 重签ipa文件。重签名与Xcode里用build打包时进行的签名操作是一个原理，具体来说，先了解一下iOS相关的证书类型。</p>
 <p><strong>证书类型：</strong></p>
 <table>
@@ -7850,7 +7850,7 @@ DOM 架构方案在文本编辑与图形渲染操作方面的优缺点
     <link href="https://iHTCboy.com/2019/06/28/2019-06-28_Python%E5%BA%93pyOpenSSL%E8%AF%BB%E5%8F%96p12%E8%AF%81%E4%B9%A6/"/>
     <id>https://iHTCboy.com/2019/06/28/2019-06-28_Python库pyOpenSSL读取p12证书/</id>
     <published>2019-06-28T15:19:16.000Z</published>
-    <updated>2020-02-07T03:32:20.931Z</updated>
+    <updated>2020-02-07T03:39:14.226Z</updated>
     <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>本文主要是讲解如何用python读取<code>p12</code>的信息。</p>
 <p>如果有过iOS团队开发经验的朋友，一定对<code>p12</code>有所了解，因为苹果开发者网站制作的cer证书，只能用生成 <code>CSR</code>（Certificate Signing Request）文件 ———<code>CertificateSigningRequest.certSigningRequest</code> 的macOS系统安装，因为生成<code>CSR</code>时，私钥保存地本地电脑中，同时，普通个人开发账号最多可注册iOS Development/Distribution 证书各2个。所以，<code>p12</code> 就是解决在多个电脑之间共享证书的一种方式。本文不会详解iOS证书相关知识，想了解更多，可以查看本文末提供的参考文章。</p>
 <a id="more"></a>
