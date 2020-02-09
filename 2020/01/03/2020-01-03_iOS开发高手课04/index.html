@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="iHTCboy's blog">
 <meta property="og:description" content="1、前言首先，我认为学习总结，要有所总，所结，就是有归纳后，能用自己的话告诉别人！有所结，就是有所收获输出，一般我认为是思维导图，所以，每篇文章前，我都会先给出文章的脑图：">
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/iOS开发高手课-04-项目大了人员多了，架构怎么设计更合理？.png">
-<meta property="og:updated_time" content="2020-02-07T03:39:14.756Z">
+<meta property="og:updated_time" content="2020-02-09T02:51:41.985Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【学习总结】04 | 项目大了人员多了，架构怎么设计更合理？">
 <meta name="twitter:description" content="1、前言首先，我认为学习总结，要有所总，所结，就是有归纳后，能用自己的话告诉别人！有所结，就是有所收获输出，一般我认为是思维导图，所以，每篇文章前，我都会先给出文章的脑图：">
@@ -378,7 +378,7 @@ var _hmt = _hmt || [];
 <li>URL/Protocol 注册调度</li>
 <li>Runtime 调度</li>
 </ul>
-<p>本文唯一与原文相关的可以就是这一节啦，原文中提到 <a href="https://github.com/casatwy/CTMediator" target="_blank" rel="external">CTMediator</a> 库来架构 iOS 项目，具体的分析和细节这里就不讨论了，本文后面在做统一的回应吧。所以本节注意说 iOS<code>调度</code>的问题，原文中提到 CTMediator 的2个缺点：</p>
+<p>本文唯一与原文相关的可能就是这一节啦，原文中提到 <a href="https://github.com/casatwy/CTMediator" target="_blank" rel="external">CTMediator</a> 库来架构 iOS 项目，具体的分析和细节这里就不讨论了，本文后面在做统一的回应吧。所以本节注意说 iOS<code>调度</code>的问题，原文中提到 CTMediator 的2个缺点：</p>
 <ol>
 <li>直接硬编码的调用方式，参数是以string的方法保存在内存里，虽然和将参数保存在Text字段里占用的内存差不多，同时还可以避免.h文件的耦合，但是其对代码编写效率的降低也比较明显。</li>
 <li>由于是在运行时才确定的调用方法，调用方式由 <code>[obj method]</code> 变成 <code>[obj performSelector:@&quot;&quot;]</code>。这样的话，在调用时就缺少类型检查，是个很大的缺憾。因为，如果方法和参数比较多的时候，代码编写效率就会比较低。</li>
