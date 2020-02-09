@@ -942,7 +942,7 @@
     <link href="https://iHTCboy.com/2020/01/03/2020-01-03_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE04/"/>
     <id>https://iHTCboy.com/2020/01/03/2020-01-03_iOS开发高手课04/</id>
     <published>2020-01-03T12:20:20.000Z</published>
-    <updated>2020-02-09T02:51:41.985Z</updated>
+    <updated>2020-02-09T02:54:12.366Z</updated>
     <content type="html"><![CDATA[<h2 id="1、前言">1、前言</h2><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/iOS开发高手课-04-项目大了人员多了，架构怎么设计更合理？.png" alt="iOS开发高手课-04-项目大了人员多了，架构怎么设计更合理？.png"></p>
 <a id="more"></a>
@@ -1090,7 +1090,7 @@
 <li>直接硬编码的调用方式，参数是以string的方法保存在内存里，虽然和将参数保存在Text字段里占用的内存差不多，同时还可以避免.h文件的耦合，但是其对代码编写效率的降低也比较明显。</li>
 <li>由于是在运行时才确定的调用方法，调用方式由 <code>[obj method]</code> 变成 <code>[obj performSelector:@&quot;&quot;]</code>。这样的话，在调用时就缺少类型检查，是个很大的缺憾。因为，如果方法和参数比较多的时候，代码编写效率就会比较低。</li>
 </ol>
-<p><code>避免.h文件的耦合</code> 这个大家理解吗？在这个项目后，阿里开源了 <a href="https://github.com/alibaba/BeeHive/blob/master/README-CN.md" target="_blank" rel="external">BeeHive</a>，基于 <code>Protocol</code> 注册调度，那么它的缺点是什么？就是这个 .h文件的声明 经常找不到，需要很多全局的变量。当然，<code>任何架构都无法百分百完美！</code>，更多问题欢迎留意交流。</p>
+<p><code>避免.h文件的耦合</code> 这个大家理解吗？在这个项目后，阿里开源了 <a href="https://github.com/alibaba/BeeHive/blob/master/README-CN.md" target="_blank" rel="external">BeeHive</a>，基于 <code>Protocol</code> 注册调度，那么它的缺点是什么？就是这个 .h文件的声明编译时经常报错找不到，需要很多全局的变量。当然，<code>任何架构都无法百分百完美！</code>，更多问题欢迎评论区交流。</p>
 <h4 id="代码质量">代码质量</h4><ul>
 <li>可读性</li>
 <li>可维护性</li>
@@ -1099,7 +1099,7 @@
 <li>commit规范</li>
 <li>CodeReview</li>
 </ul>
-<p><code>代码质量不是由开发人员里技术最强的人决定的</code>，前面提到，如果代码很烂，那么很难维护，所以对于项目架构来说，代码质量也是必要关注的！</p>
+<p><code>代码质量不是由开发人员里技术最强的人决定的</code>，前面提到，如果代码很烂，那么很难维护，所以对于项目架构来说，代码质量也是必要关注的！以上是我认为必须要关注的事项，具体这样就不展开了，大家可以根据自己的项目或团队来规划。</p>
 <h4 id="其它概念">其它概念</h4><ul>
 <li><code>DRY</code>（Don’t Repeat Yourself! 不要重复你自己）</li>
 <li><code>KISS</code>(Keep It Simple, Stupid! 让事情简单化，傻瓜化) ：翻译成中⽂就是“保持简单、愚蠢”。</li>
