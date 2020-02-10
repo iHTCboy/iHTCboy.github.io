@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Learn something of everything,  Learn everything of something.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="https://iHTCboy.com/"/>
-  <updated>2020-02-07T03:39:14.137Z</updated>
+  <updated>2020-02-10T15:17:22.323Z</updated>
   <id>https://iHTCboy.com/</id>
   
   <author>
@@ -13,6 +13,175 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[程序员的macOS系列：高效Alfred进阶]]></title>
+    <link href="https://iHTCboy.com/2020/02/09/2019-02-09_%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84macOS%E7%B3%BB%E5%88%97%EF%BC%9A%E9%AB%98%E6%95%88Alfred%E8%BF%9B%E9%98%B6/"/>
+    <id>https://iHTCboy.com/2020/02/09/2019-02-09_程序员的macOS系列：高效Alfred进阶/</id>
+    <published>2020-02-09T12:49:16.000Z</published>
+    <updated>2020-02-10T15:17:22.323Z</updated>
+    <content type="html"><![CDATA[<h2 id="1、前言">1、前言</h2><p>最近在写《程序员的macOS系列》文章，之前（2018年）写的二篇 <a href="https://ihtcboy.com/2018/07/15/2018-07-15_程序员的macOS系列：精选MacApp/">精选Mac App</a>、<a href="https://ihtcboy.com/2018/09/30/2018-09-30_程序员的macOS系列：Mac开发环境配置/">Mac开发环境配置</a>，至今，已经过年一年半啦！收到很多同学的点赞，最后一篇 <code>高效Alfred进阶</code> 因为各种原因，没有写出来，所以都0202年啦！</p>
+<p>其实 <code>macOS</code> 系统的高效，很大部分原因是因为有 <code>Unix/Linux</code> 的相似血液，本文讲解<code>Alfred</code>，就是效率工具的一员，相信注重效率的你，一早肯定听说过或者已经在使用。还有很多效率方法，以后有机会在总结吧，大家也可以自行搜索 macOS 开发效率，博主之前也写过一些。那为什么会认为 <code>Alfred</code> 对程序员很重要呢？如果你没有用过，相信你读完本文就会明白。虽然网上已经有很多 <code>Alfred</code> 的教程，但是一直没有找到能相对全面，或很少从入口到进阶的文章，并且很多文章历史已经悠久，所以惟有抛砖引玉，自我总结一下，希望和大家一起努力提交效率！</p>
+<ul>
+<li><a href="https://ihtcboy.com/2018/07/15/2018-07-15_程序员的macOS系列：精选MacApp/">程序员的macOS系列：精选Mac App</a></li>
+<li><a href="https://ihtcboy.com/2018/09/30/2018-09-30_程序员的macOS系列：Mac开发环境配置/">程序员的macOS系列：Mac开发环境配置</a></li>
+<li><a href="https://ihtcboy.com/2018/09/30/2019-02-08_程序员的macOS系列：高效Alfred进阶/">程序员的macOS系列：高效Alfred进阶</a></li>
+</ul>
+<p>目前计划写《程序员的macOS系列》三篇已经完成 ✅，后续有想法在更新吧~</p>
+<h2 id="Alfred_提高程序员_100%_效率指南">Alfred 提高程序员 100% 效率指南</h2><a id="more"></a>
+<p><strong>Alfred 4 for Mac</strong> 官网产品说明：</p>
+<blockquote>
+<p>Alfred is an award-winning app for macOS which boosts your efficiency with hotkeys, keywords, text expansion and more. Search your Mac and the web, and be more productive with custom actions to control your Mac.<br>Alfred是一款屡获殊荣的macOS应用程序，可通过热键，关键字，文本扩展等功能提高您的效率。搜索Mac和网络，并通过自定义操作来控制Mac来提高生产力。</p>
+</blockquote>
+<p>小帽子 <code>Alfred</code>（读<code>[&#39;ælfrid]</code>） 是 macOS 平台强大的效率软件！誉为神兵利器毫不为过。我们本篇文章基于2020年1月17号更新的版本 <code>Alfred 4.0.8（Build 1135）</code>，所以如果低于此版本导致部分功能没有的，请更新最新版本。或者有新功能此版本没有提及的，请以官网为准 <a href="https://www.alfredapp.com/" target="_blank" rel="external">Alfred - Productivity App for macOS</a>。</p>
+<p>需要注意的是，本文是以提高效率为准，不会讲解如何制作 Workflows（工作流），只会讲解有那些好用的工作流。另外，网上的教程很多都是15年左右的，新一点的教程还是以其一功能为主讲，我一直思考，怎么才能从入门到精通 Alfred 呢？所以，为了让大家全面的了解，这里会从软件的偏好设置从上往下，一个一个解析，中间串插对整个功能的讲解。另外，如果可以太简单的操作或流程，不提供截图。下面就开始我们的文章！</p>
+<h3 id="General（通用设置）">General（通用设置）</h3><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-General.png" alt="Alfred-General.png"></p>
+<ul>
+<li><p><code>Startup</code>（启动）<br>勾选表示系统重启时，会自动启动 Alfred。</p>
+</li>
+<li><p><code>Alfred Hotkey</code>（Alfred 热键）<br>设置显示 Alfred 输入框的键盘快捷键，我一般设置为 <code>command + Space</code>，也就是苹果键（Apple key，<code>⌘</code>）和空格键组合，很多人使用 <code>command + command</code> 或 <code>option + option</code>，双同键的组合，我认为是不够高效的。因为，你要双击（<code>double click</code>）才能响应，还是慢了一拍！</p>
+</li>
+<li><p><code>Where are you</code>（你在哪）<br>设置你所有的国家或地区，目的是更加人性化的内容，比如谷歌搜索或易呗（ebay），中国就淘宝什么的，目前这个针对中国区还没有什么作用。</p>
+</li>
+<li><p><code>Permissions</code>（权限）<br>点击 <code>Request Permissions...</code> 打开权限许可说明，主要是授权 Alfred 可以访问系统和电脑的那些权限：<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-General-Permissions-Request-Permissions.png" alt="Alfred-General-Permissions-Request-Permissions.png"></p>
+</li>
+</ul>
+<p>这个权限的设置，在下面的 <code>其它问题汇总</code> 再进一步说明，因为比较多，不影响大家阅读，我们先说重点！</p>
+<h3 id="Features（主要功能）">Features（主要功能）</h3><h4 id="Default_Results（默认结果）">Default Results（默认结果）</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Default-Results.png" alt="Alfred-Features-Default-Results.png"><br>主要是设置搜索相关的默认配置。</p>
+<ul>
+<li><p><code>Applecations</code><br>设置模糊搜索应用名字还有是不是搜索应用内的资源，比如搜索 <code>梁静茹</code> 可能在<code>Music.app</code>。</p>
+</li>
+<li><p><code>Essentials</code>(要点)<br>搜索系统偏好设置和联系人信息的内容</p>
+</li>
+<li><p><code>Extras</code>（额外部分）<br>搜索 文件夹、文档、文本文件、图片、压缩文件、苹果脚本等内容，也可以自定添加格式内容。</p>
+</li>
+<li><p><code>Unintelligent</code>（不智能的）<br>搜索全部类型的文件。（不推荐）</p>
+</li>
+<li><p><code>Search Scope</code>（搜索范围）<br>可以设置搜索的文件空间或目录等。</p>
+</li>
+<li><p><code>Fallbacks</code>（退路，应变计划）<br>用于设置搜索没有找到结果时，显示的可选的进一步的操作。<br>类似如下图，搜索wq时没有结果会显示一个可操作列表，前面2项是 Alfred自带的搜索项，剩下的是自定义搜索（见下一节<code>Web Search（网站搜索）</code>的内容）。<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Default-Results-Fallbacks.png" alt="Alfred-Features-Default-Results-Fallbacks.png"></p>
+</li>
+</ul>
+<h4 id="File_Search（文件搜索）">File Search（文件搜索）</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-File-Search.png" alt="Alfred-Features-File-Search.png"></p>
+<p>通过关键字快速和突出搜索的文件的结果。</p>
+<h5 id="Search（搜索）标签">Search（搜索）标签</h5><ul>
+<li><p><code>Quick Search</code>（快速搜索）<br>通过<code>&#39;</code>或 <code>spacebar</code>空格键可以可以快速查找文件。</p>
+</li>
+<li><p><code>Opening Files</code><br>直接打开文件（默认就是open，不敲入关键字，即搜索文件名后回车，就是直接打开该文件）。默认是<code>open</code>，我一般设置为<code>op</code>，找到文件后，点击或按右边提示的快捷键，可以快速打开文件。比如：<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-File-Search-Open.png" alt="Alfred-Features-File-Search-Open.png"></p>
+</li>
+<li><p><code>Revealing Files</code><br>打开文件所在的文件夹。默认用<code>find</code>，我一般设置为<code>fd</code>，fd + 搜索词，找到文件后，点击或按右边提示的快捷键，可以快速打开文件所在的文件夹。（这里省略图示，可以自己试试。）</p>
+</li>
+<li><p><code>Inside Files</code><br>在文件内搜索内容。默认用<code>in</code>，in + 搜索词，找到文件后，点击或按右边提示的快捷键，可以快速打开文件。（这里省略图示，可以自己试试。）</p>
+</li>
+<li><p><code>File Tags</code><br>搜索文件标签。</p>
+</li>
+<li><p><code>Don&#39;t Show</code><br>设置不搜索的内容，比如 Emails(邮箱内容）、Bookmarks（网页书签）、Music（音乐）等等。</p>
+</li>
+<li><p><code>Result Limit</code><br>显示的搜索结果条数，可以设置为<code>20</code>、<code>30</code>、<code>40</code>条。</p>
+</li>
+</ul>
+<h5 id="Navigation（导航）标签">Navigation（导航）标签</h5><h5 id="Buffer（缓存）标签">Buffer（缓存）标签</h5><p>文件多选缓存操作，可以从不同的文件夹中选择多个文件，然后进行批量操作，打开、共享、删除等等。</p>
+<ul>
+<li>option + ↑ ：把该文件加入列表；</li>
+<li>option + ↓ ：把该文件加入列表，光标跳向下一个文件；</li>
+<li>option + ← ：删除列表最后一个文件；</li>
+<li>option + → ：对列表文件进行统一操作。</li>
+</ul>
+<h5 id="Advanced（增强）标签">Advanced（增强）标签</h5><h4 id="Actions（动作）">Actions（动作）</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Actions.png" alt="Alfred-Features-Actions.png"></p>
+<h4 id="Web_Search（网站搜索）">Web Search（网站搜索）</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Web-Search.png" alt="Alfred-Features-Web-Search.png"></p>
+<p>网页搜索自带了不少，比如google、wiki、bing等网页搜索，但对于国内用户来说，还是得需要自定义百度、知乎等搜索，点击右下角的Add Custom Search，按照下面的格式自己增加即可。</p>
+<h4 id="Web_Bookmarks（网页书签）">Web Bookmarks（网页书签）</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Web-Bookmarks.png" alt="Alfred-Features-Web-Bookmarks.png"></p>
+<p>目前Alfred只支持Safari和Chrome的书签搜索。</p>
+<h4 id="Clipboard_History（剪切版历史）">Clipboard History（剪切版历史）</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Clipboard-History.png" alt="Alfred-Features-Clipboard-History.png"></p>
+<p>默认情况下，Alfred是没有打开剪贴板历史这个功能的，需要自己手动去开启，可以打开文字、图片、文件列表的剪贴板功能，自定义一个快捷键，光标在需要粘贴的地方，呼出剪贴板历史，选中需要粘贴的内容，回车即可。</p>
+<h4 id="Snippets（片段）">Snippets（片段）</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Snippets.png" alt="Alfred-Features-Snippets.png"></p>
+<h4 id="Calculator（计算器）">Calculator（计算器）</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Calculator.png" alt="Alfred-Features-Calculator.png"></p>
+<h4 id="Dictionary（字典）">Dictionary（字典）</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Dictionary.png" alt="Alfred-Features-Dictionary.png"></p>
+<h4 id="Contacts（联系人）">Contacts（联系人）</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Contacts.png" alt="Alfred-Features-Contacts.png"></p>
+<h4 id="Music（音乐）">Music（音乐）</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Music.png" alt="Alfred-Features-Music.png"></p>
+<h4 id="1Password（密码）">1Password（密码）</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-1Password.png" alt="Alfred-Features-1Password.png"></p>
+<h4 id="System（系统）">System（系统）</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-System.png" alt="Alfred-Features-System.png"><br>可以自定义命令，实现部分系统功能，比如关机、重启、锁屏、退出程序等。</p>
+<h4 id="Terminal（终端）">Terminal（终端）</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Terminal.png" alt="Alfred-Features-Terminal.png"></p>
+<h4 id="Large_Type（放大镜风格）">Large Type（放大镜风格）</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Large-Type.png" alt="Alfred-Features-Large-Type.png"></p>
+<h4 id="Previews（预览）">Previews（预览）</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Previews.png" alt="Alfred-Features-Previews.png"></p>
+<h3 id="Workflows（工作流）">Workflows（工作流）</h3><p><code>Workflows</code>翻译中文叫<strong>工作流</strong>，应该也比较好理解。网上上面介绍的功能，有一部分就是工作流，可以理解为Alfred自带的工作流。类似的，你是不是能想到一些可以定制化的操作流程呢？所以，当然也可以使用第三方的工作流，或者自己定义自己的工作流！</p>
+<p>如果想要使用第三方的或者自定义的工作流，需要支付购买Alfred的<code>PowerPack</code>，Alfred的 PowerPack 是最值得购买的服务，没有之一。因为如果使用 Alfred 而没有 PowerPack 授权，那 Alfred 的强大的功能相当失去了左右臂。关于 PowerPack 细节我们在下一节内容在讨论，我们接着说 Workflows（工作流）。</p>
+<p>Alfred 安装完「Powerpack」，就像车体安装了引擎，余下的事情就看我们如何 DIY，让引擎为我们提供无限动力。而引擎提供动力的燃料我们称其为 <code>Workflow</code>。官方对于 workflow 是这样描述的：</p>
+<blockquote>
+<p>With Alfred’s Powerpack and workflows, you can extend Alfred and get things done in your own way. Replace repetitive tasks with workflows, and boost your productivity.<br>Discover the abundance of workflows that integrate with your favourite Mac applications and web services, from social networks and note-taking apps to shopping and music services.<br>We’ve hand-picked a few of the best workflows here. You’ll find hundreds more on <a href="http://www.packal.org" target="_blank" rel="external">Packal</a>, a brilliant user-created repository for workflows, as well as on <a href="https://alfredforum.com" target="_blank" rel="external">Alfred Forum</a>, where you’ll also find help in creating your own workflows.<br>借助Alfred的Powerpack和工作流程，您可以扩展Alfred并以自己的方式完成工作。用工作流替换重复的任务，并提高工作效率。<br>发现丰富的工作流程，这些工作流程与您喜欢的Mac应用程序和Web服务集成在一起，从社交网络和记笔记应用程序到购物和音乐服务。<br>我们在这里手工挑选了一些最佳的工作流程。在 <a href="http://www.packal.org" target="_blank" rel="external">Packal</a>（一个出色的由用户创建上传的workflows的网站）上以及 <a href="https://alfredforum.com" target="_blank" rel="external">Alfred Forum</a>（您可以在其中找到有关创建自己的workflows的帮助）的更多信息。</p>
+</blockquote>
+<h4 id="认识_workflow_结构">认识 workflow 结构</h4><p>实现 WorkFlows 的四个基本对象：<code>trigger</code>、<code>keyword</code>、<code>action</code>、<code>output</code>。Alfred 通过将这四个基本对象合理链接「Connect」，便能实现各种高级功能。而在 Alfred 的 Workflow 配置界面中，大体上可以将其分为三栏，trigger 和 keyword 都会触发后续行为，所以归到「原因」类；Action 是「过程」类，也是 workflow 的核心，它负责处理用户需求；而 output 是「结果」类，负责把 action 的结果以一定的形式传递给用户，可以是直接屏显，也可以是另存为文件，也可以是返回到最后一个程序的输入框中。总之这三个类别「四个对象」各司其职，最终可以完成较为复杂的数据处理和用户需求。而这四个对象都可以用「线」链接，来形成直接或间接的条件结果关系。</p>
+<h4 id="插件">插件</h4><ul>
+<li><a href="https://github.com/zenorocha/alfred-workflows" target="_blank" rel="external">zenorocha/alfred-workflows: A collection of Alfred 3 and 4 workflows that will rock your world</a></li>
+<li><p><a href="https://github.com/kaiye/workflows-youdao/" target="_blank" rel="external">kaiye/workflows-youdao: 学英语和写工具</a></p>
+</li>
+<li><p><a href="https://ihtcboy.com/2019/11/17/2019-11-17_%E4%B8%80%E4%B8%AAAlfred%E7%9A%84Workflow%E8%81%8A%E5%A4%A9%E5%86%85%E5%AE%B9%E5%BC%95%E7%94%A8%E6%B6%88%E6%81%AF/">用 Alfred Workflow 实现聊天内容快速引用回复 | iHTCboy’s blog</a></p>
+</li>
+</ul>
+<h4 id="Alfred_实现快速复制当前文件夹路径">Alfred 实现快速复制当前文件夹路径</h4><h4 id="Alfred_Workflow_精品推荐：配合_TinyPNG_快速压缩图片">Alfred Workflow 精品推荐：配合 TinyPNG 快速压缩图片</h4><h3 id="Appearance（外表）">Appearance（外表）</h3><h3 id="Remote（远程）">Remote（远程）</h3><ul>
+<li><a href="https://apps.apple.com/app/alfred-remote/id927944141?ign-mpt=uo%3D4" target="_blank" rel="external">‎Alfred Remote on the App Store</a></li>
+</ul>
+<h3 id="Powerpack（电源组）">Powerpack（电源组）</h3><p>但部分强大的扩展功能和 Workflows 功能是需要购买升级包的。</p>
+<h3 id="Usage（使用情况）">Usage（使用情况）</h3><p>为了说明 Alfred 的潜在价值。在这里，我们不妨做一个简单的计算，假设每天我都能够保持现况以每日平均唤醒 45.2 次为基数（其实最近的使用频率远高于 45.2 次）。假如每次 Alfred 的操作，可以为我节省 5s 的时间（往往有些复杂的操作会大于 5s，比如去寻找一个藏得很深的文件)，那么 5 年下来，竟然能够节省 4.7 天。换言之，你能够少用 4.7 天的电脑去工作，换言之，Alfred 让你的生命延长了 4.7 天！</p>
+<p><code>5 * 365 * 45.2 * 5 / 3600 / 24 = 4.773726852 天</code></p>
+<p>可见，Alfred 是每日强依赖于计算机的工作者的效率神器。鉴于之前互联网上零零散散地对 Alfred 的文章介绍不够系统，也不是最新，所以我打算在此做个「全家桶」，让读者更好地使用 Alfred 来提高日常的工作效率！</p>
+<h3 id="Help（帮助）">Help（帮助）</h3><h3 id="Update（更新）">Update（更新）</h3><h3 id="其它问题汇总">其它问题汇总</h3><ul>
+<li><p>系统权限问题</p>
+</li>
+<li><p>更新</p>
+</li>
+</ul>
+<p><code>Reload Alfred Cache</code></p>
+<h3 id="参考">参考</h3><ul>
+<li><a href="https://www.alfredapp.com/" target="_blank" rel="external">Alfred - Productivity App for macOS</a></li>
+<li><a href="http://www.packal.org/" target="_blank" rel="external">Packal - Alfred Workflows and Themes</a></li>
+<li><a href="https://alfredforum.com" target="_blank" rel="external">Alfred Forum</a></li>
+<li><a href="https://www.cnblogs.com/kaiye/p/5115005.html" target="_blank" rel="external">Mac 词典工具推荐：Youdao Alfred Workflow（可同步单词本） - 猫哥_kaiye - 博客园</a></li>
+<li><a href="https://ihtcboy.com/2019/11/17/2019-11-17_%E4%B8%80%E4%B8%AAAlfred%E7%9A%84Workflow%E8%81%8A%E5%A4%A9%E5%86%85%E5%AE%B9%E5%BC%95%E7%94%A8%E6%B6%88%E6%81%AF/">用 Alfred Workflow 实现聊天内容快速引用回复 | iHTCboy’s blog</a></li>
+<li><p><a href="https://www.ezloo.com/2019/04/alfred.html" target="_blank" rel="external">Mac OS必备工具：Alfred - 曙光博客</a></p>
+</li>
+<li><p>Workflows</p>
+</li>
+<li><a href="https://github.com/zenorocha/alfred-workflows" target="_blank" rel="external">zenorocha/alfred-workflows: A collection of Alfred 3 and 4 workflows that will rock your world</a></li>
+<li><a href="https://github.com/whyliam/whyliam.workflows.youdao" target="_blank" rel="external">whyliam/whyliam.workflows.youdao: 使用有道翻译你想知道的单词和语句</a></li>
+<li><a href="https://github.com/kaiye/workflows-youdao/" target="_blank" rel="external">kaiye/workflows-youdao: 学英语和写工具</a></li>
+</ul>
+<p><br></p>
+<ul>
+<li>如有侵权，联系必删！</li>
+<li>如有不正确的地方，欢迎指导！</li>
+<li>如有疑问，欢迎在评论区一起讨论！</li>
+</ul>
+<p><br></p>
+<blockquote>
+<p>注：本文首发于 <a href="https://iHTCboy.com">iHTCboy’s blog</a>，如若转载，请注来源</p>
+</blockquote>
+<p><br></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="1、前言">1、前言</h2><p>最近在写《程序员的macOS系列》文章，之前（2018年）写的二篇 <a href="https://ihtcboy.com/2018/07/15/2018-07-15_程序员的macOS系列：精选MacApp/">精选Mac App</a>、<a href="https://ihtcboy.com/2018/09/30/2018-09-30_程序员的macOS系列：Mac开发环境配置/">Mac开发环境配置</a>，至今，已经过年一年半啦！收到很多同学的点赞，最后一篇 <code>高效Alfred进阶</code> 因为各种原因，没有写出来，所以都0202年啦！</p>
+<p>其实 <code>macOS</code> 系统的高效，很大部分原因是因为有 <code>Unix/Linux</code> 的相似血液，本文讲解<code>Alfred</code>，就是效率工具的一员，相信注重效率的你，一早肯定听说过或者已经在使用。还有很多效率方法，以后有机会在总结吧，大家也可以自行搜索 macOS 开发效率，博主之前也写过一些。那为什么会认为 <code>Alfred</code> 对程序员很重要呢？如果你没有用过，相信你读完本文就会明白。虽然网上已经有很多 <code>Alfred</code> 的教程，但是一直没有找到能相对全面，或很少从入口到进阶的文章，并且很多文章历史已经悠久，所以惟有抛砖引玉，自我总结一下，希望和大家一起努力提交效率！</p>
+<ul>
+<li><a href="https://ihtcboy.com/2018/07/15/2018-07-15_程序员的macOS系列：精选MacApp/">程序员的macOS系列：精选Mac App</a></li>
+<li><a href="https://ihtcboy.com/2018/09/30/2018-09-30_程序员的macOS系列：Mac开发环境配置/">程序员的macOS系列：Mac开发环境配置</a></li>
+<li><a href="https://ihtcboy.com/2018/09/30/2019-02-08_程序员的macOS系列：高效Alfred进阶/">程序员的macOS系列：高效Alfred进阶</a></li>
+</ul>
+<p>目前计划写《程序员的macOS系列》三篇已经完成 ✅，后续有想法在更新吧~</p>
+<h2 id="Alfred_提高程序员_100%_效率指南">Alfred 提高程序员 100% 效率指南</h2>]]>
+    
+    </summary>
+    
+      <category term="Alfred" scheme="https://iHTCboy.com/tags/Alfred/"/>
+    
+      <category term="Mac" scheme="https://iHTCboy.com/tags/Mac/"/>
+    
+      <category term="macOS" scheme="https://iHTCboy.com/tags/macOS/"/>
+    
+      <category term="程序员的macOS" scheme="https://iHTCboy.com/tags/%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84macOS/"/>
+    
+      <category term="induction" scheme="https://iHTCboy.com/categories/induction/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[如何建立你自己的开发知识体系]]></title>
@@ -7843,83 +8012,6 @@ DOM 架构方案在文本编辑与图形渲染操作方面的优缺点
       <category term="重签名" scheme="https://iHTCboy.com/tags/%E9%87%8D%E7%AD%BE%E5%90%8D/"/>
     
       <category term="induction" scheme="https://iHTCboy.com/categories/induction/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[用Python库pyOpenSSL读取iOS的p12证书]]></title>
-    <link href="https://iHTCboy.com/2019/06/28/2019-06-28_Python%E5%BA%93pyOpenSSL%E8%AF%BB%E5%8F%96p12%E8%AF%81%E4%B9%A6/"/>
-    <id>https://iHTCboy.com/2019/06/28/2019-06-28_Python库pyOpenSSL读取p12证书/</id>
-    <published>2019-06-28T15:19:16.000Z</published>
-    <updated>2020-02-07T03:39:14.226Z</updated>
-    <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>本文主要是讲解如何用python读取<code>p12</code>的信息。</p>
-<p>如果有过iOS团队开发经验的朋友，一定对<code>p12</code>有所了解，因为苹果开发者网站制作的cer证书，只能用生成 <code>CSR</code>（Certificate Signing Request）文件 ———<code>CertificateSigningRequest.certSigningRequest</code> 的macOS系统安装，因为生成<code>CSR</code>时，私钥保存地本地电脑中，同时，普通个人开发账号最多可注册iOS Development/Distribution 证书各2个。所以，<code>p12</code> 就是解决在多个电脑之间共享证书的一种方式。本文不会详解iOS证书相关知识，想了解更多，可以查看本文末提供的参考文章。</p>
-<a id="more"></a>
-<h3 id="2、p12证书">2、p12证书</h3><p>在讲解之前，先给大家说说原理。 <code>p12</code> — KCS12 file holds the private key and certificate。 macOS系统查看时显示的p12名字为：个人信息交换（personal information exchange file）</p>
-<p><code>p12</code> 存放了证书和私钥，使用的是DER编码。那什么是DER呢? 这里就要讲讲证书的知识：</p>
-<h4 id="证书标准">证书标准</h4><p><code>X.509</code>：是一种证书标准，主要定义了证书中应该包含哪些内容。其详情可以参考<code>RFC5280</code>，<code>SSL</code> 使用的就是这种证书标准。</p>
-<h4 id="编码格式">编码格式</h4><p>同样的<code>X.509</code>证书，可能有不同的编码格式，目前有以下两种编码格式：</p>
-<ul>
-<li><p><code>DER</code>：Distinguished Encoding Rules，打开看是二进制格式，不可读.</p>
-</li>
-<li><p><code>PEM</code>：Privacy Enhanced Mail，打开看文本格式，以”—–BEGIN…”开头，”—–END…”结尾,内容是BASE64编码。</p>
-</li>
-</ul>
-<p>因为<code>p12</code>是<code>DER</code>编码，所以要查看<code>p12</code>的内容，当然最好从<code>DER</code>编码转换成<code>PEM</code>格式。那么因为这是一种证书标准的格式，就需要实现了这种标准的工具就能解析：</p>
-<ul>
-<li><code>OpenSSL</code>：是<code>SSL</code>的一个实现，SSL只是一种规范。理论上来说，SSL这种规范是安全的，目前的技术水平很难破解，但SSL的实现就可能有些漏洞，如著名的”心脏出血”。OpenSSL还提供了一大堆强大的工具软件，强大到90%我们都用不到。</li>
-</ul>
-<p>所以，使用 <code>OpenSSL</code> 就可以读取<code>p12</code>的信息，可以通过以下命令把<code>p12</code>转换为<code>pem</code>：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">openssl pkcs12 -in XXX.p12  -out XXX.pem -nodes</span><br></pre></td></tr></table></figure>
-<p>执行命令后，会要求输入<code>p12</code>文件的密码，如果密码错误：<code>Mac verify error: invalid password?</code> ，如果密码正确：<code>MAC verified OK</code>。</p>
-<p>示例：</p>
-<p>p12：<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/06/20190628-HTC.p12.png" alt="20190628-HTC.p12.png"></p>
-<p>pem：<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/06/20190628-HTC.pem.png" alt="20190628-HTC.pem.png"></p>
-<h3 id="pyOpenSSL_使用">pyOpenSSL 使用</h3><p><code>pyOpenSSL</code> 库简介：</p>
-<blockquote>
-<p>High-level wrapper around a subset of the OpenSSL library<br>pyOpenSSL now works with OpenSSL 1.1.1</p>
-</blockquote>
-<p>所以，python 解析 <code>p12</code> 可以使用 <code>pyOpenSSL</code> ，<code>pyOpenSSL</code> 是<code>OpenSSL</code>的封装，19.0.0 版本支持 OpenSSL 1.1.1。 这里就没有什么多说的，看代码就好，或者看看文档 <a href="https://pypi.org/project/pyOpenSSL/" target="_blank" rel="external">pyOpenSSL · PyPI</a>。</p>
-<p>先安装 <code>pyOpenSSL</code>：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install pyOpenSSL</span><br></pre></td></tr></table></figure>
-<p><code>p12</code>文件读取，Python3 示例代码：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># load OpenSSL.crypto</span></span><br><span class="line"><span class="keyword">from</span> OpenSSL <span class="keyword">import</span> crypto</span><br><span class="line"></span><br><span class="line"><span class="comment"># open it, using password. Supply/read your own from stdin.</span></span><br><span class="line">p12 = crypto.load_pkcs12(open(<span class="string">"/Users/HTC/Desktop/HTC.p12"</span>, <span class="string">'rb'</span>).read(), <span class="string">'123456'</span>)</span><br><span class="line"></span><br><span class="line">cer = p12.get_certificate()     <span class="comment"># (signed) certificate object</span></span><br><span class="line">pkey = p12.get_privatekey()      <span class="comment"># private key.</span></span><br><span class="line">ca_cer = p12.get_ca_certificates() <span class="comment"># ca chain.</span></span><br><span class="line">print(cer, pkey, ca_cer)</span><br><span class="line"></span><br><span class="line">print(<span class="string">'版本'</span>, cer.get_version())</span><br><span class="line">print(<span class="string">'签名算法'</span>, cer.get_signature_algorithm())</span><br><span class="line">print(<span class="string">'序列号：'</span>, cer.get_serial_number())</span><br><span class="line">print(<span class="string">'证书是否过期：'</span>, cer.has_expired())</span><br><span class="line">print(<span class="string">'在此之前无效：'</span>, cer.get_notBefore())</span><br><span class="line">print(<span class="string">'在此之后无效'</span>, cer.get_notAfter())</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#主题名称</span></span><br><span class="line">subject = cer.get_subject()</span><br><span class="line">s_components = subject.get_components()</span><br><span class="line">print(s_components)</span><br><span class="line"></span><br><span class="line">key_dict = &#123;<span class="string">'UID'</span>: <span class="string">'用户 ID'</span>,</span><br><span class="line">			<span class="string">'CN'</span>: <span class="string">'常用名称'</span>,</span><br><span class="line">			<span class="string">'OU'</span>: <span class="string">'组织单位'</span>,</span><br><span class="line">			<span class="string">'O'</span>: <span class="string">'组织'</span>,</span><br><span class="line">			<span class="string">'C'</span>: <span class="string">'国家或地区'</span></span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (key, value) <span class="keyword">in</span> s_components:</span><br><span class="line">	print(key, value)</span><br><span class="line">	print(key_dict.get(key.decode(), key))</span><br><span class="line"></span><br><span class="line"><span class="comment">#签发者名称</span></span><br><span class="line">suer = cer.get_issuer()</span><br><span class="line">print(suer.get_components())</span><br><span class="line"></span><br><span class="line"><span class="comment">#证书扩展信息</span></span><br><span class="line">print(<span class="string">'扩展数：'</span>, cer.get_extension_count())</span><br><span class="line">print(<span class="string">'扩展1：'</span>, cer.get_extension(<span class="number">0</span>))</span><br></pre></td></tr></table></figure>
-<h3 id="总结">总结</h3><p>现在 Xcode8 之后，已经可以通过登陆开发者账号，自动下载和管理证书，从而减少开发者配置证书遇到的各位问题，非常的方便。当然，如果是多人开发或跨域团队，或者不想让开发人员拿到最高权限，使用<code>p12</code>还是目前最好的方式！因为如果一个主账号下的子账号都可以操作证书，其实影响和安全性很难保证，所以，苹果也有一定道理，很难在Xcode的账号中，分权限管理吧。</p>
-<p>关于证书，这里只是介绍的说说<code>p12</code>的简单知识，证书体系有非常多的标准和知识，还需要多学习多实战，等有时间在整理总结一下啊，大家一起加油啊！</p>
-<h3 id="参考">参考</h3><ul>
-<li><a href="https://stackoverflow.com/questions/6345786/python-reading-a-pkcs12-certificate-with-pyopenssl-crypto/6346268#6346268" target="_blank" rel="external">cryptography - Python: reading a pkcs12 certificate with pyOpenSSL.crypto - Stack Overflow</a></li>
-<li><a href="https://codeday.me/bug/20181207/432700.html" target="_blank" rel="external">Python：用pyOpenSSL.crypto读取pkcs12证书 - 代码日志</a></li>
-<li><a href="https://blog.csdn.net/phj_88/article/details/53045748" target="_blank" rel="external">关于开发证书配置（Certificates &amp; Identifiers &amp; Provisioning Profiles）IOS发布 - 前端栈开发 - CSDN博客</a></li>
-<li><a href="http://nuoerlz.is-programmer.com/posts/47670.html" target="_blank" rel="external">iOS开发者证书-详解/生成/使用 - Echo’s Blog -</a></li>
-<li><a href="https://www.jianshu.com/p/7b84f95bdf6f" target="_blank" rel="external">Python查看ipa UDID和其他基本信息 - 简书</a></li>
-<li><a href="https://www.cnblogs.com/guogangj/p/4118605.html" target="_blank" rel="external">那些证书相关的玩意儿(SSL,X.509,PEM,DER,CRT,CER,KEY,CSR,P12等) - guogangj - 博客园</a></li>
-<li><a href="https://pypi.org/project/pyOpenSSL/" target="_blank" rel="external">pyOpenSSL · PyPI</a></li>
-</ul>
-<p><br></p>
-<ul>
-<li>如有疑问，欢迎在评论区一起讨论！</li>
-<li>如有不正确的地方，欢迎指导！</li>
-</ul>
-<p><br></p>
-<blockquote>
-<p>注：本文首发于 <a href="https://iHTCboy.com">iHTCboy’s blog</a>，如若转载，请注来源<br><br></p>
-</blockquote>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h3 id="1、前言">1、前言</h3><p>本文主要是讲解如何用python读取<code>p12</code>的信息。</p>
-<p>如果有过iOS团队开发经验的朋友，一定对<code>p12</code>有所了解，因为苹果开发者网站制作的cer证书，只能用生成 <code>CSR</code>（Certificate Signing Request）文件 ———<code>CertificateSigningRequest.certSigningRequest</code> 的macOS系统安装，因为生成<code>CSR</code>时，私钥保存地本地电脑中，同时，普通个人开发账号最多可注册iOS Development/Distribution 证书各2个。所以，<code>p12</code> 就是解决在多个电脑之间共享证书的一种方式。本文不会详解iOS证书相关知识，想了解更多，可以查看本文末提供的参考文章。</p>]]>
-    
-    </summary>
-    
-      <category term="Python" scheme="https://iHTCboy.com/tags/Python/"/>
-    
-      <category term="iOS" scheme="https://iHTCboy.com/tags/iOS/"/>
-    
-      <category term="p12" scheme="https://iHTCboy.com/tags/p12/"/>
-    
-      <category term="pyOpenSSL" scheme="https://iHTCboy.com/tags/pyOpenSSL/"/>
-    
-      <category term="technology" scheme="https://iHTCboy.com/categories/technology/"/>
     
   </entry>
   
