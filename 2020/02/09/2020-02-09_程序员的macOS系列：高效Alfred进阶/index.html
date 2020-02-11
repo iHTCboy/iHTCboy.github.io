@@ -24,13 +24,17 @@
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-File-Search.png">
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-File-Search-Open.png">
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Actions.png">
+<meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Actions-File-Actions.png">
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Web-Search.png">
+<meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Web-Search-Custom.png">
+<meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Web-Search-Swift.png">
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Web-Bookmarks.png">
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Clipboard-History.png">
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Snippets.png">
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Snippets-Examples.png">
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Calculator.png">
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Dictionary.png">
+<meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Dictionary-Define.png">
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Contacts.png">
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Music.png">
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-1Password.png">
@@ -38,8 +42,15 @@
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Terminal.png">
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Large-Type.png">
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Previews.png">
+<meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Workflows.png">
+<meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Appearance.png">
+<meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Remote.png">
+<meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Advanced.png">
+<meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Powerpack.png">
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Usage.png">
-<meta property="og:updated_time" content="2020-02-11T01:56:34.928Z">
+<meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Help.png">
+<meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Update.png">
+<meta property="og:updated_time" content="2020-02-11T04:01:44.197Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="程序员的macOS系列：高效Alfred进阶">
 <meta name="twitter:description" content="1、前言最近在写《程序员的macOS系列》文章，之前（2018年）写的二篇 精选Mac App、Mac开发环境配置，至今，已经过年一年半啦！收到很多同学的点赞，最后一篇 高效Alfred进阶 因为各种原因，没有写出来，所以都0202年啦！
@@ -328,8 +339,31 @@ var _hmt = _hmt || [];
 <li>option + → ：对列表文件进行统一操作。</li>
 </ul>
 <h5 id="Advanced（增强）标签">Advanced（增强）标签</h5><h4 id="Actions（动作）">Actions（动作）</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Actions.png" alt="Alfred-Features-Actions.png"></p>
+<ul>
+<li><p><code>Show Actions</code>（显示动作）<br>在选中的文件或者目录上点击 <code>fn</code> 键或 <code>ctrl</code> 键、<code>⇥</code>等都可以触发其额外的操作，具体的动作见 <code>File Actions</code> 标签栏。 </p>
+</li>
+<li><p><code>Selection Hotkey</code><br>可以设置自定义的快捷键来显示动作。</p>
+</li>
+<li><p><code>Action Ordering</code><br>动作排序显示，如果勾选，表示按最近使用的动作优先显示，否则就按默认排序。</p>
+</li>
+</ul>
+<p>动作操作的效果示意图：<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Actions-File-Actions.png" alt="Alfred-Features-Actions-File-Actions.png"></p>
 <h4 id="Web_Search（网站搜索）">Web Search（网站搜索）</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Web-Search.png" alt="Alfred-Features-Web-Search.png"></p>
-<p>网页搜索自带了不少，比如google、wiki、bing等网页搜索，但对于国内用户来说，还是得需要自定义百度、知乎等搜索，点击右下角的Add Custom Search，按照下面的格式自己增加即可。</p>
+<p>网页搜索 Alfred 自带了不少，比如google、wiki、bing等网页搜索，但对于国内用户来说，还是得需要自定义百度、知乎等搜索，点击右下角的 <code>Add Custom Search</code>，按照提示的格式自己增加即可。</p>
+<p>这里用一个例子来说明自定义的网页搜索设置，比如想搜索苹果的官方文档中<code>Swift</code>，真实的链接是 <code>https://developer.apple.com/search/?q=Swift</code>，那么每次搜索苹果的文档内容时，我们都要打死浏览器，打开苹果官方文档链接，然后输入<code>Swift</code>，才能看到结果。然这个步骤，可以利用 Aflred 这个网页搜索功能整合为一步，所以我们需要一个自定义的搜索，在 Aflred 点击右下角的 <code>Add Custom Search</code>，然后填写下图的信息：<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Web-Search-Custom.png" alt="Alfred-Features-Web-Search-Custom.png"></p>
+<p>这里需要说明一下，<code>https://developer.apple.com/search/?q={query}</code> 中的 <code>{query}</code> 是通过 Alfred 输入框输入你需要搜索的关键词的变量，<code>Title</code> 就是上图的默认显示的提示语，右边还能上传一个icon图标，用于标识此搜索，<code>Keyword</code> 是这个网页搜索的快捷键，这里用 ad （apple document）作为快捷键，<code>Validation</code> 是用于测试这个网页搜索是不是正常工作，点击右边的 Test 按钮来测试。示例：<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Web-Search-Swift.png" alt="Alfred-Features-Web-Search-Swift.png"></p>
+<p>这里列出一些搜索引擎给大家参考：</p>
+<ul>
+<li>掘金搜索：<code>https://juejin.im/search?type=all&amp;query={query}</code></li>
+<li>简书搜索：<code>https://www.jianshu.com/search?utf8=%E2%9C%93&amp;q={query}</code></li>
+<li>微信文章：<code>http://weixin.sogou.com/weixin?type=2&amp;query={query}</code></li>
+<li>苹果文档：<code>https://developer.apple.com/documentation/{query}</code></li>
+<li>淘宝搜索：<code>https://s.taobao.com/search?oe=utf-8&amp;q={query}</code></li>
+<li>京东搜索：<code>https://search.jd.com/Search?enc=utf-8&amp;keyword={query}</code></li>
+<li>GitHub：<code>https://github.com/search?utf8=%E2%9C%93&amp;q={query}</code></li>
+<li>StackOverflow：<code>https://www.stackoverflow.com/search?q={query}</code></li>
+</ul>
+<p>更多搜索网站的大家可以自行收藏啊~</p>
 <h4 id="Web_Bookmarks（网页书签）">Web Bookmarks（网页书签）</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Web-Bookmarks.png" alt="Alfred-Features-Web-Bookmarks.png"></p>
 <p>目前Alfred只支持Safari和Chrome的书签搜索。</p>
 <h4 id="Clipboard_History（剪切版历史）">Clipboard History（剪切版历史）</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Clipboard-History.png" alt="Alfred-Features-Clipboard-History.png"></p>
@@ -337,7 +371,18 @@ var _hmt = _hmt || [];
 <h4 id="Snippets（片段）">Snippets（片段）</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Snippets.png" alt="Alfred-Features-Snippets.png"></p>
 <p>官方示例：<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Snippets-Examples.png" alt="Alfred-Features-Snippets-Examples.png"></p>
 <h4 id="Calculator（计算器）">Calculator（计算器）</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Calculator.png" alt="Alfred-Features-Calculator.png"></p>
+<ul>
+<li><p><code>Standard</code>（标准）<br>Alfred 也支持计算器计算可以简单地输入 <code>16 * 1024</code> 便能够计算出结果，敲击回车键之后能够自动保存到剪贴板中，方便快速复制和使用。当然也可以连续的输入 <code>16 * 1024 / 256</code>，更加复杂的 <code>(1 + 4) * 6 / (7 +3)</code>。</p>
+</li>
+<li><p>Advanced（增强）<br>Alfred 也支持复杂表达式的计算，但是需要勾选此选项，在使用时以 <code>=</code> 作为开头，比如：<code>=log2(256) + sqrt(1024/2*3^4)</code> 表达式。</p>
+</li>
+<li><p><code>Input</code> / <code>Output</code><br>设置输入和输出的结果表达式的小数分分隔。</p>
+</li>
+</ul>
 <h4 id="Dictionary（字典）">Dictionary（字典）</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Dictionary.png" alt="Alfred-Features-Dictionary.png"></p>
+<p>Alfred 内置了词典查询并使用 Apple 自带的词典软件，可以通过 <code>define</code> 和 <code>spell</code> 两个关键词唤起。这里 define 我改为了 <code>df</code> 这里更加快捷！值得一提的是 spell 能够帮你模糊拼写，有时候忘了单词怎么拼，可以使用它。</p>
+<p>苹果默认的词典量很少，可以点击这里下载更多扩展词典：<a href="https://github.com/iHTCboy/macOSConfig/tree/master/macOS_Dictionary" target="_blank" rel="external">macOSConfig/macOS_Dictionary · iHTCboy/macOSConfig</a></p>
+<p>以搜索<code>apple</code>示例：<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Dictionary-Define.png" alt="Alfred-Features-Dictionary-Define.png"></p>
 <h4 id="Contacts（联系人）">Contacts（联系人）</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Contacts.png" alt="Alfred-Features-Contacts.png"></p>
 <h4 id="Music（音乐）">Music（音乐）</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Music.png" alt="Alfred-Features-Music.png"></p>
 <h4 id="1Password（密码）">1Password（密码）</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-1Password.png" alt="Alfred-Features-1Password.png"></p>
@@ -345,7 +390,8 @@ var _hmt = _hmt || [];
 <h4 id="Terminal（终端）">Terminal（终端）</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Terminal.png" alt="Alfred-Features-Terminal.png"></p>
 <h4 id="Large_Type（放大镜风格）">Large Type（放大镜风格）</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Large-Type.png" alt="Alfred-Features-Large-Type.png"></p>
 <h4 id="Previews（预览）">Previews（预览）</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Previews.png" alt="Alfred-Features-Previews.png"></p>
-<h3 id="Workflows（工作流）">Workflows（工作流）</h3><p><code>Workflows</code>翻译中文叫<strong>工作流</strong>，应该也比较好理解。网上上面介绍的功能，有一部分就是工作流，可以理解为Alfred自带的工作流。类似的，你是不是能想到一些可以定制化的操作流程呢？所以，当然也可以使用第三方的工作流，或者自己定义自己的工作流！</p>
+<h3 id="Workflows（工作流）">Workflows（工作流）</h3><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Workflows.png" alt="Alfred-Workflows.png"></p>
+<p><code>Workflows</code>翻译中文叫<strong>工作流</strong>，应该也比较好理解。网上上面介绍的功能，有一部分就是工作流，可以理解为Alfred自带的工作流。类似的，你是不是能想到一些可以定制化的操作流程呢？所以，当然也可以使用第三方的工作流，或者自己定义自己的工作流！</p>
 <p>如果想要使用第三方的或者自定义的工作流，需要支付购买Alfred的<code>PowerPack</code>，Alfred的 PowerPack 是最值得购买的服务，没有之一。因为如果使用 Alfred 而没有 PowerPack 授权，那 Alfred 的强大的功能相当失去了左右臂。关于 PowerPack 细节我们在下一节内容在讨论，我们接着说 Workflows（工作流）。</p>
 <p>Alfred 安装完「Powerpack」，就像车体安装了引擎，余下的事情就看我们如何 DIY，让引擎为我们提供无限动力。而引擎提供动力的燃料我们称其为 <code>Workflow</code>。官方对于 workflow 是这样描述的：</p>
 <blockquote>
@@ -359,17 +405,53 @@ var _hmt = _hmt || [];
 <li><p><a href="https://ihtcboy.com/2019/11/17/2019-11-17_%E4%B8%80%E4%B8%AAAlfred%E7%9A%84Workflow%E8%81%8A%E5%A4%A9%E5%86%85%E5%AE%B9%E5%BC%95%E7%94%A8%E6%B6%88%E6%81%AF/">用 Alfred Workflow 实现聊天内容快速引用回复 | iHTCboy’s blog</a></p>
 </li>
 </ul>
-<h4 id="Alfred_实现快速复制当前文件夹路径">Alfred 实现快速复制当前文件夹路径</h4><h4 id="Alfred_Workflow_精品推荐：配合_TinyPNG_快速压缩图片">Alfred Workflow 精品推荐：配合 TinyPNG 快速压缩图片</h4><h3 id="Appearance（外表）">Appearance（外表）</h3><h3 id="Remote（远程）">Remote（远程）</h3><ul>
-<li><a href="https://apps.apple.com/app/alfred-remote/id927944141?ign-mpt=uo%3D4" target="_blank" rel="external">Alfred Remote on the App Store</a></li>
+<h4 id="Alfred_实现快速复制当前文件夹路径">Alfred 实现快速复制当前文件夹路径</h4><h4 id="Alfred_Workflow_精品推荐：配合_TinyPNG_快速压缩图片">Alfred Workflow 精品推荐：配合 TinyPNG 快速压缩图片</h4><h3 id="Appearance（外观）">Appearance（外观）</h3><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Appearance.png" alt="Alfred-Appearance.png"></p>
+<p>Alfred 默认的样式是白色背景不太好看，当然也提供了几个外观样式供大家选择。另外也可以自定义外观，比如上图中博主的主题，采用了玻璃背景透明，白色输入文字，蓝色选择文字，白灰色默认文字，淡黄色快捷键文字。喜欢折腾 DIY 样式的小伙伴可以在 Appearance 面板中修改或点击 <code>+</code> 增加 Alfred 交互面板的样式。另外，也可以下载别人的外观样式，比如在网站 <a href="http://www.packal.org/" target="_blank" rel="external">Packal</a>。</p>
+<p>下载博主此主题外观链接：<a href="https://github.com/iHTCboy/macOSConfig/tree/master/Alfred/Appearance" target="_blank" rel="external">iHTCboy-Theme.alfredappearance</a></p>
+<h3 id="Remote（远程）">Remote（远程）</h3><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Remote.png" alt="Alfred-Remote.png"></p>
+<p>Alfred 同时也支持使用 <code>移动端版本的 Alfred</code> 来控制桌面端，下载链接 <a href="https://apps.apple.com/app/alfred-remote/id927944141?ign-mpt=uo%3D4" target="_blank" rel="external">Alfred Remote on the App Store for iOS</a>。</p>
+<p>具体的操作可参考教程：<a href="https://sspai.com/post/28137" target="_blank" rel="external">OS X 效率启动器 Alfred 的最佳伴侣：Alfred Remote for iOS 上手详解 - 少数派</a></p>
+<h3 id="Advanced（高级）">Advanced（高级）</h3><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Advanced.png" alt="Alfred-Advanced.png"></p>
+<ul>
+<li><p><code>Files / Apps</code><br>配置中有涉及 <code>Clear Application Cache</code>(缓存清理)、<code>Rebuild macOS Metadata</code>(元数据重建) 等高级配置功能，一般不需要配置。</p>
+</li>
+<li><p><code>Force Keyboard</code><br>就是 Alfred 输入框中默认的输入法。</p>
+</li>
+<li><p><code>History</code></p>
+</li>
+<li><p><code>Action Modifiler</code><br>搜索结果项右边的快捷键，默认是 <code>cmd + 数字</code>（cmd为苹果键 <code>⌘</code>），可以更改为 <code>^ + 数字</code>（^ 为 <code>ctrl</code> 键）。</p>
+</li>
 </ul>
-<h3 id="Advanced（高级）">Advanced（高级）</h3><p>配置中有涉及「缓存清理」、「元数据重建」等高级配置功能，一般不需要配置，不知道如何使用的情况下请不要茫然下手。</p>
-<h3 id="Powerpack（电源组）">Powerpack（电源组）</h3><p>但部分强大的扩展功能和 Workflows 功能是需要购买升级包的。个人推荐有经济能力的人还是购买正版的授权码，因为这款软件绝对值这个价。</p>
+<p>这里还有一些默认的动作快捷键，比如在 Alfred 输入<code>swift</code>后，通过下面三个快捷键可以快捷执行操作：</p>
+<ul>
+<li><code>ctrl + ↩︎</code>：在浏览器默认的搜索引擎来查询<code>swift</code>关键词。</li>
+<li><code>alt + ↩︎</code>：打开 <code>Finder</code>（访达）的搜索框查询<code>swift</code>。</li>
+<li><code>cmd + ↩︎</code>：打开 Alfred 搜索结果项所在的文件目录（如果是本地文件的话）。</li>
+</ul>
+<p>以上快捷键可以更改不能的 Action（动作），大家可以自行调整。</p>
+<ul>
+<li><p><code>Learning</code></p>
+</li>
+<li><p><code>Notifications</code></p>
+</li>
+<li><p><code>Network</code></p>
+</li>
+<li><p><code>Selection Hotkeys</code></p>
+</li>
+<li><p><code>Syncing</code>（同步）<br>可以设置 Alfred 所有的配置内容，包括 Workflows 工作流 和 Appearance 主题，都可以备份和同步。作者建议用 Dropbox 网盘同步，因为一些大家懂的原因，这里我建议使用 <code>iCloud Drive</code> 这样更加好！设置方式很简单，点击 <code>Set preference folder</code> 弹窗中，找到 iCloud 分类下的 iCloud Drive 目录，在目录下新建一个 <code>Alfred</code> 文件夹来存放 Alfred 所有配置的同步文件（Alfred.alfredpreferences），这样，以后如果你有多台 macOS 系统，登陆同一个 <code>Apple id</code> 账号就可以无缝的同步在所有的设备上面，不需要关注所有内容。点击 Alfred 的 <code>Reveal in Finder</code> 可以打开你设置的同步文件所在的目录。</p>
+</li>
+</ul>
+<p>当然，目前每个 macOS 下的 Alfred 的 <code>Usage</code>（使用情况）不会同步共享，另外，如果你电脑的硬盘空间不足（少于20GB），<code>iCloud Drive</code>的内容在本地系统中经常被清空，导致需要在远端重新下载 Alfred 的同步文件（Alfred.alfredpreferences），只能说买电脑要空间大一点吧！</p>
+<h3 id="Powerpack（电源组）">Powerpack（电源组）</h3><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Powerpack.png" alt="Alfred-Powerpack.png"></p>
+<p>但部分强大的扩展功能和 Workflows 功能是需要购买升级包的。个人推荐有经济能力的人还是购买正版的授权码，因为这款软件绝对值这个价。</p>
 <p>个人授权是 17 欧元，折合人民币 126 元左右，</p>
 <h3 id="Usage（使用情况）">Usage（使用情况）</h3><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Usage.png" alt="Alfred-Usage.png"></p>
 <p>Alfred 会统计使用的情况。我们为了说明 Alfred 的潜在价值，我们不妨做一个简单的计算，假设每天我都能够保持现况以每日平均唤醒 39次为基数。假如每次 Alfred 的操作，可以为我节省 5s 的时间（往往有些复杂的操作会大于 5s，比如去寻找一个藏得很深的文件，或者一个记不全的文件或者一个不常用的软件，或者打开一个常用的书签等等)，那么 1 年下来，竟然能够节省 0.82 天。换言之，Alfred 让你的生命延长了 0.82 天！那如果是 5 年，就是 4 天，10 年就 8 天。</p>
 <p><code>39 * 5 * 365 / 3600 / 24 = 0.823784722 天</code></p>
 <p>可见，Alfred 是每日强依赖于 macOS 的工作者的效率神器！希望接下来大家都能更好地使用 Alfred 来提高日常的工作效率啊！</p>
-<h3 id="Help（帮助）">Help（帮助）</h3><h3 id="Update（更新）">Update（更新）</h3><h3 id="其它问题汇总">其它问题汇总</h3><ul>
+<h3 id="Help（帮助）">Help（帮助）</h3><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Help.png" alt="Alfred-Help.png"></p>
+<h3 id="Update（更新）">Update（更新）</h3><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Update.png" alt="Alfred-Update.png"></p>
+<h3 id="其它问题汇总">其它问题汇总</h3><ul>
 <li><p>系统权限问题</p>
 </li>
 <li><p>更新</p>
@@ -384,6 +466,7 @@ var _hmt = _hmt || [];
 <li><a href="https://ihtcboy.com/2019/11/17/2019-11-17_%E4%B8%80%E4%B8%AAAlfred%E7%9A%84Workflow%E8%81%8A%E5%A4%A9%E5%86%85%E5%AE%B9%E5%BC%95%E7%94%A8%E6%B6%88%E6%81%AF/">用 Alfred Workflow 实现聊天内容快速引用回复 | iHTCboy’s blog</a></li>
 <li><a href="https://www.ezloo.com/2019/04/alfred.html" target="_blank" rel="external">Mac OS必备工具：Alfred - 曙光博客</a></li>
 <li><a href="http://blog.surfacew.com/tool/2016/08/03/Alfred/" target="_blank" rel="external">Alfred 效率神器全攻略</a></li>
+<li><a href="https://sspai.com/post/28137" target="_blank" rel="external">OS X 效率启动器 Alfred 的最佳伴侣：Alfred Remote for iOS 上手详解 - 少数派</a></li>
 <li></li>
 <li><p>Workflows</p>
 </li>
@@ -568,7 +651,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1、前言"><span class="toc-number">1.</span> <span class="toc-text">1、前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Alfred_提高程序员_100%_效率指南"><span class="toc-number">2.</span> <span class="toc-text">Alfred 提高程序员 100% 效率指南</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#General（通用设置）"><span class="toc-number">2.1.</span> <span class="toc-text">General（通用设置）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Features（主要功能）"><span class="toc-number">2.2.</span> <span class="toc-text">Features（主要功能）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Default_Results（默认结果）"><span class="toc-number">2.2.1.</span> <span class="toc-text">Default Results（默认结果）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#File_Search（文件搜索）"><span class="toc-number">2.2.2.</span> <span class="toc-text">File Search（文件搜索）</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Search（搜索）标签"><span class="toc-number">2.2.2.1.</span> <span class="toc-text">Search（搜索）标签</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Navigation（导航）标签"><span class="toc-number">2.2.2.2.</span> <span class="toc-text">Navigation（导航）标签</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Buffer（缓存）标签"><span class="toc-number">2.2.2.3.</span> <span class="toc-text">Buffer（缓存）标签</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Advanced（增强）标签"><span class="toc-number">2.2.2.4.</span> <span class="toc-text">Advanced（增强）标签</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Actions（动作）"><span class="toc-number">2.2.3.</span> <span class="toc-text">Actions（动作）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Web_Search（网站搜索）"><span class="toc-number">2.2.4.</span> <span class="toc-text">Web Search（网站搜索）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Web_Bookmarks（网页书签）"><span class="toc-number">2.2.5.</span> <span class="toc-text">Web Bookmarks（网页书签）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Clipboard_History（剪切版历史）"><span class="toc-number">2.2.6.</span> <span class="toc-text">Clipboard History（剪切版历史）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Snippets（片段）"><span class="toc-number">2.2.7.</span> <span class="toc-text">Snippets（片段）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Calculator（计算器）"><span class="toc-number">2.2.8.</span> <span class="toc-text">Calculator（计算器）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Dictionary（字典）"><span class="toc-number">2.2.9.</span> <span class="toc-text">Dictionary（字典）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Contacts（联系人）"><span class="toc-number">2.2.10.</span> <span class="toc-text">Contacts（联系人）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Music（音乐）"><span class="toc-number">2.2.11.</span> <span class="toc-text">Music（音乐）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1Password（密码）"><span class="toc-number">2.2.12.</span> <span class="toc-text">1Password（密码）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#System（系统）"><span class="toc-number">2.2.13.</span> <span class="toc-text">System（系统）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Terminal（终端）"><span class="toc-number">2.2.14.</span> <span class="toc-text">Terminal（终端）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Large_Type（放大镜风格）"><span class="toc-number">2.2.15.</span> <span class="toc-text">Large Type（放大镜风格）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Previews（预览）"><span class="toc-number">2.2.16.</span> <span class="toc-text">Previews（预览）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Workflows（工作流）"><span class="toc-number">2.3.</span> <span class="toc-text">Workflows（工作流）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#认识_workflow_结构"><span class="toc-number">2.3.1.</span> <span class="toc-text">认识 workflow 结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#插件"><span class="toc-number">2.3.2.</span> <span class="toc-text">插件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Alfred_实现快速复制当前文件夹路径"><span class="toc-number">2.3.3.</span> <span class="toc-text">Alfred 实现快速复制当前文件夹路径</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Alfred_Workflow_精品推荐：配合_TinyPNG_快速压缩图片"><span class="toc-number">2.3.4.</span> <span class="toc-text">Alfred Workflow 精品推荐：配合 TinyPNG 快速压缩图片</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Appearance（外表）"><span class="toc-number">2.4.</span> <span class="toc-text">Appearance（外表）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Remote（远程）"><span class="toc-number">2.5.</span> <span class="toc-text">Remote（远程）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Advanced（高级）"><span class="toc-number">2.6.</span> <span class="toc-text">Advanced（高级）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Powerpack（电源组）"><span class="toc-number">2.7.</span> <span class="toc-text">Powerpack（电源组）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Usage（使用情况）"><span class="toc-number">2.8.</span> <span class="toc-text">Usage（使用情况）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Help（帮助）"><span class="toc-number">2.9.</span> <span class="toc-text">Help（帮助）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Update（更新）"><span class="toc-number">2.10.</span> <span class="toc-text">Update（更新）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#其它问题汇总"><span class="toc-number">2.11.</span> <span class="toc-text">其它问题汇总</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">3.</span> <span class="toc-text">总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考"><span class="toc-number">4.</span> <span class="toc-text">参考</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1、前言"><span class="toc-number">1.</span> <span class="toc-text">1、前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Alfred_提高程序员_100%_效率指南"><span class="toc-number">2.</span> <span class="toc-text">Alfred 提高程序员 100% 效率指南</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#General（通用设置）"><span class="toc-number">2.1.</span> <span class="toc-text">General（通用设置）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Features（主要功能）"><span class="toc-number">2.2.</span> <span class="toc-text">Features（主要功能）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Default_Results（默认结果）"><span class="toc-number">2.2.1.</span> <span class="toc-text">Default Results（默认结果）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#File_Search（文件搜索）"><span class="toc-number">2.2.2.</span> <span class="toc-text">File Search（文件搜索）</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Search（搜索）标签"><span class="toc-number">2.2.2.1.</span> <span class="toc-text">Search（搜索）标签</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Navigation（导航）标签"><span class="toc-number">2.2.2.2.</span> <span class="toc-text">Navigation（导航）标签</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Buffer（缓存）标签"><span class="toc-number">2.2.2.3.</span> <span class="toc-text">Buffer（缓存）标签</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Advanced（增强）标签"><span class="toc-number">2.2.2.4.</span> <span class="toc-text">Advanced（增强）标签</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Actions（动作）"><span class="toc-number">2.2.3.</span> <span class="toc-text">Actions（动作）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Web_Search（网站搜索）"><span class="toc-number">2.2.4.</span> <span class="toc-text">Web Search（网站搜索）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Web_Bookmarks（网页书签）"><span class="toc-number">2.2.5.</span> <span class="toc-text">Web Bookmarks（网页书签）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Clipboard_History（剪切版历史）"><span class="toc-number">2.2.6.</span> <span class="toc-text">Clipboard History（剪切版历史）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Snippets（片段）"><span class="toc-number">2.2.7.</span> <span class="toc-text">Snippets（片段）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Calculator（计算器）"><span class="toc-number">2.2.8.</span> <span class="toc-text">Calculator（计算器）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Dictionary（字典）"><span class="toc-number">2.2.9.</span> <span class="toc-text">Dictionary（字典）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Contacts（联系人）"><span class="toc-number">2.2.10.</span> <span class="toc-text">Contacts（联系人）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Music（音乐）"><span class="toc-number">2.2.11.</span> <span class="toc-text">Music（音乐）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1Password（密码）"><span class="toc-number">2.2.12.</span> <span class="toc-text">1Password（密码）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#System（系统）"><span class="toc-number">2.2.13.</span> <span class="toc-text">System（系统）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Terminal（终端）"><span class="toc-number">2.2.14.</span> <span class="toc-text">Terminal（终端）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Large_Type（放大镜风格）"><span class="toc-number">2.2.15.</span> <span class="toc-text">Large Type（放大镜风格）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Previews（预览）"><span class="toc-number">2.2.16.</span> <span class="toc-text">Previews（预览）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Workflows（工作流）"><span class="toc-number">2.3.</span> <span class="toc-text">Workflows（工作流）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#认识_workflow_结构"><span class="toc-number">2.3.1.</span> <span class="toc-text">认识 workflow 结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#插件"><span class="toc-number">2.3.2.</span> <span class="toc-text">插件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Alfred_实现快速复制当前文件夹路径"><span class="toc-number">2.3.3.</span> <span class="toc-text">Alfred 实现快速复制当前文件夹路径</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Alfred_Workflow_精品推荐：配合_TinyPNG_快速压缩图片"><span class="toc-number">2.3.4.</span> <span class="toc-text">Alfred Workflow 精品推荐：配合 TinyPNG 快速压缩图片</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Appearance（外观）"><span class="toc-number">2.4.</span> <span class="toc-text">Appearance（外观）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Remote（远程）"><span class="toc-number">2.5.</span> <span class="toc-text">Remote（远程）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Advanced（高级）"><span class="toc-number">2.6.</span> <span class="toc-text">Advanced（高级）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Powerpack（电源组）"><span class="toc-number">2.7.</span> <span class="toc-text">Powerpack（电源组）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Usage（使用情况）"><span class="toc-number">2.8.</span> <span class="toc-text">Usage（使用情况）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Help（帮助）"><span class="toc-number">2.9.</span> <span class="toc-text">Help（帮助）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Update（更新）"><span class="toc-number">2.10.</span> <span class="toc-text">Update（更新）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#其它问题汇总"><span class="toc-number">2.11.</span> <span class="toc-text">其它问题汇总</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">3.</span> <span class="toc-text">总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考"><span class="toc-number">4.</span> <span class="toc-text">参考</span></a></li></ol>
                     </div>
                 </span>
             </div>
