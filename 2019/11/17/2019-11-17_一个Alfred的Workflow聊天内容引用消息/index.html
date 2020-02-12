@@ -20,7 +20,7 @@
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/11/Alfred-Copy-Template-Reply.png">
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/11/Alfred-Shortcuts-Key.gif">
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/11/Alfred-Automatically-expand-snippets.png">
-<meta property="og:updated_time" content="2020-02-12T01:53:59.772Z">
+<meta property="og:updated_time" content="2020-02-12T02:50:07.369Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用 Alfred Workflow 实现聊天内容快速引用回复">
 <meta name="twitter:description" content="1、前言在微信 Mac/PC 端消息有个「引用消息」的功能，用于针对某个特定消息回复，而其它 App 没有该功能，或者有，比如 QQ / Telegram 都有实现回复（reply）功能，但是都是针对一条消息回复，如果需要对多条消息统一做回复，自带的功能也许真不够自定义的好。当然，最主要是我司现在用的 企业QQ for macOS 版本不支持这个功能，于是就想到自己做一个 workflow 可以读">
@@ -241,7 +241,7 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="1、前言">1、前言</h3><p>在微信 Mac/PC 端消息有个「引用消息」的功能，用于针对某个特定消息回复，而其它 App 没有该功能，或者有，比如 QQ / Telegram 都有实现回复（reply）功能，但是都是针对一条消息回复，如果需要对多条消息统一做回复，自带的功能也许真不够自定义的好。当然，最主要是我司现在用的 <code>企业QQ for macOS</code> 版本不支持这个功能，于是就想到自己做一个 workflow 可以读取当前复制的内容，然后生成一个带引用格式的文本，并完成后粘贴到 App，从而实现引用回复~</p>
-<p>传送门下载：<a href="https://github.com/iHTCboy/macOSConfig/blob/master/Alfred/Reply%20Message%20v1.0.alfredworkflow" target="_blank" rel="external">Reply Message v1.0.alfredworkflow</a></p>
+<p>传送门下载：<a href="https://github.com/iHTCboy/macOSConfig/raw/master/Alfred/Workflows/Reply%20Message%20v1.0.alfredworkflow" target="_blank" rel="external">Reply Message v1.0.alfredworkflow</a></p>
 <a id="more"></a>
 <h3 id="2、已实现的效果">2、已实现的效果</h3><p>目前已经实现了几个功能：</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/11/Alfred-Reply-Message-alfredworkflow.png" alt="Alfred-Reply-Message-alfredworkflow.png"></p>
@@ -256,7 +256,7 @@ var _hmt = _hmt || [];
 </li>
 </ol>
 <p>注意说明：<br>1、以上说的快捷键，大家都可以自己定义，不是固定的啊。<br>2、快捷符模板需要开启 Alfred 监听键盘权限：<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/11/Alfred-Automatically-expand-snippets.png" alt="Alfred-Automatically-expand-snippets.png"><br>3、本次使用到 Alfred 相关的功能试用版不支持，需要付费的正版才支持，或者使用xx版本。当然对于有条件的朋友建议购买正版，这也是一个提高效率的方式~</p>
-<p>下载地址：<a href="https://github.com/iHTCboy/macOSConfig/blob/master/Alfred/Reply%20Message%20v1.0.alfredworkflow" target="_blank" rel="external">Reply Message v1.0.alfredworkflow</a></p>
+<p>下载地址：<a href="https://github.com/iHTCboy/macOSConfig/raw/master/Alfred/Workflows/Reply%20Message%20v1.0.alfredworkflow" target="_blank" rel="external">Reply Message v1.0.alfredworkflow</a></p>
 <h3 id="3、背后的简单原理">3、背后的简单原理</h3><p>其实，原理非常的简单，就是二行代码的事：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">clipboardtext=`pbpaste`</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="operator">-e</span> -n <span class="string">"「 <span class="variable">$&#123;clipboardtext&#125;</span> 」\n- - - - - - - - - - - - - - -\n\n：&#123;query&#125;"</span></span><br></pre></td></tr></table></figure>
 <p>就是用 shell 的 macOS 命令 <code>pbpaste</code> 获取剪切版的内容，然后拼接生成需要的格式，最后内容通过 <code>{query}</code> 传递给 Alfred。至于前期的快捷键、键盘监听，后续的推送通知、粘贴内容到输入框，全部是 Alfred 软件全自动封装好的完成，不需要我们用户关心！！！</p>

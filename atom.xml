@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Learn something of everything,  Learn everything of something.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="https://iHTCboy.com/"/>
-  <updated>2020-02-12T02:20:08.390Z</updated>
+  <updated>2020-02-12T03:08:17.054Z</updated>
   <id>https://iHTCboy.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="https://iHTCboy.com/2020/02/09/2020-02-09_%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84macOS%E7%B3%BB%E5%88%97%EF%BC%9A%E9%AB%98%E6%95%88Alfred%E8%BF%9B%E9%98%B6/"/>
     <id>https://iHTCboy.com/2020/02/09/2020-02-09_程序员的macOS系列：高效Alfred进阶/</id>
     <published>2020-02-09T12:49:16.000Z</published>
-    <updated>2020-02-12T02:20:08.390Z</updated>
+    <updated>2020-02-12T03:08:17.054Z</updated>
     <content type="html"><![CDATA[<h2 id="1、前言">1、前言</h2><p>之前写的《程序员的macOS系列》文章，2018年写了二篇文章：<a href="https://ihtcboy.com/2018/07/15/2018-07-15_程序员的macOS系列：精选MacApp/">精选Mac App</a>、 <a href="https://ihtcboy.com/2018/09/30/2018-09-30_程序员的macOS系列：Mac开发环境配置/">Mac开发环境配置</a>，至今，已经过年一年半啦！收到很多同学的点赞，最后一篇 <code>高效Alfred进阶</code> 因为各种原因，没有写出来，所以都0202年啦！</p>
 <p>其实 <code>macOS</code> 系统的高效，很大部分原因是因为有 <code>Unix/Linux</code> 的相似血统，本文讲解<code>Alfred</code>，就是效率工具的一员，相信注重效率的你，一早肯定听说过或者已经在使用，简单来说 Alfred 以键盘的高效代替鼠标操作的繁冗。还有很多效率方法，以后有机会在总结吧，大家也可以自行搜索 macOS 开发效率，博主之前也写过一些。那为什么会认为 <code>Alfred</code> 对程序员很重要呢？如果你没有用过，相信你读完本文就会明白。虽然网上已经有很多 <code>Alfred</code> 的教程，但是一直没有找到能相对全面，或很少从入口到进阶的文章，并且很多文章历史已经悠久，所以惟有抛砖引玉，自我总结一下，希望和大家一起努力提交效率！</p>
 <ul>
@@ -31,10 +31,10 @@
 <h2 id="Alfred_提高程序员_100%_效率指南">Alfred 提高程序员 100% 效率指南</h2><a id="more"></a>
 <p><strong>Alfred 4 for Mac</strong> 官网产品说明：</p>
 <blockquote>
-<p>Alfred is an award-winning app for macOS which boosts your efficiency with hotkeys, keywords, text expansion and more. Search your Mac and the web, and be more productive with custom actions to control your Mac.<br>Alfred是一款屡获殊荣的macOS应用程序，可通过热键，关键字，文本扩展等功能提高您的效率。搜索Mac和网络，并通过自定义操作来控制Mac来提高生产力。</p>
+<p>Alfred is an award-winning app for macOS which boosts your efficiency with hotkeys, keywords, text expansion and more. Search your Mac and the web, and be more productive with custom actions to control your Mac.<br>Alfred是一款屡获殊荣的macOS应用程序，可通过热键，关键字，文本扩展等功能提高您的效率。搜索Mac和网页的内容，并通过自定义操作来控制Mac来提高生产力。</p>
 </blockquote>
-<p>小帽子 <code>Alfred</code>（读<code>[&#39;ælfrid]</code>） 是 macOS 平台强大的效率软件！誉为神兵利器毫不为过。我们本篇文章基于2020年1月17号更新的版本 <code>Alfred 4.0.8（Build 1135）</code>，所以如果低于此版本导致部分功能没有的，请更新最新版本。或者有新功能此版本没有提及的，请以官网为准 <a href="https://www.alfredapp.com/" target="_blank" rel="external">Alfred - Productivity App for macOS</a>。</p>
-<p>需要注意的是，本文是以提高效率为准，不会讲解如何制作 Workflows（工作流），只会讲解有那些好用的工作流。另外，网上的教程很多都是15年左右的，新一点的教程还是以其一功能为主讲，我一直思考，怎么才能从入门到精通 Alfred 呢？所以，为了让大家全面的了解，这里会从软件的偏好设置从上往下，一个一个解析，中间串插对整个功能的讲解。另外，如果操作或流程很简单的，也不提供截图。下面就开始我们的文章！</p>
+<p>小帽子 <code>Alfred</code>（读<code>[&#39;ælfrid]</code>） 是 macOS 平台强大的效率软件！被誉为神兵利器！我们本篇文章基于2020年1月17号更新的版本 <code>Alfred 4.0.8（Build 1135）</code>，所以如果低于此版本导致部分功能没有的，请更新最新版本。或者有新功能此版本没有提及的，请以官网为准 <a href="https://www.alfredapp.com/" target="_blank" rel="external">Alfred - Productivity App for macOS</a>。</p>
+<p>需要注意的是，本文是以提高效率为准，不会讲解如何制作 Workflows（工作流），只会讲解有那些好用的工作流。另外，网上的教程很多都是15、16年为主，新的教程还是以其一功能为主讲，我一直思考，<code>怎么才能让新手从入门到精通 Alfred 呢？</code>，所以，为了让大家全面的了解，这里会从 Alfred 的偏好设置开始讲解，从上往下，一个一个解析，中间串插对整个功能的讲解。另外，如果操作或流程很简单的，也不提供截图。下面就让我们开始吧！</p>
 <h3 id="General（通用设置）">General（通用设置）</h3><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-General.png" alt="Alfred-General.png"></p>
 <ul>
 <li><p><code>Startup</code>（启动）<br>勾选表示系统重启时，会自动启动 Alfred。</p>
@@ -155,7 +155,7 @@ Open.png"></p>
 <li>少数派：<code>https://sspai.com/search/article?q={query}</code></li>
 </ul>
 <p>另外，配置搜索引擎时，借助网站方面的 <code>OpenSearch</code> 与 <code>SearchAction</code> 协议实现自动化填写 <code>Search URL</code>。不再像以前那样需要自己寻找关键词参数位置，然后替换为 <code>{query}</code> 了。添加搜索引擎时，在 Search URL 文本框中填入网站的域名，然后点击右侧的 <code>Lookup</code> 就会自动分析并显示可用的搜索链接格式，接着点击 <code>Use</code> 就可以了。但遗憾的是，并非所有网站都支持 OpenSearch 或 SearchAction 协议。（大家可以用<code>https://www.pinterest.com</code> 这个体验一下。）</p>
-<p>这里分享一些自定义的网络搜索：</p>
+<p>这里分享一些博主自定义的网络搜索：</p>
 <ul>
 <li>掘金搜索：<code>alfred://customsearch/Search%20Juejin%20for%20%27%7Bquery%7D%27/jj/utf8/nospace/https%3A%2F%2Fjuejin.im%2Fsearch%3Ftype%3Dall%26query%3D%7Bquery%7D</code></li>
 <li>简书搜索：<code>alfred://customsearch/Search%20Jianshu%20for%20%27%7Bquery%7D%27/js/utf8/nospace/https%3A%2F%2Fwww.jianshu.com%2Fsearch%3Futf8%3D%25E2%259C%2593%26q%3D%7Bquery%7D</code></li>
@@ -296,7 +296,7 @@ Open.png"></p>
 <li><p><code>Input</code> / <code>Output</code><br>设置输入和输出的结果表达式的小数分分隔。</p>
 </li>
 </ul>
-<p>非常贴心的是，当你在用Excel等软件进行财务计算时，数字往往会带上货币符号，比如“¥”、“$”、“€”等。当从Excel拷贝这些带有符号的数字到输入框时，Alfred会自动省略掉这些货币符号，这样你就能直接进行计算了，而不用还要在输入框中进行编辑。</p>
+<p>非常贴心的是，当你在用 Excel 等软件进行财务计算时，数字往往会带上货币符号，比如 <code>¥</code>、<code>$</code>、<code>€</code>等。当从 Excel 拷贝这些带有符号的数字到输入框时，Alfred 会自动省略掉这些货币符号，这样你就能直接进行计算了，而不用还要在输入框中进行编辑。</p>
 <h4 id="Dictionary（字典）">Dictionary（字典）</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Dictionary.png" alt="Alfred-Features-Dictionary.png"></p>
 <p>Alfred 内置了词典查询并使用 Apple 自带的词典软件，可以通过 <code>define</code> 和 <code>spell</code> 两个关键词唤起。这里 define 我改为了 <code>df</code> 这里更加快捷！值得一提的是 spell 能够帮你模糊拼写，有时候忘了单词怎么拼，可以使用它。</p>
 <p>苹果默认的词典量很少，可以点击这里下载更多扩展词典：<a href="https://github.com/iHTCboy/macOSConfig/tree/master/macOS_Dictionary" target="_blank" rel="external">macOSConfig/macOS_Dictionary · iHTCboy/macOSConfig</a></p>
@@ -304,7 +304,7 @@ Open.png"></p>
 <h4 id="Contacts（联系人）">Contacts（联系人）</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Contacts.png" alt="Alfred-Features-Contacts.png"></p>
 <p>Alfred 也内置了 <code>Contacts</code>（通信录）查询，联动 Apple 自带的通讯录，输入对应小伙伴的名词能够查看对应名片，还能够 Copy 对应的信息。这里因为我们是程序员，所以其实很少使用到名片，所以这里就不作过多说明了。</p>
 <h4 id="Music（音乐）">Music（音乐）</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Music.png" alt="Alfred-Features-Music.png"></p>
-<p>可以从键盘控制iTunes与 Alfred 的内置迷你播放器，搜索你的iTunes音乐收藏，按流派风格或随机播放专辑等。这里国区喜欢用国区的音乐App，一般人都不会购买 Apple Music 服务，所以就不多说，需要的可以自己用用啊。</p>
+<p>可以从键盘控制 iTunes与 Alfred 的内置迷你播放器，搜索你的 iTunes音乐收藏，按流派风格或随机播放专辑等。这里国区喜欢用国区的音乐App，一般人都不会购买 Apple Music 服务，所以就不多说，需要的可以自己用用啊。</p>
 <p>官网示例：<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Music-MiniPlayer.png" alt="Alfred-Features-Music-MiniPlayer.png"></p>
 <h4 id="1Password（密码）">1Password（密码）</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-1Password.png" alt="Alfred-Features-1Password.png"></p>
 <p>搜索并直接从 Alfred 打开你 <code>1Password</code> 中的书签。</p>
@@ -327,7 +327,7 @@ Open.png"></p>
 <h4 id="Previews（预览）">Previews（预览）</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Previews.png" alt="Alfred-Features-Previews.png"></p>
 <p>熟悉 macOS 系统的同学都知道，macOS 有一个很方便的功能叫 <code>Quick Look</code>，就是在 Finder 中选中文件后按下 空白键（Space键），就能在不打开应用程序的情况下对文件进行快速预览，比如PDF、图片、视频、音频文件等等。Alfred 也集成了这一功能，不过此时的快捷键就不是Space了，而是 <code>⇧</code>键（<code>shift</code>键）。在 Alfred 的搜索结果列表中选中想要进行预览的文件，按下 shift键就能利用 Quick Look 进行预览了。有时候对某些文件或者某些路径下的文件进行预览，如果你不想对这些文件或者路径下的文件进行预览，可以在 <code>No Previews For</code> 和 <code>No Previews In</code>中设置。</p>
 <h3 id="Workflows（工作流）">Workflows（工作流）</h3><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Workflows.png" alt="Alfred-Workflows.png"></p>
-<p><code>Workflows</code>翻译中文叫<strong>工作流</strong>，应该也比较好理解。网上上面介绍的功能，有一部分就是工作流，可以理解为Alfred自带的工作流。类似的，你是不是能想到一些可以定制化的操作流程呢？所以，当然也可以使用第三方的工作流，或者自己定义自己的工作流！</p>
+<p><code>Workflows</code> 翻译中文为<strong>工作流</strong>，应该也比较好理解。网上上面介绍的功能，有一部分就是工作流，可以理解为Alfred自带的工作流。类似的，你是不是能想到一些可以定制化的操作流程呢？所以，当然也可以使用第三方的工作流，或者自己定义自己的工作流！</p>
 <p>如果想要使用第三方的或者自定义的工作流，需要支付购买Alfred的<code>PowerPack</code>，Alfred的 PowerPack 是最值得购买的服务，没有之一。因为如果使用 Alfred 而没有 PowerPack 授权，那 Alfred 的强大的功能相当失去了左右臂。关于 PowerPack 细节我们在下一节内容在讨论，我们接着说 Workflows（工作流）。</p>
 <p>Alfred 安装完「Powerpack」，就像车体安装了引擎，余下的事情就看我们如何 DIY，让引擎为我们提供无限动力。而引擎提供动力的燃料我们称其为 <code>Workflow</code>。官方对于 workflow 是这样描述的：</p>
 <blockquote>
@@ -335,16 +335,16 @@ Open.png"></p>
 </blockquote>
 <h4 id="认识_workflow_结构">认识 workflow 结构</h4><p>实现 WorkFlows 的四个基本对象：<code>trigger</code>、<code>keyword</code>、<code>action</code>、<code>output</code>。Alfred 通过将这四个基本对象合理链接「Connect」，便能实现各种高级功能。而在 Alfred 的 Workflow 配置界面中，大体上可以将其分为三栏，trigger 和 keyword 都会触发后续行为，所以归到「原因」类；Action 是「过程」类，也是 workflow 的核心，它负责处理用户需求；而 output 是「结果」类，负责把 action 的结果以一定的形式传递给用户，可以是直接屏显，也可以是另存为文件，也可以是返回到最后一个程序的输入框中。总之这三个类别「四个对象」各司其职，最终可以完成较为复杂的数据处理和用户需求。而这四个对象都可以用「线」链接，来形成直接或间接的条件结果关系。</p>
 <p>本文主要是提高效率，所以关于如何自定义 Workflows（工作流）暂时不讲解，后面有需要在回来增加，原因 Workflow 创作的门槛比较低，类似iOS的 workflows，同时 workflow 支持的编程语言也非常多。可以参考现有的那些 Workflows（工作流），可以看到他们是怎么构建和流程的。另外，也可以参考我写过的 Workflows：<a href="https://ihtcboy.com/2019/11/17/2019-11-17_%E4%B8%80%E4%B8%AAAlfred%E7%9A%84Workflow%E8%81%8A%E5%A4%A9%E5%86%85%E5%AE%B9%E5%BC%95%E7%94%A8%E6%B6%88%E6%81%AF/">用 Alfred Workflow 实现聊天内容快速引用回复</a>，借鉴一些痛点，来实现自己的工作流！</p>
-<p>下面，会列出我现在使用的一些高效的 Workflows（工作流）插件，因为太多，所以不可能全部说明，大家可以在这里看到我使用的全部 Alfred 相关的内容：<a href="https://github.com/iHTCboy/macOSConfig/tree/master/Alfred" target="_blank" rel="external">macOSConfig/Alfred - iHTCboy</a></p>
+<p>下面会列出我现在使用的一些高效的 Workflows（工作流）插件，因为太多，所以就不全部都介绍，大家可以在这里看到我使用的全部 Alfred 相关的内容：<a href="https://github.com/iHTCboy/macOSConfig/tree/master/Alfred" target="_blank" rel="external">macOSConfig/Alfred - iHTCboy</a></p>
 <h4 id="高效_Workflows_推荐">高效 Workflows 推荐</h4><ul>
 <li><strong>最近使用的文件/应用等</strong><br>最近打开的文档：<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Workflows-Recent-Documents.png" alt="Workflows-Recent-Documents.png"></li>
 </ul>
 <p>最近打开的应用：<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Workflows-Recent-Apps.png" alt="Workflows-Recent-Apps.png"></p>
 <p>教程：<a href="https://sspai.com/post/47063" target="_blank" rel="external">妙用 Alfred 让你最近使用的文件触手可及</a><br>下载：<a href="https://github.com/mpco/AlfredWorkflow-Recent-Documents/releases" target="_blank" rel="external">mpco/AlfredWorkflow-Recent-Documents</a></p>
 <ul>
-<li><p><strong>Finder路径快速打开切换到终端的路径</strong><br>下载：<a href="http://www.packal.org/workflow/terminalfinder" target="_blank" rel="external">TerminalFinder | Packal</a></p>
+<li><p><strong>Finder路径快速打开切换到终端（iTerm）的路径</strong><br>下载：<a href="http://www.packal.org/workflow/terminalfinder" target="_blank" rel="external">TerminalFinder | Packal</a></p>
 </li>
-<li><p><strong>快速复制当前文件夹路径或者文件名字</strong><br>下载：<a href="https://github.com/iHTCboy/macOSConfig/tree/master/Alfred/Workflows" target="_blank" rel="external">macOSConfig/Alfred/Workflows · iHTCboy/macOSConfig</a></p>
+<li><p><strong>快速复制当前文件夹路径或者文件名字</strong><br>此插件来源：<a href="https://github.com/hzlzh/Alfred-Workflows" target="_blank" rel="external">hzlzh/Alfred-Workflows</a>，下面这个下载链接是博主改造后的，增加了文件名的复制，和使用最新的 Finder 图标。快捷复制当前Finder选择的文件(<code>cp</code>)的文件路径或文件名(<code>cpn</code>)。<br>下载：<a href="https://github.com/iHTCboy/macOSConfig/tree/master/Alfred" target="_blank" rel="external">macOSConfig/Alfred at master · iHTCboy/macOSConfig</a></p>
 </li>
 <li><p><strong>Xcode 开发者清理 DerivedData 数据</strong><br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Workflows-Clear-Xcode-DerivedData.png" alt="Workflows-Clear-Xcode-DerivedData.png"><br>下载：<a href="https://github.com/ChopinChao/xcdd_workflow" target="_blank" rel="external">ChopinChao/xcdd_workflow: a simple xcdd workflow for Alfred2</a></p>
 </li>
@@ -370,11 +370,11 @@ Open.png"></p>
 </li>
 <li><p><strong>谷歌翻译</strong><br>下载：<a href="https://github.com/xfslove/alfred-google-translate" target="_blank" rel="external">xfslove/alfred-google-translate: Alfred 3 workflow - translate with google api💵🚫</a></p>
 </li>
+<li><p><strong>聊天内容快速引用回复</strong><br>教程：<a href="https://ihtcboy.com/2019/11/17/2019-11-17_%E4%B8%80%E4%B8%AAAlfred%E7%9A%84Workflow%E8%81%8A%E5%A4%A9%E5%86%85%E5%AE%B9%E5%BC%95%E7%94%A8%E6%B6%88%E6%81%AF/">用 Alfred Workflow 实现聊天内容快速引用回复</a><br>下载：<a href="https://github.com/iHTCboy/macOSConfig/blob/master/Alfred/Reply%20Message%20v1.0.alfredworkflow" target="_blank" rel="external">macOSConfig/Reply Message v1.0.alfredworkflow at master · iHTCboy/macOSConfig</a></p>
+</li>
 <li><p><strong>Evernote</strong><br>支持印象笔记的全局搜索。这功能很好很强大，能够帮助自己快速定位到具体的印象笔记的条目之上。<br>下载：<a href="https://www.alfredforum.com/topic/840-evernote-workflow-9-beta-4-alfred-4/" target="_blank" rel="external">Evernote Workflow 9 beta 4 (Alfred 4) - Share your Workflows - Alfred App Community Forum</a></p>
 </li>
-<li><p><strong>货币转换</strong></p>
-</li>
-<li><p>下载：<a href="http://www.packal.org/workflow/currency-exchange" target="_blank" rel="external">Currency Exchange | Packal</a></p>
+<li><p><strong>货币转换</strong><br>下载：<a href="http://www.packal.org/workflow/currency-exchange" target="_blank" rel="external">Currency Exchange | Packal</a></p>
 </li>
 <li><p><strong>Dash</strong><br>代码 Doc 文档全局快速搜索。<br>教程：<a href="https://www.alfredapp.com/blog/productivity/dash-quicker-api-documentation-search/" target="_blank" rel="external">Dash: Quicker API Documentation Browsing - Alfred Blog</a></p>
 </li>
@@ -432,13 +432,13 @@ Open.png"></p>
 </ul>
 <p>当然，目前每个 macOS 下的 Alfred 的 <code>Usage</code>（使用情况）不会同步共享，另外，如果你电脑的硬盘空间不足（少于20GB），<code>iCloud Drive</code>的内容在本地系统中经常被清空，导致需要在远端重新下载 Alfred 的同步文件（Alfred.alfredpreferences），只能说买电脑要空间大一点吧！</p>
 <h3 id="Powerpack（动力组）">Powerpack（动力组）</h3><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Powerpack.png" alt="Alfred-Powerpack.png"></p>
-<p><code>Workflows</code>（工作流）扩展功能、文件导航、剪贴板历史、通讯录、iTunes Mini播放器等，都是需要购买此 <code>Powerpack</code>（动力组） 升级包的，否则免费试用版本是无法使用工作流。当然博主个人推荐有经济能力的人可以购买正版的授权码，因为软件的价值，之前第一篇系列文章已经提过。</p>
+<p><code>Workflows</code>（工作流）扩展功能、文件导航、剪贴板历史、通讯录、iTunes Mini播放器等，都是需要购买此 <code>Powerpack</code>（动力组） 升级包的，否则免费试用版本是无法使用工作流。博主个人推荐有经济能力的人可以购买正版的授权码，因为软件的价值，本系列的第一篇文章提过。</p>
 <p>目前只支持 <code>VISA</code>、<code>Mastercard</code>（万事达卡）、<code>AMEX</code>（American Express，美国运通）的信用卡，或者 <code>Paypal</code> 支付。所以对于中国区来说还是不太友好！目前<code>2020年</code>的V4版本的单个授权码是 <code>£25</code> 英磅，大约 <code>￥225.26</code>人民币。而超级支持者可以支付 <code>£45</code> 英磅，大约 <code>￥405.10</code>人民币，终身免费升级。注意这里是单个用户，就是一个激活码只能用于一台macOS。具体的购买流程这里省略了，有条件的同学建议按需选择购买。</p>
 <p>关于 Alfred 那些功能需要购买 Powerpack 后才能使用的，参考官网： <a href="https://www.alfredapp.com/powerpack/" target="_blank" rel="external">Alfred Powerpack - Take Control of Your Mac and macOS</a></p>
 <h3 id="Usage（使用情况）">Usage（使用情况）</h3><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Usage.png" alt="Alfred-Usage.png"></p>
-<p>Alfred 会统计使用的情况。我们为了说明 Alfred 的潜在价值，我们不妨做一个简单的计算，假设每天我都能够保持现况以每日平均唤醒 39 次为基数。假如每次 Alfred 的操作，可以为我节省 5s 的时间（往往有些复杂的操作会大于 5s，比如去寻找一个藏得很深的文件，或者一个记不全的文件或者一个不常用的软件，或者打开一个常用的书签等等)，那么 1 年下来，竟然能够节省 0.82 天。</p>
+<p>Alfred 会统计使用的情况。从上图可以看到折线图显示的是28天的使用情况（当然因为编写文章时，因春节放假，所以有一个波谷区。），从2019年9月2号起，使用 Alfred 达到 6321 次，平均每天使用 39 次。同时也可以看到 Clipboard 和 Hotkeys 使用最频繁。为了说明 Alfred 的潜在价值，我们不妨做一个简单的计算，假设每天我都能够保持现况以每日平均唤醒 39 次为基数。假如每次 Alfred 的操作，可以为我节省 5s 的时间（往往有些复杂的操作会大于 5s，比如去寻找一个藏得很深的文件，或者一个记不全的文件或者一个不常用的软件，或者打开一个常用的书签等等)，那么 1 年下来，竟然能够节省 0.82 天。</p>
 <p><code>39 * 5 * 365 / 3600 / 24 = 0.823784722 天</code></p>
-<p>换言之，Alfred 让你的生命延长了 0.82 天！那如果是 5 年，就是 4 天啦！这里我的 39 次基数，并且因为系统重装，导致只有2019年9月后的数据，并且从上面可以看出，一个复杂的操作节省可以有几分钟，如果是重复一百次可能还不只。总之，大家经常有大量重复的工作流或操作步骤，这就更加可观，并且马上使用起来吧！</p>
+<p>换言之，Alfred 让你的生命延长了 0.82 天！那如果是 5 年，就是 4 天啦！这里是以 39 次为基数，从本文上面的教程可以看出，一个复杂的操作节省可以有几分钟，如果重复一百次就远不止，所以，节省的时间是非常可观的！总之，大家经常有大量重复的工作流或操作步骤，这就更加可观，并且马上使用起来吧！</p>
 <h3 id="Help（帮助）">Help（帮助）</h3><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Help.png" alt="Alfred-Help.png"></p>
 <p>注意页面有一个提示 <code>Try Searching the Preferences</code>，就是可以搜索软件的所有的配置项目，这个搜索功能非常有用的，因为 Alfred 有非常多的配置项，所以如果你不想一步一步点击打开，搜索永远是最快的，Alfred 中搜索 Alfred，作者还是很用心！另外在 Alfred 输入框中使用 <code>?关键词</code> 也可以搜索偏好设置。</p>
 <p>其它的就是帮助和反馈页面，点击会跳转到网页中，这里就不展开了。</p>
@@ -466,8 +466,8 @@ Open.png"></p>
 <p>这个 Alfred 中用到最多的是访问 Finder（访达）App。</p>
 <p>综上，我们主要是想讲解一下系统的权限和 Alfred 使用到的权限，这样更好的了解这些权限，以便你来决定那些敏感或数据可以通过这些设置来关闭或启动，<code>在高效和隐私之间做一个平衡点</code>。</p>
 <h4 id="书签功能搜索无结果">书签功能搜索无结果</h4><p>如果你刚升级到 macOS 10.15 后，可能会出现搜索浏览器的书签没有搜索到的问题。这是因为系统权限原因，需要在系统偏好设置中的 <code>安全性与隐私</code>-&gt; <code>隐私</code> -&gt;<code>完全磁盘访问权限</code> 勾选 <code>Alfred 4.app</code>。然后在 Alfred 中输入 <code>Reload Alfred Cache</code> 后回车键，Alfred 重新加载缓存就可以搜索书签。如果不给权限，那么在 <code>macOS 10.15</code> 下无法使用书签搜索。</p>
-<h2 id="总结">总结</h2><p>综上，我们已经把 Alfred 的所有功能讲解完！已经是最新的 4.0 版本的 Alfred！没有想到2年前立下的文章，2年后才完成，所以希望这篇文章也2年内都能正确的给大家指导作用！（按 Alfred 更新的情况，改版不会变化很大啊~）又是万字文章，也许可能不是很多人能有耐心看完吧，希望你是看完的！Alfred 是强依赖于 macOS 的程序员的效率神器！希望接下来大家都能更好地使用 Alfred 来提高日常的工作效率啊！</p>
-<p>由于篇幅长度的限制，部分内容的扩展和深度阅读可以阅读下面的参考文章。建议大家通过本文后，没有使用过的同学，可以自己尝试 Alfred 并提高自己日常工作生活的效率，省时省力，<code>让效率为程序员所用！</code></p>
+<h2 id="总结">总结</h2><p>综上，我们已经把 Alfred 的所有功能都讲解完！大家是不是有一个全面的了解了呢！基于最新的 Alfred v4.0 版本！没有想到2年前立下的flag，2年后才完成，所以<code>希望这篇文章也2年内都能正确和高效的给大家指导作用！</code>（按 Alfred 更新的情况，改版不会变化很大啊~）又是万字文章，可能不是所有人都能有耐心看完，但希望你是看完并有所收获！Alfred 是 macOS 系统上<code>程序员必备的效率神器</code>！希望大家看到本文章<code>为时未晚</code>！都能更好地使用 Alfred 来提高日常的生活和工作效率啊！</p>
+<p>由于篇幅长度的限制，部分内容的扩展和深度可以阅读下面的参考文章。建议大家看完本文后，都操作一遍，而没有使用过的同学，更加应该开始使用 Alfred！希望大家都开始自己的 Alfred 之旅！提高自己日常工作生活的效率，省时省力，<code>让效率为程序员所用！</code></p>
 <h2 id="参考">参考</h2><ul>
 <li><a href="https://www.alfredapp.com/" target="_blank" rel="external">Alfred - Productivity App for macOS</a></li>
 <li><a href="http://www.packal.org/" target="_blank" rel="external">Packal - Alfred Workflows and Themes</a></li>
@@ -512,6 +512,7 @@ Open.png"></p>
 <li><a href="https://blog.imcompany.cn/post/na-xie-ti-gao-xiao-lu-de-alfred-workflow/" target="_blank" rel="external">那些提高效率的Alfred Workflow - I’m company</a></li>
 <li><a href="https://github.com/hzlzh/Alfred-Workflows" target="_blank" rel="external">hzlzh/Alfred-Workflows: Make your Alfred more powerful. (include Workflows, Extensions and Themes)</a></li>
 <li><a href="https://github.com/willfarrell/alfred-workflows" target="_blank" rel="external">willfarrell/alfred-workflows: Alfred Workflows for Developers</a></li>
+<li><a href="https://github.com/hzlzh/AlfredWorkflow.com" target="_blank" rel="external">hzlzh/AlfredWorkflow.com: A public Collection of Alfred Workflows.</a></li>
 </ul>
 <p><br></p>
 <ul>
@@ -7463,9 +7464,9 @@ DOM 架构方案在文本编辑与图形渲染操作方面的优缺点
     <link href="https://iHTCboy.com/2019/11/17/2019-11-17_%E4%B8%80%E4%B8%AAAlfred%E7%9A%84Workflow%E8%81%8A%E5%A4%A9%E5%86%85%E5%AE%B9%E5%BC%95%E7%94%A8%E6%B6%88%E6%81%AF/"/>
     <id>https://iHTCboy.com/2019/11/17/2019-11-17_一个Alfred的Workflow聊天内容引用消息/</id>
     <published>2019-11-17T12:22:01.000Z</published>
-    <updated>2020-02-12T01:53:59.772Z</updated>
+    <updated>2020-02-12T02:50:07.369Z</updated>
     <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>在微信 Mac/PC 端消息有个「引用消息」的功能，用于针对某个特定消息回复，而其它 App 没有该功能，或者有，比如 QQ / Telegram 都有实现回复（reply）功能，但是都是针对一条消息回复，如果需要对多条消息统一做回复，自带的功能也许真不够自定义的好。当然，最主要是我司现在用的 <code>企业QQ for macOS</code> 版本不支持这个功能，于是就想到自己做一个 workflow 可以读取当前复制的内容，然后生成一个带引用格式的文本，并完成后粘贴到 App，从而实现引用回复~</p>
-<p>传送门下载：<a href="https://github.com/iHTCboy/macOSConfig/blob/master/Alfred/Reply%20Message%20v1.0.alfredworkflow" target="_blank" rel="external">Reply Message v1.0.alfredworkflow</a></p>
+<p>传送门下载：<a href="https://github.com/iHTCboy/macOSConfig/raw/master/Alfred/Workflows/Reply%20Message%20v1.0.alfredworkflow" target="_blank" rel="external">Reply Message v1.0.alfredworkflow</a></p>
 <a id="more"></a>
 <h3 id="2、已实现的效果">2、已实现的效果</h3><p>目前已经实现了几个功能：</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/11/Alfred-Reply-Message-alfredworkflow.png" alt="Alfred-Reply-Message-alfredworkflow.png"></p>
@@ -7480,7 +7481,7 @@ DOM 架构方案在文本编辑与图形渲染操作方面的优缺点
 </li>
 </ol>
 <p>注意说明：<br>1、以上说的快捷键，大家都可以自己定义，不是固定的啊。<br>2、快捷符模板需要开启 Alfred 监听键盘权限：<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/11/Alfred-Automatically-expand-snippets.png" alt="Alfred-Automatically-expand-snippets.png"><br>3、本次使用到 Alfred 相关的功能试用版不支持，需要付费的正版才支持，或者使用xx版本。当然对于有条件的朋友建议购买正版，这也是一个提高效率的方式~</p>
-<p>下载地址：<a href="https://github.com/iHTCboy/macOSConfig/blob/master/Alfred/Reply%20Message%20v1.0.alfredworkflow" target="_blank" rel="external">Reply Message v1.0.alfredworkflow</a></p>
+<p>下载地址：<a href="https://github.com/iHTCboy/macOSConfig/raw/master/Alfred/Workflows/Reply%20Message%20v1.0.alfredworkflow" target="_blank" rel="external">Reply Message v1.0.alfredworkflow</a></p>
 <h3 id="3、背后的简单原理">3、背后的简单原理</h3><p>其实，原理非常的简单，就是二行代码的事：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">clipboardtext=`pbpaste`</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="operator">-e</span> -n <span class="string">"「 <span class="variable">$&#123;clipboardtext&#125;</span> 」\n- - - - - - - - - - - - - - -\n\n：&#123;query&#125;"</span></span><br></pre></td></tr></table></figure>
 <p>就是用 shell 的 macOS 命令 <code>pbpaste</code> 获取剪切版的内容，然后拼接生成需要的格式，最后内容通过 <code>{query}</code> 传递给 Alfred。至于前期的快捷键、键盘监听，后续的推送通知、粘贴内容到输入框，全部是 Alfred 软件全自动封装好的完成，不需要我们用户关心！！！</p>
@@ -7512,7 +7513,7 @@ DOM 架构方案在文本编辑与图形渲染操作方面的优缺点
 ]]></content>
     <summary type="html">
     <![CDATA[<h3 id="1、前言">1、前言</h3><p>在微信 Mac/PC 端消息有个「引用消息」的功能，用于针对某个特定消息回复，而其它 App 没有该功能，或者有，比如 QQ / Telegram 都有实现回复（reply）功能，但是都是针对一条消息回复，如果需要对多条消息统一做回复，自带的功能也许真不够自定义的好。当然，最主要是我司现在用的 <code>企业QQ for macOS</code> 版本不支持这个功能，于是就想到自己做一个 workflow 可以读取当前复制的内容，然后生成一个带引用格式的文本，并完成后粘贴到 App，从而实现引用回复~</p>
-<p>传送门下载：<a href="https://github.com/iHTCboy/macOSConfig/blob/master/Alfred/Reply%20Message%20v1.0.alfredworkflow">Reply Message v1.0.alfredworkflow</a></p>]]>
+<p>传送门下载：<a href="https://github.com/iHTCboy/macOSConfig/raw/master/Alfred/Workflows/Reply%20Message%20v1.0.alfredworkflow">Reply Message v1.0.alfredworkflow</a></p>]]>
     
     </summary>
     
