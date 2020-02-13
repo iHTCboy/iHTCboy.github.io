@@ -27,7 +27,7 @@
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/Clang-LLVM编译过程.png">
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/方舟编译器架构示意图.png">
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/方舟编译器开源范围示意图.png">
-<meta property="og:updated_time" content="2020-02-07T03:39:14.635Z">
+<meta property="og:updated_time" content="2020-02-13T01:59:02.360Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【学习总结】05 | 链接器：符号是怎么绑定到地址上的？">
 <meta name="twitter:description" content="1、前言首先，我认为学习总结，要有所总，所结，就是有归纳后，能用自己的话告诉别人！有所结，就是有所收获输出，一般我认为是思维导图，所以，每篇文章前，我都会先给出文章的脑图：">
@@ -345,6 +345,13 @@ var _hmt = _hmt || [];
 <li><strong>Xcode5</strong>： GCC 被废弃，新的编译器是 LLVM 5.0</li>
 </ul>
 <p>从 GCC前端 到 LLVM后端的编译器，到 Clang-LLVM 的编译器，一步步收回对编译工具链的控制，也为 Swift 的出现奠定基础。所以，Chris Lattner 真的是大神！</p>
+<p>当前 Xcode11 对应：</p>
+<pre><code class="bash">Apple clang version <span class="number">11.0</span>.<span class="number">0</span> (clang-<span class="number">1100.0</span>.<span class="number">33.17</span>)
+Target: x86_64-apple-darwin19.<span class="number">3.0</span>
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+</code></pre>
+<p>查看你当前使用的 LLVM 可以用命令：<code>llvm-gcc -v</code>。</p>
 <h4 id="LLVM_工具链">LLVM 工具链</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/LLVM工具链集合.png" alt="LLVM工具链集合.png"></p>
 <p>最后用<a href="https://wjerry.com/2019/05/19/LLVM架构与Clang/" target="_blank" rel="external">这张图</a>来表示完整的LLVM工具链集合的六大执行单元。</p>
 <ol>
@@ -355,6 +362,7 @@ var _hmt = _hmt || [];
 <li><code>优化中间表达式</code>：中间代码常常会有冗余和死代码的情况出现，而优化器可以处理这些问题以获得更优异的性能。</li>
 <li><code>生成目标代码</code>： 最后后端会生成在目标机器上运行的机器码，我们也将其称之为目标代码。</li>
 </ol>
+<p>关于 LLVM 可以查看官网了解更多：<a href="http://llvm.org/" target="_blank" rel="external">The LLVM Compiler Infrastructure Project</a>，中文站：<a href="https://www.llvm.org.cn/" target="_blank" rel="external">LLVM - 让世界听到龙的声音</a></p>
 <h3 id="链接器">链接器</h3><ul>
 <li>为什么要让链接器做符号和地址绑定？不绑定的话，又会有什么问题？</li>
 <li>链接器为什么还要把项目中的多个 Mach-O 文件合并成一个。</li>
@@ -470,6 +478,8 @@ var _hmt = _hmt || [];
 <li><a href="https://juejin.im/post/5a352bb0f265da433562d5e3" target="_blank" rel="external">iOS学习之深入理解程序编译过程 - 掘金</a></li>
 <li><a href="https://blog.cocosdever.com/2016/04/09/talking-about-iOS-Reverse-Engineering/" target="_blank" rel="external">浅谈iOS安全与入侵(逆向工程)</a></li>
 <li><a href="https://www.jianshu.com/p/be413358cd45" target="_blank" rel="external">dyld简介及加载过程分析 - 简书</a></li>
+<li><a href="http://llvm.org/" target="_blank" rel="external">The LLVM Compiler Infrastructure Project</a></li>
+<li><a href="https://www.llvm.org.cn/" target="_blank" rel="external">LLVM - 让世界听到龙的声音</a></li>
 <li><a href="https://zh.wikipedia.org/wiki/Clang" target="_blank" rel="external">Clang - 维基百科，自由的百科全书</a></li>
 <li><a href="https://zh.wikipedia.org/wiki/LLVM" target="_blank" rel="external">LLVM - 维基百科，自由的百科全书</a></li>
 <li><a href="https://www.infoq.cn/article/what-is-llvm-the-power-behind-swift-rust-clang-and-more" target="_blank" rel="external">LLVM：Swift、Rust、Clang等语言的强大后盾-InfoQ</a></li>
