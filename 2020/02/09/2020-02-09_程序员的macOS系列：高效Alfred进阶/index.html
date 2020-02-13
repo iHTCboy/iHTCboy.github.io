@@ -17,6 +17,7 @@
 <meta property="og:site_name" content="iHTCboy's blog">
 <meta property="og:description" content="1、前言之前写的《程序员的macOS系列》文章，2018年写了二篇文章：精选Mac App、 Mac开发环境配置，至今，已经过年一年半啦！收到很多同学的点赞，最后一篇 高效Alfred进阶 因为各种原因，没有写出来，所以都0202年啦！
 其实 macOS 系统的高效，很大部分原因是因为有 Unix/Linux 的相似血统，本文讲解Alfred，就是效率工具的一员，相信注重效率的你，一早肯定听说过或">
+<meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-4.png">
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-General.png">
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-General-Permissions-Request-Permissions.png">
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Default-Results.png">
@@ -75,7 +76,7 @@
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/macOS-Preferences-Folder-Access.png">
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/macOS-Preferences-Folder-Access-Desktop.png">
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/macOS-Preferences-Automation.png">
-<meta property="og:updated_time" content="2020-02-12T08:49:45.411Z">
+<meta property="og:updated_time" content="2020-02-13T01:04:31.430Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="程序员的macOS系列：高效Alfred进阶">
 <meta name="twitter:description" content="1、前言之前写的《程序员的macOS系列》文章，2018年写了二篇文章：精选Mac App、 Mac开发环境配置，至今，已经过年一年半啦！收到很多同学的点赞，最后一篇 高效Alfred进阶 因为各种原因，没有写出来，所以都0202年啦！
@@ -310,6 +311,7 @@ var _hmt = _hmt || [];
 <p>Alfred is an award-winning app for macOS which boosts your efficiency with hotkeys, keywords, text expansion and more. Search your Mac and the web, and be more productive with custom actions to control your Mac.<br>Alfred是一款屡获殊荣的macOS应用程序，可通过热键，关键字，文本扩展等功能提高您的效率。搜索Mac和网页的内容，并通过自定义操作来控制Mac来提高生产力。</p>
 </blockquote>
 <p>小帽子 <code>Alfred</code>（读<code>[&#39;ælfrid]</code>） 是 macOS 平台强大的效率软件！被誉为神兵利器！我们本篇文章基于2020年1月17号更新的版本 <code>Alfred 4.0.8（Build 1135）</code>，所以如果低于此版本导致部分功能没有的，请更新最新版本。或者有新功能此版本没有提及的，请以官网为准 <a href="https://www.alfredapp.com/" target="_blank" rel="external">Alfred - Productivity App for macOS</a>。</p>
+<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-4.png" alt="Alfred-4.png"></p>
 <p>需要注意的是，本文是以提高效率为准，不会讲解如何制作 Workflows（工作流），只会讲解有那些好用的工作流。另外，网上的教程很多都是15、16年为主，新的教程还是以其一功能为主讲，我一直思考，<code>怎么才能让新手从入门到精通 Alfred 呢？</code>，所以，为了让大家全面的了解，这里会从 Alfred 的偏好设置开始讲解，从上往下，一个一个解析，中间串插对整个功能的讲解。另外，如果操作或流程很简单的，也不提供截图。下面就让我们开始吧！</p>
 <h3 id="General（通用设置）">General（通用设置）</h3><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-General.png" alt="Alfred-General.png"></p>
 <ul>
@@ -1036,7 +1038,7 @@ gitment.render('gitment-ctn')
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
-		open_in_new: false,
+		open_in_new: true,
 		toc_hide_index: true,
 		root: "/",
 		innerArchive: true,

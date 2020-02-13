@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Learn something of everything,  Learn everything of something.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="https://iHTCboy.com/"/>
-  <updated>2020-02-12T08:49:45.411Z</updated>
+  <updated>2020-02-13T01:04:31.430Z</updated>
   <id>https://iHTCboy.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="https://iHTCboy.com/2020/02/09/2020-02-09_%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84macOS%E7%B3%BB%E5%88%97%EF%BC%9A%E9%AB%98%E6%95%88Alfred%E8%BF%9B%E9%98%B6/"/>
     <id>https://iHTCboy.com/2020/02/09/2020-02-09_程序员的macOS系列：高效Alfred进阶/</id>
     <published>2020-02-09T12:49:16.000Z</published>
-    <updated>2020-02-12T08:49:45.411Z</updated>
+    <updated>2020-02-13T01:04:31.430Z</updated>
     <content type="html"><![CDATA[<h2 id="1、前言">1、前言</h2><p>之前写的《程序员的macOS系列》文章，2018年写了二篇文章：<a href="https://ihtcboy.com/2018/07/15/2018-07-15_程序员的macOS系列：精选MacApp/">精选Mac App</a>、 <a href="https://ihtcboy.com/2018/09/30/2018-09-30_程序员的macOS系列：Mac开发环境配置/">Mac开发环境配置</a>，至今，已经过年一年半啦！收到很多同学的点赞，最后一篇 <code>高效Alfred进阶</code> 因为各种原因，没有写出来，所以都0202年啦！</p>
 <p>其实 <code>macOS</code> 系统的高效，很大部分原因是因为有 <code>Unix/Linux</code> 的相似血统，本文讲解<code>Alfred</code>，就是效率工具的一员，相信注重效率的你，一早肯定听说过或者已经在使用，简单来说 Alfred 以键盘的高效代替鼠标操作的繁冗。还有很多效率方法，以后有机会在总结吧，大家也可以自行搜索 macOS 开发效率，博主之前也写过一些。那为什么会认为 <code>Alfred</code> 对程序员很重要呢？如果你没有用过，相信你读完本文就会明白。虽然网上已经有很多 <code>Alfred</code> 的教程，但是一直没有找到能相对全面，或很少从入口到进阶的文章，并且很多文章历史已经悠久，所以惟有抛砖引玉，自我总结一下，希望和大家一起努力提交效率！</p>
 <ul>
@@ -34,6 +34,7 @@
 <p>Alfred is an award-winning app for macOS which boosts your efficiency with hotkeys, keywords, text expansion and more. Search your Mac and the web, and be more productive with custom actions to control your Mac.<br>Alfred是一款屡获殊荣的macOS应用程序，可通过热键，关键字，文本扩展等功能提高您的效率。搜索Mac和网页的内容，并通过自定义操作来控制Mac来提高生产力。</p>
 </blockquote>
 <p>小帽子 <code>Alfred</code>（读<code>[&#39;ælfrid]</code>） 是 macOS 平台强大的效率软件！被誉为神兵利器！我们本篇文章基于2020年1月17号更新的版本 <code>Alfred 4.0.8（Build 1135）</code>，所以如果低于此版本导致部分功能没有的，请更新最新版本。或者有新功能此版本没有提及的，请以官网为准 <a href="https://www.alfredapp.com/" target="_blank" rel="external">Alfred - Productivity App for macOS</a>。</p>
+<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-4.png" alt="Alfred-4.png"></p>
 <p>需要注意的是，本文是以提高效率为准，不会讲解如何制作 Workflows（工作流），只会讲解有那些好用的工作流。另外，网上的教程很多都是15、16年为主，新的教程还是以其一功能为主讲，我一直思考，<code>怎么才能让新手从入门到精通 Alfred 呢？</code>，所以，为了让大家全面的了解，这里会从 Alfred 的偏好设置开始讲解，从上往下，一个一个解析，中间串插对整个功能的讲解。另外，如果操作或流程很简单的，也不提供截图。下面就让我们开始吧！</p>
 <h3 id="General（通用设置）">General（通用设置）</h3><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-General.png" alt="Alfred-General.png"></p>
 <ul>
@@ -835,7 +836,7 @@ Open.png"></p>
     <link href="https://iHTCboy.com/2020/01/17/2020-01-17_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE06/"/>
     <id>https://iHTCboy.com/2020/01/17/2020-01-17_iOS开发高手课06/</id>
     <published>2020-01-17T12:20:20.000Z</published>
-    <updated>2020-02-12T01:37:47.043Z</updated>
+    <updated>2020-02-13T00:51:55.287Z</updated>
     <content type="html"><![CDATA[<h2 id="1、前言">1、前言</h2><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/iOS开发高手课-06-App如何通过注入动态库的方式实现极速编译调试？.png" alt="iOS开发高手课-06-App如何通过注入动态库的方式实现极速编译调试？.png"></p>
 <a id="more"></a>
@@ -1028,7 +1029,7 @@ Open.png"></p>
 <p>Swift Playgrounds 是一款适用于 Mac 和 iPad 的革命性 App，它使得代码学习和探索变得妙趣橫生。“学习编程”提供了一系列课程，指导你通过互动学习来闯关，逐步掌握编程的基础知识。你还可以尝试众多挑战，从中探索许多独一无二的编程经验。</p>
 <p>Swift Playgrounds 无需编程基础，特别适合刚入门的初学者，老少成宜。整个 App 旨在帮助你学习 Swift 语言。这是 Apple 开发的一门强大的编程语言，时下许多流行 App 都是专业人士使用 Swift 开发而成。你所编写的代码可在你于 Mac 和 ipad 间切换时无缝运行。</p>
 </blockquote>
-<p>Swift <code>Playgrounds</code> 与上一节的 Swift <code>Playground</code>， 多了一个<code>s</code>，区别是 Swift Playgrounds 不要求用户具备编程知识，非常适合初学者。你可以先从闯关解谜开始，掌握 Swift 的基础知识，再接受一系列的挑战，走向 Apple 和其他顶尖开发者设计的更高级 Playground。</p>
+<p>Swift <code>Playgrounds</code> 与上一节的 Xcode Swift <code>Playground</code>， 多了一个<code>s</code>，区别是 <code>Swift Playgrounds</code> 是苹果旗下的一款Swift语言编程教学应用，于2016年9月首次登陆iPad设备。Swift Playgrounds 不要求用户具备编程知识，非常适合初学者。你可以先从闯关解谜开始，掌握 Swift 的基础知识，再接受一系列的挑战，走向 Apple 和其他顶尖开发者设计的更高级 Playground2020年2月12号，苹果已通过 <code>Catalyst</code> 开发工具将 Swift Playgrounds 迁移至 macOS 中。</p>
 <p>更多官方资料：<a href="https://www.apple.com.cn/cn/swift/playgrounds/" target="_blank" rel="external">Swift Playgrounds - Apple (中国大陆)</a></p>
 <p>Swift Playgrounds App 下载：<a href="https://apps.apple.com/cn/app/swift-playgrounds/id1496833156?mt=12" target="_blank" rel="external">macOS 版本</a>、<a href="https://apps.apple.com/cn/app/swift-playgrounds/id908519492" target="_blank" rel="external">iPadOS 版本</a></p>
 <p>因为你编写的是真实的代码，所以Swift代码能直接在 <code>Swift Playgrounds</code> App 与 Xcode 之间导入或导出。因此，你可以在专业人士用以开发各款 iOS 和 Mac app 的工具上，来试试自己的创意!</p>
