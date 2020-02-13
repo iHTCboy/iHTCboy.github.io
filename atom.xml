@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Learn something of everything,  Learn everything of something.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="https://iHTCboy.com/"/>
-  <updated>2020-02-13T01:11:44.365Z</updated>
+  <updated>2020-02-13T04:04:01.094Z</updated>
   <id>https://iHTCboy.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="https://iHTCboy.com/2020/02/09/2020-02-09_%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84macOS%E7%B3%BB%E5%88%97%EF%BC%9A%E9%AB%98%E6%95%88Alfred%E8%BF%9B%E9%98%B6/"/>
     <id>https://iHTCboy.com/2020/02/09/2020-02-09_程序员的macOS系列：高效Alfred进阶/</id>
     <published>2020-02-09T12:49:16.000Z</published>
-    <updated>2020-02-13T01:11:44.365Z</updated>
+    <updated>2020-02-13T04:04:01.094Z</updated>
     <content type="html"><![CDATA[<h2 id="1、前言">1、前言</h2><p>之前写的《程序员的macOS系列》文章，2018年写了二篇文章：<a href="https://ihtcboy.com/2018/07/15/2018-07-15_程序员的macOS系列：精选MacApp/">精选Mac App</a>、 <a href="https://ihtcboy.com/2018/09/30/2018-09-30_程序员的macOS系列：Mac开发环境配置/">Mac开发环境配置</a>，至今，已经过年一年半啦！收到很多同学的点赞，最后一篇 <code>高效Alfred进阶</code> 因为各种原因，没有写出来，所以都0202年啦！</p>
 <p>其实 <code>macOS</code> 系统的高效，很大部分原因是因为有 <code>Unix/Linux</code> 的相似血统，本文讲解<code>Alfred</code>，就是效率工具的一员，相信注重效率的你，一早肯定听说过或者已经在使用，简单来说 Alfred 以键盘的高效代替鼠标操作的繁冗。还有很多效率方法，以后有机会在总结吧，大家也可以自行搜索 macOS 开发效率，博主之前也写过一些。那为什么会认为 <code>Alfred</code> 对程序员很重要呢？如果你没有用过，相信你读完本文就会明白。虽然网上已经有很多 <code>Alfred</code> 的教程，但是一直没有找到能相对全面，或很少从入口到进阶的文章，并且很多文章历史已经悠久，所以惟有抛砖引玉，自我总结一下，希望和大家一起努力提交效率！</p>
 <ul>
@@ -116,7 +116,7 @@ Open.png"></p>
 <ul>
 <li><p><code>Buffer Clearing</code><br>设置操作缓存文件后从缓存区清除文件，如果5分钟不使用缓存文件时也清除。</p>
 </li>
-<li><p><code>Compatibility</code>（兼容性）<br>如果上面的 <code>Alt</code>键 + 方向键与其它的操作冲突了，那么可以勾选这个复选框，那么将使用 <code>shift + Alft + 方向键</code> 来操作文件缓存。</p>
+<li><p><code>Compatibility</code>（兼容性）<br>如果上面的 <code>Alt</code>键 + 方向键与其它的操作冲突了，那么可以勾选这个复选框，那么将使用 <code>Shift + Alt + 方向键</code> 来操作文件缓存。</p>
 </li>
 </ul>
 <h5 id="Advanced（增强）标签">Advanced（增强）标签</h5><p>设置文件搜索的高级配置项。默认就好，一般不需要关注。</p>
@@ -221,11 +221,11 @@ Open.png"></p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Snippets-Custom.png" alt="Alfred-Features-Snippets-Custom.png"></p>
 <p>用关键词 <code>gimg</code> 就能快速输入格式 <code>![{clipboard}](https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/{clipboard})</code>，其中 <code>{clipboard}</code> 是当前剪切版的内容。看看最终的效果，大家就明白有多高效：</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Snippets-Copy-Paste.gif" alt="Alfred-Features-Snippets-Copy-Paste.gif"></p>
-<p>这里，我只需要复制图片的名字（通过回<code>车键</code>快速重命名文件名的方式，<code>⌘ + A</code>全选再<code>⌘ + C</code>复制文件名，当然通过下文的 Workflows 也可以快捷复制文件名。），然后 <code>alt + ⌘ + C</code> 快速打开 <code>剪切版历史视图</code>，输入快捷关键词（<code>gimg</code>，不用输完，可以模糊匹配。）然后回车键就完成 markdown 格式图片生成。当然，最后二步可以合并成一步，就是在上图配置Snippets时，勾选 <code>Auto expansion allowed</code>，这样，直接在需要输入的地方输入 <code>gima</code> 就会显示替换的内容，又减少一步操作。大家有没有感觉比每次都记忆，<code>Snippet</code>（字符片段）是不是更快了~</p>
+<p>这里，我只需要复制图片的名字（通过<code>回车键</code>快速重命名文件名的方式，<code>⌘ + A</code>全选再<code>⌘ + C</code>复制文件名，当然通过下文的 Workflows 也可以快捷复制文件名。），然后 <code>alt + ⌘ + C</code> 快速打开 <code>剪切版历史视图</code>，输入快捷关键词（<code>gimg</code>，不用输完，可以模糊匹配。）然后回车键就完成 markdown 格式图片生成。当然，最后二步可以合并成一步，就是在上图配置Snippets时，勾选 <code>Auto expansion allowed</code>，这样，直接在需要输入的地方输入 <code>gima</code> 就会显示替换的内容，又减少一步操作。大家有没有感觉到每次记忆无关的链接和信息的痛苦，<code>Snippet</code>（字符片段）是不是更快了~</p>
 <p>另外，这里 Alfred 提供了一些替换时的 <code>占位符</code>，就是替换时，会自动变的，比如 <code>{time}</code>（如：16:26:23）、<code>{date}</code>（如：2020年2月9日）、<code>{clipboard}</code>（当前剪切版的内容）、<code>{random}</code>（注：<code>{random:..}</code>表示随机数，其它表示见编辑窗口的左下角<code>{}</code>。）等，更强大的替换操作， Alfred 建议使用 Workflow Snippet Trigger object。</p>
-<p>如果一些 <code>Emoji</code>，可能通过 macOS 系统快捷键<code>ctrl + command + 空格键</code>打开表情界面选择需要的表情，但是这个查找过程也是很麻烦，有几百个 Emoji，所以其实可以通过 Snippet 来快速输入：<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Snippets-Emoji.png" alt="Alfred-Features-Snippets-Emoji.png"></p>
+<p>例如输入 <code>Emoji</code>，可以通过 macOS 系统快捷键<code>ctrl + command + 空格键</code>打开表情界面选择需要的表情，但是这个查找过程也是很麻烦，有几百个 Emoji，所以其实可以通过 Snippet 来快速输入：<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Snippets-Emoji.png" alt="Alfred-Features-Snippets-Emoji.png"></p>
 <p>以上的 Emoji 表格，可以通过下载导入到你的 Alfred 中，下载地址：<a href="https://github.com/iHTCboy/macOSConfig/tree/master/Alfred/Snippets" target="_blank" rel="external">macOSConfig/Alfred/Snippets · iHTCboy/macOSConfig</a>。</p>
-<p>更多 Snippet 分组，需要查看官网推荐 <a href="https://www.alfredapp.com/extras/snippets/" target="_blank" rel="external">Snippets - Alfred</a>：</p>
+<p>更多 Snippet 分组，可以查看官网推荐 <a href="https://www.alfredapp.com/extras/snippets/" target="_blank" rel="external">Snippets - Alfred</a>：</p>
 <ul>
 <li><a href="https://www.alfredapp.com/media/snippets/Mac%20symbols.alfredsnippets" target="_blank" rel="external">Mac Symbols</a>：集合了很多常用的Mac符号，比如输入 <code>!!cmd</code> 对应 <code>⌘</code>符号，“!!shift”对应“⇧”符号等等。有了这个集合，就再也不用在符号表中辛辛苦苦去找某个Mac标志符号了。</li>
 <li><a href="https://www.alfredapp.com/media/snippets/Ascii%20Art.alfredsnippets" target="_blank" rel="external">ASCII Art</a>：集合了一些好玩的火星文字表情，比如 <code>(╯°□°）╯︵ ┻━┻</code>。</li>
@@ -247,7 +247,7 @@ Open.png"></p>
 <li><code>{time}</code>：显示当前时间</li>
 <li><code>{datetime}</code>：显示当前日期和时间</li>
 </ul>
-<p>日期和时间都有<code>short</code>、<code>medium</code>、<code>long</code>和<code>full</code>这几种显示方式，Alfred 默认的为midium。要想改变显示方式，只需在关键字后面接上相应的方式名称即可，例如<code>{date:long}</code>。这些显示方式的具体格式可以在系统的偏好设置设置 -&gt; 时间&amp;区域 中查看.</p>
+<p>日期和时间都有<code>short</code>、<code>medium</code>、<code>long</code>和<code>full</code>这几种显示方式，Alfred 默认的为midium。要想改变显示方式，只需在关键字后面接上相应的方式名称即可，例如<code>{date:long}</code>。这些显示方式的具体格式可以在系统的 <code>偏好设置设置</code> -&gt; <code>语言和区域</code> -&gt; <code>高级</code> 中查看.</p>
 <p>不仅能显示当前时间，还可以利用加减算数符号进行计算之后，显示过去或者未来的日期时间，比如 <code>{date +1D}</code> 会显示明天的日期，<code>{time -3h -30m}</code> 会显示3个半小时之前的时间等等。支持的算子有以下几种：</p>
 <ul>
 <li>1Y：年</li>
@@ -318,7 +318,7 @@ Open.png"></p>
 <p>以上的操作，都是可以自定义关键字，另外有一些后面带 <code>Confirm</code>的，表示是一些危险的操作，可以勾选，在操作时会先弹窗提示操作的风险。</p>
 <p>比较常用的推荐：<code>Lock</code> 锁屏，放心离开办公位，开会！如果是去厕所，则可以用 <code>Sleep Displays</code>，临时关闭屏幕；<code>Empty</code> 清空回收站。</p>
 <h4 id="Terminal（终端）">Terminal（终端）</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Terminal.png" alt="Alfred-Features-Terminal.png"></p>
-<p>从 Alfred 在终端中运行命令和脚本，运行 shell 和终端命令，可以设置使用 <code>&gt;</code> 或其它更改为前缀符号来表示当前要执行命令，默认是打开 macOS 的<code>终端</code>软件，也可以更改为打开 <code>iTerm</code>，关于 iTerm 软件的使用和快捷键可以查看我之前的文章。</p>
+<p>从 Alfred 在终端中运行命令和脚本，运行 shell 和终端命令，可以设置使用 <code>&gt;</code> 或其它更改为前缀符号来表示当前要执行命令，默认是打开 macOS 的<code>终端</code>软件，也可以更改为打开 <code>iTerm</code>，关于 iTerm 软件的使用和快捷键可以查看我之前的文章 <a href="https://ihtcboy.com/2018/08/03/2018-08-03_iTerm%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%B0%8F%E8%AE%B0/">iTerm2快捷键小记</a>。</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Terminal-Shell.png" alt="Alfred-Features-Terminal-Shell.png"></p>
 <p>更改命令从 <code>iTerm</code> 打开的方式很简单，在 <code>Application</code> 选择为 <code>Custom</code>（自定义），然后在下方的文本框输入下面的苹果脚本代码就可以：</p>
 <figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="function_start"><span class="keyword">on</span></span> alfred_script(q)  </span><br><span class="line">    <span class="keyword">if</span> <span class="type">application</span> <span class="string">"iTerm2"</span> <span class="keyword">is</span> <span class="property">running</span> <span class="keyword">or</span> <span class="type">application</span> <span class="string">"iTerm"</span> <span class="keyword">is</span> <span class="property">running</span> <span class="keyword">then</span>  </span><br><span class="line">        <span class="command">run script</span> <span class="string">"  </span><br><span class="line">            on run &#123;q&#125;  </span><br><span class="line">                tell application \":Applications:iTerm.app\"  </span><br><span class="line">                    activate  </span><br><span class="line">                    try  </span><br><span class="line">                        select first window  </span><br><span class="line">                        set onlywindow to false  </span><br><span class="line">                    on error  </span><br><span class="line">                        create window with default profile  </span><br><span class="line">                        select first window  </span><br><span class="line">                        set onlywindow to true  </span><br><span class="line">                    end try  </span><br><span class="line">                    tell current session of the first window  </span><br><span class="line">                        if onlywindow is false then  </span><br><span class="line">                            tell split vertically with default profile  </span><br><span class="line">                                write text q  </span><br><span class="line">                            end tell  </span><br><span class="line">                        end if  </span><br><span class="line">                    end tell  </span><br><span class="line">                end tell  </span><br><span class="line">            end run  </span><br><span class="line">        "</span> <span class="keyword">with</span> parameters &#123;q&#125;  </span><br><span class="line">    <span class="keyword">else</span>  </span><br><span class="line">        <span class="command">run script</span> <span class="string">"  </span><br><span class="line">            on run &#123;q&#125;  </span><br><span class="line">                tell application \":Applications:iTerm.app\"  </span><br><span class="line">                    activate  </span><br><span class="line">                    try  </span><br><span class="line">                        select first window  </span><br><span class="line">                    on error  </span><br><span class="line">                        create window with default profile  </span><br><span class="line">                        select first window  </span><br><span class="line">                    end try  </span><br><span class="line">                    tell the first window  </span><br><span class="line">                        tell current session to write text q  </span><br><span class="line">                    end tell  </span><br><span class="line">                end tell  </span><br><span class="line">            end run  </span><br><span class="line">        "</span> <span class="keyword">with</span> parameters &#123;q&#125;  </span><br><span class="line">    <span class="keyword">end</span> <span class="keyword">if</span>  </span><br><span class="line"><span class="keyword">end</span> alfred_script</span><br></pre></td></tr></table></figure>
@@ -326,10 +326,10 @@ Open.png"></p>
 <p>一些执行结果的文本可能为了方便其它人？需要显示放大的效果，这里就不多说，感觉可以大家用的不多。例如执行 <code>2^10</code> 的结果，按 <code>comd + L</code> 快捷键就可以显示：</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Large-Type-Calculator.png" alt="Alfred-Features-Large-Type-Calculator.png"></p>
 <h4 id="Previews（预览）">Previews（预览）</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Features-Previews.png" alt="Alfred-Features-Previews.png"></p>
-<p>熟悉 macOS 系统的同学都知道，macOS 有一个很方便的功能叫 <code>Quick Look</code>，就是在 Finder 中选中文件后按下 空白键（Space键），就能在不打开应用程序的情况下对文件进行快速预览，比如PDF、图片、视频、音频文件等等。Alfred 也集成了这一功能，不过此时的快捷键就不是Space了，而是 <code>⇧</code>键（<code>shift</code>键）。在 Alfred 的搜索结果列表中选中想要进行预览的文件，按下 shift键就能利用 Quick Look 进行预览了。有时候对某些文件或者某些路径下的文件进行预览，如果你不想对这些文件或者路径下的文件进行预览，可以在 <code>No Previews For</code> 和 <code>No Previews In</code>中设置。</p>
+<p>熟悉 macOS 系统的同学都知道，macOS 有一个很方便的功能叫 <code>Quick Look</code>，就是在 Finder 中选中文件后按下 <code>空格键</code>（Space键），就能在不打开应用程序的情况下对文件进行快速预览，比如PDF、图片、视频、音频文件等等。Alfred 也集成了这一功能，不过此时的快捷键就不是Space了，而是 <code>⇧</code>键（<code>shift</code>键）。在 Alfred 的搜索结果列表中选中想要进行预览的文件，按下 shift键就能利用 Quick Look 进行预览了。有时候对某些文件或者某些路径下的文件进行预览，如果你不想对这些文件或者路径下的文件进行预览，可以在 <code>No Previews For</code> 和 <code>No Previews In</code>中设置。</p>
 <h3 id="Workflows（工作流）">Workflows（工作流）</h3><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Workflows.png" alt="Alfred-Workflows.png"></p>
-<p><code>Workflows</code> 翻译中文为<strong>工作流</strong>，应该也比较好理解。网上上面介绍的功能，有一部分就是工作流，可以理解为Alfred自带的工作流。类似的，你是不是能想到一些可以定制化的操作流程呢？所以，当然也可以使用第三方的工作流，或者自己定义自己的工作流！</p>
-<p>如果想要使用第三方的或者自定义的工作流，需要支付购买Alfred的<code>PowerPack</code>，Alfred的 PowerPack 是最值得购买的服务，没有之一。因为如果使用 Alfred 而没有 PowerPack 授权，那 Alfred 的强大的功能相当失去了左右臂。关于 PowerPack 细节我们在下一节内容在讨论，我们接着说 Workflows（工作流）。</p>
+<p><code>Workflows</code> 翻译中文为<strong>工作流</strong>，应该也比较好理解。刚才上面介绍的功能，有一部分就是工作流，可以理解为Alfred自带的工作流。类似的，你是不是能想到一些可以定制化的操作流程呢？所以，当然也可以使用第三方的工作流，或者自己定义自己的工作流！</p>
+<p>如果想要使用第三方的或者自定义的工作流，需要支付购买Alfred的<code>PowerPack</code>（动力组），Alfred的 PowerPack 是最值得购买的服务，没有之一。因为如果使用 Alfred 而没有 PowerPack 授权，那 Alfred 的强大的功能相当失去了左右臂。关于 PowerPack 细节我们在下一节内容在讨论，我们接着说 Workflows（工作流）。</p>
 <p>Alfred 安装完「Powerpack」，就像车体安装了引擎，余下的事情就看我们如何 DIY，让引擎为我们提供无限动力。而引擎提供动力的燃料我们称其为 <code>Workflow</code>。官方对于 workflow 是这样描述的：</p>
 <blockquote>
 <p>With Alfred’s Powerpack and workflows, you can extend Alfred and get things done in your own way. Replace repetitive tasks with workflows, and boost your productivity.<br>Discover the abundance of workflows that integrate with your favourite Mac applications and web services, from social networks and note-taking apps to shopping and music services.<br>We’ve hand-picked a few of the best workflows here. You’ll find hundreds more on <a href="http://www.packal.org" target="_blank" rel="external">Packal</a>, a brilliant user-created repository for workflows, as well as on <a href="https://alfredforum.com" target="_blank" rel="external">Alfred Forum</a>, where you’ll also find help in creating your own workflows.<br>借助Alfred的Powerpack和工作流程，您可以扩展Alfred并以自己的方式完成工作。用工作流替换重复的任务，并提高工作效率。<br>发现丰富的工作流程，这些工作流程与您喜欢的Mac应用程序和Web服务集成在一起，从社交网络和记笔记应用程序到购物和音乐服务。<br>我们在这里手工挑选了一些最佳的工作流程。在 <a href="http://www.packal.org" target="_blank" rel="external">Packal</a>（一个出色的由用户创建上传的workflows的网站）上以及 <a href="https://alfredforum.com" target="_blank" rel="external">Alfred Forum</a>（您可以在其中找到有关创建自己的workflows的帮助）的更多信息。</p>
@@ -402,8 +402,9 @@ Open.png"></p>
 <p>Alfred 同时也支持使用 <code>移动端版本的 Alfred</code> 来控制桌面端，下载链接 <a href="https://apps.apple.com/app/alfred-remote/id927944141?ign-mpt=uo%3D4" target="_blank" rel="external">Alfred Remote on the App Store for iOS</a>。</p>
 <p><code>Alfred Remote for iOS</code> 最新版本 1.1 是 2015年9月1日发布的，收费 30 人民币。如今5年不更新了，所以暂时不指望它带来什么高效，建议大家暂时也别下载吧。如果需要了解更多，可以参考这个文章的教程：<a href="https://sspai.com/post/28137" target="_blank" rel="external">OS X 效率启动器 Alfred 的最佳伴侣：Alfred Remote for iOS 上手详解 - 少数派</a>。</p>
 <h3 id="Advanced（高级）">Advanced（高级）</h3><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Advanced.png" alt="Alfred-Advanced.png"></p>
+<p>配置中有涉及一些高级配置功能，一般不需要更改配置。</p>
 <ul>
-<li><p><code>Files / Apps</code><br>配置中有涉及 <code>Clear Application Cache</code>(缓存清理)、<code>Rebuild macOS Metadata</code>(元数据重建) 等高级配置功能，一般不需要配置。</p>
+<li><p><code>Files / Apps</code><br>对 Alfred 和 搜索引擎重置，<code>Clear Application Cache</code>(缓存清理)、<code>Rebuild macOS Metadata</code>(元数据重建) 。</p>
 </li>
 <li><p><code>Force Keyboard</code><br>就是 Alfred 输入框中默认的输入法。</p>
 </li>
@@ -437,7 +438,7 @@ Open.png"></p>
 <p>目前只支持 <code>VISA</code>、<code>Mastercard</code>（万事达卡）、<code>AMEX</code>（American Express，美国运通）的信用卡，或者 <code>Paypal</code> 支付。所以对于中国区来说还是不太友好！目前<code>2020年</code>的V4版本的单个授权码是 <code>£25</code> 英磅，大约 <code>￥225.26</code>人民币。而超级支持者可以支付 <code>£45</code> 英磅，大约 <code>￥405.10</code>人民币，终身免费升级。注意这里是单个用户，就是一个激活码只能用于一台macOS。具体的购买流程这里省略了，有条件的同学建议按需选择购买。</p>
 <p>关于 Alfred 那些功能需要购买 Powerpack 后才能使用的，参考官网： <a href="https://www.alfredapp.com/powerpack/" target="_blank" rel="external">Alfred Powerpack - Take Control of Your Mac and macOS</a></p>
 <h3 id="Usage（使用情况）">Usage（使用情况）</h3><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Usage.png" alt="Alfred-Usage.png"></p>
-<p>Alfred 会统计使用的情况。从上图可以看到折线图显示的是28天的使用情况（当然因为编写文章时，因春节放假，所以有一个波谷区。），从2019年9月2号起，使用 Alfred 达到 6321 次，平均每天使用 39 次。同时也可以看到 Clipboard 和 Hotkeys 使用最频繁。为了说明 Alfred 的潜在价值，我们不妨做一个简单的计算，假设每天我都能够保持现况以每日平均唤醒 39 次为基数。假如每次 Alfred 的操作，可以为我节省 5s 的时间（往往有些复杂的操作会大于 5s，比如去寻找一个藏得很深的文件，或者一个记不全的文件或者一个不常用的软件，或者打开一个常用的书签等等)，那么 1 年下来，竟然能够节省 0.82 天。</p>
+<p>Alfred 会统计使用的情况。从上图可以看到折线图显示的是28天的使用情况（<code>当然因为编写文章时，因春节放假，所以有一个波谷区。</code>），从2019年9月2号起，使用 Alfred 达到 6321 次，平均每天使用 39 次。同时也可以看到 Clipboard 和 Hotkeys 使用最频繁。为了说明 Alfred 的潜在价值，我们不妨做一个简单的计算，假设每天我都能够保持现况以每日平均唤醒 39 次为基数。假如每次 Alfred 的操作，可以为我节省 5s 的时间（往往有些复杂的操作会大于 5s，比如去寻找一个藏得很深的文件，或者一个记不全的文件或者一个不常用的软件，或者打开一个常用的书签等等)，那么 1 年下来，竟然能够节省 0.82 天。</p>
 <p><code>39 * 5 * 365 / 3600 / 24 = 0.823784722 天</code></p>
 <p>换言之，Alfred 让你的生命延长了 0.82 天！那如果是 5 年，就是 4 天啦！这里是以 39 次为基数，从本文上面的教程可以看出，一个复杂的操作节省可以有几分钟，如果重复一百次就远不止，所以，节省的时间是非常可观的！总之，大家经常有大量重复的工作流或操作步骤，这就更加可观，所以马上使用起来吧！</p>
 <h3 id="Help（帮助）">Help（帮助）</h3><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/Alfred-Help.png" alt="Alfred-Help.png"></p>
