@@ -1170,7 +1170,7 @@ Open.png"></p>
     <link href="https://iHTCboy.com/2020/01/10/2020-01-10_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE05/"/>
     <id>https://iHTCboy.com/2020/01/10/2020-01-10_iOS开发高手课05/</id>
     <published>2020-01-10T12:20:20.000Z</published>
-    <updated>2020-02-13T01:59:02.360Z</updated>
+    <updated>2020-02-17T01:09:43.729Z</updated>
     <content type="html"><![CDATA[<h2 id="1、前言">1、前言</h2><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/iOS开发高手课-05-链接器：符号是怎么绑定到地址上的？.png" alt="iOS开发高手课-05-链接器：符号是怎么绑定到地址上的？.png"></p>
 <a id="more"></a>
@@ -1354,10 +1354,10 @@ InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault
 <p>详细可见官方网页：<a href="https://www.openarkcompiler.cn/document/FAQ" target="_blank" rel="external">方舟编译器 OpenArkCompiler - FAQ</a></p>
 <h4 id="龙书、虎书、鲸书_—_编译原理三大圣书">龙书、虎书、鲸书 — 编译原理三大圣书</h4><ol>
 <li><code>龙书</code>：《编译原理》（编译原理 技术与工具）（Compilers: Principles,Techniques, and Tools）</li>
-<li><code>虎书</code>：《现代编译原理 — C语言描 》（Modern Compiler Implement in C）</li>
+<li><code>虎书</code>：《现代编译原理 — C语言描述》（Modern Compiler Implement in C）</li>
 <li><code>鲸书</code>：《高级编译器设计与实现》（Advanced Compiler Design and Implementation）</li>
 </ol>
-<p>龙书：《编译原理》是编译领域无可替代的经典著作，被广大计算机专业人士誉为“龙书”。<br>虎书：增加了数据流分析、循环优化、内存管理等内容。<br>鲸书：包含了一些更比较高级的编译器的设计和实现。</p>
+<p><strong>龙书</strong>：《编译原理》是编译领域无可替代的经典著作，因为书籍的封面是一条龙，所以被广大计算机专业人士誉为“龙书”。<br><strong>虎书</strong>：增加了数据流分析、循环优化、内存管理等内容。<br><strong>鲸书</strong>：包含了一些更比较高级的编译器的设计和实现。</p>
 <p>大家是不是瞬间感觉自己就要买这几本书呢！！！我到底能不能看的懂呢？可以先自测一下自己是不是适配现在就学习编译原理：</p>
 <h5 id="学习编译原理前自测">学习编译原理前自测</h5><ul>
 <li>a. 编译型语言和解释型语言的区别是什么?</li>
@@ -1377,7 +1377,7 @@ InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault
 <h2 id="3、总结">3、总结</h2><p>终于到总结部分啦！这个文章，之前给我们组内同学分享时，在回顾都忘记了一大部分，另外在写成文字时，发现有很多东西需要考证，每篇文章花了很多心思，正好2020年新型肺炎冠状病毒都在家里，正好有这时间。而 <code>维基百科</code> 就是一个很棒的网站，关于大多数知识和历史都能查到，真的很有趣！</p>
 <p>关于<code>编译器</code>的知识有太多了，深入的还可以自己写一个编译器！这里就达不到这样的层次，所以就提一下，有需要的同学可以自行搜索。关于<code>LLVM</code>的知识也还有很多没有讲到，比如<code>抽象语法树</code>（AST），前端 <code>Clang</code> 是重中之器，Clang 插件开发等，还有中间端的 <code>Pass</code>，后端的<code>Mach-O</code> 和 CPU 执行 Mach-O 的过程等。</p>
 <p>最后，本文还是有很多细节无法用文字记录下来，大家可以阅读下面的参考链接，这样收获会更大。关于<code>编译器</code>和<code>链接器</code>就到这里先，对于大家理解这个概念应该是没有问题啦！具体的实现细节，需要大家多学习，如果有能力，可以看看龙书！虎书！鲸书！ 想想也是一件快乐的事件！</p>
-<p>2020年，手机只是小小一部分，智慧家居大屏、穿戴、车机、音响、手表、PC等等各种各样设备，作为开发者，我们不要只关注自己开发的App，应该去理解这个<code>世界发生什么变化，为什么变化，怎么变化，抓住变化！</code>当然我承认世界是掌握于小数人，但能先抓住自己！这就是好的开始~</p>
+<p>2020年，手机只是小小一部分，智慧家居大屏、穿戴、车机、音响、手表、PC等等各种各样设备，作为开发者，我们不要只关注自己开发的App，编译器知识是所有设备的基础，应该去理解这个<code>世界发生什么变化，为什么变化，怎么变化，抓住变化！</code>当然我承认世界是掌握于小数人，但能先抓住自己！这就是好的开始~</p>
 <p><br></p>
 <p>注：更多关于 iOS 开发和程序开发相关的内容，可以查看系列，目前还在连载中 <a href="https://ihtcboy.com/2020/02/01/2020-02-01_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/">【学习总结】iOS开发高手课 – (连载中) | iHTCboy’s blog</a>，以上，希望对你有用！</p>
 <h2 id="参考">参考</h2><ul>
