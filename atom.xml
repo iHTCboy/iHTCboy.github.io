@@ -4683,7 +4683,7 @@ InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault
     <link href="https://iHTCboy.com/2019/12/04/2019-12-04_GMTC2019_%E5%9C%A8%E5%88%86%E6%AD%A7%E4%B8%AD%E5%8F%91%E5%B1%95-%E6%88%91%E4%BB%AC%E8%83%BD%E7%94%A8Swift%E5%81%9A%E4%BB%80%E4%B9%88/"/>
     <id>https://iHTCboy.com/2019/12/04/2019-12-04_GMTC2019_在分歧中发展-我们能用Swift做什么/</id>
     <published>2019-12-04T00:49:16.000Z</published>
-    <updated>2020-02-19T01:39:42.521Z</updated>
+    <updated>2020-02-19T01:40:00.697Z</updated>
     <content type="html"><![CDATA[<h3 id="1、简介">1、简介</h3><p>《在分歧中发展——2019，我们能用 Swift 做什么》<br> 王巍（喵神） / LINE 高级软件工程师</p>
 <ul>
 <li><p>演讲简介：</p>
@@ -7703,8 +7703,8 @@ DOM 架构方案在文本编辑与图形渲染操作方面的优缺点
     <link href="https://iHTCboy.com/2019/09/16/2019-09-16_Sign-in-with-Apple/"/>
     <id>https://iHTCboy.com/2019/09/16/2019-09-16_Sign-in-with-Apple/</id>
     <published>2019-09-16T14:49:16.000Z</published>
-    <updated>2020-02-07T03:39:13.829Z</updated>
-    <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>iOS 13 最大的亮点是 <code>Dark</code> 模式，另一个就是苹果登录（Sign in with Apple）方式的增加，让苹果生态又多了一层体验，苹果的生态建设越来越好，让iOS开发者成为 Apple 全栈开发的可能性更接近，对于开发者来说，用好 API ，然后看到苹果这些年对生态的建设，还是有很多想象力！</p>
+    <updated>2020-02-21T06:21:57.652Z</updated>
+    <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>iOS 13 最大的亮点是 <code>Dark</code> 模式，另一个就是苹果登录（<code>Sign in with Apple</code>）方式的增加，让苹果生态又多了一层体验，苹果的生态建设越来越好，让iOS开发者成为 Apple 全栈开发的可能性更接近，对于开发者来说，用好 API ，然后看到苹果这些年对生态的建设，还是有很多想象力！</p>
 <a id="more"></a>
 <h3 id="2、Sign_in_with_Apple">2、Sign in with Apple</h3><h4 id="是什么">是什么</h4><blockquote>
 <p>“通过 Apple 登录”让用户能用自己的 Apple ID 轻松登录您的 app 和网站。用户不必填写表单、验证电子邮件地址和选择新密码，就可以使用“通过 Apple 登录”设置帐户并立即开始使用您的 app。所有帐户都通过双重认证受到保护，具有极高的安全性，Apple 亦不会跟踪用户在您的 app 或网站中的活动。</p>
@@ -7737,7 +7737,7 @@ DOM 架构方案在文本编辑与图形渲染操作方面的优缺点
 <ol>
 <li>创建 App ID 时，勾选 Sign In with Apple<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/09/Sign-in-with-Apple-01.png" alt="Sign-in-with-Apple-01.png"></li>
 </ol>
-<p>详细注意事件：<br>1、创建 Apple ID时，描述内容的 Description 会显示在用户的解绑苹果登录的应用名里，所以可能真实游戏名有变动时，需要更新描述，不然在用户手机端显示就很对不上，影响体验。因为使用过苹果登录后，在设置时查看 使用 Apple ID 的 App 时，名字就是上面的 description。</p>
+<p>详细注意事件：<br>1、创建 Apple ID时，描述内容的 Description 会显示在用户的授权过苹果登录的应用名里，所以App应用名有变动时，记得更新此描述，不然在用户手机端显示就很对不上，或者填写了随意文本内容，会影响用户端显示的名字不友好。因为使用过苹果登录后，在设置时查看 <strong>使用 Apple ID</strong> 的 App 时，名字就是上面的 <strong>description</strong>。</p>
 <p><strong>以下为针对 <code>服务端验证</code> 和 <code>web 端授权登录</code> 的操作。</strong></p>
 <ol>
 <li><p>创建 <strong>Services ID</strong>（当服务器端调用 API 来验证用户身份时，这个值也将充当 <code>cliend_id</code>。）：<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/09/Sign-in-with-Apple-02.png" alt="Sign-in-with-Apple-02.png"><br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/09/Sign-in-with-Apple-03.png" alt="Sign-in-with-Apple-03.png"></p>
@@ -7891,7 +7891,7 @@ DOM 架构方案在文本编辑与图形渲染操作方面的优缺点
 <li>Sign In with Apple 需要用户开启了两步认证（双重因子验证），如果没有开启则会在第一次使用时提示开启，不开启将无法使用。未开启两步认证的账号，点击苹果登录时，会弹窗提示用户，需要跳转到系统设置里开启。</li>
 <li>开启双重因子验证的方式：<br><code>设置 -&gt; 密码与安全性 -&gt; 双重因子验证</code>； 如果不开启双重因子验证，那么当我们在调用苹果官方授权接口的时候，系统也会提示我们需要去打开双重因子验证。</li>
 <li>停止App 使用Sign In With Apple 的方式：<br><code>设置 -&gt; Apple ID -&gt; 密码与安全性 -&gt; 使用您AppleID的App -&gt; 找到对应的App - &gt; “停止以Apple ID使用 Bundle ID...”</code>；<br>注：用户可以关闭接收转发的邮件。</li>
-<li>苹果登录的界面只支持竖屏显示，跟内购买弹窗一样，无法控制横屏游戏时显示横屏苹果登录界面。</li>
+<li>苹果登录的界面只支持竖屏显示，跟内购买弹窗一样，无法控制横屏应用或游戏时显示横屏的苹果登录界面UI。（个人推测是因为 Face ID 目前在 iPhone 只能竖屏识别，而苹果登陆可以使用 Face ID 来授权而不用输入密码。）</li>
 </ol>
 <h3 id="参考">参考</h3><ul>
 <li><a href="https://developer.apple.com/cn/sign-in-with-apple/" target="_blank" rel="external">通过 Apple 登录 - Apple Developer</a></li>
@@ -7926,7 +7926,7 @@ DOM 架构方案在文本编辑与图形渲染操作方面的优缺点
 </blockquote>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h3 id="1、前言">1、前言</h3><p>iOS 13 最大的亮点是 <code>Dark</code> 模式，另一个就是苹果登录（Sign in with Apple）方式的增加，让苹果生态又多了一层体验，苹果的生态建设越来越好，让iOS开发者成为 Apple 全栈开发的可能性更接近，对于开发者来说，用好 API ，然后看到苹果这些年对生态的建设，还是有很多想象力！</p>]]>
+    <![CDATA[<h3 id="1、前言">1、前言</h3><p>iOS 13 最大的亮点是 <code>Dark</code> 模式，另一个就是苹果登录（<code>Sign in with Apple</code>）方式的增加，让苹果生态又多了一层体验，苹果的生态建设越来越好，让iOS开发者成为 Apple 全栈开发的可能性更接近，对于开发者来说，用好 API ，然后看到苹果这些年对生态的建设，还是有很多想象力！</p>]]>
     
     </summary>
     
