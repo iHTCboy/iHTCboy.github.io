@@ -1498,7 +1498,7 @@ InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault
     <link href="https://iHTCboy.com/2020/01/03/2020-01-03_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE04/"/>
     <id>https://iHTCboy.com/2020/01/03/2020-01-03_iOS开发高手课04/</id>
     <published>2020-01-03T12:20:20.000Z</published>
-    <updated>2020-02-14T02:15:26.926Z</updated>
+    <updated>2020-03-08T03:17:27.231Z</updated>
     <content type="html"><![CDATA[<h2 id="1、前言">1、前言</h2><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/iOS开发高手课-04-项目大了人员多了，架构怎么设计更合理？.png" alt="iOS开发高手课-04-项目大了人员多了，架构怎么设计更合理？.png"></p>
 <a id="more"></a>
@@ -1777,10 +1777,6 @@ InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault
       <category term="MVVM" scheme="https://iHTCboy.com/tags/MVVM/"/>
     
       <category term="SOLID" scheme="https://iHTCboy.com/tags/SOLID/"/>
-    
-      <category term="iOS开发高手课" scheme="https://iHTCboy.com/tags/iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/"/>
-    
-      <category term="学习总结" scheme="https://iHTCboy.com/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
     
       <category term="架构" scheme="https://iHTCboy.com/tags/%E6%9E%B6%E6%9E%84/"/>
     
