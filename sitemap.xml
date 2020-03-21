@@ -2,23 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://iHTCboy.com/more/onemindmap.json</loc>
-    <lastmod>2020-03-21T06:29:29.159Z</lastmod>
+    <loc>https://iHTCboy.com/more/photos.js</loc>
+    <lastmod>2020-03-21T15:15:00.611Z</lastmod>
   </url>
   
   <url>
-    <loc>https://iHTCboy.com/more/onemindmap.html</loc>
-    <lastmod>2020-03-21T03:35:38.499Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://iHTCboy.com/more/onemindmap.js</loc>
-    <lastmod>2020-03-21T03:32:44.066Z</lastmod>
+    <loc>https://iHTCboy.com/more/photos.json</loc>
+    <lastmod>2020-03-21T15:11:26.223Z</lastmod>
   </url>
   
   <url>
     <loc>https://iHTCboy.com/more/photos.html</loc>
-    <lastmod>2020-03-21T03:24:30.999Z</lastmod>
+    <lastmod>2020-03-21T15:10:47.609Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://iHTCboy.com/more/onemindmap.html</loc>
+    <lastmod>2020-03-21T09:14:17.414Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://iHTCboy.com/more/onemindmap.js</loc>
+    <lastmod>2020-03-21T09:14:10.740Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://iHTCboy.com/more/onemindmap.json</loc>
+    <lastmod>2020-03-21T06:29:29.159Z</lastmod>
   </url>
   
   <url>
@@ -2434,16 +2444,6 @@
   <url>
     <loc>https://iHTCboy.com/2018/07/28/2018-07-28_Vim%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%B0%8F%E8%AE%B0/</loc>
     <lastmod>2020-02-07T03:39:13.761Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://iHTCboy.com/more/photos.json</loc>
-    <lastmod>2019-12-08T13:42:34.709Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://iHTCboy.com/more/photos.js</loc>
-    <lastmod>2019-05-26T15:15:34.190Z</lastmod>
   </url>
   
   <url>
