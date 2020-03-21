@@ -2,18 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://iHTCboy.com/more/ins.js</loc>
-    <lastmod>2020-03-21T03:15:38.365Z</lastmod>
+    <loc>https://iHTCboy.com/more/onemindmap.json</loc>
+    <lastmod>2020-03-21T03:32:34.665Z</lastmod>
   </url>
   
   <url>
-    <loc>https://iHTCboy.com/more/ins.json</loc>
-    <lastmod>2020-03-21T03:15:14.269Z</lastmod>
+    <loc>https://iHTCboy.com/more/onemindmap.js</loc>
+    <lastmod>2020-03-21T03:31:14.286Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://iHTCboy.com/more/photos.html</loc>
+    <lastmod>2020-03-21T03:24:30.999Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://iHTCboy.com/more/videos.html</loc>
+    <lastmod>2020-03-21T03:24:24.230Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://iHTCboy.com/more/onemindmap.html</loc>
+    <lastmod>2020-03-21T03:23:55.174Z</lastmod>
   </url>
   
   <url>
     <loc>https://iHTCboy.com/more/index.html</loc>
-    <lastmod>2020-03-18T14:28:26.130Z</lastmod>
+    <lastmod>2020-03-21T03:23:47.228Z</lastmod>
   </url>
   
   <url>
@@ -1312,22 +1327,7 @@
   </url>
   
   <url>
-    <loc>https://iHTCboy.com/more/onemindmap.html</loc>
-    <lastmod>2020-02-12T13:49:36.827Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://iHTCboy.com/more/photos.html</loc>
-    <lastmod>2020-02-12T13:47:56.820Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://iHTCboy.com/more/videos.html</loc>
-    <lastmod>2020-02-12T13:41:48.097Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://iHTCboy.com/more/ins.css</loc>
+    <loc>https://iHTCboy.com/more/more.css</loc>
     <lastmod>2020-02-12T13:41:29.746Z</lastmod>
   </url>
   
