@@ -116,9 +116,9 @@
         var data = res.list[j].arr;
         var liTmpl = "";
         for (var i = 0, len = data.link.length; i < len; i++) {
-          var minSrc = data.link[i];
-          var src = data.link[i];
-          var type = data.type[i];
+          var minSrc = 'https://github.com/iHTCboy/OneMindMap/raw/master/Thumbnail/' + data.link[i];
+          var src = 'https://github.com/iHTCboy/OneMindMap/raw/master/MindMapImages/' + data.link[i];
+          var type = 'image';//data.type[i];
           var target = src;//+ (type === 'video' ? '.mp4' : '.jpg');
 
           liTmpl += '<figure class="thumb" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject">\
