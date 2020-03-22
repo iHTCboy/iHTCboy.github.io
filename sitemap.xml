@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://iHTCboy.com/more/onemindmap.html</loc>
+    <lastmod>2020-03-22T03:12:25.347Z</lastmod>
+  </url>
+  
+  <url>
     <loc>https://iHTCboy.com/more/photos.json</loc>
     <lastmod>2020-03-22T03:10:53.885Z</lastmod>
   </url>
@@ -19,11 +24,6 @@
   <url>
     <loc>https://iHTCboy.com/more/onemindmap.js</loc>
     <lastmod>2020-03-21T15:20:11.357Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://iHTCboy.com/more/onemindmap.html</loc>
-    <lastmod>2020-03-21T15:20:04.256Z</lastmod>
   </url>
   
   <url>
