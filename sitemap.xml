@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://iHTCboy.com/more/photos.json</loc>
+    <lastmod>2020-03-22T09:34:37.924Z</lastmod>
+  </url>
+  
+  <url>
     <loc>https://iHTCboy.com/2015/09/06/2015_Hexo%E6%90%AD%E5%BB%BAGithub-Pages%E5%8D%9A%E5%AE%A2%E5%A1%AB%E5%9D%91%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2020-03-22T09:26:05.117Z</lastmod>
   </url>
@@ -9,11 +14,6 @@
   <url>
     <loc>https://iHTCboy.com/2008/02/10/2008-02-10_%E4%BA%BA%E7%94%9F%E6%B8%B8%E6%88%8F%EF%BC%8C%E6%B8%B8%E6%88%8F%E4%BA%BA%E7%94%9F/</loc>
     <lastmod>2020-03-22T09:17:39.423Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://iHTCboy.com/more/photos.json</loc>
-    <lastmod>2020-03-22T08:19:26.059Z</lastmod>
   </url>
   
   <url>
