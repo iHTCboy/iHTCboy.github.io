@@ -2,8 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://iHTCboy.com/more/onemindmap.json</loc>
+    <lastmod>2020-04-27T13:57:51.434Z</lastmod>
+  </url>
+  
+  <url>
     <loc>https://iHTCboy.com/more/index.html</loc>
-    <lastmod>2020-04-25T03:50:13.463Z</lastmod>
+    <lastmod>2020-04-25T03:50:26.861Z</lastmod>
   </url>
   
   <url>
@@ -24,11 +29,6 @@
   <url>
     <loc>https://iHTCboy.com/2015/09/06/2015_Hexo%E6%90%AD%E5%BB%BAGithub-Pages%E5%8D%9A%E5%AE%A2%E5%A1%AB%E5%9D%91%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2020-03-22T11:53:39.062Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://iHTCboy.com/more/onemindmap.json</loc>
-    <lastmod>2020-03-22T11:01:08.077Z</lastmod>
   </url>
   
   <url>
