@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Learn something of everything,  Learn everything of something.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="https://iHTCboy.com/"/>
-  <updated>2020-05-06T14:56:17.093Z</updated>
+  <updated>2020-07-01T15:40:11.107Z</updated>
   <id>https://iHTCboy.com/</id>
   
   <author>
@@ -13,6 +13,237 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[WWDC2020 10661 Handle Refunds 处理退款]]></title>
+    <link href="https://iHTCboy.com/2020/07/01/2020-07-01_WWDC20_in-app-purchase/"/>
+    <id>https://iHTCboy.com/2020/07/01/2020-07-01_WWDC20_in-app-purchase/</id>
+    <published>2020-07-01T14:40:16.000Z</published>
+    <updated>2020-07-01T15:40:11.107Z</updated>
+    <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>今年 WWDC 2020 苹果全球开发者大会，苹果宣布所有的内购品项类型，当用户退款成功时，开发者都能收到退款通知！！！退款通知！！！退款通知！！！</p>
+<blockquote>
+<p><strong>针对 App 内购买项目的退款通知现已可用</strong><br>2020 年 06 月 24 日<br>App Store 服务器通知现在包含所有类型的 App 内购买项目的退款通知 (包括消耗型项目、非消耗型项目和非续期订阅)。这些信息能帮助您采取相应的行动，并告知他们相关的优惠更改，以及如何重新订阅。</p>
+<p><a href="https://developer.apple.com/cn/news/?id=tv3bhra6" target="_blank" rel="external">针对 App 内购买项目的退款通知现已可用 - 新闻 - Apple Developer</a></p>
+</blockquote>
+<a id="more"></a>
+<h3 id="2、处理退款">2、处理退款</h3><h4 id="2-1_退款流程">2.1 退款流程</h4><p>在 2020 年 06 月 24 日之前，开发者完全不知道有用户退款了！（只有每月账单里看到退款的一个总数量 -。-）：</p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/1/1730af47582fe4f3?w=1616&amp;h=627&amp;f=png&amp;s=183464" alt=""></p>
+<p>2020 年 06 月 24 日开始，苹果新增流程：</p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/1/1730af49927bbeeb?w=1611&amp;h=508&amp;f=png&amp;s=217649" alt=""></p>
+<h4 id="2-2_退款通知">2.2 退款通知</h4><p>在苹果后台可以配置一个退款通知的回调地址（一个App配置一条链接）：</p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/1/1730af4d78620160?w=1498&amp;h=865&amp;f=png&amp;s=296229" alt=""></p>
+<p>配置的回调链接必须满足条件：</p>
+<ul>
+<li>满足应用传输安全要求（使用 <code>https</code>）</li>
+<li>URL 最长 255 字符</li>
+</ul>
+<blockquote>
+<p>注意：这里的 <code>https</code> 是指苹果的 App Transport Security (ATS)，其中有协议的要求，比如使用 Transport Layer Security (TLS) protocol 1.2 版本，具体见苹果文档： <a href="https://developer.apple.com/documentation/security/preventing_insecure_network_connections" target="_blank" rel="external">Preventing Insecure Network Connections | Apple Developer Documentation</a>。</p>
+</blockquote>
+<h4 id="2-3_退款通知的类型">2.3 退款通知的类型</h4><p>苹果把回调的通知分为2种类型： </p>
+<ul>
+<li>退款通知类型</li>
+<li>取消通知类型  </li>
+</ul>
+<p>其中新增加的<code>退款通知</code>类型是针对：</p>
+<ul>
+<li>消耗型</li>
+<li>非消耗型</li>
+<li>非续期订阅</li>
+</ul>
+<p><code>取消通知</code>类型是针对：</p>
+<ul>
+<li>自动续期订阅</li>
+</ul>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/1/1730af9fadac6ef0?w=1595&amp;h=683&amp;f=png&amp;s=257291" alt=""></p>
+<h4 id="2-4_退款通知的内容">2.4 退款通知的内容</h4><p> 苹果返回的通知内容为 JSON 对象数据，所有的退款订单的通知是在 <code>latrest_receipt_info</code> 数组中：</p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/1/1730af834ce55b09?w=1646&amp;h=745&amp;f=png&amp;s=417540" alt=""></p>
+<table>
+<thead>
+<tr>
+<th>字段</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>environment</td>
+<td>收据生成的环境。values: <code>Sandbox</code>, <code>PROD</code>。自动续订订阅是可以沙盒环境测试取消订阅。</td>
+</tr>
+<tr>
+<td>latest_receipt</td>
+<td>Base64编码的最新交易收据。</td>
+</tr>
+<tr>
+<td>latest_receipt_info</td>
+<td>收据的列表</td>
+</tr>
+<tr>
+<td>notification_type</td>
+<td>通知类型，退款的值应该是：<code>REFUND</code>， 可参考：<a href="https://developer.apple.com/documentation/appstoreservernotifications/notification_type" target="_blank" rel="external">notification_type</a></td>
+</tr>
+<tr>
+<td>password</td>
+<td>验证收据时的 password，App 专用共享密钥是用于接收此 App 自动续订订阅收据的唯一代码。如果您需要将此 App 转让给其他开发者，或者需要将主共享密钥设置为专用，可能需要使用 App 专用共享密钥。</td>
+</tr>
+<tr>
+<td>bid</td>
+<td>App的 bundle id（包名）</td>
+</tr>
+<tr>
+<td>bvrs</td>
+<td>App的版本号</td>
+</tr>
+<tr>
+<td>unified_receipt</td>
+<td><code>退款的订单信息在这里</code></td>
+</tr>
+</tbody>
+</table>
+<p>在 <code>unified_receipt</code> 里的 <code>latest_receipt_info</code> 是一个数组，其中包含的最近的100次应用内购买交易：</p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/1/1730af8844669f16?w=1293&amp;h=590&amp;f=png&amp;s=281523" alt=""></p>
+<p>数据中每个退款订单的主要字段：</p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/1/1730af898115d4ee?w=1500&amp;h=404&amp;f=png&amp;s=275979" alt=""></p>
+<table>
+<thead>
+<tr>
+<th>字段</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bid</td>
+<td>应用包名 bundle id</td>
+</tr>
+<tr>
+<td>cancellation_data_ms</td>
+<td>退款的时间</td>
+</tr>
+<tr>
+<td>cancellation_reason</td>
+<td>用户退款的原因。（0或1，含义未知）</td>
+</tr>
+<tr>
+<td>original_transaction_id</td>
+<td>苹果订单的唯一标识 transaction_id</td>
+</tr>
+<tr>
+<td>product_id</td>
+<td>商品唯一标识 id</td>
+</tr>
+</tbody>
+</table>
+<p>更加详细的返回字段可查：</p>
+<ul>
+<li><a href="https://developer.apple.com/documentation/appstoreservernotifications/responsebody" target="_blank" rel="external">responseBody | Apple Developer Documentation</a></li>
+<li><a href="https://developer.apple.com/documentation/appstoreservernotifications/unified_receipt" target="_blank" rel="external">unified_receipt | Apple Developer Documentation</a></li>
+<li><a href="https://developer.apple.com/documentation/appstorereceipts/responsebody/latest_receipt_info" target="_blank" rel="external">responseBody.Latest_receipt_info | Apple Developer Documentation</a></li>
+</ul>
+<h4 id="2-5_退款通知的响应">2.5 退款通知的响应</h4><p>您的服务器应发送HTTP状态代码，以指示服务器到服务器的通知发布是否成功：</p>
+<ul>
+<li>如果回调接收成功，则发送 HTTP <code>200</code>。您的服务器不需要返回数据。</li>
+<li>如果回调接收不成功，请发送 HTTP <code>50x</code> 或 <code>40x</code> 让 App Store 重试该通知。App Store在一段时间内尝试重试该通知，但在连续失败尝试后最终停止(<code>3次</code>）。</li>
+</ul>
+<p>注意事项：</p>
+<ul>
+<li>当您使用包含退款交易的收据 <code>transaction_data</code> 向苹果服务器校验 <a href="https://developer.apple.com/documentation/appstorereceipts/verifyreceipt" target="_blank" rel="external">verifyReceipt</a>  时，JSON响应中不存在退款交易，自动续订订阅除外。</li>
+<li>收到 <code>REFUND</code> 通知时，您有责任为每笔退款交易存储，监控并采取适当的措施。（因为苹果只通知一次，暂时无法在苹果后台查询退款的订单。）</li>
+</ul>
+<h4 id="2-6_自动续订订阅通知">2.6 自动续订订阅通知</h4><p>这个取消通知之前就一直有，所以这里不重复了。</p>
+<p>自动续订订阅可以参考文档：</p>
+<ul>
+<li><a href="https://developer.apple.com/documentation/storekit/in-app_purchase/subscriptions_and_offers/handling_subscriptions_billing#3221919" target="_blank" rel="external">Handling Subscriptions Billing | Apple Developer Documentation</a></li>
+<li><a href="https://developer.apple.com/videos/play/wwdc2019/302" target="_blank" rel="external">In-App Purchases and Using Server-to-Server Notifications - WWDC 2019 - Videos - Apple Developer</a></li>
+<li><a href="https://developer.apple.com/videos/play/wwdc2019/305" target="_blank" rel="external">Subscription Offers Best Practices - WWDC 2019 - Videos - Apple Developer</a></li>
+</ul>
+<h3 id="疑问解答">疑问解答</h3><p>1、 苹果后台能否查看到退款的订单详情？</p>
+<blockquote>
+<p>答：暂无。（估计明年 WWDC2021 时会有啦？）</p>
+</blockquote>
+<p>2、 消耗型、非消耗型、非续期订阅能不能在沙盒环境测试退款？</p>
+<blockquote>
+<p>答：暂时不能。（估计未来会有？等更新吧….）</p>
+</blockquote>
+<h3 id="总结">总结</h3><p>大概就是这样，其实退款的流程并不复杂，很简单，但是为什么苹果用了那么多年才做出来呢？</p>
+<p>要知道这个原因，还是要回复一下历史~</p>
+<h4 id="退款的方式">退款的方式</h4><p>用户可以通过什么方式申请退款：</p>
+<ul>
+<li>联系Apple客户支持并要求退款</li>
+<li>登录并使用Apple的自助服务工具 <a href="https://reportaproblem.apple.com/" target="_blank" rel="external">reportaproblem.apple.com</a> 要求退款</li>
+<li>要求他们的付款方式发行人退款（比如要求银行取消扣费，或者黑卡无法扣费等）</li>
+</ul>
+<p>详细：<a href="https://support.apple.com/zh-cn/HT204084" target="_blank" rel="external">针对从 Apple 购买的 App 或内容申请退款 - Apple 支持</a></p>
+<h4 id="退款的政策">退款的政策</h4><p>针对退款，不同国家或地区会有不同的“无条件退款期限”。</p>
+<p>AppStore 商店退款政策：</p>
+<ul>
+<li>欧盟区： 14天无条件退款。</li>
+<li>中国台湾：7天无条件退款。</li>
+<li>中国/美国/韩国等其它大多数国家：90天有条件退款。（注：在中国区，每位App Store用户能享有一次无条件退款机会）</li>
+</ul>
+<p>正是这些“漏洞”，中国区 App Store 的具体退款政策 ：一个ID有一次无条件退款机会，一年2次有条件退款，第3次退款会非常难。至于退款到账时间快为36小时内，也有7-15个工作日退还。 所以，出现专业的代充工作室等，导致开发者坏帐非常严重~ 特别是火爆的游戏代充（月流水（千万级）的12%可能就这样没了）~</p>
+<p>很多不熟悉的朋友不太理解，总会问有那么多人退款吗？</p>
+<p>其实，退款主要是针对游戏和直播打赏。游戏类的多，代充黑产；主播自己打赏退款，各种黑幕，只有业内人才懂-。-</p>
+<h4 id="“退款”滥用">“退款”滥用</h4><p>“退款”人的具体手段方式：</p>
+<ul>
+<li>1、利用淘宝店，以代充打折的名义获取玩家账号信息，在为玩家充值后申请退款。淘宝店获得充值金、玩家获得道具、游戏厂商亏钱；</li>
+<li>2、收购消费过的App Store ID账号，要求至少要消费过500元以上。收到的账号会被用来退款和冲榜；</li>
+<li>3、不断寻找有退款需求的新用户，帮其退款，收取佣金；</li>
+</ul>
+<h4 id="退款通知的意义">退款通知的意义</h4><p><img src="https://user-gold-cdn.xitu.io/2020/7/1/1730afc522b43542?w=1206&amp;h=658&amp;f=png&amp;s=139148" alt=""></p>
+<ul>
+<li>允许您对应用内内容的可访问管理（例如游戏的宝石或硬币回收或余额等）</li>
+<li>管理退款滥用</li>
+<li>快速解决用户问题（发现用户退款后，可以在应用内弹出联系客服，协助用户解决应用遇到的退款原因的问题？）</li>
+<li>重新平衡游戏经济</li>
+</ul>
+<h4 id="处罚行动">处罚行动</h4><p>一旦收到有关客户获得应用内购买退款的推送通知，作为开发人员，您可以采取七种不同的操作，从中等到严重：</p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/1/1730afc803545a1e?w=1728&amp;h=985&amp;f=png&amp;s=314533" alt=""></p>
+<p>苹果旨在为客户和开发人员提供更好的体验，所以操作要慎重考虑。</p>
+<h4 id="对退款用户的处理">对退款用户的处理</h4><p><img src="https://user-gold-cdn.xitu.io/2020/7/1/1730afcf4ede2391?w=571&amp;h=897&amp;f=png&amp;s=183187" alt=""></p>
+<p>苹果给了一个示例，用户退款成功后，在 App 中给用户提示退款的时间和说明，可以重新购买，或者联系客户！</p>
+<p>也许帮助需要帮助的用户，为他们解决为什么退款的原因，才能减少真正的退款用户，用户觉得值！那么退款数自然会减少~</p>
+<p>这正是我们所看到的，苹果想的，你怎么想！</p>
+<h3 id="参考">参考</h3><ul>
+<li><a href="https://developer.apple.com/cn/news/?id=tv3bhra6" target="_blank" rel="external">针对 App 内购买项目的退款通知现已可用 - 新闻 - Apple Developer</a></li>
+<li><a href="https://developer.apple.com/videos/play/wwdc2020/10661/" target="_blank" rel="external">What’s new with in-app purchase - WWDC 2020 - Videos - Apple Developer</a></li>
+<li><a href="https://developer.apple.com/documentation/storekit/in-app_purchase/handling_refund_notifications?language=objc" target="_blank" rel="external">Handling Refund Notifications | Apple Developer Documentation</a></li>
+<li><a href="https://developer.apple.com/documentation/storekit/in-app_purchase/subscriptions_and_offers/enabling_server-to-server_notifications" target="_blank" rel="external">Enabling Server-to-Server Notifications | Apple Developer Documentation</a></li>
+<li><a href="https://developer.apple.com/documentation/storekit/in-app_purchase/subscriptions_and_offers/handling_subscriptions_billing#3221919" target="_blank" rel="external">Handling Subscriptions Billing | Apple Developer Documentation</a></li>
+<li><a href="https://developer.apple.com/documentation/appstoreservernotifications" target="_blank" rel="external">App Store Server Notifications | Apple Developer Documentation</a></li>
+<li><a href="https://developer.apple.com/videos/play/wwdc2019/302" target="_blank" rel="external">In-App Purchases and Using Server-to-Server Notifications - WWDC 2019 - Videos - Apple Developer</a></li>
+<li><a href="https://developer.apple.com/videos/play/wwdc2019/305" target="_blank" rel="external">Subscription Offers Best Practices - WWDC 2019 - Videos - Apple Developer</a></li>
+</ul>
+<p><br></p>
+<ul>
+<li>如有侵权，联系必删！</li>
+<li>如有不正确的地方，欢迎指导！</li>
+<li>如有疑问，欢迎在评论区一起讨论！</li>
+</ul>
+<p><br></p>
+<blockquote>
+<p>注：本文首发于 <a href="https://iHTCboy.com">iHTCboy’s blog</a>，如若转载，请注来源。</p>
+</blockquote>
+<p><br></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h3 id="1、前言">1、前言</h3><p>今年 WWDC 2020 苹果全球开发者大会，苹果宣布所有的内购品项类型，当用户退款成功时，开发者都能收到退款通知！！！退款通知！！！退款通知！！！</p>
+<blockquote>
+<p><strong>针对 App 内购买项目的退款通知现已可用</strong><br>2020 年 06 月 24 日<br>App Store 服务器通知现在包含所有类型的 App 内购买项目的退款通知 (包括消耗型项目、非消耗型项目和非续期订阅)。这些信息能帮助您采取相应的行动，并告知他们相关的优惠更改，以及如何重新订阅。</p>
+<p><a href="https://developer.apple.com/cn/news/?id=tv3bhra6">针对 App 内购买项目的退款通知现已可用 - 新闻 - Apple Developer</a></p>
+</blockquote>]]>
+    
+    </summary>
+    
+      <category term="IAP" scheme="https://iHTCboy.com/tags/IAP/"/>
+    
+      <category term="Refund" scheme="https://iHTCboy.com/tags/Refund/"/>
+    
+      <category term="WWDC" scheme="https://iHTCboy.com/tags/WWDC/"/>
+    
+      <category term="technology" scheme="https://iHTCboy.com/categories/technology/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[程序员的macOS系列：高效Alfred进阶]]></title>
@@ -8116,289 +8347,6 @@ DOM 架构方案在文本编辑与图形渲染操作方面的优缺点
       <category term="适配" scheme="https://iHTCboy.com/tags/%E9%80%82%E9%85%8D/"/>
     
       <category term="technology" scheme="https://iHTCboy.com/categories/technology/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[iOS包重签名技术知识]]></title>
-    <link href="https://iHTCboy.com/2019/07/30/2019-07-30_iOS%E5%8C%85%E9%87%8D%E7%AD%BE%E5%90%8D%E6%8A%80%E6%9C%AF%E7%9F%A5%E8%AF%86/"/>
-    <id>https://iHTCboy.com/2019/07/30/2019-07-30_iOS包重签名技术知识/</id>
-    <published>2019-07-30T13:22:16.000Z</published>
-    <updated>2020-02-07T03:39:14.082Z</updated>
-    <content type="html"><![CDATA[<h3 id="1、简介">1、简介</h3><p>利用Xcode的命令 <code>security</code> 和 <code>codesign</code> 重签ipa文件。重签名与Xcode里用build打包时进行的签名操作是一个原理，具体来说，先了解一下iOS相关的证书类型。</p>
-<p><strong>证书类型：</strong></p>
-<table>
-<thead>
-<tr>
-<th>证书类型</th>
-<th style="text-align:left">使用场景</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>开发(Development)证书和描述文件</td>
-<td style="text-align:left">用于开发测试，在Xcode中打包后，可在真机环境调试、安装</td>
-</tr>
-<tr>
-<td>发布(Distribution)证书和描述文件</td>
-<td style="text-align:left">用于提交Appstore，在Xcode中打包后，可使用Xcode、Application Loader提交到Appstore审核发布</td>
-</tr>
-</tbody>
-</table>
-<a id="more"></a>
-<p><strong>证书作用：</strong></p>
-<table>
-<thead>
-<tr>
-<th>证书</th>
-<th style="text-align:left">文件后缀</th>
-<th style="text-align:left">文件类型</th>
-<th style="text-align:left">作用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Provisioning Profile</td>
-<td style="text-align:left">.mobileprovision</td>
-<td style="text-align:left">描述文件</td>
-<td style="text-align:left">Provisioning Profiles文件（配置文件）， 作用是绑定设备UDID，所以在申请开发描述文件之前，先添加调试的设备。双击时打开Xcode安装在电脑上的描述文件，用命令行可以查看安装的描述文件，可以过滤掉过期的描述文件。</td>
-</tr>
-<tr>
-<td>Signing Certificate</td>
-<td style="text-align:left">.cer/.p12</td>
-<td style="text-align:left">证书文件</td>
-<td style="text-align:left">有开发和发布的证书，可以在钥匙串查看安装的可用的证书，过期时间等。p12是一个加密的文件，只要知道其密码，就可以供给所有的 Mac 设备使用，是这个应用的唯一标识证书和开发者，用于对应 bundleID 的应用开发和打包测试。</td>
-</tr>
-</tbody>
-</table>
-<p>注：</p>
-<ul>
-<li>描述文件保存在 macOS 路径：<code>~/Library/MobileDevice/Provisioning\ Profiles/</code></li>
-<li>查看安装的证书使用命令：<code>security find-identity -p codesigning -v</code></li>
-</ul>
-<p>如果是团队开发，一般会生成p12证书提供给组员使用，这样更加好管理证书。</p>
-<table>
-<thead>
-<tr>
-<th>证书名字</th>
-<th style="text-align:left">用途</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>adhocXXX.mobileprovision</td>
-<td style="text-align:left">描述文件。用于生成 adhoc 包时，描述可以安装ipa包的设备UDID和证书关系。（包含推送、apple pay等权限声明内容）</td>
-</tr>
-<tr>
-<td>devXXX.mobileprovision</td>
-<td style="text-align:left">描述文件。用于生成 dev 包时，描述可以安装ipa包的设备UDID和证书关系。（包含推送、apple pay等权限声明内容）</td>
-</tr>
-<tr>
-<td>devXXXPushXXX.p12</td>
-<td style="text-align:left">推送证书。用于 dev 包推送时，认证和关联 应用bundleID 的证书关系。</td>
-</tr>
-<tr>
-<td>devXXX.p12</td>
-<td style="text-align:left">开发证书。用于打包App时，生成 dev 的 ipa 包需要的开发者信息。</td>
-</tr>
-<tr>
-<td>disXXX.mobileprovision</td>
-<td style="text-align:left">描述文件。用于生成 dis 包时，描述应用bundleID与证书的关系。（包含推送、apple pay等权限声明内容）</td>
-</tr>
-<tr>
-<td>disXXXPushXXX.p12</td>
-<td style="text-align:left">推送证书。用于 dis（或adhoc） 包推送时，认证和关联 应用bundleID 的证书关系。</td>
-</tr>
-<tr>
-<td>disXXX.p12</td>
-<td style="text-align:left">发布证书。用于打包App时，生成 dis (或adhoc) 的 ipa 包需要的开发者信息。</td>
-</tr>
-</tbody>
-</table>
-<p>注：</p>
-<ul>
-<li>如果需要添加新的设备UDID，其实只需要更新 .mobileprovision 描述文件就可以；</li>
-<li>如果证书超过了有效期，.p12 和 .mobileprovision 文件需要重新生成，如果 revoke 生成新的证书，旧的证书和证书对应的ipa包不能再安装在设备上。</li>
-</ul>
-<p><strong>关于证书类型说明：</strong></p>
-<table>
-<thead>
-<tr>
-<th>用途</th>
-<th style="text-align:left">dev</th>
-<th style="text-align:left">adhoc</th>
-<th style="text-align:left">dis</th>
-<th style="text-align:left">企业证书</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>能否用于送审</td>
-<td style="text-align:left">不能</td>
-<td style="text-align:left">能</td>
-<td style="text-align:left">能</td>
-<td style="text-align:left">不能</td>
-</tr>
-<tr>
-<td>不越狱且不添加到证书的设备能否安装</td>
-<td style="text-align:left">不能</td>
-<td style="text-align:left">不能</td>
-<td style="text-align:left">不能</td>
-<td style="text-align:left">能</td>
-</tr>
-<tr>
-<td>不越狱但添加到证书的设备能否安装</td>
-<td style="text-align:left">能</td>
-<td style="text-align:left">能</td>
-<td style="text-align:left">不能</td>
-<td style="text-align:left">能</td>
-</tr>
-<tr>
-<td>越狱设备能否安装</td>
-<td style="text-align:left">能</td>
-<td style="text-align:left">能</td>
-<td style="text-align:left">能</td>
-<td style="text-align:left">能</td>
-</tr>
-<tr>
-<td>能否用于沙盒储值测试</td>
-<td style="text-align:left">能</td>
-<td style="text-align:left">能</td>
-<td style="text-align:left">不能</td>
-<td style="text-align:left">不能</td>
-</tr>
-<tr>
-<td>越狱设备(模拟器)能否用于沙盒储值测试</td>
-<td style="text-align:left">不能</td>
-<td style="text-align:left">不能</td>
-<td style="text-align:left">不能</td>
-<td style="text-align:left">不能</td>
-</tr>
-<tr>
-<td>能否用于送审 TestFlight</td>
-<td style="text-align:left">不能</td>
-<td style="text-align:left">不能</td>
-<td style="text-align:left">能</td>
-<td style="text-align:left">不能</td>
-</tr>
-<tr>
-<td>不越狱能否打开应用的“Documents、Library、tmp”目录</td>
-<td style="text-align:left">能</td>
-<td style="text-align:left">不能</td>
-<td style="text-align:left">不能</td>
-<td style="text-align:left">不能</td>
-</tr>
-<tr>
-<td>越狱设备能否打开应用的“Documents、Library、tmp”目录</td>
-<td style="text-align:left">能</td>
-<td style="text-align:left">能</td>
-<td style="text-align:left">能</td>
-<td style="text-align:left">能</td>
-</tr>
-</tbody>
-</table>
-<p><strong>添加设备UDID到证书：</strong><br><a href="https://www.jianshu.com/p/c44d5c3424be" target="_blank" rel="external">iPhone手机轻松获取UDID的六种方式 - 简书</a></p>
-<h3 id="2、重签名流程">2、重签名流程</h3><p><strong>1.添加p12证书</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Import items into a keychain.</span></span><br><span class="line">$ security import inputfile [-k keychain] [-t <span class="built_in">type</span>] [<span class="operator">-f</span> format] [-w] [-P passphrase] [options...]</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ security import /Users/htc/Desktop/distest.p12 -P <span class="string">'123456'</span></span><br></pre></td></tr></table></figure>
-<p><strong>2.解压ipa包</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ unzip yourApp.ipa</span><br><span class="line">查找 .app目录，删除系统临时文件</span><br><span class="line">$ rm -rf ./Payload/yourAppName.app/.DS_Store</span><br></pre></td></tr></table></figure>
-<p><strong>3.修改内容</strong><br>修改Payload/yourName.app中的icon图标、Info.plist文件的信息等，如有需要也可以更改比如版本号，应用名称等。</p>
-<p><strong>4.删除之前的签名 <code>_CodeSignature</code></strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ rm -rf ./Payload/yourAppName.app/_CodeSignature</span><br></pre></td></tr></table></figure>
-<p><strong>5.用包里的描述文件生成<code>entitlements.plist</code>文件</strong></p>
-<p>查看描述文件内容的命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ security cms -D -i <span class="string">"xxx.mobileprovision"</span></span><br></pre></td></tr></table></figure></p>
-<p>上面命令会输出内容：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="pi">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="doctype">&lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">plist</span> <span class="attribute">version</span>=<span class="value">"1.0"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">dict</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">key</span>&gt;</span>AppIDName<span class="tag">&lt;/<span class="title">key</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">string</span>&gt;</span>iLeetCode<span class="tag">&lt;/<span class="title">string</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">key</span>&gt;</span>ApplicationIdentifierPrefix<span class="tag">&lt;/<span class="title">key</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">array</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">string</span>&gt;</span>28PV6G96R7<span class="tag">&lt;/<span class="title">string</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="title">array</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">key</span>&gt;</span>CreationDate<span class="tag">&lt;/<span class="title">key</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">date</span>&gt;</span>2019-10-01T12:57:15Z<span class="tag">&lt;/<span class="title">date</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">key</span>&gt;</span>Platform<span class="tag">&lt;/<span class="title">key</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">array</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="title">string</span>&gt;</span>iOS<span class="tag">&lt;/<span class="title">string</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="title">array</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">key</span>&gt;</span>IsXcodeManaged<span class="tag">&lt;/<span class="title">key</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">true</span>/&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">key</span>&gt;</span>DeveloperCertificates<span class="tag">&lt;/<span class="title">key</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">array</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="title">data</span>&gt;</span><span class="tag">&lt;/<span class="title">data</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="title">array</span>&gt;</span>						</span><br><span class="line">	<span class="tag">&lt;<span class="title">key</span>&gt;</span>Entitlements<span class="tag">&lt;/<span class="title">key</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">dict</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="title">key</span>&gt;</span>application-identifier<span class="tag">&lt;/<span class="title">key</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="title">string</span>&gt;</span>28PV6G96R7.com.iHTCboy.iLeetCoder<span class="tag">&lt;/<span class="title">string</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="title">key</span>&gt;</span>keychain-access-groups<span class="tag">&lt;/<span class="title">key</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="title">array</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="title">string</span>&gt;</span>28PV6G96R7.*<span class="tag">&lt;/<span class="title">string</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="title">array</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="title">key</span>&gt;</span>get-task-allow<span class="tag">&lt;/<span class="title">key</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="title">true</span>/&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="title">key</span>&gt;</span>com.apple.developer.team-identifier<span class="tag">&lt;/<span class="title">key</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="title">string</span>&gt;</span>28PV6G96R7<span class="tag">&lt;/<span class="title">string</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="title">key</span>&gt;</span>aps-environment<span class="tag">&lt;/<span class="title">key</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="title">string</span>&gt;</span>development<span class="tag">&lt;/<span class="title">string</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="title">dict</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">key</span>&gt;</span>ExpirationDate<span class="tag">&lt;/<span class="title">key</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">date</span>&gt;</span>2020-09-30T12:57:15Z<span class="tag">&lt;/<span class="title">date</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">key</span>&gt;</span>Name<span class="tag">&lt;/<span class="title">key</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">string</span>&gt;</span>iOS Team Provisioning Profile: com.iHTCboy.iLeetCoder<span class="tag">&lt;/<span class="title">string</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">key</span>&gt;</span>ProvisionedDevices<span class="tag">&lt;/<span class="title">key</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">array</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="title">string</span>&gt;</span>c286167280be0083fd23e59aaa805e1f3fbdwsd0<span class="tag">&lt;/<span class="title">string</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="title">array</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">key</span>&gt;</span>TeamIdentifier<span class="tag">&lt;/<span class="title">key</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">array</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="title">string</span>&gt;</span>28PV6G96R7<span class="tag">&lt;/<span class="title">string</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="title">array</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">key</span>&gt;</span>TeamName<span class="tag">&lt;/<span class="title">key</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">string</span>&gt;</span>he tiancong<span class="tag">&lt;/<span class="title">string</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">key</span>&gt;</span>TimeToLive<span class="tag">&lt;/<span class="title">key</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">integer</span>&gt;</span>365<span class="tag">&lt;/<span class="title">integer</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">key</span>&gt;</span>UUID<span class="tag">&lt;/<span class="title">key</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">string</span>&gt;</span>9f1fb7b7-2549-4fc6-8893-344f4ddb3580<span class="tag">&lt;/<span class="title">string</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">key</span>&gt;</span>Version<span class="tag">&lt;/<span class="title">key</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">integer</span>&gt;</span>1<span class="tag">&lt;/<span class="title">integer</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">dict</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">plist</span>&gt;</span>%</span><br></pre></td></tr></table></figure>
-<p>可以用管道命令 <code>&gt;</code> 保存成 plist 文件：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ security cms -D -i embedded.mobileprovision &gt; entitlement_full.plist</span><br></pre></td></tr></table></figure></p>
-<p>如果只保留 <code>Entitlements</code> 属性内容，则可以使用<code>PlistBuddy</code>命令，我们重签只需要 Entitlements 属性：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ /usr/libexec/PlistBuddy -x -c \<span class="string">'Print:Entitlements\'</span> entitlement_full.plist &gt; entitlement.plist</span><br></pre></td></tr></table></figure></p>
-<p>注：本步骤的 Entitlements 属性内容非常重要，不能多字段，或者字段设置true或false错误，都会导致异常情况，否则重签是有效，但导致ipa包安装失败~</p>
-<p><strong>6.替换描述文件</strong><br>把新的描述文件复制替换到解压后的目录中，这个需要看自己需要，旧包的描述权限与新证书的权限，是需要那些，上一步骤中 <code>Entitlements</code> 就是在重签时还可以在指定。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cp ./embedded.mobileprovision ./Payload/yourAppName.app/embedded.mobileprovision</span><br></pre></td></tr></table></figure></p>
-<p>如果需要查看系统中已经保存的描述文件：<code>~/Library/MobileDevice/Provisioning\ Profiles/</code></p>
-<p><strong>7.给 MachO 文件添加执行权限</strong><br>解压ipa文件时，app里面的 MachO 文件可能没有执行权限，导致重签的包安装时提示失败。</p>
-<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod +x .<span class="regexp">/Payload/y</span>ourAppName.app<span class="regexp">/yourAppName</span></span><br></pre></td></tr></table></figure>
-<p>注，如果Python脚本有对应的库可以查看 MachO，如果是 Shell 脚本，可以利用 Info.plist 文件中已经有 MachO 对应的文件名，可以通过下面命令读取：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MachO_BINARY=`plutil -convert xml1 -o - <span class="variable">$TARGET_APP_PATH</span>/Info.plist|grep -A1 Exec|tail -n1|cut <span class="operator">-f</span>2 <span class="operator">-d</span>\&gt;|cut <span class="operator">-f</span>1 <span class="operator">-d</span>\&lt;`</span><br></pre></td></tr></table></figure>
-<p>当然，一般路径下app的名字与 MachO 一样 <code>Payload/yourAppName.app/yourAppName</code>。具体方式大家自行选择~</p>
-<p><strong>8.获取证书内容</strong><br>这一步需要读取钥匙串中的开发者证书，可以用以下命令查看下有哪些证书：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ security find-identity -p codesigning -v</span><br></pre></td></tr></table></figure></p>
-<p>上面命令输出：<br><figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1) <span class="keyword">A</span><span class="number">80A1543C48</span>DBCB<span class="number">85F4F185B2</span>D<span class="number">38E7A25E5</span>A48E5 "iPhone Developer: ihtcboy@htc.com (8RRC787ZH2)"</span><br><span class="line">2) D<span class="number">7A8D149</span>DCCFB882BEDFA<span class="number">68913B50623</span>D38C8C49 "iPhone Distribution: Guangzhou HTC Internet Technology Co.,LTD"</span><br><span class="line">3) 900EC6AC<span class="number">6961B824</span>BBAED<span class="number">3303E036</span><span class="keyword">A</span><span class="number">2F5421935</span><span class="keyword">A</span> "iPhone Developer: iHTCboy (2HT78BY87T)"</span><br><span class="line">...</span><br><span class="line">...</span><br></pre></td></tr></table></figure></p>
-<p>注意，下面的重签命令，需要使用上面的 “iPhone Developer: ihtcboy@htc.com (8RRC787ZH2)” 参数</p>
-<p><strong>9.重新签名</strong></p>
-<p>先重签名framework和dylib（不重签的话，就删除无法签名的插件文件： <code>Framework</code>、<code>PlugIns</code> 文件夹、<code>Watch</code> 文件夹）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># sign</span></span><br><span class="line">codesign <span class="operator">-s</span> identity [-fv*] [-o flags] [-r reqs] [-i ident] path ... </span><br><span class="line"></span><br><span class="line"><span class="comment"># verify</span></span><br><span class="line">codesign -v [-v*] [-R=&lt;req string&gt;|-R &lt;req file path&gt;] path|[+]pid ... </span><br><span class="line"></span><br><span class="line"><span class="comment"># display contents</span></span><br><span class="line">codesign <span class="operator">-d</span> [options] path ... </span><br><span class="line"></span><br><span class="line"><span class="comment"># display hosting paths</span></span><br><span class="line">codesign -h pid ...</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ /usr/bin/codesign --force --sign <span class="string">"iPhone Distribution:xxxxx"</span> /Payload/XX.app/Frameworks/xxx.framework</span><br></pre></td></tr></table></figure>
-<p>再签名.app：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ /usr/bin/codesign <span class="operator">-f</span> <span class="operator">-s</span> <span class="string">"iPhone Distribution:xxxxx"</span>  --entitlements entitlements.plist ./Desktop/Payload/yourAppName.app</span><br></pre></td></tr></table></figure></p>
-<p>注意：签名app需要添加参数 <code>--entitlements entitlements.plist</code></p>
-<p>重签成功后提示：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./Payload/yourAppName.app: replacing existing signature.</span><br></pre></td></tr></table></figure></p>
-<p><strong>10.压缩Payload 生成最终 .ipa 文件</strong><br>用 <code>zip</code> 文件压缩生成最终的重签后的ipa文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ zip -ry ABC.ipa Payload</span><br></pre></td></tr></table></figure></p>
-<p><strong>11.验证签名有效性（可选）</strong><br>macOS 10.11 后，<code>codesign</code> 命令增加了验证签名正确性，当然验证签名信息在真机上进行安装可安装就说明可以用。</p>
-<p>验证签名正确性：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ codesign -v Payload/XX.app</span><br></pre></td></tr></table></figure></p>
-<p>查看app的签名信息:<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ codesign -vv -<span class="keyword">d</span> Payload/XX.<span class="keyword">app</span></span><br></pre></td></tr></table></figure></p>
-<p><strong>12.删除安装的p12证书（可选）</strong><br>如果是公共设备环境，可能执行删除命令，删除步骤1中导入的证书。<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ security <span class="operator"><span class="keyword">delete</span>-certificate -<span class="keyword">c</span> <span class="string">"iPhone Distribution: Guangzhou HTC Internet Technology Co.,LTD"</span></span></span><br></pre></td></tr></table></figure></p>
-<p><strong>13.其它可能使用到的命令（可选）</strong></p>
-<p>检查一下是否安装了AppleWWDRCA.cer：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">security <span class="built_in">find</span>-certificate -<span class="built_in">c</span> <span class="string">"Apple Worldwide Developer Relations Certification Authority"</span></span><br></pre></td></tr></table></figure></p>
-<p>查看 app 的 entitlements：<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">codesign --entitlements :- -<span class="keyword">d</span> Payload/yourAppName.<span class="keyword">app</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="3、总结">3、总结</h3><p>关于 iOS 重签名流程就这样简单和清晰的列出来了，但是有非常多的知识点可以深入，需要大家自行实践，还有很多坑点，这里只是简单提一下，深入的命令使用和证书知识、证书安全、命令的注意事项等，需要大家实践见真知！</p>
-<h3 id="参考">参考</h3><ul>
-<li><a href="https://github.com/HanProjectCoder/ResignForiOS" target="_blank" rel="external">HanProjectCoder/ResignForiOS: ipa resign</a></li>
-<li><a href="https://github.com/fastlane/fastlane/tree/master/sigh" target="_blank" rel="external">fastlane/sigh at master · fastlane/fastlane</a></li>
-<li><a href="https://github.com/cjsliuj/Scalpel" target="_blank" rel="external">cjsliuj/Scalpel: A MacOS app with resign, dylib link injection/delete, ipa metadata edit.</a></li>
-<li><a href="https://blog.csdn.net/jerryandliujie/article/details/84845162" target="_blank" rel="external">Scalpel的实现：一款集动态库注入与删除、IPA重签名、IPA元数据修改为一体的MacOS App</a></li>
-<li><a href="https://gist.github.com/FredCox3/0617eba0818a3ba957b7" target="_blank" rel="external">cfgutil man page</a></li>
-<li><a href="https://stackoverflow.com/questions/7485806/install-p12-or-cer-in-console-macos" target="_blank" rel="external">shell - install .p12 or .cer in console macos - Stack Overflow</a></li>
-<li><a href="https://github.com/hongbaoshi/reSignature/blob/master/reSignature/TFSignature.py" target="_blank" rel="external">reSignature/TFSignature.py at master · hongbaoshi/reSignature</a></li>
-<li><a href="https://www.jianshu.com/p/ce2893d99bd4" target="_blank" rel="external">iOS开发中的应用打包方式及重签名的一些总结 - 简书</a></li>
-<li><a href="https://blog.0x5e.cn/2016/09/25/ios-codesign-things/" target="_blank" rel="external">iOS代码签名与重签名 · 0x5e的博客</a></li>
-<li><a href="https://github.com/DanTheMan827/ios-app-signer" target="_blank" rel="external">DanTheMan827/ios-app-signer: This is an app for OS X that can (re)sign apps and bundle them into ipa files that are ready to be installed on an iOS device.</a></li>
-<li><a href="http://dantheman827.github.io/ios-app-signer/" target="_blank" rel="external">iOS App Signer - Instructions</a></li>
-<li><a href="https://www.jianshu.com/p/c44d5c3424be" target="_blank" rel="external">iPhone手机轻松获取UDID的六种方式 - 简书</a></li>
-<li><a href="https://developer.apple.com/library/archive/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html" target="_blank" rel="external">About Code Signing</a></li>
-<li><a href="https://stackoverflow.com/questions/39078983/re-signing-an-ipa-that-contains-a-framework" target="_blank" rel="external">ios - Re-signing an IPA that contains a Framework - Stack Overflow</a></li>
-<li><a href="https://stackoverflow.com/questions/20205162/user-interaction-is-not-allowed-trying-to-sign-an-osx-app-using-codesign" target="_blank" rel="external">“User interaction is not allowed” trying to sign an OSX app using codesign</a></li>
-</ul>
-<p><br></p>
-<ul>
-<li>如有疑问，欢迎在评论区一起讨论！</li>
-<li>如有不正确的地方，欢迎指导！</li>
-</ul>
-<p><br></p>
-<blockquote>
-<p>注：本文首发于 <a href="https://iHTCboy.com">iHTCboy’s blog</a>，如若转载，请注来源<br><br></p>
-</blockquote>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h3 id="1、简介">1、简介</h3><p>利用Xcode的命令 <code>security</code> 和 <code>codesign</code> 重签ipa文件。重签名与Xcode里用build打包时进行的签名操作是一个原理，具体来说，先了解一下iOS相关的证书类型。</p>
-<p><strong>证书类型：</strong></p>
-<table>
-<thead>
-<tr>
-<th>证书类型</th>
-<th style="text-align:left">使用场景</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>开发(Development)证书和描述文件</td>
-<td style="text-align:left">用于开发测试，在Xcode中打包后，可在真机环境调试、安装</td>
-</tr>
-<tr>
-<td>发布(Distribution)证书和描述文件</td>
-<td style="text-align:left">用于提交Appstore，在Xcode中打包后，可使用Xcode、Application Loader提交到Appstore审核发布</td>
-</tr>
-</tbody>
-</table>]]>
-    
-    </summary>
-    
-      <category term="codesign" scheme="https://iHTCboy.com/tags/codesign/"/>
-    
-      <category term="iOS" scheme="https://iHTCboy.com/tags/iOS/"/>
-    
-      <category term="证书" scheme="https://iHTCboy.com/tags/%E8%AF%81%E4%B9%A6/"/>
-    
-      <category term="重签名" scheme="https://iHTCboy.com/tags/%E9%87%8D%E7%AD%BE%E5%90%8D/"/>
-    
-      <category term="induction" scheme="https://iHTCboy.com/categories/induction/"/>
     
   </entry>
   
