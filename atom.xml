@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Learn something of everything,  Learn everything of something.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="https://iHTCboy.com/"/>
-  <updated>2020-07-02T15:25:49.736Z</updated>
+  <updated>2020-07-02T15:27:26.598Z</updated>
   <id>https://iHTCboy.com/</id>
   
   <author>
@@ -15,11 +15,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[WWDC2020 10661 Handle Refunds 处理退款]]></title>
+    <title><![CDATA[iOS Handle Refunds 处理退款 --- WWDC20（Session 10661）]]></title>
     <link href="https://iHTCboy.com/2020/07/01/2020-07-01_WWDC20_in-app-purchase/"/>
     <id>https://iHTCboy.com/2020/07/01/2020-07-01_WWDC20_in-app-purchase/</id>
     <published>2020-07-01T14:40:16.000Z</published>
-    <updated>2020-07-02T15:25:49.736Z</updated>
+    <updated>2020-07-02T15:27:26.598Z</updated>
     <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>今年 WWDC 2020 苹果全球开发者大会，苹果宣布所有的内购品项类型，当用户退款成功时，开发者都能收到退款通知！！！退款通知！！！退款通知！！！</p>
 <blockquote>
 <p><strong>针对 App 内购买项目的退款通知现已可用</strong></p>
