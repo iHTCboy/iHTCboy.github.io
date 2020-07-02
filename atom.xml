@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Learn something of everything,  Learn everything of something.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="https://iHTCboy.com/"/>
-  <updated>2020-07-01T15:40:11.107Z</updated>
+  <updated>2020-07-02T15:25:49.736Z</updated>
   <id>https://iHTCboy.com/</id>
   
   <author>
@@ -19,10 +19,11 @@
     <link href="https://iHTCboy.com/2020/07/01/2020-07-01_WWDC20_in-app-purchase/"/>
     <id>https://iHTCboy.com/2020/07/01/2020-07-01_WWDC20_in-app-purchase/</id>
     <published>2020-07-01T14:40:16.000Z</published>
-    <updated>2020-07-01T15:40:11.107Z</updated>
+    <updated>2020-07-02T15:25:49.736Z</updated>
     <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>今年 WWDC 2020 苹果全球开发者大会，苹果宣布所有的内购品项类型，当用户退款成功时，开发者都能收到退款通知！！！退款通知！！！退款通知！！！</p>
 <blockquote>
-<p><strong>针对 App 内购买项目的退款通知现已可用</strong><br>2020 年 06 月 24 日<br>App Store 服务器通知现在包含所有类型的 App 内购买项目的退款通知 (包括消耗型项目、非消耗型项目和非续期订阅)。这些信息能帮助您采取相应的行动，并告知他们相关的优惠更改，以及如何重新订阅。</p>
+<p><strong>针对 App 内购买项目的退款通知现已可用</strong></p>
+<p>2020 年 06 月 24 日<br>App Store 服务器通知现在包含所有类型的 App 内购买项目的退款通知 (包括消耗型项目、非消耗型项目和非续期订阅)。这些信息能帮助您采取相应的行动，并告知他们相关的优惠更改，以及如何重新订阅。</p>
 <p><a href="https://developer.apple.com/cn/news/?id=tv3bhra6" target="_blank" rel="external">针对 App 内购买项目的退款通知现已可用 - 新闻 - Apple Developer</a></p>
 </blockquote>
 <a id="more"></a>
@@ -42,8 +43,8 @@
 </blockquote>
 <h4 id="2-3_退款通知的类型">2.3 退款通知的类型</h4><p>苹果把回调的通知分为2种类型： </p>
 <ul>
-<li>退款通知类型</li>
-<li>取消通知类型  </li>
+<li><strong>退款通知</strong>类型</li>
+<li><strong>取消通知</strong>类型  </li>
 </ul>
 <p>其中新增加的<code>退款通知</code>类型是针对：</p>
 <ul>
@@ -56,7 +57,7 @@
 <li>自动续期订阅</li>
 </ul>
 <p><img src="https://user-gold-cdn.xitu.io/2020/7/1/1730af9fadac6ef0?w=1595&amp;h=683&amp;f=png&amp;s=257291" alt=""></p>
-<h4 id="2-4_退款通知的内容">2.4 退款通知的内容</h4><p> 苹果返回的通知内容为 JSON 对象数据，所有的退款订单的通知是在 <code>latrest_receipt_info</code> 数组中：</p>
+<h4 id="2-4_退款通知的内容">2.4 退款通知的内容</h4><p> 苹果返回的通知内容为 JSON 对象数据，所有的退款订单的通知是在 <code>unified_receipt</code> 里的 <code>latest_receipt_info</code> 数组中：</p>
 <p><img src="https://user-gold-cdn.xitu.io/2020/7/1/1730af834ce55b09?w=1646&amp;h=745&amp;f=png&amp;s=417540" alt=""></p>
 <table>
 <thead>
@@ -134,7 +135,7 @@
 </tr>
 </tbody>
 </table>
-<p>更加详细的返回字段可查：</p>
+<p>详细的返回字段见官方文档：</p>
 <ul>
 <li><a href="https://developer.apple.com/documentation/appstoreservernotifications/responsebody" target="_blank" rel="external">responseBody | Apple Developer Documentation</a></li>
 <li><a href="https://developer.apple.com/documentation/appstoreservernotifications/unified_receipt" target="_blank" rel="external">unified_receipt | Apple Developer Documentation</a></li>
@@ -150,8 +151,8 @@
 <li>当您使用包含退款交易的收据 <code>transaction_data</code> 向苹果服务器校验 <a href="https://developer.apple.com/documentation/appstorereceipts/verifyreceipt" target="_blank" rel="external">verifyReceipt</a>  时，JSON响应中不存在退款交易，自动续订订阅除外。</li>
 <li>收到 <code>REFUND</code> 通知时，您有责任为每笔退款交易存储，监控并采取适当的措施。（因为苹果只通知一次，暂时无法在苹果后台查询退款的订单。）</li>
 </ul>
-<h4 id="2-6_自动续订订阅通知">2.6 自动续订订阅通知</h4><p>这个取消通知之前就一直有，所以这里不重复了。</p>
-<p>自动续订订阅可以参考文档：</p>
+<h4 id="2-6_自动续订订阅通知">2.6 自动续订订阅通知</h4><p>这个取消通知之前就一直有，所以这里不重复了，需要的自行搜索。</p>
+<p>自动续订订阅的相关文档：</p>
 <ul>
 <li><a href="https://developer.apple.com/documentation/storekit/in-app_purchase/subscriptions_and_offers/handling_subscriptions_billing#3221919" target="_blank" rel="external">Handling Subscriptions Billing | Apple Developer Documentation</a></li>
 <li><a href="https://developer.apple.com/videos/play/wwdc2019/302" target="_blank" rel="external">In-App Purchases and Using Server-to-Server Notifications - WWDC 2019 - Videos - Apple Developer</a></li>
@@ -177,13 +178,15 @@
 <h4 id="退款的政策">退款的政策</h4><p>针对退款，不同国家或地区会有不同的“无条件退款期限”。</p>
 <p>AppStore 商店退款政策：</p>
 <ul>
-<li>欧盟区： 14天无条件退款。</li>
-<li>中国台湾：7天无条件退款。</li>
-<li>中国/美国/韩国等其它大多数国家：90天有条件退款。（注：在中国区，每位App Store用户能享有一次无条件退款机会）</li>
+<li><strong>欧盟区</strong>： 14天<code>无条件</code>退款。</li>
+<li><strong>中国台湾</strong>：7天<code>无条件</code>退款。</li>
+<li><strong>中国/美国/韩国</strong>等其它大多数国家：90天<code>有条件</code>退款。 <em>（注：在中国区，每位App Store用户能享有一次无条件退款机会）</em></li>
 </ul>
-<p>正是这些“漏洞”，中国区 App Store 的具体退款政策 ：一个ID有一次无条件退款机会，一年2次有条件退款，第3次退款会非常难。至于退款到账时间快为36小时内，也有7-15个工作日退还。 所以，出现专业的代充工作室等，导致开发者坏帐非常严重~ 特别是火爆的游戏代充（月流水（千万级）的12%可能就这样没了）~</p>
-<p>很多不熟悉的朋友不太理解，总会问有那么多人退款吗？</p>
-<p>其实，退款主要是针对游戏和直播打赏。游戏类的多，代充黑产；主播自己打赏退款，各种黑幕，只有业内人才懂-。-</p>
+<p>注：中国区 App Store 的具体退款政策：一个ID有一次无条件退款机会，一年2次有条件退款，第3次退款会非常难。至于退款到账时间快为36小时内，也有7-15个工作日退还。</p>
+<p>正是这些“漏洞”，所以，出现专业的代充工作室，导致开发者坏帐非常严重~ </p>
+<p>特别是火爆的游戏代充（月流水（千万级）的12%可能就这样没了）~</p>
+<p><strong>很多不熟悉的朋友不太理解，总会问有那么多人退款吗？</strong></p>
+<p>其实，应用内购买的退款主要是针对游戏和直播打赏。游戏类的多是代充黑产；主播自己刷火箭打赏然后退款，收入照收，各种黑幕，只有业内人才懂的苦 -。-</p>
 <h4 id="“退款”滥用">“退款”滥用</h4><p>“退款”人的具体手段方式：</p>
 <ul>
 <li>1、利用淘宝店，以代充打折的名义获取玩家账号信息，在为玩家充值后申请退款。淘宝店获得充值金、玩家获得道具、游戏厂商亏钱；</li>
@@ -192,18 +195,23 @@
 </ul>
 <h4 id="退款通知的意义">退款通知的意义</h4><p><img src="https://user-gold-cdn.xitu.io/2020/7/1/1730afc522b43542?w=1206&amp;h=658&amp;f=png&amp;s=139148" alt=""></p>
 <ul>
-<li>允许您对应用内内容的可访问管理（例如游戏的宝石或硬币回收或余额等）</li>
+<li>允许您对应用内内容的可访问管理  <em>（例如游戏的宝石或金币回收或账户余额扣减等）</em></li>
 <li>管理退款滥用</li>
-<li>快速解决用户问题（发现用户退款后，可以在应用内弹出联系客服，协助用户解决应用遇到的退款原因的问题？）</li>
+<li>快速解决用户问题 <em>（发现用户退款后，可以在应用内弹出联系客服，协助用户解决应用遇到的退款原因的问题？）</em></li>
 <li>重新平衡游戏经济</li>
 </ul>
-<h4 id="处罚行动">处罚行动</h4><p>一旦收到有关客户获得应用内购买退款的推送通知，作为开发人员，您可以采取七种不同的操作，从中等到严重：</p>
+<h4 id="处罚行动">处罚行动</h4><p>一旦收到有关客户获得应用内购买退款的推送通知，作为开发人员，您可以采取七种不同的操作，从中等到严重（温和处理到严肃处理）。：</p>
 <p><img src="https://user-gold-cdn.xitu.io/2020/7/1/1730afc803545a1e?w=1728&amp;h=985&amp;f=png&amp;s=314533" alt=""></p>
-<p>苹果旨在为客户和开发人员提供更好的体验，所以操作要慎重考虑。</p>
+<p>苹果旨在为客户和开发人员提供更好的体验，所以建议操作要慎重考虑。</p>
 <h4 id="对退款用户的处理">对退款用户的处理</h4><p><img src="https://user-gold-cdn.xitu.io/2020/7/1/1730afcf4ede2391?w=571&amp;h=897&amp;f=png&amp;s=183187" alt=""></p>
 <p>苹果给了一个示例，用户退款成功后，在 App 中给用户提示退款的时间和说明，可以重新购买，或者联系客户！</p>
 <p>也许帮助需要帮助的用户，为他们解决为什么退款的原因，才能减少真正的退款用户，用户觉得值！那么退款数自然会减少~</p>
-<p>这正是我们所看到的，苹果想的，你怎么想！</p>
+<p>所以，苹果当初为什么不愿意提供退款的接口？其实是一直想保护用户的隐私，但是当“退款”滥用时，不得不这样提供了退款通知接口。</p>
+<p>这正是我们所看到的，苹果想的，你怎么想！怎么做！想好在决定~</p>
+<p><br><br><br></p>
+<blockquote>
+<p>ps：题外话，大家一直觉得苹果的应用内购买做的很“烂”，是因为大家不太了解，苹果的这套支付系统有多复杂。可以打开这个链接看看不同国家或地区的付款方式，要在一个应用里集成这个付款方式，不是一个支付宝或微信能想象到的。了解了才知道，唯有多学习：<a href="https://support.apple.com/zh-cn/HT202631" target="_blank" rel="external">可与 Apple ID 搭配使用的付款方式 - Apple 支持</a></p>
+</blockquote>
 <h3 id="参考">参考</h3><ul>
 <li><a href="https://developer.apple.com/cn/news/?id=tv3bhra6" target="_blank" rel="external">针对 App 内购买项目的退款通知现已可用 - 新闻 - Apple Developer</a></li>
 <li><a href="https://developer.apple.com/videos/play/wwdc2020/10661/" target="_blank" rel="external">What’s new with in-app purchase - WWDC 2020 - Videos - Apple Developer</a></li>
@@ -229,7 +237,8 @@
     <summary type="html">
     <![CDATA[<h3 id="1、前言">1、前言</h3><p>今年 WWDC 2020 苹果全球开发者大会，苹果宣布所有的内购品项类型，当用户退款成功时，开发者都能收到退款通知！！！退款通知！！！退款通知！！！</p>
 <blockquote>
-<p><strong>针对 App 内购买项目的退款通知现已可用</strong><br>2020 年 06 月 24 日<br>App Store 服务器通知现在包含所有类型的 App 内购买项目的退款通知 (包括消耗型项目、非消耗型项目和非续期订阅)。这些信息能帮助您采取相应的行动，并告知他们相关的优惠更改，以及如何重新订阅。</p>
+<p><strong>针对 App 内购买项目的退款通知现已可用</strong></p>
+<p>2020 年 06 月 24 日<br>App Store 服务器通知现在包含所有类型的 App 内购买项目的退款通知 (包括消耗型项目、非消耗型项目和非续期订阅)。这些信息能帮助您采取相应的行动，并告知他们相关的优惠更改，以及如何重新订阅。</p>
 <p><a href="https://developer.apple.com/cn/news/?id=tv3bhra6">针对 App 内购买项目的退款通知现已可用 - 新闻 - Apple Developer</a></p>
 </blockquote>]]>
     
