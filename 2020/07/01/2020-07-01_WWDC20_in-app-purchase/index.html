@@ -21,17 +21,17 @@
 
 针对 App 内购买项目的退款通知现已可用
 2020 年 06 月 24 日App Store 服务器通知现在包含所有类型的 App 内购买项目的退款通知 (包括消耗型项目、非消耗型项目和非续期订阅)。这些信息能帮助您采取相应的行动，并告知">
-<meta property="og:image" content="https://user-gold-cdn.xitu.io/2020/7/1/1730af47582fe4f3?w=1616&h=627&f=png&s=183464">
-<meta property="og:image" content="https://user-gold-cdn.xitu.io/2020/7/1/1730af49927bbeeb?w=1611&h=508&f=png&s=217649">
-<meta property="og:image" content="https://user-gold-cdn.xitu.io/2020/7/1/1730af4d78620160?w=1498&h=865&f=png&s=296229">
-<meta property="og:image" content="https://user-gold-cdn.xitu.io/2020/7/1/1730af9fadac6ef0?w=1595&h=683&f=png&s=257291">
-<meta property="og:image" content="https://user-gold-cdn.xitu.io/2020/7/1/1730af834ce55b09?w=1646&h=745&f=png&s=417540">
-<meta property="og:image" content="https://user-gold-cdn.xitu.io/2020/7/1/1730af8844669f16?w=1293&h=590&f=png&s=281523">
-<meta property="og:image" content="https://user-gold-cdn.xitu.io/2020/7/1/1730af898115d4ee?w=1500&h=404&f=png&s=275979">
-<meta property="og:image" content="https://user-gold-cdn.xitu.io/2020/7/1/1730afc522b43542?w=1206&h=658&f=png&s=139148">
-<meta property="og:image" content="https://user-gold-cdn.xitu.io/2020/7/1/1730afc803545a1e?w=1728&h=985&f=png&s=314533">
-<meta property="og:image" content="https://user-gold-cdn.xitu.io/2020/7/1/1730afcf4ede2391?w=571&h=897&f=png&s=183187">
-<meta property="og:updated_time" content="2020-07-04T03:38:26.818Z">
+<meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/07/01_IAP_2020before.png">
+<meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/07/01_IAP_2020after.png">
+<meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/07/01_URL_for_AppStore_Server_Notifications.png">
+<meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/07/01_Server-Server_REFUND_notification.png">
+<meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/07/01_REFUND_Notification_payload.png">
+<meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/07/01_latest_receipt_info_array.png">
+<meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/07/01_REFUND_Field_Type.png">
+<meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/07/01_Refund_management.png">
+<meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/07/01_Potential_actions.png">
+<meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/07/01_Refund_Update_action.png">
+<meta property="og:updated_time" content="2020-07-04T10:56:19.351Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS Handle Refunds 处理退款 --- WWDC20（Session 10661）">
 <meta name="twitter:description" content="1、前言今年 WWDC 2020 苹果全球开发者大会，苹果宣布所有的内购品项类型，当用户退款成功时，开发者都能收到退款通知！！！退款通知！！！退款通知！！！
@@ -262,11 +262,11 @@ var _hmt = _hmt || [];
 </blockquote>
 <a id="more"></a>
 <h3 id="2、处理退款">2、处理退款</h3><h4 id="2-1_退款流程">2.1 退款流程</h4><p>在 2020 年 06 月 24 日之前，开发者完全不知道有用户退款了！（只有每月账单里看到退款的一个总数量 -。-）：</p>
-<p><img src="https://user-gold-cdn.xitu.io/2020/7/1/1730af47582fe4f3?w=1616&amp;h=627&amp;f=png&amp;s=183464" alt=""></p>
+<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/07/01_IAP_2020before.png" alt="IAP_2020before.png"></p>
 <p>2020 年 06 月 24 日开始，苹果新增流程：</p>
-<p><img src="https://user-gold-cdn.xitu.io/2020/7/1/1730af49927bbeeb?w=1611&amp;h=508&amp;f=png&amp;s=217649" alt=""></p>
+<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/07/01_IAP_2020after.png" alt="IAP_2020after.png"></p>
 <h4 id="2-2_退款通知">2.2 退款通知</h4><p>在苹果后台可以配置一个退款通知的回调地址（一个App配置一条链接）：</p>
-<p><img src="https://user-gold-cdn.xitu.io/2020/7/1/1730af4d78620160?w=1498&amp;h=865&amp;f=png&amp;s=296229" alt=""></p>
+<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/07/01_URL_for_AppStore_Server_Notifications.png" alt="URL_for_AppStore_Server_Notifications.png"></p>
 <p>配置的回调链接必须满足条件：</p>
 <ul>
 <li>满足应用传输安全要求（使用 <code>https</code>）</li>
@@ -290,9 +290,9 @@ var _hmt = _hmt || [];
 <ul>
 <li>自动续期订阅</li>
 </ul>
-<p><img src="https://user-gold-cdn.xitu.io/2020/7/1/1730af9fadac6ef0?w=1595&amp;h=683&amp;f=png&amp;s=257291" alt=""></p>
+<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/07/01_Server-Server_REFUND_notification.png" alt="Server-Server_REFUND_notification.png"></p>
 <h4 id="2-4_退款通知的内容">2.4 退款通知的内容</h4><p> 苹果返回的通知内容为 JSON 对象数据，所有的退款订单的通知是在 <code>unified_receipt</code> 里的 <code>latest_receipt_info</code> 数组中：</p>
-<p><img src="https://user-gold-cdn.xitu.io/2020/7/1/1730af834ce55b09?w=1646&amp;h=745&amp;f=png&amp;s=417540" alt=""></p>
+<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/07/01_REFUND_Notification_payload.png" alt="REFUND_Notification_payload.png"></p>
 <table>
 <thead>
 <tr>
@@ -336,9 +336,9 @@ var _hmt = _hmt || [];
 </tbody>
 </table>
 <p>在 <code>unified_receipt</code> 里的 <code>latest_receipt_info</code> 是一个数组，其中包含的最近的100次应用内购买交易：</p>
-<p><img src="https://user-gold-cdn.xitu.io/2020/7/1/1730af8844669f16?w=1293&amp;h=590&amp;f=png&amp;s=281523" alt=""></p>
+<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/07/01_latest_receipt_info_array.png" alt="latest_receipt_info_array.png"></p>
 <p>数据中每个退款订单的主要字段：</p>
-<p><img src="https://user-gold-cdn.xitu.io/2020/7/1/1730af898115d4ee?w=1500&amp;h=404&amp;f=png&amp;s=275979" alt=""></p>
+<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/07/01_REFUND_Field_Type.png" alt="REFUND_Field_Type.png"></p>
 <table>
 <thead>
 <tr>
@@ -427,7 +427,7 @@ var _hmt = _hmt || [];
 <li>2、收购消费过的App Store ID账号，要求至少要消费过500元以上。收到的账号会被用来退款和冲榜；</li>
 <li>3、不断寻找有退款需求的新用户，帮其退款，收取佣金；</li>
 </ul>
-<h4 id="退款通知的意义">退款通知的意义</h4><p><img src="https://user-gold-cdn.xitu.io/2020/7/1/1730afc522b43542?w=1206&amp;h=658&amp;f=png&amp;s=139148" alt=""></p>
+<h4 id="退款通知的意义">退款通知的意义</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/07/01_Refund_management.png" alt="Refund_management.png"></p>
 <ul>
 <li>允许您对应用内内容的可访问管理  <em>（例如游戏的宝石或金币回收或账户余额扣减等）</em></li>
 <li>管理退款滥用</li>
@@ -435,9 +435,9 @@ var _hmt = _hmt || [];
 <li>重新平衡游戏经济</li>
 </ul>
 <h4 id="处罚行动">处罚行动</h4><p>一旦收到有关客户获得应用内购买退款的推送通知，作为开发人员，您可以采取七种不同的操作，从中等到严重（温和处理到严肃处理）。：</p>
-<p><img src="https://user-gold-cdn.xitu.io/2020/7/1/1730afc803545a1e?w=1728&amp;h=985&amp;f=png&amp;s=314533" alt=""></p>
+<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/07/01_Potential_actions.png" alt="Potential_actions.png"></p>
 <p>苹果旨在为客户和开发人员提供更好的体验，所以建议操作要慎重考虑。</p>
-<h4 id="对退款用户的处理">对退款用户的处理</h4><p><img src="https://user-gold-cdn.xitu.io/2020/7/1/1730afcf4ede2391?w=571&amp;h=897&amp;f=png&amp;s=183187" alt=""></p>
+<h4 id="对退款用户的处理">对退款用户的处理</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/07/01_Refund_Update_action.png" alt="Refund_Update_action.png"></p>
 <p>苹果给了一个示例，用户退款成功后，<strong>在 App 中给用户提示退款的时间和说明，可以重新购买，或者联系客服！</strong></p>
 <p>也许帮助需要帮助的用户，为他们解决为什么退款的原因，才能减少真正的退款用户，用户觉得值！那么退款数自然会减少~</p>
 <p>所以，苹果当初为什么不愿意提供退款的接口？其实是一直想保护用户的隐私（退款自由），但是当“退款”滥用时，不得不这样提供了退款通知接口。</p>
