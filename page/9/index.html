@@ -216,6 +216,102 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-2017_11_使用AutoLayout约束, 为啥图片的大小(Image size)却还以实际大小显示？" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/18/2017_11_使用AutoLayout约束, 为啥图片的大小(Image size)却还以实际大小显示？/">使用AutoLayout约束, 为啥图片的大小(Image size)却还以实际大小显示？</a>
+    </h1>
+  
+
+        
+        <a href="/2017/11/18/2017_11_使用AutoLayout约束, 为啥图片的大小(Image size)却还以实际大小显示？/" class="archive-article-date">
+  	<time datetime="2017-11-18T12:49:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-18</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="问题">问题</h3><p>给一个 UIImageView 设置一张图片时，使用 AutoLayout 给 UIImageView 约束宽高，但是实际显示的大小，图片以实际的大小显示出来，代码也没有设置 frame，设置contentMode为UIViewContentModeScaleAspectFit 也不起作用。</p>
+<h3 id="原因">原因</h3><p>最后注册到约束时，设置了 <code>@property NSLayoutPriority priority;</code> ，就是设置了线束的优先级为<code>UILayoutPriorityDefaultHigh</code>，导致这个约束级别比图片默认显示的大小的优先级低。</p>
+        
+          <a class="article-more-a" href="/2017/11/18/2017_11_使用AutoLayout约束, 为啥图片的大小(Image size)却还以实际大小显示？/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">AutoLayout</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Imagesize</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">图片实际大小显示</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/technology//" class="article-tag-list-link color1">technology</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/11/18/2017_11_使用AutoLayout约束, 为啥图片的大小(Image size)却还以实际大小显示？/">显示全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-2017_11_UIActivityIndicatorView的hidden隐藏属性没作用？" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1101,108 +1197,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-2017_10_Xcode9打包AppStore_Icon(1024xp)_WARNING_ITMS-90704-90717问题解决" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/12/2017_10_Xcode9打包AppStore_Icon(1024xp)_WARNING_ITMS-90704-90717问题解决/">Xcode9 打包App Store Icon(1024xp) WARNING ITMS-90704 -90717 问题解决</a>
-    </h1>
-  
-
-        
-        <a href="/2017/10/12/2017_10_Xcode9打包AppStore_Icon(1024xp)_WARNING_ITMS-90704-90717问题解决/" class="archive-article-date">
-  	<time datetime="2017-10-12T01:00:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="Xcode9_打包，上传_iTunes_Connet_报错，提示需要在icon添加一张_Marketing_1024x1024_的图标">Xcode9 打包，上传 iTunes Connet 报错，提示需要在icon添加一张 Marketing 1024x1024 的图标</h4><blockquote>
-<p>WARNING ITMS-90704: “Missing Marketing Icon. iOS Apps must include a 1024x1024px Marketing Icon in PNG format. Apps that do not include the Marketing Icon cannot be submitted for App Review or Beta App Review.”</p>
-</blockquote>
-<p>Xcode9 中需要添加：<br><img src="http://upload-images.jianshu.io/upload_images/99517-97ddb8e31e633c19.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="AppStore 1024pt"></p>
-        
-          <a class="article-more-a" href="/2017/10/12/2017_10_Xcode9打包AppStore_Icon(1024xp)_WARNING_ITMS-90704-90717问题解决/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">App Store Icon</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">ITMS-90704</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">ITMS-90717</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Xcode9</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/technology//" class="article-tag-list-link color1">technology</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/12/2017_10_Xcode9打包AppStore_Icon(1024xp)_WARNING_ITMS-90704-90717问题解决/">显示全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/8/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><span class="space">&hellip;</span><a class="page-number" href="/page/49/">49</a><a class="extend next" rel="next" href="/page/10/">Next &raquo;</a>
@@ -1340,6 +1334,26 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">跨平台</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">cross-platform</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">ReactNative</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Flutter</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">WebAssembly</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">程序员的macOS</a>
               </li>
              
@@ -1413,10 +1427,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Injection</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Flutter</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2309,10 +2319,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">CoreSpotlightSearch</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">ReactNative</a>
               </li>
              
               <li class="article-tag-list-item">

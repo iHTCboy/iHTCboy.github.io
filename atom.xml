@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Learn something of everything,  Learn everything of something.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="https://iHTCboy.com/"/>
-  <updated>2020-07-04T10:56:19.351Z</updated>
+  <updated>2020-07-04T15:00:22.341Z</updated>
   <id>https://iHTCboy.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="https://iHTCboy.com/2020/07/01/2020-07-01_WWDC20_in-app-purchase/"/>
     <id>https://iHTCboy.com/2020/07/01/2020-07-01_WWDC20_in-app-purchase/</id>
     <published>2020-07-01T14:40:16.000Z</published>
-    <updated>2020-07-04T10:56:19.351Z</updated>
+    <updated>2020-07-04T15:00:22.341Z</updated>
     <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>今年 WWDC 2020 苹果全球开发者大会，苹果宣布所有的内购品项类型，当用户退款成功时，开发者都能收到退款通知！！！退款通知！！！退款通知！！！</p>
 <blockquote>
 <p><strong>针对 App 内购买项目的退款通知现已可用</strong></p>
@@ -251,6 +251,317 @@
       <category term="WWDC" scheme="https://iHTCboy.com/tags/WWDC/"/>
     
       <category term="technology" scheme="https://iHTCboy.com/categories/technology/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[当我们在谈论跨平台的时候 ——— 我们在说什么]]></title>
+    <link href="https://iHTCboy.com/2020/06/11/2020-06-11_%E8%B7%A8%E5%B9%B3%E5%8F%B0%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF/"/>
+    <id>https://iHTCboy.com/2020/06/11/2020-06-11_跨平台那些事儿/</id>
+    <published>2020-06-11T11:00:00.000Z</published>
+    <updated>2020-07-04T16:08:18.558Z</updated>
+    <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>最近跟部门同学一起分享了跨平台的事儿，写了将近200+页ppt，最后只讲了100+页，只把其中重点的内容讲了，但是，我认为对跨平台的学习，不止是重点的技术内容，还有很多值得探索的问题，比如历史背景，历史发展，那些事儿，那些人儿，往往不经意间，改变历史的技术，就在那一瞬时，，固守自封的必须会被淘汰，把握了机遇就有新出路，没有看准方向的会浪费大量的时间。当然，从历史脉络来看跨平台，必须千人千面，能有共鸣之处就好。</p>
+<blockquote>
+<p>下面会有将近200+图片，后续有时间，会针对每张ppt添加对应的讲解。</p>
+</blockquote>
+<a id="more"></a>
+<h3 id="2、PPT">2、PPT</h3><p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8df04b537b7?w=1240&amp;h=698&amp;f=jpeg&amp;s=35775" alt="幻灯片001.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8df1f9df28b?w=1240&amp;h=698&amp;f=jpeg&amp;s=24121" alt="幻灯片002.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8df1b61c667?w=1240&amp;h=698&amp;f=jpeg&amp;s=18995" alt="幻灯片003.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8df1f817e0f?w=1240&amp;h=698&amp;f=jpeg&amp;s=86018" alt="幻灯片004.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8df21cf981e?w=1240&amp;h=698&amp;f=jpeg&amp;s=23390" alt="幻灯片005.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8df21bc9148?w=1240&amp;h=698&amp;f=jpeg&amp;s=60870" alt="幻灯片006.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8df3d16492c?w=1240&amp;h=698&amp;f=jpeg&amp;s=60624" alt="幻灯片007.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8df5f140f6d?w=1240&amp;h=698&amp;f=jpeg&amp;s=31217" alt="幻灯片008.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8df578d27f5?w=1240&amp;h=698&amp;f=jpeg&amp;s=56330" alt="幻灯片009.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8df57771e86?w=1240&amp;h=698&amp;f=jpeg&amp;s=45741" alt="幻灯片010.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8df84c7c1e1?w=1240&amp;h=698&amp;f=jpeg&amp;s=49756" alt="幻灯片011.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8df7d428f45?w=1240&amp;h=698&amp;f=jpeg&amp;s=50896" alt="幻灯片012.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8df7ca3dd24?w=1240&amp;h=698&amp;f=jpeg&amp;s=63287" alt="幻灯片013.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8dfa2e08db3?w=1240&amp;h=698&amp;f=jpeg&amp;s=41096" alt="幻灯片014.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8dfa2bfbefc?w=1240&amp;h=698&amp;f=jpeg&amp;s=67145" alt="幻灯片015.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8dff88eee6e?w=1240&amp;h=698&amp;f=jpeg&amp;s=57836" alt="幻灯片016.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8dff8af59ff?w=1240&amp;h=698&amp;f=jpeg&amp;s=77896" alt="幻灯片017.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8dfe743c320?w=1240&amp;h=698&amp;f=jpeg&amp;s=80191" alt="幻灯片018.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8dffffc5732?w=1240&amp;h=698&amp;f=jpeg&amp;s=59868" alt="幻灯片019.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e0000ea71c?w=1240&amp;h=698&amp;f=jpeg&amp;s=82190" alt="幻灯片020.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e00b5d5e5a?w=1240&amp;h=698&amp;f=jpeg&amp;s=63126" alt="幻灯片021.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e03704d455?w=1240&amp;h=698&amp;f=jpeg&amp;s=59697" alt="幻灯片022.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e03524ffe7?w=1240&amp;h=698&amp;f=jpeg&amp;s=56959" alt="幻灯片023.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e026c6cade?w=1240&amp;h=698&amp;f=jpeg&amp;s=19650" alt="幻灯片024.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e03c04a991?w=1240&amp;h=698&amp;f=jpeg&amp;s=21255" alt="幻灯片025.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e052dcfdb7?w=1240&amp;h=698&amp;f=jpeg&amp;s=62882" alt="幻灯片026.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e04bccc25d?w=1240&amp;h=698&amp;f=jpeg&amp;s=32712" alt="幻灯片027.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e0586944f9?w=1240&amp;h=698&amp;f=jpeg&amp;s=29808" alt="幻灯片028.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e0ad48d119?w=1240&amp;h=698&amp;f=jpeg&amp;s=26815" alt="幻灯片029.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e0bbb7e74e?w=1240&amp;h=698&amp;f=jpeg&amp;s=28615" alt="幻灯片030.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e0c1318c2b?w=1240&amp;h=698&amp;f=jpeg&amp;s=42791" alt="幻灯片031.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e0c1438d39?w=1240&amp;h=698&amp;f=jpeg&amp;s=40567" alt="幻灯片032.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e0c7ca1f8b?w=1240&amp;h=698&amp;f=jpeg&amp;s=36132" alt="幻灯片033.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e0bbcbc82d?w=1240&amp;h=698&amp;f=jpeg&amp;s=41810" alt="幻灯片034.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e0fbfd51e8?w=1240&amp;h=698&amp;f=jpeg&amp;s=67978" alt="幻灯片035.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e0ff115012?w=1240&amp;h=698&amp;f=jpeg&amp;s=74648" alt="幻灯片036.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e0ffdab11e?w=1240&amp;h=698&amp;f=jpeg&amp;s=112894" alt="幻灯片037.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e0f4f01294?w=1240&amp;h=698&amp;f=jpeg&amp;s=63431" alt="幻灯片038.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e109d4f201?w=1240&amp;h=698&amp;f=jpeg&amp;s=106822" alt="幻灯片039.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e109cc2cdf?w=1240&amp;h=698&amp;f=jpeg&amp;s=24025" alt="幻灯片040.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e13fedcad3?w=1240&amp;h=698&amp;f=jpeg&amp;s=35826" alt="幻灯片041.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e147220390?w=1240&amp;h=698&amp;f=jpeg&amp;s=38239" alt="幻灯片042.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e14775eea7?w=1240&amp;h=698&amp;f=jpeg&amp;s=58784" alt="幻灯片043.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e1470eb5e2?w=1240&amp;h=698&amp;f=jpeg&amp;s=63316" alt="幻灯片044.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e147982fa9?w=1240&amp;h=698&amp;f=jpeg&amp;s=18930" alt="幻灯片045.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e1473cf1f5?w=1240&amp;h=698&amp;f=jpeg&amp;s=66843" alt="幻灯片046.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e1c2e33fe9?w=1240&amp;h=698&amp;f=jpeg&amp;s=24364" alt="幻灯片047.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e1c2f6639e?w=1240&amp;h=698&amp;f=jpeg&amp;s=38515" alt="幻灯片048.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e1c2eab239?w=1240&amp;h=698&amp;f=jpeg&amp;s=34293" alt="幻灯片049.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e1b8558dd3?w=1240&amp;h=698&amp;f=jpeg&amp;s=33235" alt="幻灯片050.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e1c2d9359b?w=1240&amp;h=698&amp;f=jpeg&amp;s=37880" alt="幻灯片051.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e214767f94?w=1240&amp;h=698&amp;f=jpeg&amp;s=62336" alt="幻灯片052.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e1c2cf557a?w=1240&amp;h=698&amp;f=jpeg&amp;s=65638" alt="幻灯片053.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e2149a1c1d?w=1240&amp;h=698&amp;f=jpeg&amp;s=90920" alt="幻灯片054.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e2180f7936?w=1240&amp;h=698&amp;f=jpeg&amp;s=76066" alt="幻灯片055.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e2148787cd?w=1240&amp;h=698&amp;f=jpeg&amp;s=42236" alt="幻灯片056.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e2181fcf01?w=1240&amp;h=698&amp;f=jpeg&amp;s=61553" alt="幻灯片057.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e25bd44849?w=1240&amp;h=698&amp;f=jpeg&amp;s=68554" alt="幻灯片058.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e232bb776a?w=1240&amp;h=698&amp;f=jpeg&amp;s=56905" alt="幻灯片059.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e25be45099?w=1240&amp;h=698&amp;f=jpeg&amp;s=47993" alt="幻灯片060.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e25bf10dcd?w=1240&amp;h=698&amp;f=jpeg&amp;s=64056" alt="幻灯片061.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e25bfe8e9d?w=1240&amp;h=698&amp;f=jpeg&amp;s=29816" alt="幻灯片062.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e25c8099eb?w=1240&amp;h=698&amp;f=jpeg&amp;s=70152" alt="幻灯片063.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e2b913a1c6?w=1240&amp;h=698&amp;f=jpeg&amp;s=50993" alt="幻灯片064.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e264b8db88?w=1240&amp;h=698&amp;f=jpeg&amp;s=59925" alt="幻灯片065.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e2b470134a?w=1240&amp;h=698&amp;f=jpeg&amp;s=52380" alt="幻灯片066.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e2c26016eb?w=1240&amp;h=698&amp;f=jpeg&amp;s=58583" alt="幻灯片067.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e2b83a659a?w=1240&amp;h=698&amp;f=jpeg&amp;s=57895" alt="幻灯片068.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e2d4678076?w=1240&amp;h=698&amp;f=jpeg&amp;s=66308" alt="幻灯片069.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e3145259cc?w=1240&amp;h=698&amp;f=jpeg&amp;s=28357" alt="幻灯片070.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e33a13df22?w=1240&amp;h=698&amp;f=jpeg&amp;s=61246" alt="幻灯片071.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e2dfea73f3?w=1240&amp;h=698&amp;f=jpeg&amp;s=75751" alt="幻灯片072.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e33a4a541d?w=1240&amp;h=698&amp;f=jpeg&amp;s=91546" alt="幻灯片073.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e33a2eb600?w=1240&amp;h=698&amp;f=jpeg&amp;s=61797" alt="幻灯片074.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e33a457d5a?w=1240&amp;h=698&amp;f=jpeg&amp;s=56484" alt="幻灯片075.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e370b9b275?w=1240&amp;h=698&amp;f=jpeg&amp;s=28578" alt="幻灯片076.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e33a336d31?w=1240&amp;h=698&amp;f=jpeg&amp;s=71830" alt="幻灯片077.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e3725f5d62?w=1240&amp;h=698&amp;f=jpeg&amp;s=60358" alt="幻灯片078.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e378e91ef0?w=1240&amp;h=698&amp;f=jpeg&amp;s=79554" alt="幻灯片079.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e380d3d311?w=1240&amp;h=698&amp;f=jpeg&amp;s=26288" alt="幻灯片080.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e3779ce155?w=1240&amp;h=698&amp;f=jpeg&amp;s=65359" alt="幻灯片081.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e3b101724c?w=1240&amp;h=698&amp;f=jpeg&amp;s=45762" alt="幻灯片082.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e3b12e5e92?w=1240&amp;h=698&amp;f=jpeg&amp;s=48954" alt="幻灯片083.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e381b6d3bf?w=1240&amp;h=698&amp;f=jpeg&amp;s=89174" alt="幻灯片084.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e3ab045072?w=1240&amp;h=698&amp;f=jpeg&amp;s=54789" alt="幻灯片085.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e3b0f24494?w=1240&amp;h=698&amp;f=jpeg&amp;s=53030" alt="幻灯片086.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e3b11c96a3?w=1240&amp;h=698&amp;f=jpeg&amp;s=77360" alt="幻灯片087.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e3e59c1749?w=1240&amp;h=698&amp;f=jpeg&amp;s=45103" alt="幻灯片088.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e3da9a7df8?w=1240&amp;h=698&amp;f=jpeg&amp;s=50583" alt="幻灯片089.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e3ae270d12?w=1240&amp;h=698&amp;f=jpeg&amp;s=59460" alt="幻灯片090.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e3e5dbf00b?w=1240&amp;h=698&amp;f=jpeg&amp;s=43004" alt="幻灯片091.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e3f0c8a85f?w=1240&amp;h=698&amp;f=jpeg&amp;s=45302" alt="幻灯片092.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e3ed6dc531?w=1240&amp;h=698&amp;f=jpeg&amp;s=76144" alt="幻灯片093.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e3f4891a6b?w=1240&amp;h=698&amp;f=jpeg&amp;s=49101" alt="幻灯片094.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e412b57027?w=1240&amp;h=698&amp;f=jpeg&amp;s=81874" alt="幻灯片095.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e41a0485e6?w=1240&amp;h=698&amp;f=jpeg&amp;s=46605" alt="幻灯片096.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e42260d192?w=1240&amp;h=698&amp;f=jpeg&amp;s=35086" alt="幻灯片097.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e428a1b8dd?w=1240&amp;h=698&amp;f=jpeg&amp;s=73083" alt="幻灯片098.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e41f7549f6?w=1240&amp;h=698&amp;f=jpeg&amp;s=65781" alt="幻灯片099.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e471ac84fc?w=1240&amp;h=698&amp;f=jpeg&amp;s=61142" alt="幻灯片100.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e44d45b568?w=1240&amp;h=698&amp;f=jpeg&amp;s=57934" alt="幻灯片101.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e459f62ba1?w=1240&amp;h=698&amp;f=jpeg&amp;s=23547" alt="幻灯片102.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e459fc65d5?w=1240&amp;h=698&amp;f=jpeg&amp;s=40017" alt="幻灯片103.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e459d4719d?w=1240&amp;h=712&amp;f=jpeg&amp;s=67379" alt="幻灯片104.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e48eda561a?w=1240&amp;h=698&amp;f=jpeg&amp;s=44639" alt="幻灯片105.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e47517758d?w=1240&amp;h=698&amp;f=jpeg&amp;s=52193" alt="幻灯片106.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e483fbf6d1?w=1240&amp;h=698&amp;f=jpeg&amp;s=48341" alt="幻灯片107.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e49989b5d6?w=1240&amp;h=698&amp;f=jpeg&amp;s=39224" alt="幻灯片108.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e4a4919e18?w=1240&amp;h=698&amp;f=jpeg&amp;s=48210" alt="幻灯片109.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e4ac596360?w=1240&amp;h=698&amp;f=jpeg&amp;s=40881" alt="幻灯片110.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/4/1731a8e4afe330db?w=1240&amp;h=698&amp;f=jpeg&amp;s=54834" alt="幻灯片111.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e4d191aa1e?w=1240&amp;h=698&amp;f=jpeg&amp;s=44056" alt="幻灯片112.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e4cb83261a?w=1240&amp;h=698&amp;f=jpeg&amp;s=27819" alt="幻灯片113.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e4de14f1a3?w=1240&amp;h=698&amp;f=jpeg&amp;s=62248" alt="幻灯片114.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e4de038b80?w=1240&amp;h=698&amp;f=jpeg&amp;s=53377" alt="幻灯片115.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e4dde71325?w=1240&amp;h=698&amp;f=jpeg&amp;s=66333" alt="幻灯片116.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e4f3a59466?w=1240&amp;h=698&amp;f=jpeg&amp;s=45962" alt="幻灯片117.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e519842d56?w=1240&amp;h=698&amp;f=jpeg&amp;s=40540" alt="幻灯片118.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e4e984e3a1?w=1240&amp;h=698&amp;f=jpeg&amp;s=38645" alt="幻灯片119.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e52437b91d?w=1240&amp;h=698&amp;f=jpeg&amp;s=55196" alt="幻灯片120.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e51dcd72df?w=1240&amp;h=698&amp;f=jpeg&amp;s=75058" alt="幻灯片121.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e5245b84e4?w=1240&amp;h=698&amp;f=jpeg&amp;s=53047" alt="幻灯片122.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e5244a45e6?w=1240&amp;h=698&amp;f=jpeg&amp;s=24878" alt="幻灯片123.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e549bdb60b?w=1240&amp;h=698&amp;f=jpeg&amp;s=41023" alt="幻灯片124.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e52442e730?w=1240&amp;h=698&amp;f=jpeg&amp;s=50001" alt="幻灯片125.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e560d96530?w=1240&amp;h=698&amp;f=jpeg&amp;s=24475" alt="幻灯片126.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e558b0ea47?w=1240&amp;h=698&amp;f=jpeg&amp;s=53910" alt="幻灯片127.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e5651b54e8?w=1240&amp;h=698&amp;f=jpeg&amp;s=54277" alt="幻灯片128.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e581efc521?w=1240&amp;h=698&amp;f=jpeg&amp;s=65026" alt="幻灯片129.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e570982377?w=1240&amp;h=698&amp;f=jpeg&amp;s=28552" alt="幻灯片130.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e5731abb73?w=1240&amp;h=698&amp;f=jpeg&amp;s=28497" alt="幻灯片131.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e594a2fcf7?w=1240&amp;h=698&amp;f=jpeg&amp;s=70888" alt="幻灯片132.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e59cb67ef0?w=1240&amp;h=698&amp;f=jpeg&amp;s=29512" alt="幻灯片133.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e58df7a6fb?w=1240&amp;h=698&amp;f=jpeg&amp;s=29907" alt="幻灯片134.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e5a4b039db?w=1240&amp;h=698&amp;f=jpeg&amp;s=36362" alt="幻灯片135.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e5c582ba1c?w=1240&amp;h=698&amp;f=jpeg&amp;s=29836" alt="幻灯片136.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e5a4d067c6?w=1240&amp;h=698&amp;f=jpeg&amp;s=18341" alt="幻灯片137.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e5c67305b2?w=1240&amp;h=698&amp;f=jpeg&amp;s=21652" alt="幻灯片138.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e5cd005eda?w=1240&amp;h=698&amp;f=jpeg&amp;s=42480" alt="幻灯片139.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e5dc030624?w=1240&amp;h=698&amp;f=jpeg&amp;s=51935" alt="幻灯片140.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e5e86d60e7?w=1240&amp;h=698&amp;f=jpeg&amp;s=49639" alt="幻灯片141.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e5eb4ab054?w=1240&amp;h=698&amp;f=jpeg&amp;s=26704" alt="幻灯片142.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e5f65501c3?w=1240&amp;h=698&amp;f=jpeg&amp;s=71605" alt="幻灯片143.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e5f9eeb783?w=1240&amp;h=698&amp;f=jpeg&amp;s=86135" alt="幻灯片144.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e5fdc9ba20?w=1240&amp;h=698&amp;f=jpeg&amp;s=48364" alt="幻灯片145.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e62bc6adba?w=1240&amp;h=698&amp;f=jpeg&amp;s=44467" alt="幻灯片146.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e609017488?w=1240&amp;h=698&amp;f=jpeg&amp;s=26392" alt="幻灯片147.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e632329aab?w=1240&amp;h=698&amp;f=jpeg&amp;s=57760" alt="幻灯片148.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e636195e87?w=1240&amp;h=698&amp;f=jpeg&amp;s=48670" alt="幻灯片149.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e6417bc7b1?w=1240&amp;h=698&amp;f=jpeg&amp;s=53581" alt="幻灯片150.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e6406fbd71?w=1240&amp;h=698&amp;f=jpeg&amp;s=25478" alt="幻灯片151.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e6451c16e5?w=1240&amp;h=698&amp;f=jpeg&amp;s=126214" alt="幻灯片152.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e65f814fd0?w=1240&amp;h=698&amp;f=jpeg&amp;s=123692" alt="幻灯片153.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e6748ad523?w=1240&amp;h=698&amp;f=jpeg&amp;s=61666" alt="幻灯片154.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e67daa3440?w=1240&amp;h=698&amp;f=jpeg&amp;s=103332" alt="幻灯片155.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e67d4b17ff?w=1240&amp;h=698&amp;f=jpeg&amp;s=43702" alt="幻灯片156.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e67473290b?w=1240&amp;h=698&amp;f=jpeg&amp;s=20896" alt="幻灯片157.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e68ff5bb93?w=1240&amp;h=698&amp;f=jpeg&amp;s=78264" alt="幻灯片158.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e69b69ace8?w=1240&amp;h=698&amp;f=jpeg&amp;s=67197" alt="幻灯片159.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e6aa79db8a?w=1240&amp;h=698&amp;f=jpeg&amp;s=54418" alt="幻灯片160.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e6bcf22e4b?w=1240&amp;h=698&amp;f=jpeg&amp;s=38831" alt="幻灯片161.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e6cbfeb8e4?w=1240&amp;h=698&amp;f=jpeg&amp;s=37720" alt="幻灯片162.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e6ae551af7?w=1240&amp;h=698&amp;f=jpeg&amp;s=53469" alt="幻灯片163.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e6b9eb1984?w=1240&amp;h=698&amp;f=jpeg&amp;s=79371" alt="幻灯片164.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e6deb19b91?w=1240&amp;h=698&amp;f=jpeg&amp;s=22550" alt="幻灯片165.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e6e5f5fd0c?w=1240&amp;h=698&amp;f=jpeg&amp;s=55550" alt="幻灯片166.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e6f0228add?w=1240&amp;h=698&amp;f=jpeg&amp;s=51371" alt="幻灯片167.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e6d3791085?w=1240&amp;h=698&amp;f=jpeg&amp;s=50192" alt="幻灯片168.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e7093772ee?w=1240&amp;h=698&amp;f=jpeg&amp;s=80093" alt="幻灯片169.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e6f90ffcee?w=1240&amp;h=698&amp;f=jpeg&amp;s=117107" alt="幻灯片170.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e7275014fa?w=1240&amp;h=698&amp;f=jpeg&amp;s=60040" alt="幻灯片171.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e7327f1e04?w=1240&amp;h=698&amp;f=jpeg&amp;s=19481" alt="幻灯片172.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e70f95892e?w=1240&amp;h=698&amp;f=jpeg&amp;s=43317" alt="幻灯片173.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e71707c5ac?w=1240&amp;h=698&amp;f=jpeg&amp;s=136785" alt="幻灯片174.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e72b0dd7de?w=1240&amp;h=698&amp;f=jpeg&amp;s=75259" alt="幻灯片175.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e73cb15907?w=1240&amp;h=698&amp;f=jpeg&amp;s=38712" alt="幻灯片176.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e7503c7e16?w=1240&amp;h=698&amp;f=jpeg&amp;s=56001" alt="幻灯片177.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e75b51de57?w=1240&amp;h=698&amp;f=jpeg&amp;s=25989" alt="幻灯片178.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e76b388a78?w=1240&amp;h=698&amp;f=jpeg&amp;s=34893" alt="幻灯片179.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e762296a11?w=1240&amp;h=698&amp;f=jpeg&amp;s=34871" alt="幻灯片180.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e771bbb555?w=1240&amp;h=698&amp;f=jpeg&amp;s=28612" alt="幻灯片181.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e796bb55e8?w=1240&amp;h=698&amp;f=jpeg&amp;s=42425" alt="幻灯片182.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e79e8e94d3?w=1240&amp;h=698&amp;f=jpeg&amp;s=63225" alt="幻灯片183.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e796c1c9ea?w=1240&amp;h=698&amp;f=jpeg&amp;s=47116" alt="幻灯片184.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8f1f574bb5e?w=1240&amp;h=698&amp;f=jpeg&amp;s=43199" alt="幻灯片185.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8f14bcebd72?w=1240&amp;h=698&amp;f=jpeg&amp;s=36537" alt="幻灯片186.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8f1f57eb97c?w=1240&amp;h=698&amp;f=jpeg&amp;s=44199" alt="幻灯片187.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8f1f6db7755?w=1240&amp;h=698&amp;f=jpeg&amp;s=34003" alt="幻灯片188.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8f1f7b65bcc?w=1240&amp;h=698&amp;f=jpeg&amp;s=32602" alt="幻灯片189.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8f1f6eef468?w=1240&amp;h=698&amp;f=jpeg&amp;s=35815" alt="幻灯片190.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e79d8f9a51?w=1240&amp;h=698&amp;f=jpeg&amp;s=29258" alt="幻灯片191.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e79dde2081?w=1240&amp;h=698&amp;f=jpeg&amp;s=27877" alt="幻灯片192.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e7c7fd5328?w=1240&amp;h=698&amp;f=jpeg&amp;s=36523" alt="幻灯片193.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e7a1fb9178?w=1240&amp;h=698&amp;f=jpeg&amp;s=46637" alt="幻灯片194.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e7ce3b2078?w=1240&amp;h=698&amp;f=jpeg&amp;s=49470" alt="幻灯片195.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e7ced86671?w=1240&amp;h=698&amp;f=jpeg&amp;s=51249" alt="幻灯片196.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e7d6fa7d7f?w=1240&amp;h=698&amp;f=jpeg&amp;s=28098" alt="幻灯片197.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e7da698dd2?w=1240&amp;h=698&amp;f=jpeg&amp;s=78362" alt="幻灯片198.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e7e56cab12?w=1240&amp;h=698&amp;f=jpeg&amp;s=24143" alt="幻灯片199.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e803a34a5a?w=1240&amp;h=698&amp;f=jpeg&amp;s=33172" alt="幻灯片200.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e808dbf051?w=1240&amp;h=698&amp;f=jpeg&amp;s=22992" alt="幻灯片201.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e809975446?w=1240&amp;h=698&amp;f=jpeg&amp;s=23003" alt="幻灯片202.jpeg"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731a8e8161d7032?w=1240&amp;h=698&amp;f=jpeg&amp;s=18294" alt="幻灯片203.jpeg"></p>
+<h3 id="3、总结">3、总结</h3><blockquote>
+<p>目前比较忙，后续会慢慢的对每张ppt添加对应的讲解，请期待吧。</p>
+</blockquote>
+<p>以上就是跨平台那些事儿，当我们在谈论跨平台的时候，不止是Flutter，还有更多的底层知识或者新生命的事物，理解跨平台，才能应对 ReactNative、Flutter，或者未来的新事物，同时，还要跨越自己，让自己成为一个平台！那么，当我们再在谈论跨平台的时候，我们一定能够应对未来！这就是我想要表达的想法。</p>
+<h3 id="参考">参考</h3><p><strong>移动跨平台框架：</strong></p>
+<ul>
+<li><a href="[https://github.com/facebook/react-native](https://github.com/facebook/react-native">facebook/react-native: A framework for building native apps with React.</a>)</li>
+<li><a href="[https://github.com/flutter/flutter](https://github.com/flutter/flutter">flutter/flutter: Flutter makes it easy and fast to build beautiful apps for mobile and beyond.</a>)</li>
+<li><a href="[https://www.qt.io/download](https://www.qt.io/download">Get Qt - Download now</a>)</li>
+<li><a href="[https://dotnet.microsoft.com/apps/xamarin](https://dotnet.microsoft.com/apps/xamarin">Xamarin | Open-source mobile app platform for .NET</a>)</li>
+<li><a href="[https://github.com/electron/electron](https://github.com/electron/electron">electron/electron: Build cross-platform desktop apps with JavaScript, HTML, and CSS</a>)</li>
+<li><a href="[https://yogalayout.com/](https://yogalayout.com/">Yoga Layout | A cross-platform layout engine</a>)</li>
+</ul>
+<p><strong>苹果 WWDC:</strong></p>
+<ul>
+<li><a href="[https://developer.apple.com/videos/all-videos/](https://developer.apple.com/videos/all-videos/">All WWDC Videos - Apple Developer</a>)</li>
+<li><a href="[https://developer.apple.com/videos/play/wwdc2019/520/](https://developer.apple.com/videos/play/wwdc2019/520/">Introducing Core Haptics - WWDC 2019 - Videos - Apple Developer</a>)</li>
+<li><a href="[https://developer.apple.com/videos/play/wwdc2019/810/](https://developer.apple.com/videos/play/wwdc2019/810/">Designing Audio-Haptic Experiences - WWDC 2019 - Videos - Apple Developer</a>)</li>
+<li><a href="[https://developer.apple.com/videos/play/wwdc2017/802](https://developer.apple.com/videos/play/wwdc2017/802">Essential Design Principles - WWDC 2017 - Videos - Apple Developer</a>)</li>
+<li><a href="[https://developer.apple.com/videos/play/wwdc2017/804/](https://developer.apple.com/videos/play/wwdc2017/804/">Designing Across Platforms - WWDC 2017 - Videos - Apple Developer</a>)</li>
+<li><a href="[https://developer.apple.com/design/human-interface-guidelines/ios/user-interaction/haptics/](https://developer.apple.com/design/human-interface-guidelines/ios/user-interaction/haptics/">Haptics - User Interaction - iOS - Human Interface Guidelines - Apple Developer</a>)</li>
+<li><a href="[https://developer.apple.com/design/human-interface-guidelines/watchos/user-interaction/haptic-feedback/](https://developer.apple.com/design/human-interface-guidelines/watchos/user-interaction/haptic-feedback/">Haptic Feedback - User Interaction - watchOS - Human Interface Guidelines - Apple Developer</a>)</li>
+<li><a href="[https://developer.apple.com/videos/play/wwdc2017/806/](https://developer.apple.com/videos/play/wwdc2017/806/">Design For Everyone - WWDC 2017 - Videos - Apple Developer</a>)</li>
+<li><a href="[https://material.io/design/color/dark-theme.html](https://material.io/design/color/dark-theme.html">Dark theme - Material Design</a>)</li>
+<li><a href="[https://developer.apple.com/design/](https://developer.apple.com/design/">Design - Apple Developer</a>)</li>
+</ul>
+<p><strong>谷歌 Android：</strong></p>
+<ul>
+<li><a href="[https://developer.android.com/training/tv/start?hl=zh_cn](https://developer.android.com/training/tv/start?hl=zh_cn">开发者指南  |  Android 开发者  |  Android Developers</a>)</li>
+<li><a href="[https://developer.android.com/guide/topics/graphics/opengl](https://developer.android.com/guide/topics/graphics/opengl">OpenGL ES  |  Android 开发者  |  Android Developers</a>)</li>
+<li><a href="[https://developer.android.com/topic/performance/network-xfer](https://developer.android.com/topic/performance/network-xfer">缩减图片下载大小  |  Android 开发者  |  Android Developers</a>)</li>
+</ul>
+<p><strong>其它资料文档：</strong></p>
+<p><strong>技术：</strong></p>
+<ul>
+<li><a href="[http://blog.sina.com.cn/s/blog_6310d2980101goj1.html](http://blog.sina.com.cn/s/blog_6310d2980101goj1.html">【扫盲】HTML5、Web APP、3G网站、Wap网站傻傻分不清楚<em>慕辰北</em>新浪博客</a>)</li>
+<li><a href="[https://www.runoob.com/w3cnote/app-wap-difference.html](https://www.runoob.com/w3cnote/app-wap-difference.html">app和wap手机网站的区别在哪里 | 菜鸟教程</a>)</li>
+<li><a href="[https://www.zhihu.com/question/19911163](https://www.zhihu.com/question/19911163">Web 1.0、2.0、3.0 分别是什么意思？ - 知乎</a>)</li>
+<li><a href="[https://www.tencent.com/zh-cn/about.html](https://www.tencent.com/zh-cn/about.html">腾讯公司简介 - Tencent 腾讯</a>)</li>
+<li><a href="[http://www.sn.10086.cn/support/businesshelp/file9.html](http://www.sn.10086.cn/support/businesshelp/file9.html">WAP业务常见问题_中国移动通信</a>)</li>
+<li><a href="[https://gd.10086.cn/products_new/options/detail/GPRS_FUNCTION_10.shtml](https://gd.10086.cn/products_new/options/detail/GPRS_FUNCTION_10.shtml">GPRS套餐_广东移动</a>)</li>
+<li><a href="[http://www.10086.cn/support/servicefee/newbusiness/mm/](http://www.10086.cn/support/servicefee/newbusiness/mm/">MM<em>服务中心</em>中国移动通信</a>)</li>
+<li><a href="[https://it.sohu.com/20070518/n250100497.shtml](https://it.sohu.com/20070518/n250100497.shtml">中国移动通信产业20年大事记-搜狐IT</a>))</li>
+<li><a href="[http://m.c114.com.cn/w2935-1094983.html](http://m.c114.com.cn/w2935-1094983.html">1G到5G，我国移动通信发展里程碑 - C114通信网</a>)</li>
+<li><a href="[http://www.cnnic.net.cn/hlwfzyj/hlwxzbg/](http://www.cnnic.net.cn/hlwfzyj/hlwxzbg/">中国互联网络信息中心</a>)</li>
+<li><a href="[https://www.ifanr.com/1336563?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=](https://www.ifanr.com/1336563?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=">看电视的人，越来越少了 | 爱范儿</a>)</li>
+<li><a href="[https://mp.weixin.qq.com/s/Ez72nzSikDkcRuIww-GQyg](https://mp.weixin.qq.com/s/Ez72nzSikDkcRuIww-GQyg">分不清ARM和X86架构，别跟我说你懂CPU！</a>)</li>
+<li><a href="[https://www.ednchina.com/news/201901101421.html](https://www.ednchina.com/news/201901101421.html">苹果、三星、高通都属ARM阵营，为啥华为就不行？-EDN 电子技术设计</a>)</li>
+<li><a href="[https://zhuanlan.zhihu.com/p/39215118](https://zhuanlan.zhihu.com/p/39215118">世界上还有哪些能做基带的公司？ - 知乎</a>)</li>
+<li><a href="[https://zhuanlan.zhihu.com/p/25730897](https://zhuanlan.zhihu.com/p/25730897">移动GPU和桌面GPU最核心的差别（讲述TBR和Immediate Rendering） - 知乎</a>)</li>
+<li><a href="[https://www.zhihu.com/question/25811504](https://www.zhihu.com/question/25811504">Android的UI底层是用CPU绘图的还是GPU绘图的呢？以及surfaceview,window,普通view是如何实现的？ - 知乎</a>)</li>
+<li><a href="[https://juejin.im/post/5b1e8fade51d45068f65d6e8](https://juejin.im/post/5b1e8fade51d45068f65d6e8">WWDC 2018：写给 OpenGL 开发者们的 Metal 开发指南 - 掘金</a>)</li>
+<li><a href="[https://zhuanlan.zhihu.com/p/101550272](https://zhuanlan.zhihu.com/p/101550272">CPU/GPU/TPU/NPU傻傻分不清楚 - 知乎</a>)</li>
+<li><a href="[https://zhuanlan.zhihu.com/p/48982978](https://zhuanlan.zhihu.com/p/48982978">什么是张量（tensor）&amp; 深度学习 - 知乎</a>)</li>
+<li><a href="[https://www.zhihu.com/question/19902056](https://www.zhihu.com/question/19902056">在移动领域，ARM 在哪些方面领先英特尔？ - 知乎</a>)</li>
+<li><a href="[https://blog.csdn.net/qian520ao/article/details/81144167](https://blog.csdn.net/qian520ao/article/details/81144167">Android屏幕绘制机制及硬件加速 - CSDN博客</a>)</li>
+</ul>
+<p><strong>软文：</strong></p>
+<ul>
+<li><a href="[https://juejin.im/post/5c3702bde51d4551eb3a1a02](https://juejin.im/post/5c3702bde51d4551eb3a1a02">张小龙 4 小时演讲没时间看？看这一篇就够了！「附赠张小龙历年演讲实录 PDF」 - 掘金</a>)</li>
+<li><a href="[https://www.thepaper.cn/newsDetail_forward_7367850](https://www.thepaper.cn/newsDetail_forward_7367850">肖战背后：腾讯的背水一战<em>湃客</em>澎湃新闻-The Paper</a>)</li>
+<li><a href="[http://finance.sina.com.cn/chanjing/gsnews/2018-05-06/doc-ihacuuvt8132798.shtml](http://finance.sina.com.cn/chanjing/gsnews/2018-05-06/doc-ihacuuvt8132798.shtml">腾讯没有梦想|腾讯<em>新浪财经</em>新浪网</a>)</li>
+</ul>
+<p><br></p>
+<ul>
+<li>如有侵权，联系必删！</li>
+<li>如有不正确的地方，欢迎指导！</li>
+<li>如有疑问，欢迎在评论区一起讨论！</li>
+</ul>
+<p><br></p>
+<blockquote>
+<p>注：本文首发于 <a href="https://iHTCboy.com">iHTCboy’s blog</a>，如若转载，请注来源。</p>
+</blockquote>
+<p><br></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h3 id="1、前言">1、前言</h3><p>最近跟部门同学一起分享了跨平台的事儿，写了将近200+页ppt，最后只讲了100+页，只把其中重点的内容讲了，但是，我认为对跨平台的学习，不止是重点的技术内容，还有很多值得探索的问题，比如历史背景，历史发展，那些事儿，那些人儿，往往不经意间，改变历史的技术，就在那一瞬时，，固守自封的必须会被淘汰，把握了机遇就有新出路，没有看准方向的会浪费大量的时间。当然，从历史脉络来看跨平台，必须千人千面，能有共鸣之处就好。</p>
+<blockquote>
+<p>下面会有将近200+图片，后续有时间，会针对每张ppt添加对应的讲解。</p>
+</blockquote>]]>
+    
+    </summary>
+    
+      <category term="Flutter" scheme="https://iHTCboy.com/tags/Flutter/"/>
+    
+      <category term="ReactNative" scheme="https://iHTCboy.com/tags/ReactNative/"/>
+    
+      <category term="WebAssembly" scheme="https://iHTCboy.com/tags/WebAssembly/"/>
+    
+      <category term="cross-platform" scheme="https://iHTCboy.com/tags/cross-platform/"/>
+    
+      <category term="跨平台" scheme="https://iHTCboy.com/tags/%E8%B7%A8%E5%B9%B3%E5%8F%B0/"/>
+    
+      <category term="induction" scheme="https://iHTCboy.com/categories/induction/"/>
     
   </entry>
   
@@ -8170,190 +8481,6 @@ DOM 架构方案在文本编辑与图形渲染操作方面的优缺点
       <category term="Sign-in-with-Apple" scheme="https://iHTCboy.com/tags/Sign-in-with-Apple/"/>
     
       <category term="苹果登录方式" scheme="https://iHTCboy.com/tags/%E8%8B%B9%E6%9E%9C%E7%99%BB%E5%BD%95%E6%96%B9%E5%BC%8F/"/>
-    
-      <category term="technology" scheme="https://iHTCboy.com/categories/technology/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[iOS 13 适配]]></title>
-    <link href="https://iHTCboy.com/2019/08/26/2019-08-26_iOS13%E9%80%82%E9%85%8D/"/>
-    <id>https://iHTCboy.com/2019/08/26/2019-08-26_iOS13适配/</id>
-    <published>2019-08-26T14:49:16.000Z</published>
-    <updated>2020-02-07T03:39:14.498Z</updated>
-    <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>针对 iOS 13，苹果做了非常大的调整，其中 Dark 模式是最新的 UI 层面可见的改变，而针对iPad推出了 <code>iPadOS</code>，导致了与 iOS 的分化，同时为了 iPad 而不得不对 iOS 同样做出的改变，比如一个应用支持多 window 显示。所以，每年 WWDC 后，因为每个应用的情况不一样，使用的API各不相同，导致适配的工作无法一致，大家遇到的坑不相同，所以，把大家遇到的问题都汇总起来，那就是一定有作用，这就是本文的初心。</p>
-<a id="more"></a>
-<h3 id="2、iOS_13_适配问题">2、iOS 13 适配问题</h3><h4 id="1-_如何关闭程序中的暗黑模式？">1. 如何关闭程序中的暗黑模式？</h4><p>iOS13最大的特点是带来了暗黑模式，但是如果不适配的话，可能会出现该是黑色的地方用了白色了，该是白色的地方是黑色了，看不到了，怎么关掉呢？</p>
-<ul>
-<li>1.1 代码方式：<br>可以每一个页面设置，当然也可以整体设置，一般我们的APP都是在一个window下的，那就整体设置APP里的window:</li>
-</ul>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#<span class="keyword">if</span> defined(__IPHONE_13_0) &amp;&amp; __IPHONE_OS_VERSION_MAX_ALLOWED &gt;= __IPHONE_13_0</span><br><span class="line">    <span class="keyword">if</span>(@available(iOS <span class="number">13.0</span>,*))&#123;</span><br><span class="line">        <span class="keyword">self</span>.window.overrideUserInterfaceStyle = <span class="type">UIUserInterfaceStyleLight</span>;</span><br><span class="line">    &#125;</span><br><span class="line">#endif</span><br></pre></td></tr></table></figure>
-<ul>
-<li>1.2 配置文件方式：<br>在 <code>Info.plist</code> 添加key: <code>UIUserInterfaceStyle</code> 设置为强制用暗黑模式（<code>Dark</code>）或白天模式（<code>Light</code>）</li>
-</ul>
-<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/08/iOS13-Dark.png" alt="iOS13-Dark.png"></p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">key</span>&gt;</span>UIUserInterfaceStyle<span class="tag">&lt;/<span class="title">key</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">string</span>&gt;</span>UIUserInterfaceStyleLight<span class="tag">&lt;/<span class="title">string</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li><a href="https://developer.apple.com/videos/play/wwdc2019/214/" target="_blank" rel="external">Implementing Dark Mode on iOS - WWDC 2019 - Videos - Apple Developer</a></li>
-</ul>
-<p>目前苹果还没有公布什么时候强制适配黑夜模式。按之前的官方的文章其实是没有强制要求所有App都适配，因为有些App确实可能很难适配。</p>
-<blockquote>
-<p>如果您需要更多时间调节 app 在深色模式中的外观，或您的 app 不适用于深色模式，您可进一步了解如何停用深色模式。</p>
-</blockquote>
-<ul>
-<li><a href="https://developer.apple.com/cn/news/?id=0829019a" target="_blank" rel="external">为深色模式做好准备 - 新闻 - Apple Developer</a></li>
-</ul>
-<h4 id="2-_UIWebView_已弃用">2. UIWebView 已弃用</h4><blockquote>
-<p>ITMS-90809: Deprecated API Usage - Apple will stop accepting submissions of apps that use UIWebView APIs . See <a href="https://developer.apple.com/documentation/uikit/uiwebview" target="_blank" rel="external">https://developer.apple.com/documentation/uikit/uiwebview</a> for more information.</p>
-<p><strong>UIWebView</strong><br>iOS 2.0–12.0 Deprecated<br>Mac Catalyst 13.0–13.0 Deprecated</p>
-</blockquote>
-<ul>
-<li><a href="https://developer.apple.com/documentation/uikit/uiwebview" target="_blank" rel="external">UIWebView - UIKit | Apple Developer Documentation</a></li>
-</ul>
-<p><strong>2019-12月更新</strong></p>
-<blockquote>
-<p>The App Store will no longer accept new apps using UIWebView as of April 2020 and app updates using UIWebView as of December 2020.</p>
-</blockquote>
-<p>苹果已经强制要求2020年4月新应用不能再使用 UIWebView，2020年12月所有应用更新不能在使用 UIWebView。</p>
-<ul>
-<li><a href="https://developer.apple.com/news/?id=12232019b" target="_blank" rel="external">Updating Apps that Use Web Views - News - Apple Developer</a></li>
-</ul>
-<h4 id="3-_PresentViewController_模式变动">3. PresentViewController 模式变动</h4><p>iOS13后，Prensent方式弹出页面时，默认的模式变为了UIModalPresentationAutomatic，这样的方式也挺好的，动画也好看，自带关闭，只要下拉就关闭页面了，这样的动画方式下，之前会出现的《UITabBar在iPhoneX等Push时显示错乱问题》 的问题也不存在了。<br>但有的时候，我们不希望使用这个样式，比如需要用户不能关闭的：</p>
-<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/08/iOS13-PresentViewController.png" alt="iOS13-PresentViewController.png"></p>
-<p>只要指定弹出页的 <code>modalPresentationStyle</code> 属性，注意是要Present的页面:</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">UIViewController</span> *vc = [[<span class="built_in">UIViewController</span> alloc] init];</span><br><span class="line">vc<span class="variable">.modalPresentationStyle</span> = <span class="built_in">UIModalPresentationFullScreen</span>;</span><br><span class="line">[<span class="keyword">self</span><span class="variable">.navigationController</span> presentViewController:vc animated:<span class="literal">YES</span> completion:<span class="literal">nil</span>];</span><br></pre></td></tr></table></figure>
-<h4 id="4-_增加”一直使用蓝牙”的权限申请">4. 增加”一直使用蓝牙”的权限申请</h4><p> iOS 13起，app的 info.plist里增加</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">key</span>&gt;</span>NSBluetoothAlwaysUsageDescription<span class="tag">&lt;/<span class="title">key</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">string</span>&gt;</span>我们要一直使用您的蓝牙，具体做什么别问我<span class="tag">&lt;/<span class="title">string</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h4 id="5-_WKWebView_中测量页面内容高度的方式变更">5. WKWebView 中测量页面内容高度的方式变更</h4><p>iOS 13以前<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document<span class="class">.body</span><span class="class">.scrollHeight</span></span><br></pre></td></tr></table></figure></p>
-<p>iOS 13中<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document<span class="class">.documentElement</span><span class="class">.scrollHeight</span></span><br></pre></td></tr></table></figure></p>
-<p>两者相差55 应该是浏览器定义高度变了</p>
-<h4 id="6-_UIActivityIndicatorView">6. UIActivityIndicatorView</h4><p>之前的 UIActivityIndicatorView 有三种 style 分别为 <code>whiteLarge</code>, <code>white</code> 和 <code>gray</code>，现在全部废弃。<br>增加两种 style 分别为 <code>medium</code> 和 <code>large</code>，指示器颜色用 <code>color</code> 属性修改。</p>
-<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/08/iOS13-UIActivityIndicatorView.png" alt="iOS13-UIActivityIndicatorView.png"></p>
-<ul>
-<li><a href="https://developer.apple.com/videos/play/wwdc2019/214/" target="_blank" rel="external">Implementing Dark Mode on iOS - WWDC 2019 - Videos - Apple Developer</a></li>
-</ul>
-<h4 id="7-_Status_Bar">7. Status Bar</h4><p>去掉原来 <code>.default</code> <code>.lightContent</code>，改为 ：</p>
-<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/08/iOS13-Status Bar.png" alt="iOS13-Status Bar.png"></p>
-<h4 id="8-_Sign_In_with_Apple">8. Sign In with Apple</h4><ul>
-<li><a href="https://developer.apple.com/news/?id=06032019j" target="_blank" rel="external">Updates to the App Store Review Guidelines - News - Apple Developer</a></li>
-</ul>
-<blockquote>
-<p>Sign In with Apple will be available for beta testing this summer. It will be required as an option for users in apps that support third-party sign-in when it is commercially available later this year.<br>Apple登录将于今年夏天进行beta测试。对于支持第三方用户登录的应用中，apple 登录将在今年晚些时候上市销售时作为选项。</p>
-</blockquote>
-<p>通过API来获取到诸如用户姓名这样的信息，但是最为关键的<code>userIdentifier</code>则是毫无规律可言的(至少在我们开发者看来)，而这个<code>userIdentifier</code>则为同一个开发者账号下的所有app中保持有且仅有一个。<br>另外，apple 登录是支持跨平台，安卓和 windows 的 web 页面中使用 apple id 登录授权。</p>
-<p>注意：<br>Sign In with Apple 需要用户开启了两步认证，如果没有开启则会在第一次使用时提示开启，不开启将无法使用。</p>
-<p>另外，苹果登录按钮有所要求, 详细见 <a href="https://developer.apple.com/design/human-interface-guidelines/sign-in-with-apple/overview/" target="_blank" rel="external">Sign In with Apple - Sign In with Apple - Human Interface Guidelines - Apple Developer</a></p>
-<p><strong>2019年9月更新</strong></p>
-<blockquote>
-<p>4.8 通过 Apple 登录<br>如果 app 专门使用第三方或社交登录服务 (例如，Facebook 登录、Google 登录、通过 Twitter 登录、通过 LinkedIn 登录、通过 Amazon 登录或微信登录) 来对其进行设置或验证这个 app 的用户主帐户，则该 app 必须同时提供“通过 Apple 登录”作为等效选项。用户的主帐户是指在 app 中建立的、用于标识身份、登录和访问功能和相关服务的帐户。<br>在以下情况下，不要求提供“通过 Apple 登录”选项：</p>
-<ul>
-<li>您的 app 仅使用公司自有的帐户设置和登录系统。</li>
-<li>您的 app 是一款教育、企业或商务 app，要求用户使用现有的教育或企业帐户登录。</li>
-<li>您的 app 使用政府或行业支持的公民身份系统或电子身份证来鉴定用户身份。</li>
-<li>您的 app 是特定第三方服务的客户端，用户需要使用他们的邮件、社交媒体或其他第三方帐户直接登录才能访问内容。</li>
-</ul>
-</blockquote>
-<ul>
-<li><a href="https://developer.apple.com/cn/news/?id=09122019b" target="_blank" rel="external">有关“通过 Apple 登录”的指南更新 - 新闻 - Apple Developer</a></li>
-<li><a href="https://developer.apple.com/cn/app-store/review/guidelines/" target="_blank" rel="external">App Store 审核指南 - Apple Developer</a></li>
-</ul>
-<h4 id="9-_KVC_限制">9. KVC 限制</h4><p>iOS 13 通过 KVC 方式修改私有属性，有 Crush 风险，谨慎使用！<br>iOS13 以后已经不能肆无忌惮的通过 KVC 来修改一些没有暴露出来的属性了。会崩溃：<br><code>&#39;Access to UITextField&#39;s _placeholderLabel ivar is prohibited. This is an application bug&#39;</code></p>
-<p>已知：<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// UITextField的placeholder的颜色</span></span><br><span class="line">[textField setValue:[<span class="built_in">UIColor</span> xxx] forKeyPath:<span class="string">@"_placeholderLabel.textColor"</span>];</span><br><span class="line"><span class="comment">// UISearchBar 的 _searchField</span></span><br><span class="line">[searchBar valueForKey:<span class="string">@"_searchField"</span>];</span><br></pre></td></tr></table></figure></p>
-<p>修改如下：<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSMutableAttributedString</span> *placeholderString = [[<span class="built_in">NSMutableAttributedString</span> alloc] initWithString:placeholder attributes:@&#123;<span class="built_in">NSForegroundColorAttributeName</span> : <span class="keyword">self</span><span class="variable">.placeholderColor</span>&#125;];</span><br><span class="line">_textField<span class="variable">.attributedPlaceholder</span> = placeholderString;</span><br></pre></td></tr></table></figure></p>
-<h4 id="10-_UISegmentedControl_默认样式改变">10. UISegmentedControl 默认样式改变</h4><p>默认样式变为白底黑字，如果设置修改过颜色的话，页面需要修改。另外UI样式发生了变化。</p>
-<h4 id="11-_App启动过程中，部分View可能无法实时获取到frame">11. App启动过程中，部分View可能无法实时获取到frame</h4><p>可能是为了优化启动速度（或者留海屏原因），App 启动过程中，部分View可能无法实时获取到正确的frame</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 只有等执行完 UIViewController 的 viewDidAppear 方法以后，才能获取到正确的值，在viewDidLoad等地方 frame Size 为 0，例如：</span></span><br><span class="line"> [[<span class="built_in">UIApplication</span> sharedApplication] statusBarFrame];</span><br></pre></td></tr></table></figure>
-<h4 id="12-_MPMoviePlayerController_在iOS_13_弃用">12. MPMoviePlayerController 在iOS 13 弃用</h4><p>在使用到MPMoviePlayerController的地方，直接抛了异常：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">'MPMoviePlayerController is no longer available. Use AVPlayerViewController in AVKit.'</span><br></pre></td></tr></table></figure>
-<p>替代方案就是AVKit里面的那套播放器</p>
-<h4 id="13-_iOS_13_DeviceToken有变化">13. iOS 13 DeviceToken有变化</h4><p>这个很重要！！！<br>可能大多数使用第三方推送的童鞋都不会注意到这个问题，一般现在的第三方推送都是将DeviceToken原始数据丢进去，具体的解析都是第三方内部处理，所以，这些第三方解析DeviceToken的方式正确的话，那就毫无问题。如果你们是通过这种方式来获取DeviceToken，那你需要注意了。（这个坑也是多年前埋下的，很多文章介绍的也是下面这个方法，不规范的做法迟早要还的），如下：</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSString</span> *dt = [deviceToken description];</span><br><span class="line">dt = [dt stringByReplacingOccurrencesOfString: <span class="string">@"&lt;"</span> withString: <span class="string">@""</span>];</span><br><span class="line">dt = [dt stringByReplacingOccurrencesOfString: <span class="string">@"&gt;"</span> withString: <span class="string">@""</span>];</span><br><span class="line">dt = [dt stringByReplacingOccurrencesOfString: <span class="string">@" "</span> withString: <span class="string">@""</span>];</span><br></pre></td></tr></table></figure>
-<p>这段代码运行在 iOS 13 上已经无法获取到准确的DeviceToken字符串了，iOS 13 通过[deviceToken description]获取到的内容已经变了。</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;length = <span class="number">32</span>, bytes = <span class="number">0x778a7995</span> <span class="number">29</span>f32fb6 <span class="number">74</span>ba8167 b6bddb4e ... b4d6b95f <span class="number">65</span>ac4587 &#125;</span><br></pre></td></tr></table></figure>
-<p>解决方法，fb sdk 中：</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">+ (<span class="built_in">NSString</span> *)hexadecimalStringFromData:(<span class="built_in">NSData</span> *)data</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">NSUInteger</span> dataLength = data<span class="variable">.length</span>;</span><br><span class="line">    <span class="keyword">if</span> (dataLength == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">nil</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">const</span> <span class="keyword">unsigned</span> <span class="keyword">char</span> *dataBuffer = data<span class="variable">.bytes</span>;</span><br><span class="line">    <span class="built_in">NSMutableString</span> *hexString = [<span class="built_in">NSMutableString</span> stringWithCapacity:(dataLength * <span class="number">2</span>)];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; dataLength; ++i) &#123;</span><br><span class="line">        [hexString appendFormat:<span class="string">@"%02x"</span>, dataBuffer[i]];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> [hexString <span class="keyword">copy</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>友盟推送的解决方法</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)application:(<span class="built_in">UIApplication</span> *)application didRegisterForRemoteNotificationsWithDeviceToken:(<span class="built_in">NSData</span> *)deviceToken</span><br><span class="line">&#123;</span><br><span class="line">     <span class="keyword">if</span> (![deviceToken isKindOfClass:[<span class="built_in">NSData</span> class]]) <span class="keyword">return</span>;</span><br><span class="line">           <span class="keyword">const</span> <span class="keyword">unsigned</span> *tokenBytes = (<span class="keyword">const</span> <span class="keyword">unsigned</span> *)[deviceToken bytes];</span><br><span class="line">          <span class="built_in">NSString</span> *hexToken = [<span class="built_in">NSString</span> stringWithFormat:<span class="string">@"%08x%08x%08x%08x%08x%08x%08x%08x"</span>,</span><br><span class="line">          ntohl(tokenBytes[<span class="number">0</span>]), ntohl(tokenBytes[<span class="number">1</span>]), ntohl(tokenBytes[<span class="number">2</span>]),</span><br><span class="line">          ntohl(tokenBytes[<span class="number">3</span>]), ntohl(tokenBytes[<span class="number">4</span>]), ntohl(tokenBytes[<span class="number">5</span>]),</span><br><span class="line">          ntohl(tokenBytes[<span class="number">6</span>]), ntohl(tokenBytes[<span class="number">7</span>])];</span><br><span class="line">          <span class="built_in">NSLog</span>(<span class="string">@"deviceToken:%@"</span>,hexToken);</span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这2个方法那个好？<br>根据苹果文档 <a href="https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1622958-application?language=objc" target="_blank" rel="external">application:didRegisterForRemoteNotificationsWithDeviceToken:</a>：</p>
-<p>友盟的兼容方案并不严谨，苹果说tokens长度可变，建议不要硬编码！！</p>
-<p>更多参考：<br><a href="https://forums.developer.apple.com/thread/117545" target="_blank" rel="external">iOS13 PKPushCredentials broken |Apple Developer Forums</a><br><a href="https://github.com/facebook/facebook-objc-sdk/blob/master/FBSDKCoreKit/FBSDKCoreKit/Internal/FBSDKInternalUtility.m#L571" target="_blank" rel="external">facebook-objc-sdk/FBSDKInternalUtility.m</a><br><a href="https://info.umeng.com/detail?id=174&amp;&amp;cateId=1" target="_blank" rel="external">【公告】iOS 13正式发布后对U-Push的影响</a><br><a href="https://github.com/ChenYilong/iOS13AdaptationTips/issues/23" target="_blank" rel="external">NotificationCenter · Issue #23 · ChenYilong/iOS13AdaptationTips</a></p>
-<h4 id="14-_即将废弃的_LaunchImage">14. 即将废弃的 LaunchImage</h4><p>从 iOS 8 的时候，苹果就引入了 LaunchScreen，我们可以设置 LaunchScreen来作为启动页。当然，现在你还可以使用LaunchImage来设置启动图。不过使用LaunchImage的话，要求我们必须提供各种屏幕尺寸的启动图，来适配各种设备，随着苹果设备尺寸越来越多，这种方式显然不够 Flexible。而使用 LaunchScreen的话，情况会变的很简单， LaunchScreen是支持AutoLayout+SizeClass的，所以适配各种屏幕都不在话下。</p>
-<p>注意: <strong>从2020年4月开始，所有使⽤ iOS13 SDK 的 App 将必须提供 LaunchScreen</strong>，LaunchImage即将退出历史舞台。</p>
-<p>再补充一点，在使用 LaunchScreen的时候，里面用到的图片资源，最好别放在 xcassets 里面，不然在你修改图片后，你会发现真机上并不会生效。</p>
-<h4 id="15-_App_Delegate">15. App Delegate</h4><p>iOS 支持多界面同时运行多个用户界面。 root view controller 的 view superview 也不直接是 UIWindow 了:</p>
-<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/08/iOS13-Multiple-Windows.png" alt="iOS13-Multiple-Windows.png"></p>
-<p>iOS 13 可以多windows窗口，把ui相关的生命周期单独到 SceneDelegate：<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/08/iOS13-SessionLifecycle.png" alt="iOS13-SessionLifecycle.png"></p>
-<p>如果实现 SceneDelegate 那么iOS 13会调整 SceneDalegate， 如果不实现，就会使用 AppDelegate。iOS 12 以下还是调用 AppDelegate：</p>
-<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/08/iOS13-UISessionDelegate.png" alt="iOS13-UISessionDelegate.png"></p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@property</span>(nullable, <span class="keyword">nonatomic</span>,<span class="keyword">readonly</span>) <span class="built_in">UIWindow</span> *keyWindow API_DEPRE<span class="built_in">CATED</span>(<span class="string">"Should not be used for applications that support multiple scenes as it returns a key window across all connected scenes"</span>, ios(<span class="number">2.0</span>, <span class="number">13.0</span>));</span><br></pre></td></tr></table></figure>
-<p>获取keyWindow 使用 [UIApplicatoin sharedApplication].keyWindow 情况就有多种：</p>
-<ul>
-<li>1、此接口已经弃用</li>
-<li>2、针对 iPad, 一个应用可以打开多窗口（比如 office 可以打开多个 word 文档。），此时，keyWindow 就有多个 scenes，并不唯一。</li>
-<li>3、针对 iPhone，目前还不能同时打开多窗口。所以 keyWindow 还是唯一的，暂时不影响获取。</li>
-</ul>
-<p>没有了 keyWindow，那以后怎么获得当前激活中的 window 呢？可以看看这里：<a href="https://stackoverflow.com/questions/57134259/how-to-resolve-keywindow-was-deprecated-in-ios-13-0" target="_blank" rel="external">How to resolve: ‘keyWindow’ was deprecated in iOS 13.0</a></p>
-<p>具体调整可参见官方WWDC： <a href="https://developer.apple.com/videos/play/wwdc2019/258/" target="_blank" rel="external">Architecting Your App for Multiple Windows - WWDC 2019 - Videos - Apple Developer</a></p>
-<h4 id="16-_-_(BOOL)application:_openURL:_options:_中_SourceApplication_为_nil">16. - (BOOL)application: openURL: options: 中 SourceApplication 为 nil</h4><p>在 Xcode 11之前的文档：</p>
-<blockquote>
-<p>// value is an NSString containing the bundle ID of the originating application</p>
-</blockquote>
-<p>在 Xcode 11后变为：</p>
-<blockquote>
-<p>// value is an NSString containing the bundle ID of the originating application; non-nil if the originating application and this application share the same team identifier</p>
-</blockquote>
-<p>官方在线文档：</p>
-<blockquote>
-<p><strong>UIApplicationOpenURLOptionsSourceApplicationKey</strong><br>A key that contains the bundle ID of the app that sent the open-URL request to your app.</p>
-<p>The value of this key is an NSString object containing the bundle ID of the app that made the request. If the request originated from another app belonging to your team, UIKit sets the value of this key to the ID of that app. If the team identifier of the originating app is different than the team identifier of the current app, the value of the key is nil.</p>
-</blockquote>
-<p>在 iOS 13 中，非同一开发者账号（team identifier）的App，在 iOS 13 通过 <code>URL Scheme</code> 打开App里，在代理方法 <code>- (BOOL)application: openURL: options:</code> 中将<code>UIApplicationOpenURLOptionsSourceApplicationKey</code>返回为<code>nil</code>，也就是说，再也拿不到原App的 bundle ID，关于这个大家都说是苹果为了解决隐私问题？</p>
-<p>对于开发者来说，如果有使用到 SourceApplication 字段，只能在 iOS 13以上调整自己的业务逻辑。</p>
-<ul>
-<li><a href="https://forums.developer.apple.com/thread/119054" target="_blank" rel="external">iOS 13 beta 2, openURL, with SourceApplication … |Apple Developer Forums</a></li>
-<li><a href="https://forums.developer.apple.com/thread/119118" target="_blank" rel="external">iOS13 UIApplicationOpenURLOptionsSourceApplicat… |Apple Developer Forums</a></li>
-<li><a href="https://developer.apple.com/documentation/uikit/uiapplicationopenurloptionssourceapplicationkey?language=occ" target="_blank" rel="external">UIApplicationOpenURLOptionsSourceApplicationKey - UIKit | Apple Developer Documentation</a></li>
-</ul>
-<h3 id="总结">总结</h3><p>这些都只是常见和汇总网上大家遇到的情况，还有很多细节上，针对 iOS13 需要大家细调，这些年下来，iOS各系统版本之前的突变很多，当然这样也有好处，比如 WKWebview 支持 iOS 8.0 + , SFSafariViewController 支持 iOS 9.0+，慢慢地，很多更好的 API 大家都可以使用，抛弃旧的接口，兼容新的接口，这样的工作，可预见未来一直会这样，谁叫我们是 API 使用者！努力成为提供 API man 吧！</p>
-<h3 id="参考">参考</h3><ul>
-<li><a href="https://www.jianshu.com/p/3db2b9134c5a" target="_blank" rel="external">iOS13 开发适配 - 简书</a></li>
-<li><a href="https://blog.csdn.net/u012413955/article/details/92198556" target="_blank" rel="external">WWDC2019 —webview iOS13适配</a></li>
-<li><a href="http://jerryliu.org/ios%20programming/iOS13-Sign-With-Apple%E6%96%B0%E7%89%B9%E6%80%A7%E9%80%82%E9%85%8D" target="_blank" rel="external">iOS13 Sign In With Apple适配 – 小瑞的Blog</a></li>
-<li><a href="https://toss156.github.io/2019/06/12/%E9%80%82%E9%85%8D-iOS13/" target="_blank" rel="external">适配 iOS13 | Feng’s Notes</a></li>
-<li><a href="https://www.jianshu.com/p/a0cc0f4e99c7" target="_blank" rel="external">iOS 13 适配 - 简书</a></li>
-<li><a href="https://github.com/ChenYilong/iOS13AdaptationTips" target="_blank" rel="external">ChenYilong/iOS13AdaptationTips: iOS13 AdaptationTips</a></li>
-<li><a href="https://developer.apple.com/videos/play/wwdc2019/258/" target="_blank" rel="external">Architecting Your App for Multiple Windows - WWDC 2019 - Videos - Apple Developer</a></li>
-<li><a href="https://developer.apple.com/videos/play/wwdc2019/214/" target="_blank" rel="external">Implementing Dark Mode on iOS - WWDC 2019 - Videos - Apple Developer</a></li>
-<li><a href="https://stackoverflow.com/questions/57134259/how-to-resolve-keywindow-was-deprecated-in-ios-13-0" target="_blank" rel="external">How to resolve: ‘keyWindow’ was deprecated in iOS 13.0</a></li>
-<li><a href="https://developer.apple.com/sign-in-with-apple/usage-guidelines-for-websites-and-other-platforms/" target="_blank" rel="external">Usage Guidelines for Website and Other Platforms - Sign in with Apple - Apple Developer</a></li>
-<li><a href="https://developer.apple.com/cn/app-store/review/guidelines/" target="_blank" rel="external">App Store 审核指南 - Apple Developer</a></li>
-<li><a href="https://developer.apple.com/cn/news/?id=09122019b" target="_blank" rel="external">有关“通过 Apple 登录”的指南更新 - 新闻 - Apple Developer</a></li>
-<li><a href="https://developer.apple.com/news/?id=12232019b" target="_blank" rel="external">Updating Apps that Use Web Views - News - Apple Developer</a></li>
-<li><a href="https://developer.apple.com/cn/news/?id=0829019a" target="_blank" rel="external">为深色模式做好准备 - 新闻 - Apple Developer</a></li>
-<li><a href="https://forums.developer.apple.com/thread/119054" target="_blank" rel="external">iOS 13 beta 2, openURL, with SourceApplication … |Apple Developer Forums</a></li>
-<li><a href="https://forums.developer.apple.com/thread/119118" target="_blank" rel="external">iOS13 UIApplicationOpenURLOptionsSourceApplicat… |Apple Developer Forums</a></li>
-<li><a href="https://developer.apple.com/documentation/uikit/uiapplicationopenurloptionssourceapplicationkey?language=occ" target="_blank" rel="external">UIApplicationOpenURLOptionsSourceApplicationKey - UIKit | Apple Developer Documentation</a></li>
-</ul>
-<p><br></p>
-<ul>
-<li>如有不正确的地方，欢迎指导！</li>
-<li>如有疑问，欢迎在评论区一起讨论！</li>
-</ul>
-<p><br></p>
-<blockquote>
-<p>注：本文首发于 <a href="https://iHTCboy.com">iHTCboy’s blog</a>，如若转载，请注来源<br><br></p>
-</blockquote>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h3 id="1、前言">1、前言</h3><p>针对 iOS 13，苹果做了非常大的调整，其中 Dark 模式是最新的 UI 层面可见的改变，而针对iPad推出了 <code>iPadOS</code>，导致了与 iOS 的分化，同时为了 iPad 而不得不对 iOS 同样做出的改变，比如一个应用支持多 window 显示。所以，每年 WWDC 后，因为每个应用的情况不一样，使用的API各不相同，导致适配的工作无法一致，大家遇到的坑不相同，所以，把大家遇到的问题都汇总起来，那就是一定有作用，这就是本文的初心。</p>]]>
-    
-    </summary>
-    
-      <category term="iOS" scheme="https://iHTCboy.com/tags/iOS/"/>
-    
-      <category term="iOS13" scheme="https://iHTCboy.com/tags/iOS13/"/>
-    
-      <category term="适配" scheme="https://iHTCboy.com/tags/%E9%80%82%E9%85%8D/"/>
     
       <category term="technology" scheme="https://iHTCboy.com/categories/technology/"/>
     
