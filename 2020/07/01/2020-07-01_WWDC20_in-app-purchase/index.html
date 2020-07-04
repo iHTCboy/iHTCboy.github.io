@@ -31,7 +31,7 @@
 <meta property="og:image" content="https://user-gold-cdn.xitu.io/2020/7/1/1730afc522b43542?w=1206&h=658&f=png&s=139148">
 <meta property="og:image" content="https://user-gold-cdn.xitu.io/2020/7/1/1730afc803545a1e?w=1728&h=985&f=png&s=314533">
 <meta property="og:image" content="https://user-gold-cdn.xitu.io/2020/7/1/1730afcf4ede2391?w=571&h=897&f=png&s=183187">
-<meta property="og:updated_time" content="2020-07-02T15:27:26.598Z">
+<meta property="og:updated_time" content="2020-07-04T03:38:26.818Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS Handle Refunds 处理退款 --- WWDC20（Session 10661）">
 <meta name="twitter:description" content="1、前言今年 WWDC 2020 苹果全球开发者大会，苹果宣布所有的内购品项类型，当用户退款成功时，开发者都能收到退款通知！！！退款通知！！！退款通知！！！
@@ -348,8 +348,8 @@ var _hmt = _hmt || [];
 </thead>
 <tbody>
 <tr>
-<td>bid</td>
-<td>应用包名 bundle id</td>
+<td>original_transaction_id</td>
+<td>苹果订单的唯一标识 transaction_id</td>
 </tr>
 <tr>
 <td>cancellation_data_ms</td>
@@ -360,8 +360,8 @@ var _hmt = _hmt || [];
 <td>用户退款的原因。（0或1，含义未知）</td>
 </tr>
 <tr>
-<td>original_transaction_id</td>
-<td>苹果订单的唯一标识 transaction_id</td>
+<td>bid</td>
+<td>应用包名 bundle id</td>
 </tr>
 <tr>
 <td>product_id</td>
@@ -375,7 +375,7 @@ var _hmt = _hmt || [];
 <li><a href="https://developer.apple.com/documentation/appstoreservernotifications/unified_receipt" target="_blank" rel="external">unified_receipt | Apple Developer Documentation</a></li>
 <li><a href="https://developer.apple.com/documentation/appstorereceipts/responsebody/latest_receipt_info" target="_blank" rel="external">responseBody.Latest_receipt_info | Apple Developer Documentation</a></li>
 </ul>
-<h4 id="2-5_退款通知的响应">2.5 退款通知的响应</h4><p>您的服务器应发送HTTP状态代码，以指示服务器到服务器的通知发布是否成功：</p>
+<h4 id="2-5_退款通知的响应">2.5 退款通知的响应</h4><p>您的服务器应发送HTTP状态代码，以指示服务器到服务器的通知接收是否成功：</p>
 <ul>
 <li>如果回调接收成功，则发送 HTTP <code>200</code>。您的服务器不需要返回数据。</li>
 <li>如果回调接收不成功，请发送 HTTP <code>50x</code> 或 <code>40x</code> 让 App Store 重试该通知。App Store在一段时间内尝试重试该通知，但在连续失败尝试后最终停止(<code>3次</code>）。</li>
@@ -383,7 +383,7 @@ var _hmt = _hmt || [];
 <p>注意事项：</p>
 <ul>
 <li>当您使用包含退款交易的收据 <code>transaction_data</code> 向苹果服务器校验 <a href="https://developer.apple.com/documentation/appstorereceipts/verifyreceipt" target="_blank" rel="external">verifyReceipt</a>  时，JSON响应中不存在退款交易，自动续订订阅除外。</li>
-<li>收到 <code>REFUND</code> 通知时，您有责任为每笔退款交易存储，监控并采取适当的措施。（因为苹果只通知一次，暂时无法在苹果后台查询退款的订单。）</li>
+<li>收到 <code>REFUND</code> 通知时，您有责任为每笔退款交易存储，监控并采取适当的措施。（因为苹果只通知一次，暂时无法在苹果后台查询退款的订单。也不能由开发者主动去苹果服务器查询。）</li>
 </ul>
 <h4 id="2-6_自动续订订阅通知">2.6 自动续订订阅通知</h4><p>这个取消通知之前就一直有，所以这里不重复了，需要的自行搜索。</p>
 <p>自动续订订阅的相关文档：</p>
@@ -394,19 +394,19 @@ var _hmt = _hmt || [];
 </ul>
 <h3 id="疑问解答">疑问解答</h3><p>1、 苹果后台能否查看到退款的订单详情？</p>
 <blockquote>
-<p>答：暂无。（估计明年 WWDC2021 时会有啦？）</p>
+<p>答：暂无。（估计明年 WWDC2021 会有啦？）</p>
 </blockquote>
 <p>2、 消耗型、非消耗型、非续期订阅能不能在沙盒环境测试退款？</p>
 <blockquote>
 <p>答：暂时不能。（估计未来会有？等更新吧….）</p>
 </blockquote>
 <h3 id="总结">总结</h3><p>大概就是这样，其实退款的流程并不复杂，很简单，但是为什么苹果用了那么多年才做出来呢？</p>
-<p>要知道这个原因，还是要回复一下历史~</p>
-<h4 id="退款的方式">退款的方式</h4><p>用户可以通过什么方式申请退款：</p>
+<p>要知道这个原因，还是要回顾一下历史~</p>
+<h4 id="退款的方式">退款的方式</h4><p>用户可以通过那些方式申请退款：</p>
 <ul>
 <li>联系Apple客户支持并要求退款</li>
 <li>登录并使用Apple的自助服务工具 <a href="https://reportaproblem.apple.com/" target="_blank" rel="external">reportaproblem.apple.com</a> 要求退款</li>
-<li>要求他们的付款方式发行人退款（比如要求银行取消扣费，或者黑卡无法扣费等）</li>
+<li>要求他们的付款方式发行人退款 <em>（比如要求银行取消扣费，或者黑卡无法扣费等）</em></li>
 </ul>
 <p>详细：<a href="https://support.apple.com/zh-cn/HT204084" target="_blank" rel="external">针对从 Apple 购买的 App 或内容申请退款 - Apple 支持</a></p>
 <h4 id="退款的政策">退款的政策</h4><p>针对退款，不同国家或地区会有不同的“无条件退款期限”。</p>
@@ -438,13 +438,13 @@ var _hmt = _hmt || [];
 <p><img src="https://user-gold-cdn.xitu.io/2020/7/1/1730afc803545a1e?w=1728&amp;h=985&amp;f=png&amp;s=314533" alt=""></p>
 <p>苹果旨在为客户和开发人员提供更好的体验，所以建议操作要慎重考虑。</p>
 <h4 id="对退款用户的处理">对退款用户的处理</h4><p><img src="https://user-gold-cdn.xitu.io/2020/7/1/1730afcf4ede2391?w=571&amp;h=897&amp;f=png&amp;s=183187" alt=""></p>
-<p>苹果给了一个示例，用户退款成功后，在 App 中给用户提示退款的时间和说明，可以重新购买，或者联系客户！</p>
+<p>苹果给了一个示例，用户退款成功后，<strong>在 App 中给用户提示退款的时间和说明，可以重新购买，或者联系客服！</strong></p>
 <p>也许帮助需要帮助的用户，为他们解决为什么退款的原因，才能减少真正的退款用户，用户觉得值！那么退款数自然会减少~</p>
-<p>所以，苹果当初为什么不愿意提供退款的接口？其实是一直想保护用户的隐私，但是当“退款”滥用时，不得不这样提供了退款通知接口。</p>
+<p>所以，苹果当初为什么不愿意提供退款的接口？其实是一直想保护用户的隐私（退款自由），但是当“退款”滥用时，不得不这样提供了退款通知接口。</p>
 <p>这正是我们所看到的，苹果想的，你怎么想！怎么做！想好在决定~</p>
 <p><br><br><br></p>
 <blockquote>
-<p>ps：题外话，大家一直觉得苹果的应用内购买做的很“烂”，是因为大家不太了解，苹果的这套支付系统有多复杂。可以打开这个链接看看不同国家或地区的付款方式，要在一个应用里集成这个付款方式，不是一个支付宝或微信能想象到的。了解了才知道，唯有多学习：<a href="https://support.apple.com/zh-cn/HT202631" target="_blank" rel="external">可与 Apple ID 搭配使用的付款方式 - Apple 支持</a></p>
+<p>ps：题外话，大家一直觉得苹果的应用内购买做的很“烂”，是因为大家不太了解，苹果的这套支付系统有多复杂。可以打开下面的链接看看不同国家或地区的付款方式，要在一个应用里集成这些付款方式，不是一个支付宝或微信能想象到的。了解了才知道，唯有多学习：<a href="https://support.apple.com/zh-cn/HT202631" target="_blank" rel="external">可与 Apple ID 搭配使用的付款方式 - Apple 支持</a></p>
 </blockquote>
 <h3 id="参考">参考</h3><ul>
 <li><a href="https://developer.apple.com/cn/news/?id=tv3bhra6" target="_blank" rel="external">针对 App 内购买项目的退款通知现已可用 - 新闻 - Apple Developer</a></li>
