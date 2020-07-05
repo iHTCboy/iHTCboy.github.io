@@ -259,19 +259,33 @@
     <link href="https://iHTCboy.com/2020/06/11/2020-06-11_%E8%B7%A8%E5%B9%B3%E5%8F%B0%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF/"/>
     <id>https://iHTCboy.com/2020/06/11/2020-06-11_跨平台那些事儿/</id>
     <published>2020-06-11T11:00:00.000Z</published>
-    <updated>2020-07-05T03:38:58.885Z</updated>
+    <updated>2020-07-05T07:32:26.952Z</updated>
     <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>最近跟部门同学一起分享了跨平台的事儿，写了将近200+页ppt，最后只讲了100+页，只把其中重点的内容讲了，但是，我认为对跨平台的学习，不止是重点的技术内容，还有很多值得探索的问题，比如历史背景，历史发展，那些事儿，那些人儿，往往不经意间，改变历史的技术，就在那一瞬时，，固守自封的必须会被淘汰，把握了机遇就有新出路，没有看准方向的会浪费大量的时间。当然，从历史脉络来看跨平台，必须千人千面，能有共鸣之处就好。</p>
 <blockquote>
 <p>下面会有将近200+图片，后续有时间，会针对每张ppt添加对应的讲解。</p>
 </blockquote>
 <a id="more"></a>
-<h3 id="2、PPT">2、PPT</h3><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/IT/2020-cross-platform/cross-platform-001.jpeg" alt="cross-platform-001.jpg"></p>
-<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/IT/2020-cross-platform/cross-platform-002.jpeg" alt="cross-platform-002.jpg"></p>
-<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/IT/2020-cross-platform/cross-platform-003.jpeg" alt="cross-platform-003.jpg"></p>
-<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/IT/2020-cross-platform/cross-platform-004.jpeg" alt="cross-platform-004.jpg"></p>
-<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/IT/2020-cross-platform/cross-platform-005.jpeg" alt="cross-platform-005.jpg"></p>
-<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/IT/2020-cross-platform/cross-platform-006.jpeg" alt="cross-platform-006.jpg"></p>
-<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/IT/2020-cross-platform/cross-platform-007.jpeg" alt="cross-platform-007.jpg"></p>
+<h3 id="2、PPT">2、PPT</h3><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/IT/2020-cross-platform/cross-platform-001.jpeg" alt="cross-platform-001.jpg"><br>《当我们在谈论跨平台的时候 ——— 我们在说什么》，最后用这个标题来起跨平台，当我们在谈论xxx的时候，我们到底想说什么？这正是本课程想要探索的世界。</p>
+<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/IT/2020-cross-platform/cross-platform-002.jpeg" alt="cross-platform-002.jpg"><br>开始时，本课程也是想立于当下，我们一起跨过的平台，Hybrid App、React Native、Flutter、小程序等，我们熟悉的跨过的平台。（2015~2020年）</p>
+<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/IT/2020-cross-platform/cross-platform-003.jpeg" alt="cross-platform-003.jpg"><br>也想到说用“跨平台那些事儿”作为题目，把跨平台的内容再扩充一下，从大局来了解。</p>
+<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/IT/2020-cross-platform/cross-platform-004.jpeg" alt="cross-platform-004.jpg"><br>“我曾经跨过山和大海” 歌词来自朴树的《平凡之路》，每次说到“跨平台”，我们在说什么：</p>
+<ul>
+<li>跨平台，你想到了什么？</li>
+<li>列出一些跨平台的词语</li>
+<li>千丝万缕（联系）？天壤之别（差异）？</li>
+<li><p>来龙去脉，抽丝剥茧</p>
+</li>
+<li><p>顺其自然，看发展（好坏，优劣，高低……）</p>
+</li>
+<li>暮然回首，看起因（抓名词，找对象，全关系）</li>
+</ul>
+<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/IT/2020-cross-platform/cross-platform-005.jpeg" alt="cross-platform-005.jpg"><br>Java 的口号是：“一次编写，到处运行”（Write once, run anywhere），那么它是怎么实现到处运行呢？怎么跨平台呢？</p>
+<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/IT/2020-cross-platform/cross-platform-006.jpeg" alt="cross-platform-006.jpg"><br>不同音乐App，大家觉得这些是平台吗，应该怎么跨呢？</p>
+<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/IT/2020-cross-platform/cross-platform-007.jpeg" alt="cross-platform-007.jpg"><br>从维基百科看到跨平台的解释：</p>
+<blockquote>
+<p>泛指<strong>编程语言</strong>、<strong>软件</strong>或<strong>硬件设备</strong>可以在多种<strong>操作系统</strong>或不同<strong>硬件架构</strong>的<strong>电脑</strong>上运作。</p>
+</blockquote>
+<p>那么，跨平台就是电脑吗？为什么是电脑？手机呢？手机是电脑吗？</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/IT/2020-cross-platform/cross-platform-008.jpeg" alt="cross-platform-008.jpg"></p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/IT/2020-cross-platform/cross-platform-009.jpeg" alt="cross-platform-009.jpg"></p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/IT/2020-cross-platform/cross-platform-010.jpeg" alt="cross-platform-010.jpg"></p>
