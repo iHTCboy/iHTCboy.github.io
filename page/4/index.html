@@ -216,6 +216,114 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-2019-03-13_shell技巧6-iOS最大构建版本文件大小" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/03/13/2019-03-13_shell技巧6-iOS最大构建版本文件大小/">shell技巧6 - iOS最大构建版本文件大小</a>
+    </h1>
+  
+
+        
+        <a href="/2019/03/13/2019-03-13_shell技巧6-iOS最大构建版本文件大小/" class="archive-article-date">
+  	<time datetime="2019-03-13T13:20:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1、前言">1、前言</h3><p>在上传提交ipa文件成功后，发现AppStoreConnect后台一直不显示构建版本，最后邮箱收到：</p>
+<blockquote>
+<p>App Store Connect</p>
+<p>Dear Developer,</p>
+<p>We identified one or more issues with a recent delivery for your app, “XXX”. Please correct the following issues, then upload again.<br>Invalid Executable Size - The size of your app’s executable file ‘XXX.app/XXX’ is 90374144 bytes, which exceeds the maximum allowed size of 80 MB.<br>Best regards,<br>The App Store Team</p>
+</blockquote>
+        
+          <a class="article-more-a" href="/2019/03/13/2019-03-13_shell技巧6-iOS最大构建版本文件大小/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Architecture</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">__TEXT</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">bash</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">iOS</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">shell</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/induction//" class="article-tag-list-link color5">induction</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/03/13/2019-03-13_shell技巧6-iOS最大构建版本文件大小/">显示全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-2019-03-03_《商业模式新生代（个人篇）》读书笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1140,113 +1248,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-2018-09-15_shell技巧3_自动生成AppIcon" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/15/2018-09-15_shell技巧3_自动生成AppIcon/">shell技巧3 - 自动生成AppIcon</a>
-    </h1>
-  
-
-        
-        <a href="/2018/09/15/2018-09-15_shell技巧3_自动生成AppIcon/" class="archive-article-date">
-  	<time datetime="2018-09-15T08:20:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1、前言">1、前言</h3><p>上一篇讲到 <a href="https://ihtcboy.com/2018/09/14/2018-09-14_shell技巧2_图片旋转缩放等/">shell技巧2 - 图片旋转缩放转换格式等</a>，而平时iOS开发中，Xcode中<code>Assets.xcassets</code>的<code>AppIcon</code> 需要设计师或开发者自行放置对应尺寸的图标，虽然我经常使用macOS下的 <code>Prepo</code> 应用生成多尺寸的图标，但是依然需要一张一张的放置到Xcode中，并且步骤非常不智能化，部分图标需要人工对应位置放置。如果通过使用 <code>sips</code> 命令，其实可以自动生成对应尺寸的图片，就可以灵活和自动化的批量生成AppIcon的全部图标，绝对的方便和效率！说到就马上实践吧！</p>
-        
-          <a class="article-more-a" href="/2018/09/15/2018-09-15_shell技巧3_自动生成AppIcon/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Assets</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">appicon</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">bash</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">shell</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">sips</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">xcassets</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/induction//" class="article-tag-list-link color5">induction</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/09/15/2018-09-15_shell技巧3_自动生成AppIcon/">显示全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/3/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/49/">49</a><a class="extend next" rel="next" href="/page/5/">Next &raquo;</a>
@@ -1370,6 +1371,22 @@ MathJax.Hub.Queue(function() {
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">产品</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">商业模式</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">盈利模式</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">地摊经济</a>
+              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">WWDC</a>

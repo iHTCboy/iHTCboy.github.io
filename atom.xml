@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Learn something of everything,  Learn everything of something.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="https://iHTCboy.com/"/>
-  <updated>2020-07-04T15:00:22.341Z</updated>
+  <updated>2020-07-05T14:07:40.176Z</updated>
   <id>https://iHTCboy.com/</id>
   
   <author>
@@ -13,6 +13,94 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[商业模式和盈利模式的思考]]></title>
+    <link href="https://iHTCboy.com/2020/07/05/2020-07-05_%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F%E5%92%8C%E7%9B%88%E5%88%A9%E6%A8%A1%E5%BC%8F%E7%9A%84%E6%80%9D%E8%80%83/"/>
+    <id>https://iHTCboy.com/2020/07/05/2020-07-05_商业模式和盈利模式的思考/</id>
+    <published>2020-07-05T04:09:16.000Z</published>
+    <updated>2020-07-05T14:07:40.176Z</updated>
+    <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>增长？变现？数据？产品？</p>
+<p>你的商业模式是什么？盈利模式是什么？你们有产品有盈利吗？</p>
+<p>听过风口、闭环、流量入口、增长黑客、私域流量？</p>
+<a id="more"></a>
+<h3 id="2、探索">2、探索</h3><p>产品是不是诞生之初就考虑盈利模式？</p>
+<ul>
+<li><strong>CAC</strong> ：用户获取成本 <code>Customer Acquisition Cost</code> 的缩写；</li>
+<li><strong>LTV</strong> ：用户终生价值 <code>Life Time Value</code> 的缩写；</li>
+<li><strong>PBP</strong> ：投资回收期 <code>Payback Period</code> 的缩写；</li>
+<li><strong>BEP</strong>：盈亏平衡点 <code>Break Even Point</code> 的缩写。</li>
+</ul>
+<p> 商业模式和盈利模式：</p>
+<ul>
+<li>产品收费</li>
+<li>产品免费  <em>（广告或数据变现？）</em></li>
+</ul>
+<p>互联网产品想要盈利，流量是关键，很多公司的产品都是先有了流量慢慢探索商业模式。但是，能不能“慢慢”的熬下来，就不一定的。</p>
+<p>比如微信读书，2015年推出，到2020年，依旧靠推出各式活动，其中2018年推出的免费无限卡，可以看成当年360宣布杀毒软件免费使用一样！基本上可以薅羊毛，而且没有难度，如今免费无限卡到2025年啦。大家知道电子书行业发展到如今，微信读书依靠腾讯自身，坚持到现在，微信读书最近也抓紧了付费无限卡，还有应用内广告或信息流投放等，未来的商业模式将怎么发展？<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/07/05_WeRead.png" alt="WeRead.png"></p>
+<p>另外一个，<strong>京东 Plus 会员</strong>，在诞生之前，最重要的是<strong>免邮费</strong>，钻石、企业会员最早全场可无限额免费运费，金牌会员及以下级别订单满39元即可免运费。2014年2月27日起，注册会员、铜牌会员、银牌会员、金牌会员购买自营商品满59元免运费，钻石会员、企业会员购买自营商品满39元免运费。2015年4月2日起，分别调整为79元和59元。而推送了 <strong>京东 Plus 会员</strong> 后，都是99元起不收取基础运费。而 Plus 会员每月可得到 5 张免运费券，如今是改为 5 张价值 ￥6 运费券。同时，京东在推广 Plus 会员时，采用了多种方式推送，其中 99 元一年，或者与爱奇艺、腾讯视频、知乎等推出联合会员。如今也基本饱和，并且由于会员人数增多，所谓的会员福利并没有看到太多大优势。未来，京东会员还能怎么发展？另外，京东的当天或次日达的优势渐渐的被打破，未来又怎么应对？<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/07/05_JD-Plus.png" alt="JD-Plus.png"></p>
+<p>而在视频类App中，爱奇艺和腾讯视频也经常在618，双11等搞半价年费会员，刚开始大家觉得很便宜，有经历看电影和电视剧的朋友就会购买多年了。目前，视频类和音乐类，因为版本问题，依然是竞争最激烈的行业，没有像打车、团结、外卖这样合并做大的可能呢？<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/07/05_iQiyi-Vip.png" alt="iQiyi-Vip.png"></p>
+<p>另外，视频类App 去年开始推送<strong>超前点播</strong>，激起了网友的吐槽，现在依然无人治理。同时，如今网上的盗版获取成本非常低，我认为部分VIP会员会有部分人放弃超前点播，选择不付费，未来如果盗版成本还是很低，那么付费的会员流失只会更多。对于用户来说，每一部综艺节目或电视剧，可能要在不同的平台开会员，这是选择盗版的最大的挑战，未来应该如何应对？<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/07/05_iQiyi-Super_Vip.png" alt="iQiyi-Super_Vip.png"></p>
+<p>完整的商业模式包括九大模块：</p>
+<ul>
+<li>1.客户细分</li>
+<li>2.价值主张</li>
+<li>3.渠道通路</li>
+<li>4.客户关系</li>
+<li>5.收入来源</li>
+<li>6.核心资源</li>
+<li>7.关键业务</li>
+<li>8.重要合作</li>
+<li>9.成本结构</li>
+</ul>
+<p>具体，也可以参考博主之前的读书笔记：</p>
+<ul>
+<li><a href="https://ihtcboy.com/2019/03/03/2019-03-03_%E3%80%8A%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F%E6%96%B0%E7%94%9F%E4%BB%A3%EF%BC%88%E4%B8%AA%E4%BA%BA%E7%AF%87%EF%BC%89%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">《商业模式新生代（个人篇）》读书笔记 | iHTCboy’s blog</a></li>
+<li><a href="https://ihtcboy.com/2019/02/27/2019-02-27_%E3%80%8A%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F%E6%96%B0%E7%94%9F%E4%BB%A3%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">《商业模式新生代》读书笔记 | iHTCboy’s blog</a></li>
+</ul>
+<h3 id="3、总结">3、总结</h3><p>没有创过业的人，可能看到移动互联网的现在巨头产品，觉得产品好，然后就会有足够多用户，最后就可以赚钱！这是很 naive 的想法~</p>
+<p>比如，最近<strong>地摊经济</strong>很火，你进货后就去摆摊吗？</p>
+<p>如果思考一下，会有2种选择：</p>
+<ul>
+<li>先计算好能赚多少钱，进货去摆摊？</li>
+<li>先进货，看能卖多少在再计算能赚多少钱？</li>
+</ul>
+<p>回到前面提的问题，产品是不是诞生之初就考虑盈利模式？显示是必须的！盈利当做和产品一样重要！</p>
+<p>因为创业就是要先活下来，然后才能持久战。</p>
+<p>所以，想要成功，<strong>即要为用户创造价值，为企业产生足够的利润，最后，如果可以也推动社会进步！</strong></p>
+<h3 id="参考">参考</h3><ul>
+<li><a href="http://www.woshipm.com/operate/1059026.html" target="_blank" rel="external">互联网盈利，有什么商业模式？ | 人人都是产品经理</a></li>
+</ul>
+<p><br></p>
+<ul>
+<li>如有侵权，联系必删！</li>
+<li>如有不正确的地方，欢迎指导！</li>
+<li>如有疑问，欢迎在评论区一起讨论！</li>
+</ul>
+<p><br></p>
+<blockquote>
+<p>注：本文首发于 <a href="https://iHTCboy.com">iHTCboy’s blog</a>，如若转载，请注来源。</p>
+</blockquote>
+<p><br></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h3 id="1、前言">1、前言</h3><p>增长？变现？数据？产品？</p>
+<p>你的商业模式是什么？盈利模式是什么？你们有产品有盈利吗？</p>
+<p>听过风口、闭环、流量入口、增长黑客、私域流量？</p>]]>
+    
+    </summary>
+    
+      <category term="产品" scheme="https://iHTCboy.com/tags/%E4%BA%A7%E5%93%81/"/>
+    
+      <category term="商业模式" scheme="https://iHTCboy.com/tags/%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F/"/>
+    
+      <category term="地摊经济" scheme="https://iHTCboy.com/tags/%E5%9C%B0%E6%91%8A%E7%BB%8F%E6%B5%8E/"/>
+    
+      <category term="盈利模式" scheme="https://iHTCboy.com/tags/%E7%9B%88%E5%88%A9%E6%A8%A1%E5%BC%8F/"/>
+    
+      <category term="life" scheme="https://iHTCboy.com/categories/life/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[iOS Handle Refunds 处理退款 --- WWDC20（Session 10661）]]></title>
@@ -8260,246 +8348,6 @@ DOM 架构方案在文本编辑与图形渲染操作方面的优缺点
       <category term="macOS" scheme="https://iHTCboy.com/tags/macOS/"/>
     
       <category term="随航" scheme="https://iHTCboy.com/tags/%E9%9A%8F%E8%88%AA/"/>
-    
-      <category term="technology" scheme="https://iHTCboy.com/categories/technology/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Sign in with Apple 登录详解]]></title>
-    <link href="https://iHTCboy.com/2019/09/16/2019-09-16_Sign-in-with-Apple/"/>
-    <id>https://iHTCboy.com/2019/09/16/2019-09-16_Sign-in-with-Apple/</id>
-    <published>2019-09-16T14:49:16.000Z</published>
-    <updated>2020-02-21T06:21:57.652Z</updated>
-    <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>iOS 13 最大的亮点是 <code>Dark</code> 模式，另一个就是苹果登录（<code>Sign in with Apple</code>）方式的增加，让苹果生态又多了一层体验，苹果的生态建设越来越好，让iOS开发者成为 Apple 全栈开发的可能性更接近，对于开发者来说，用好 API ，然后看到苹果这些年对生态的建设，还是有很多想象力！</p>
-<a id="more"></a>
-<h3 id="2、Sign_in_with_Apple">2、Sign in with Apple</h3><h4 id="是什么">是什么</h4><blockquote>
-<p>“通过 Apple 登录”让用户能用自己的 Apple ID 轻松登录您的 app 和网站。用户不必填写表单、验证电子邮件地址和选择新密码，就可以使用“通过 Apple 登录”设置帐户并立即开始使用您的 app。所有帐户都通过双重认证受到保护，具有极高的安全性，Apple 亦不会跟踪用户在您的 app 或网站中的活动。</p>
-</blockquote>
-<p>新用户首次使用苹果登录授权时，开发者可以要求获得账号名（可要求用户提供什么样的信息，用户名、或邮箱），而对用户来说，用户名可以随便填写，而邮箱可以使用 Apple ID 对应的真实邮箱，或者生成随时的关联苹果账号和此App对应的私密邮箱。（注：此私密邮箱不到直接发送邮件，需要开发者在后台获取密钥通过苹果接口来发送。）</p>
-<p>详细见官方文档：<a href="https://developer.apple.com/cn/sign-in-with-apple/" target="_blank" rel="external">通过 Apple 登录 - Apple Developer</a></p>
-<h4 id="为什么">为什么</h4><p>对于专门使用第三方或社交登录服务（如 Facebook、谷歌、 Twitter、Linkedln或亚马逊等）在应用中设置或验证用户主要帐户的应用而言，必须向用户提供“以苹果账号登录”服务的选项。<br>如果满足以下条件，则不需要使用“以苹果账号登录”功能（以下4种情况可以不用苹果登录方式）：</p>
-<ol>
-<li>应用仅使用开发者公司自己的账号设置和登录系统；</li>
-<li>应用归类为教育、企业或商业应用，要求用户使用现有的教育或企业账号登录；</li>
-<li>应用使用政府或行业支持的公民身份识别系统或电子D对用户进行身份验证；</li>
-<li>应用是特定第三方服务的客户端，用户需要直接登录其电子邮件、社交媒体或其他第三方账号才能访问内容。</li>
-</ol>
-<p>凡是新提交到 App Store 的应用必须遵循上述“以苹果账号登录”指导原则，现有应用则必须在2020年4月之前跟进。</p>
-<p>详见审核条款：<a href="https://developer.apple.com/app-store/review/guidelines/#sign-in-with-apple" target="_blank" rel="external">App Store Review Guidelines - Apple Developer</a></p>
-<h4 id="做什么">做什么</h4><ul>
-<li>登录按钮<br>登录按钮可以使用苹果推荐的按钮<code>ASAuthorizationAppleIDButton</code>。</li>
-</ul>
-<p>注意：</p>
-<ul>
-<li>内置的登录按钮需要放在显眼的位置，没有强调一定要放在首位，但是提出不能让用户滚动后才看到这一个按钮。</li>
-<li>内置的登录按钮的大小和圆角是可以自行调整的，但是大小有最大和最小的限制。</li>
-<li>没有强调一定要使用内置的登陆按钮，但是在设计指南上指出最好使用样式相近的设计。</li>
-<li>使用苹果提供的按钮，这样就不用默认的图片。苹果会根据语言环境切换文字。</li>
-</ul>
-<p>苹果登录按钮有所要求, 详细见 <a href="https://developer.apple.com/design/human-interface-guidelines/sign-in-with-apple/overview/" target="_blank" rel="external">Sign In with Apple - Sign In with Apple - Human Interface Guidelines - Apple Developer</a></p>
-<ul>
-<li>开发证书<br>主要是证书生成里需要选择苹果登录相关权限</li>
-</ul>
-<ol>
-<li>创建 App ID 时，勾选 Sign In with Apple<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/09/Sign-in-with-Apple-01.png" alt="Sign-in-with-Apple-01.png"></li>
-</ol>
-<p>详细注意事件：<br>1、创建 Apple ID时，描述内容的 Description 会显示在用户的授权过苹果登录的应用名里，所以App应用名有变动时，记得更新此描述，不然在用户手机端显示就很对不上，或者填写了随意文本内容，会影响用户端显示的名字不友好。因为使用过苹果登录后，在设置时查看 <strong>使用 Apple ID</strong> 的 App 时，名字就是上面的 <strong>description</strong>。</p>
-<p><strong>以下为针对 <code>服务端验证</code> 和 <code>web 端授权登录</code> 的操作。</strong></p>
-<ol>
-<li><p>创建 <strong>Services ID</strong>（当服务器端调用 API 来验证用户身份时，这个值也将充当 <code>cliend_id</code>。）：<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/09/Sign-in-with-Apple-02.png" alt="Sign-in-with-Apple-02.png"><br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/09/Sign-in-with-Apple-03.png" alt="Sign-in-with-Apple-03.png"></p>
-<p>单击 “Sign In with Apple” 旁边的 <code>Configure</code> 按钮，将显示一个 Web <strong>Authentication Configuration</strong> 面板:<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/09/Sign-in-with-Apple-04.png" alt="Sign-in-with-Apple-04.png"></p>
-</li>
-<li><p>创建一个密钥，用于获取我们的 <code>client_secret</code>，这也是从 Apple 发出令牌请求所必需的。<br>进入 <strong>Certificates, Identifiers &amp; Profiles</strong> &gt; <strong>Keys</strong>，然后单击 <strong>Keys</strong> 旁边左上角的 + 号:<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/09/Sign-in-with-Apple-05.png" alt="Sign-in-with-Apple-05.png"></p>
-</li>
-</ol>
-<p>单击 <code>Configure</code> 出现的 <strong>Configure Key</strong> 面板中，选择我们之前在 <strong>Choose a Primary App ID</strong> 下使用的 App ID，然后单击保存 <code>Save</code> ：<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/09/Sign-in-with-Apple-06.png" alt="Sign-in-with-Apple-06.png"></p>
-<p>单击 <code>Continue</code>，然后在下一页中验证详细信息并单击 <code>Register</code> ：<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/09/Sign-in-with-Apple-07.png" alt="Sign-in-with-Apple-07.png"></p>
-<p>点击 <code>Download</code> 下载密钥并将其保存在安全的地方，因为您永远无法再次下载密钥。下载密钥后单击 <code>Done</code> :<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/09/Sign-in-with-Apple-08.png" alt="Sign-in-with-Apple-08.png"></p>
-<p>参考文档：</p>
-<ul>
-<li><a href="https://help.apple.com/developer-account/?lang=en#/devde676e696" target="_blank" rel="external">About Sign In with Apple - Developer Account Help</a></li>
-<li><a href="https://juejin.im/post/5d43bd55e51d4561b84c00c8" target="_blank" rel="external">快速配置 Sign In with Apple - 掘金</a></li>
-<li><a href="https://developer.okta.com/blog/2019/06/04/what-the-heck-is-sign-in-with-apple" target="_blank" rel="external">What the Heck is Sign In with Apple? | Okta Developer</a></li>
-</ul>
-<h4 id="服务端验证">服务端验证</h4><p>与服务器请求验证数据的流程图：<br><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/09/Sign-in-with-Apple-09.png" alt="Sign-in-with-Apple-09.png"></p>
-<p>苹果登录接口返回的参数：</p>
-<p>客户端至少要把苹果接口返回的<code>identityToken</code>, <code>authorizationCode</code>, <code>userID</code>这三个参数传给服务器，用于验证本次登录的有效性。</p>
-<p>全部参数说明：</p>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>User ID</td>
-<td>苹果用户唯一标识符，它在同一个开发者账号下的所有 App 下是一样的，我们可以用它来与后台的账号体系绑定起来（类似于微信的OpenID）。</td>
-</tr>
-<tr>
-<td></td>
-</tr>
-<tr>
-<td>identityToken、authorizationCode</td>
-<td>用于传给开发者后台服务器，然后开发者服务器再向苹果的身份验证服务端验证，本次授权登录请求数据的有效性和真实性。其中 identityToken 是一个经过签名的 <a href="https://link.juejin.im/?target=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FJSON_Web_Token" target="_blank" rel="external">JSON Web Token(JWT)</a>，详见 <a href="https://developer.apple.com/documentation/signinwithapplerestapi" target="_blank" rel="external">Sign In with Apple REST API</a></td>
-</tr>
-<tr>
-<td>fullName（givenName、familyName）, verified email</td>
-<td>苹果用户信息，包括全名、邮箱等，注意：如果玩家登录时拒绝提供真实的邮箱账号，苹果会生成虚拟的邮箱账号（固定后缀 @privaterelay.appleid.com）</td>
-</tr>
-<tr>
-<td>realUserStatus</td>
-<td>用于判断当前登录的苹果账号是否是一个真实用户，取值有：unsupported（0）、unknown（1）、likelyReal（2）</td>
-</tr>
-</tbody>
-</table>
-<p>注意：<br>获取的邮箱如果是苹果虚拟邮箱，不能直接发送邮件，需要通过苹果中转服务发送，详细见文档 <a href="https://developer.apple.com/documentation/signinwithapplejs/communicating_using_the_private_email_relay_service" target="_blank" rel="external">Communicating Using the Private Email Relay Service</a></p>
-<ul>
-<li>与苹果API验证userIdentifier</li>
-</ul>
-<p>关于验证的这一步，需要SDK传递授权码给自己的服务端，服务端调用苹果API去校验授权码 <a href="https://developer.apple.com/documentation/signinwithapplerestapi/generate_and_validate_tokens" target="_blank" rel="external">Generate and validate tokens</a>。如果验证成功，可以根据userIdentifier判断账号是否已存在，若存在，则返回自己账号系统的登录态，若不存在，则创建一个新的账号，并返回对应的登录状态给App。</p>
-<p>针对后端验证苹果提供了两种验证方式：</p>
-<ul>
-<li>一种是 <code>基于JWT的算法验证</code></li>
-<li>一种是 <code>基于授权码的验证</code></li>
-</ul>
-<p>1、基于JWT的算法验证</p>
-<p>针对identityToken后端验证<br>详细见 <a href="https://blog.csdn.net/wpf199402076118/article/details/99677412" target="_blank" rel="external">苹果授权登陆后端验证</a></p>
-<p>一个苹果登录的<code>identityToken</code>的JWT示例：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">eyJraWQiOiJBSURPUEsxIiwiYWxnIjoiUlMyNTYifQ.eyJpc3MiOiJodHRwczovL2FwcGxlaWQuYXBwbGUuY29tIiwiYXVkIjoiY29tLmZ1bi5BcHBsZUxvZ2luIiwiZXhwIjoxNTY4NzIxNzY5LCJpYXQiOjE1Njg3MjExNjksInN1YiI6IjAwMDU4MC4wODdjNTU0ZGNlMzU0NjZmYTg1YzVhNWQ1OTRkNTI4YS4wODAxIiwiY19oYXNoIjoiel9KY0RscFczQjJwN3ExR0Nna1JaUSIsImF1dGhfdGltZSI6MTU2ODcyMTE2OX0.WmSa4LzOzYsdwTqAJ_8mub4Ls3eyFkxZoGLoy-U7DatsTd_JEwAs3_OtV4ucmj6ENT3153iCpYY6vBxSQromOMcXsN74IrUQew24y_zflN2g4yU8ZVvBCbTrR_6p9f2fbeWjZiyNcbPCha0dv45E3vBjyHhmffWnk3vyndBBiwwuqod4pyCZ3UECf6Vu-o7dygKFpMHPS1ma60fEswY5d-_TJAFk1HaiOfFo0XbL6kwqAGvx8HnraIxyd0n8SbBVxV_KDxf15hdotUizJDW7N2XMdOGQpNFJim9SrEeBhn9741LWqkWCgkobcvYBZsrvnUW6jZ87SLi15rvIpq8_fw</span><br></pre></td></tr></table></figure>
-<p>JWT格式（以.点号分隔）：</p>
-<ul>
-<li>header: 包括了key id 与加密算法</li>
-<li>payload:<ol>
-<li>iss: 签发机构，苹果</li>
-<li>aud: 接收者，目标app</li>
-<li>exp: 过期时间</li>
-<li>iat: 签发时间</li>
-<li>sub: 用户id</li>
-<li>c_hash: 一个哈希数列</li>
-<li>auth_time: 签名时间</li>
-</ol>
-</li>
-<li>signature: 用于验证JWT的签名</li>
-</ul>
-<p><strong>header:</strong><br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "kid":"AIDOPK1", //密钥id标识</span><br><span class="line">  "alg":"RS256" //RS256算法对JWT进行的签名。（RSA 256 + SHA 256）</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><strong>payload:</strong><br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    "iss":"https://appleid.apple.com",//签发者</span><br><span class="line">    "aud":"com.fun.AppleLogin",//目标受众</span><br><span class="line">    "exp":1568721769,//过期时间</span><br><span class="line">    "iat":1568721169,//The issued at registered claim key 签发时间</span><br><span class="line">    "sub":"000580.087c554dce35466fa85c5a5d594d528a.0801", //苹果 userid</span><br><span class="line">    "c_hash":"z_JcDlpW3B2p7q1GCgkRZQ", //一个哈希数列，作用未知</span><br><span class="line">    "auth_time":1568721169 //签名时间</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>服务端在获取客户端发出的<code>identityToken</code>后，需要进行如下步骤：</p>
-<ol>
-<li>需要逆向构造过程，decode出JWT的三个部分</li>
-<li>从 <a href="https://appleid.apple.com/auth/keys" target="_blank" rel="external">https://appleid.apple.com/auth/keys</a> 中获取公钥，并将公钥 <a href="https://8gwifi.org/jwkconvertfunctions.jsp" target="_blank" rel="external">转换</a> 为pem对JWT进行验证</li>
-<li>如identityToken通过验证，则可以根据其payload中的内容进行验证等操作</li>
-</ol>
-<p><strong>token验证原理：</strong></p>
-<blockquote>
-<p>因为idnetityToken使用非对称加密 RSASSA【RSA签名算法】 和 ECDSA【椭圆曲线数据签名算法】，当验证签名的时候，利用公钥来解密Singature，当解密内容与base64UrlEncode(header) + “.” + base64UrlEncode(payload)的内容完全一样的时候，表示验证通过。</p>
-</blockquote>
-<p><strong>防止中间人攻击原理：</strong></p>
-<blockquote>
-<p>该token是苹果利用私钥生成的一段JWT，并给出公钥我们对token进行验证，由于中间人并没有苹果的私钥，所以它生成出来的token是没有办法利用苹果给出的公钥进行验证的，确保的token的安全性。</p>
-</blockquote>
-<p>2、基于授权码的后端验证</p>
-<p>针对 <code>authorizationCode</code> 后端验证，首先需要在苹果后台生成的 <code>client_secret</code>，不同应用会不一样。所以，建议还是使用第一种验证。</p>
-<p>官方文档：</p>
-<ul>
-<li><a href="https://developer.apple.com/documentation/signinwithapplerestapi/generate_and_validate_tokens" target="_blank" rel="external">Generate and validate tokens - Sign in with Apple REST API | Apple Developer Documentation</a></li>
-<li><a href="https://developer.apple.com/documentation/authenticationservices" target="_blank" rel="external">AuthenticationServices | Apple Developer Documentation</a></li>
-<li><a href="https://developer.apple.com/documentation/signinwithapplerestapi" target="_blank" rel="external">Sign in with Apple REST API | Apple Developer Documentation</a></li>
-<li><a href="https://developer.apple.com/documentation/signinwithapplejs/communicating_using_the_private_email_relay_service" target="_blank" rel="external">Communicating Using the Private Email Relay Service | Apple Developer Documentation</a></li>
-</ul>
-<p>参考文章：</p>
-<ul>
-<li><a href="https://juejin.im/post/5d551d11e51d4561cf15dfae" target="_blank" rel="external">iOS 13 苹果账号登陆与后台验证相关 - 掘金</a></li>
-<li><a href="https://blog.csdn.net/wpf199402076118/article/details/99677412" target="_blank" rel="external">苹果授权登陆后端验证</a></li>
-<li><a href="https://juejin.im/post/58c29e0b1b69e6006bce02f4?utm_source=tuicool&amp;utm_medium=referral" target="_blank" rel="external">使用JWT和Spring Security保护REST API - 掘金</a></li>
-</ul>
-<h4 id="App_端">App 端</h4><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/09/Sign-in-with-Apple-10.png" alt="Sign-in-with-Apple-10.png"></p>
-<p><strong>集成4步：</strong></p>
-<ol>
-<li>设置ASAuthorizationAppleIDButton相关布局，添加相应地授权处理；</li>
-<li>获取授权码；</li>
-<li>验证；</li>
-<li>处理Sign In With Apple授权状态变化；</li>
-</ol>
-<p>打开应用或进行登录界面时，处理 Apple ID 登录状态变化。（可能之前登录过，但用户在手机设置里删除了授权认证，需要重新授权）</p>
-<ul>
-<li>authorized: 已认证</li>
-<li>notFound: 用户可能尚未将帐号与Apple ID绑定</li>
-<li>revoked: 账号已经注销</li>
-</ul>
-<p><strong>开发环境：</strong></p>
-<ul>
-<li>Xcode11 &amp; iOS13（因为使用 iOS13 API ，所以需要升级到 Xcode11 ）</li>
-<li>更新有苹果登录权限的配置文件，就是 xxx.mobileprovision 文件【</li>
-<li>项目在 Xcode11 打开后，<code>Targets</code> -&gt;  <code>Signing &amp; Capabilities</code> 中添加 <code>Sign In With Apple</code> 权限。</li>
-<li>添加系统库 AuthenticationServices.framework</li>
-</ul>
-<p><strong>注意：</strong><br>1、首次登录会返回所有参数，二次登录只会返回 UserID 和 授权码，邮件和用户不再返回！！<br>2、同一个开发者账号下不同的应用，同一个apple id登陆时，获取的 third id 是一样的。<br>3、两个开发者账号下的应用，同一个apple id登陆时，获取的 third id 不一样<br>4、NSNotification.Name.ASAuthorizationAppleIDProviderCredentialRevoked， 系统在苹果账号登出时通知，此时应用如果是苹果登陆的用户，有没有必要也登出账号？<br>5、如果打开登录界面时，设备的 iCloud Keychain 有 apple id 账号可用时，可以弹窗让用户选择 iCloud Keychain 里的账号来进行登陆。</p>
-<p>参考文章：</p>
-<ul>
-<li><a href="https://www.jianshu.com/p/23b46dea2076" target="_blank" rel="external">Sign in with Apple - 简书</a></li>
-<li><a href="http://jerryliu.org/ios%20programming/iOS13-Sign-With-Apple%E6%96%B0%E7%89%B9%E6%80%A7%E9%80%82%E9%85%8D" target="_blank" rel="external">iOS13 Sign In With Apple适配 – 小瑞的Blog</a></li>
-</ul>
-<h4 id="Web端">Web端</h4><p>Sign in with Apple 登录是支持跨平台，安卓和 windows 的 web 页面中使用 apple id 登录授权。</p>
-<p>官方文档：</p>
-<ul>
-<li><a href="https://developer.apple.com/documentation/signinwithapplejs" target="_blank" rel="external">Sign in with Apple JS | Apple Developer Documentation</a></li>
-<li><a href="https://developer.apple.com/documentation/signinwithapplejs/configuring_your_webpage_for_sign_in_with_apple" target="_blank" rel="external">Configuring Your Webpage for Sign In with Apple | Apple Developer Documentation</a></li>
-</ul>
-<p>参考文章：</p>
-<ul>
-<li><a href="https://medium.com/techulus/how-to-setup-sign-in-with-apple-9e142ce498d4" target="_blank" rel="external">Sign In with Apple using JavaScript - Techulus - Medium</a></li>
-<li><a href="https://developer.okta.com/blog/2019/06/04/what-the-heck-is-sign-in-with-apple" target="_blank" rel="external">What the Heck is Sign In with Apple? | Okta Developer</a></li>
-</ul>
-<h3 id="注意事项">注意事项</h3><ol>
-<li>Sign In With Apple 是跨平台的，可以支持iOS、macOS、watchOS、tvOS、JS（web）。</li>
-<li>Sign In with Apple 需要用户开启了两步认证（双重因子验证），如果没有开启则会在第一次使用时提示开启，不开启将无法使用。未开启两步认证的账号，点击苹果登录时，会弹窗提示用户，需要跳转到系统设置里开启。</li>
-<li>开启双重因子验证的方式：<br><code>设置 -&gt; 密码与安全性 -&gt; 双重因子验证</code>； 如果不开启双重因子验证，那么当我们在调用苹果官方授权接口的时候，系统也会提示我们需要去打开双重因子验证。</li>
-<li>停止App 使用Sign In With Apple 的方式：<br><code>设置 -&gt; Apple ID -&gt; 密码与安全性 -&gt; 使用您AppleID的App -&gt; 找到对应的App - &gt; “停止以Apple ID使用 Bundle ID...”</code>；<br>注：用户可以关闭接收转发的邮件。</li>
-<li>苹果登录的界面只支持竖屏显示，跟内购买弹窗一样，无法控制横屏应用或游戏时显示横屏的苹果登录界面UI。（个人推测是因为 Face ID 目前在 iPhone 只能竖屏识别，而苹果登陆可以使用 Face ID 来授权而不用输入密码。）</li>
-</ol>
-<h3 id="参考">参考</h3><ul>
-<li><a href="https://developer.apple.com/cn/sign-in-with-apple/" target="_blank" rel="external">通过 Apple 登录 - Apple Developer</a></li>
-<li><a href="https://developer.apple.com/app-store/review/guidelines/#sign-in-with-apple" target="_blank" rel="external">App Store Review Guidelines - Apple Developer</a></li>
-<li><a href="https://developer.apple.com/design/human-interface-guidelines/sign-in-with-apple/overview/" target="_blank" rel="external">Sign In with Apple - Sign In with Apple - Human Interface Guidelines - Apple Developer</a></li>
-<li><a href="https://help.apple.com/developer-account/?lang=en#/devde676e696" target="_blank" rel="external">About Sign In with Apple - Developer Account Help</a></li>
-<li><a href="https://juejin.im/post/5d43bd55e51d4561b84c00c8" target="_blank" rel="external">快速配置 Sign In with Apple - 掘金</a></li>
-<li><a href="https://developer.okta.com/blog/2019/06/04/what-the-heck-is-sign-in-with-apple" target="_blank" rel="external">What the Heck is Sign In with Apple? | Okta Developer</a></li>
-<li><a href="https://link.juejin.im/?target=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FJSON_Web_Token" target="_blank" rel="external">JSON Web Token(JWT)</a></li>
-<li><a href="https://developer.apple.com/documentation/signinwithapplerestapi" target="_blank" rel="external">Sign In with Apple REST API</a></li>
-<li><a href="https://developer.apple.com/documentation/signinwithapplejs/communicating_using_the_private_email_relay_service" target="_blank" rel="external">Communicating Using the Private Email Relay Service</a></li>
-<li><a href="https://developer.apple.com/documentation/signinwithapplerestapi/generate_and_validate_tokens" target="_blank" rel="external">Generate and validate tokens</a></li>
-<li><a href="https://blog.csdn.net/wpf199402076118/article/details/99677412" target="_blank" rel="external">苹果授权登陆后端验证</a></li>
-<li><a href="https://developer.apple.com/documentation/signinwithapplerestapi/generate_and_validate_tokens" target="_blank" rel="external">Generate and validate tokens - Sign in with Apple REST API | Apple Developer Documentation</a></li>
-<li><a href="https://developer.apple.com/documentation/authenticationservices" target="_blank" rel="external">AuthenticationServices | Apple Developer Documentation</a></li>
-<li><a href="https://juejin.im/post/5d551d11e51d4561cf15dfae" target="_blank" rel="external">iOS 13 苹果账号登陆与后台验证相关 - 掘金</a></li>
-<li><a href="https://blog.csdn.net/wpf199402076118/article/details/99677412" target="_blank" rel="external">苹果授权登陆后端验证</a></li>
-<li><a href="https://juejin.im/post/58c29e0b1b69e6006bce02f4?utm_source=tuicool&amp;utm_medium=referral" target="_blank" rel="external">使用JWT和Spring Security保护REST API - 掘金</a></li>
-<li><a href="https://developer.apple.com/documentation/signinwithapplejs" target="_blank" rel="external">Sign in with Apple JS | Apple Developer Documentation</a></li>
-<li><a href="https://developer.apple.com/documentation/signinwithapplejs/configuring_your_webpage_for_sign_in_with_apple" target="_blank" rel="external">Configuring Your Webpage for Sign In with Apple | Apple Developer Documentation</a></li>
-<li><a href="https://medium.com/techulus/how-to-setup-sign-in-with-apple-9e142ce498d4" target="_blank" rel="external">Sign In with Apple using JavaScript - Techulus - Medium</a></li>
-<li><a href="https://developer.okta.com/blog/2019/06/04/what-the-heck-is-sign-in-with-apple" target="_blank" rel="external">What the Heck is Sign In with Apple? | Okta Developer</a></li>
-</ul>
-<p><br></p>
-<ul>
-<li>如有不正确的地方，欢迎指导！</li>
-<li>如有疑问，欢迎在评论区一起讨论！</li>
-</ul>
-<p><br></p>
-<blockquote>
-<p>注：本文首发于 <a href="https://iHTCboy.com">iHTCboy’s blog</a>，如若转载，请注来源<br><br></p>
-</blockquote>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h3 id="1、前言">1、前言</h3><p>iOS 13 最大的亮点是 <code>Dark</code> 模式，另一个就是苹果登录（<code>Sign in with Apple</code>）方式的增加，让苹果生态又多了一层体验，苹果的生态建设越来越好，让iOS开发者成为 Apple 全栈开发的可能性更接近，对于开发者来说，用好 API ，然后看到苹果这些年对生态的建设，还是有很多想象力！</p>]]>
-    
-    </summary>
-    
-      <category term="Sign-in-with-Apple" scheme="https://iHTCboy.com/tags/Sign-in-with-Apple/"/>
-    
-      <category term="苹果登录方式" scheme="https://iHTCboy.com/tags/%E8%8B%B9%E6%9E%9C%E7%99%BB%E5%BD%95%E6%96%B9%E5%BC%8F/"/>
     
       <category term="technology" scheme="https://iHTCboy.com/categories/technology/"/>
     
