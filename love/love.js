@@ -4,7 +4,6 @@
 
 // variables
 
-
 function timeElapse(date){
 	var current = new Date();
 	var date_in_this_year = new Date(date);
