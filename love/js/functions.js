@@ -3,41 +3,7 @@
  */
 
 // variables
-var $win = $(window);
-var clientWidth = $win.width();
-var clientHeight = $win.height();
 
-$(window).resize(function() {
-    var newWidth = $win.width();
-    var newHeight = $win.height();
-    if (newWidth != clientWidth && newHeight != clientHeight) {
-        location.replace(location);
-    }
-});
-
-(function($) {
-	$.fn.typewriter = function() {
-		this.each(function() {
-			var $ele = $(this), str = $ele.html(), progress = 0;
-			$ele.html('');
-			$ele.show();
-			var timer = setInterval(function() {
-				var current = str.substr(progress, 1);
-				if (current == '<') {="" progress="str.indexOf('">', progress) + 1;
-				} else {
-					progress++;
-					while (str.substr(progress, 1) == "\t")
-						progress++;
-				}
-				$ele.html(str.substring(0, progress) + (progress & 1 ? '_' : ''));
-				if (progress >= str.length) {
-					clearInterval(timer);
-				}
-			}, 100);
-		});
-		return this;
-	};
-})(jQuery);
 
 function timeElapse(date){
 	var current = new Date();
@@ -67,4 +33,3 @@ function timeElapse(date){
 	var result = "<span class="\"digit\"">" + years + "</span> 年 <span class="\"digit\"">" + days + "</span> 天 <span class="\"digit\"">" + hours + "</span> 小时 <span class="\"digit\"">" + minutes + "</span> 分钟 <span class="\"digit\"">" + seconds + "</span> 秒"; 
 	$("#clock").html(result);
 }
-</')>
