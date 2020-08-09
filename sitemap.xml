@@ -2,13 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://iHTCboy.com/love/ting.html</loc>
-    <lastmod>2020-08-09T14:59:12.901Z</lastmod>
+    <loc>https://iHTCboy.com/love/ting.ejs.tmp.html</loc>
+    <lastmod>2020-08-09T15:03:11.907Z</lastmod>
   </url>
   
   <url>
-    <loc>https://iHTCboy.com/love/ting.ejs.tmp.html</loc>
-    <lastmod>2020-08-09T14:58:14.089Z</lastmod>
+    <loc>https://iHTCboy.com/love/ting.html</loc>
+    <lastmod>2020-08-09T15:03:11.729Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://iHTCboy.com/love/js/functions.js.tmp.html</loc>
+    <lastmod>2020-08-09T15:00:48.318Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://iHTCboy.com/love/js/functions.js</loc>
+    <lastmod>2020-08-09T15:00:47.856Z</lastmod>
   </url>
   
   <url>
@@ -2497,52 +2507,7 @@
   </url>
   
   <url>
-    <loc>https://iHTCboy.com/love/js/love.js</loc>
-    <lastmod>2016-06-22T06:36:45.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://iHTCboy.com/love/js/kk_lrc.js</loc>
-    <lastmod>2016-06-22T06:36:45.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://iHTCboy.com/love/js/jscex.min.js</loc>
-    <lastmod>2016-06-22T06:36:45.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://iHTCboy.com/love/js/jscex-parser.js</loc>
-    <lastmod>2016-06-22T06:36:45.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://iHTCboy.com/love/js/jscex-jit.js</loc>
-    <lastmod>2016-06-22T06:36:45.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://iHTCboy.com/love/js/jscex-builderbase.min.js</loc>
-    <lastmod>2016-06-22T06:36:45.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://iHTCboy.com/love/js/jscex-async.min.js</loc>
-    <lastmod>2016-06-22T06:36:45.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://iHTCboy.com/love/js/jscex-async-powerpack.min.js</loc>
-    <lastmod>2016-06-22T06:36:45.000Z</lastmod>
-  </url>
-  
-  <url>
     <loc>https://iHTCboy.com/love/js/jquery.min.js</loc>
-    <lastmod>2016-06-22T06:36:45.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://iHTCboy.com/love/js/functions.js</loc>
     <lastmod>2016-06-22T06:36:45.000Z</lastmod>
   </url>
   
