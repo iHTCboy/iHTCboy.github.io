@@ -2,6 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://iHTCboy.com/love/love.css.tmp.html</loc>
+    <lastmod>2020-08-09T15:39:18.133Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://iHTCboy.com/love/love.css</loc>
+    <lastmod>2020-08-09T15:39:17.937Z</lastmod>
+  </url>
+  
+  <url>
     <loc>https://iHTCboy.com/love/ting.html</loc>
     <lastmod>2020-08-09T15:36:28.429Z</lastmod>
   </url>
@@ -14,11 +24,6 @@
   <url>
     <loc>https://iHTCboy.com/love/ting.ejs.tmp.html</loc>
     <lastmod>2020-08-09T15:34:09.804Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://iHTCboy.com/love/love.css</loc>
-    <lastmod>2020-08-09T15:23:25.320Z</lastmod>
   </url>
   
   <url>
