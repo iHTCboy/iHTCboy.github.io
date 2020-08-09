@@ -216,19 +216,19 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-2017_10_沙盒测试账号：不允许创建iTunes账户" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-2017_10_Xcode8报错：Framework_not_found_IOSurface_for_architecture_arm64或者Framework_not_found_FileProvider_for_architecture_x86_64:arm64" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/27/2017_10_沙盒测试账号：不允许创建iTunes账户/">沙盒测试账号：不允许创建 iTunes 账户</a>
+      <a class="article-title" href="/2017/10/27/2017_10_Xcode8报错：Framework_not_found_IOSurface_for_architecture_arm64或者Framework_not_found_FileProvider_for_architecture_x86_64:arm64/">Xcode8报错：&quot;Framework not found IOSurface for architecture arm64&quot;或者 &quot;Framework not found FileProvider for architecture x86_64/arm64&quot;.</a>
     </h1>
   
 
         
-        <a href="/2017/10/27/2017_10_沙盒测试账号：不允许创建iTunes账户/" class="archive-article-date">
+        <a href="/2017/10/27/2017_10_Xcode8报错：Framework_not_found_IOSurface_for_architecture_arm64或者Framework_not_found_FileProvider_for_architecture_x86_64:arm64/" class="archive-article-date">
   	<time datetime="2017-10-27T00:33:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-27</time>
 </a>
         
@@ -236,21 +236,13 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="1-出现情况">1.出现情况</h4><p><img src="http://upload-images.jianshu.io/upload_images/99517-8dd5d2ba875806e5.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/300" alt="不允许创建 iTunes 账户.jpg"></p>
-<p>在设置里登陆沙盒账号提示：</p>
+        <p>Xcode8 编译报错：</p>
 <blockquote>
-<p>不允许创建 iTunes 账户<br>此 Apple ID 目前无法用于 iTunes Store, 请稍后重试</p>
+<p><strong>Framework not found IOSurface for architecture arm64</strong><br>或者<br> <strong>Framework not found FileProvider for architecture x86_64/arm64.</strong> </p>
 </blockquote>
-<p><strong>正确方式：</strong></p>
-<blockquote>
-<p>沙盒测试账号只能在测试应用点击储值时，弹窗中输入账号，不能在设置里的 App Store 里添加。</p>
-</blockquote>
-<p>苹果的文档也有说明，测试账号不能在设置里登陆 ：</p>
-<blockquote>
-<p>Important: Don’t enter your test account information in the Store settings panel. Doing so may invalidate your test account.</p>
-</blockquote>
+<h3 id="原因">原因</h3><p>IOSurface.framework和 FileProvider.framework是 iOS11 新增加的库，但  Xcode8下没有这个库。打包静态库的时候，有一个Link Frameworks Automatically设置，默认为YES，会自动链接框架。所以Xcode 9打包的静态库时，在Xcode 8项目编译时候会提示找不到 IOSurface.framework和 FileProvider.framework。</p>
         
-          <a class="article-more-a" href="/2017/10/27/2017_10_沙盒测试账号：不允许创建iTunes账户/#more">more >></a>
+          <a class="article-more-a" href="/2017/10/27/2017_10_Xcode8报错：Framework_not_found_IOSurface_for_architecture_arm64或者Framework_not_found_FileProvider_for_architecture_x86_64:arm64/#more">more >></a>
         
       
 
@@ -264,19 +256,15 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Sandbox</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Framework not found</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">iTunes账户</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">IOSurface</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">沙盒测试</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">沙盒账号</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Xcode9</a>
         		</li>
       		
 		</ul>
@@ -297,7 +285,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/27/2017_10_沙盒测试账号：不允许创建iTunes账户/">显示全文 >></a>
+          <a class="article-more-a" href="/2017/10/27/2017_10_Xcode8报错：Framework_not_found_IOSurface_for_architecture_arm64或者Framework_not_found_FileProvider_for_architecture_x86_64:arm64/">显示全文 >></a>
         </p>
       
 
