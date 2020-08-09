@@ -2,18 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://iHTCboy.com/love/js/functions.js</loc>
-    <lastmod>2020-08-09T15:16:24.699Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://iHTCboy.com/love/ting.html</loc>
-    <lastmod>2020-08-09T15:13:51.803Z</lastmod>
+    <loc>https://iHTCboy.com/love/css/default.css.tmp.html</loc>
+    <lastmod>2020-08-09T15:19:21.967Z</lastmod>
   </url>
   
   <url>
     <loc>https://iHTCboy.com/love/css/default.css</loc>
-    <lastmod>2020-08-09T15:13:46.967Z</lastmod>
+    <lastmod>2020-08-09T15:19:21.760Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://iHTCboy.com/love/ting.html</loc>
+    <lastmod>2020-08-09T15:19:20.290Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://iHTCboy.com/love/js/functions.js</loc>
+    <lastmod>2020-08-09T15:16:24.699Z</lastmod>
   </url>
   
   <url>
@@ -24,11 +29,6 @@
   <url>
     <loc>https://iHTCboy.com/love/js/functions.js.tmp.html</loc>
     <lastmod>2020-08-09T15:00:48.318Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://iHTCboy.com/love/css/default.css.tmp.html</loc>
-    <lastmod>2020-08-09T14:53:18.604Z</lastmod>
   </url>
   
   <url>
