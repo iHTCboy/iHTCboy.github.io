@@ -15,15 +15,11 @@
 
 
 
-
-
-	var together = new Date();
-	together.setFullYear(2015, 12, 31);
-	together.setHours(18);	
-	together.setMinutes(0);
-	together.setSeconds(0);
-	together.setMilliseconds(0);
-	$(&quot;">
+	(function() {
+		var loadScript = function(path) {
+			var $script = document.createElement(&apos;script&apos;)
+			document.getElementsByTagName(&apos;body&apos;)[0].appendChild($script)
+			$script">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Love">
 <meta property="og:url" content="https://iHTCboy.com/love/ting.html">
@@ -34,16 +30,12 @@
 
 
 
-
-
-	var together = new Date();
-	together.setFullYear(2015, 12, 31);
-	together.setHours(18);	
-	together.setMinutes(0);
-	together.setSeconds(0);
-	together.setMilliseconds(0);
-	$(&quot;">
-<meta property="og:updated_time" content="2020-08-09T14:46:55.507Z">
+	(function() {
+		var loadScript = function(path) {
+			var $script = document.createElement(&apos;script&apos;)
+			document.getElementsByTagName(&apos;body&apos;)[0].appendChild($script)
+			$script">
+<meta property="og:updated_time" content="2020-08-09T14:51:44.038Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Love">
 <meta name="twitter:description" content="亲爱的 婷哥，我们已经共同走过
@@ -52,15 +44,11 @@
 
 
 
-
-
-	var together = new Date();
-	together.setFullYear(2015, 12, 31);
-	together.setHours(18);	
-	together.setMinutes(0);
-	together.setSeconds(0);
-	together.setMilliseconds(0);
-	$(&quot;">
+	(function() {
+		var loadScript = function(path) {
+			var $script = document.createElement(&apos;script&apos;)
+			document.getElementsByTagName(&apos;body&apos;)[0].appendChild($script)
+			$script">
   
     <link rel="alternative" href="/atom.xml" title="iHTCboy&#39;s blog" type="application/atom+xml">
   
@@ -281,9 +269,20 @@ var _hmt = _hmt || [];
 		<div id="clock"></div>
 	</div>
 </div>
-<script type="text/javascript" src="./js/jquery.min.js"></script>
 <link type="text/css" rel="stylesheet" href="./css/default.css">
-<script type="text/javascript" src="./js/functions.js" charset="utf-8"></script>
+<script>
+	(function() {
+		var loadScript = function(path) {
+			var $script = document.createElement('script')
+			document.getElementsByTagName('body')[0].appendChild($script)
+			$script.setAttribute('src', path)
+		}
+		setTimeout(function() {
+			loadScript('./js/jquery.min.js');
+			loadScript('./js/functions.js');
+		}, 0)
+	})()
+</script>
 <script>
 	var together = new Date();
 	together.setFullYear(2015, 12, 31);
