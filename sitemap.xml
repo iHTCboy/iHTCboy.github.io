@@ -2,13 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://iHTCboy.com/love/ting.html</loc>
-    <lastmod>2020-08-09T14:20:11.894Z</lastmod>
+    <loc>https://iHTCboy.com/love/ting.ejs.tmp.html</loc>
+    <lastmod>2020-08-09T14:22:06.146Z</lastmod>
   </url>
   
   <url>
-    <loc>https://iHTCboy.com/love/ting.ejs.tmp.html</loc>
-    <lastmod>2020-08-09T14:20:11.875Z</lastmod>
+    <loc>https://iHTCboy.com/love/ting.html</loc>
+    <lastmod>2020-08-09T14:22:06.006Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://iHTCboy.com/more/index.ejs.tmp.html</loc>
+    <lastmod>2020-08-09T14:21:15.423Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://iHTCboy.com/more/index.html</loc>
+    <lastmod>2020-08-09T14:21:15.221Z</lastmod>
   </url>
   
   <url>
@@ -44,11 +54,6 @@
   <url>
     <loc>https://iHTCboy.com/more/onemindmap.json</loc>
     <lastmod>2020-06-18T12:54:38.473Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://iHTCboy.com/more/index.html</loc>
-    <lastmod>2020-05-30T04:03:16.648Z</lastmod>
   </url>
   
   <url>
