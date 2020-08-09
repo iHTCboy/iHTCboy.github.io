@@ -1,8 +1,6 @@
 /*
- * http://love.hackerzhou.me
+ * https://github.com/xelzmm/Love
  */
-
-// variables
 
 function timeElapse(date){
 	var current = new Date();
