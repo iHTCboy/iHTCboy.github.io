@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Learn something of everything,  Learn everything of something.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="https://iHTCboy.com/"/>
-  <updated>2020-08-16T03:05:37.892Z</updated>
+  <updated>2020-08-22T03:15:33.461Z</updated>
   <id>https://iHTCboy.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="https://iHTCboy.com/2020/07/05/2020-07-05_%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F%E5%92%8C%E7%9B%88%E5%88%A9%E6%A8%A1%E5%BC%8F%E7%9A%84%E6%80%9D%E8%80%83/"/>
     <id>https://iHTCboy.com/2020/07/05/2020-07-05_商业模式和盈利模式的思考/</id>
     <published>2020-07-05T04:09:16.000Z</published>
-    <updated>2020-08-16T03:05:37.892Z</updated>
+    <updated>2020-08-22T03:15:33.461Z</updated>
     <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>增长？变现？数据？产品？</p>
 <p>你们的商业模式是什么？盈利模式是什么？有产品有盈利吗？</p>
 <p>听过风口、闭环、流量入口、增长黑客、私域流量？</p>
@@ -109,7 +109,7 @@
     <link href="https://iHTCboy.com/2020/07/01/2020-07-01_WWDC20_in-app-purchase/"/>
     <id>https://iHTCboy.com/2020/07/01/2020-07-01_WWDC20_in-app-purchase/</id>
     <published>2020-07-01T14:40:16.000Z</published>
-    <updated>2020-07-04T15:00:22.341Z</updated>
+    <updated>2020-08-22T03:15:33.990Z</updated>
     <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>今年 WWDC 2020 苹果全球开发者大会，苹果宣布所有的内购品项类型，当用户退款成功时，开发者都能收到退款通知！！！退款通知！！！退款通知！！！</p>
 <blockquote>
 <p><strong>针对 App 内购买项目的退款通知现已可用</strong></p>
@@ -349,7 +349,7 @@
     <link href="https://iHTCboy.com/2020/06/11/2020-06-11_%E8%B7%A8%E5%B9%B3%E5%8F%B0%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF/"/>
     <id>https://iHTCboy.com/2020/06/11/2020-06-11_跨平台那些事儿/</id>
     <published>2020-06-11T11:00:00.000Z</published>
-    <updated>2020-07-05T14:26:05.491Z</updated>
+    <updated>2020-08-22T03:15:33.309Z</updated>
     <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>最近跟部门同学一起分享了跨平台的事儿，写了将近200+页ppt，最后只讲了100+页，只把其中重点的内容讲了，但是，我认为对跨平台的学习，不止是重点的技术内容，还有很多值得探索的问题，比如历史背景，历史发展，那些事儿，那些人儿，往往不经意间，改变历史的技术，就在那一瞬时，固守自封的必须会被淘汰，把握了机遇就有新出路，没有看准方向的会浪费大量的时间。当然，从历史脉络来看跨平台，必须千人千面，能有共鸣之处就好。</p>
 <blockquote>
 <p>下面会有将近200+图片，后续有时间，会针对每张ppt添加对应的讲解。</p>
@@ -679,7 +679,7 @@
     <link href="https://iHTCboy.com/2020/02/09/2020-02-09_%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84macOS%E7%B3%BB%E5%88%97%EF%BC%9A%E9%AB%98%E6%95%88Alfred%E8%BF%9B%E9%98%B6/"/>
     <id>https://iHTCboy.com/2020/02/09/2020-02-09_程序员的macOS系列：高效Alfred进阶/</id>
     <published>2020-02-09T12:49:16.000Z</published>
-    <updated>2020-05-06T14:56:17.093Z</updated>
+    <updated>2020-08-22T03:15:34.128Z</updated>
     <content type="html"><![CDATA[<h2 id="1、前言">1、前言</h2><p>之前写的《程序员的macOS系列》文章，2018年写了二篇文章：<a href="https://ihtcboy.com/2018/07/15/2018-07-15_程序员的macOS系列：精选MacApp/">精选Mac App</a>、 <a href="https://ihtcboy.com/2018/09/30/2018-09-30_程序员的macOS系列：Mac开发环境配置/">Mac开发环境配置</a>，至今，已经过年一年半啦！收到很多同学的点赞，最后一篇 <code>高效Alfred进阶</code> 因为各种原因，没有写出来，所以都0202年啦！</p>
 <p>其实 <code>macOS</code> 系统的高效，很大部分原因是因为有 <code>Unix/Linux</code> 的相似血统，本文讲解<code>Alfred</code>，就是效率工具的一员，相信注重效率的你，一早肯定听说过或者已经在使用，简单来说 Alfred 以键盘的高效代替鼠标操作的繁冗。还有很多效率方法，以后有机会在总结吧，大家也可以自行搜索 macOS 开发效率，博主之前也写过一些。那为什么会认为 <code>Alfred</code> 对程序员很重要呢？如果你没有用过，相信你读完本文就会明白。虽然网上已经有很多 <code>Alfred</code> 的教程，但是一直没有找到能相对全面，或很少从入口到进阶的文章，并且很多文章历史已经悠久，所以惟有抛砖引玉，自我总结一下，希望和大家一起努力提交效率！</p>
 <ul>
@@ -1218,7 +1218,7 @@ Open.png"></p>
     <link href="https://iHTCboy.com/2020/02/02/2020-02-02_%E5%BB%BA%E7%AB%8B%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/"/>
     <id>https://iHTCboy.com/2020/02/02/2020-02-02_建立你自己的开发知识体系/</id>
     <published>2020-02-02T12:20:20.000Z</published>
-    <updated>2020-03-22T13:05:29.680Z</updated>
+    <updated>2020-08-22T03:15:33.290Z</updated>
     <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/02/建立你自己的开发知识体系.png" alt="建立你自己的开发知识体系.png"></p>
 <a id="more"></a>
@@ -1364,7 +1364,7 @@ Open.png"></p>
     <link href="https://iHTCboy.com/2020/02/01/2020-02-01_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE/"/>
     <id>https://iHTCboy.com/2020/02/01/2020-02-01_iOS开发高手课/</id>
     <published>2020-02-01T07:49:16.000Z</published>
-    <updated>2020-02-09T14:49:27.852Z</updated>
+    <updated>2020-08-22T03:15:34.365Z</updated>
     <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><blockquote>
 <p>注意，本系列总结不会引用或提供原课程文章所有的内容或代码，只会作出思维导图，需要学习可购买课程 <a href="http://gk.link/a/10fRy" target="_blank" rel="external">《iOS开发高手课 - 极客时间》</a> </p>
 </blockquote>
@@ -1497,7 +1497,7 @@ Open.png"></p>
     <link href="https://iHTCboy.com/2020/01/17/2020-01-17_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE06/"/>
     <id>https://iHTCboy.com/2020/01/17/2020-01-17_iOS开发高手课06/</id>
     <published>2020-01-17T12:20:20.000Z</published>
-    <updated>2020-02-13T00:51:55.287Z</updated>
+    <updated>2020-08-22T03:15:32.610Z</updated>
     <content type="html"><![CDATA[<h2 id="1、前言">1、前言</h2><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/iOS开发高手课-06-App如何通过注入动态库的方式实现极速编译调试？.png" alt="iOS开发高手课-06-App如何通过注入动态库的方式实现极速编译调试？.png"></p>
 <a id="more"></a>
@@ -1830,7 +1830,7 @@ Open.png"></p>
     <link href="https://iHTCboy.com/2020/01/10/2020-01-10_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE05/"/>
     <id>https://iHTCboy.com/2020/01/10/2020-01-10_iOS开发高手课05/</id>
     <published>2020-01-10T12:20:20.000Z</published>
-    <updated>2020-02-17T01:09:43.729Z</updated>
+    <updated>2020-08-22T03:15:34.136Z</updated>
     <content type="html"><![CDATA[<h2 id="1、前言">1、前言</h2><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/iOS开发高手课-05-链接器：符号是怎么绑定到地址上的？.png" alt="iOS开发高手课-05-链接器：符号是怎么绑定到地址上的？.png"></p>
 <a id="more"></a>
@@ -2158,7 +2158,7 @@ InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault
     <link href="https://iHTCboy.com/2020/01/03/2020-01-03_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE04/"/>
     <id>https://iHTCboy.com/2020/01/03/2020-01-03_iOS开发高手课04/</id>
     <published>2020-01-03T12:20:20.000Z</published>
-    <updated>2020-03-08T03:17:27.231Z</updated>
+    <updated>2020-08-22T03:15:34.322Z</updated>
     <content type="html"><![CDATA[<h2 id="1、前言">1、前言</h2><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/01/iOS开发高手课-04-项目大了人员多了，架构怎么设计更合理？.png" alt="iOS开发高手课-04-项目大了人员多了，架构怎么设计更合理？.png"></p>
 <a id="more"></a>
@@ -2457,7 +2457,7 @@ InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault
     <link href="https://iHTCboy.com/2020/01/01/2020-01-01_2019year/"/>
     <id>https://iHTCboy.com/2020/01/01/2020-01-01_2019year/</id>
     <published>2020-01-01T04:12:12.000Z</published>
-    <updated>2020-02-15T03:57:15.058Z</updated>
+    <updated>2020-08-22T03:15:33.776Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <p>“若遇棘手之际，请从<code>耐烦</code>二字痛下功夫。”<br>——— 曾国藩</p>
 </blockquote>
@@ -2661,7 +2661,7 @@ InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault
     <link href="https://iHTCboy.com/2019/12/27/2019-12-27_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE03/"/>
     <id>https://iHTCboy.com/2019/12/27/2019-12-27_iOS开发高手课03/</id>
     <published>2019-12-27T12:20:20.000Z</published>
-    <updated>2020-04-29T14:34:22.032Z</updated>
+    <updated>2020-08-22T03:15:33.080Z</updated>
     <content type="html"><![CDATA[<h2 id="1、前言">1、前言</h2><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/12/iOS开发高手课-03-AutoLayout是怎么进行自动布局的，性能如何？.png" alt="iOS开发高手课-03-AutoLayout是怎么进行自动布局的，性能如何？.png"></p>
 <a id="more"></a>
@@ -2873,7 +2873,7 @@ InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault
     <link href="https://iHTCboy.com/2019/12/25/2019-12-25_GMTC2019shenzhen/"/>
     <id>https://iHTCboy.com/2019/12/25/2019-12-25_GMTC2019shenzhen/</id>
     <published>2019-12-25T03:11:11.000Z</published>
-    <updated>2020-02-07T03:39:14.005Z</updated>
+    <updated>2020-08-22T03:15:33.028Z</updated>
     <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>工作5年来，一直投身于 iOS 开发，而这5年来移动开发一直再追赶web前端和后端开发的技术栈和思想，近2年大家直接说：“大前端”，移动开发真正变成了“UI”前端的开发，而web前端借助 Node 开始转了后端开发？正是借着这些变化，我一直在思考，一直在疑问，直到看了一些 GMTC 课程，就像命悬一线的人一下子打通了任督二脉，练习武功不再于形式，需要提升认知的境界！这是一个神奇的世界，一个最好的时代！最“坏”的时代！</p>
 <a id="more"></a>
 <p>GMTC是什么？</p>
@@ -5172,7 +5172,7 @@ InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault
     <link href="https://iHTCboy.com/2019/12/20/2019-12-20_iOS%E5%BC%80%E5%8F%91%E9%AB%98%E6%89%8B%E8%AF%BE02/"/>
     <id>https://iHTCboy.com/2019/12/20/2019-12-20_iOS开发高手课02/</id>
     <published>2019-12-20T12:20:20.000Z</published>
-    <updated>2020-02-07T03:39:13.982Z</updated>
+    <updated>2020-08-22T03:15:32.989Z</updated>
     <content type="html"><![CDATA[<h2 id="1、前言">1、前言</h2><p>首先，我认为学习总结，要有所总，所结，就是有归纳后，能用<code>自己的话</code>告诉别人！有所结，就是有所收获输出，一般我认为是<code>思维导图</code>，所以，每篇文章前，我都会先给出文章的脑图：</p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2019/12/iOS开发高手课-02-App启动速度怎么做优化与监控？.png" alt="iOS开发高手课-02-App启动速度怎么做优化与监控？.png"></p>
 <a id="more"></a>
@@ -5340,7 +5340,7 @@ InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault
     <link href="https://iHTCboy.com/2019/12/04/2019-12-04_GMTC2019_%E5%9C%A8%E5%88%86%E6%AD%A7%E4%B8%AD%E5%8F%91%E5%B1%95-%E6%88%91%E4%BB%AC%E8%83%BD%E7%94%A8Swift%E5%81%9A%E4%BB%80%E4%B9%88/"/>
     <id>https://iHTCboy.com/2019/12/04/2019-12-04_GMTC2019_在分歧中发展-我们能用Swift做什么/</id>
     <published>2019-12-04T00:49:16.000Z</published>
-    <updated>2020-02-19T01:40:00.697Z</updated>
+    <updated>2020-08-22T03:15:33.541Z</updated>
     <content type="html"><![CDATA[<h3 id="1、简介">1、简介</h3><p>《在分歧中发展——2019，我们能用 Swift 做什么》<br> 王巍（喵神） / LINE 高级软件工程师</p>
 <ul>
 <li><p>演讲简介：</p>
@@ -5423,7 +5423,7 @@ InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault
     <link href="https://iHTCboy.com/2019/12/03/2019-12-03_GMTC2019_%E7%A7%BB%E5%8A%A8Web%E4%B8%8A%E7%8E%A9%E8%BD%AC%E5%8E%9F%E7%94%9F%E6%B8%B8%E6%88%8F/"/>
     <id>https://iHTCboy.com/2019/12/03/2019-12-03_GMTC2019_移动Web上玩转原生游戏/</id>
     <published>2019-12-03T04:49:16.000Z</published>
-    <updated>2020-02-07T03:39:13.966Z</updated>
+    <updated>2020-08-22T03:15:32.958Z</updated>
     <content type="html"><![CDATA[<h3 id="1、简介">1、简介</h3><p>《移动 Web 上玩转原生游戏 》<br> 杨轶 / 上海木鸡网络科技有限公司 联合创始人</p>
 <ul>
 <li><p>演讲简介：</p>
@@ -5542,7 +5542,7 @@ InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault
     <link href="https://iHTCboy.com/2019/12/02/2019-12-02_GMTC2019_%E5%9F%BA%E4%BA%8E%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8A%80%E6%9C%AF%E6%A0%88%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%B7%A8%E5%B9%B3%E5%8F%B0%E5%AE%9E%E8%B7%B5/"/>
     <id>https://iHTCboy.com/2019/12/02/2019-12-02_GMTC2019_基于小程序技术栈的微信客户端跨平台实践/</id>
     <published>2019-12-02T04:49:16.000Z</published>
-    <updated>2020-02-19T01:39:10.998Z</updated>
+    <updated>2020-08-22T03:15:34.213Z</updated>
     <content type="html"><![CDATA[<h3 id="1、简介">1、简介</h3><p>《基于小程序技术栈的微信客户端跨平台实践》<br> 张志坚 / 微信 高级工程师</p>
 <ul>
 <li><p>演讲简介：</p>
@@ -5650,7 +5650,7 @@ InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault
     <link href="https://iHTCboy.com/2019/12/01/2019-12-01_GMTC2019beijing/"/>
     <id>https://iHTCboy.com/2019/12/01/2019-12-01_GMTC2019beijing/</id>
     <published>2019-12-01T03:11:11.000Z</published>
-    <updated>2020-02-07T03:39:14.741Z</updated>
+    <updated>2020-08-22T03:15:34.299Z</updated>
     <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>工作5年来，一直投身于 iOS 开发，而这5年来移动开发一直再追赶web前端和后端开发的技术栈和思想，近2年大家直接说：“大前端”，移动开发真正变成了“UI”前端的开发，而web前端借助 Node 开始转了后端开发？正是借着这些变化，我一直在思考，一直在疑问，直到看了一些 GMTC 课程，就像命悬一线的人一下子打通了任督二脉，练习武功不再于形式，需要提升认知的境界！这是一个神奇的世界，一个最好的时代！最“坏”的时代！</p>
 <a id="more"></a>
 <p>GMTC是什么？</p>
@@ -8135,7 +8135,7 @@ DOM 架构方案在文本编辑与图形渲染操作方面的优缺点
     <link href="https://iHTCboy.com/2019/11/17/2019-11-17_%E4%B8%80%E4%B8%AAAlfred%E7%9A%84Workflow%E8%81%8A%E5%A4%A9%E5%86%85%E5%AE%B9%E5%BC%95%E7%94%A8%E6%B6%88%E6%81%AF/"/>
     <id>https://iHTCboy.com/2019/11/17/2019-11-17_一个Alfred的Workflow聊天内容引用消息/</id>
     <published>2019-11-17T12:22:01.000Z</published>
-    <updated>2020-02-12T02:50:07.369Z</updated>
+    <updated>2020-08-22T03:15:32.813Z</updated>
     <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>在微信 Mac/PC 端消息有个「引用消息」的功能，用于针对某个特定消息回复，而其它 App 没有该功能，或者有，比如 QQ / Telegram 都有实现回复（reply）功能，但是都是针对一条消息回复，如果需要对多条消息统一做回复，自带的功能也许真不够自定义的好。当然，最主要是我司现在用的 <code>企业QQ for macOS</code> 版本不支持这个功能，于是就想到自己做一个 workflow 可以读取当前复制的内容，然后生成一个带引用格式的文本，并完成后粘贴到 App，从而实现引用回复~</p>
 <p>传送门下载：<a href="https://github.com/iHTCboy/macOSConfig/raw/master/Alfred/Workflows/Reply%20Message%20v1.0.alfredworkflow" target="_blank" rel="external">Reply Message v1.0.alfredworkflow</a></p>
 <a id="more"></a>
@@ -8205,7 +8205,7 @@ DOM 架构方案在文本编辑与图形渲染操作方面的优缺点
     <link href="https://iHTCboy.com/2019/11/08/2019-11-08_Python-Fabric/"/>
     <id>https://iHTCboy.com/2019/11/08/2019-11-08_Python-Fabric/</id>
     <published>2019-11-08T14:49:16.000Z</published>
-    <updated>2020-02-07T03:39:14.365Z</updated>
+    <updated>2020-08-22T03:15:33.713Z</updated>
     <content type="html"><![CDATA[<h3 id="1、是什么">1、是什么</h3><p>Fabric 是一个 Python (2.5, 3.4+) 的库和命令行工具，用来提高基于 SSH 的应用部署和系统管理效率。</p>
 <p>而网上搜索了一些教程，发现很旧或者因为Fabric版本不兼容问题，导致代码分裂断层搞不明白，所以就有了本文。</p>
 <a id="more"></a>
@@ -8264,7 +8264,7 @@ DOM 架构方案在文本编辑与图形渲染操作方面的优缺点
     <link href="https://iHTCboy.com/2019/10/12/2019-10-12_%E5%9C%A8%E6%97%A7%E7%9A%84Mac%E4%B8%8A%E4%BD%BF%E7%94%A8%E9%9A%8F%E8%88%AASidecar/"/>
     <id>https://iHTCboy.com/2019/10/12/2019-10-12_在旧的Mac上使用随航Sidecar/</id>
     <published>2019-10-12T15:01:16.000Z</published>
-    <updated>2020-02-07T03:39:14.207Z</updated>
+    <updated>2020-08-22T03:15:33.414Z</updated>
     <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>6月 <code>WWDC2019</code> 上苹果发布新的 <code>macOS 10.15</code>，同时发布 <code>Sidecar</code>（随航）功能，可以把 <code>macOS</code> 界面转发到 <code>iPad</code> 上，但是对于旧的 Mac 电脑，不支持随航功能！我的 <code>MacBook Pro (Retina, 13-inch, Mid 2014)</code> 哭晕在厕所~</p>
 <a id="more"></a>
 <h3 id="2、Sidecar（随航）">2、Sidecar（随航）</h3><p>按苹果的介绍：</p>
