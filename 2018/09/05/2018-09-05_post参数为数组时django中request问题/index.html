@@ -19,7 +19,7 @@
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2018/09/20180905-request.POST-get.png">
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2018/09/20180905-request.POST-getlist.png">
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2018/09/20180905-request.POST-irregular.png">
-<meta property="og:updated_time" content="2020-08-22T03:15:33.907Z">
+<meta property="og:updated_time" content="2020-09-06T15:23:29.492Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="django中ajax post数据时request.POST获取数组问题">
 <meta name="twitter:description" content="1、前言最近在使用django开发web页面时，使用ajax的post参数中带有数组，然后在 request.POST 里获取的数组时，数组变成了一个元组！！！官方给出的通过 request.POST.getlist(&amp;#39;key&amp;#39;)来获取也是很鸡肉！那要怎么解决呢？">
@@ -280,15 +280,18 @@ var _hmt = _hmt || [];
 <p>得到的结果：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;QueryDict: &#123;<span class="string">'account'</span>: [<span class="string">'account'</span>], <span class="string">'password'</span>: [<span class="string">'password'</span>], <span class="string">'array'</span>: [<span class="string">'[1,2,3]'</span>], <span class="string">'dict'</span>: [<span class="string">'&#123;"k1":"v1","k2":"v2"&#125;'</span>]&#125;&gt;</span><br></pre></td></tr></table></figure>
 <p>数组和字典的全部值作为value，并且是string类型，显示不符合要求，并且导致处理复杂起来。</p>
+<h4 id="20200906_更新"><strong>20200906 更新</strong></h4><p>其实这个方法是最好的，数组和字典的全部值作为value，并且是string类型，其实是json字符串，所以直接还原就可以：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">array = request.POST[<span class="string">'array'</span>]</span><br><span class="line">dict = request.POST[<span class="string">'dict'</span>]</span><br><span class="line">array_list = json.loads(array)</span><br><span class="line">dict_list = json.loads(dict)</span><br></pre></td></tr></table></figure>
 <ul>
-<li>方法三<br>其实，我们知道后端为了多个相同key存在，所以才这样处理，那么我们可以这样考虑，让数据和字典不在是数组和字典，后端在还原不就可以啦！</li>
+<li><del>方法三</del><br>其实，我们知道后端为了多个相同key存在，所以才这样处理，那么我们可以这样考虑，让数据和字典不在是数组和字典，后端在还原不就可以啦！</li>
 </ul>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> body = &#123;</span><br><span class="line">    <span class="string">'account'</span>: account,</span><br><span class="line">    <span class="string">'password'</span>: password,</span><br><span class="line">    <span class="string">'array'</span>: <span class="string">'1'</span> + <span class="built_in">JSON</span>.stringify([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]),</span><br><span class="line">    <span class="string">'dict'</span>: <span class="string">'1'</span> + <span class="built_in">JSON</span>.stringify(&#123;<span class="string">'k1'</span>: <span class="string">'v1'</span>, <span class="string">'k2'</span>: <span class="string">'v2'</span>&#125;)</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p>让 ‘array’、’dict’ 变成 ‘1’ + json字符串形式，然后后端按规则还原：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;QueryDict: &#123;<span class="string">'account'</span>: [<span class="string">'account'</span>], <span class="string">'password'</span>: [<span class="string">'password'</span>], <span class="string">'array'</span>: [<span class="string">'1[1,2,3]'</span>], <span class="string">'dict'</span>: [<span class="string">'1&#123;"k1":"v1","k2":"v2"&#125;'</span>]&#125;&gt;</span><br></pre></td></tr></table></figure>
 <p>按规则还原：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">array = request.POST[<span class="string">'array'</span>]</span><br><span class="line">dict = request.POST[<span class="string">'dict'</span>]</span><br><span class="line">array_list = json.loads(array[<span class="number">1</span>:])</span><br><span class="line">dict_list = json.loads(dict[<span class="number">1</span>:])</span><br></pre></td></tr></table></figure></p>
 <p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2018/09/20180905-request.POST-irregular.png" alt="20180905-request.POST-irregular.png"></p>
-<p>这样拿也许不是好办法，但是当你数组或字典数据非常多时，也就这样啦，当然，也可以json字符串后加密，这样后端也不能解析，如果需要，大家也可以这样做啊~</p>
+<p><del>这样拿也许不是好办法，但是当你数组或字典数据非常多时，也就这样啦，当然，也可以json字符串后加密，这样后端也不能解析，如果需要，大家也可以这样做啊</del>~</p>
+<p><strong>正确答案：方法二是正解，json字符串参数，在 python 端反序列化就好。</strong></p>
 <h3 id="总结">总结</h3><p>在处理这些数据时，可能是为了方便而方便，有时候只有清楚知道原因，才能更好的处理，上面的方法确实不是<code>好方法</code>，有时候还是按规则来处理更好，一个人开发还好，如果是多人，那将来可能会留下坑啊。</p>
 <h3 id="参考">参考</h3><ul>
 <li><a href="https://www.jianshu.com/p/7af7e1e783ee" target="_blank" rel="external">关于ajax post 数据时django中request.body与request.POST问题 - 简书</a></li>
@@ -476,7 +479,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、前言"><span class="toc-number">1.</span> <span class="toc-text">1、前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、问题"><span class="toc-number">2.</span> <span class="toc-text">2、问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、解决方法"><span class="toc-number">3.</span> <span class="toc-text">3、解决方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#总结"><span class="toc-number">4.</span> <span class="toc-text">总结</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考"><span class="toc-number">5.</span> <span class="toc-text">参考</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、前言"><span class="toc-number">1.</span> <span class="toc-text">1、前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、问题"><span class="toc-number">2.</span> <span class="toc-text">2、问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、解决方法"><span class="toc-number">3.</span> <span class="toc-text">3、解决方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#20200906_更新"><span class="toc-number">3.1.</span> <span class="toc-text">20200906 更新</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#总结"><span class="toc-number">4.</span> <span class="toc-text">总结</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考"><span class="toc-number">5.</span> <span class="toc-text">参考</span></a></li></ol>
                     </div>
                 </span>
             </div>

@@ -2,6 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://iHTCboy.com/2018/09/05/2018-09-05_post%E5%8F%82%E6%95%B0%E4%B8%BA%E6%95%B0%E7%BB%84%E6%97%B6django%E4%B8%ADrequest%E9%97%AE%E9%A2%98/</loc>
+    <lastmod>2020-09-06T15:23:29.492Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://iHTCboy.com/more/more.css</loc>
+    <lastmod>2020-08-30T03:16:48.799Z</lastmod>
+  </url>
+  
+  <url>
     <loc>https://iHTCboy.com/more/index.html</loc>
     <lastmod>2020-08-30T03:00:20.586Z</lastmod>
   </url>
@@ -9,11 +19,6 @@
   <url>
     <loc>https://iHTCboy.com/more/onemindmap.json</loc>
     <lastmod>2020-08-30T02:48:21.769Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://iHTCboy.com/more/more.css</loc>
-    <lastmod>2020-08-30T02:41:41.958Z</lastmod>
   </url>
   
   <url>
@@ -739,11 +744,6 @@
   <url>
     <loc>https://iHTCboy.com/2009/07/07/2009-07-07_%E5%BE%81%E6%9C%8D/</loc>
     <lastmod>2020-08-22T03:15:33.911Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://iHTCboy.com/2018/09/05/2018-09-05_post%E5%8F%82%E6%95%B0%E4%B8%BA%E6%95%B0%E7%BB%84%E6%97%B6django%E4%B8%ADrequest%E9%97%AE%E9%A2%98/</loc>
-    <lastmod>2020-08-22T03:15:33.907Z</lastmod>
   </url>
   
   <url>
@@ -2444,11 +2444,6 @@
   <url>
     <loc>https://iHTCboy.com/love/love.js</loc>
     <lastmod>2020-08-09T15:36:05.853Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://iHTCboy.com/more/index.ejs.tmp.html</loc>
-    <lastmod>2020-08-09T14:21:15.423Z</lastmod>
   </url>
   
   <url>
