@@ -21,7 +21,7 @@
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2018/09/20180930-ProvisionQL.png">
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2018/09/20180930-QuickLookAPK.png">
 <meta property="og:image" content="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2018/09/20180930-Finder-Path.png">
-<meta property="og:updated_time" content="2020-08-22T03:15:33.361Z">
+<meta property="og:updated_time" content="2020-09-10T14:46:24.094Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="程序员的macOS系列：Mac开发环境配置">
 <meta name="twitter:description" content="1、前言最近在写《程序员的macOS系列》文章，之前写的第一篇 程序员的macOS系列：精选Mac App，大家都希望楼主尽快更新，结果拖到了2个月后，所以今天终于更新啦！其实macOS开发环境，系统默认自带ruby、php、python2、gcc、g++、bash等环境，并且因为macOS是以Unix为基础，所以有传统Unix/Linux的特性，很适合高效少折腾的开发者。所以，本文主要讲解一些通">
@@ -95,6 +95,8 @@ var _hmt = _hmt || [];
 				<li><a href="/categories/technology">技和术</a></li>
 	        
 				<li><a href="/categories/induction">总和结</a></li>
+	        
+				<li><a href="/NotesEveryDay/">笔和记</a></li>
 	        
 				<li><a href="/categories/life">生和活</a></li>
 	        
@@ -172,6 +174,8 @@ var _hmt = _hmt || [];
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -194,19 +198,21 @@ var _hmt = _hmt || [];
 				<ul style="width: 82%">
 				
 				
-					<li style="width: 14.285714285714286%"><a href="/">首页</a></li>
+					<li style="width: 12.5%"><a href="/">首页</a></li>
 		        
-					<li style="width: 14.285714285714286%"><a href="/archives">归和档</a></li>
+					<li style="width: 12.5%"><a href="/archives">归和档</a></li>
 		        
-					<li style="width: 14.285714285714286%"><a href="/categories/technology">技和术</a></li>
+					<li style="width: 12.5%"><a href="/categories/technology">技和术</a></li>
 		        
-					<li style="width: 14.285714285714286%"><a href="/categories/induction">总和结</a></li>
+					<li style="width: 12.5%"><a href="/categories/induction">总和结</a></li>
 		        
-					<li style="width: 14.285714285714286%"><a href="/categories/life">生和活</a></li>
+					<li style="width: 12.5%"><a href="/NotesEveryDay/">笔和记</a></li>
 		        
-					<li style="width: 14.285714285714286%"><a href="/categories/poetry">诗和意</a></li>
+					<li style="width: 12.5%"><a href="/categories/life">生和活</a></li>
 		        
-					<li style="width: 14.285714285714286%"><a href="/more">更和多</a></li>
+					<li style="width: 12.5%"><a href="/categories/poetry">诗和意</a></li>
+		        
+					<li style="width: 12.5%"><a href="/more">更和多</a></li>
 		        
 				</ul>
 			</nav>
@@ -425,6 +431,26 @@ var _hmt = _hmt || [];
 <h4 id="Hexo_博客">Hexo 博客</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="operator"><span class="keyword">install</span> -<span class="keyword">g</span> hexo</span></span><br></pre></td></tr></table></figure>
 <p>具体<code>hexo</code>使用，可能参考之前的文章：<a href="https://ihtcboy.com/2015/09/06/2015_Hexo搭建Github-Pages博客填坑教程/">Hexo搭建Github Pages博客填坑教程</a></p>
 <p>建议每一个技术人员都搭建自己一个博客，依靠<code>GitHub</code>、<code>oschina</code>或<code>Coding.net</code>提供的免费服务，完全没问题，如果需要自己的域名，购买一个域名也就几百元就10年啦。程序员要多总结。比如你学习了一个技术或做了一个项目，没有一点记录，没有一点总结，没有一点思考，那么你能有收获吗？？？</p>
+<h4 id="Gitbook_博客">Gitbook 博客</h4><p>来到2020年，Gitbook 博客部署更加简单和快捷。</p>
+<p>博主的Gitbook：<a href="https://ihtcboy.com/NotesEveryDay/">iHTCboy 学习笔记</a></p>
+<ul>
+<li>安装环境命令：<code>$ npm install gitbook-cli -g</code></li>
+<li>在当前文件夹中，初始化一本书籍：<code>gitbook init</code></li>
+<li>在当前文件夹中，生成 _book 目录下创建 HTML 静态网页版电子书：<code>gitbook build</code></li>
+<li>本地预览：<code>gitbook serve</code></li>
+<li>查看帮助：<code>gitbook -h</code></li>
+<li>在根目录的 <code>book.json</code> 下编辑即可，可以在 gitbook 项目的根目录使用 <code>gitbook install ./</code> 来自动安装设置的插件。</li>
+</ul>
+<ul>
+<li><a href="https://einverne.github.io/gitbook-tutorial/" target="_blank" rel="external">Gitbook使用入门</a></li>
+<li><a href="https://blog.cugxuan.cn/2018/12/03/Markdown/How-to-use-gitbook-elegantly/" target="_blank" rel="external">如何优雅地使用 Gitbook | Xuan’s blog</a></li>
+<li><a href="https://juejin.im/post/6844903865146441741" target="_blank" rel="external">推荐12个实用的gitbook插件 - 掘金</a></li>
+<li><a href="https://segmentfault.com/a/1190000019806829" target="_blank" rel="external">gitbook常用的插件 - SegmentFault</a></li>
+<li><a href="https://www.bookstack.cn/read/gitbook-use/README.md" target="_blank" rel="external">记录GitBook的一些配置及插件信息 - 书栈网</a></li>
+<li><a href="https://www.xncoding.com/2017/11/30/gitbook.html" target="_blank" rel="external">使用GitBook编写项目文档 | 飞污熊博客</a></li>
+<li><a href="https://www.jianshu.com/p/da7d2d95d3a9" target="_blank" rel="external">GitBook源文件发布到gh-pages - 简书</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/125577482" target="_blank" rel="external">Gitbook踩坑记录III - 知乎</a></li>
+</ul>
 <h4 id="Safari_Extensions">Safari Extensions</h4><p>Safari 浏览器的插件<br><a href="https://safari-extensions.apple.com" target="_blank" rel="external">Apple - Safari - Safari Extensions Gallery</a></p>
 <p>为什么会用<code>Safari</code>？ 不推荐 <code>Google Chrome</code> ？ 一定很多人有这样的疑问，其实， <code>Safari</code> 作为官方浏览器，就像<code>Windows</code>的 <code>IE</code>/<code>Edge</code>一样，自己的儿子，一定更好用。我认为有2点吧，</p>
 <ul>
@@ -763,7 +789,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、前言"><span class="toc-number">1.</span> <span class="toc-text">1、前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、开发环境配置"><span class="toc-number">2.</span> <span class="toc-text">2、开发环境配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#命令行工具（Command_Line_Tools)"><span class="toc-number">2.1.</span> <span class="toc-text">命令行工具（Command Line Tools)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Homebrew"><span class="toc-number">2.2.</span> <span class="toc-text">Homebrew</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Homebrew_Cask"><span class="toc-number">2.2.1.</span> <span class="toc-text">Homebrew Cask</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Bash（Zsh）"><span class="toc-number">2.3.</span> <span class="toc-text">Bash（Zsh）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Node/npm"><span class="toc-number">2.4.</span> <span class="toc-text">Node/npm</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#vi(vim)"><span class="toc-number">2.5.</span> <span class="toc-text">vi(vim)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Git"><span class="toc-number">2.6.</span> <span class="toc-text">Git</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#python3"><span class="toc-number">2.7.</span> <span class="toc-text">python3</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#jenkins"><span class="toc-number">2.8.</span> <span class="toc-text">jenkins</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CocoaPods"><span class="toc-number">2.9.</span> <span class="toc-text">CocoaPods</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Carthage"><span class="toc-number">2.10.</span> <span class="toc-text">Carthage</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#包管理工具"><span class="toc-number">2.11.</span> <span class="toc-text">包管理工具</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、其它环境配置和插件"><span class="toc-number">3.</span> <span class="toc-text">3、其它环境配置和插件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Finder（访达）预览插件"><span class="toc-number">3.1.</span> <span class="toc-text">Finder（访达）预览插件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Hexo_博客"><span class="toc-number">3.2.</span> <span class="toc-text">Hexo 博客</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Safari_Extensions"><span class="toc-number">3.3.</span> <span class="toc-text">Safari Extensions</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Finder_访达"><span class="toc-number">3.4.</span> <span class="toc-text">Finder 访达</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#报错：无法打开已损坏的安装包"><span class="toc-number">3.5.</span> <span class="toc-text">报错：无法打开已损坏的安装包</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#macOS_Catalina_10-15_第三方软件文件提示已损坏解决办法"><span class="toc-number">3.6.</span> <span class="toc-text">macOS Catalina 10.15 第三方软件文件提示已损坏解决办法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#终端命令"><span class="toc-number">3.7.</span> <span class="toc-text">终端命令</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#总结"><span class="toc-number">4.</span> <span class="toc-text">总结</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考"><span class="toc-number">5.</span> <span class="toc-text">参考</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、前言"><span class="toc-number">1.</span> <span class="toc-text">1、前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、开发环境配置"><span class="toc-number">2.</span> <span class="toc-text">2、开发环境配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#命令行工具（Command_Line_Tools)"><span class="toc-number">2.1.</span> <span class="toc-text">命令行工具（Command Line Tools)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Homebrew"><span class="toc-number">2.2.</span> <span class="toc-text">Homebrew</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Homebrew_Cask"><span class="toc-number">2.2.1.</span> <span class="toc-text">Homebrew Cask</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Bash（Zsh）"><span class="toc-number">2.3.</span> <span class="toc-text">Bash（Zsh）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Node/npm"><span class="toc-number">2.4.</span> <span class="toc-text">Node/npm</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#vi(vim)"><span class="toc-number">2.5.</span> <span class="toc-text">vi(vim)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Git"><span class="toc-number">2.6.</span> <span class="toc-text">Git</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#python3"><span class="toc-number">2.7.</span> <span class="toc-text">python3</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#jenkins"><span class="toc-number">2.8.</span> <span class="toc-text">jenkins</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CocoaPods"><span class="toc-number">2.9.</span> <span class="toc-text">CocoaPods</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Carthage"><span class="toc-number">2.10.</span> <span class="toc-text">Carthage</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#包管理工具"><span class="toc-number">2.11.</span> <span class="toc-text">包管理工具</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、其它环境配置和插件"><span class="toc-number">3.</span> <span class="toc-text">3、其它环境配置和插件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Finder（访达）预览插件"><span class="toc-number">3.1.</span> <span class="toc-text">Finder（访达）预览插件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Hexo_博客"><span class="toc-number">3.2.</span> <span class="toc-text">Hexo 博客</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Gitbook_博客"><span class="toc-number">3.3.</span> <span class="toc-text">Gitbook 博客</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Safari_Extensions"><span class="toc-number">3.4.</span> <span class="toc-text">Safari Extensions</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Finder_访达"><span class="toc-number">3.5.</span> <span class="toc-text">Finder 访达</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#报错：无法打开已损坏的安装包"><span class="toc-number">3.6.</span> <span class="toc-text">报错：无法打开已损坏的安装包</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#macOS_Catalina_10-15_第三方软件文件提示已损坏解决办法"><span class="toc-number">3.7.</span> <span class="toc-text">macOS Catalina 10.15 第三方软件文件提示已损坏解决办法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#终端命令"><span class="toc-number">3.8.</span> <span class="toc-text">终端命令</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#总结"><span class="toc-number">4.</span> <span class="toc-text">总结</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考"><span class="toc-number">5.</span> <span class="toc-text">参考</span></a></li></ol>
                     </div>
                 </span>
             </div>
