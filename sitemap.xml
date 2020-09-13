@@ -2,6 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://iHTCboy.com/m3u8/index.html</loc>
+    <lastmod>2020-09-13T14:14:38.805Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://iHTCboy.com/more/index.html</loc>
+    <lastmod>2020-09-13T13:52:41.336Z</lastmod>
+  </url>
+  
+  <url>
     <loc>https://iHTCboy.com/2019/04/14/2019-04-14_django%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1django-crontab%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
     <lastmod>2020-09-13T13:45:41.499Z</lastmod>
   </url>
@@ -12,11 +22,6 @@
   </url>
   
   <url>
-    <loc>https://iHTCboy.com/m3u8/index.html</loc>
-    <lastmod>2020-09-13T13:15:04.970Z</lastmod>
-  </url>
-  
-  <url>
     <loc>https://iHTCboy.com/more/onemindmap.json</loc>
     <lastmod>2020-09-13T12:33:54.304Z</lastmod>
   </url>
@@ -24,11 +29,6 @@
   <url>
     <loc>https://iHTCboy.com/more/photos.json</loc>
     <lastmod>2020-09-13T12:22:35.366Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://iHTCboy.com/more/index.html</loc>
-    <lastmod>2020-09-13T12:06:08.847Z</lastmod>
   </url>
   
   <url>
