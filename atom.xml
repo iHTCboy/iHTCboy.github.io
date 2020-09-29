@@ -349,7 +349,7 @@
     <link href="https://iHTCboy.com/2020/06/11/2020-06-11_%E8%B7%A8%E5%B9%B3%E5%8F%B0%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF/"/>
     <id>https://iHTCboy.com/2020/06/11/2020-06-11_跨平台那些事儿/</id>
     <published>2020-06-11T11:00:00.000Z</published>
-    <updated>2020-08-22T03:15:33.309Z</updated>
+    <updated>2020-09-26T11:36:01.245Z</updated>
     <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>最近跟部门同学一起分享了跨平台的事儿，写了将近200+页ppt，最后只讲了100+页，只把其中重点的内容讲了，但是，我认为对跨平台的学习，不止是重点的技术内容，还有很多值得探索的问题，比如历史背景，历史发展，那些事儿，那些人儿，往往不经意间，改变历史的技术，就在那一瞬时，固守自封的必须会被淘汰，把握了机遇就有新出路，没有看准方向的会浪费大量的时间。当然，从历史脉络来看跨平台，必须千人千面，能有共鸣之处就好。</p>
 <blockquote>
 <p>下面会有将近200+图片，后续有时间，会针对每张ppt添加对应的讲解。</p>
@@ -581,6 +581,13 @@
 <li><a href="https://github.com/iHTCboy/iGallery/tree/master/BlogImages/IT/2020-cross-platform" target="_blank" rel="external">跨平台PPT图片</a></li>
 </ul>
 <p>以上就是跨平台那些事儿，当我们在谈论跨平台的时候，不止是Flutter，还有更多的底层知识或者新生命的事物，理解跨平台，才能应对 ReactNative、Flutter，或者未来的新事物，同时，还要跨越自己，让自己成为一个平台！那么，当我们再在谈论跨平台的时候，我们一定能够应对未来！这就是我想要表达的想法。</p>
+<blockquote>
+<ul>
+<li>系统化，实例化，具体化</li>
+<li>顺其自然，看发展（好坏，优劣，高低……）</li>
+<li>暮然回首，看起因（抓名词，找对象，全关系）</li>
+</ul>
+</blockquote>
 <h3 id="参考">参考</h3><p><strong>移动跨平台框架：</strong></p>
 <ul>
 <li><a href="[https://github.com/facebook/react-native](https://github.com/facebook/react-native">facebook/react-native: A framework for building native apps with React.</a>)</li>
@@ -615,6 +622,7 @@
 <li><a href="[http://blog.sina.com.cn/s/blog_6310d2980101goj1.html](http://blog.sina.com.cn/s/blog_6310d2980101goj1.html">【扫盲】HTML5、Web APP、3G网站、Wap网站傻傻分不清楚<em>慕辰北</em>新浪博客</a>)</li>
 <li><a href="[https://www.runoob.com/w3cnote/app-wap-difference.html](https://www.runoob.com/w3cnote/app-wap-difference.html">app和wap手机网站的区别在哪里 | 菜鸟教程</a>)</li>
 <li><a href="[https://www.zhihu.com/question/19911163](https://www.zhihu.com/question/19911163">Web 1.0、2.0、3.0 分别是什么意思？ - 知乎</a>)</li>
+<li><a href="https://open.163.com/newview/movie/free?pid=LF8OPA3LR&amp;mid=RF8OPA3M2" target="_blank" rel="external">你不知道的互联网30年秘史 - 网易公开课</a></li>
 <li><a href="[https://www.tencent.com/zh-cn/about.html](https://www.tencent.com/zh-cn/about.html">腾讯公司简介 - Tencent 腾讯</a>)</li>
 <li><a href="[http://www.sn.10086.cn/support/businesshelp/file9.html](http://www.sn.10086.cn/support/businesshelp/file9.html">WAP业务常见问题_中国移动通信</a>)</li>
 <li><a href="[https://gd.10086.cn/products_new/options/detail/GPRS_FUNCTION_10.shtml](https://gd.10086.cn/products_new/options/detail/GPRS_FUNCTION_10.shtml">GPRS套餐_广东移动</a>)</li>
@@ -633,6 +641,17 @@
 <li><a href="[https://zhuanlan.zhihu.com/p/48982978](https://zhuanlan.zhihu.com/p/48982978">什么是张量（tensor）&amp; 深度学习 - 知乎</a>)</li>
 <li><a href="[https://www.zhihu.com/question/19902056](https://www.zhihu.com/question/19902056">在移动领域，ARM 在哪些方面领先英特尔？ - 知乎</a>)</li>
 <li><a href="[https://blog.csdn.net/qian520ao/article/details/81144167](https://blog.csdn.net/qian520ao/article/details/81144167">Android屏幕绘制机制及硬件加速 - CSDN博客</a>)</li>
+<li><a href="https://www.cnblogs.com/skynet/p/5406495.html" target="_blank" rel="external">Unity3D手游开发实践 - 吴秦 - 博客园</a></li>
+<li><a href="https://www.zhihu.com/question/20602284" target="_blank" rel="external">sRGB 和 Adobe RGB 有什么区别？ - 知乎</a></li>
+<li><a href="https://support.apple.com/zh-cn/HT207354" target="_blank" rel="external">iPhone 上的状态图标和符号 - Apple 支持</a></li>
+<li><a href="https://hmxt.org/hdc-2019-%E9%B8%BF%E8%92%99os%E5%8F%91%E5%B8%83%E6%BC%94%E8%AE%B2" target="_blank" rel="external">HDC.2019 鸿蒙OS发布演讲 | 鸿蒙学堂</a></li>
+<li><a href="https://www.infoq.cn/article/l1E2L1CmqJYkUMyYwuhh" target="_blank" rel="external">跨平台技术趋势及字节跳动 Flutter 架构实践-InfoQ</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/95626955" target="_blank" rel="external">深入理解Android虚拟机及编译系统 - 知乎</a> 一次编码，到处运行的效果</li>
+<li><a href="https://books.binwell.com/- architectures-of-reactnative-xamarin-phonegap-qt/3.-architectures-of-cross-platform-mobile-frameworks" target="_blank" rel="external">Architectures of cross-platform mobile frameworks - Architectures of ReactNative, Xamarin, PhoneGap, Qt</a></li>
+<li><a href="https://engineering.linecorp.com/en/blog/- wrapping-a-native-sdk-for-unity/#" target="_blank" rel="external">Wrapping a native SDK for Unity: our challenges and choices - LINE ENGINEERING</a></li>
+<li><a href="https://mp.weixin.qq.com/s/OlSEpK-KKfpypwQFnJ4kfQ" target="_blank" rel="external">字节跳动为什么选用Flutter</a></li>
+<li><a href="https://mp.weixin.qq.com/s/UZQU-PWM5JEb3dYtZKT6Cw" target="_blank" rel="external">跨平台技术演进及Flutter未来</a></li>
+<li><a href="https://mp.weixin.qq.com/s/nBkcDaKkBxTL-rhKfAhLMg" target="_blank" rel="external">flutter: 一周感悟</a></li>
 </ul>
 <p><strong>软文：</strong></p>
 <ul>
