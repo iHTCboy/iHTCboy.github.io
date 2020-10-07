@@ -216,6 +216,105 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-2015_基于NSTimer的倒计时" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/04/17/2015_基于NSTimer的倒计时/">基于NSTimer的倒计时</a>
+    </h1>
+  
+
+        
+        <a href="/2015/04/17/2015_基于NSTimer的倒计时/" class="archive-article-date">
+  	<time datetime="2015-04-17T07:12:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-04-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>今天做手机短信验证码的功能，不用GCD，简单的NSTimer就可以完成,不知道有没有bug,测试中。。。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#pragma mark - &#20498;&#35745;&#26102;&#10;- (void)startCount&#10;&#123;&#10;   /**&#10;    *  &#28155;&#21152;&#23450;&#26102;&#22120;&#10;    */&#10;   self.currentCountDown = 120;&#10;   self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(countDown) userInfo:nil repeats:YES];&#10;   [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];&#10;   [self.timer fire];&#10;&#125;&#10;&#10;- (void)countDown&#123;&#10;   &#10;   if (self.currentCountDown &#62;0) &#123;&#10;       //&#35774;&#32622;&#30028;&#38754;&#30340;&#25353;&#38062;&#26174;&#31034; &#26681;&#25454;&#33258;&#24049;&#38656;&#27714;&#35774;&#32622;&#10;       [self.captchaBtn setTitle:[NSString stringWithFormat:@&#34;(%ld)&#37325;&#26032;&#33719;&#21462;&#34;,(long)self.currentCountDown] forState:UIControlStateNormal];&#10;       //self.captchaBtn.enabled = NO;&#10;       self.currentCountDown -= 1;&#10;   &#125;else&#123;&#10;       [self removeTimer];&#10;   &#125;  &#10;&#125;&#10;&#10;/**&#10;*  &#31227;&#38500;&#23450;&#26102;&#22120;&#10;*/&#10;- (void)removeTimer&#10;&#123;&#10;   self.currentCountDown = 0;&#10;   [self setCaptchaEnable:YES];&#10;   [self.timer invalidate];&#10;   self.timer = nil;&#10;&#125;&#10;&#10;&#10;//&#22240;&#20026;iOS 7&#19979; &#25353;&#38062; enabled= NO, &#19981;&#33021;&#35774;&#32622;&#25991;&#23383;&#10;#pragma mark - &#35774;&#32622;&#25353;&#38062;&#29366;&#24577;&#10;- (void)setCaptchaEnable:(BOOL)enabled&#123;&#10;   //&#21487;&#20197;&#25353;&#10;   if (enabled) &#123;&#10;       self.captchaBtn.userInteractionEnabled = YES;&#10;       [self.captchaBtn setBackgroundImage:[UIImage imageNamed:@&#34;back_red&#34;] forState:UIControlStateNormal];&#10;       [self.captchaBtn setTitle:@&#34;&#33719;&#21462;&#39564;&#35777;&#30721;&#34; forState:UIControlStateNormal];&#10;       &#10;   &#125;else&#123;&#10;       self.captchaBtn.userInteractionEnabled = NO;&#10;       [self.captchaBtn setBackgroundImage:[UIImage imageNamed:@&#34;back_gray&#34;] forState:UIControlStateNormal];&#10;   &#125;&#10;&#125;</span><br></pre></td></tr></table></figure>
+<p>在项目中目前是自己写的一个集成倒计时的按钮，这个思路暂时可以行！</p>
+<p><br></p>
+<blockquote>
+<p>注：本文首发于 <a href="http://iHTCboy.com">iHTCboy’s blog</a>，如若转载，请注来源</p>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">NSTimer</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">iOS</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">倒计时</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/technology//" class="article-tag-list-link color1">technology</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2015/04/17/2015_基于NSTimer的倒计时/">显示全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-2015_iOS报错：linker_command_failed_with_exit_code_1_(use_-v_to_see_invocation)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1078,101 +1177,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-2015-03-15_iOS代理方法导致崩溃的思考" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/03/15/2015-03-15_iOS代理方法导致崩溃的思考/">iOS代理方法导致崩溃的思考</a>
-    </h1>
-  
-
-        
-        <a href="/2015/03/15/2015-03-15_iOS代理方法导致崩溃的思考/" class="archive-article-date">
-  	<time datetime="2015-03-14T16:12:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-03-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1、前言">1、前言</h3><p>崩溃信息：</p>
-<blockquote>
-<p><em>*</em> Terminating app due to uncaught exception ‘NSInvalidArgumentException’, reason: ‘-[ProductPropViewController valueChanged:]: unrecognized selector sent to instance 0x7a69f2e0’</p>
-</blockquote>
-<p>最近在实习，由于是接手上一个人工程师写的项目，改了一些方法，导致了错误崩溃。</p>
-        
-          <a class="article-more-a" href="/2015/03/15/2015-03-15_iOS代理方法导致崩溃的思考/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">delegate</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">iOS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/technology//" class="article-tag-list-link color1">technology</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2015/03/15/2015-03-15_iOS代理方法导致崩溃的思考/">显示全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/15/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="page-number" href="/page/15/">15</a><span class="page-number current">16</span><a class="page-number" href="/page/17/">17</a><a class="page-number" href="/page/18/">18</a><span class="space">&hellip;</span><a class="page-number" href="/page/49/">49</a><a class="extend next" rel="next" href="/page/17/">Next &raquo;</a>
@@ -1296,6 +1300,18 @@ MathJax.Hub.Queue(function() {
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">正则表达式</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Regular Expression</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Regex</a>
+              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">产品</a>
@@ -2967,18 +2983,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">2021</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">正则表达式</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Regular Expression</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Regex</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Learn something of everything,  Learn everything of something.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="https://iHTCboy.com/"/>
-  <updated>2020-09-13T13:45:37.489Z</updated>
+  <updated>2020-10-07T14:02:39.325Z</updated>
   <id>https://iHTCboy.com/</id>
   
   <author>
@@ -13,6 +13,360 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[正则表达式知识总结]]></title>
+    <link href="https://iHTCboy.com/2020/10/02/2020-10-02_%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/"/>
+    <id>https://iHTCboy.com/2020/10/02/2020-10-02_正则表达式知识总结/</id>
+    <published>2020-10-02T07:49:16.000Z</published>
+    <updated>2020-10-07T14:02:39.325Z</updated>
+    <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>正则表达式，如果有一定编程经验的同学，一定知道，可能你知道，但又说不出个所以然来，平时不经常使用，很容易就忘记，有一部分原因，我认为是总结的内容，不够简单和深刻。所以，自己尝试总结一下正则表达式的基础知识点，对于大部分的编程场景应该足够使用啦。另外，也希望通过总结，以便后续忘记时，能快速的记忆起来，这就是本文章的主要内容。</p>
+<a id="more"></a>
+<h3 id="2、正则表达式">2、正则表达式</h3><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/10/RegularExpression.png" alt="RegularExpression.png"></p>
+<h4 id="匹配字符集">匹配字符集</h4><table>
+<thead>
+<tr>
+<th>语法</th>
+<th>匹配</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.</code></td>
+<td>匹配任意字符（除了<code>\n</code>）</td>
+<td>表达式：<code>.</code> 匹配任意一个字符</td>
+</tr>
+<tr>
+<td><code>[...]</code></td>
+<td>匹配字符集(<code>...</code> 表示任意字符)</td>
+<td>表达式:<code>[a-zA-Z]</code> 匹配任意一个小写或大写的字母。<br>表达式:<code>[iHTC]</code> 匹配 “i”, “H”, “T” 和 “C”。<br>表达式:<code>[e-k]</code> 匹配 “e” 到 “k” 之间的字符。</td>
+</tr>
+<tr>
+<td><code>\d</code></td>
+<td>匹配数字</td>
+<td>表达式：<code>a\d</code>，匹配字符串 “aaa123” 中的 <strong>a1</strong> 。<br>表达式：<code>a.\d</code>，匹配字符串 “aaa123” 中的 <strong>aa1</strong> 。</td>
+</tr>
+<tr>
+<td><code>\D</code></td>
+<td>匹配非数字</td>
+<td>表达式：<code>a.\D</code>，匹配字符串 “aaa123” 中的 <strong>aaa</strong> 。</td>
+</tr>
+<tr>
+<td><code>\s</code></td>
+<td>匹配空白字符（包括空格、制表符、换页符等空白字符，<code>[ \t\n\r\f]</code>）</td>
+<td>表达式：<code>a.\s</code>，匹配字符串 “aaa 123” 中的 <code>aa</code>（最后是空格） 。</td>
+</tr>
+<tr>
+<td><code>\S</code></td>
+<td>匹配非空白字符</td>
+<td>表达式：<code>a.\S</code>，匹配字符串 “aaa 123” 中的 <strong>aaa</strong> 。</td>
+</tr>
+<tr>
+<td><code>\w</code></td>
+<td>匹配单词字符（[a-zA-Z0-9_]和汉字）</td>
+<td>表达式：<code>a.\w</code>，匹配字符串 “aaa 123” 中的 <strong>aaa</strong> 。</td>
+</tr>
+<tr>
+<td><code>\W</code></td>
+<td>匹配非单词字符</td>
+<td>表达式：<code>a.\W</code>，匹配字符串 “aaa 123” 中的 <code>aa</code>（最后是空格） 。</td>
+</tr>
+<tr>
+<td><code>\</code></td>
+<td>转义字符</td>
+<td><code>\r</code>, <code>\n</code> 代表回车和换行符; <code>\t</code> 制表符; <code>\\</code> 代表 “\” 本身; <code>\^</code> 匹配 ^ 符号本身; <code>\$</code> 匹配 $ 符号本身; <code>\.</code> 匹配小数点（.）本身。</td>
+</tr>
+</tbody>
+</table>
+<h4 id="匹配量词（Quantifier）">匹配量词（Quantifier）</h4><table>
+<thead>
+<tr>
+<th>语法</th>
+<th>匹配</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>*</code></td>
+<td>匹配表达式出现 0次或者无限次，相当于 {0,}</td>
+<td>表达式：<code>a*</code>，匹配字符串 “aaa123” 中的 <strong>aaa</strong> 。</td>
+</tr>
+<tr>
+<td><code>+</code></td>
+<td>匹配表达式至少出现 1次或者无限次，相当于 {1,}</td>
+<td>表达式：<code>a+</code>，匹配字符串 “aaa123” 中的 <strong>aaa</strong> 。</td>
+</tr>
+<tr>
+<td><code>?</code></td>
+<td>匹配表达式 0次或者 1次，相当于 {0,1}</td>
+<td>表达式：<code>a?</code>，匹配字符串 “aaa123” 中的 <strong>a</strong> 。</td>
+</tr>
+<tr>
+<td><code>{m,n}</code></td>
+<td>匹配表达式至少重复 m 次，最多重复 n 次</td>
+<td>表达式：<code>a{1,2}</code>，匹配字符串 “aaa123” 中的 <strong>aa</strong> 。</td>
+</tr>
+<tr>
+<td><code>{m}</code></td>
+<td>匹配表达式重复 m 次</td>
+<td>表达式：<code>a{3}</code>，匹配字符串 “aaa123” 中的 <strong>aaa</strong> 。</td>
+</tr>
+<tr>
+<td><code>{m,}</code></td>
+<td>匹配表达式至少重复 m 次</td>
+<td>表达式：<code>a{1,}</code>，匹配字符串 “aaa123” 中的 <strong>aaa</strong> 。</td>
+</tr>
+<tr>
+<td><code>*?</code></td>
+<td>匹配模式变为非贪婪（尽可能少匹配字符），匹配表达式可以为 0次，也可以是无限次</td>
+<td>表达式：<code>a[0-9]*?23&#39;</code>，匹配字符串 “aaa123” 中的 <strong>a123</strong> 。<br>如果匹配字符串 “aaa23” 则为 <strong>a23</strong> 。<br>如果匹配字符串 “aaa456123” 则为 <strong>a456123</strong> 。</td>
+</tr>
+<tr>
+<td><code>+?</code></td>
+<td>匹配模式变为非贪婪（尽可能少匹配字符），匹配表达式至少 1次，也可以是无限次</td>
+<td>表达式：<code>a[0-9]+?23</code>，匹配字符串 “aaa123” 中的 <strong>a123</strong> 。<br>如果匹配字符串 “aaa23” 则匹配失败 。<br>如果匹配字符串 “aaa456123” 则为 <strong>a456123</strong> 。</td>
+</tr>
+<tr>
+<td><code>??</code></td>
+<td>匹配模式变为非贪婪（尽可能少匹配字符），匹配表达式最多 1次，也可以是 0次</td>
+<td>表达式：<code>a[0-9]??23</code>，匹配字符串 “aaa123” 中的 <strong>a123</strong> 。<br>如果匹配字符串 “aaa23” 则为 <strong>a23</strong> 。<br>如果匹配字符串 “aaa456123” 则匹配失败。</td>
+</tr>
+<tr>
+<td><code>{m,n}?</code></td>
+<td>非贪婪模式，匹配符合的最短的字符串</td>
+<td>表达式：<code>a[0-9]{1,4}?23</code>，匹配字符串 “aaa123” 中的 <strong>a123</strong> 。<br>如果匹配字符串 “aaa23” 则匹配失败 。<br>如果匹配字符串 “aaa456123” 则为 <strong>a456123</strong></td>
+</tr>
+</tbody>
+</table>
+<h4 id="匹配边界">匹配边界</h4><table>
+<thead>
+<tr>
+<th>语法</th>
+<th>匹配</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>^</code></td>
+<td>匹配字符串开头</td>
+<td>表达式：<code>^\d</code> 表示必须以数字开头。<br>表达式：<code>[^abc]</code> 匹配 <code>a</code>, <code>b</code>, <code>c</code> 之外的任意一个字符。</td>
+</tr>
+<tr>
+<td><code>$</code></td>
+<td>匹配字符串结尾</td>
+<td>表达式：<code>*.com$</code> 匹配 .com 结尾的字符串。<br> <code>\d$</code>表示必须以数字结束。</td>
+</tr>
+<tr>
+<td><code>\A</code></td>
+<td>指定的字符串匹必须出现在开头</td>
+<td>表达式：<code>\Aa</code>，匹配字符串 “aaa123” 中的 <strong>a</strong> 。</td>
+</tr>
+<tr>
+<td><code>\Z</code></td>
+<td>指定的字符串匹必须出现在结尾。如果是存在换行，只匹配到换行前的结束字符串。</td>
+<td>表达式：<code>\d\Z</code>，匹配字符串 “aaa123” 中的 <strong>3</strong> 。</td>
+</tr>
+<tr>
+<td><code>\b</code></td>
+<td>匹配一个单词边界，但只在单词开始或结尾的位置，即匹配 <code>\w</code> 和 <code>\W</code> 之间。（本身不匹配任何字符）</td>
+<td>表达式：<code>\b4</code>，匹配字符串 “aaa123 456” 中的 <strong>4</strong> 。<br>表达式：<code>\b5</code>，匹配字符串 “aaa123 456” 则为失败。</td>
+</tr>
+<tr>
+<td><code>\B</code></td>
+<td>匹配非单词边界，但不能在词的开头或者结尾，即匹配 <code>[^\b]</code> 。（本身不匹配任何字符）</td>
+<td>表达式：<code>\B4</code>，匹配字符串 “aaa123 456” 则为失败。<br>表达式：<code>\B5</code>，匹配字符串 “aaa123 456” 中的 <strong>5</strong> 。</td>
+</tr>
+</tbody>
+</table>
+<h4 id="匹配条件分组">匹配条件分组</h4><table>
+<thead>
+<tr>
+<th>语法</th>
+<th>匹配</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>`</td>
+<td>`</td>
+<td>匹配左右任意一个表达式</td>
+<td>表达式：`a</td>
+<td>b`，匹配字符串 “aaa123” 中的 <strong>a</strong> 。</td>
+</tr>
+<tr>
+<td><code>(ab)</code></td>
+<td>括号中表达式作为一个分组</td>
+<td>表达式：<code>(a1)</code>，匹配字符串 “aaa123” 中的 <strong>a1</strong> 。<br>表达式：`(P</td>
+<td>p)ython`，可以匹配 <strong>Python</strong> 或者 <strong>python</strong>。</td>
+</tr>
+<tr>
+<td><code>(?:exp)</code></td>
+<td>表示非捕获分组，匹配 pattern 但不获取匹配结果。</td>
+<td>表达式：<code>([a-z]*)([0-9]*)([a-z]*)</code>，匹配字符串 <code>&quot;aaa123def456&quot;</code> 中的 <strong>‘aaa’, ‘123’, ‘def’</strong> 。<br>表达式：<code>(?:[a-z]*)([0-9]*)([a-z]*)</code>，匹配字符串 “aaa123def456” 中的 <strong>‘123’, ‘def’</strong> 。</td>
+</tr>
+<tr>
+<td><code>\&lt;number&gt;</code></td>
+<td>引用编号为 number 的分组(规则)匹配到的字符串</td>
+<td>表达式：<code>(\d)def\1</code>，匹配字符串 “aaa123def321” 中的 <strong>3def3</strong> 。</td>
+</tr>
+<tr>
+<td><code>(?P&lt;name&gt;)</code></td>
+<td>给分组起一个别名 name</td>
+<td>表达式：<code>(?P&lt;tag&gt;\d)def(?P=tag)</code>，匹配字符串 “aaa123def321” 中的 <strong>3def3</strong> 。</td>
+</tr>
+<tr>
+<td><code>(?P=name)</code></td>
+<td>引用别名为 name 的分组匹配字符串</td>
+<td>表达式：<code>&lt;(?P&lt;tag&gt;\w*)&gt;.*&lt;/(?P=tag)&gt;</code>，匹配字符串 <code>&lt;html&gt;&lt;h1&gt;www.iHTCboy.com&lt;/h1&gt;&lt;html&gt;</code> 中的 <code>&lt;h1&gt;www.iHTCboy.com&lt;/h1&gt;</code> 。</td>
+</tr>
+</tbody>
+</table>
+<h4 id="预搜索">预搜索</h4><table>
+<thead>
+<tr>
+<th>语法</th>
+<th>匹配</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>(?=exp)</code></td>
+<td>断言自身出现的位置的后面能匹配表达式 exp，exp1(?=exp2)：查找 exp2 前面的 exp1。</td>
+<td>表达式：`Windows(?=XP</td>
+<td>7</td>
+<td>8)` 能匹配<strong>Windows7</strong> 中的 “Windows”，但不能匹配 <strong>Windows10</strong> 中的“Windows”。</td>
+</tr>
+<tr>
+<td><code>(?!exp)</code></td>
+<td>断言自身出现的位置的后面不能匹配表达式 exp，exp1(?!exp2)：查找后面不是 exp2 的 exp1。</td>
+<td>表达式：`Windows(?!XP</td>
+<td>7</td>
+<td>8)` 能匹配<strong>Windows10</strong> 中的“Windows”，但不能匹配 <strong>Windows7</strong> 中的“Windows”。</td>
+</tr>
+<tr>
+<td><code>(?&lt;=exp)</code></td>
+<td>断言自身出现的位置的前面能匹配表达式 exp，(?&lt;=exp2)exp1：查找 exp2 后面的 exp1。</td>
+<td>表达式：`(?&lt;=XP</td>
+<td>7</td>
+<td>8)Windows` 能匹配 <strong>7Windows</strong> 中的“Windows”，但不能匹配 <strong>10Windows</strong> 中的“Windows”。</td>
+</tr>
+<tr>
+<td><code>(?&lt;!exp)</code></td>
+<td>断言自身出现的位置的前面不能匹配表达式 exp，(?&lt;!=exp2)exp1：查找前面不是 exp2 的 exp1。</td>
+<td>表达式：`(?&lt;!XP</td>
+<td>7</td>
+<td>8)Windows` 能匹配 <strong>10Windows</strong> 中的“Windows”，但不能匹配 <strong>7Windows</strong> 中的“Windows”。</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>exp ：expression（表达式）</p>
+</blockquote>
+<h4 id="匹配模式">匹配模式</h4><table>
+<thead>
+<tr>
+<th>类型</th>
+<th>模式</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>IGNORECASE</code></td>
+<td>忽略大小写模式</td>
+<td>匹配时忽略大小写。（正则默认是区分大小写的）</td>
+</tr>
+<tr>
+<td><code>SINGLELINE</code></td>
+<td>单行模式</td>
+<td>整个文本看作一个字符串，只有一个开头一个结尾</td>
+</tr>
+<tr>
+<td><code>MULTILINE</code></td>
+<td>多行模式</td>
+<td>每行都是一个字符串。在多行模式下，如果需要仅匹配字符串开始和结束位置，可以使用 \A 和 \Z</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3、Python_正则表达式">3、Python 正则表达式</h3><p>如果使用编辑语言来执行正则表达式呢？所有语言都是相通的，这是记录了之前使用 Python 的 re 模块做正则匹配的功能。</p>
+<h4 id="compile_和_match_函数">compile 和 match 函数</h4><p><code>re.compile</code> 函数用于编译正则表达式，生成一个正则表达式（ Pattern ）对象，供 match()、search() 等函数使用。<br><code>re.match</code> 尝试从字符串的起始位置匹配一个模式，如果字符串开始不符合正则表达式，就返回 None 。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">result = re.match(pattern, string)</span><br></pre></td></tr></table></figure>
+<p>等价于</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">prog = re.compile(pattern)&#10;result = prog.match(string)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注：如果需要多次使用这个正则表达式的话，使用 <code>re.compile()</code> 保存这个正则对象以便复用匹配多个字符串，可以让程序更加高效。</p>
+</blockquote>
+<h4 id="search_函数">search 函数</h4><p><code>re.search</code> 扫描整个字符串并返回第一个成功的匹配。如果没有匹配，就返回一个 None 。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">re.search(pattern, string, flags=0)</span><br></pre></td></tr></table></figure>
+<p>示例：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#62;&#62;&#62; re.search(&#39;iHTCboy&#39;, &#39;www.iHTCboy.com&#39;)&#10;&#62;&#62;&#62; &#10;&#60;re.Match object; span=(4, 11), match=&#39;iHTCboy&#39;&#62;</span><br></pre></td></tr></table></figure></p>
+<p>我们可以使用 <code>group(num)</code> 或 <code>groups()</code> 匹配对象函数来获取匹配表达式。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#62;&#62;&#62; searchObj = re.search( r&#39;(.*) are (.*?) .*&#39;, &#34;iHTCboy are my nikename)&#10;&#62;&#62;&#62; print(searchObj.group())&#10;&#62;&#62;&#62; print(searchObj.groups())&#10;&#62;&#62;&#62; print(searchObj.group(1))&#10;&#62;&#62;&#62; print(searchObj.group(2))&#10;&#62;&#62;&#62; &#10;iHTCboy are my nikename&#10;(&#39;iHTCboy&#39;, &#39;my&#39;)&#10;iHTCboy&#10;my</span><br></pre></td></tr></table></figure>
+<h4 id="findall_函数">findall 函数</h4><p><code>re.findall</code> 在字符串中找到正则表达式所匹配的所有子串，并返回一个列表，如果没有找到匹配的，则返回空列表。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">re.findall(pattern, string, flags=0)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>对 <code>string</code> 返回一个不重复的 <code>pattern</code> 的匹配列表， <code>string</code> 从左到右进行扫描，匹配按找到的顺序返回。如果样式里存在一到多个组，就返回一个组合列表；就是一个元组的列表（如果样式里有超过一个组合的话）。空匹配也会包含在结果里。</p>
+</blockquote>
+<p>比如查找字符串中的所有数字：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#62;&#62;&#62; result2 = re.findall(r&#39;\d+&#39;, &#39;abc123d4efg567&#39;)&#10;&#62;&#62;&#62; &#10;[&#39;123&#39;, &#39;4&#39;, &#39;567&#39;]</span><br></pre></td></tr></table></figure></p>
+<p>查找不是以 4、7 结尾的手机号码(11位)手机号码：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#62;&#62;&#62; result2 = re.findall(r&#39;^1\d&#123;9&#125;[0-35-68-9]$&#39;, &#39;xxxxx&#39;)&#10;&#62;&#62;&#62;</span><br></pre></td></tr></table></figure></p>
+<h4 id="finditer_函数">finditer 函数</h4><p>和 findall 类似，在字符串中找到正则表达式所匹配的所有子串，并把它们作为一个迭代器返回。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">re.finditer(pattern, string, flags=0)</span><br></pre></td></tr></table></figure>
+<p>搜索string，返回一个顺序访问每一个匹配结果（Match对象）的迭代器：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="prompt">&gt;&gt;&gt; </span><span class="keyword">for</span> m <span class="keyword">in</span> re.finditer(<span class="string">r'\d+'</span>, <span class="string">'abc123d4efg567'</span>):</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span>	print(m.group())</span><br><span class="line"><span class="prompt">&gt;&gt;&gt; </span> </span><br><span class="line"><span class="number">123</span></span><br><span class="line"><span class="number">4</span></span><br><span class="line"><span class="number">567</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="split_函数">split 函数</h4><p><code>re.split</code> 方法按照能够匹配的子串将字符串分割后返回列表。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">re.split(pattern, string, maxsplit=0, flags=0)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>用 <code>pattern</code> 分开 <code>string</code> 。如果 <code>maxsplit</code> 非零， 最多进行 <code>maxsplit</code> 次分隔， 剩下的字符全部返回到列表的最后一个元素。</p>
+</blockquote>
+<p>对于规则的字符串，比如 <code>abc</code> 我们一般可以用 split 函数分割，但是如果遇到 <code>a b   c</code> 这样的字符串，得到的结果就是 <code>[&#39;a&#39;, &#39;b&#39;, &#39;&#39;, &#39;&#39;, &#39;c&#39;]</code>。所以，你可能需要人工来自己再次过滤，而使用正则表达式来处理，就显示很轻松：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#62;&#62;&#62; re.split(r&#39;[\s\,]+&#39;, &#39;a,b, c  d&#39;)&#10;&#62;&#62;&#62; &#10;[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;]</span><br></pre></td></tr></table></figure>
+<p>上面的 <code>[\s\,]+</code> 表示匹配 <code>\s</code> (空格）和 <code>,</code> 中任意一个至少一次的分割。</p>
+<p>对于一个找不到匹配的字符串而言，split 不会对其作出分割。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#62;&#62;&#62; re.split(&#39;a*&#39;, &#39;hello iHTCboy&#39;)&#10;&#62;&#62;&#62; &#10;[&#39;hello iHTCboy&#39;]</span><br></pre></td></tr></table></figure>
+<h4 id="sub_函数">sub 函数</h4><p><code>re.sub</code> 用于替换字符串中的匹配项。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">re.sub(pattern, repl, string, count=0, flags=0)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>返回通过使用 <code>repl</code> 替换在 <code>string</code> 最左边非重叠出现的 <code>pattern</code> 而获得的字符串。 如果样式没有找到，则不加改变地返回 string。 <code>repl</code> 可以是字符串或函数；如为字符串，则其中任何反斜杠转义序列都会被处理。 也就是说，<code>\n</code> 会被转换为一个换行符，<code>\r</code> 会被转换为一个回车附，依此类推。 </p>
+</blockquote>
+<p>比如电话号码格式可能带有空格或者-时，可以替换为空字符串：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#62;&#62;&#62; re.sub(r&#39;\D&#39;, &#34;&#34;, &#34;188-8888-8888&#34;)&#10;&#62;&#62;&#62; &#10;18888888888</span><br></pre></td></tr></table></figure>
+<p><code>repl</code> 参数可以是一个函数，用于对匹配的内容进行更多的逻辑处理：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># &#23558;&#21305;&#37197;&#30340;&#25968;&#23383;&#20056;&#20197; 2&#10;&#62;&#62;&#62; def double(matched):&#10;&#62;&#62;&#62;     value = int(matched.group(&#39;value&#39;))&#10;&#62;&#62;&#62;     return str(value * 2)&#10;&#62;&#62;&#62;  &#10;&#62;&#62;&#62; re.sub(&#39;(?P&#60;value&#62;\d+)&#39;, double, &#39;abc123d4efg567&#39;)&#10;&#62;&#62;&#62; &#10;abc246d8efg1134</span><br></pre></td></tr></table></figure>
+<h3 id="总结">总结</h3><p>正则表达式的内容有非常的多，如果不经常使用的话，可以就会很快忘记。所以，正则其实是不是应该记住呢？其实，应该是要记住，如果记不住，要不要紧？其实，是不要紧，因为正则就想查表一下，你如果之前已经比较系统的学习过，忘记了规则，看一下本文就大概记起来了。所以，这就是本文的目的，总结性的文章，不需要太多的复杂，简单又快捷的总结。</p>
+<p>国庆中秋双节快乐！这篇文章应该是去年9月就定下来但迟迟没有动手，现在又过一年了，感叹生活真快。好好学习，天天快乐~</p>
+<h3 id="参考">参考</h3><ul>
+<li><a href="https://www.imooc.com/learn/550" target="_blank" rel="external">python正则表达式_python正则表达式教程_python正则表达式视频教程-慕课网</a></li>
+<li><a href="https://docs.python.org/zh-cn/3/library/re.html#" target="_blank" rel="external">re — 正则表达式操作 — Python 3.8.6 文档</a></li>
+<li><a href="https://ihtcboy.com/NotesEveryDay/Development/RegularExpression.html">正则表达式 - 笔记</a></li>
+</ul>
+<p><br></p>
+<ul>
+<li>如有疑问，欢迎在评论区一起讨论！</li>
+<li>如有不正确的地方，欢迎指导！</li>
+</ul>
+<p><br></p>
+<blockquote>
+<p>注：本文首发于 <a href="https://iHTCboy.com">iHTCboy’s blog</a>，如若转载，请注来源</p>
+</blockquote>
+<p><br></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h3 id="1、前言">1、前言</h3><p>正则表达式，如果有一定编程经验的同学，一定知道，可能你知道，但又说不出个所以然来，平时不经常使用，很容易就忘记，有一部分原因，我认为是总结的内容，不够简单和深刻。所以，自己尝试总结一下正则表达式的基础知识点，对于大部分的编程场景应该足够使用啦。另外，也希望通过总结，以便后续忘记时，能快速的记忆起来，这就是本文章的主要内容。</p>]]>
+    
+    </summary>
+    
+      <category term="Regex" scheme="https://iHTCboy.com/tags/Regex/"/>
+    
+      <category term="Regular Expression" scheme="https://iHTCboy.com/tags/Regular-Expression/"/>
+    
+      <category term="正则表达式" scheme="https://iHTCboy.com/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+    
+      <category term="technology" scheme="https://iHTCboy.com/categories/technology/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[商业模式和盈利模式的思考]]></title>
@@ -5561,7 +5915,7 @@ InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault
     <link href="https://iHTCboy.com/2019/12/02/2019-12-02_GMTC2019_%E5%9F%BA%E4%BA%8E%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8A%80%E6%9C%AF%E6%A0%88%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%B7%A8%E5%B9%B3%E5%8F%B0%E5%AE%9E%E8%B7%B5/"/>
     <id>https://iHTCboy.com/2019/12/02/2019-12-02_GMTC2019_基于小程序技术栈的微信客户端跨平台实践/</id>
     <published>2019-12-02T04:49:16.000Z</published>
-    <updated>2020-08-22T03:15:34.213Z</updated>
+    <updated>2020-10-01T02:54:00.991Z</updated>
     <content type="html"><![CDATA[<h3 id="1、简介">1、简介</h3><p>《基于小程序技术栈的微信客户端跨平台实践》<br> 张志坚 / 微信 高级工程师</p>
 <ul>
 <li><p>演讲简介：</p>
@@ -8273,102 +8627,6 @@ DOM 架构方案在文本编辑与图形渲染操作方面的优缺点
       <category term="Fabric" scheme="https://iHTCboy.com/tags/Fabric/"/>
     
       <category term="Python" scheme="https://iHTCboy.com/tags/Python/"/>
-    
-      <category term="technology" scheme="https://iHTCboy.com/categories/technology/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[在旧的Mac上使用随航(Sidecar)]]></title>
-    <link href="https://iHTCboy.com/2019/10/12/2019-10-12_%E5%9C%A8%E6%97%A7%E7%9A%84Mac%E4%B8%8A%E4%BD%BF%E7%94%A8%E9%9A%8F%E8%88%AASidecar/"/>
-    <id>https://iHTCboy.com/2019/10/12/2019-10-12_在旧的Mac上使用随航Sidecar/</id>
-    <published>2019-10-12T15:01:16.000Z</published>
-    <updated>2020-08-22T03:15:33.414Z</updated>
-    <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>6月 <code>WWDC2019</code> 上苹果发布新的 <code>macOS 10.15</code>，同时发布 <code>Sidecar</code>（随航）功能，可以把 <code>macOS</code> 界面转发到 <code>iPad</code> 上，但是对于旧的 Mac 电脑，不支持随航功能！我的 <code>MacBook Pro (Retina, 13-inch, Mid 2014)</code> 哭晕在厕所~</p>
-<a id="more"></a>
-<h3 id="2、Sidecar（随航）">2、Sidecar（随航）</h3><p>按苹果的介绍：</p>
-<blockquote>
-<p>Sidecar: Expand Mac Workspace and Creativity with iPad </p>
-<p>The new Sidecar feature extends a user’s Mac workspace by using iPad as a second display, allowing them to spread out their work. With Sidecar, you can use an iPad display for tablet input to draw, sketch or write with Apple Pencil in any Apple or third-party Mac app that supports stylus input. Sidecar runs on a wired connection so users can charge their iPad as they work, or on a wireless connection for greater mobility, using everything from illustration apps and video editing apps to 3D apps, like Photoshop, Illustrator and ZBrush.</p>
-</blockquote>
-<p>翻译过来就是：</p>
-<blockquote>
-<p>Sidecar：扩展 Mac 的工作空间和用 iPad 创作</p>
-<p>新的 Sidecar 功能通过使用 iPad 作为第二显示器，让他们把她们的工作延长了用户的 Mac 工作区。边三轮，您可以使用 iPad 显示屏的平板电脑输入画，素描或与苹果铅笔在任何苹果或支持手写笔输入的第三方 Mac 应用程序编写。三轮有线连接上运行，以便为他们工作的用户可以收取他们的 iPad 或对流动性较大的无线连接，使用一切从插图的应用程序和视频编辑应用到3D 应用程序，如 Photoshop，Illustrator 和 ZBrush的。</p>
-</blockquote>
-<h3 id="2、解决的方法">2、解决的方法</h3><h4 id="前述">前述</h4><p>在 macOS10.15 beta 版本时，旧版的Mac电脑，可以通过下面的命令开启 Sidecar：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">defaults write com.apple.sidecar.display AllowAllDevices -bool true;&#10;defaults write com.apple.sidecar.display hasShownPref -bool true;&#10;open /System/Library/PreferencePanes/Sidecar.prefPane</span><br></pre></td></tr></table></figure>
-<p>然而，在正式版 macOS 10.15 上面的命令已经失败，被列入黑名单了。执行命令后提示：<code>您无法打开“随航”偏好设置面板，因为该面板此时不可用。</code></p>
-<p>其实，这个原因，还是回到问题本身，为什么苹果限制为旧的 Mac 上使用 Sidecar（随航）？</p>
-<p>按照网上讨论的解释：</p>
-<blockquote>
-<p>Sidecar功能依赖于 <code>HEVC</code>，而 HEVC 一个高效率的视频编解码器。与 Intel 的<code>SKYLAKE</code> 架构 CPU 处理器开始，增加了内置支持的这种编解码器。</p>
-</blockquote>
-<h4 id="后述">后述</h4><p>当然，这样的情况下，还是有大神做了一个脚本，执行后，可以修改 SidecarCore 苹果私有框架（SidecarCore.framework）从黑名单中移除您的Mac机型。</p>
-<p>具体脚本见：<a href="http://dev.zeppel.eu/luca/SidecarCorePatch" target="_blank" rel="external">luca/SidecarCorePatch: Enables Sidecar support on MacOS Catalina 10.15 Beta on non Apple supported devices. - Zeppel</a></p>
-<blockquote>
-<ol>
-<li>Backup /System/Library/PrivateFrameworks/SidecarCore.framework/Versions/A/SidecarCore in case something goes wrong.</li>
-<li>Disable SIP. Check status with $ csrutil status</li>
-<li>clone this repo $ git clone <a href="http://dev.zeppel.eu/luca/SidecarCorePatch.git" target="_blank" rel="external">http://dev.zeppel.eu/luca/SidecarCorePatch.git</a></li>
-<li>run the patch as root $ sudo swift patch.swift</li>
-<li>reboot your mac</li>
-</ol>
-</blockquote>
-<ol>
-<li>备份 /System/Library/PrivateFrameworks/SidecarCore.framework/Versions/A/SidecarCore 以备无防.</li>
-<li>关闭 SIP. 通过这个命令检查是否关闭： <code>$ csrutil status</code></li>
-<li>克隆本仓库 <code>$ git clone http://dev.zeppel.eu/luca/SidecarCorePatch.git</code></li>
-<li>使用管理员权限执行脚本：<code>$ sudo swift patch.swift</code></li>
-<li>重启 mac</li>
-</ol>
-<p>注：关于 <a href="https://en.wikipedia.org/wiki/System_Integrity_Protection" target="_blank" rel="external">SIP</a>（System Integrity Protection, 系统完整性保护）这里就不多说，可以<a href="https://www.jianshu.com/p/fe78d2036192" target="_blank" rel="external">自行搜索</a>。要关闭 SIP，需要进入恢复系统模式的终端下执行 <code>csrutil disable</code>。</p>
-<p>在这里就不多说了，因人而异。</p>
-<p><strong>需要补充说明一下，虽然这个方法可以让旧的 Mac 实现 Sidecar（随航），但是会出现闪屏！！闪屏！！闪屏！！</strong></p>
-<p>所以，如果只是想体验的，可以试试，否则，还是放弃吧…</p>
-<h3 id="3、最佳的情况">3、最佳的情况</h3><p>按 <a href="https://www.apple.com/macos/catalina/docs/Sidecar_Tech_Brief_Oct_2019.pdf" target="_blank" rel="external">苹果的文档</a> Sidecar 对设备的要求：</p>
-<h4 id="Macs">Macs</h4><p>MacBook introduced in 2016 or later<br>MacBook Air introduced in 2018 or later<br>MacBook Pro introduced in 2016 or later<br>Mac mini introduced in 2018 or later<br>iMac introduced in late 2015 or later<br>iMac Pro introduced in 2017 or later<br>Mac Pro introduced in 2019</p>
-<h4 id="iPads">iPads</h4><p>12.9-inch iPad Pro<br>11-inch iPad Pro<br>10.5-inch iPad Pro<br>9.7-inch iPad Pro<br>iPad (6th generation or later)<br>iPad mini (5th generation)<br>iPad Air (3rd generation)</p>
-<h4 id="环境要求">环境要求</h4><ol>
-<li>必须登录同一个 Apple ID 的两台设备上（一台Mac，一台iPad）</li>
-<li>Apple ID 开启了双重因素身份验证，必须在iPad和Mac上启用</li>
-<li>必须是设备上开启蓝牙</li>
-<li>如果以无线方式连接，确保两个设备连接到同一个WiFi网络</li>
-<li>Mac 系统为 <code>macOS 10.15</code> 以上，iPad 系统为 <code>iPadOS 13</code> 以上</li>
-</ol>
-<h3 id="3、总结">3、总结</h3><p>按照苹果的技术水平，我们有理由充分相信苹果的技术是做了努力，所以苹果会让尽多的旧设备支持最新的体验。现在硬件的淘汰比技术的淘汰还要快，更不要说前端的技术更新很快，硬件的更新如果不快一点，大家就吐槽说没有创新！21世纪的前20年，感受了技术的爆发式增长，希望接下来的20年，依然让人心潮澎湃！</p>
-<p>当然，如果真想在旧Mac上使用分屏多屏，还是有办法的，比如使用著名的第三方软件 <code>Duet</code>！但是我依然觉得太卡（可能是我设备太旧的….iPad mini 2）~ 它支持多系统平台，如果需要可以试试。</p>
-<p>总的来说，又多了一个理由换 MBP! 对于程序员，写代码的环境，总是觉得屏幕不够大！如果是在空，我或许建议买一个显示器，如果是经常移动办公，或者喜欢去咖啡馆的朋友，可能有需要。而且，我相信，分屏的场景会越来越多，比如2个人用一个电脑，一个工作，一个显示肥皂剧~</p>
-<p>结合最近看的<code>WWDC 2019</code>视频，多个session都表示，苹果希望打造一个OS生态，把iOS 应用带到 macOS，是一个伟大而现实的一步。苹果这几年来的创新，应该就是对生态系统的整合，从 <code>Handoff</code> 到收购 <code>workflow</code>，变成 <code>Shortcuts</code>, iOS 到 iPadOS，企图壮大<code>macOS</code>！当然，从家长监控软件，到<code>Duet</code>，大家都是觉得苹果<code>抄</code>他们的生活的绝路，也许绝路才是最好的前路！也许，这就是残酷的现实，像19世界汽车出现让多数马夫很愤怒，而现在的我们已经没有<code>感知</code>，我们所期待的苹果，总有替代更新，也许是这样的规律~</p>
-<h3 id="参考">参考</h3><ul>
-<li><a href="https://www.apple.com/macos/catalina/docs/Sidecar_Tech_Brief_Oct_2019.pdf" target="_blank" rel="external">Sidecar_Tech_Brief_Oct_2019 - Apple</a></li>
-<li><a href="https://www.reddit.com/r/apple/comments/bx3eet/sidecar_support_on_older_macs/" target="_blank" rel="external">Sidecar support on older Macs : apple</a></li>
-<li><a href="https://appletoolbox.com/sidecar-not-working-in-ipados-and-macos-how-to-fix-sidecar-problems/" target="_blank" rel="external">Sidecar not working in iPadOS and macOS? How to fix Sidecar problems - AppleToolBox</a></li>
-<li><a href="https://www.engadget.com/2019/10/08/apple-macos-sidecar-newer-macs/" target="_blank" rel="external">Apple’s Sidecar feature only works on newer Macs</a></li>
-<li><a href="https://www.jianshu.com/p/fe78d2036192" target="_blank" rel="external">Mac开启关闭SIP（系统完整性保护） - 简书</a></li>
-</ul>
-<p><br></p>
-<ul>
-<li>如有疑问，欢迎在评论区一起讨论！</li>
-<li>如有不正确的地方，欢迎指导！</li>
-</ul>
-<p><br></p>
-<blockquote>
-<p>注：本文首发于 <a href="https://iHTCboy.com">iHTCboy’s blog</a>，如若转载，请注来源<br><br></p>
-</blockquote>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h3 id="1、前言">1、前言</h3><p>6月 <code>WWDC2019</code> 上苹果发布新的 <code>macOS 10.15</code>，同时发布 <code>Sidecar</code>（随航）功能，可以把 <code>macOS</code> 界面转发到 <code>iPad</code> 上，但是对于旧的 Mac 电脑，不支持随航功能！我的 <code>MacBook Pro (Retina, 13-inch, Mid 2014)</code> 哭晕在厕所~</p>]]>
-    
-    </summary>
-    
-      <category term="Mac" scheme="https://iHTCboy.com/tags/Mac/"/>
-    
-      <category term="Sidecar" scheme="https://iHTCboy.com/tags/Sidecar/"/>
-    
-      <category term="macOS" scheme="https://iHTCboy.com/tags/macOS/"/>
-    
-      <category term="随航" scheme="https://iHTCboy.com/tags/%E9%9A%8F%E8%88%AA/"/>
     
       <category term="technology" scheme="https://iHTCboy.com/categories/technology/"/>
     
