@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Learn something of everything,  Learn everything of something.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="https://iHTCboy.com/"/>
-  <updated>2020-10-07T15:00:41.683Z</updated>
+  <updated>2020-10-07T15:14:28.819Z</updated>
   <id>https://iHTCboy.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="https://iHTCboy.com/2020/10/02/2020-10-02_%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/"/>
     <id>https://iHTCboy.com/2020/10/02/2020-10-02_正则表达式知识总结/</id>
     <published>2020-10-02T07:49:16.000Z</published>
-    <updated>2020-10-07T15:00:41.683Z</updated>
+    <updated>2020-10-07T15:14:28.819Z</updated>
     <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><p>正则表达式，如果有一定编程经验的同学，一定知道，可能你知道，但又说不出个所以然来，平时不经常使用，很容易就忘记，有一部分原因，我认为是总结的内容，不够简单和深刻。所以，自己尝试总结一下正则表达式的基础知识点，对于大部分的编程场景应该足够使用啦。另外，也希望通过总结，以便后续忘记时，能快速的记忆起来，这就是本文章的主要内容。</p>
 <a id="more"></a>
 <h3 id="2、正则表达式">2、正则表达式</h3><p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2020/10/RegularExpression.png" alt="RegularExpression.png"></p>
@@ -191,10 +191,10 @@
 </thead>
 <tbody>
 <tr>
-<td>`\</td>
 <td>`</td>
-<td>匹配左右任意一个表达式</td>
-<td>表达式：`a\</td>
+<td>`</td>
+<td>或关系，匹配左右任意一个表达式</td>
+<td>表达式：`a</td>
 <td>b`，匹配字符串 “aaa123” 中的 <strong>a</strong> 。</td>
 </tr>
 <tr>
@@ -237,30 +237,22 @@
 <tr>
 <td><code>(?=exp)</code></td>
 <td>断言自身出现的位置的后面能匹配表达式 exp，exp1(?=exp2)：查找 exp2 前面的 exp1。</td>
-<td>表达式：`Windows(?=XP\</td>
-<td>7\</td>
-<td>8)` 能匹配<strong>Windows7</strong> 中的 “Windows”，但不能匹配 <strong>Windows10</strong> 中的“Windows”。</td>
+<td>表达式：<code>Windows(?=7)</code> 能匹配<strong>Windows7</strong> 中的 “Windows”，但不能匹配 <strong>Windows10</strong> 中的“Windows”。</td>
 </tr>
 <tr>
 <td><code>(?!exp)</code></td>
 <td>断言自身出现的位置的后面不能匹配表达式 exp，exp1(?!exp2)：查找后面不是 exp2 的 exp1。</td>
-<td>表达式：*Windows(?!XP\</td>
-<td>7\</td>
-<td>8)<em>  能匹配<strong>Windows10</strong> 中的“Windows”，但不能匹配 <em>*Windows7</em></em> 中的“Windows”。</td>
+<td>表达式：<em>Windows(?!7)</em>  能匹配<strong>Windows10</strong> 中的“Windows”，但不能匹配 <strong>Windows7</strong> 中的“Windows”。</td>
 </tr>
 <tr>
 <td><code>(?&lt;=exp)</code></td>
 <td>断言自身出现的位置的前面能匹配表达式 exp，(?&lt;=exp2)exp1：查找 exp2 后面的 exp1。</td>
-<td>表达式：`(?&lt;=XP\</td>
-<td>7\</td>
-<td>8)Windows` 能匹配 <strong>7Windows</strong> 中的“Windows”，但不能匹配 <strong>10Windows</strong> 中的“Windows”。</td>
+<td>表达式：<code>(?&lt;=7)Windows</code> 能匹配 <strong>7Windows</strong> 中的“Windows”，但不能匹配 <strong>10Windows</strong> 中的“Windows”。</td>
 </tr>
 <tr>
 <td><code>(?&lt;!exp)</code></td>
 <td>断言自身出现的位置的前面不能匹配表达式 exp，(?&lt;!=exp2)exp1：查找前面不是 exp2 的 exp1。</td>
-<td>表达式：`(?&lt;!XP\</td>
-<td>7\</td>
-<td>8)Windows` 能匹配 <strong>10Windows</strong> 中的“Windows”，但不能匹配 <strong>7Windows</strong> 中的“Windows”。</td>
+<td>表达式：<code>(?&lt;!7)Windows</code> 能匹配 <strong>10Windows</strong> 中的“Windows”，但不能匹配 <strong>7Windows</strong> 中的“Windows”。</td>
 </tr>
 </tbody>
 </table>
