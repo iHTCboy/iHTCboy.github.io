@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Learn something of everything,  Learn everything of something.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="https://iHTCboy.com/"/>
-  <updated>2020-10-13T14:53:48.729Z</updated>
+  <updated>2020-10-13T14:55:22.856Z</updated>
   <id>https://iHTCboy.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="https://iHTCboy.com/2020/10/12/2020-10-12_AppleDeveloper%E8%B4%A6%E5%8F%B7%E7%94%B3%E8%AF%B7%E5%92%8C%E5%AE%9E%E5%90%8D%E8%AE%A4%E8%AF%81/"/>
     <id>https://iHTCboy.com/2020/10/12/2020-10-12_AppleDeveloper账号申请和实名认证/</id>
     <published>2020-10-12T15:29:16.000Z</published>
-    <updated>2020-10-13T14:53:48.729Z</updated>
+    <updated>2020-10-13T14:55:22.856Z</updated>
     <content type="html"><![CDATA[<h3 id="一、前言">一、前言</h3><p>想当年自己在大学时开通苹果账号可谓一波三拆，最头痛的是没有信用卡！而且是 master 或 visa 的信用卡啊！问了几个银行都不能申请那种“大学生信用卡 ”，最后还是靠朋友父母的信用卡来第一次交费，并且开发者名字与信用卡持有人名字不匹配时，还要联系开发者客服人工审核，然后等待几天账号才生效。一次￥688，也有点痛，因为第一次的经历其实体验非常差的，好再是一年就一次。</p>
 <p>所以在当年开通苹果开发者，最头痛的就是支付方式，而如今，时间来到2020年，苹果的开发者账号申请已经非常的简单的，结合最近一年来，苹果要求的实名认证，还有最新的 Apple Developer  App 内购支付开发者年费，身边的朋友都有很多疑问，咱们一起来看看，你的问题解决了吗！</p>
 <a id="more"></a>
@@ -213,7 +213,7 @@
 <li>个人和独资企业/一人公司</li>
 </ul>
 <p>详细：<a href="https://developer.apple.com/cn/support/membership-fee-waiver/" target="_blank" rel="external">Apple Developer Program 会员资格费用豁免 - Apple Developer</a></p>
-<h3 id="7、总结">7、总结</h3><h4 id="7-1_苹果的改变">7.1 苹果的改变</h4><p>说起苹果，当年很多人认为苹果不会针对中国区做出改变，更加不会有特殊化的处理，比如游戏的出版物号！大家觉得中国市场的遵守，苹果审核人员要单独针对中国地区的游戏做审核？？？ 现在就变成这样了：</p>
+<h3 id="七、总结">七、总结</h3><h4 id="7-1_苹果的改变">7.1 苹果的改变</h4><p>说起苹果，当年很多人认为苹果不会针对中国区做出改变，更加不会有特殊化的处理，比如游戏的出版物号！大家觉得中国市场的遵守，苹果审核人员要单独针对中国地区的游戏做审核？？？ 现在就变成这样了：</p>
 <p><img src="//p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1cd2936e98f94454bde41ad16ed4dfa5~tplv-k3u1fbpfcp-zoom-1.image" alt="image.png"></p>
 <blockquote>
 <p><strong>在中国大陆的供应情况</strong></p>
