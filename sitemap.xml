@@ -2,6 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://iHTCboy.com/more/photos.json</loc>
+    <lastmod>2020-12-05T03:25:40.218Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://iHTCboy.com/more/onemindmap.json</loc>
+    <lastmod>2020-12-05T03:25:27.163Z</lastmod>
+  </url>
+  
+  <url>
     <loc>https://iHTCboy.com/2018/09/30/2018-09-30_%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84macOS%E7%B3%BB%E5%88%97%EF%BC%9AMac%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</loc>
     <lastmod>2020-11-08T03:51:25.183Z</lastmod>
   </url>
@@ -19,11 +29,6 @@
   <url>
     <loc>https://iHTCboy.com/2020/10/02/2020-10-02_%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/</loc>
     <lastmod>2020-10-09T15:09:34.541Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://iHTCboy.com/more/onemindmap.json</loc>
-    <lastmod>2020-10-08T08:45:26.087Z</lastmod>
   </url>
   
   <url>
@@ -59,11 +64,6 @@
   <url>
     <loc>https://iHTCboy.com/2020/07/05/2020-07-05_%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F%E5%92%8C%E7%9B%88%E5%88%A9%E6%A8%A1%E5%BC%8F%E7%9A%84%E6%80%9D%E8%80%83/</loc>
     <lastmod>2020-09-13T13:45:37.489Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://iHTCboy.com/more/photos.json</loc>
-    <lastmod>2020-09-13T12:22:35.366Z</lastmod>
   </url>
   
   <url>
