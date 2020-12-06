@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Learn something of everything,  Learn everything of something.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="https://iHTCboy.com/"/>
-  <updated>2020-12-06T13:27:34.102Z</updated>
+  <updated>2020-12-06T13:35:58.312Z</updated>
   <id>https://iHTCboy.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="https://iHTCboy.com/2020/12/06/2020-12-06_DTK_Apple_Silicon_Mac/"/>
     <id>https://iHTCboy.com/2020/12/06/2020-12-06_DTK_Apple_Silicon_Mac/</id>
     <published>2020-12-06T07:49:16.000Z</published>
-    <updated>2020-12-06T13:27:34.102Z</updated>
+    <updated>2020-12-06T13:35:58.312Z</updated>
     <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><blockquote>
 <p>Apple 宣布 Mac 采用 Apple 芯片的转移计划</p>
 </blockquote>
@@ -221,6 +221,7 @@
 <p>运行多个应用并不会卡顿，因为都是原生运行：<br><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e6f87dae5bff497aab98d34deb0e90cb~tplv-k3u1fbpfcp-zoom-1.image" alt="16.png"></p>
 <p>抖音：</p>
 <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8dd0fbbf096d4504a7e0d85821399a8e~tplv-k3u1fbpfcp-zoom-1.image" alt="17.png"></p>
+<p>特别有意义的是，TikTok 可以正常打开，在 iPhone 是无法正常访问的。说明识别 DTK 时获取不到一些物理关键信息，导致无法直接屏蔽。所以，DTK 导致的安全问题不容忽视！<br><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8f3ea7ff5c00448fb425d190d16f5950~tplv-k3u1fbpfcp-watermark.image" alt="42.png"></p>
 <p>微信读书：</p>
 <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/31682b41197f46f79b67e11dd9d29b8a~tplv-k3u1fbpfcp-zoom-1.image" alt="18.png"></p>
 <p>所以，对于交互少的 iOS app，体验感与 iPhone 上感觉差别不大，就是一个大屏幕的iPhone，比如视频app、读书app，无缝对接，这也许就是苹果生态，未来的优势！</p>
