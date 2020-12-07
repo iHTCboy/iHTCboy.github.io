@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Learn something of everything,  Learn everything of something.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="https://iHTCboy.com/"/>
-  <updated>2020-12-06T13:35:58.312Z</updated>
+  <updated>2020-12-07T14:52:17.060Z</updated>
   <id>https://iHTCboy.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="https://iHTCboy.com/2020/12/06/2020-12-06_DTK_Apple_Silicon_Mac/"/>
     <id>https://iHTCboy.com/2020/12/06/2020-12-06_DTK_Apple_Silicon_Mac/</id>
     <published>2020-12-06T07:49:16.000Z</published>
-    <updated>2020-12-06T13:35:58.312Z</updated>
+    <updated>2020-12-07T14:52:17.060Z</updated>
     <content type="html"><![CDATA[<h3 id="1、前言">1、前言</h3><blockquote>
 <p>Apple 宣布 Mac 采用 Apple 芯片的转移计划</p>
 </blockquote>
@@ -248,8 +248,14 @@
 <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5a86a9cb2b2c4ae7ba3b7f2ceb94749d~tplv-k3u1fbpfcp-zoom-1.image" alt="28.JPG"></p>
 <p>macOS提供了 iOS 运行时需要的内核环境和运行时框架，在系统目录下：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/System/iOSSupport/System/Library/Frameworks/</span><br></pre></td></tr></table></figure>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8a5d3df2d910442499b9b59b1cce347a~tplv-k3u1fbpfcp-watermark.image" alt="42.png"></p>
 <p>而 iOS app 安全保障的沙盒环境，在 macOS 下则是完全暴露，目前苹果并没有对 iOS app 沙盒目录进行加密或者保护，普通用户权限就可以随意访问 iOS app 的目录，对于 iOS app 来说，如果已经上架，或者未来上架 Mac 平台，建议对沙盒目录的内容和文件做好加密，避免用户的数据泄露，安全风险增加等问题。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/Documents/Containers/</span><br></pre></td></tr></table></figure>
+<p>iOS app 沙盒目录：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~/Library/Containers/</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a53e81f360e146198bcc126f17d7f205~tplv-k3u1fbpfcp-watermark.image" alt="44.png"></p>
+<p>DTK 最初的app沙盒目录是直接用app的名字：</p>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f73719fbf58848d29164aba79a19d934~tplv-k3u1fbpfcp-watermark.image" alt="43.png"></p>
+<p>Big Sub 10.1 beta 10 和后续的正式版本，改回与 iPhone 一样的目录 id 名字：</p>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4ca4c1dff3d948ed9f20a245255ab1ac~tplv-k3u1fbpfcp-watermark.image" alt="45.png"></p>
 <p>另外，macOS 支持 iOS app 的 Scheme 调用，王者荣耀的微信登陆授权，可以跳到 iOS 微信 app授权，所以，可以说苹果把 iOS 整个系统直接搬到了 macOS，未来是不是还会调整，需要市场来验证。</p>
 <p>对于苹果生态的开发者来说，除了生态更加完善，可以直接 macOS 运行 iOS app，不用在像以前那样支持 i386/x86 框架的模拟器外，更需要关注安全问题。iOS 以前因为成本高，所以黑灰产更多是用安卓机群，安卓有相应的防护，而 iOS 如果以前没有太多关注安全性，都是交给系统沙盒保护，越狱用户毕竟是少数。而现在 M1 Mac，无沙盒，进程可控，系统可控，所以从现在开始，开发者体验统一的苹果生态时，必须开始关注 AppleOS 安全生态。</p>
 <h4 id="M1_for_Mac">M1 for Mac</h4><p>2020 年 11 月 11 日苹果发布使用命名为 M1 处理器的 Mac，Apple 正式启动了 Mac 电脑从 Intel 处理器到 Apple 芯片的过渡。</p>
