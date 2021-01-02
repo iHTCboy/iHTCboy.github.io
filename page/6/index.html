@@ -216,6 +216,97 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-2018-08-04_PyCharm_for_Mac快捷键小记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/04/2018-08-04_PyCharm_for_Mac快捷键小记/">PyCharm for Mac快捷键小记</a>
+    </h1>
+  
+
+        
+        <a href="/2018/08/04/2018-08-04_PyCharm_for_Mac快捷键小记/" class="archive-article-date">
+  	<time datetime="2018-08-04T15:09:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1、前言">1、前言</h3><p>总结一下自己平时常用的PyCharm for Mac快捷键，因为网上经常找到的都是Windows版本，所以当是备忘也好，后续会不定期更新。</p>
+        
+          <a class="article-more-a" href="/2018/08/04/2018-08-04_PyCharm_for_Mac快捷键小记/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">PyCharm</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">shortcut</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/induction//" class="article-tag-list-link color5">induction</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/08/04/2018-08-04_PyCharm_for_Mac快捷键小记/">显示全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-2018-08-03_iTerm快捷键小记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1085,113 +1176,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-2018-06-09_iOSApp转让问题总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/06/09/2018-06-09_iOSApp转让问题总结/">AppStore App 转让问题总结</a>
-    </h1>
-  
-
-        
-        <a href="/2018/06/09/2018-06-09_iOSApp转让问题总结/" class="archive-article-date">
-  	<time datetime="2018-06-09T04:49:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1、前言">1、前言</h3><p>因为转移应用后，没有使用新账号的证书打包上传时报错：</p>
-<blockquote>
-<p>iTunes Store Operation Failed ERROR ITMS-90159: “Invalid provisioning profile…”</p>
-</blockquote>
-<p><img src="https://github.com/iHTCboy/iGallery/raw/master/BlogImages/2018/06/20180609-AppStore-ERROR-ITMS-90159.png" alt="20180609-AppStore-ERROR-ITMS-90159.png"></p>
-<p>修改证书后重新上传时，警告⚠️：</p>
-<blockquote>
-<p>WARNING ITMS-90076: “Potential Loss of Keychain Access. The previous version of software has an application-identifier value of [‘HZVSAS9COL.com.ihtcboy.abc’] and the new version of software being submitted has an application-identifier of [‘SEGO5FPL9U.com.qq.abc’]. This will result in a loss of keychain access.”</p>
-</blockquote>
-<p>这个是因为证书团队 ID更变的警告，不影响上传到AppStore。需要注意，如果应用有使用 <code>keychain group</code>，则会导致原来用 <code>keychain</code>存储的数据掉失。如果与账号有关联的逻辑，最好在更新版本前通知用户，告诉注意事项，是否要绑定手机等。</p>
-<ul>
-<li><a href="https://developer.apple.com/library/content/qa/qa1726/_index.html">Technical Q&amp;A QA1726: Resolving the Potential Loss of Keychain Access warning</a></li>
-</ul>
-        
-          <a class="article-more-a" href="/2018/06/09/2018-06-09_iOSApp转让问题总结/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">AppStore</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">App转让</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">ITMS-90159</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/technology//" class="article-tag-list-link color1">technology</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/06/09/2018-06-09_iOSApp转让问题总结/">显示全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/5/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/49/">49</a><a class="extend next" rel="next" href="/page/7/">Next &raquo;</a>
@@ -1206,7 +1190,7 @@ var _hmt = _hmt || [];
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2015-2020 iHTCboy  
+    		&copy; 2015-2021 iHTCboy  
     	</div>
       <div class="footer-left">
          &nbsp;&nbsp;访问<span id="busuanzi_value_site_pv"></span>次  访客<span id="busuanzi_value_site_uv"></span>人
@@ -1315,6 +1299,18 @@ MathJax.Hub.Queue(function() {
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">2020</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">2021</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">年终总结</a>
+              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">DTK</a>
@@ -1550,14 +1546,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">架构师</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">2020</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">年终总结</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3022,10 +3010,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">游戏</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">2021</a>
               </li>
              
               <li class="article-tag-list-item">
