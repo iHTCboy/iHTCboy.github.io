@@ -216,6 +216,114 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-2015_友盟iOS微信登陆没有回调的原因" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/07/2015_友盟iOS微信登陆没有回调的原因/">友盟iOS微信登陆没有回调的原因</a>
+    </h1>
+  
+
+        
+        <a href="/2015/08/07/2015_友盟iOS微信登陆没有回调的原因/" class="archive-article-date">
+  	<time datetime="2015-08-06T16:22:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-08-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1、在友盟文档中这样说：">1、在友盟文档中这样说：</h3><p><a href="http://dev.umeng.com/social/ios/detail-share#7_4" target="_blank" rel="external">链接</a></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">7.4  &#24494;&#20449;&#30331;&#24405;&#10;&#28155;&#21152;&#37197;&#32622;&#25991;&#20214;&#21442;&#32771;&#25991;&#26723;&#65306;&#28155;&#21152;&#24494;&#20449;&#21450;&#26379;&#21451;&#22280;&#65292;&#28155;&#21152;&#30456;&#20851;&#24211;&#25991;&#20214;&#65292;&#37197;&#32622;URL schemes&#21450;&#28155;&#21152;&#31995;&#32479;&#22238;&#35843;&#10;&#10;&#27880;&#24847;&#24494;&#20449;&#30331;&#24405;&#24517;&#39035;&#20808;&#22312;&#24494;&#20449;&#24320;&#25918;&#24179;&#21488;&#30003;&#35831;&#24494;&#20449;&#30331;&#24405;&#26435;&#38480;&#10;&#22312;&#20320;&#30340;&#31243;&#24207;APPdelegate&#20837;&#21475;&#26041;&#27861;&#28155;&#21152;&#19979;&#38754;&#30340;&#20195;&#30721;&#10;&#10;  #import &#34;UMSocialWechatHandler.h&#34;&#10;    //&#35774;&#32622;&#24494;&#20449;AppId&#12289;appSecret&#65292;&#20998;&#20139;url&#10;    [UMSocialWechatHandler setWXAppId:@&#34;wxd930ea5d5a258f4f&#34; appSecret:@&#34;db426a9829e4b49a0dcac7b4162da6b6&#34; url:@&#34;http://www.umeng.com/social&#34;];&#10;&#10;&#22312;&#24494;&#20449;&#30331;&#24405;&#25353;&#38062;&#20013;&#23454;&#29616;&#19979;&#38754;&#30340;&#26041;&#27861;&#10;&#10;  UMSocialSnsPlatform *snsPlatform = [UMSocialSnsPlatformManager getSocialPlatformWithName:UMShareToWechatSession];&#10;&#10;        snsPlatform.loginClickHandler(self,[UMSocialControllerService defaultControllerService],YES,^(UMSocialResponseEntity *response)&#123;&#10;&#10;            if (response.responseCode == UMSResponseCodeSuccess) &#123;&#10;&#10;                UMSocialAccountEntity *snsAccount = [[UMSocialAccountManager socialAccountDictionary]valueForKey:UMShareToWechatSession];&#10;&#10;                NSLog(@&#34;username is %@, uid is %@, token is %@ url is %@&#34;,snsAccount.userName,snsAccount.usid,snsAccount.accessToken,snsAccount.iconURL);&#10;&#10;            &#125;&#10;&#10; &#125;);&#10;&#10;&#22312;&#25480;&#26435;&#23436;&#25104;&#21518;&#35843;&#29992;&#33719;&#21462;&#29992;&#25143;&#20449;&#24687;&#30340;&#26041;&#27861;&#10;&#10;//&#24471;&#21040;&#30340;&#25968;&#25454;&#22312;&#22238;&#35843;Block&#23545;&#35937;&#24418;&#21442;respone&#30340;data&#23646;&#24615;&#10;[[UMSocialDataService defaultDataService] requestSnsInformation:UMShareToWechatsession  completion:^(UMSocialResponseEntity *response)&#123;&#10;        NSLog(@&#34;SnsInformation is %@&#34;,response.data);&#10;    &#125;];</span><br></pre></td></tr></table></figure>
+<h3 id="2、实践使用时：">2、实践使用时：</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#pragma mark - &#24494;&#20449;&#30331;&#24405;&#10;- (void)loginViewClickedWeiXiButton&#123;&#10;    &#10;    [UMSocialData setAppKey:@&#34;55bb141a67e58e9f80001801&#34;];&#10;    [UMSocialWechatHandler setWXAppId:@&#34;wx2802d4e49f68996f&#34; appSecret:@&#34;f1bf8a16c5f87570ab07782d3e0ab223&#34; url:@&#34;http://www.umeng.com/social&#34;];&#10;    UMSocialSnsPlatform *snsPlatform = [UMSocialSnsPlatformManager getSocialPlatformWithName:UMShareToWechatSession];&#10;    snsPlatform.loginClickHandler(self,[UMSocialControllerService defaultControllerService],YES,^(UMSocialResponseEntity *response)&#123;&#10;        //  &#33719;&#21462;&#24494;&#21338;&#29992;&#25143;&#21517;&#12289;uid&#12289;token&#31561;&#10;        if (response.responseCode == UMSResponseCodeSuccess) &#123;&#10;             UMSocialAccountEntity *snsAccount = [[UMSocialAccountManager socialAccountDictionary]valueForKey:UMShareToWechatSession];&#10;            NSLog(@&#34;username is %@, uid is %@, token is %@ iconUrl is %@&#34;,snsAccount.userName,snsAccount.usid,snsAccount.accessToken,snsAccount.iconURL);&#10;        &#125;&#10;    &#125;);&#10;    &#10;&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="3、【坑在这里】没有回调时因为要在应用代理方法中增加：">3、【坑在这里】没有回调时因为要在应用代理方法中增加：</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">//sdk&#10;#import &#34;UMSocialSnsService.h&#34;&#10;&#10;- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation&#10;&#123;&#10;    return  [UMSocialSnsService handleOpenURL:url wxApiDelegate:nil];&#10;&#125;&#10;&#10;- (void)applicationDidBecomeActive:(UIApplication *)application&#10;&#123;&#10;    [UMSocialSnsService  applicationDidBecomeActive];&#10;&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="最后说明">最后说明</h3><ul>
+<li>微信的<code>openid</code>对应友盟里叫<code>usid</code></li>
+</ul>
+<p>下面是授权成功的回调数据：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- UMSocial:  makeRequestWithPath is /share/token/53290df956240b6b4a0084b3/, parameters is &#123;&#10;    &#34;access_token&#34; = &#34;OezXcEiiBSKSxW0eoylIeJDUKD6z6dmr42JANLPjNN56WRFnd-vVJO37ma0gCpKY1v5q8EVEMwdQqzvXoFFpe1jQXUzjqukub9-228J8sjvugvVVQYvzkhyvAgItvkYmMIGD_cE2hAWUm44_qCB-oQ&#34;;&#10;    ak = 53290df956240b6b4a0084b3;&#10;    de = &#34;iPhone7,1&#34;;&#10;    dt = 1438857527939;&#10;    ek = 4b37315fd0421b0b3a682a4a5e4487e9;&#10;    en = WiFi;&#10;    &#34;expires_in&#34; = 7199;&#10;    mac = &#34;02:00:00:00:00:00&#34;;&#10;    openid = oyAaTjrJMAb3qfCbyDRp3h0NKyew;&#10;    openudid = 147ad485c3b80ffd54bfc8689c2d7db1ed88994b;&#10;    os = iOS;&#10;    pcv = &#34;2.0&#34;;&#10;    &#34;refresh_token&#34; = &#34;OezXcEiiBSKSxW0eoylIeJDUKD6z6dmr42JANLPjNN56WRFnd-vVJO37ma0gCpKYHXgyDeQ4Xqm60G-omrGp2u-KbIy7zTP5gV5dnw3RVN-GzkjY8gCWIMC3_cCHcflH6IPexy2c-k46gGG0M07p6g&#34;;&#10;    sdkv = &#34;4.2.3&#34;;&#10;    to = wxsession;&#10;    tp = 0;&#10;    uid = 462ae0edb57d53dfd2affb5e4ae36ad;&#10;    usid = oyAaTjrJMAb3qfCbyDRp3h0NKyew;&#10;&#125; &#10;[18:38:48.197( 2055)] - UMSocial:  actionType is 15 , received json Dic is &#123;&#10;    data =     &#123;&#10;    &#125;;&#10;    msg = &#34;no error&#34;;&#10;    st = 200;&#10;&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="-">-</h3><ul>
+<li>如果有什么疑问，可以在评论区一起讨论；</li>
+<li>如果有什么不正确的地方，欢迎指导！</li>
+</ul>
+<p><br></p>
+<blockquote>
+<p>注：本文首发于 <a href="http://iHTCboy.com">iHTCboy’s blog</a>，如若转载，请注来源</p>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">iOS</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">友盟</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">第三方登陆</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/technology//" class="article-tag-list-link color1">technology</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2015/08/07/2015_友盟iOS微信登陆没有回调的原因/">显示全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-2015_同时响应多个UIGestureRecognizer" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1065,99 +1173,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-2015-07-19_《当幸福来敲门》观后感" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/19/2015-07-19_《当幸福来敲门》观后感/">《当幸福来敲门》观后感</a>
-    </h1>
-  
-
-        
-        <a href="/2015/07/19/2015-07-19_《当幸福来敲门》观后感/" class="archive-article-date">
-  	<time datetime="2015-07-19T08:14:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-07-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="电影">电影</h3><blockquote>
-<p>百度百科：<br>《当幸福来敲门》是由加布里尔·穆奇诺执导，威尔·史密斯等主演的美国电影。影片取材真实故事，主角是美国黑人投资专家Chris Gardner。影片讲述了一位濒临破产、老婆离家的落魄业务员，如何刻苦耐劳的善尽单亲责任，奋发向上成为股市交易员，最后成为知名的金融投资家的励志故事。影片获得2007年奥斯卡金像奖最佳男主角的提名。</p>
-</blockquote>
-        
-          <a class="article-more-a" href="/2015/07/19/2015-07-19_《当幸福来敲门》观后感/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">《当幸福来敲门》</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">观后感</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/life//" class="article-tag-list-link color5">life</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2015/07/19/2015-07-19_《当幸福来敲门》观后感/">显示全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/12/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><span class="page-number current">13</span><a class="page-number" href="/page/14/">14</a><a class="page-number" href="/page/15/">15</a><span class="space">&hellip;</span><a class="page-number" href="/page/49/">49</a><a class="extend next" rel="next" href="/page/14/">Next &raquo;</a>
@@ -1663,15 +1678,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">IPv6</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">AppStore</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">pyOpenSSL</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">p12</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">AppStore</a>
               </li>
              
               <li class="article-tag-list-item">
