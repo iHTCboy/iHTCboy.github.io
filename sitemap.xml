@@ -2,8 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://iHTCboy.com/more/photos.json</loc>
+    <lastmod>2021-04-11T15:17:12.595Z</lastmod>
+  </url>
+  
+  <url>
     <loc>https://iHTCboy.com/more/index.html</loc>
-    <lastmod>2021-04-08T15:48:50.492Z</lastmod>
+    <lastmod>2021-04-08T15:50:07.982Z</lastmod>
   </url>
   
   <url>
@@ -29,11 +34,6 @@
   <url>
     <loc>https://iHTCboy.com/2020/12/06/2020-12-06_DTK_Apple_Silicon_Mac/</loc>
     <lastmod>2021-01-01T02:05:15.329Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://iHTCboy.com/more/photos.json</loc>
-    <lastmod>2020-12-05T03:25:40.218Z</lastmod>
   </url>
   
   <url>
