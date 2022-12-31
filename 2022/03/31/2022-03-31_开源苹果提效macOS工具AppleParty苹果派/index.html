@@ -16,29 +16,29 @@
 <meta property="og:site_name" content="iHTCboy&#39;s blog">
 <meta property="og:description" content="本文首发于 开源一款苹果 macOS 工具 - AppleParty（苹果派） - 掘金，欢迎关注我们 @37手游iOS技术运营团队 。  作者：iHTCboy  AppleParty 是 37手游 iOS 团队研发，实现快速操作 App Store Connect 后台的自动化 macOS 工具。本文会介绍工具诞生的背景、使用教程和代码实现的简介，希望通过开源与大家分享成果，让更多人一起参与改">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://ihtcboy.com/images/AppleParty-01.png">
-<meta property="og:image" content="https://ihtcboy.com/images/AppleParty-02.png">
-<meta property="og:image" content="https://ihtcboy.com/images/AppleParty-03.png">
-<meta property="og:image" content="https://ihtcboy.com/images/AppleParty-04.png">
-<meta property="og:image" content="https://ihtcboy.com/images/AppleParty-05.png">
-<meta property="og:image" content="https://ihtcboy.com/images/AppleParty-06.png">
-<meta property="og:image" content="https://ihtcboy.com/images/AppleParty-07.png">
-<meta property="og:image" content="https://ihtcboy.com/images/AppleParty-08.png">
-<meta property="og:image" content="https://ihtcboy.com/images/AppleParty-09.png">
-<meta property="og:image" content="https://ihtcboy.com/images/AppleParty-10.png">
-<meta property="og:image" content="https://ihtcboy.com/images/AppleParty-11.png">
-<meta property="og:image" content="https://ihtcboy.com/images/AppleParty-12.png">
-<meta property="og:image" content="https://ihtcboy.com/images/AppleParty-13.png">
-<meta property="og:image" content="https://ihtcboy.com/images/AppleParty-14.png">
-<meta property="og:image" content="https://ihtcboy.com/images/AppleParty-15.jpg">
+<meta property="og:image" content="https://ihtcboy.com/images/2022-AppleParty-01.png">
+<meta property="og:image" content="https://ihtcboy.com/images/2022-AppleParty-02.png">
+<meta property="og:image" content="https://ihtcboy.com/images/2022-AppleParty-03.png">
+<meta property="og:image" content="https://ihtcboy.com/images/2022-AppleParty-04.png">
+<meta property="og:image" content="https://ihtcboy.com/images/2022-AppleParty-05.png">
+<meta property="og:image" content="https://ihtcboy.com/images/2022-AppleParty-06.png">
+<meta property="og:image" content="https://ihtcboy.com/images/2022-AppleParty-07.png">
+<meta property="og:image" content="https://ihtcboy.com/images/2022-AppleParty-08.png">
+<meta property="og:image" content="https://ihtcboy.com/images/2022-AppleParty-09.png">
+<meta property="og:image" content="https://ihtcboy.com/images/2022-AppleParty-10.png">
+<meta property="og:image" content="https://ihtcboy.com/images/2022-AppleParty-11.png">
+<meta property="og:image" content="https://ihtcboy.com/images/2022-AppleParty-12.png">
+<meta property="og:image" content="https://ihtcboy.com/images/2022-AppleParty-13.png">
+<meta property="og:image" content="https://ihtcboy.com/images/2022-AppleParty-14.png">
+<meta property="og:image" content="https://ihtcboy.com/images/2022-AppleParty-15.jpg">
 <meta property="article:published_time" content="2022-03-31T01:26:10.000Z">
-<meta property="article:modified_time" content="2022-12-31T15:02:58.384Z">
+<meta property="article:modified_time" content="2022-12-31T15:10:38.613Z">
 <meta property="article:author" content="iHTCboy">
 <meta property="article:tag" content="AppleParty">
 <meta property="article:tag" content="苹果派">
 <meta property="article:tag" content="macOS app">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://ihtcboy.com/images/AppleParty-01.png">
+<meta name="twitter:image" content="https://ihtcboy.com/images/2022-AppleParty-01.png">
   
     <link rel="alternative" href="/atom.xml" title="iHTCboy&#39;s blog" type="application/atom+xml">
   
@@ -326,16 +326,16 @@ var _hmt = _hmt || [];
 </ul>
 <p><strong>update 更新</strong></p>
 <p>目前已经使用 Sparkle 来实现版本更新，默认启动就会自动检查更新，也可以通过菜单栏进行手动检查更新。</p>
-<h3 id="3-2-使用介绍"><a href="#3-2-使用介绍" class="headerlink" title="3.2 使用介绍"></a>3.2 使用介绍</h3><p>因为账号记录是存放在 Keychain 里，所以首次打开时，会提示需要访问<strong>钥匙串</strong>：<br><img src="https://ihtcboy.com/images/AppleParty-01.png" alt="AppleParty-01"></p>
+<h3 id="3-2-使用介绍"><a href="#3-2-使用介绍" class="headerlink" title="3.2 使用介绍"></a>3.2 使用介绍</h3><p>因为账号记录是存放在 Keychain 里，所以首次打开时，会提示需要访问<strong>钥匙串</strong>：<br><img src="https://ihtcboy.com/images/2022-AppleParty-01.png" alt="AppleParty-01"></p>
 <blockquote>
 <p>如果点击“拒绝”，则不会保存账号和密码信息。</p>
 </blockquote>
-<p>然后，会显示主界面：<br><img src="https://ihtcboy.com/images/AppleParty-02.png" alt="AppleParty-02"></p>
-<p>默认情况下弹出登陆界面，也可以点击取消登陆（快捷键<code>esc</code>）：<br><img src="https://ihtcboy.com/images/AppleParty-03.png" alt="AppleParty-03"></p>
-<p>现在默认登陆都需要双重认证：<br><img src="https://ihtcboy.com/images/AppleParty-04.png" alt="AppleParty-04"></p>
-<p>如果需要使用短信验证码，可以点击“发送短信验证码”，如果希望通过语言验证码，可以勾选“拨打语言来电”切换：<br><img src="https://ihtcboy.com/images/AppleParty-05.png" alt="AppleParty-05"></p>
-<h4 id="3-2-1-批量上传内购买项目和商店素材"><a href="#3-2-1-批量上传内购买项目和商店素材" class="headerlink" title="3.2.1 批量上传内购买项目和商店素材"></a>3.2.1 批量上传内购买项目和商店素材</h4><p>点击“我的 App”，显示帐号所有的App，可以操作内购买项目管理和商店素材管理。<br><img src="https://ihtcboy.com/images/AppleParty-06.png" alt="AppleParty-06"></p>
-<p>点击内购管理，显示当前已有的内购品项列表:<br><img src="https://ihtcboy.com/images/AppleParty-07.png" alt="AppleParty-07"></p>
+<p>然后，会显示主界面：<br><img src="https://ihtcboy.com/images/2022-AppleParty-02.png" alt="AppleParty-02"></p>
+<p>默认情况下弹出登陆界面，也可以点击取消登陆（快捷键<code>esc</code>）：<br><img src="https://ihtcboy.com/images/2022-AppleParty-03.png" alt="AppleParty-03"></p>
+<p>现在默认登陆都需要双重认证：<br><img src="https://ihtcboy.com/images/2022-AppleParty-04.png" alt="AppleParty-04"></p>
+<p>如果需要使用短信验证码，可以点击“发送短信验证码”，如果希望通过语言验证码，可以勾选“拨打语言来电”切换：<br><img src="https://ihtcboy.com/images/2022-AppleParty-05.png" alt="AppleParty-05"></p>
+<h4 id="3-2-1-批量上传内购买项目和商店素材"><a href="#3-2-1-批量上传内购买项目和商店素材" class="headerlink" title="3.2.1 批量上传内购买项目和商店素材"></a>3.2.1 批量上传内购买项目和商店素材</h4><p>点击“我的 App”，显示帐号所有的App，可以操作内购买项目管理和商店素材管理。<br><img src="https://ihtcboy.com/images/2022-AppleParty-06.png" alt="AppleParty-06"></p>
+<p>点击内购管理，显示当前已有的内购品项列表:<br><img src="https://ihtcboy.com/images/2022-AppleParty-07.png" alt="AppleParty-07"></p>
 <ul>
 <li>刷新：刷新当前App的内购品项列表（刚刚上传的品项不会马上生效，所以可以手动刷新）</li>
 <li>导入表格：通过固定表格的形式，批量创建内购品项</li>
@@ -343,24 +343,24 @@ var _hmt = _hmt || [];
 <li>导出品项 ID：导出品项productID和内购品项id的对应表</li>
 <li>下载表格示例：批量创建内购品项的示例 Excel 表格</li>
 </ul>
-<p>点击 “导入表格”，可选择excel表进行导入，然后会显示导入的品项明细表。<br><img src="https://ihtcboy.com/images/AppleParty-08.png" alt="AppleParty-08"></p>
+<p>点击 “导入表格”，可选择excel表进行导入，然后会显示导入的品项明细表。<br><img src="https://ihtcboy.com/images/2022-AppleParty-08.png" alt="AppleParty-08"></p>
 <blockquote>
 <p>如上图所示，列表1和2是自定义的送审截图，所以需要点击右下角的“上传截图”选定。</p>
 </blockquote>
-<p>“提交”后，会显示下面的界面，如未设置专用密码，首次需要设置，或者点击右下角“设置特殊密码”重新设置。<br><img src="https://ihtcboy.com/images/AppleParty-09.png" alt="AppleParty-09"></p>
+<p>“提交”后，会显示下面的界面，如未设置专用密码，首次需要设置，或者点击右下角“设置特殊密码”重新设置。<br><img src="https://ihtcboy.com/images/2022-AppleParty-09.png" alt="AppleParty-09"></p>
 <blockquote>
 <p>专用密码的生成参考文档：<a target="_blank" rel="noopener" href="https://support.apple.com/zh-cn/HT204397">使用 App 专用密码 - Apple 支持 (中国)</a></p>
 </blockquote>
-<p>上传失败时，查看 ERROR 内容就是错误内容：<br><img src="https://ihtcboy.com/images/AppleParty-10.png" alt="AppleParty-10"></p>
+<p>上传失败时，查看 ERROR 内容就是错误内容：<br><img src="https://ihtcboy.com/images/2022-AppleParty-10.png" alt="AppleParty-10"></p>
 <p><strong>批量素材上传</strong></p>
 <p>点击“素材一键导入”一键上传，素材可以分别在不同尺寸下显示。</p>
-<p><img src="https://ihtcboy.com/images/AppleParty-11.png" alt="AppleParty-11"></p>
-<p>对应的尺寸，上传视频和截图后，填写排序的位置和视频海报帧：<br><img src="https://ihtcboy.com/images/AppleParty-12.png" alt="AppleParty-12"></p>
+<p><img src="https://ihtcboy.com/images/2022-AppleParty-11.png" alt="AppleParty-11"></p>
+<p>对应的尺寸，上传视频和截图后，填写排序的位置和视频海报帧：<br><img src="https://ihtcboy.com/images/2022-AppleParty-12.png" alt="AppleParty-12"></p>
 <blockquote>
 <p>可点击右上角 <code>？</code>按钮查看帮助文档。</p>
 </blockquote>
-<h4 id="3-2-2-其它扩展功能"><a href="#3-2-2-其它扩展功能" class="headerlink" title="3.2.2 其它扩展功能"></a>3.2.2 其它扩展功能</h4><p>邮箱功能，一方面是可以设置快速邮件发送，另一方面是工具效率自动邮箱的通知需求。<br><img src="https://ihtcboy.com/images/AppleParty-13.png" alt="AppleParty-13"></p>
-<p>二维码功能也是一个工作中的小痛点。<br><img src="https://ihtcboy.com/images/AppleParty-14.png" alt="AppleParty-14"></p>
+<h4 id="3-2-2-其它扩展功能"><a href="#3-2-2-其它扩展功能" class="headerlink" title="3.2.2 其它扩展功能"></a>3.2.2 其它扩展功能</h4><p>邮箱功能，一方面是可以设置快速邮件发送，另一方面是工具效率自动邮箱的通知需求。<br><img src="https://ihtcboy.com/images/2022-AppleParty-13.png" alt="AppleParty-13"></p>
+<p>二维码功能也是一个工作中的小痛点。<br><img src="https://ihtcboy.com/images/2022-AppleParty-14.png" alt="AppleParty-14"></p>
 <h2 id="四、代码实现简解"><a href="#四、代码实现简解" class="headerlink" title="四、代码实现简解"></a>四、代码实现简解</h2><h3 id="4-1-上传内购买项目和商店素材"><a href="#4-1-上传内购买项目和商店素材" class="headerlink" title="4.1 上传内购买项目和商店素材"></a>4.1 上传内购买项目和商店素材</h3><p>使用的是苹果提供的 Transporter 工具链，提供了上会的命令，有 3 个工具：</p>
 <ul>
 <li>Xcode.app</li>
@@ -442,7 +442,7 @@ var _hmt = _hmt || [];
 <h3 id="4-2-App-分析数据、销售趋势"><a href="#4-2-App-分析数据、销售趋势" class="headerlink" title="4.2 App 分析数据、销售趋势"></a>4.2 App 分析数据、销售趋势</h3><p>iOS app 发布上线后，用户从 App Store 搜索和下载 app， 查看 app 产品页面，下载并且使用过程中，app 的使用次数、内购充值、或者崩溃等数据，还有后续的付款和财务报表等。</p>
 <p>这些数据对于游戏运营和财务部门来说，同样非常的重要。一般是在苹果后台查看或下载导出，所以希望能从苹果后台自动化的方式获取到这些数据。</p>
 <p>目前苹果后台关于数据的功能有这三个：</p>
-<p><img src="https://ihtcboy.com/images/AppleParty-15.jpg"></p>
+<p><img src="https://ihtcboy.com/images/2022-AppleParty-15.jpg"></p>
 <ul>
 <li>App 分析</li>
 <li>销售和趋势</li>
@@ -899,19 +899,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">iOS开发高手课</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">学习总结</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Mac</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">iMessage</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">iOS开发高手课</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">学习总结</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -959,7 +959,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">游戏</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">诺基亚</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">生活</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -968,14 +976,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">wap</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">游戏</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">生活</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1083,11 +1083,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">耕地</a>
+                <a href="javascript:void(0)" class="js-tag color3">中秋</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">中秋</a>
+                <a href="javascript:void(0)" class="js-tag color3">耕地</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1123,15 +1123,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">经济学</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">忆录</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">梦理</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">经济学</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1143,6 +1143,10 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">辩论</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">毕业</a>
               </li>
              
@@ -1151,19 +1155,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">辩论</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">想法</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">珍桂集</a>
+                <a href="javascript:void(0)" class="js-tag color3">感想</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">感想</a>
+                <a href="javascript:void(0)" class="js-tag color4">珍桂集</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1223,14 +1223,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">iOS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">try catch</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">钥匙串</a>
               </li>
              
@@ -1239,7 +1231,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">UICollectionView</a>
+                <a href="javascript:void(0)" class="js-tag color4">iOS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">try catch</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">代码简洁</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1247,11 +1247,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">UITableView</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">代码简洁</a>
+                <a href="javascript:void(0)" class="js-tag color2">UICollectionView</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1263,15 +1259,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">JSBadgeView</a>
+                <a href="javascript:void(0)" class="js-tag color2">UITableView</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">iOS动画</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Ineligible Devices</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">UITextFieldDelegate</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1280,6 +1276,22 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">UIButton</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">JSBadgeView</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">UITextFieldDelegate</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">《两小无猜》</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">观后感</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1295,35 +1307,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">iOS动画</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">《千与千寻》</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">观后感</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">《两小无猜》</a>
+                <a href="javascript:void(0)" class="js-tag color4">《当幸福来敲门》</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">《恋恋笔记本》</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">她</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笑谈</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">《当幸福来敲门》</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1335,11 +1327,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">二进制文件无效</a>
+                <a href="javascript:void(0)" class="js-tag color2">她</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">AppStore被拒</a>
+                <a href="javascript:void(0)" class="js-tag color3">笑谈</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1355,11 +1347,31 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">AppStore被拒</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">App审核</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">屌</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">二进制文件无效</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">QQ</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">同步登陆</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">微信</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1383,18 +1395,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">QQ</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">同步登陆</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">微信</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">编译报错</a>
               </li>
              
@@ -1408,14 +1408,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">iOS8相机授权</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">QQsdk</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">QQ分享</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1436,6 +1428,14 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">collectionView</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">QQsdk</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">QQ分享</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1463,6 +1463,14 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">支付宝</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">alipay</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">应用版本</a>
               </li>
              
@@ -1476,14 +1484,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">更新</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">支付宝</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">alipay</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1507,15 +1507,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">单例模式</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">WatchKit</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Watch App</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">单例模式</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1539,15 +1539,23 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">UIGestureRecognizer</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">NSTimer</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">倒计时</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">UIGestureRecognizer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">GitHub</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">视图转换</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1563,14 +1571,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">GitHub</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">视图转换</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">2016</a>
               </li>
              
@@ -1583,10 +1583,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">autolyout</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Reveal</a>
               </li>
              
@@ -1595,7 +1591,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">优雅</a>
+                <a href="javascript:void(0)" class="js-tag color5">autolyout</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1603,7 +1599,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">总结</a>
+                <a href="javascript:void(0)" class="js-tag color3">优雅</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1619,6 +1615,10 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">总结</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">ReactNative</a>
               </li>
              
@@ -1631,6 +1631,14 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">CoreSpotlightSearch</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">应用无法安装</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Bundle</a>
               </li>
              
@@ -1639,23 +1647,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">CoreSpotlightSearch</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">2017</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Archives</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">应用无法安装</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">快捷键</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Archives</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1671,14 +1671,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">IOSurface</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Framework not found</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">App Store Icon</a>
               </li>
              
@@ -1688,14 +1680,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">ITMS-90717</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">iPhoneX</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">LaunchScreen</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1715,23 +1699,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">沙盒账号</a>
+                <a href="javascript:void(0)" class="js-tag color5">IOSurface</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Sandbox</a>
+                <a href="javascript:void(0)" class="js-tag color5">Framework not found</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">iTunes账户</a>
+                <a href="javascript:void(0)" class="js-tag color3">iPhoneX</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">iTunes 12.7</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">下载IPA包</a>
+                <a href="javascript:void(0)" class="js-tag color3">LaunchScreen</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1747,15 +1727,27 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">UIActivityIndicatorView</a>
+                <a href="javascript:void(0)" class="js-tag color2">iTunes 12.7</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">hidden隐藏没效</a>
+                <a href="javascript:void(0)" class="js-tag color2">下载IPA包</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">UIToolbar</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">沙盒账号</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Sandbox</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">iTunes账户</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1776,6 +1768,14 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">图片实际大小显示</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">UIActivityIndicatorView</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">hidden隐藏没效</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1807,14 +1807,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">StoreKit</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">requestReview</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">2018</a>
               </li>
              
@@ -1831,23 +1823,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">命令行查单词</a>
+                <a href="javascript:void(0)" class="js-tag color4">StoreKit</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">有道词典</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">16进制颜色</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">UIColor</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">NSScanner</a>
+                <a href="javascript:void(0)" class="js-tag color4">requestReview</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1879,6 +1859,26 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">16进制颜色</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">UIColor</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">NSScanner</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">命令行查单词</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">有道词典</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">百度网盘限制</a>
               </li>
              
@@ -1888,18 +1888,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">百度云下载</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Gitment</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">博客评论功能</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">评论配置</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1927,6 +1915,14 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">无法内购</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">苹果客服电话</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">NSString</a>
               </li>
              
@@ -1935,11 +1931,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">无法内购</a>
+                <a href="javascript:void(0)" class="js-tag color3">Gitment</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">苹果客服电话</a>
+                <a href="javascript:void(0)" class="js-tag color2">博客评论功能</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">评论配置</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1995,6 +1995,18 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">域名跳转</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">重定向</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">JS跳转</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">爷爷</a>
               </li>
              
@@ -2016,18 +2028,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">mac版QQ信息导出</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">域名跳转</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">重定向</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">JS跳转</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2055,6 +2055,14 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">爬虫</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Python爬虫</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">App转让</a>
               </li>
              
@@ -2072,14 +2080,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">去中心化</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">爬虫</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Python爬虫</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2107,19 +2107,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">天猫</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">iTerm</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">django</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">request.POST</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">post数组参数</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2139,15 +2131,27 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">天猫</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">网易云音乐</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">sips</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">django</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">request.POST</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">post数组参数</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">xcodebuild</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2164,18 +2168,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Guideline2.5.2</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">PLA2.3</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">review-guidelines</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">xcodebuild</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2200,6 +2192,14 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">2019</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">PLA2.3</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">review-guidelines</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2259,15 +2259,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">IPv6</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">pyOpenSSL</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">p12</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">IPv6</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2355,15 +2355,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">知识体系</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">学习模型</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">开发技巧</a>
+                <a href="javascript:void(0)" class="js-tag color5">极客时间</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2371,7 +2363,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">极客时间</a>
+                <a href="javascript:void(0)" class="js-tag color5">知识体系</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2391,6 +2383,26 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">学习模型</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">开发技巧</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">WWDC</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">IAP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Refund</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">产品</a>
               </li>
              
@@ -2404,18 +2416,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">地摊经济</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">WWDC</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">IAP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Refund</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2555,18 +2555,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">安卓商店</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">应用市场</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">App上架</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">iOS安全性</a>
               </li>
              
@@ -2579,11 +2567,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Universal Link</a>
+                <a href="javascript:void(0)" class="js-tag color5">安卓商店</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">URL Scheme</a>
+                <a href="javascript:void(0)" class="js-tag color5">应用市场</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">App上架</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2603,7 +2595,23 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Universal Link</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">URL Scheme</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">App Store</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">苹果财年</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">App Store 账单</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2616,14 +2624,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">macOS app</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">苹果财年</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">App Store 账单</a>
               </li>
              
               <li class="article-tag-list-item">
