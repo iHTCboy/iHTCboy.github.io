@@ -223,6 +223,486 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-2015_iOS版本更新判断" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/04/23/2015_iOS%E7%89%88%E6%9C%AC%E6%9B%B4%E6%96%B0%E5%88%A4%E6%96%AD/">iOS版本更新判断</a>
+    </h1>
+  
+
+        
+        <a href="/2015/04/23/2015_iOS%E7%89%88%E6%9C%AC%E6%9B%B4%E6%96%B0%E5%88%A4%E6%96%AD/" class="archive-article-date">
+  	<time datetime="2015-04-23T12:03:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-04-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>应用每开发一个新版本时，都可能会有新特性介绍页面。所以在应用里就要判断是不是新版本，并且能判断只有第一次进入应用时，才是新版本。</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">//</span>*  在delegate里判断*/</span><br><span class="line"></span><br><span class="line">   <span class="regexp">//</span><span class="number">1</span>、 取出沙盒中存储的上次使用软件的版本号</span><br><span class="line">   NSString *key = @<span class="string">&quot;CFBundleShortVersionString&quot;</span>;</span><br><span class="line">   NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];</span><br><span class="line">   NSString *lastVersion = [defaults stringForKey:key];</span><br><span class="line">   </span><br><span class="line">   <span class="regexp">//</span> <span class="number">2</span>、获得当前软件的版本号</span><br><span class="line">   NSString *currentVersion = [NSBundle mainBundle].infoDictionary[key];</span><br><span class="line"></span><br><span class="line">   <span class="regexp">//</span> <span class="number">3</span>、判断版本号</span><br><span class="line">   <span class="keyword">if</span> ([currentVersion isEqualToString:lastVersion])</span><br><span class="line">   &#123;<span class="regexp">//</span> 旧版本</span><br><span class="line">       </span><br><span class="line">   &#125;<span class="keyword">else</span>&#123; <span class="regexp">//</span> 新版本</span><br><span class="line">     </span><br><span class="line">       <span class="regexp">//</span> 存储新版本</span><br><span class="line">       [defaults setObject:currentVersion forKey:key];</span><br><span class="line">   &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2015/04/23/2015_iOS%E7%89%88%E6%9C%AC%E6%9B%B4%E6%96%B0%E5%88%A4%E6%96%AD/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">iOS</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">应用版本</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">版本更新</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/technology//" class="article-tag-list-link color1">technology</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2015/04/23/2015_iOS%E7%89%88%E6%9C%AC%E6%9B%B4%E6%96%B0%E5%88%A4%E6%96%AD/">显示全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-2015-04-22_JSBadgeView的基本使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/04/22/2015-04-22_JSBadgeView%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/">JSBadgeView的基本使用</a>
+    </h1>
+  
+
+        
+        <a href="/2015/04/22/2015-04-22_JSBadgeView%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/" class="archive-article-date">
+  	<time datetime="2015-04-22T15:24:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-04-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1、前言"><a href="#1、前言" class="headerlink" title="1、前言"></a>1、前言</h3><p><a target="_blank" rel="noopener" href="https://github.com/JaviSoto/JSBadgeView">JSBadgeView </a> 是iOS开发常用的显示数字图标的库：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/99517-6fa0f9ff45c986e2.png" alt="iOS 7以上风格"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/99517-18d9bc7af2ca3947.png" alt="iOS 6风格"></p>
+        
+          <a class="article-more-a" href="/2015/04/22/2015-04-22_JSBadgeView%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">iOS</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">JSBadgeView</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/technology//" class="article-tag-list-link color1">technology</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2015/04/22/2015-04-22_JSBadgeView%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/">显示全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-2015-04-22_使用StoryBoard设置UIButton背景图片时出现蓝点" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/04/22/2015-04-22_%E4%BD%BF%E7%94%A8StoryBoard%E8%AE%BE%E7%BD%AEUIButton%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87%E6%97%B6%E5%87%BA%E7%8E%B0%E8%93%9D%E7%82%B9/">使用StoryBoard设置UIButton背景图片时出现蓝点</a>
+    </h1>
+  
+
+        
+        <a href="/2015/04/22/2015-04-22_%E4%BD%BF%E7%94%A8StoryBoard%E8%AE%BE%E7%BD%AEUIButton%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87%E6%97%B6%E5%87%BA%E7%8E%B0%E8%93%9D%E7%82%B9/" class="archive-article-date">
+  	<time datetime="2015-04-22T07:49:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-04-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1、前言"><a href="#1、前言" class="headerlink" title="1、前言"></a>1、前言</h3><p>使用<code>StoryBoard</code>设置<code>UIButton</code>的背景图片时出现蓝点：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/99517-96ebfde841239962.PNG" alt="设置按钮的背影图片选择时显示蓝点"></p>
+        
+          <a class="article-more-a" href="/2015/04/22/2015-04-22_%E4%BD%BF%E7%94%A8StoryBoard%E8%AE%BE%E7%BD%AEUIButton%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87%E6%97%B6%E5%87%BA%E7%8E%B0%E8%93%9D%E7%82%B9/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">iOS</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">StoryBoard</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">UIButton</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/technology//" class="article-tag-list-link color1">technology</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2015/04/22/2015-04-22_%E4%BD%BF%E7%94%A8StoryBoard%E8%AE%BE%E7%BD%AEUIButton%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87%E6%97%B6%E5%87%BA%E7%8E%B0%E8%93%9D%E7%82%B9/">显示全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-2015_iOS判断汉字个数" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/04/18/2015_iOS%E5%88%A4%E6%96%AD%E6%B1%89%E5%AD%97%E4%B8%AA%E6%95%B0/">iOS判断汉字个数</a>
+    </h1>
+  
+
+        
+        <a href="/2015/04/18/2015_iOS%E5%88%A4%E6%96%AD%E6%B1%89%E5%AD%97%E4%B8%AA%E6%95%B0/" class="archive-article-date">
+  	<time datetime="2015-04-17T16:31:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-04-18</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近在做注册登陆的认证，需求：<br><code>用户名为6～12位“字符”</code><br>也就是说，一个英文是一个字符，<strong>一个中文是两个字符</strong>，用正则表达式好像不容易实现吧？</p>
+<p>没什么好说的，直接上答案了：</p>
+        
+          <a class="article-more-a" href="/2015/04/18/2015_iOS%E5%88%A4%E6%96%AD%E6%B1%89%E5%AD%97%E4%B8%AA%E6%95%B0/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">iOS</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">判断汉字</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">汉字个数</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/technology//" class="article-tag-list-link color1">technology</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2015/04/18/2015_iOS%E5%88%A4%E6%96%AD%E6%B1%89%E5%AD%97%E4%B8%AA%E6%95%B0/">显示全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-2015_基于NSTimer的倒计时" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/04/17/2015_%E5%9F%BA%E4%BA%8ENSTimer%E7%9A%84%E5%80%92%E8%AE%A1%E6%97%B6/">基于NSTimer的倒计时</a>
+    </h1>
+  
+
+        
+        <a href="/2015/04/17/2015_%E5%9F%BA%E4%BA%8ENSTimer%E7%9A%84%E5%80%92%E8%AE%A1%E6%97%B6/" class="archive-article-date">
+  	<time datetime="2015-04-17T07:12:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-04-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>今天做手机短信验证码的功能，不用GCD，简单的NSTimer就可以完成,不知道有没有bug,测试中。。。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">#pragma mark - 倒计时</span><br><span class="line">- (void)startCount</span><br><span class="line">&#123;</span><br><span class="line">   /**</span><br><span class="line">    *  添加定时器</span><br><span class="line">    */</span><br><span class="line">   self.currentCountDown = 120;</span><br><span class="line">   self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(countDown) userInfo:nil repeats:YES];</span><br><span class="line">   [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];</span><br><span class="line">   [self.timer fire];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (void)countDown&#123;</span><br><span class="line">   </span><br><span class="line">   if (self.currentCountDown &gt;0) &#123;</span><br><span class="line">       //设置界面的按钮显示 根据自己需求设置</span><br><span class="line">       [self.captchaBtn setTitle:[NSString stringWithFormat:@&quot;(%ld)重新获取&quot;,(long)self.currentCountDown] forState:UIControlStateNormal];</span><br><span class="line">       //self.captchaBtn.enabled = NO;</span><br><span class="line">       self.currentCountDown -= 1;</span><br><span class="line">   &#125;else&#123;</span><br><span class="line">       [self removeTimer];</span><br><span class="line">   &#125;  </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line">*  移除定时器</span><br><span class="line">*/</span><br><span class="line">- (void)removeTimer</span><br><span class="line">&#123;</span><br><span class="line">   self.currentCountDown = 0;</span><br><span class="line">   [self setCaptchaEnable:YES];</span><br><span class="line">   [self.timer invalidate];</span><br><span class="line">   self.timer = nil;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//因为iOS 7下 按钮 enabled= NO, 不能设置文字</span><br><span class="line">#pragma mark - 设置按钮状态</span><br><span class="line">- (void)setCaptchaEnable:(BOOL)enabled&#123;</span><br><span class="line">   //可以按</span><br><span class="line">   if (enabled) &#123;</span><br><span class="line">       self.captchaBtn.userInteractionEnabled = YES;</span><br><span class="line">       [self.captchaBtn setBackgroundImage:[UIImage imageNamed:@&quot;back_red&quot;] forState:UIControlStateNormal];</span><br><span class="line">       [self.captchaBtn setTitle:@&quot;获取验证码&quot; forState:UIControlStateNormal];</span><br><span class="line">       </span><br><span class="line">   &#125;else&#123;</span><br><span class="line">       self.captchaBtn.userInteractionEnabled = NO;</span><br><span class="line">       [self.captchaBtn setBackgroundImage:[UIImage imageNamed:@&quot;back_gray&quot;] forState:UIControlStateNormal];</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在项目中目前是自己写的一个集成倒计时的按钮，这个思路暂时可以行！</p>
+<br>
+> 注：本文首发于 [iHTCboy's blog](http://iHTCboy.com)，如若转载，请注来源
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">iOS</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">NSTimer</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">倒计时</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/technology//" class="article-tag-list-link color1">technology</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2015/04/17/2015_%E5%9F%BA%E4%BA%8ENSTimer%E7%9A%84%E5%80%92%E8%AE%A1%E6%97%B6/">显示全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-2015_iOS报错：linker_command_failed_with_exit_code_1_(use_-v_to_see_invocation)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -700,484 +1180,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-2015-04-05_iOS关于UITableView选择Cell方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/04/05/2015-04-05_iOS%E5%85%B3%E4%BA%8EUITableView%E9%80%89%E6%8B%A9Cell%E6%96%B9%E6%B3%95/">iOS关于UITableView选择Cell方法</a>
-    </h1>
-  
-
-        
-        <a href="/2015/04/05/2015-04-05_iOS%E5%85%B3%E4%BA%8EUITableView%E9%80%89%E6%8B%A9Cell%E6%96%B9%E6%B3%95/" class="archive-article-date">
-  	<time datetime="2015-04-05T14:49:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-04-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1、问题"><a href="#1、问题" class="headerlink" title="1、问题"></a>1、问题</h3><p>选择cell有两个方法，今天搞错了，一直以为cell错乱呢，真是人都有掉坑的时候：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;</span><br><span class="line"></span><br><span class="line">- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath NS_AVAILABLE_IOS(3_0);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2015/04/05/2015-04-05_iOS%E5%85%B3%E4%BA%8EUITableView%E9%80%89%E6%8B%A9Cell%E6%96%B9%E6%B3%95/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">iOS</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">UITableView</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/technology//" class="article-tag-list-link color1">technology</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2015/04/05/2015-04-05_iOS%E5%85%B3%E4%BA%8EUITableView%E9%80%89%E6%8B%A9Cell%E6%96%B9%E6%B3%95/">显示全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2015_iOS错误---“A-valid-provisioning-profile-for-this-executable-was-not-foun" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/03/23/2015_iOS%E9%94%99%E8%AF%AF---%E2%80%9CA-valid-provisioning-profile-for-this-executable-was-not-foun/">iOS错误---“A valid provisioning profile for this executable was not found”</a>
-    </h1>
-  
-
-        
-        <a href="/2015/03/23/2015_iOS%E9%94%99%E8%AF%AF---%E2%80%9CA-valid-provisioning-profile-for-this-executable-was-not-foun/" class="archive-article-date">
-  	<time datetime="2015-03-23T02:34:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-03-23</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>linker command failed with exit code 1 (use -v to see invocation)</p>
-</blockquote>
-<p>网上答案：</p>
-<blockquote>
-<p>1、我以前添加开源的.a文件时也遇到过类似的情况，问题大多主要是出现在Ohter Linker Flags 这个属性，找到Build settings-&gt;Linking-&gt;Other Linker Flags，将此属性修改成-all_load</p>
-<p>2、把Other Linker Flags下的属性全删除了。</p>
-<p>3、错误信息中出现了某个类的名字，去原文件中看看#import了哪些第三方库，把这些库挨个注释排除，找到出错的那个库，然后按照官方提供的步骤重新添加一遍。</p>
-<p>4、看看是不是有新添加的文件跟之前文件同名</p>
-</blockquote>
-<p>经过多次排查，最后答案是：</p>
-<blockquote>
-<p>出现这种情况很可能是，项目中引入了多个相同的文件。</p>
-</blockquote>
-<p>删除一个就ok！</p>
-<ul>
-<li>如果有什么疑问，可以在评论区一起讨论；</li>
-<li>如果有什么不正确的地方，欢迎指导！</li>
-</ul>
-<br>
-> 注：本文首发于 [iHTCboy's blog](http://iHTCboy.com)，如若转载，请注来源
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">iOS</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">编译报错</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/technology//" class="article-tag-list-link color1">technology</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2015/03/23/2015_iOS%E9%94%99%E8%AF%AF---%E2%80%9CA-valid-provisioning-profile-for-this-executable-was-not-foun/">显示全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2015-03-22_Xcode断点没有跳到断点的代码行" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/03/22/2015-03-22_Xcode%E6%96%AD%E7%82%B9%E6%B2%A1%E6%9C%89%E8%B7%B3%E5%88%B0%E6%96%AD%E7%82%B9%E7%9A%84%E4%BB%A3%E7%A0%81%E8%A1%8C/">Xcode断点没有跳到断点的代码行</a>
-    </h1>
-  
-
-        
-        <a href="/2015/03/22/2015-03-22_Xcode%E6%96%AD%E7%82%B9%E6%B2%A1%E6%9C%89%E8%B7%B3%E5%88%B0%E6%96%AD%E7%82%B9%E7%9A%84%E4%BB%A3%E7%A0%81%E8%A1%8C/" class="archive-article-date">
-  	<time datetime="2015-03-22T14:51:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-03-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1、前言"><a href="#1、前言" class="headerlink" title="1、前言"></a>1、前言</h3><p>最近不知道是什么原因（操作）改变<code>Xcode</code>设置了，打断点时没有自动跳到断点的代码行上，结果跳到了debug视图（汇编代码）。</p>
-        
-          <a class="article-more-a" href="/2015/03/22/2015-03-22_Xcode%E6%96%AD%E7%82%B9%E6%B2%A1%E6%9C%89%E8%B7%B3%E5%88%B0%E6%96%AD%E7%82%B9%E7%9A%84%E4%BB%A3%E7%A0%81%E8%A1%8C/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Xcode</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">AlwaysShowDisassemly</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/technology//" class="article-tag-list-link color1">technology</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2015/03/22/2015-03-22_Xcode%E6%96%AD%E7%82%B9%E6%B2%A1%E6%9C%89%E8%B7%B3%E5%88%B0%E6%96%AD%E7%82%B9%E7%9A%84%E4%BB%A3%E7%A0%81%E8%A1%8C/">显示全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2015-03-18_UICollectionView实现列表有间隙的原因" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/03/18/2015-03-18_UICollectionView%E5%AE%9E%E7%8E%B0%E5%88%97%E8%A1%A8%E6%9C%89%E9%97%B4%E9%9A%99%E7%9A%84%E5%8E%9F%E5%9B%A0/">UICollectionView实现列表，有&#39;非法&#39;间距的原因</a>
-    </h1>
-  
-
-        
-        <a href="/2015/03/18/2015-03-18_UICollectionView%E5%AE%9E%E7%8E%B0%E5%88%97%E8%A1%A8%E6%9C%89%E9%97%B4%E9%9A%99%E7%9A%84%E5%8E%9F%E5%9B%A0/" class="archive-article-date">
-  	<time datetime="2015-03-18T15:24:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-03-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1、前言"><a href="#1、前言" class="headerlink" title="1、前言"></a>1、前言</h3><p>今天用CollectionView实现的列表效果不理想，UICollectionView实现列表有间隙，开始一直找不知道问题出现在那里。</p>
-        
-          <a class="article-more-a" href="/2015/03/18/2015-03-18_UICollectionView%E5%AE%9E%E7%8E%B0%E5%88%97%E8%A1%A8%E6%9C%89%E9%97%B4%E9%9A%99%E7%9A%84%E5%8E%9F%E5%9B%A0/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">iOS</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">UICollectionView</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/technology//" class="article-tag-list-link color1">technology</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2015/03/18/2015-03-18_UICollectionView%E5%AE%9E%E7%8E%B0%E5%88%97%E8%A1%A8%E6%9C%89%E9%97%B4%E9%9A%99%E7%9A%84%E5%8E%9F%E5%9B%A0/">显示全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2015-03-15_iOS代理方法导致崩溃的思考" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/03/15/2015-03-15_iOS%E4%BB%A3%E7%90%86%E6%96%B9%E6%B3%95%E5%AF%BC%E8%87%B4%E5%B4%A9%E6%BA%83%E7%9A%84%E6%80%9D%E8%80%83/">iOS代理方法导致崩溃的思考</a>
-    </h1>
-  
-
-        
-        <a href="/2015/03/15/2015-03-15_iOS%E4%BB%A3%E7%90%86%E6%96%B9%E6%B3%95%E5%AF%BC%E8%87%B4%E5%B4%A9%E6%BA%83%E7%9A%84%E6%80%9D%E8%80%83/" class="archive-article-date">
-  	<time datetime="2015-03-14T16:12:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-03-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1、前言"><a href="#1、前言" class="headerlink" title="1、前言"></a>1、前言</h3><p>崩溃信息：</p>
-<blockquote>
-<p>*** Terminating app due to uncaught exception ‘NSInvalidArgumentException’, reason: ‘-[ProductPropViewController valueChanged:]: unrecognized selector sent to instance 0x7a69f2e0’</p>
-</blockquote>
-<p>最近在实习，由于是接手上一个人工程师写的项目，改了一些方法，导致了错误崩溃。</p>
-        
-          <a class="article-more-a" href="/2015/03/15/2015-03-15_iOS%E4%BB%A3%E7%90%86%E6%96%B9%E6%B3%95%E5%AF%BC%E8%87%B4%E5%B4%A9%E6%BA%83%E7%9A%84%E6%80%9D%E8%80%83/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">iOS</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">delegate</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/technology//" class="article-tag-list-link color1">technology</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2015/03/15/2015-03-15_iOS%E4%BB%A3%E7%90%86%E6%96%B9%E6%B3%95%E5%AF%BC%E8%87%B4%E5%B4%A9%E6%BA%83%E7%9A%84%E6%80%9D%E8%80%83/">显示全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/18/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="page-number" href="/page/18/">18</a><span class="page-number current">19</span><a class="page-number" href="/page/20/">20</a><a class="page-number" href="/page/21/">21</a><span class="space">&hellip;</span><a class="page-number" href="/page/52/">52</a><a class="extend next" rel="next" href="/page/20/">Next &amp;raquo;</a>
@@ -1315,14 +1317,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">iOS开发高手课</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">学习总结</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">JIT</a>
               </li>
              
@@ -1355,6 +1349,14 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">iOS开发高手课</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">学习总结</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">思考</a>
               </li>
              
@@ -1367,7 +1369,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">游戏</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">诺基亚</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">生活</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1379,23 +1389,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">诗歌</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">软件格式</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">手机格式</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">诗歌</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">游戏</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">生活</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1487,11 +1489,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">国庆</a>
+                <a href="javascript:void(0)" class="js-tag color3">耕地</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">耕地</a>
+                <a href="javascript:void(0)" class="js-tag color3">国庆</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1531,15 +1533,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">经济学</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">忆录</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">梦理</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">经济学</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1571,11 +1573,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">感想</a>
+                <a href="javascript:void(0)" class="js-tag color4">珍桂集</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">珍桂集</a>
+                <a href="javascript:void(0)" class="js-tag color3">感想</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1631,14 +1633,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">iOS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">try catch</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">钥匙串</a>
               </li>
              
@@ -1647,7 +1641,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">delegate</a>
+                <a href="javascript:void(0)" class="js-tag color4">iOS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">try catch</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1659,7 +1657,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">UITableView</a>
+                <a href="javascript:void(0)" class="js-tag color4">delegate</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1671,11 +1669,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Ineligible Devices</a>
+                <a href="javascript:void(0)" class="js-tag color5">UITextFieldDelegate</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">UITextFieldDelegate</a>
+                <a href="javascript:void(0)" class="js-tag color2">UITableView</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Ineligible Devices</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1691,6 +1693,10 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">iOS动画</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">绝代宠妓</a>
               </li>
              
@@ -1703,15 +1709,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">iOS动画</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">《两小无猜》</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">观后感</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">《千与千寻》</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">《恋恋笔记本》</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1727,7 +1737,23 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">她</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">笑谈</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">《当幸福来敲门》</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">AppStore被拒</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">二进制文件无效</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1739,22 +1765,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">《千与千寻》</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">她</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笑谈</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">《恋恋笔记本》</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">App审核</a>
               </li>
              
@@ -1763,7 +1773,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">二进制文件无效</a>
+                <a href="javascript:void(0)" class="js-tag color3">QQ</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">同步登陆</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">微信</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1787,23 +1805,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">AppStore被拒</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">QQ</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">同步登陆</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">微信</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">编译报错</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">iOS8相机授权</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1820,10 +1826,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">汉字个数</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">iOS8相机授权</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1871,6 +1873,14 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">支付宝</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">alipay</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">应用版本</a>
               </li>
              
@@ -1887,19 +1897,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">支付宝</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">alipay</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">WatchKit</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Watch App</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">单例模式</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1920,10 +1926,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">工作</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">单例模式</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2015,18 +2017,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">ReactNative</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">RN</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">打ipa包</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">NSDateFormatter</a>
               </li>
              
@@ -2039,7 +2029,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">应用无法安装</a>
+                <a href="javascript:void(0)" class="js-tag color2">ReactNative</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">RN</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">打ipa包</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">CoreSpotlightSearch</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2051,11 +2053,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">CoreSpotlightSearch</a>
+                <a href="javascript:void(0)" class="js-tag color2">应用无法安装</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">2017</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">快捷键</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2075,27 +2081,35 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">App Store Icon</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">ITMS-90704</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">ITMS-90717</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">快捷键</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">IOSurface</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Framework not found</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">iPhoneX</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">LaunchScreen</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">沙盒测试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">沙盒账号</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Sandbox</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">iTunes账户</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2107,19 +2121,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">沙盒测试</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">内购登陆反复</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">iPhoneX</a>
+                <a href="javascript:void(0)" class="js-tag color5">App Store Icon</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">LaunchScreen</a>
+                <a href="javascript:void(0)" class="js-tag color1">ITMS-90704</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">ITMS-90717</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2143,18 +2157,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">沙盒账号</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Sandbox</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">iTunes账户</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">UIActivityIndicatorView</a>
               </li>
              
@@ -2164,6 +2166,26 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">UIToolbar</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">AutoLayout</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Imagesize</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">图片实际大小显示</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Runtime</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">swizzle</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2195,27 +2217,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Runtime</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">swizzle</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">2018</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">AutoLayout</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Imagesize</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">图片实际大小显示</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2224,14 +2226,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">有道词典</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">StoreKit</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">requestReview</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2244,6 +2238,14 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Terminal</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">StoreKit</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">requestReview</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2275,15 +2277,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">16进制颜色</a>
+                <a href="javascript:void(0)" class="js-tag color2">百度网盘限制</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">UIColor</a>
+                <a href="javascript:void(0)" class="js-tag color2">破解下载限速</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">NSScanner</a>
+                <a href="javascript:void(0)" class="js-tag color1">百度云下载</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2303,15 +2305,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">百度网盘限制</a>
+                <a href="javascript:void(0)" class="js-tag color2">16进制颜色</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">破解下载限速</a>
+                <a href="javascript:void(0)" class="js-tag color3">UIColor</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">百度云下载</a>
+                <a href="javascript:void(0)" class="js-tag color5">NSScanner</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2335,19 +2337,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">NSString</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">boolValue</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">无法内购</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">苹果客服电话</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">NSString</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">boolValue</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2451,6 +2453,14 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">iOS12</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">沙盒账户</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">iTerm配置导出</a>
               </li>
              
@@ -2463,11 +2473,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Console.app</a>
+                <a href="javascript:void(0)" class="js-tag color3">爬虫</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">苹果控制台</a>
+                <a href="javascript:void(0)" class="js-tag color4">Python爬虫</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2483,27 +2493,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">爬虫</a>
+                <a href="javascript:void(0)" class="js-tag color2">Console.app</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Python爬虫</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Django</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">on_delete</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">iOS12</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">沙盒账户</a>
+                <a href="javascript:void(0)" class="js-tag color1">苹果控制台</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2515,19 +2509,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Django</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">on_delete</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">iTerm</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">django</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">request.POST</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">post数组参数</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2547,11 +2537,23 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">天猫</a>
+                <a href="javascript:void(0)" class="js-tag color2">django</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">request.POST</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">post数组参数</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">网易云音乐</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">天猫</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2571,11 +2573,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Guideline2.5.2</a>
+                <a href="javascript:void(0)" class="js-tag color1">xcodebuild</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">xcodebuild</a>
+                <a href="javascript:void(0)" class="js-tag color5">Guideline2.5.2</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2607,7 +2609,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">2019</a>
+                <a href="javascript:void(0)" class="js-tag color3">脚本</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2619,15 +2621,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">脚本</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">django-crontab</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">python</a>
+                <a href="javascript:void(0)" class="js-tag color5">2019</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2655,6 +2649,14 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">django-crontab</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Sparkle</a>
               </li>
              
@@ -2664,6 +2666,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">软件检查更新</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">IPv6</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2687,7 +2693,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">IPv6</a>
+                <a href="javascript:void(0)" class="js-tag color2">Fabric</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2696,10 +2702,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随航</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Fabric</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2799,6 +2801,18 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">WWDC</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">IAP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Refund</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">产品</a>
               </li>
              
@@ -2824,18 +2838,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Regex</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">WWDC</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">IAP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Refund</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2899,19 +2901,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Sign-in-with-Apple</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">苹果登录方式</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">iOS13</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">适配</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Sign-in-with-Apple</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">苹果登录方式</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2928,10 +2930,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">flexbox</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">2020</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -2975,6 +2973,10 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">2020</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Apple Developer</a>
               </li>
              
@@ -2987,18 +2989,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">安卓商店</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">应用市场</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">App上架</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">iOS安全性</a>
               </li>
              
@@ -3008,6 +2998,18 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">iOS Review</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">安卓商店</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">应用市场</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">App上架</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3032,6 +3034,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">2022</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">App Store</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3063,10 +3069,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">App Store</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">批量创建内购</a>
               </li>
              
@@ -3076,6 +3078,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">In App Purchase</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">App Store 新定价机制</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3107,10 +3113,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">2021</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">DTK</a>
               </li>
              
@@ -3127,15 +3129,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">中国游戏</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">游戏出海</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">出海本地化</a>
+                <a href="javascript:void(0)" class="js-tag color5">2021</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3148,6 +3142,18 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Custom Product Pages</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">中国游戏</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">游戏出海</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">出海本地化</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -3164,6 +3170,30 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">In-App Purchase</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">苹果商店新定价机制</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">苹果商店价格</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Price Tier</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Customer Price</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">SKAdNetwork</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">iOS SKAN 4.0</a>
               </li>
              
               <li class="article-tag-list-item">
