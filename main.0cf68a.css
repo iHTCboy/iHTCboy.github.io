@@ -47,7 +47,7 @@ body.night .archives-wrap a.archive-article-title {
   color: #d5d5d5;
 }
 body.night .left-col {
-  background-color: #15202b;
+  background-color: #1e1e1e;
   background-image: none !important;
 }
 body.night #mobile-nav {
@@ -115,7 +115,7 @@ body.night .tagcloud a.color7::before {
   border-right-color: #7f4c4c;
 }
 body.night ::-webkit-scrollbar {
-  background-color: #15202b;
+  background-color: #1e1e1e;
 }
 body.night .page-modal {
   background: #1e1e1e;
